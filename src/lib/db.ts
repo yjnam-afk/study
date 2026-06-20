@@ -6,8 +6,11 @@
  * 별도 SDK 없이 REST API 로만 호출하여 의존성을 늘리지 않습니다.
  */
 
-const URL = process.env.UPSTASH_REDIS_REST_URL;
-const TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+// Vercel 연동 방식에 따라 주입되는 변수 이름이 다를 수 있어 모두 허용합니다.
+const URL =
+  process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+const TOKEN =
+  process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
 
 export class DBConfigError extends Error {}
 
