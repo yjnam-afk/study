@@ -23,11 +23,32 @@ const menus = [
     color: "from-amber-500 to-orange-600",
   },
   {
+    href: "/grade",
+    emoji: "✅",
+    title: "AI 자가채점",
+    desc: "내가 쓴 답안을 채점위원 관점에서 점수와 보완점으로 피드백합니다.",
+    color: "from-rose-500 to-red-600",
+  },
+  {
     href: "/review",
     emoji: "🔁",
     title: "회독 관리",
     desc: "토픽별 회독 횟수와 진도를 기록하고 반복 학습을 관리합니다.",
     color: "from-fuchsia-500 to-pink-600",
+  },
+  {
+    href: "/notes",
+    emoji: "📕",
+    title: "오답노트",
+    desc: "암기 퀴즈에서 틀린 문제가 자동으로 모입니다. 약점만 골라 복습하세요.",
+    color: "from-cyan-500 to-sky-600",
+  },
+  {
+    href: "/dashboard",
+    emoji: "📊",
+    title: "학습 대시보드",
+    desc: "회독 진도·퀴즈 정답률·오답 현황을 한눈에 확인합니다.",
+    color: "from-violet-500 to-purple-600",
   },
 ];
 

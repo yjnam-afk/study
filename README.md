@@ -2,14 +2,17 @@
 
 정보관리기술사 시험 대비를 위한 AI 학습 웹앱입니다. Next.js(App Router) + TypeScript + Tailwind CSS로 만들어졌고, 무료 AI(Google Gemini / Groq)를 연동합니다.
 
-## 주요 기능 (4개 메뉴)
+## 주요 기능 (7개 메뉴)
 
 | 메뉴 | 경로 | 설명 |
 | --- | --- | --- |
 | 📝 답안지 생성 | `/answer` | 1교시(용어형)·2교시(서술형) 문제에 대한 시험 답안지를 AI가 작성 |
+| ✅ AI 자가채점 | `/grade` | 내가 쓴 답안을 채점위원 관점에서 점수·항목별 피드백·보완점 제시 |
 | 💡 토픽 설명 | `/explain` | 어려운 토픽을 비유와 도식으로 이해하기 쉽게 설명 (눈높이 선택) |
-| 🧠 암기 | `/memorize` | 토픽 기반 플래시카드 + 4지선다 퀴즈 생성 |
+| 🧠 암기 | `/memorize` | 토픽 기반 플래시카드 + 4지선다 퀴즈 생성 (오답은 자동으로 오답노트에 저장) |
+| 📕 오답노트 | `/notes` | 퀴즈에서 틀린 문제를 자동 수집해 약점만 골라 복습 (브라우저 저장) |
 | 🔁 회독 관리 | `/review` | 토픽별 회독 횟수·진도 기록 (3회독 시 완료, 브라우저 저장) |
+| 📊 학습 대시보드 | `/dashboard` | 회독 진도·퀴즈 정답률·분야별 완료 현황·오답 수를 한눈에 확인 |
 
 ## 시작하기
 
@@ -69,18 +72,23 @@ src/
 ├─ app/
 │  ├─ page.tsx              # 홈 (메뉴 4개)
 │  ├─ answer/page.tsx       # 답안지 생성
+│  ├─ grade/page.tsx        # AI 자가채점
 │  ├─ explain/page.tsx      # 토픽 설명
 │  ├─ memorize/page.tsx     # 플래시카드 · 퀴즈
+│  ├─ notes/page.tsx        # 오답노트
 │  ├─ review/page.tsx       # 회독 관리
+│  ├─ dashboard/page.tsx    # 학습 대시보드
 │  └─ api/                  # 서버 라우트 (API 키는 서버에서만 사용)
 │     ├─ answer/route.ts
+│     ├─ grade/route.ts
 │     ├─ explain/route.ts
 │     ├─ flashcards/route.ts
 │     └─ quiz/route.ts
 ├─ lib/
 │  ├─ ai.ts                 # AI 제공자 추상화 (Gemini/Groq)
-│  ├─ prompts.ts            # 기술사 시험 특화 프롬프트
-│  └─ storage.ts            # 회독 진도 (localStorage)
+│  ├─ prompts.ts            # 기술사 시험 특화 프롬프트 (답안·채점·설명·암기)
+│  ├─ storage.ts            # 회독 진도 (localStorage)
+│  └─ notes.ts              # 오답노트 · 퀴즈 통계 (localStorage)
 ├─ components/              # 공용 UI
 └─ data/
    ├─ topics.json           # 샘플 토픽
