@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
+import { addNote, recordQuiz } from "@/lib/notes";
 import topics from "@/data/topics.json";
 
 type Mode = "flashcard" | "quiz";
@@ -20,6 +21,7 @@ export default function MemorizePage() {
   const [error, setError] = useState("");
   const [cards, setCards] = useState<Flashcard[]>([]);
   const [quiz, setQuiz] = useState<QuizItem[]>([]);
+  const [quizTopic, setQuizTopic] = useState("");
 
   async function generate() {
     if (!topic.trim()) {
@@ -40,7 +42,10 @@ export default function MemorizePage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
       if (mode === "flashcard") setCards(data.cards || []);
-      else setQuiz(data.quiz || []);
+      else {
+        setQuiz(data.quiz || []);
+        setQuizTopic(topic);
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -112,7 +117,7 @@ export default function MemorizePage() {
         {loading && <Spinner />}
         {error && <ErrorBox message={error} />}
         {cards.length > 0 && <FlashcardDeck cards={cards} />}
-        {quiz.length > 0 && <Quiz quiz={quiz} />}
+        {quiz.length > 0 && <Quiz quiz={quiz} topic={quizTopic} />}
       </div>
     </div>
   );
@@ -145,8 +150,26 @@ function FlippableCard({ card, index }: { card: Flashcard; index: number }) {
   );
 }
 
-function Quiz({ quiz }: { quiz: QuizItem[] }) {
+function Quiz({ quiz, topic }: { quiz: QuizItem[]; topic: string }) {
   const [picked, setPicked] = useState<Record<number, number>>({});
+
+  function choose(qi: number, oi: number) {
+    if (picked[qi] !== undefined) return; // 한 번만 채점
+    setPicked((p) => ({ ...p, [qi]: oi }));
+    const q = quiz[qi];
+    const correct = oi === q.answer;
+    recordQuiz(correct);
+    if (!correct) {
+      addNote({
+        topic: topic || "기타",
+        question: q.question,
+        options: q.options,
+        answer: q.answer,
+        picked: oi,
+        explanation: q.explanation,
+      });
+    }
+  }
 
   return (
     <div className="space-y-5">
@@ -180,7 +203,7 @@ function Quiz({ quiz }: { quiz: QuizItem[] }) {
                   <button
                     key={oi}
                     disabled={answered}
-                    onClick={() => setPicked((p) => ({ ...p, [qi]: oi }))}
+                    onClick={() => choose(qi, oi)}
                     className={cls}
                   >
                     {String.fromCharCode(9312 + oi)} {opt}
@@ -200,6 +223,11 @@ function Quiz({ quiz }: { quiz: QuizItem[] }) {
                   {choice === q.answer ? "정답입니다! " : "오답입니다. "}
                 </span>
                 {q.explanation}
+                {choice !== q.answer && (
+                  <span className="mt-1 block text-xs text-brand-500">
+                    📕 오답노트에 저장되었습니다.
+                  </span>
+                )}
               </div>
             )}
           </div>
