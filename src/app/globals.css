@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* react-markdown 결과물에 적용할 기본 타이포그래피 */
+.prose-answer h1 {
+  @apply text-xl font-bold mt-6 mb-3 text-slate-900 border-b border-slate-200 pb-1;
+}
+.prose-answer h2 {
+  @apply text-lg font-semibold mt-5 mb-2 text-slate-900;
+}
+.prose-answer h3 {
+  @apply text-base font-semibold mt-4 mb-2 text-slate-800;
+}
+.prose-answer p {
+  @apply my-2 leading-relaxed;
+}
+.prose-answer ul {
+  @apply list-disc pl-6 my-2 space-y-1;
+}
+.prose-answer ol {
+  @apply list-decimal pl-6 my-2 space-y-1;
+}
+.prose-answer strong {
+  @apply font-semibold text-brand-700;
+}
+.prose-answer table {
+  @apply w-full my-4 border-collapse text-sm;
+}
+.prose-answer th,
+.prose-answer td {
+  @apply border border-slate-300 px-3 py-2 text-left align-top;
+}
+.prose-answer th {
+  @apply bg-slate-100 font-semibold;
+}
+.prose-answer code {
+  @apply bg-slate-100 px-1 py-0.5 rounded text-sm;
+}
+.prose-answer pre {
+  @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto my-4 text-sm leading-relaxed;
+}
+.prose-answer pre code {
+  @apply bg-transparent p-0 text-slate-100;
+}
+.prose-answer blockquote {
+  @apply border-l-4 border-brand-300 pl-4 italic text-slate-600 my-3;
+}
