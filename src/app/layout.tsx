@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AuthNav from "@/components/AuthNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,15 +25,18 @@ export default function RootLayout({
               </span>
               정보관리기술사 학습
             </Link>
-            <nav className="hidden gap-4 text-sm font-medium text-slate-600 sm:flex">
-              <Link href="/" className="hover:text-brand-600">대시보드</Link>
-              <Link href="/answer" className="hover:text-brand-600">답안지</Link>
-              <Link href="/grade" className="hover:text-brand-600">자가채점</Link>
-              <Link href="/explain" className="hover:text-brand-600">토픽 설명</Link>
-              <Link href="/memorize" className="hover:text-brand-600">암기</Link>
-              <Link href="/notes" className="hover:text-brand-600">오답노트</Link>
-              <Link href="/review" className="hover:text-brand-600">회독</Link>
-            </nav>
+            <div className="flex items-center gap-4">
+              <nav className="hidden gap-4 text-sm font-medium text-slate-600 lg:flex">
+                <Link href="/" className="hover:text-brand-600">대시보드</Link>
+                <Link href="/answer" className="hover:text-brand-600">답안지</Link>
+                <Link href="/grade" className="hover:text-brand-600">자가채점</Link>
+                <Link href="/explain" className="hover:text-brand-600">토픽 설명</Link>
+                <Link href="/memorize" className="hover:text-brand-600">암기</Link>
+                <Link href="/notes" className="hover:text-brand-600">오답노트</Link>
+                <Link href="/review" className="hover:text-brand-600">회독</Link>
+              </nav>
+              <AuthNav />
+            </div>
           </div>
         </header>
         <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>

@@ -49,6 +49,13 @@ const menus = [
     desc: "토픽별 회독 횟수와 진도를 기록하고 반복 학습을 관리합니다.",
     color: "from-fuchsia-500 to-pink-600",
   },
+  {
+    href: "/leaderboard",
+    emoji: "🏆",
+    title: "학습 랭킹",
+    desc: "로그인하고 회독·퀴즈 기록으로 다른 사람들과 경쟁하세요.",
+    color: "from-yellow-500 to-amber-600",
+  },
 ];
 
 export default function Home() {
