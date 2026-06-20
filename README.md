@@ -45,6 +45,23 @@ npm run dev
 
 http://localhost:3000 에서 확인합니다.
 
+## 배포 (Vercel) — 브라우저로 바로 쓰는 공개 URL 만들기
+
+로컬 서버를 띄우지 않고도, 배포하면 어디서나 접속 가능한 주소가 생깁니다.
+
+1. https://vercel.com 에 GitHub 계정으로 로그인
+2. **"Add New… → Project"** → 이 저장소(`yjnam-afk/study`) 선택 → Import
+3. **Environment Variables** 에 아래 3개 추가:
+   | Name | Value |
+   | --- | --- |
+   | `AI_PROVIDER` | `groq` |
+   | `GROQ_API_KEY` | (본인 `gsk_...` 키) |
+   | `GROQ_MODEL` | `llama-3.3-70b-versatile` |
+4. **Deploy** 클릭 → 1~2분 후 `https://....vercel.app` 주소 생성
+
+> Vercel 서버에서 실행되므로 Groq 호출이 정상 동작합니다(로컬·샌드박스 네트워크 제약 없음).
+> 키는 Vercel 환경변수로만 저장되어 코드에 노출되지 않습니다.
+
 ## 구조
 
 ```
