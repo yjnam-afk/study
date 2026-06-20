@@ -25,13 +25,13 @@ export default function RootLayout({
               정보관리기술사 학습
             </Link>
             <nav className="hidden gap-4 text-sm font-medium text-slate-600 sm:flex">
+              <Link href="/" className="hover:text-brand-600">대시보드</Link>
               <Link href="/answer" className="hover:text-brand-600">답안지</Link>
               <Link href="/grade" className="hover:text-brand-600">자가채점</Link>
               <Link href="/explain" className="hover:text-brand-600">토픽 설명</Link>
               <Link href="/memorize" className="hover:text-brand-600">암기</Link>
               <Link href="/notes" className="hover:text-brand-600">오답노트</Link>
               <Link href="/review" className="hover:text-brand-600">회독</Link>
-              <Link href="/dashboard" className="hover:text-brand-600">대시보드</Link>
             </nav>
           </div>
         </header>
