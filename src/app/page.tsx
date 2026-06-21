@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import topics from "@/data/topics.json";
 import { ReviewItem, loadReview, getItem, isDue } from "@/lib/storage";
-import { QuizStats, loadStats, loadNotes } from "@/lib/notes";
+import { QuizStats, loadStats, loadNotes, dueNotes } from "@/lib/notes";
 
 const menus = [
   {
@@ -73,11 +73,14 @@ export default function Home() {
     lastAt: null,
   });
   const [notesCount, setNotesCount] = useState(0);
+  const [dueNoteCount, setDueNoteCount] = useState(0);
 
   useEffect(() => {
     setReview(loadReview());
     setStats(loadStats());
-    setNotesCount(loadNotes().length);
+    const notes = loadNotes();
+    setNotesCount(notes.length);
+    setDueNoteCount(dueNotes(notes).length);
   }, []);
 
   const total = topics.length;
@@ -124,6 +127,18 @@ export default function Home() {
             🔔 오늘 복습할 토픽이 <b>{dueCount}개</b> 있습니다.
           </span>
           <span className="text-sm font-semibold text-amber-700">복습하러 가기 →</span>
+        </Link>
+      )}
+
+      {dueNoteCount > 0 && (
+        <Link
+          href="/notes"
+          className="mb-6 flex items-center justify-between rounded-2xl border border-rose-200 bg-rose-50 p-4 shadow-sm transition hover:bg-rose-100"
+        >
+          <span className="text-sm font-medium text-rose-800">
+            🔁 다시 풀어야 할 오답이 <b>{dueNoteCount}개</b> 있습니다.
+          </span>
+          <span className="text-sm font-semibold text-rose-700">오답 복습 →</span>
         </Link>
       )}
 
