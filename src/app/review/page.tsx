@@ -11,6 +11,8 @@ import {
   getItem,
   markReviewed,
   resetItem,
+  isDue,
+  daysUntilDue,
 } from "@/lib/storage";
 
 const STATUS_LABEL: Record<string, string> = {
@@ -48,18 +50,74 @@ export default function ReviewPage() {
   );
   const progress = total ? Math.round((doneCount / total) * 100) : 0;
 
+  // 오늘 복습할 토픽(복습일 지남), 많이 밀린 순으로 정렬
+  const dueTopics = ready
+    ? topics
+        .filter((t) => isDue(getItem(state, t.id)))
+        .sort(
+          (a, b) =>
+            daysUntilDue(getItem(state, a.id)) -
+            daysUntilDue(getItem(state, b.id)),
+        )
+    : [];
+
   return (
     <div>
       <PageHeader
         title="🔁 회독 관리"
-        desc="토픽별 회독 횟수와 진도를 기록합니다. 3회독 시 완료로 표시됩니다. (진도는 이 브라우저에 저장됩니다.)"
+        desc="망각곡선(1·3·7·14·30일) 간격으로 복습할 토픽을 추천합니다. 3회독 시 완료. (진도는 이 브라우저에 저장됩니다.)"
       />
 
-      <div className="mb-6 grid grid-cols-3 gap-4">
+      <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Stat label="전체 토픽" value={`${total}개`} />
         <Stat label="완료(3회독)" value={`${doneCount}개`} />
         <Stat label="총 회독 수" value={`${totalRounds}회`} />
+        <Stat label="오늘 복습" value={`${dueTopics.length}개`} />
       </div>
+
+      {ready && (
+        <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 shadow-sm">
+          <h2 className="text-sm font-bold text-amber-800">
+            🔔 오늘 복습할 토픽 ({dueTopics.length})
+          </h2>
+          {dueTopics.length === 0 ? (
+            <p className="mt-2 text-sm text-amber-700">
+              오늘 복습할 토픽이 없습니다. 새 토픽을 시작하거나 푹 쉬세요 👍
+            </p>
+          ) : (
+            <div className="mt-3 space-y-2">
+              {dueTopics.map((t) => {
+                const item = getItem(state, t.id);
+                const overdue = -daysUntilDue(item);
+                return (
+                  <div
+                    key={t.id}
+                    className="flex items-center justify-between gap-3 rounded-xl bg-white p-3 shadow-sm"
+                  >
+                    <div className="min-w-0">
+                      <span className="text-xs text-slate-400">{t.category}</span>
+                      <p className="truncate font-medium text-slate-900">
+                        {t.title}
+                      </p>
+                    </div>
+                    <div className="flex shrink-0 items-center gap-2">
+                      <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-600">
+                        {overdue > 0 ? `${overdue}일 지남` : "오늘"}
+                      </span>
+                      <button
+                        onClick={() => update(markReviewed(state, t.id))}
+                        className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-semibold text-white hover:bg-amber-600"
+                      >
+                        복습 완료
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
         <div className="mb-2 flex justify-between text-sm">
@@ -76,9 +134,9 @@ export default function ReviewPage() {
 
       <div className="space-y-3">
         {topics.map((t) => {
-          const item = ready
-            ? getItem(state, t.id)
-            : { rounds: 0, status: "todo" as const };
+          const item: ReviewItem = ready ? getItem(state, t.id) : getItem({}, t.id);
+          const showDue = item.rounds > 0 && item.status !== "done";
+          const dleft = daysUntilDue(item);
           return (
             <div
               key={t.id}
@@ -95,6 +153,16 @@ export default function ReviewPage() {
                 </div>
                 <h3 className="mt-1 font-semibold text-slate-900">{t.title}</h3>
                 <p className="truncate text-sm text-slate-500">{t.summary}</p>
+                {showDue && (
+                  <p className="mt-1 text-xs text-slate-400">
+                    다음 복습:{" "}
+                    {dleft > 0
+                      ? `${dleft}일 후`
+                      : dleft === 0
+                        ? "오늘"
+                        : `${-dleft}일 지남`}
+                  </p>
+                )}
               </div>
 
               <div className="flex shrink-0 items-center gap-2">
