@@ -54,14 +54,26 @@ async function generateWithGemini({
   const model = process.env.GEMINI_MODEL || "gemini-2.0-flash";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
+  // Gemma 계열 모델은 systemInstruction 필드를 지원하지 않으므로,
+  // 시스템 프롬프트를 사용자 메시지 앞에 합쳐 전달한다.
+  const isGemma = model.toLowerCase().includes("gemma");
+  const body = isGemma
+    ? {
+        contents: [
+          { role: "user", parts: [{ text: `${system}\n\n${user}` }] },
+        ],
+        generationConfig: { temperature, maxOutputTokens: 4096 },
+      }
+    : {
+        systemInstruction: { parts: [{ text: system }] },
+        contents: [{ role: "user", parts: [{ text: user }] }],
+        generationConfig: { temperature, maxOutputTokens: 4096 },
+      };
+
   const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: system }] },
-      contents: [{ role: "user", parts: [{ text: user }] }],
-      generationConfig: { temperature, maxOutputTokens: 4096 },
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {

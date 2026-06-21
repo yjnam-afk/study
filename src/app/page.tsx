@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import topics from "@/data/topics.json";
-import { ReviewItem, loadReview, getItem } from "@/lib/storage";
+import { ReviewItem, loadReview, getItem, isDue } from "@/lib/storage";
 import { QuizStats, loadStats, loadNotes } from "@/lib/notes";
 
 const menus = [
@@ -94,6 +94,7 @@ export default function Home() {
   const progress = total ? Math.round((doneCount / total) * 100) : 0;
   const accuracy =
     stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+  const dueCount = topics.filter((t) => isDue(getItem(review, t.id))).length;
 
   const categories = Array.from(new Set(topics.map((t) => t.category)));
   const byCategory = categories.map((cat) => {
@@ -114,11 +115,23 @@ export default function Home() {
         </p>
       </section>
 
+      {dueCount > 0 && (
+        <Link
+          href="/review"
+          className="mb-6 flex items-center justify-between rounded-2xl border border-amber-200 bg-amber-50 p-4 shadow-sm transition hover:bg-amber-100"
+        >
+          <span className="text-sm font-medium text-amber-800">
+            🔔 오늘 복습할 토픽이 <b>{dueCount}개</b> 있습니다.
+          </span>
+          <span className="text-sm font-semibold text-amber-700">복습하러 가기 →</span>
+        </Link>
+      )}
+
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Stat label="완료 진도" value={`${progress}%`} accent />
         <Stat label="퀴즈 정답률" value={stats.total > 0 ? `${accuracy}%` : "—"} />
         <Stat label="총 회독 수" value={`${totalRounds}회`} />
-        <Stat label="오답노트" value={`${notesCount}개`} />
+        <Stat label="오늘 복습" value={`${dueCount}개`} />
       </div>
 
       <div className="mb-6 grid gap-6 lg:grid-cols-2">

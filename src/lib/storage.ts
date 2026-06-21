@@ -12,7 +12,16 @@ export type ReviewItem = {
   status: ReviewStatus;
   /** 마지막 학습 시각(ISO) */
   lastReviewedAt: string | null;
+  /** 다음 복습 예정일(ISO) — 망각곡선 간격 반복 */
+  nextDueAt?: string | null;
 };
+
+/** 회독 횟수에 따른 다음 복습까지의 간격(일). 망각곡선 기반(1·3·7·14·30일). */
+const INTERVAL_DAYS = [1, 3, 7, 14, 30];
+
+export function intervalDays(rounds: number): number {
+  return INTERVAL_DAYS[Math.min(rounds, INTERVAL_DAYS.length) - 1] || 30;
+}
 
 const KEY = "info-pe-review-v1";
 
@@ -49,20 +58,38 @@ export function getItem(
   );
 }
 
-/** 한 회독 완료: 회독수 +1, 상태/시각 갱신 */
+/** 한 회독 완료: 회독수 +1, 상태/시각/다음 복습일 갱신 */
 export function markReviewed(
   state: Record<string, ReviewItem>,
   topicId: string,
 ): Record<string, ReviewItem> {
   const item = getItem(state, topicId);
   const rounds = item.rounds + 1;
+  const now = new Date();
+  const due = new Date(now);
+  due.setDate(due.getDate() + intervalDays(rounds));
   const next: ReviewItem = {
     ...item,
     rounds,
     status: rounds >= 3 ? "done" : "learning",
-    lastReviewedAt: new Date().toISOString(),
+    lastReviewedAt: now.toISOString(),
+    nextDueAt: due.toISOString(),
   };
   return { ...state, [topicId]: next };
+}
+
+/** 오늘 복습해야 하는 항목인지(복습일 지남). 시작 전(rounds 0)은 제외. */
+export function isDue(item: ReviewItem, now: number = Date.now()): boolean {
+  if (item.rounds === 0) return false;
+  if (!item.nextDueAt) return true; // 예전 데이터(주기 없음)는 복습 대상으로 간주
+  return new Date(item.nextDueAt).getTime() <= now;
+}
+
+/** 복습일까지 남은 일수(음수면 지남). nextDueAt 없으면 0. */
+export function daysUntilDue(item: ReviewItem, now: number = Date.now()): number {
+  if (!item.nextDueAt) return 0;
+  const ms = new Date(item.nextDueAt).getTime() - now;
+  return Math.ceil(ms / (1000 * 60 * 60 * 24));
 }
 
 /** 진도 초기화 */
