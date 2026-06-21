@@ -31,6 +31,7 @@ export default function RootLayout({
                 <Link href="/answer" className="hover:text-brand-600">답안지</Link>
                 <Link href="/grade" className="hover:text-brand-600">자가채점</Link>
                 <Link href="/explain" className="hover:text-brand-600">토픽 설명</Link>
+                <Link href="/mnemonic" className="hover:text-brand-600">두음신공</Link>
                 <Link href="/memorize" className="hover:text-brand-600">암기</Link>
                 <Link href="/notes" className="hover:text-brand-600">오답노트</Link>
                 <Link href="/review" className="hover:text-brand-600">회독</Link>

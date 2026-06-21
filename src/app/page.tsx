@@ -29,6 +29,13 @@ const menus = [
     color: "from-emerald-500 to-teal-600",
   },
   {
+    href: "/mnemonic",
+    emoji: "🥷",
+    title: "두음신공 (키워드 암기)",
+    desc: "핵심 키워드의 두음으로 암기하고, 객관식 주입 → 주관식 확인으로 굳힙니다.",
+    color: "from-violet-500 to-purple-600",
+  },
+  {
     href: "/memorize",
     emoji: "🧠",
     title: "암기 (플래시카드·퀴즈)",
