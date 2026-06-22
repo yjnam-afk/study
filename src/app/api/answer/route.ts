@@ -7,9 +7,10 @@ export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
   try {
-    const { period, question } = (await req.json()) as {
+    const { period, question, reference } = (await req.json()) as {
       period: ExamPeriod;
       question: string;
+      reference?: string;
     };
 
     if (!question?.trim()) {
@@ -19,7 +20,7 @@ export async function POST(req: NextRequest) {
 
     const text = await generateText({
       system: TUTOR_SYSTEM,
-      user: answerPrompt(examPeriod, question),
+      user: answerPrompt(examPeriod, question, reference),
       temperature: 0.4,
     });
 
