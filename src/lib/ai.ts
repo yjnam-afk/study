@@ -31,9 +31,11 @@ export async function generateText(opts: {
       return generateWithGroq(opts);
     case "openrouter":
       return generateWithOpenRouter(opts);
+    case "ollama":
+      return generateWithOllama(opts);
     default:
       throw new AIConfigError(
-        `알 수 없는 AI_PROVIDER 입니다: "${provider}". gemini, groq, openrouter 중 하나를 사용하세요.`,
+        `알 수 없는 AI_PROVIDER 입니다: "${provider}". gemini, groq, openrouter, ollama 중 하나를 사용하세요.`,
       );
   }
 }
@@ -186,6 +188,55 @@ async function generateWithOpenRouter({
   const text = data?.choices?.[0]?.message?.content;
   if (!text) {
     throw new Error("OpenRouter 응답이 비어 있습니다.");
+  }
+  return text.trim();
+}
+
+/**
+ * 로컬 Ollama(내 PC)에서 Gemma 등을 실행해 사용합니다. API 키가 필요 없습니다.
+ * ※ 로컬에서 앱을 실행할 때만 동작합니다(공개 Vercel 주소에서는 내 PC에 접속 불가).
+ */
+async function generateWithOllama({
+  system,
+  user,
+  temperature = 0.4,
+}: {
+  system: string;
+  user: string;
+  temperature?: number;
+}): Promise<string> {
+  const base = process.env.OLLAMA_BASE_URL || "http://localhost:11434";
+  const model = process.env.OLLAMA_MODEL || "gemma3:4b";
+
+  let res: Response;
+  try {
+    res = await fetch(`${base}/v1/chat/completions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model,
+        temperature,
+        messages: [
+          { role: "system", content: system },
+          { role: "user", content: user },
+        ],
+      }),
+    });
+  } catch {
+    throw new AIConfigError(
+      `Ollama 서버(${base})에 연결할 수 없습니다. Ollama가 실행 중인지(앱 실행/'ollama serve'), 모델을 받았는지('ollama pull ${model}') 확인하세요.`,
+    );
+  }
+
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`Ollama 오류 (${res.status}): ${detail}`);
+  }
+
+  const data = await res.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text) {
+    throw new Error("Ollama 응답이 비어 있습니다.");
   }
   return text.trim();
 }
