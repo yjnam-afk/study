@@ -29,9 +29,11 @@ export async function generateText(opts: {
       return generateWithGemini(opts);
     case "groq":
       return generateWithGroq(opts);
+    case "openrouter":
+      return generateWithOpenRouter(opts);
     default:
       throw new AIConfigError(
-        `알 수 없는 AI_PROVIDER 입니다: "${provider}". gemini 또는 groq 를 사용하세요.`,
+        `알 수 없는 AI_PROVIDER 입니다: "${provider}". gemini, groq, openrouter 중 하나를 사용하세요.`,
       );
   }
 }
@@ -134,6 +136,56 @@ async function generateWithGroq({
   const text = data?.choices?.[0]?.message?.content;
   if (!text) {
     throw new Error("Groq 응답이 비어 있습니다.");
+  }
+  return text.trim();
+}
+
+async function generateWithOpenRouter({
+  system,
+  user,
+  temperature = 0.4,
+}: {
+  system: string;
+  user: string;
+  temperature?: number;
+}): Promise<string> {
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) {
+    throw new AIConfigError(
+      "OPENROUTER_API_KEY 가 설정되지 않았습니다. https://openrouter.ai/keys 에서 무료 키를 발급해 환경변수에 추가하세요.",
+    );
+  }
+  // 기본값: 무료 Gemma. 다른 무료 모델은 https://openrouter.ai/models 에서 확인.
+  const model = process.env.OPENROUTER_MODEL || "google/gemma-2-9b-it:free";
+
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "HTTP-Referer": "https://github.com/yjnam-afk/study",
+      "X-Title": "정보관리기술사 학습 앱",
+    },
+    body: JSON.stringify({
+      model,
+      temperature,
+      max_tokens: 4096,
+      messages: [
+        { role: "system", content: system },
+        { role: "user", content: user },
+      ],
+    }),
+  });
+
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`OpenRouter API 오류 (${res.status}): ${detail}`);
+  }
+
+  const data = await res.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text) {
+    throw new Error("OpenRouter 응답이 비어 있습니다.");
   }
   return text.trim();
 }
