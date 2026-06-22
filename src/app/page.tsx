@@ -8,65 +8,60 @@ import { QuizStats, loadStats, loadNotes, dueNotes } from "@/lib/notes";
 
 const menuGroups = [
   {
-    group: "📖 개념 이해",
-    items: [
-      {
-        href: "/explain",
-        emoji: "💡",
-        title: "토픽 설명",
-        desc: "어려운 개념을 비유·도식으로 쉽게 설명",
-        color: "from-emerald-500 to-teal-600",
-      },
-    ],
-  },
-  {
-    group: "🧠 암기",
+    group: "🧠 1단계 · 키워드 암기 (소설의 재료)",
     items: [
       {
         href: "/mnemonic",
         emoji: "🥷",
         title: "두음신공",
-        desc: "두음으로 키워드 암기 → 객관식·주관식 확인",
+        desc: "핵심 키워드를 두음으로 암기 → 객관식·주관식 확인",
         color: "from-violet-500 to-purple-600",
       },
       {
         href: "/memorize",
         emoji: "🧠",
         title: "암기 (카드·퀴즈)",
-        desc: "플래시카드·4지선다 퀴즈로 반복 암기",
+        desc: "플래시카드·퀴즈로 키워드 반복 암기",
         color: "from-amber-500 to-orange-600",
       },
       {
         href: "/notes",
         emoji: "📕",
         title: "오답노트",
-        desc: "자주 틀린 문제부터 반복 복습",
+        desc: "자주 틀린 키워드 집중 복습",
         color: "from-cyan-500 to-sky-600",
       },
     ],
   },
   {
-    group: "✍️ 답안 연습",
+    group: "✍️ 2단계 · 소설 쓰기 (키워드로 답안 작성)",
     items: [
       {
         href: "/answer",
         emoji: "📝",
-        title: "답안지 생성",
-        desc: "ITPE 방법론대로 시험 답안지 작성",
+        title: "답안지 작성",
+        desc: "키워드로 답안 '소설' 작성 + 키워드·두음 힌트 + 소설 쓰는 법",
         color: "from-blue-500 to-indigo-600",
       },
       {
         href: "/grade",
         emoji: "✅",
         title: "AI 자가채점",
-        desc: "내 답안을 채점위원처럼 점수·피드백",
+        desc: "내가 쓴 소설을 방법론 기준으로 코칭·채점",
         color: "from-rose-500 to-red-600",
       },
     ],
   },
   {
-    group: "🔁 복습 · 경쟁",
+    group: "📚 보조 · 개념 이해 · 복습",
     items: [
+      {
+        href: "/explain",
+        emoji: "💡",
+        title: "토픽 설명",
+        desc: "어려운 개념을 비유·도식으로 이해",
+        color: "from-emerald-500 to-teal-600",
+      },
       {
         href: "/review",
         emoji: "🔁",
@@ -131,10 +126,11 @@ export default function Home() {
   return (
     <div>
       <section className="mb-8 rounded-2xl bg-gradient-to-br from-brand-600 to-indigo-700 p-8 text-white shadow-lg">
-        <h1 className="text-3xl font-bold">📊 학습 대시보드</h1>
+        <h1 className="text-3xl font-bold">기술사 답안은 "소설"입니다 ✍️</h1>
         <p className="mt-2 max-w-2xl text-brand-50">
-          정보관리기술사 합격까지의 진도를 한눈에. 아래 현황을 확인하고 이어서
-          학습하세요.
+          핵심은 키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기.
+          <b className="text-white"> ① 키워드를 암기</b>하고{" "}
+          <b className="text-white">② 그 키워드로 답안을 써보세요.</b>
         </p>
       </section>
 
