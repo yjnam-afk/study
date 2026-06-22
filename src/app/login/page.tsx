@@ -30,7 +30,7 @@ export default function LoginPage() {
     try {
       const s = mode === "login" ? await login(name, password) : await register(name, password);
       setSession(s);
-      router.push("/leaderboard");
+      router.push("/");
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -48,7 +48,7 @@ export default function LoginPage() {
             님으로 로그인 중입니다.
           </p>
           <div className="mt-4 flex gap-2">
-            <Button onClick={() => router.push("/leaderboard")}>랭킹 보기</Button>
+            <Button onClick={() => router.push("/")}>학습 시작</Button>
             <button
               onClick={() => {
                 clearSession();

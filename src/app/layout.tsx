@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AuthNav from "@/components/AuthNav";
+import AuthGate from "@/components/AuthGate";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,7 +41,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <main className="mx-auto max-w-5xl px-4 py-8">
+          <AuthGate>{children}</AuthGate>
+        </main>
         <footer className="mx-auto max-w-5xl px-4 py-10 text-center text-xs text-slate-400">
           정보관리기술사 학습 앱 · AI 응답은 참고용이며 실제 채점 기준과 다를 수 있습니다.
         </footer>
