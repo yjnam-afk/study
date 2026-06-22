@@ -34,11 +34,15 @@ export function loadSession(): Session | null {
 }
 
 export function saveSession(s: Session) {
-  if (isBrowser()) window.localStorage.setItem(KEY, JSON.stringify(s));
+  if (!isBrowser()) return;
+  window.localStorage.setItem(KEY, JSON.stringify(s));
+  window.dispatchEvent(new Event("auth-change"));
 }
 
 export function clearSession() {
-  if (isBrowser()) window.localStorage.removeItem(KEY);
+  if (!isBrowser()) return;
+  window.localStorage.removeItem(KEY);
+  window.dispatchEvent(new Event("auth-change"));
 }
 
 async function postJson<T>(url: string, body: unknown): Promise<T> {

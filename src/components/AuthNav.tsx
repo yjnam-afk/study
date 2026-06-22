@@ -2,17 +2,27 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { loadSession, clearSession, Session } from "@/lib/auth";
 
 /** 헤더 우측: 랭킹 링크 + 로그인 상태(이름/로그아웃) */
 export default function AuthNav() {
+  const pathname = usePathname();
   const [session, setSession] = useState<Session | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setSession(loadSession());
+    const sync = () => setSession(loadSession());
+    sync();
     setMounted(true);
-  }, []);
+    // 로그인/로그아웃(같은 탭) 및 다른 탭 변경 시 헤더 갱신
+    window.addEventListener("auth-change", sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener("auth-change", sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, [pathname]);
 
   return (
     <div className="flex items-center gap-3 text-sm font-medium">
