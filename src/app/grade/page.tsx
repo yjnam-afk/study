@@ -11,6 +11,7 @@ export default function GradePage() {
   const [period, setPeriod] = useState<Period>("1교시");
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
+  const [reference, setReference] = useState("");
   const [feedback, setFeedback] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -33,7 +34,7 @@ export default function GradePage() {
       const res = await fetch("/api/grade", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ period, question, answer }),
+        body: JSON.stringify({ period, question, answer, reference }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "채점 실패");
@@ -107,6 +108,19 @@ export default function GradePage() {
           placeholder="여기에 직접 작성한 답안을 붙여넣으세요."
           className="w-full resize-y rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
+
+        <details className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
+          <summary className="cursor-pointer text-sm font-medium text-slate-600">
+            📚 정답 근거(교재·서브노트) 붙여넣기 — 정확도 판단 기준
+          </summary>
+          <textarea
+            value={reference}
+            onChange={(e) => setReference(e.target.value)}
+            rows={6}
+            placeholder="이 문제의 정답 근거가 되는 교재 내용을 붙여넣으세요. 이 기준으로 사실 오류·누락을 짚어줍니다."
+            className="mt-2 w-full resize-y rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+          />
+        </details>
 
         <div className="mt-5">
           <Button onClick={grade} disabled={loading}>

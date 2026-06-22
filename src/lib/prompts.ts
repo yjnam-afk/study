@@ -33,7 +33,23 @@ export const TUTOR_SYSTEM =
 
 export type ExamPeriod = "1교시" | "2교시";
 
-export function answerPrompt(period: ExamPeriod, question: string): string {
+/** 참고자료(교재/서브노트 발췌)가 있으면 최우선 근거로 사용하도록 지시하는 블록. */
+function refBlock(reference?: string): string[] {
+  if (!reference?.trim()) return [];
+  return [
+    ``,
+    `[참고자료 — 내 교재/서브노트 발췌 (사실·키워드의 최우선 근거)]`,
+    reference.trim(),
+    `※ 위 참고자료의 내용·용어·키워드를 최우선 근거로 사용하세요. 자료에 없는 부분만 일반 지식으로 보완하되 자료와 모순되지 않게 작성합니다.`,
+    ``,
+  ];
+}
+
+export function answerPrompt(
+  period: ExamPeriod,
+  question: string,
+  reference?: string,
+): string {
   if (period === "1교시") {
     return [
       `다음은 정보관리기술사 1교시(용어형 단답) 문제입니다. ITPE 실전 방법론에 따라 답안지 형식으로 작성하세요.`,
@@ -41,6 +57,7 @@ export function answerPrompt(period: ExamPeriod, question: string): string {
       ``,
       `[문제]`,
       question,
+      ...refBlock(reference),
       ``,
       `[1교시 답안 구조 — 3단락 / 약 1.2~1.4페이지 / 사실 중심]`,
       `맨 윗줄에 "문 N) (토픽 Full Name) 요약" 형태의 리드문을 1줄 작성.`,
@@ -68,6 +85,7 @@ export function answerPrompt(period: ExamPeriod, question: string): string {
     ``,
     `[문제]`,
     question,
+    ...refBlock(reference),
     ``,
     `[2교시 답안 구조 — 4단락 / 약 3~3.5페이지 / 단락별 1줄 띄움]`,
     `맨 윗줄에 "문 N) 문제 요약(물어본 것 나열)" 리드문을 1~2줄 작성(요구사항 누락 금지).`,
@@ -101,6 +119,7 @@ export function gradePrompt(
   period: ExamPeriod,
   question: string,
   userAnswer: string,
+  reference?: string,
 ): string {
   const max = period === "1교시" ? 10 : 25;
   return [
@@ -109,6 +128,14 @@ export function gradePrompt(
     ``,
     `[문제]`,
     question,
+    ...(reference?.trim()
+      ? [
+          ``,
+          `[정답 근거 — 내 교재/서브노트 발췌]`,
+          reference.trim(),
+          `※ 정확도(사실 오류·누락)는 위 교재 내용을 정답 근거로 삼아 판단하고, 답안이 교재와 어긋나면 구체적으로 지적하세요.`,
+        ]
+      : []),
     ``,
     `[수험생 답안]`,
     userAnswer,

@@ -16,6 +16,7 @@ type Hint = {
 export default function AnswerPage() {
   const [period, setPeriod] = useState<Period>("1교시");
   const [question, setQuestion] = useState("");
+  const [reference, setReference] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -87,7 +88,7 @@ export default function AnswerPage() {
       const res = await fetch("/api/answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ period, question }),
+        body: JSON.stringify({ period, question, reference }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
@@ -147,6 +148,22 @@ export default function AnswerPage() {
             </button>
           ))}
         </div>
+
+        <details className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
+          <summary className="cursor-pointer text-sm font-medium text-slate-600">
+            📚 참고자료(교재·서브노트) 붙여넣기 — 있으면 이 내용을 근거로 작성
+          </summary>
+          <textarea
+            value={reference}
+            onChange={(e) => setReference(e.target.value)}
+            rows={6}
+            placeholder="이 문제와 관련된 교재/서브노트 내용을 붙여넣으세요. (전체가 아니라 관련 부분만)"
+            className="mt-2 w-full resize-y rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+          />
+          <p className="mt-1 text-xs text-slate-400">
+            붙여넣은 내용을 최우선 근거로 사용합니다. 자료가 없으면 비워두세요(일반 지식으로 작성).
+          </p>
+        </details>
 
         <div className="mt-5 flex flex-wrap gap-2">
           <Button onClick={generate} disabled={loading}>
