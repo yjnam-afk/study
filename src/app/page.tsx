@@ -14,7 +14,7 @@ const menuGroups = [
         href: "/explain",
         emoji: "💡",
         title: "토픽 설명",
-        desc: "어려운 토픽을 비유와 도식으로 이해하기 쉽게 풀어 설명합니다.",
+        desc: "어려운 개념을 비유·도식으로 쉽게 설명",
         color: "from-emerald-500 to-teal-600",
       },
     ],
@@ -26,21 +26,21 @@ const menuGroups = [
         href: "/mnemonic",
         emoji: "🥷",
         title: "두음신공",
-        desc: "핵심 키워드의 두음으로 암기 → 객관식 주입 → 주관식 확인으로 굳힙니다.",
+        desc: "두음으로 키워드 암기 → 객관식·주관식 확인",
         color: "from-violet-500 to-purple-600",
       },
       {
         href: "/memorize",
         emoji: "🧠",
-        title: "암기 (플래시카드·퀴즈)",
-        desc: "토픽으로 플래시카드와 4지선다 퀴즈를 만들어 암기를 돕습니다.",
+        title: "암기 (카드·퀴즈)",
+        desc: "플래시카드·4지선다 퀴즈로 반복 암기",
         color: "from-amber-500 to-orange-600",
       },
       {
         href: "/notes",
         emoji: "📕",
         title: "오답노트",
-        desc: "틀린 문제가 자동으로 모입니다. 자주 틀린 것부터 반복 복습하세요.",
+        desc: "자주 틀린 문제부터 반복 복습",
         color: "from-cyan-500 to-sky-600",
       },
     ],
@@ -52,14 +52,14 @@ const menuGroups = [
         href: "/answer",
         emoji: "📝",
         title: "답안지 생성",
-        desc: "1교시(용어형)·2교시(서술형) 답안지를 ITPE 방법론대로 작성해 줍니다.",
+        desc: "ITPE 방법론대로 시험 답안지 작성",
         color: "from-blue-500 to-indigo-600",
       },
       {
         href: "/grade",
         emoji: "✅",
         title: "AI 자가채점",
-        desc: "내가 쓴 답안을 채점위원 관점에서 점수와 보완점으로 피드백합니다.",
+        desc: "내 답안을 채점위원처럼 점수·피드백",
         color: "from-rose-500 to-red-600",
       },
     ],
@@ -71,14 +71,14 @@ const menuGroups = [
         href: "/review",
         emoji: "🔁",
         title: "회독 관리",
-        desc: "망각곡선 간격으로 오늘 복습할 토픽을 추천하고 진도를 관리합니다.",
+        desc: "망각곡선 간격으로 오늘 복습 추천",
         color: "from-fuchsia-500 to-pink-600",
       },
       {
         href: "/leaderboard",
         emoji: "🏆",
         title: "학습 랭킹",
-        desc: "로그인하고 회독·퀴즈 기록으로 다른 사람들과 경쟁하세요.",
+        desc: "회독·퀴즈 기록으로 랭킹 경쟁",
         color: "from-yellow-500 to-amber-600",
       },
     ],
@@ -138,28 +138,28 @@ export default function Home() {
         </p>
       </section>
 
-      {dueCount > 0 && (
-        <Link
-          href="/review"
-          className="mb-6 flex items-center justify-between rounded-2xl border border-amber-200 bg-amber-50 p-4 shadow-sm transition hover:bg-amber-100"
-        >
-          <span className="text-sm font-medium text-amber-800">
-            🔔 오늘 복습할 토픽이 <b>{dueCount}개</b> 있습니다.
-          </span>
-          <span className="text-sm font-semibold text-amber-700">복습하러 가기 →</span>
-        </Link>
-      )}
-
-      {dueNoteCount > 0 && (
-        <Link
-          href="/notes"
-          className="mb-6 flex items-center justify-between rounded-2xl border border-rose-200 bg-rose-50 p-4 shadow-sm transition hover:bg-rose-100"
-        >
-          <span className="text-sm font-medium text-rose-800">
-            🔁 다시 풀어야 할 오답이 <b>{dueNoteCount}개</b> 있습니다.
-          </span>
-          <span className="text-sm font-semibold text-rose-700">오답 복습 →</span>
-        </Link>
+      {(dueCount > 0 || dueNoteCount > 0) && (
+        <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 shadow-sm">
+          <h2 className="text-sm font-bold text-amber-800">📌 오늘 할 일</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {dueCount > 0 && (
+              <Link
+                href="/review"
+                className="rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm font-medium text-amber-800 transition hover:bg-amber-100"
+              >
+                🔁 복습할 토픽 <b>{dueCount}</b>개 →
+              </Link>
+            )}
+            {dueNoteCount > 0 && (
+              <Link
+                href="/notes"
+                className="rounded-lg border border-rose-300 bg-white px-3 py-2 text-sm font-medium text-rose-700 transition hover:bg-rose-50"
+              >
+                📕 다시 풀 오답 <b>{dueNoteCount}</b>개 →
+              </Link>
+            )}
+          </div>
+        </div>
       )}
 
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -256,30 +256,30 @@ export default function Home() {
       <p className="mb-4 text-sm text-slate-500">
         이해 → 암기 → 답안 → 복습 순서로 학습하면 효과적입니다.
       </p>
-      <div className="space-y-7">
+      <div className="space-y-6">
         {menuGroups.map((g) => (
           <section key={g.group}>
-            <h3 className="mb-3 text-sm font-semibold text-slate-600">
+            <h3 className="mb-2 text-sm font-semibold text-slate-600">
               {g.group}
             </h3>
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-2">
               {g.items.map((m) => (
                 <Link
                   key={m.href}
                   href={m.href}
-                  className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                  className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-brand-300 hover:shadow-md"
                 >
                   <div
-                    className={`mb-4 grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${m.color} text-2xl`}
+                    className={`grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${m.color} text-xl`}
                   >
                     {m.emoji}
                   </div>
-                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-brand-600">
-                    {m.title}
-                  </h4>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-500">
-                    {m.desc}
-                  </p>
+                  <div className="min-w-0">
+                    <h4 className="font-semibold text-slate-900 group-hover:text-brand-600">
+                      {m.title}
+                    </h4>
+                    <p className="truncate text-xs text-slate-500">{m.desc}</p>
+                  </div>
                 </Link>
               ))}
             </div>
