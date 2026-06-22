@@ -6,62 +6,82 @@ import topics from "@/data/topics.json";
 import { ReviewItem, loadReview, getItem, isDue } from "@/lib/storage";
 import { QuizStats, loadStats, loadNotes, dueNotes } from "@/lib/notes";
 
-const menus = [
+const menuGroups = [
   {
-    href: "/answer",
-    emoji: "📝",
-    title: "답안지 생성",
-    desc: "1교시(용어형)·2교시(서술형) 문제에 대한 시험 답안지를 AI가 작성해 줍니다.",
-    color: "from-blue-500 to-indigo-600",
+    group: "📖 개념 이해",
+    items: [
+      {
+        href: "/explain",
+        emoji: "💡",
+        title: "토픽 설명",
+        desc: "어려운 토픽을 비유와 도식으로 이해하기 쉽게 풀어 설명합니다.",
+        color: "from-emerald-500 to-teal-600",
+      },
+    ],
   },
   {
-    href: "/grade",
-    emoji: "✅",
-    title: "AI 자가채점",
-    desc: "내가 쓴 답안을 채점위원 관점에서 점수와 보완점으로 피드백합니다.",
-    color: "from-rose-500 to-red-600",
+    group: "🧠 암기",
+    items: [
+      {
+        href: "/mnemonic",
+        emoji: "🥷",
+        title: "두음신공",
+        desc: "핵심 키워드의 두음으로 암기 → 객관식 주입 → 주관식 확인으로 굳힙니다.",
+        color: "from-violet-500 to-purple-600",
+      },
+      {
+        href: "/memorize",
+        emoji: "🧠",
+        title: "암기 (플래시카드·퀴즈)",
+        desc: "토픽으로 플래시카드와 4지선다 퀴즈를 만들어 암기를 돕습니다.",
+        color: "from-amber-500 to-orange-600",
+      },
+      {
+        href: "/notes",
+        emoji: "📕",
+        title: "오답노트",
+        desc: "틀린 문제가 자동으로 모입니다. 자주 틀린 것부터 반복 복습하세요.",
+        color: "from-cyan-500 to-sky-600",
+      },
+    ],
   },
   {
-    href: "/explain",
-    emoji: "💡",
-    title: "토픽 설명",
-    desc: "어려운 토픽을 비유와 도식으로 이해하기 쉽게 풀어 설명합니다.",
-    color: "from-emerald-500 to-teal-600",
+    group: "✍️ 답안 연습",
+    items: [
+      {
+        href: "/answer",
+        emoji: "📝",
+        title: "답안지 생성",
+        desc: "1교시(용어형)·2교시(서술형) 답안지를 ITPE 방법론대로 작성해 줍니다.",
+        color: "from-blue-500 to-indigo-600",
+      },
+      {
+        href: "/grade",
+        emoji: "✅",
+        title: "AI 자가채점",
+        desc: "내가 쓴 답안을 채점위원 관점에서 점수와 보완점으로 피드백합니다.",
+        color: "from-rose-500 to-red-600",
+      },
+    ],
   },
   {
-    href: "/mnemonic",
-    emoji: "🥷",
-    title: "두음신공 (키워드 암기)",
-    desc: "핵심 키워드의 두음으로 암기하고, 객관식 주입 → 주관식 확인으로 굳힙니다.",
-    color: "from-violet-500 to-purple-600",
-  },
-  {
-    href: "/memorize",
-    emoji: "🧠",
-    title: "암기 (플래시카드·퀴즈)",
-    desc: "토픽으로 플래시카드와 4지선다 퀴즈를 만들어 암기를 돕습니다.",
-    color: "from-amber-500 to-orange-600",
-  },
-  {
-    href: "/notes",
-    emoji: "📕",
-    title: "오답노트",
-    desc: "암기 퀴즈에서 틀린 문제가 자동으로 모입니다. 약점만 골라 복습하세요.",
-    color: "from-cyan-500 to-sky-600",
-  },
-  {
-    href: "/review",
-    emoji: "🔁",
-    title: "회독 관리",
-    desc: "토픽별 회독 횟수와 진도를 기록하고 반복 학습을 관리합니다.",
-    color: "from-fuchsia-500 to-pink-600",
-  },
-  {
-    href: "/leaderboard",
-    emoji: "🏆",
-    title: "학습 랭킹",
-    desc: "로그인하고 회독·퀴즈 기록으로 다른 사람들과 경쟁하세요.",
-    color: "from-yellow-500 to-amber-600",
+    group: "🔁 복습 · 경쟁",
+    items: [
+      {
+        href: "/review",
+        emoji: "🔁",
+        title: "회독 관리",
+        desc: "망각곡선 간격으로 오늘 복습할 토픽을 추천하고 진도를 관리합니다.",
+        color: "from-fuchsia-500 to-pink-600",
+      },
+      {
+        href: "/leaderboard",
+        emoji: "🏆",
+        title: "학습 랭킹",
+        desc: "로그인하고 회독·퀴즈 기록으로 다른 사람들과 경쟁하세요.",
+        color: "from-yellow-500 to-amber-600",
+      },
+    ],
   },
 ];
 
@@ -232,26 +252,38 @@ export default function Home() {
         </div>
       </div>
 
-      <h2 className="mb-3 mt-10 text-lg font-bold text-slate-900">바로가기</h2>
-      <div className="grid gap-5 sm:grid-cols-2">
-        {menus.map((m) => (
-          <Link
-            key={m.href}
-            href={m.href}
-            className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-          >
-            <div
-              className={`mb-4 grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${m.color} text-2xl`}
-            >
-              {m.emoji}
+      <h2 className="mb-1 mt-10 text-lg font-bold text-slate-900">메뉴</h2>
+      <p className="mb-4 text-sm text-slate-500">
+        이해 → 암기 → 답안 → 복습 순서로 학습하면 효과적입니다.
+      </p>
+      <div className="space-y-7">
+        {menuGroups.map((g) => (
+          <section key={g.group}>
+            <h3 className="mb-3 text-sm font-semibold text-slate-600">
+              {g.group}
+            </h3>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {g.items.map((m) => (
+                <Link
+                  key={m.href}
+                  href={m.href}
+                  className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                >
+                  <div
+                    className={`mb-4 grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${m.color} text-2xl`}
+                  >
+                    {m.emoji}
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-brand-600">
+                    {m.title}
+                  </h4>
+                  <p className="mt-1 text-sm leading-relaxed text-slate-500">
+                    {m.desc}
+                  </p>
+                </Link>
+              ))}
             </div>
-            <h2 className="text-lg font-bold text-slate-900 group-hover:text-brand-600">
-              {m.title}
-            </h2>
-            <p className="mt-1 text-sm leading-relaxed text-slate-500">
-              {m.desc}
-            </p>
-          </Link>
+          </section>
         ))}
       </div>
     </div>
