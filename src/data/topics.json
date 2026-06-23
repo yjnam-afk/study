@@ -5605,5 +5605,4244 @@
     "importance": "하",
     "summary": "소프트웨어 개발 효율 향상을 위해 앱 구조 설계와 공통 컴포넌트 개발 및 코드 품질 관리",
     "mnemonic": "앱 구동을 위한 런타임 환경, 라이브러리 및 종속성 관리"
+  },
+  {
+    "id": "ds-1",
+    "title": "Web 2.0",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "참여, 공유, 개방이라는 개념하에 데이터의 소유자나 독점자 없이 누구나 데이터를 생산하고 인터넷에 공유할 수 있도록 한 사용자 참여 중심의 웹 플랫폼",
+    "mnemonic": "개공참"
+  },
+  {
+    "id": "ds-2",
+    "title": "Web 3.0 / Web 4.0",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "중",
+    "summary": "다수의 컴퓨터를 Seamless 네트워킹으로 연결하여 인간 중심의 정보 서비스를 제공하는 개인 맞춤형 서비스 플랫폼 (개소융 - 개인화, 소통, 융합)",
+    "mnemonic": "개소융"
+  },
+  {
+    "id": "ds-3",
+    "title": "Web 4.0",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "출제예상",
+    "summary": "모바일 웹, All Device 가상, 현실 세계 연결.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-4",
+    "title": "Dark Web",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "출제예상",
+    "summary": "비표준적인 통신 규약과 포트를 사용하는 특정 소프트웨어, 설정, 또는 허가가 있어야 접속할 수 있는 오버레이 네트워크 (overlay network)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-5",
+    "title": "Deep Web",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "출제예상",
+    "summary": "딥웹은 다크 웹을 포함하고 있는 개념임.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-6",
+    "title": "Cookie",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "인터넷 사용자가 어떠한 웹사이트를 방문할 경우 그 사이트가 사용하고 있는 서버를 통해 인터넷 사용자의 컴퓨터에 설치되는 작은 기록 정보 파일",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-7",
+    "title": "Second Life",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "가상환경의 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-8",
+    "title": "SNS",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "Community, 버티컬 SNS(Vertical SNS)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-9",
+    "title": "Metaverse",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "다감각 3차원 환경에서 사용자가 아바타를 통해 의사소통하고 정화/재화를 교환하면서 현실세계와 소통하는 세계",
+    "mnemonic": "증라가미"
+  },
+  {
+    "id": "ds-10",
+    "title": "스크래핑(Scraping)",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "스크래핑(Scraping) 기출",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-11",
+    "title": "웹크롤링(Web Crawling)",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "중",
+    "summary": "스크래핑과의 비교",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-12",
+    "title": "Open API / API",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "출제예상",
+    "summary": "API(Application Programming Interface) 기술",
+    "mnemonic": "게매서 캐인 개커"
+  },
+  {
+    "id": "ds-13",
+    "title": "APIM(API Management)",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "중",
+    "summary": "기업 및 클라우드 전반에서 어플리케이션과 데이터를 연결하는 API를 배포, 제어, 분석하고 중앙집중식으로 관리하는 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-14",
+    "title": "xAPI",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "출제예상",
+    "summary": "(정의) 분산학습 환경(Distributed Learning)에서 학습자 경험 데이터를 정의하고 이종의 시스템 간에 데이터를 공유·통신이 가능하도록 하기 위해 개발된 기술 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-15",
+    "title": "RIA",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "리치 인터넷 애플리케이션 [Rich Internet Application]",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-16",
+    "title": "Enterprise 2.0",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "중",
+    "summary": "기업형 Web2.0",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-17",
+    "title": "웹 접근성(WA)",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "중",
+    "summary": "주요 토픽, 모의고사, 기출문제 찾아서 문제 풀이 확인하여 정리하기",
+    "mnemonic": "인운이견"
+  },
+  {
+    "id": "ds-18",
+    "title": "반응형 웹",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "하",
+    "summary": "CSS 3의 미디어 쿼리(Media Query)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-19",
+    "title": "서비스 워커(Service Worker)",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "출제예상",
+    "summary": "웹 브라우저 와 별개로 동작하며 , 웹페이지 또는 사용자 상호작용이 필요하지 않는 백그라운드로 실행 되는 스크립트",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-20",
+    "title": "SPA",
+    "category": "디지털서비스",
+    "group": "인터넷 일반",
+    "importance": "중",
+    "summary": "전통적인 새로고침 방식의 웹과 달리 브라우저에서 페이지 간 이동없이 자바스크립트를 이용하여 동적 페이지 변경할 수 있는 웹 애플리케이션",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-21",
+    "title": "웹서비스",
+    "category": "디지털서비스",
+    "group": "웹서비스",
+    "importance": "하",
+    "summary": "UDDI, WSDL, SOAP, XML, REST, JSON",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-22",
+    "title": "WSDL",
+    "category": "디지털서비스",
+    "group": "웹서비스",
+    "importance": "하",
+    "summary": "웹서비스 표현언어(Web Service Description Language)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-23",
+    "title": "SOAP",
+    "category": "디지털서비스",
+    "group": "웹서비스",
+    "importance": "중",
+    "summary": "메시지 프로토콜(Simple Object Access Protocol), 4가지 구성요소",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-24",
+    "title": "REST/RESTful",
+    "category": "디지털서비스",
+    "group": "웹서비스",
+    "importance": "상",
+    "summary": "분산 하이퍼미디어 시스템을 위한SW 아키텍처스타일",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-25",
+    "title": "UDDI",
+    "category": "디지털서비스",
+    "group": "웹서비스",
+    "importance": "하",
+    "summary": "웹서비스 레지스트리(서비스 등록/검색), White/Yellow/Green",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-26",
+    "title": "OAS(OpenAPI Specification)",
+    "category": "디지털서비스",
+    "group": "웹서비스",
+    "importance": "하",
+    "summary": "OAS(OpenAPI Specification)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-27",
+    "title": "Push Technology",
+    "category": "디지털서비스",
+    "group": "Push Technology",
+    "importance": "하",
+    "summary": "기술중심 전략으로 제품 생산, R&D>제품화>마케팅",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-28",
+    "title": "Web Casting",
+    "category": "디지털서비스",
+    "group": "Push Technology",
+    "importance": "하",
+    "summary": "인테넷 브로드케스팅, Push/Streaming/IP 멀티케스팅, 압축 및 복원기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-29",
+    "title": "웹 신디케이션(Web Syndication)",
+    "category": "디지털서비스",
+    "group": "Push Technology",
+    "importance": "하",
+    "summary": "웹사이트가 보유하고 있는 콘텐츠의 일부 또는 전부를 다른 사이트 또는 서비스에서 이용할 수 있게 하는 기능",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-30",
+    "title": "클라우드 컴퓨팅",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "인터넷 기술을 활용하여 다수의 고객들에게 높은 수준의 확장성을 가진 IT 자원들을 ‘서비스’로 제공하는 컴퓨팅",
+    "mnemonic": "온멀유서"
+  },
+  {
+    "id": "ds-31",
+    "title": "IT 자원 대상/전략",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "대상서비스 사례 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-32",
+    "title": "Utility Computing",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "사용한 만큼 비용 지불",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-33",
+    "title": "Public Cloud",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "[Public Cloud] 일반 사용자를 대상으로 제공되는 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-34",
+    "title": "Private Cloud",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "사설 클라우드",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-35",
+    "title": "Hybrid Cloud",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "퍼블릭 클라우드의 비용,유연함과 프라이빗 클라우드의 통제,보안의 장점을 결합한 클라우드 유형",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-36",
+    "title": "CSB",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "클라우드 서비스를 결합해 소비자의 요구에 맞는 맞춤형 서비스를 구성 및 중개",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-37",
+    "title": "Personal Cloud",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "Personal Cloud, Cloud PVR(Personal Video Recoder)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-38",
+    "title": "오픈 스택 프로젝트",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "클라우드를 구축하기 위해 가상화된 자원을 통합, 제어, 운영하기 위한 오픈소스 플랫폼",
+    "mnemonic": "[호신매뉴히트 노바스글시키] Horizon, Cinder, Magnum, Neutron, Heat, Trove, Nova,"
+  },
+  {
+    "id": "ds-39",
+    "title": "Open Stack Swift",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "Swift-Proxy, account, container, object로 구성되며 REST기반 API와 Ring 호출구조로 데이터를 제어하는 Open stack의 오브젝트 스토리지",
+    "mnemonic": "요데"
+  },
+  {
+    "id": "ds-40",
+    "title": "뉴트론",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "Neutron",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-41",
+    "title": "클라우드 스토리지 가상화",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "복잡하게 구성되어 있는 스토리지 자원들 사용하기 편하고 간단한 파일이나 볼륨 등으로 보이도록 해주는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-42",
+    "title": "클라우드 컴퓨팅 보안",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "[플랫폼] 접근제어(MAC,DAC,RBAC), 인증(ID/PW, PKI, Multi-Factor, I-PIN,IAM)",
+    "mnemonic": "프스네디"
+  },
+  {
+    "id": "ds-43",
+    "title": "ISO/IEC 27017",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "클라우드 서비스 보안 국제 표준",
+    "mnemonic": "정조인자 접안물운 통개공사연법"
+  },
+  {
+    "id": "ds-44",
+    "title": "XaaS(Everything as a Service)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "IaaS, PasS, SaaS, BaaS, DaaS, SecaaS 특징 및 구축 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-45",
+    "title": "PasS(서비스 분류 3가지)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "고객의 Application을 개발,테스트, 구축할 수 있는 통합 플랫폼 제공",
+    "mnemonic": "컴스콘 컨시시"
+  },
+  {
+    "id": "ds-46",
+    "title": "BaaS(서비스 분류)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "모바일 app에서 자주 사용되는 데이터저장, 푸시, 사용자 관리 및 접속제어 기능들을 표준API를 통해 제공하는 아웃소싱 클라우드 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-47",
+    "title": "BaaS",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "블록체인 구축 및 서비스를 빠르게 하도록 필요한 기능을 제공하는 블록체인 클라우드 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-48",
+    "title": "DaaS(서비스 분류)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "Datacenter as a Service",
+    "mnemonic": "클에풀 브게인"
+  },
+  {
+    "id": "ds-49",
+    "title": "Desktop as a Service",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "클라우드 서비스로 사용자에게 데스크탑 가상화(VDI)를 아웃소싱 형태로 전달하는 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-50",
+    "title": "Saas 이용 가이드라인",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "SaaS 이용 시 클라우드 컴퓨팅 도입 보안 기준 중 공통원칙과 SaaS 환경 추가 원칙",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-51",
+    "title": "SecaaS(서비스 분류)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "보안기능을 크라우드 서비스 형태로 제공하는 클라우드 보안 서비스",
+    "mnemonic": "식데침암네업"
+  },
+  {
+    "id": "ds-52",
+    "title": "MaaS",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "MaaS(Mobility as a Service)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-53",
+    "title": "CSP(Cloud Service Provider)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "(정의) CSP(Cloud Service Provider)의 개념",
+    "mnemonic": "MSP"
+  },
+  {
+    "id": "ds-54",
+    "title": "Intercloud",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "인터클라우드(Intercloud)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-55",
+    "title": "클라우드발전법/클라우드컴퓨팅법",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-56",
+    "title": "민간 클라우드 이용",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "전자정부법 제 54조",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-57",
+    "title": "Metacloud",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "클라우드 서비스를 사용자(개발자)에 맞게 개발, 실행환경, 환경설정 등을 개발자의 요구에 맞게, 자유롭게 구성할 수 있도록 제시하는 통합 클라우드 시스템 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-58",
+    "title": "멀티클라우드",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "2개 이상의 클라우드를 연결해주는 클라우드 구축 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-59",
+    "title": "파스타(PaaS-TA)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "과학기술정보통신부, NIA가 지원하고, 국내 5개 SW 기업이 참여해 만든 개방형 클라우드 플랫폼",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-60",
+    "title": "LXC(Linux Container)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "LXC(Linux Container)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-61",
+    "title": "서버리스 컴퓨팅((Serverless Computing)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "실행에 필요한 하드웨어 자원의 배분 및 할당을 클라우드에서 동적으로(dynamically) 관리해 주는 컴퓨팅",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-62",
+    "title": "FaaS(Function as a Service)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "함수(function)들을 클라우드에서 직접 실행하는 방식의 클라우드 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-63",
+    "title": "클라우드 네이티브",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "마이크로 서비스로 구현한 클라우드 서비스 라이프 사이클 관리 아키텍처",
+    "mnemonic": "마컨C데서"
+  },
+  {
+    "id": "ds-64",
+    "title": "Auto Scale Up/Auto Scale Out",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "Auto Scale: 클라우드 환경의 능동적 자원할당",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-65",
+    "title": "클라우드 전환",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "클라우드 마이그레이션 전략",
+    "mnemonic": "환수현전"
+  },
+  {
+    "id": "ds-66",
+    "title": "클라우드 서비스별 SLA",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "[IaaS] 프로세스 자동화, 부하 관리, 사용량기반 과금",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-67",
+    "title": "클라우드 보안인증제도",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "중",
+    "summary": "클라우드 서비스 제공자가 제공하는 서비스에 대해 ‘클라우드컴퓨팅법’ 제 23조 제2항에 따라 정보보호 기준의 준수 여부 확인을 인증기관(한국인터넷진흥원(KISA))이 평가/인증하여",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-68",
+    "title": "Unix To Linux(U2L)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "U2L의 개념과 절차, 이슈사항, 탈종속, OSS",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-69",
+    "title": "IaC(Infrastructure as Code)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "IaC(Infrastructure as Code)에 대해 설명",
+    "mnemonic": "부설오"
+  },
+  {
+    "id": "ds-70",
+    "title": "클라우드 상호운영성",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "상호운용성 : 클라우드 환경에서의 애플리케이션 간 또는 클라우드 환경의",
+    "mnemonic": "공애 가애데"
+  },
+  {
+    "id": "ds-71",
+    "title": "CSPM",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "컴플라이언스 또는 기업 보안 정책 설정에 따라 클라우드 인프라의 위험 요소를",
+    "mnemonic": "데얼 컴오데리폴트"
+  },
+  {
+    "id": "ds-72",
+    "title": "DaaS 인증",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "출제예상",
+    "summary": "클라우드 서비스 이용자의 보안우려 해소와 클라우드 서비스 경쟁력 확보를",
+    "mnemonic": "정인자서 침서준물 가접네데 시공"
+  },
+  {
+    "id": "ds-73",
+    "title": "HCI(Hyper Converged Infrastructure)",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "상",
+    "summary": "Software-Defined Infrastructure(SDI)로 적용하여 Scale-Out의 확장이 가능한 통합 IT프레임워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-74",
+    "title": "공공부문 SaaS 이용가이드라인",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "행정∙공공기관 업무처리를 위한 정보시스템이나 소프트웨어를 직접 구축하거나 구매하지",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-75",
+    "title": "RaaS",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "로봇 하드웨어와 소프트웨어를 클라우드 기반으로 통합하고, 이를 사용자에게 서비스 형태로 제공하는 구독",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-76",
+    "title": "주권 클라우드",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "국가 및 특정 지역 법률･규정을 준수하고 데이터에 대한 주권을 생성 국가에 부여하는 클라우드 컴퓨팅 아키텍처",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-77",
+    "title": "클라우드의 랜딩존",
+    "category": "디지털서비스",
+    "group": "Cloud Computing",
+    "importance": "하",
+    "summary": "클라우드 환경에서 조직의 계정 구조, 네트워크, 보안, 정책 등을 표준화해 초기 설정을 자동화하고 안정적인 클라우드 운영 기반을 마련하는 설계 프레임워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-78",
+    "title": "Grid Computing",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "하",
+    "summary": "Fabric Computing",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-79",
+    "title": "Fabric Computing",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "하",
+    "summary": "FBC, FEC, FBI, 가상화, 병렬처리, 분산 스토리지, 연결망, QPI, HyperTransport,",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-80",
+    "title": "Utility Computing",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "하",
+    "summary": "Pay Per Use의 개념 이해 -> 아웃소싱까지 확대",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-81",
+    "title": "상황인식컴퓨팅",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "중",
+    "summary": "현실공간과 가상공간을 연결하여 가상공간에서 현실의 상황을 정보화하고 이를 활용하여 사용자 중심의 지능화된 서비스를 제공하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-82",
+    "title": "Ubiquitous Computing",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "하",
+    "summary": "u-City",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-83",
+    "title": "Seamless Computing",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "하",
+    "summary": "끊임없는 서비스 보장",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-84",
+    "title": "인메모리 컴퓨팅",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "중",
+    "summary": "어플리케이션을 구동하는 컴퓨터의 메인 메모리에 DB 데이터와 같은 주요 데이터를 저장하고 처리하는 컴퓨팅 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-85",
+    "title": "Autonomic Computing",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "하",
+    "summary": "자율컴퓨팅(Autonomic Computing)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-86",
+    "title": "포그 컴퓨팅",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "중",
+    "summary": "지역 분산식 소용량 처리, Real-Time, 분석/필터링, 광범위한 분포, IoE 시대의 빅데이터 처리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-87",
+    "title": "MEC/EC",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "중",
+    "summary": "요청된 서비스에 해당하는 컨테이너를 어느 호스트에 할당할지에",
+    "mnemonic": "모2공"
+  },
+  {
+    "id": "ds-88",
+    "title": "앰비언트 컴퓨팅(Ambient Computing)",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "출제예상",
+    "summary": "IT 기기가 사용자의 일상에서 너무 자연스럽게 자리잡아, 인지되지 못한 상태로 활용되는 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-89",
+    "title": "인터미턴트 컴퓨팅",
+    "category": "디지털서비스",
+    "group": "컴퓨팅(Computing)",
+    "importance": "출제예상",
+    "summary": "에너지 하베스팅, 에너지 저장 장치, 비 휘발성 메모리, 다중 버전 모델, NoC, NVP, Chain, Alpaca",
+    "mnemonic": "하저 비휘메프"
+  },
+  {
+    "id": "ds-90",
+    "title": "u-City",
+    "category": "디지털서비스",
+    "group": "스마티 시티",
+    "importance": "하",
+    "summary": "융합, 통합, 지능적, 혁신 도시",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-91",
+    "title": "Smart City",
+    "category": "디지털서비스",
+    "group": "스마티 시티",
+    "importance": "중",
+    "summary": "스스로 인지하고 발전하는 지능형 IT인프라와 비IT서비스를 융합한 차세대 도시",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-92",
+    "title": "스마트시티 통합플랫폼",
+    "category": "디지털서비스",
+    "group": "스마티 시티",
+    "importance": "하",
+    "summary": "스마트도시 통합운영센터에서 도시상황 통합관리를 위해 사용하는 기반 소프트웨어로서 방범· 방재, 교통, 환경, 시설물관리 등 스마트서비스 및 도시 관리를 위해 운영중인 각종 정보시스",
+    "mnemonic": "관운연디"
+  },
+  {
+    "id": "ds-93",
+    "title": "스마트시티 데이터 거버넌스",
+    "category": "디지털서비스",
+    "group": "스마티 시티",
+    "importance": "하",
+    "summary": "스마트시티 프로젝트에 배포된 센서 및 기타 기술을 통해 수집한 데이터에 대한 접근 및 사 용과 관련하여 사적 및 공적 이익의 규형을 맞출 수 있는 규제 및 도구",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-94",
+    "title": "BIM",
+    "category": "디지털서비스",
+    "group": "스마티 시티",
+    "importance": "하",
+    "summary": "Building Information Management, 파라메트릭 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-95",
+    "title": "RFID",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "상",
+    "summary": "Micro Chip을 내장한 RF방식으로 근거리/원거리에서 Read/Write하여 사물 정보 및 주변 상황 정보 감지 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-96",
+    "title": "RFID 코드 체계",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "96비트",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-97",
+    "title": "ONS",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "URL로 변환",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-98",
+    "title": "PML Server",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "PML(Physical Markup. Language)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-99",
+    "title": "Savant",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "RFID 리더에서 발생한 EPC 이벤트를 처리하기 위한 소프트웨어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-100",
+    "title": "Smart Dust",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "먼지처럼 작은 센서들이 공간에 흩어져, 네트워킹으로 연결되어 데이터를 수집하는 컴퓨팅기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-101",
+    "title": "UsN",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "사물에 부착된 Tag/Sensor에서 환경 정보를 수집/가공하여 활용하는 지능형 인프라",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-102",
+    "title": "인터페이스",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "[설계 원칙] 유용성(직관적 인터페이스), 관리 투명성(단일 인터페이스), 효과성(자동화 관리 매커니즘), 유연성(RFID 이벤트 관리 규격 명세 배포)",
+    "mnemonic": "유관효유"
+  },
+  {
+    "id": "ds-103",
+    "title": "Mobile RFID",
+    "category": "디지털서비스",
+    "group": "RFID",
+    "importance": "하",
+    "summary": "휴대폰에 소형 RFID 리더 탑재하여 휴대폰으로 RFID 태그를 읽었을 때 여러가지 서비스를 이동 통신망 이용 제공하는 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-104",
+    "title": "증강현실(Augment Reality)",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "가상세계와 현실세계를 유기적으로 연동하고 3차원적으로 결합한 '확장된 현실'",
+    "mnemonic": "정보마추삼I디"
+  },
+  {
+    "id": "ds-105",
+    "title": "XR 유형(AR, MR, VR)",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "상",
+    "summary": "MR, AR, AV(Argumented Virtuality), VR, XR",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-106",
+    "title": "메타버스",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "다감각 3차원 환경에서 사용자가 아바타를 통해 의사소통하고 정화/재화를 교환하면서 현실세계와 소통하는 세계",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-107",
+    "title": "가상현실(VR)",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "컴퓨터로 만든 가상세계를 기기를 통해 이용자가 실제 상황처럼 느끼게 해주는 가상공간",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-108",
+    "title": "VR(Virtual Reality) 미디어 획득",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "VR미디어: VR 콘텐츠를 획득하여 부호화한 후, 방송망 또는 통신망을 통해 전송하여 사용자가 HMD(Head mounted display)와 같은 실감 인터페이스 기기로 상호작용",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-109",
+    "title": "가상현실게임",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "하",
+    "summary": "가상현실 기술을 이용하여 입체적으로 구성된 화면 속에 게임을 하는 사람이 그 게임의 주인공으로 등장해 문제를 풀어나가는 방식의 게임",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-110",
+    "title": "ARC(Augmented Reality",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "하",
+    "summary": "현실에 컴퓨터 그래픽스로 생성한 데이터와의 합성으로 실제 현실에 존재하는 객체처럼 보이게 하는 증강현실, 가상현실, 혼합현실의 통합 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-111",
+    "title": "HMD",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "[진화] HMD-FMD(Face)-EMD(Eye)-EGD(Eye Glass Display)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-112",
+    "title": "HUD",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "[기술유형]",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-113",
+    "title": "MR",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "실세계의 물리적 환경과 가상환경을 혼합한 경험을 제공하는 하이브리드 현실",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-114",
+    "title": "공간증강현실",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "하",
+    "summary": "프로젝터를 이용하여 실 세계 사물의 표면에 정보, 콘텐츠, 사용자 인터페이스 등을 직접 투사하는 증강현실 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-115",
+    "title": "가상공간(Cyber Space)",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "중",
+    "summary": "CPS, 시뮬레이션, 디지털 스레드",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-116",
+    "title": "모바일 증강현실",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "하",
+    "summary": "모바일 + AR",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-117",
+    "title": "홀로그램 (Hologram)",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "출제예상",
+    "summary": "피사체로부터 반사/굴절된 빛의 진폭,위상정보 포함한 완벽한 3차원 영상 정보를 자연스런 입체영상으로 제공하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-118",
+    "title": "디지털 휴먼증강(Digital Human Augmentation)",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "출제예상",
+    "summary": "디지털 휴먼증강(Digital Human Augmentation)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-119",
+    "title": "실감콘텐츠",
+    "category": "디지털서비스",
+    "group": "증강현실/가상현실",
+    "importance": "출제예상",
+    "summary": "실감기술을 이용해 인간의 오감 자극을 통해 정보를 제공하여 실제와 유사한 체험을 가능하게 하는 콘텐츠",
+    "mnemonic": "몰지상"
+  },
+  {
+    "id": "ds-120",
+    "title": "ePub",
+    "category": "디지털서비스",
+    "group": "ePub",
+    "importance": "하",
+    "summary": "국제전자출판물포럼(IDPF)에서 제정한 eBook 출판을 위한 XML 기반의 개방형 전자 출판물 Defacto 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-121",
+    "title": "e-Book",
+    "category": "디지털서비스",
+    "group": "ePub",
+    "importance": "하",
+    "summary": "종이책 대신 인터넷 언어인 HTML과 XML을 응용해 만든 디지텔화된 책을 자신의 PC나 전용단말에 뷰어를 이용하는 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-122",
+    "title": "e-learning",
+    "category": "디지털서비스",
+    "group": "ePub",
+    "importance": "하",
+    "summary": "웹, 양방향, TV, 모바일, 유비쿼터스 등 다양한 기술 활용, 언제,어디서나,누구나 필요에 따라 학 습할 수 있는 교육 체제",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-123",
+    "title": "XML",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "중",
+    "summary": "웹에서 구조화된 문서를 효율적으로 처리하도록 설계된 표준화된 데이터형식",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-124",
+    "title": "DOM",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "중",
+    "summary": "DOM(Document Object Model)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-125",
+    "title": "SAX",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "XML 문서의 이벤트 처리 기반의 구문 분석기, DOM 비교",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-126",
+    "title": "DTD",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "<! DOCTYPE books SYSTEM “books.dtd”>",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-127",
+    "title": "XML Schema",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "중",
+    "summary": "XML 문서 타입에 대해 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-128",
+    "title": "XLL",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "XML 문서간의 다중 및 다이나믹 링크를 지원",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-129",
+    "title": "XPath",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "XML 문서의 이동, 루트노드/자식노드/후손노드",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-130",
+    "title": "XQuery",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "XML 기반의 데이터베이스를 조회하기 위한 쿼리 언어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-131",
+    "title": "VXML",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "음성통한 대화 정의언어, 문서서버/VXML 인터프리터/음성플랫폼",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-132",
+    "title": "SMIL",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "웹에서 프리젠테이션 구현 목적 멀티미디어 Layout 언어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-133",
+    "title": "Binary XML",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "하",
+    "summary": "대량의 XML 파일을 빠르게 전송하기 위한 포맷",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-134",
+    "title": "ASN.1(Abstract Syntax Notation One)",
+    "category": "디지털서비스",
+    "group": "XML(B2B) / 연동 포맷",
+    "importance": "중",
+    "summary": "데이터 구조를 플랫폼·언어에 독립적으로 기술하기 위한 국제 표준 데이터 명세 언어, ASN.1 정의 - ITU-T에서 정의한 네트워크 상의 데이터 교환을 위해 정의한 표준화된 개방",
+    "mnemonic": "138_컴시응_3"
+  },
+  {
+    "id": "ds-135",
+    "title": "검색엔진",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "상",
+    "summary": "인터넷상에서 필요한 정보를 빠르고 쉽게 찾아주기 위한 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-136",
+    "title": "Folksonomy",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "웹 정보나 관련주제를 기존분류학 기술인 디렉토리로 나누는 것이 아닌 Tag에 따라 참여형 분류하는 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-137",
+    "title": "FTR(Full Text Retrieval)",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "전문(Full Text)를 색인(인덱싱) 형태로 제공함으로써 각종 데이터를 신속 정확하게 검색할 수 있도록 지원하는 검색 엔진",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-138",
+    "title": "에이전트(Agent)",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "정보 에이전트, 지능형 에이전트 등 비교 필수",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-139",
+    "title": "다중 에이전트(Agent)",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "출제예상",
+    "summary": "여러 개의 독립적인 AI 에이전트가 협력·분업·조정(Cooperation & Coordination)을 통해 복잡한 문제를 해결하는 분산형 지능 시스템 키워드: Multi-Agen",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-140",
+    "title": "지능형 에이전트(Agent)",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "학습(learning), 추론(inferring, reasoning), 계획(planning)등의 지능적 특성을 갖춘 에이전트",
+    "mnemonic": "학추계"
+  },
+  {
+    "id": "ds-141",
+    "title": "에이전틱 AI(Agentic AI)",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "다양한 AI 기술을 메모리, 계획, 환경 감지, 도구 활용, 안전 지침 준수와 같은 기능과 결합하여 목표를 달",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-142",
+    "title": "온톨로지",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "[광의] 실세계 존재하는 모든 개념과 그 개념들의 속성, 관계, 사례에 대한 정보를 갖고 있는 의미적인 개념의 집합체",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-143",
+    "title": "RDF",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "URI를 갖는 모든 자원(웹페이지, 이미지, 동영상 등)들의 속성, 특성, 관계를 기술하기 위한 모델, 언어, 문법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-144",
+    "title": "Semantic Web",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "상",
+    "summary": "웹 상의 정보에 잘 정의된 의미(semantic)을 부여, 사람뿐만 아니라 컴퓨터도 쉽게 문서 의미 자동화처리 할 수 있도록 하는 웹 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-145",
+    "title": "OWL",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "하",
+    "summary": "Web Ontology Language (OWL), a family of knowledge representation languages",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-146",
+    "title": "자연어 처리 기술(NLP, natural language processing)",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "중",
+    "summary": "컴퓨터과학, 인공지능과 언어학이 결합되어 기계가 자연어로 인간과 상호 작용하기 위한 자연어 처리 기술",
+    "mnemonic": "형구의담"
+  },
+  {
+    "id": "ds-147",
+    "title": "SPARQL",
+    "category": "디지털서비스",
+    "group": "검색엔진/에이전트 확장",
+    "importance": "하",
+    "summary": "W3C RDF Data Access WC에서 개발하고 있는 RDF에 대한 질의 언어와 프로토콜, 결과 포맷에 대한 규격",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-148",
+    "title": "3D Printing",
+    "category": "디지털서비스",
+    "group": "3D Printing",
+    "importance": "중",
+    "summary": "첨삭가공 생산방식의 일종으로 디지털화된 3차원 설계도에 근거하여 재료를 층층히 쌓아 입체 제품을 제조하는 기술",
+    "mnemonic": "입분액고"
+  },
+  {
+    "id": "ds-149",
+    "title": "STereo Lithography(STL)",
+    "category": "디지털서비스",
+    "group": "3D Printing",
+    "importance": "중",
+    "summary": "액체기반-SLA, 파우더기반-SLS, 고체기반-FDM",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-150",
+    "title": "3D 바이오 프린팅",
+    "category": "디지털서비스",
+    "group": "3D Printing",
+    "importance": "상",
+    "summary": "바이오 잉크를 원료로 신체조직(tissue)이나, 장기(organ)를 원하는 형상으로 제작하는 기술",
+    "mnemonic": "생소자"
+  },
+  {
+    "id": "ds-151",
+    "title": "전통적 제조 방식",
+    "category": "디지털서비스",
+    "group": "3D Printing",
+    "importance": "하",
+    "summary": "비교표",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-152",
+    "title": "4D 프린팅",
+    "category": "디지털서비스",
+    "group": "3D Printing",
+    "importance": "출제예상",
+    "summary": "3차원 프린팅 기술에 시간 개념을 추가하여 외부환경의 변화에 따라 스스로 모양을 바꾸는 물질을 프린팅하는 기술",
+    "mnemonic": "변조"
+  },
+  {
+    "id": "ds-153",
+    "title": "HTML5",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "중",
+    "summary": "W3C 중심으로 기존 표준의 한계를 극복하기 위해 추가적인 플러그인 없이 리치 웹 응용을 가능하게 하는 차세대 HTML표준",
+    "mnemonic": "[HTML영향]플러그인 설치 대"
+  },
+  {
+    "id": "ds-154",
+    "title": "Web Socket",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "출제예상",
+    "summary": "W3C와 IETF가 웹서버와 웨브라우저간의 통신을 규정한 양항뱡통신용 기술규약.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-155",
+    "title": "Web Storage",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "출제예상",
+    "summary": "HTML5 에는 웹 사이트의 데이터를 클라이언트에 저장할 수 있는 새로운 자료구조인 Web Storage 스펙으로 'key-value' 쌍으로 데이터를 저장하고 키를 기반으로 데이",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-156",
+    "title": "Web Workers",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "중",
+    "summary": "HTML5에서 웹 브라우저 성능에 영향을 주지 않고 백그라운드에서 자바스크립트를 실행하는 API",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-157",
+    "title": "Service Workers",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "출제예상",
+    "summary": "브라우저와 네트워크 간의 프록시",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-158",
+    "title": "Canvas",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "하",
+    "summary": "웹에서 즉시 모드(Immediate mode)로 2차원 그래픽 그리기 위한 API와 Canvas 내 각종 객체를 회전,",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-159",
+    "title": "SVG",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "하",
+    "summary": "웹을 위한 벡터( Vector) 기반 그래픽을 정의 하는데 사용되는 HTML5 요소 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-160",
+    "title": "Application Cache",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "하",
+    "summary": "Web Application의 오프라인 구동을 위해 필요한 자원(HTML, CSS, Javascript, Image 등)을 클라이언트에 저장 가능한 기능",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-161",
+    "title": "XHTML",
+    "category": "디지털서비스",
+    "group": "HTML5",
+    "importance": "하",
+    "summary": "XML 비교",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-162",
+    "title": "가상화 / 가상화 도메인별 분류",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "상",
+    "summary": "컴퓨터 리소스의 추상화",
+    "mnemonic": "어서O스데"
+  },
+  {
+    "id": "ds-163",
+    "title": "Hypervisor",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "상",
+    "summary": "하이퍼바이저",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-164",
+    "title": "서버가상화",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "CPU, 메모리, 하드디스크 등 서버 자원들을 가상화 기술을 적용하여 통합하고 사용자의 요구에 따라 하드웨어의 사양 및 성능을 조절하여 가상머신 형태로 제공하는 서비스 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-165",
+    "title": "스토리지가상화",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "복잡하게 구성되어 있는 스토리지 자원들 사용하기 편하고 간단한 파일이나 볼륨 등으로 보이도록 해주는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-166",
+    "title": "데스크톱가상화(VDI)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "[동작원리] VC(가상 클라이언트) 실행",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-167",
+    "title": "리눅스의 가상화(방식)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "[HW,플랫폼 레벨] 전가상화, 반가상화",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-168",
+    "title": "어플리케이션 가상화",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "실행되는 기반 운영 체제로부터 응용 소프트웨어를 캡슐화하는 소프트웨어 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-169",
+    "title": "ZeroPC",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "하",
+    "summary": "가상화와 클라우드 컴퓨팅 활용, 웹 브라우저를 통해 마치 일반 PC 환경과 같이 OS와 응용 프로그램을 사용하게 하는 서비스 Desktop as a Service, Any Wher",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-170",
+    "title": "VDI",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "사용자 PC 환경을 가상 공간에 구축하여, 시간과 장소, 접속 단말에 구애받지 않고 자유롭게 PC를 이용할 수 있도록 하는 기술",
+    "mnemonic": "단세인가하공"
+  },
+  {
+    "id": "ds-171",
+    "title": "SBC",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "데이터와 어플리케이션을 서버에 저장하고 필요 시 클라이언트가 서버에 접속해 작업하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-172",
+    "title": "도커(Docker)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "상",
+    "summary": "하이퍼바이저 없이 리눅스 컨테이너(LXC) 기술 바탕으로 애플리케이션을 격리된 상태에서 실행하는 가상화 솔루션",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-173",
+    "title": "컨테이너(Container)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "상",
+    "summary": "가상머신(Virtual Machine)과 컨테이너(Container)를 비교",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-174",
+    "title": "컨테이너 오케스트레이션/쿠버네티스(Kubernates)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "출제예상",
+    "summary": "컨테이너화된 어플리케이션의 배포, 확장 및 관리를 자동화 위한 오픈소스 플랫폼",
+    "mnemonic": "마노포컨"
+  },
+  {
+    "id": "ds-175",
+    "title": "HPA(Horizontal Pod Autoscaler)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "출제예상",
+    "summary": "쿠버네티스에서 애플리케이션의 부하에 따라 Pod의 개수를 자동으로 늘리거나 줄이는 오토 스케일링 기능. VPA(Vertical Pod Autoscaler): Pod 하나에 할당되는",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-176",
+    "title": "도커 스웜(Docker Swarm)",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "중",
+    "summary": "컨테이너 오케스트레이션, 쿠버네티스 비교할 것",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-177",
+    "title": "전가상화, 반가상화",
+    "category": "디지털서비스",
+    "group": "가상화(Virtualization)",
+    "importance": "상",
+    "summary": "[전가상화] 하드웨어를 완전히 가상화하는 것으로 게스트 OS를 수정할 필요없이 다양한 OS를 사용할 수 있는 하이퍼바이저 가상화 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-178",
+    "title": "컨버지드 인프라",
+    "category": "디지털서비스",
+    "group": "인프라스트럭처",
+    "importance": "중",
+    "summary": "컨버지드 인프라(Converged Infrastructure)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-179",
+    "title": "클라우드 아키텍처",
+    "category": "디지털서비스",
+    "group": "인프라스트럭처",
+    "importance": "기출",
+    "summary": "Multi-Tenancy, 망분리, Zone",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-180",
+    "title": "IPTV",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "실시간 방송 컨텐츠, 주문형 비디오(VOD), 인터넷, T-커머스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-181",
+    "title": "3DTV",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "3-Dimensional Television, 무안경으로 개발, 입체감",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-182",
+    "title": "UHDTV",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "UHD(Ultra High Definition) Television,",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-183",
+    "title": "Smart TV",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "TV와 휴대폰, PC등 3개 스크린. 운영체제(OS)와 중앙처리장치(CPU)를 탑재.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-184",
+    "title": "3차원 비디오 부호화 기술",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "양안식(stereoscopic; 입체적인, 스테레오스코픽)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-185",
+    "title": "무안경3D",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "별도의 3D 안경이 필요 없음",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-186",
+    "title": "STB",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "Set Top Box(셋 톱 박스)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-187",
+    "title": "OTA(Over The Air)",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "하",
+    "summary": "무선 통신 시스템에서 어플리케이션 관련 정보의 전송과 수신을 위한 무선 네트워킹 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-188",
+    "title": "OTT",
+    "category": "디지털서비스",
+    "group": "TV, 방송서비스",
+    "importance": "중",
+    "summary": "다양한 기기에 인터넷 망을 통해 TV, 영화 등 다양한 미디어 콘텐츠를 제공하는 온라인 콘텐츠 전송 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-189",
+    "title": "ITS",
+    "category": "디지털서비스",
+    "group": "ITS/C-ITS",
+    "importance": "중",
+    "summary": "교통체계의 구성요소에 ICT기술을 접목시켜 각종 교통문제에 체계적으로 대처하여 효율적인 교통시스템 운영이 가능하게 하는 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-190",
+    "title": "C-ITS",
+    "category": "디지털서비스",
+    "group": "ITS/C-ITS",
+    "importance": "출제예상",
+    "summary": "안전성, 이동성, 지속가능성을 목표로 차량과 차량,인프라 등 양방향 통신, 오픈 플랫폼 기반 서비스 제공하는 협력형 ITS",
+    "mnemonic": "양방향"
+  },
+  {
+    "id": "ds-191",
+    "title": "V2V",
+    "category": "디지털서비스",
+    "group": "ITS/C-ITS",
+    "importance": "중",
+    "summary": "VANET(Vehicle Ad-hoc NETwork)의 요소기술로, 차량과 차량 사이 무선통신으로 달리는 자동차끼리 차량 안전을 위해 자동으로 통신을 주고받는 차량간 멀티홉 통신기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-192",
+    "title": "LDT",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "위치기반 서비스(LBS) 제공을 위해 모바일 단말의 위치를 측정하는 위치 확인 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-193",
+    "title": "LEP(위치 처리 플랫폼)",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "LBS 미들웨어로 통신망의 위치정보 접속 게이트웨이",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-194",
+    "title": "측위기술",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "상",
+    "summary": "GPS를 사용하거나 무선 네트워크 기지국 위치를 활용하여 서비스요청 단말기의 정확한 위치를 파악하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-195",
+    "title": "GPS(범지구 위치 결정 시스템)",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "Global Positioning System",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-196",
+    "title": "DGPS(Differential GPS)",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "출제예상",
+    "summary": "지상의 방송국에서 위성에서 수신한 신호로 확인한 위치와 실제 위치와의 차이를 전송하여 오차를 교정하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-197",
+    "title": "SBAS",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "하",
+    "summary": "- 넓은 지역에 분산 설치된 기준국에서 수집한 GPS 데이터의 보정 정보와 항법 신호의 이상 유무를 정지궤도 위성을 통해 이용자들에게 전달함으로써 해당지역에 대한 정밀한 위치 정보",
+    "mnemonic": "기중위정사"
+  },
+  {
+    "id": "ds-198",
+    "title": "RTLS",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "하",
+    "summary": "Active RFID 방식으로 능동형 태그를 부착한 후 찾으려는 사물의 위치를 실시간으로 추적하여 위치 기반 서비스 제공하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-199",
+    "title": "LBS / LAS",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "상",
+    "summary": "GPS, LDT를 이용하여 사물 또는 사람의 위치를 파악하고 응용app과 접목하여 새로운 부가가치를 창출하기 위한 위치기반 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-200",
+    "title": "GIS, 3D GIS",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "지리 및 지형에 관련된 공간데이터(Spatial Data)와 그 공간 데이터와 관련된 속성데이터(Attribute Data)를 디지털화하여 사용자가 원하는 형태로 출력할 수 있도록",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-201",
+    "title": "Fingerprint 기법",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "하",
+    "summary": "서비스 지역의 위치좌표와 전파환경을 미리 DB로 구축한 후 단말기에서 올라온 전파특성을 해당 DB와 매칭하여 위치를 결정하는 LBS 무선측위방식",
+    "mnemonic": "Fingerprint(지문, 컨텐츠보호기술)과 혼동하지"
+  },
+  {
+    "id": "ds-202",
+    "title": "GML",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "Geography Markup Language",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-203",
+    "title": "인도어GML",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "하",
+    "summary": "인도어GML(Indoor Geography Markup Language)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-204",
+    "title": "CityGML",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "도시 지형 마크업 언어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-205",
+    "title": "IPS (Indoor Positioning System)",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "상",
+    "summary": "IPS (Indoor Positioning System)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-206",
+    "title": "Geofencing",
+    "category": "디지털서비스",
+    "group": "공간/위치/LBS",
+    "importance": "중",
+    "summary": "실제 지형에 구획된 가상의 경계선으로 구획된 영역에 대해 디바이스의 진입/진출을 감지하는 측위 기반 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-207",
+    "title": "Wearable Computer",
+    "category": "디지털서비스",
+    "group": "Wearable Computer",
+    "importance": "중",
+    "summary": "의복 컴퓨터",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-208",
+    "title": "구글 글라스",
+    "category": "디지털서비스",
+    "group": "Wearable Computer",
+    "importance": "하",
+    "summary": "프로젝트 글래스, 핸즈프리, 고가격, 타산업 융합",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-209",
+    "title": "애플워치",
+    "category": "디지털서비스",
+    "group": "Wearable Computer",
+    "importance": "하",
+    "summary": "삼성, 엘지, 이동통신 연동, 헬스 연동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-210",
+    "title": "Multi Modal",
+    "category": "디지털서비스",
+    "group": "Wearable Computer",
+    "importance": "중",
+    "summary": "Interface, Z축(압축 인식)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-211",
+    "title": "오감",
+    "category": "디지털서비스",
+    "group": "Wearable Computer",
+    "importance": "하",
+    "summary": "시각(광센서,광전도,이미지센서,포토 다이오드,내장카메라-홀로그램,얼굴/제스쳐인식,비전)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-212",
+    "title": "웨어러블 스마트 기기",
+    "category": "디지털서비스",
+    "group": "Wearable Computer",
+    "importance": "하",
+    "summary": "Wearable Stmart Deovice",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-213",
+    "title": "인더스트리4.0 / 5.0",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "중",
+    "summary": "Industry 4.0, 스마트 팩토리(Smart Factory=공장)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-214",
+    "title": "인더스트리 5.0",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "중",
+    "summary": "유럽위원회(EC)에서 독일이 추진하는 인더스트리 4.0을 계승 발전시킨 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-215",
+    "title": "퍼팩트 스톰(Perfect Storm)",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "퍼팩트 스톰 의미",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-216",
+    "title": "ISO 19626",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "물리적 세계와 사이버 세계가 연결되어 분산된 비즈니스 환경에서 신뢰성 있는 데이터Set(정보, 문서)의 흐름을 책임지는 전자적 통신",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-217",
+    "title": "Smart Factory/스마트 팩토리(공장)",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "상",
+    "summary": "설비, 관리시스템, 생산공정, IoT, CPS, IoS",
+    "mnemonic": "점모제최자"
+  },
+  {
+    "id": "ds-218",
+    "title": "CPS",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "상",
+    "summary": "물리적인 실제 시스템과 IoT 플랫폼을 연결하여 실시간으로 연결되어 제어,적용,예측하는 지능형 분산시스템",
+    "mnemonic": "SAC 모자실 S 유"
+  },
+  {
+    "id": "ds-219",
+    "title": "ISA-88, ISA-95 비교",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "3. 스마트팩토리에서 MES(Manufacturing Execution System) 참조모델인 ISA-88과 ISA-95 비교",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-220",
+    "title": "퍼듀(Purdure) 모델",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "퍼듀(Purdure) 모델- ICS(Industrial Control System) 네트워크 구조를 시각화할 때 매우 유용한 모델.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-221",
+    "title": "AMR(Autonomous Mobile Robot)",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "카메라 , Lidar, IMU 센서 활용해 장애물을 인식하고 , 인공지능 기술 기반으로 작업장을 자유롭게 돌아디니며 , 자동으로 물류 및 공정 작업을 자동으로 수행하는 로봇",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-222",
+    "title": "CPPS",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "Cyber Physical Production System",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-223",
+    "title": "제조업 혁신 3.0",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "제조업 혁신 3.0 전략 추진 - 산업통상자원부",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-224",
+    "title": "팝업팩토리(Pop-up Factory)",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "하",
+    "summary": "거창한 사전 준비 없이 즉석에서 만들어지는 제조 공장이다. 3D 프린터와 디자인 파일, 전자회로를 만들어내는 도구, 전자부품 조립기계 등을 모으고, 수작업으로 만든 납땜 데스크를 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-225",
+    "title": "다크팩토리(Dark Factory)",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "중",
+    "summary": "사람이 없이 운영되는 공장이라 조명이 필요 없고 조명이 없이도 기계가 작동할 수 있어 인간의 개입없이 완전 자동화로 운영되는 스마트 공장",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-226",
+    "title": "리쇼어링(reshoring) 정책",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "중",
+    "summary": "해외에 나가 있는 자국 기업을 각종 세제 혜택과 규제 완화등을 통해 자국으로 불러 들이는 정책 (오프쇼어링의 반대)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-227",
+    "title": "포지티브 규제",
+    "category": "디지털서비스",
+    "group": "산업정책",
+    "importance": "중",
+    "summary": "원칙적으로 금지 - 예외 허용",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-228",
+    "title": "HMI",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "하",
+    "summary": "Machine을 효율적으로 제어하기 위해 Machine의 상태를 인간이 이해하기 쉬운 인터페이스를 통해 보여주는 도구, SCADA시스템 소프트웨어 및 데이터베이스 연동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-229",
+    "title": "SCADA",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "상",
+    "summary": "플랜트 상태를 감시,제어하기 위해 산업체에서 사용되는 원방감시제어와 자료취득시스템을 가진 대규모 시스템",
+    "mnemonic": "H감데통 피알보 DE"
+  },
+  {
+    "id": "ds-230",
+    "title": "지능형 SCADA",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "출제예상",
+    "summary": "기존의 산업제어시스템(산업공정/기반시설/설비) + AI, 프로세스, MSA를 추가한 작업공정을 감시하고 제어하는 종합관제시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-231",
+    "title": "DCS",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "하",
+    "summary": "공정제어 적용 시스템을 각 플랜트에 맞게 단위 서브 시스템으로 분리하여 주어진 역할 수행, 상호간 통신 가능한 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-232",
+    "title": "PLC",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "하",
+    "summary": "Programmable Logic Controller",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-233",
+    "title": "FEMS",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "하",
+    "summary": "기존의 수배전 설비와 생산설비의 에너지 사용 현황 및 가동 현황을 파악 합리적 에너지, 공장 설비 종합 관리 최적화시킨 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-234",
+    "title": "빌딩로보틱스",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "하",
+    "summary": "Building Robotics",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-235",
+    "title": "스턱스넷(보안 연동)",
+    "category": "디지털서비스",
+    "group": "산업관리 및 제어시스템",
+    "importance": "중",
+    "summary": "악성프로그램",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-236",
+    "title": "UX",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "상",
+    "summary": "[UX] 제품이나 시스템, 서비스를 이용하려고 예상하거나 사용한 결과로 나타나는 인지와 반응과 연결 된 사용자 경험",
+    "mnemonic": "유사감"
+  },
+  {
+    "id": "ds-237",
+    "title": "UI",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "사람과 접하는 면",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-238",
+    "title": "UI/UX 디자인 원칙",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "하",
+    "summary": "사 용자 인터페이스 (User 와 사용자 경험 (User 을 설계함에 있어 사용자 중심의 서비스제공 을 목적으로 삼는 설계 지침 또는 방향성",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-239",
+    "title": "조건",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "유용성, 사용성, 감성",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-240",
+    "title": "휴리스틱에 의한 사용성평가",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "하",
+    "summary": "사용자 인터페이스, 프로그램 등이 적합한지를 사용성",
+    "mnemonic": "상시일치"
+  },
+  {
+    "id": "ds-241",
+    "title": "HCI",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "인간과 컴퓨터가 상호간 작용함에 있어, 가장 최적의 방식과 편리성 극대화를 위한 상호작용 인터페이스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-242",
+    "title": "페르소나 모형(Persona Model)",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "어떤 제품 혹은 서비스를 사용할 만한 목표 인구 집단안에 있는 다양한 사용자 유형들을 대표하는 가상의 인물",
+    "mnemonic": "가리실다재"
+  },
+  {
+    "id": "ds-243",
+    "title": "직감기술",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "음성, 터치, 동작, 증강현실 등 사용자가 자신의 감각을 통해 디바이스 및 상품/서비스와 상호작용할 수 있도록 지원하는 기술",
+    "mnemonic": "음동증디"
+  },
+  {
+    "id": "ds-244",
+    "title": "음성 비서",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "머신러닝, 음성인식, 문장분석, 상황인지 등 인공지능 기술과 첨단기술의 결합으로 사용자의 언어를 이해하고 사용자가 원하는 지시사항을 수행하는 기능을 자동으로 제공하는 AI 비서 서",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-245",
+    "title": "Zero UI",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "사용자의 생활 환경 안에서 자연스럽게 사용자의 요구사항을 인지하여 필요한 서비스를 제공함으로써 현재 스크린 기반의 사용자 인터페이스를 최소화하려는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-246",
+    "title": "디지털 정부서비스 UI/UX 가이드라인",
+    "category": "디지털서비스",
+    "group": "UX/UI",
+    "importance": "중",
+    "summary": "디지털 정부서비스 UI/UX 가이드라인'(2024.2, 행정안전부)은 디지털 서비스를 구성하는 사용자 인터페이스(User Interface; UI)와 사용자 경험(User Expe",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-247",
+    "title": "모바일 서비스(3가지 유형 비교)",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "중",
+    "summary": "모바일 웹(Mobile Web), 모바일 앱(Mobile App), 하이브리드 앱(Hybrid App)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-248",
+    "title": "MDM",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "모바일 보안관리기술, OTA",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-249",
+    "title": "MEAP",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "다수 엔터프라이즈 APP를 모바일 환경에 적용 위한 프레임워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-250",
+    "title": "BYOD",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "BYOD 보안이슈, BYOD 가상데스크탑 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-251",
+    "title": "CYOD",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "Choose Your Own Device",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-252",
+    "title": "스마트 워크(워킹)",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "다양한 장소와 이동 환경에서도 언제 어디서나 편리하게, 효율적으로 업무에 종사 할 수 있도록 하는 미래지향적인 업무 환경 모바일 오피스, 스마트워크(Smart Work) 의 요소기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-253",
+    "title": "FOTA",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "무선을 통한 휴대폰 펌웨어 무선 업그레이드 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-254",
+    "title": "엔터프라이즈 모빌리티",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "엔터프라이즈 모빌리티",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-255",
+    "title": "스마트 워치(Smart Watch)",
+    "category": "디지털서비스",
+    "group": "모바일",
+    "importance": "하",
+    "summary": "스마트폰 연동. 손목시계. 블루투스, 와이파이, ICT 연동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-256",
+    "title": "안드로이드 아키텍처",
+    "category": "디지털서비스",
+    "group": "안드로이드 아키텍처",
+    "importance": "하",
+    "summary": "2007년 11월 공개된 구글의 안드로이드(Android)는 휴대폰 개발에 필요한 소프트웨어 플랫폼 일체를 제공하는 공개 소프트웨어App, App",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-257",
+    "title": "안드로이드 JDK/NDK",
+    "category": "디지털서비스",
+    "group": "안드로이드 아키텍처",
+    "importance": "하",
+    "summary": "Java Development Kit, Native Development Kit",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-258",
+    "title": "안드로이드 달빅(Dalvik)",
+    "category": "디지털서비스",
+    "group": "안드로이드 아키텍처",
+    "importance": "하",
+    "summary": "안드로이드 어플을 작동시켜주고 엔진역할을 하는 레지스터 머신형태의 가상 머신",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-259",
+    "title": "u-Health/Smart Health",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "중",
+    "summary": "[요소기술] 센싱(스마트패치,센서), Chartless(EHR,EMR,PHR), Filmless(PACS), Simpleless(OCS,DUR), Parperless(Groupwa",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-260",
+    "title": "PACS",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "디지털 의료영상이미지를 DICOM 규격에 맞게 저장,가공,전송하는 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-261",
+    "title": "PHR",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "생체정보, 가족력, 예방접종, 운동프로그램 등 개인의 다양한 건강정보를 수집해 통합 분석, 관리 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-262",
+    "title": "EMR/HER",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "[Electronic Medical Record] 모든 의료기록을 전자문서로 기록 보존하는 것으로 OCS와 PACS를 모두 포함하는 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-263",
+    "title": "DICOM",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "진료 정보 수신,저장,전송 위한 표준",
+    "mnemonic": "통설구설"
+  },
+  {
+    "id": "ds-264",
+    "title": "OCS",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "처방(Order)을 전산처리하기 위한 진료, 진료지원(영상, 약재, 병리, 재활치료, 식이 등),",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-265",
+    "title": "HL7",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "이기종 의료정보 시스템간 정보호환을 가능하도록 제정된 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-266",
+    "title": "Health Care",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "Sensing, Monitoring, Analyzing, Feedback",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-267",
+    "title": "Telecare",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "독거노인 u-케어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-268",
+    "title": "WBAN",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "인체 내에 이식된 의료장치나 사람이 착용하는 옷 또는 인체에 부착된 여러 장치들, 몸을 중심으로 약 3미터 이내에 장착된 장치들을 무선으로 연결하여 상호 통신을 하는 새로운 유형의",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-269",
+    "title": "u-Wellness",
+    "category": "디지털서비스",
+    "group": "Smart Health/ u-Health /병원",
+    "importance": "하",
+    "summary": "u-Wellness : 일반 주민 대상의 건강증진 활동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-270",
+    "title": "스마트그리드",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "중",
+    "summary": "기존 전력망 구조에 ICT를 접목, 공급자와 소비자간 양방향 실시간 정보로 에너지 효율을 최적화한 지",
+    "mnemonic": "송정서"
+  },
+  {
+    "id": "ds-271",
+    "title": "AMI",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "중",
+    "summary": "전력과 IT의 융합기술인 스마트그리드의 핵심으로 배전 및 수용가 부분에서 양방향 에너지 교 환을 위한 기반 기술 (지능형 전력망, 양방향 정보교환)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-272",
+    "title": "EMS",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "중",
+    "summary": "전체 전력공급 계통 상시 정보수집, 감시통해 발전 설비 운전 최적화 및 효율화로 경제급전 수행하는 대규모 전력 계통 제어 시스템 (BEMS,HEMS,FEMS,ESS)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-273",
+    "title": "BEMS",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "중",
+    "summary": "빌딩 내 에너지 관리 설비의 다양한 정보를 실시간 수집/분석해 에너지 사용 효율을 개선하는 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-274",
+    "title": "ESS",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "중",
+    "summary": "생산된 전력을 발전소,변전소,송전선 등 각 연계 시스템에 저장 후 전력이 필요한 시기에 선택적, 효율적 사용통해 에너지 효율 극대화 시키는 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-275",
+    "title": "Smart Plug System",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "하",
+    "summary": "스마트 플러그 시스템, 전원을 차단 플러그",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-276",
+    "title": "Micro Grid",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "하",
+    "summary": "소규모 지역에서 전력 자급자족할 수 있는 스마트그리드 시스템. 즉 소규모 독립형 전력망으로 태양광·풍력 등 신재생 에너지원과 에너지저장장치(ESS)가 융·복합된 차세대 전력 체계.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-277",
+    "title": "네가와트(NegaWatt)",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "하",
+    "summary": "네거티브(Negative)와 전력 단위인 메가와트(Megawatt)의 합성어로 절약을 통해 아낀 전기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-278",
+    "title": "VPP(Virtual Power Plant)",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "하",
+    "summary": "전력 생산을 강화시키고 전기 시장의 전력의 교역을 위해 이기종 분산 에너지 자원의 양을 종합적으로 관리하는 클라우드 기반의 가상의 발전소",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-279",
+    "title": "그리드 패리티(Grid Parity)",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "하",
+    "summary": "대체에너지의 단가가 일반 전력회사(화석연료 등)에서 전력을 구입하는 가격보다 작거나 동등한 수준의 비용으로 공급받을 수 있는 상황",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-280",
+    "title": "스마트그리드 보안",
+    "category": "디지털서비스",
+    "group": "스마트 그리드",
+    "importance": "하",
+    "summary": "보안 취약점 대응방안, 1단락 준비 요망",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-281",
+    "title": "URC",
+    "category": "디지털서비스",
+    "group": "지능형 로봇",
+    "importance": "하",
+    "summary": "인간/로봇 상호작용 기술, Smart Action 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-282",
+    "title": "SoC",
+    "category": "디지털서비스",
+    "group": "지능형 로봇",
+    "importance": "중",
+    "summary": "System on Chip, Programmable Processor, On Chip Bus",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-283",
+    "title": "MEMS",
+    "category": "디지털서비스",
+    "group": "지능형 로봇",
+    "importance": "중",
+    "summary": "전자기계 소자를 육안으로 보이지 않을 정도로 작은 수mm에서 수um 크기로 제작하는 전자,기계적 시스템",
+    "mnemonic": "실유패"
+  },
+  {
+    "id": "ds-284",
+    "title": "소셜 로봇(Social Robot)",
+    "category": "디지털서비스",
+    "group": "지능형 로봇",
+    "importance": "중",
+    "summary": "사람과 커뮤니케이션 할 수 있는 능력을 갖추고, 상호작용을 할 수 있는 동작 로봇 총칭(인간 감정 교류)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-285",
+    "title": "로봇 소프트웨어 플랫폼",
+    "category": "디지털서비스",
+    "group": "지능형 로봇",
+    "importance": "중",
+    "summary": "로봇 소프트웨어 플랫폼",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-286",
+    "title": "디지털 트윈(Digital Twin)",
+    "category": "디지털서비스",
+    "group": "디지털 트윈/플랫폼",
+    "importance": "상",
+    "summary": "현실 세계에서 사람이 쉽게 접근할 수 없는 공간이나 물건 등 여러 부분들에 대해 가상모델링화 하여 지속적인 관찰과 보수가 가능하게끔 하는 기술 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-287",
+    "title": "디지털트윈 5단계 모델",
+    "category": "디지털서비스",
+    "group": "디지털 트윈/플랫폼",
+    "importance": "상",
+    "summary": "[발전5단계] 모관모연자 - 미모델페오",
+    "mnemonic": "모관모연자 - 미모델페오"
+  },
+  {
+    "id": "ds-288",
+    "title": "RPA",
+    "category": "디지털서비스",
+    "group": "디지털 트윈/플랫폼",
+    "importance": "상",
+    "summary": "사용자가 PC 및 모바일 화면에서 수행하는 정형화되고 반복적인 업무를 사람의 작업을 모방하는 smart SW가 대신 수행하는 디지털 프로세스 혁신",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-289",
+    "title": "다면 플랫폼",
+    "category": "디지털서비스",
+    "group": "디지털 트윈/플랫폼",
+    "importance": "하",
+    "summary": "삼각프리즘, 바이럴효과",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-290",
+    "title": "크로스 플랫폼(Cross Platform)",
+    "category": "디지털서비스",
+    "group": "디지털 트윈/플랫폼",
+    "importance": "하",
+    "summary": "컴퓨터 프로그램, 운영 체제, 컴퓨터 언어, 프로그래밍 언어, 컴퓨터 소프트웨어 등이 여러 종류의 컴퓨터 플랫폼에서 동작할 수 있게끔 지원하는 기술전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-291",
+    "title": "가트너 전략기술",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "상",
+    "summary": "1. AI 네이티브 개발 플랫폼",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-292",
+    "title": "가트너 전략기술",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "중",
+    "summary": "1. 에이전틱 인공지능(AI): I(Agentic AI)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-293",
+    "title": "가트너 전략기술",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "중",
+    "summary": "[투자 보호(Protect your investment)]",
+    "mnemonic": "투생가"
+  },
+  {
+    "id": "ds-294",
+    "title": "물리적 AI",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "물리적 AI: 물리적 형태에 소프트웨어 기능을 갖춘 AI가 스스로 외부와 소통하며 데이터를 현장에서 생성·축적하고 스스로 고도화 AI.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-295",
+    "title": "AI 신뢰, 리스크 및 보안 관리(AI Trust, Risk and Security Management /AI TRiSM)",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "AI 신뢰, 리스크 및 보안 관리(AI Trust, Risk and Security Management /AI TRiSM)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-296",
+    "title": "플랫폼 엔지니어링(Platform Engineering)",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "SW 엔지니어링 조직의 개발, 유지 및 작업 속도 향상위해 워크플로, 도구의 설계, 구축, 유지관리 플랫폼을 개선 프랙티스 (practice built up from DevOps ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-297",
+    "title": "슈퍼앱(Super App) / 미니앱/멀티앱",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "하나의 앱 안에서 별도의 다른 앱을 설치하지 않아도 수많은 서비스를 이용할 수 있는 앱. 미니 앱, 멀티앱",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-298",
+    "title": "초자동화",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "기존 RPA에 여러 개의 머신러닝, 패키지 소프트웨어 및 자동화도구 등을 이용하여 비정형화된 업무까지 자동화 가능하도록 한 기술",
+    "mnemonic": "식구결 룰디마 알아로 OMCA캡"
+  },
+  {
+    "id": "ds-299",
+    "title": "전문성의 민주화",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "하",
+    "summary": "누구나 쉽게 기술에 접하고, 시민 접근성을 향상시키는 기술 트렌드 - 비 전문가가 전문적 기술을 쉽게 이용할 수 있는 기회 제공 - 가트너 2020년 전략 IT 기술에 선정",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-300",
+    "title": "자율 사물(Autonomous Things)",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "AI를 이용해 인간이 수행하던 기능들을 자동화하는 로봇, 드론, 자율주행차 등과 같은 자율 사물(Autonomous Things)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-301",
+    "title": "IoB",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "일상 데이터를 수집해 사람의 행동을 이벤트 태그로 지정하여 개인 데이터와 결합 및 분석해 사람의 행동에 영향을 미치는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-302",
+    "title": "분산클라우드",
+    "category": "디지털서비스",
+    "group": "Gartner 10대 전략 기술(Gartner Top 10 Strategic Technology Trends)",
+    "importance": "출제예상",
+    "summary": "클라우드 서비스 사용자와 가까운 클라우드에 클라우드 서비스를 빠르게 프로비저닝하여 신속하게 제공하는 클라우드 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-303",
+    "title": "SCORM",
+    "category": "디지털서비스",
+    "group": "e-Learning",
+    "importance": "하",
+    "summary": "Shareable Courseware Object Reference Model",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-304",
+    "title": "스마트러닝",
+    "category": "디지털서비스",
+    "group": "e-Learning",
+    "importance": "중",
+    "summary": "smart learning, 스마트폰 등 모바일 기기 이용한 학습",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-305",
+    "title": "Flipped Learning",
+    "category": "디지털서비스",
+    "group": "e-Learning",
+    "importance": "중",
+    "summary": "스마트러닝(Smart Learning)의 정의 - ICT 기술을 활용하여 수직적이고 일방적인 전통적인 교수, 학습방식을 수평적, 쌍방향적, 참여적, 지능적, 그리고 상호작용적인 방",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-306",
+    "title": "MOOC",
+    "category": "디지털서비스",
+    "group": "e-Learning",
+    "importance": "하",
+    "summary": "누구나 온라인 강의를 제작하여 원하는 강의를 무료로 들을 수 있는 온라인 공개강좌 서비스 - 양방향 학습, 강의 영상, 학습진도 관리, 대규모, Open MOOC(Massive O",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-307",
+    "title": "AI 디지털교과서",
+    "category": "디지털서비스",
+    "group": "e-Learning",
+    "importance": "중",
+    "summary": "학생 개인의 능력과 수준에 맞는 맞춤 학습 기회 지원하고 AI 기술 및 지능정보기술을 활용하여 다양한 학 습자료 및 학습지원 기능을 탑재한 교과서 - AI 튜터, AI 보조교사, ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-308",
+    "title": "Digital Convergence",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "중",
+    "summary": "디지털기술에 의해 서로 별개의 영역으로 구분되던 다양한 서비스와 제품들이 기능의 통합이나 가치사슬의 결합을 통해 하나의 서비스나 제품처럼 제공되고, 이로 인해 기존의 산업 영역간 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-309",
+    "title": "Telematics",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "하",
+    "summary": "- 무선통신과 GPS(Global Positioning system) 기술이 결합되어 자동차에서 위치 정보, 안전 운전, 오락, 금융 서비스, 예약 및 상품 구매 등의 다양한 이동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-310",
+    "title": "Unified Communication",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "하",
+    "summary": "유무선의 다양한 디바이스에서 IP Telephony 음성 통화, 웹․오디오․비디오 컨퍼런싱, 인스턴트 메시징, 이메일 등을 통합해 제공함으로써 기업내 신속한 의사소통 및 의사결정을",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-311",
+    "title": "Digital Transformation",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "상",
+    "summary": "기업이 디지털 역량을 활용해 외부 환경에서 획기적인 변화를 추진하는 지속적인 프로세스",
+    "mnemonic": "조프비전문커시"
+  },
+  {
+    "id": "ds-312",
+    "title": "서비타이제이션(Servitization)/서비스화",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "하",
+    "summary": "제품과 서비스의 결합(Product Servitization), 서비스의 상품화(Service Productization), 그리고 기존 서비스와 신규 서비스의 결합 현상을 포괄하",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-313",
+    "title": "IDX",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "중",
+    "summary": "IDX(Intelligent Digital X-formation)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-314",
+    "title": "실감협업",
+    "category": "디지털서비스",
+    "group": "디지털 융합 (Digital Convergence)",
+    "importance": "중",
+    "summary": "풍부한 정보공유, 몰입감 높은 현장감, 대면하듯 자연스러운 상호작용을 경험하게",
+    "mnemonic": "현자, 비, AM인디 트렌사플 5디홀볼"
+  },
+  {
+    "id": "ds-315",
+    "title": "전자금융",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "집이나 사무실에서 컴퓨터, 전화등을 이용해서 여러가지 은행업무를 직접 처리하는 것을 말하며, 좀더 넓은 의미로는 은행에서 제공하는 자동화기기에 의한 일처리도 포함",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-316",
+    "title": "핀테크(FinTech)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "송금분야, 전자화폐, 결제분야(페이팔, 알리페이)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-317",
+    "title": "인터넷 전문은행",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "점포없이 인터넷과 콜센터 등의 비대면 채널을 활용하여 예금수신, 대출 등 업무를 하는 은행",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-318",
+    "title": "오픈뱅킹",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "하",
+    "summary": "오픈 API, 테스트베드, PSD2, GDPR, 마이데이터, 핀테크, 정보주체 자기 결정권 강화",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-319",
+    "title": "디지털 키오스크",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "하",
+    "summary": "금융업무 + 발급업무(티켓발급/증명서발급), 안내시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-320",
+    "title": "범프(Bump)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "하",
+    "summary": "범프이체기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-321",
+    "title": "로보어드바이저",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "로봇이 개인 자산의 운용을 자문하고 관리해 주는 자동화된 자산관리서비스 (Robot+Advisor의 합성어)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-322",
+    "title": "블록체인",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "상",
+    "summary": "거래정보를 기록한 원장을 P2P 네트워크에 분산하여 참가자가 공동으로 기록하고 관리하는 기술",
+    "mnemonic": "보안무신효신"
+  },
+  {
+    "id": "ds-323",
+    "title": "비트코인(Bitcoin)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "2009년 사토시 나카모토(Satoshi Nakamoto)가 만든 디지털 화폐로, 통화를 발행하고 관리하는 중앙 장치가 존재하지 않고 P2P기반 분산 데이터베이스와 공개 키 암호 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-324",
+    "title": "UTXO (Unspent Transaction Output)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "하",
+    "summary": "비트코인에서 UTXO를 활용하여 거래 유효성 검증 및 코인 존재여부를 확인 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-325",
+    "title": "이더리움(Ethereum)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "프로그래밍이 가능한 블록체인을 구현한 웹 프레임워크로써 확장된 분산 어플리케이션을 만들 수 있는 블록체인 플랫폼",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-326",
+    "title": "하드 포크(Hard Fork)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "기존 블록체인에서 거래장부나 블록크기 등 업그레이드가 필요하여 기존과 호환되지 않는 새로운 블록체인에서 다른 종류의 가상화페를 만드는 작업 과정",
+    "mnemonic": "세채블"
+  },
+  {
+    "id": "ds-327",
+    "title": "블록체인(blockchain) 기술 / 구조",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "상",
+    "summary": "블록체인 = Database. 분산 DATABASE(거래 기록), 연결되었으므로, 체인",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-328",
+    "title": "머클트리(Merkle Tree)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "해시 트리의 일종으로 모든 비 리프 노드의 이름이 자식 노드들의 해시로 구성된 트리(Ralph Merkle 고안)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-329",
+    "title": "블록체인 동향",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "R3 CEV, IBM, MS, intel - 국내외 동향 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-330",
+    "title": "마이닝(Mining)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "채굴과정 설명, 작업증명(proof-of work)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-331",
+    "title": "분산원장기술",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "분류 - 개방형, 폐쇄형 분류로 답안 작성",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-332",
+    "title": "합의 알고리즘",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "상",
+    "summary": "작업 증명(PoW: Proof of Work)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-333",
+    "title": "하이퍼레저",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "상",
+    "summary": "범용적으로 이용 가능한 비즈니스 블록체인 플랫폼 개발 위한 오픈소스 프로젝트",
+    "mnemonic": "페사이인버"
+  },
+  {
+    "id": "ds-334",
+    "title": "스마트 계약(Smart Contract)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "블록체인, 이더리움, P2P 분산네트워크 기술 등을 활용하여 특정한 조건이 만족되었을 때 제 3자의 기관의 개입없이 자동으로 계약을 수립하는 디지털 계약",
+    "mnemonic": "계기"
+  },
+  {
+    "id": "ds-335",
+    "title": "Smart Contract Audit",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "Smart Contract가 배포되기 전에 소스코드 상의 보안 약점을 도출하고 개선 방향을 제시하고 개선 여부를 확인하는 감사 활동.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-336",
+    "title": "Solidity(솔리디티)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "하",
+    "summary": "계약 지향 프로그래밍 언어로 다양한 블록체인 플랫폼의 스마트계약(Smart Contract) 작성 및 구현에 사용",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-337",
+    "title": "Dapp(디앱)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "하",
+    "summary": "DApp, Decentralized Application",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-338",
+    "title": "라이트닝 네트워크(Lightning Network)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "블록체인 외부 결제채널을 두고 대량의 결제를 신속히 처리하는 P2P 기반 외부 거래 채널 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-339",
+    "title": "DAG(Directed Acyclic Graph) 알고리즘",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "방향성 비순환 그래프에서 개별 요소들은 블록체인처럼 여러 개의 트랜잭션을 하나의 블록으로 묶지 않고, 각 개별 요소들끼리 상호 연결되어 있다. 방향성 비순환 그래프는 시간적으로 이",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-340",
+    "title": "모바일 신분증",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "중",
+    "summary": "모바일 전자 증명",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-341",
+    "title": "DID(Decentralized Identity)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "분산원장을 기반으로 개인의 ID를 중앙 집권으로부터 해방시켜",
+    "mnemonic": "레디도컨레"
+  },
+  {
+    "id": "ds-342",
+    "title": "GADI",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "Service Provider가 어떠한 Digital Address Provider(디지털 주소 공급자)를 이용하더라도 User의 신원을 신뢰 할 수 있도록 보장하는 글로벌 신뢰 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-343",
+    "title": "자기주권 신원지갑(Self-Sovereign Identity)",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "사용자가 신원관리의 중심에서 자신의 신원정보를 실제로 제어ㆍ운용할 수 있도록 구성된 디지털 신원 관리체계",
+    "mnemonic": "실통접투지 이호동최보"
+  },
+  {
+    "id": "ds-344",
+    "title": "CBDC",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "실물 명목화폐(Fiat Money)를 대체하거나 보완하기 위해서 중앙은행이 직접 전자적 형태로 발행한 중앙은행 화폐 Central Bank Digital Currency",
+    "mnemonic": "복호이익확보"
+  },
+  {
+    "id": "ds-345",
+    "title": "블록체인 트릴레마",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "블록체인에서 트릴레마란 확장성(Scalability), 탈중앙화(Decentralization), 보안성(Security)의 세 가지 문제 충돌 문제.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-346",
+    "title": "DeFi",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "출제예상",
+    "summary": "블록체인을 기반으로 예금, 대출 등 금융 업무가 가능한 탈중앙화된 분산금융",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-347",
+    "title": "NFT(Non Fungible Token);",
+    "category": "디지털서비스",
+    "group": "금융+기술/ 블록체인/코인",
+    "importance": "상",
+    "summary": "NFT(Non Fungible Token); 대체 불가능한 토큰",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-348",
+    "title": "UsN",
+    "category": "디지털서비스",
+    "group": "통신 IT 융합 (Convergence)",
+    "importance": "하",
+    "summary": "필요한 곳에 전자태그(RFID)나 센서를 부착하고 이를 통한 사물의 인식정보를 기반으로 주변의 환경정보(온도, 습도, 오염, 균열 등)를 탐지하고 실시간으로 네트워크에 연결하여 정",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-349",
+    "title": "BcN",
+    "category": "디지털서비스",
+    "group": "통신 IT 융합 (Convergence)",
+    "importance": "하",
+    "summary": "유〮무선, 음성〮데이터, 방송〮통신이 융합되는 망 기술로 전화, 인터넷 및 방송 등의 서비스를 끊김 없이(Seamless) 제공하는 품질(QoS) 보장형 광대역 통합 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-350",
+    "title": "DMB",
+    "category": "디지털서비스",
+    "group": "통신 IT 융합 (Convergence)",
+    "importance": "하",
+    "summary": "디지털 멀티미디어 방송",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-351",
+    "title": "N-Screen",
+    "category": "디지털서비스",
+    "group": "통신 IT 융합 (Convergence)",
+    "importance": "하",
+    "summary": "DLNA",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-352",
+    "title": "인포그래픽스",
+    "category": "디지털서비스",
+    "group": "광고",
+    "importance": "하",
+    "summary": "복잡하고 어려운 전문지식 또는 데이터의 명확한 이해를 위해 그래프, 텍스트 조합으로 시각화한 정보의 표현",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-353",
+    "title": "디지털 사이니지",
+    "category": "디지털서비스",
+    "group": "광고",
+    "importance": "하",
+    "summary": "공공장소나 상업공간에 원격제어가 가능한 디지털 디스플레이나 프로젝터 등을 설치하여 영상이나 정보를 표시하는 광고 매체",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-354",
+    "title": "Open ID",
+    "category": "디지털서비스",
+    "group": "ID 관리",
+    "importance": "하",
+    "summary": "User Agent, Identity, Consumer, Server",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-355",
+    "title": "Oauth 2.0",
+    "category": "디지털서비스",
+    "group": "ID 관리",
+    "importance": "중",
+    "summary": "1.0, 2.0 / 보안 도메인으로 이동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-356",
+    "title": "SSO",
+    "category": "디지털서비스",
+    "group": "ID 관리",
+    "importance": "중",
+    "summary": "인증대행(Delegation), 인증정보전달(Propagation)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-357",
+    "title": "디지털ID",
+    "category": "디지털서비스",
+    "group": "ID 관리",
+    "importance": "출제예상",
+    "summary": "각종 ID와 주민번호, 전자우편주소, 신용카드번호, 주소 등 사이버 스페이스 상에서 개인을 식별할 수 있는 속성들의 집합",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-358",
+    "title": "차세대 전자정부 인증(Digital OnePass)",
+    "category": "디지털서비스",
+    "group": "ID 관리",
+    "importance": "출제예상",
+    "summary": "차세대 전자정부 인증(Digital OnePass)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-359",
+    "title": "IEC 61508",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "상",
+    "summary": "전기,전자,프로그램 가능한 시스템의 기능안전 표준으로 안전생명주기, HW, SW 안전성 구현 및 검증 방법 제시 표준",
+    "mnemonic": "일시소정안가기"
+  },
+  {
+    "id": "ds-360",
+    "title": "(각 분야별) 기능안전 표준",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "중",
+    "summary": "[ISO/IEC Guide51]A(기본안전),B(그룹안전),C(제품안전)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-361",
+    "title": "의료기기 기능 안전",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "중",
+    "summary": "1) IEC 60601(Medical Electrical Equipment)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-362",
+    "title": "항공기 기능 안전",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "중",
+    "summary": "1) DO-178B:1992년 상용 항공 산업 내 사용되는 SW의 인증 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-363",
+    "title": "원자력발전소",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "중",
+    "summary": "IEC 61226, 60880",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-364",
+    "title": "철도(Rail) 기능 안전 software",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "중",
+    "summary": "IEC 62278~9, 철도 기능 안전 관련 기술 규격 관련",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-365",
+    "title": "능동안전(Active Safety)",
+    "category": "디지털서비스",
+    "group": "기능안전",
+    "importance": "중",
+    "summary": "안전설계 개념(Safety Design Concept)과",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-366",
+    "title": "ISO 26262",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "상",
+    "summary": "차량의 전기전자장치 기능 안전성에 관한 요건을 정의한 표준 1st : 3.5t 이하, 2nd : 3.5t 이하+모터사이클+자율주행차",
+    "mnemonic": "용기구 시하소생 지아가 반모"
+  },
+  {
+    "id": "ds-367",
+    "title": "ASIL",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "상",
+    "summary": "SIL레벨을 자동차환경에 맞춰 적용, 심각도(S),노출가능성(E),제어가능성©",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-368",
+    "title": "AUTOSAR",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "ECU에 공통으로 들어가는 SW(플랫폼,미들웨어, OS,통신, 메모리,I/O등)에 대한 표준 규격",
+    "mnemonic": "앱R서앱마"
+  },
+  {
+    "id": "ds-369",
+    "title": "Connected Car",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "통신망을 연결하여 IT기기처럼 활용할 수 있는 자동차",
+    "mnemonic": "임대통"
+  },
+  {
+    "id": "ds-370",
+    "title": "Smart Car(자율주행)",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "상",
+    "summary": "사람의 개입없이 자동차 스스로 주변 또는 도로 환경 인지, 판단하여 주행하는 자동차 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-371",
+    "title": "자율주행기술 수준분류",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "0레벨 : 운전자 지원시스템(모든조작)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-372",
+    "title": "ADAS(Advanced Driver",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "센서,GPS,통신 등 ICT기술을 이용하여 자동차의 외부환경을 인식하고 분석하여 사용자의 안전 운전을 돕는 시스템",
+    "mnemonic": "인판제"
+  },
+  {
+    "id": "ds-373",
+    "title": "ADS(Automated Driving System)",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "시스템이 인지·판단·제어를 수행하여 운전을 대체하는 자율주행 시스템 - 조건 충족 시 시스템이 운전 책임을 가짐",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-374",
+    "title": "RADAR",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "전자기파를 물체에 발사시켜 그 물체에서 반사되는 전자기파를 수신하여 물체와의 거리, 방향, 고도 등을 알아내는 무선감시장치",
+    "mnemonic": "CB추"
+  },
+  {
+    "id": "ds-375",
+    "title": "라이다(LIDAR)",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "[개념] 강한 레이저 빛을 전방에 방사한 후 반사되어 돌아오는 빛을 감지 할 때까지의 시간을 이용해 사물까지의 거리를 측정하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-376",
+    "title": "IoV",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "사물인터넷 시스템을 탑재한 형태로 IT기술과 자동차를 연결, 자동차가 주변과 실시간으로 소통하며 운전자에게 안전과 편의를 제공하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-377",
+    "title": "인포테인먼트",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "오락(entertainment)및 정보(information) 기능 통합,",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-378",
+    "title": "Mirror Link",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "차량과 스마트폰과의 N/W를 통해 스마트폰의 컨텐츠를 제어할 수 있도록 하는 CCC에 의해 제 안된 표준규격, 자동차 연결 플랫폼 산업표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-379",
+    "title": "차량용 블랙박스",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "자동차 내부에 부착되어 주행, 주차중에 내/외부의 영상 및 음성을 실시간으로 저장하고 운전자에게 사고, 주행 정보를 증거물로 제공하는 차량용 임베디드 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-380",
+    "title": "스마트머신",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "자율적으로 움직이는 기계들로 자율 운행 차량, 최신 로봇, 가상 개인 비서 -> 머신 헬퍼(machine helper)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-381",
+    "title": "트럭 플래투닝(Truck Platooning)",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "두 대의 트럭을 한 네트워크로 묶어 선두 트럭의 운전자가 운전을 하면 뒷 트럭이 자동으로 1초의 간격을 두고 따라가게 하는 시스템(tailgating)",
+    "mnemonic": "정차긴협"
+  },
+  {
+    "id": "ds-382",
+    "title": "GENIVI Alliance",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "유럽, 북미 자동차 OEM과 자동차 부품업체들을 중심으로 결성된 오픈소스 기반 인포테인먼트 SW 플랫폼 구축을 위한 자동차 산업 표준 협의체",
+    "mnemonic": "SAP"
+  },
+  {
+    "id": "ds-383",
+    "title": "OAA",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "OAA(Open Automotive Alliance): 안드로이드 연합체",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-384",
+    "title": "스마트카 보안",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "취약점 및 대응방안, 표준 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-385",
+    "title": "자율주행 인공지능 기술",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "자율주행 인공지능 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-386",
+    "title": "자율주행 자동차 가이드라인 주요내용",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "자율주행산업 발전을 촉진하면서 동시에 주행 안전성에 대한 불안감을 해소를 위해 발표된 자율주행차 안전기준과 관련된 가이드라인",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-387",
+    "title": "UAM(Urban Air Mobility)",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "도심 상공에서 사람이나 화물을 운송하는 항공교통 수단으로, 기체 개발부터 인프라 구축, 플랫폼, 서비스, 유지보수 등 관련 사업을 모두 포괄하는 항공 운송",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-388",
+    "title": "eVTOL(electric Vertical Task-Off and Landing)",
+    "category": "디지털서비스",
+    "group": "자동차/모빌리티",
+    "importance": "중",
+    "summary": "eVTOL (electric-powered vertical take-off and landing) 기술로 통칭되는 수직 이착륙 방식, 전기수직이착륙기 - 배터리와 모터를 이용한 전",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-389",
+    "title": "바코드",
+    "category": "디지털서비스",
+    "group": "코드",
+    "importance": "하",
+    "summary": "컴퓨터가 판독할 수 있도록 고안된 굵기가 다른 흑백 막대로 조합시켜 만든 코드",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-390",
+    "title": "QR 코드",
+    "category": "디지털서비스",
+    "group": "코드",
+    "importance": "하",
+    "summary": "기존 바코드들에 비해 고용량의 데이터를 담을 수 있고, 인식성이 뛰어난 2차원 바코드",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-391",
+    "title": "드론(Drone; 무인기) / 드론 군집 비행 (Drone Swarm / Flocking)",
+    "category": "디지털서비스",
+    "group": "IT 물류/드론",
+    "importance": "상",
+    "summary": "무인항공기(UAV : unmanned aerial vehicle / uninhabited aerial vehicle)의 총칭, 자율,GPS,센서",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-392",
+    "title": "안티 드론(Anti-Drone)",
+    "category": "디지털서비스",
+    "group": "IT 물류/드론",
+    "importance": "중",
+    "summary": "전파 방해와 교란, 그물, 레이저, 독수리, 평화주의(Go Home)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-393",
+    "title": "안티 드론(Anti-Drone) 프레임워크(정보통신단체표준, TTAK,KO-10.1460)",
+    "category": "디지털서비스",
+    "group": "IT 물류/드론",
+    "importance": "하",
+    "summary": "시스템 구조, 응용시스템, 데이터베이스, 현황 분석 및 전략 수립, 개선 모델 및 실행 계획 수립",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-394",
+    "title": "CPNC",
+    "category": "디지털서비스",
+    "group": "IT 물류/드론",
+    "importance": "하",
+    "summary": "CNPC(Control Non-payload Communication)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-395",
+    "title": "물류로봇",
+    "category": "디지털서비스",
+    "group": "IT 물류/드론",
+    "importance": "하",
+    "summary": "파지, 피킹, 이송, IoT, CNN, 영상인식",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-396",
+    "title": "MMORPG",
+    "category": "디지털서비스",
+    "group": "게임",
+    "importance": "하",
+    "summary": "Massively Multi-Player Online Role Playing Game, 다중 접속 역할 수행게임, 수천명까지 접속, 서버-클라이언트 기반",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-397",
+    "title": "게임엔진",
+    "category": "디지털서비스",
+    "group": "게임",
+    "importance": "중",
+    "summary": "렌더링 엔진, 에니메이션 엔진, 물리 엔진, 인공지능 엔진",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-398",
+    "title": "기능성 게임(Serious Game)",
+    "category": "디지털서비스",
+    "group": "게임",
+    "importance": "중",
+    "summary": "Gamification, Gameful Design, Games, Serious Games",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-399",
+    "title": "모바일 3D 게임엔진",
+    "category": "디지털서비스",
+    "group": "게임",
+    "importance": "하",
+    "summary": "Open GL, 3D 그래픽 파이프라인, API, 하드웨어 가속엔진",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-400",
+    "title": "스프라이트(Sprite)",
+    "category": "디지털서비스",
+    "group": "게임",
+    "importance": "중",
+    "summary": "컴퓨터 그래픽스에서 스프라이트는 영상 속에 작은 2차원 비트맵이나 애니메이션을 합성하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-401",
+    "title": "클라우드 게임",
+    "category": "디지털서비스",
+    "group": "게임",
+    "importance": "중",
+    "summary": "클라우드 서비스의 일종으로 게임을 서버에 저장한 채 게임 이용을 요구하는 단말기에 즉각적으로 스트리밍하는 서비스를 의미",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-402",
+    "title": "자바스크립트",
+    "category": "디지털서비스",
+    "group": "자바스크립트",
+    "importance": "하",
+    "summary": "이벤트 핸들러, XMLHTTP, DOM 등의 기술요소를 통해,html 문서에서 동적인 기능을 구현할 수 있는 스크립트 언어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-403",
+    "title": "자바스크립트 프레임워크",
+    "category": "디지털서비스",
+    "group": "자바스크립트",
+    "importance": "하",
+    "summary": "Angularjs, Backbone.js, Ember.js Knockout.js",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-404",
+    "title": "JSON",
+    "category": "디지털서비스",
+    "group": "자바스크립트",
+    "importance": "중",
+    "summary": "인터넷에서 자료를 주고 받을 때 자료를 표현하는 방법으로 문자열화 된 데이터를 객체화하는 경량의 데이터 교환 형식",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-405",
+    "title": "jQuery",
+    "category": "디지털서비스",
+    "group": "자바스크립트",
+    "importance": "하",
+    "summary": "Javascript의 라이브러리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-406",
+    "title": "Node.js",
+    "category": "디지털서비스",
+    "group": "자바스크립트",
+    "importance": "하",
+    "summary": "네트워크 애플리케이션 플랫폼, V8 자바스크립트 엔진 위에서 동작",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-407",
+    "title": "간편결제/스마트페이",
+    "category": "디지털서비스",
+    "group": "(간편) 결제",
+    "importance": "상",
+    "summary": "카드 정보 등 한번에 입력해두고, 결제 시 카드 정보 입력과 공인인증서 등록없이 비밀번호 입력과 같은 간단한 인증만으로 결제하는 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-408",
+    "title": "안면인식 결제 서비스",
+    "category": "디지털서비스",
+    "group": "(간편) 결제",
+    "importance": "하",
+    "summary": "사용자의 얼굴 생체정보를 기반으로 본인 여부를 인증하여, 카드나 단말기 접촉 없이 결제를 수행하는 비접촉 전자결제 서비스",
+    "mnemonic": "138_관리_1"
+  },
+  {
+    "id": "ds-409",
+    "title": "MST",
+    "category": "디지털서비스",
+    "group": "(간편) 결제",
+    "importance": "하",
+    "summary": "마그네틱보안전송(MST), 자기장의 원리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-410",
+    "title": "옴니페이(Omni-Payment)",
+    "category": "디지털서비스",
+    "group": "(간편) 결제",
+    "importance": "하",
+    "summary": "근거리무선통신(NFC), MST, 유심, Beacon 결제통합",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-411",
+    "title": "제로페이(zero-pay)",
+    "category": "디지털서비스",
+    "group": "(간편) 결제",
+    "importance": "중",
+    "summary": "은행이 소비자의 계좌에서 판매자의 계좌로 현금을 이체하는 계좌이체 방식으로 결제를 해 소상공인들이 카드수수료를 부담하지 않도록 하는 소상공인간편결제 시스템이다",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-412",
+    "title": "MRM(Merchant Presented Mode)/CPM(Customer Presented Mode)비교",
+    "category": "디지털서비스",
+    "group": "(간편) 결제",
+    "importance": "하",
+    "summary": "MPM: 고객이 <가맹점 QR코드> 찍고 결제하기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-413",
+    "title": "O2O(Online to Offline)",
+    "category": "디지털서비스",
+    "group": "O2O",
+    "importance": "하",
+    "summary": "비콘, 지오펜싱, Wifi, BLE, LBS, NFC",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-414",
+    "title": "O4O(Online for Offline)",
+    "category": "디지털서비스",
+    "group": "O2O",
+    "importance": "중",
+    "summary": "오프라인을 직접 운영하며 시장 혁신을 주도, 아마존 고",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-415",
+    "title": "유기발광 다이오드",
+    "category": "디지털서비스",
+    "group": "디스플레이",
+    "importance": "중",
+    "summary": "OLED는 형광성 유기 화합물에 전류가 흐르면 빛을 내는 자체발광현상을 이용하여 만든 디스플레이 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-416",
+    "title": "플렉서블 디스플레이(flexible display)",
+    "category": "디지털서비스",
+    "group": "디스플레이",
+    "importance": "중",
+    "summary": "Flexible OLED Display",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-417",
+    "title": "3D 터치기술",
+    "category": "디지털서비스",
+    "group": "디스플레이",
+    "importance": "중",
+    "summary": "3차원인터페이스, Z축 정보 추가 인식",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-418",
+    "title": "영상 처리(Image processing)",
+    "category": "디지털서비스",
+    "group": "영상처리",
+    "importance": "상",
+    "summary": "입출력이 영상인 모든 형태 (사진이나 동영상 등) 의 정보 처리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-419",
+    "title": "지능형 영상분석 기술",
+    "category": "디지털서비스",
+    "group": "영상처리",
+    "importance": "중",
+    "summary": "영상의 정보를 분석하여 자동으로 이상행위(이벤트)를 탐지하고 관리자에게 경보 전송하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-420",
+    "title": "Computer Vision",
+    "category": "디지털서비스",
+    "group": "영상처리",
+    "importance": "중",
+    "summary": "감지된 영상의 특징 정보 추출, 매칭, 객체 인식 등의 영상 처리 기술을 통해 기계 또는 컴퓨터가 사람 눈처럼 보고 인지하고 이해할 수 있는 분석 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-421",
+    "title": "HDR",
+    "category": "디지털서비스",
+    "group": "영상처리",
+    "importance": "중",
+    "summary": "노출이 다른 여러 장의 사진을 연속으로 촬영한 후 밝게 나온 사진과 어둡게 나온 사진을 합성하여 고해상도 사진으로 인코딩하는 이미지 처리 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-422",
+    "title": "CCTV",
+    "category": "디지털서비스",
+    "group": "영상처리",
+    "importance": "중",
+    "summary": "CCTV 영상감시 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-423",
+    "title": "360도 카메라",
+    "category": "디지털서비스",
+    "group": "영상처리",
+    "importance": "중",
+    "summary": "카메라 보정기술, 인접영상 획득 구조체 기술, 영상생성 기술, 이미지 변환 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-424",
+    "title": "사실상 표준",
+    "category": "디지털서비스",
+    "group": "표준/정책",
+    "importance": "중",
+    "summary": "세계 표준화 기관이나 공인기관에서 지정된 표준은 아니지만 시장형성과정에서 생성되는 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-425",
+    "title": "IEEE와 IEC",
+    "category": "디지털서비스",
+    "group": "표준/정책",
+    "importance": "중",
+    "summary": "[IEEE] 전기・전자 기술에 관한 학회의 개최와 저널의 발행, 기술 표준 프레임워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-426",
+    "title": "기술 수명 주기",
+    "category": "디지털서비스",
+    "group": "표준/정책",
+    "importance": "하",
+    "summary": "S-Curve 이론, 기술수용주기이론, 가트너 하이퍼사이클",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-427",
+    "title": "녹색성장",
+    "category": "디지털서비스",
+    "group": "표준/정책",
+    "importance": "하",
+    "summary": "탄소배출관리시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-428",
+    "title": "TRL",
+    "category": "디지털서비스",
+    "group": "표준/정책",
+    "importance": "중",
+    "summary": "기초연구>실험단계>시작품단계>실용화>사업화 (총 9단계)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-429",
+    "title": "시빅해킹(Civic Hacking)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "시민들이 신속하고 창의적으로 협업하여 공공의 문제를 해결하고 도시를 더 살기 좋은 곳으로 만들기 위한 운동",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-430",
+    "title": "Digital Footprint",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "디지털 발자국(Digital Footprint)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-431",
+    "title": "인터넷 내용 등급제",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "RSACi(미오락소프트자문회의의 인터넷내용등급 필터링 표준안)Recreational S/W Advisory Council on the internet)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-432",
+    "title": "프로젝트 구텐베르크",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "전자정보로 저장하고 배포하는 프로젝트 이름",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-433",
+    "title": "디지털 노마드",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "Nomad(유목민)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-434",
+    "title": "에너지 수확",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "(Micro Energy Harvesting)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-435",
+    "title": "데이터 리터러시(Data Literacy)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "- Data와 Literacy의 합성어로, 데이터를 목적에 맞게 생성하고, 데이터의 숨겨진 의미를 올바르게 이해 및 해석하여 적절하게 활용하는 능력",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-436",
+    "title": "어플라이언스(Appliance) 서버",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "사용자 별도의 OS 및 SW 설치 없이 벤더가 사전에 통합, 최적화하여 제공되어 전원 연결 시 즉시 사용이 가능한 서버",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-437",
+    "title": "마세라티 문제(Maserati Problem)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "기술편향적 오버 엔지니어링 경고, 마세라티 문제 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-438",
+    "title": "디지털 역기능",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "(정의) 디지털 기술과 그 응용 서비스 활용에서 발생하는 부작용을 통칭하는 개념(키워드) 정보 격차, 병리 현상, 경제 질서 왜곡, 생태계 지장, 인공지능 알고리즘, 디지털 윤리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-439",
+    "title": "전자문서증명서",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "민원 문서를 전자문서 형태로 발급 및 유통, 민원24",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-440",
+    "title": "지능정보화 기본법",
+    "category": "디지털서비스",
+    "group": "법/지침",
+    "importance": "출제예상",
+    "summary": "지능정보화 관련 정책의 수립ㆍ추진에 필요한 사항을 규정함으로써 지능정보사회의 구현에 이바지하고 국가 경쟁력을 확보하며 국민의 삶의 질을 높이는 것을 목적으로 하는 법률.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-441",
+    "title": "ELK",
+    "category": "디지털서비스",
+    "group": "데이터 분석 처리 OSS융합",
+    "importance": "출제예상",
+    "summary": "ELK(Elasticsearch/Logstash/Kibana) 스택",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-442",
+    "title": "데이터 랭글링(Data Wrangling)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "복잡하고 정리되지 않은 원시 데이터(raw data)를 분석에 적합한 형태로 변환하고 정리하여 복잡하고 반복적인 절차를 단축하는 과정",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-443",
+    "title": "디지털 권리장전",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "디지털 심화 시대에 맞는 보편적 가치와 원칙을 담아 디지털 공동번영사회를 실현하기 위한 국가적 기준과 글로벌 규범의 방향을 제시한 헌장",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-444",
+    "title": "디지털 블랙아웃(Digital BlackOut)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "사이버 공격, 자연재해, 기술 결함, 재난 등의 요인으로 인터넷, 전력, 통신 등 디지털 기반 인프라와 ICT 기 술을 활용한 정보 처리 시설이 일시적으로 중단되는 디지털 재난 현",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-445",
+    "title": "AI 디지털 교과서",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "학생 개인의 능력과 수준에 맞는 맞춤 학습 기회 지원하고 AI 기술 활용 다양한 학습자료 및 학습지원 기능 을 탑재한 교과서",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-446",
+    "title": "양자 오류 정정(Quantum Error Correction)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "여러 개의 물리적 큐비트나 한 차원 높은 양자 상태에 정보를 입력해 오류를 발견하고 수정하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-447",
+    "title": "FinOps",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "엔지니어 재무 기술 및 비즈니스 현업부서가 데이터 분석 결과에 따라 내린 지출 결정에 대해 이해하고 상호 협력할 수 있도록 도와줌으로써 조직이 최대의 비즈니스 가치를 얻을 수 있게",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-448",
+    "title": "Observability",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "Observability는 사전에 정의되지 않은 속성 및 패턴 탐색을 기반으로 시스템을 적극적으로 디버깅할 수 있는 도구 또는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-449",
+    "title": "ISO/IEC 26000",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "기업, 정부, NGO 등 사회를 구성하는 모든 조직이 지배구조, 인권, 노동, 환경, 소비자, 공정 운영, 지역사회 참여와 발전 등 7개 핵심 주제에 대해 준수해야 할 사항을 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-450",
+    "title": "모듈성(Modularity)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "네트워크가 커뮤니티로 얼마나 효과적으로 분할되는지를 나타내는 지표",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-451",
+    "title": "루베인 알고리즘(Louvain Algorithm)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "모듈성 최적화에 기반한 커뮤니티 탐지 알고리즘으로, 대규모 네트워크에서 효율적으로 커뮤",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-452",
+    "title": "라벨 전파 알고리즘(LPA, Label Propagation Algorithm)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "네트워크에서 커뮤니티를 형성하는 노드들을 식별하기 위해 설계된 간단하고 빠른 그래프 기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-453",
+    "title": "RWA(Real World Assets)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "실제 가치를 지닌 자산을 작은 단위의 디지털 토큰으로 만들어, 블록체인 상에서 거래할 수 있는 자산",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-454",
+    "title": "STO(Security Token Offering)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "분산원장 기술(Distributed Ledger Technology)을 활용해 자본시장법상 증권을 디지털화(Digitalization)한 토큰 증권(Security Token)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-455",
+    "title": "GovTech",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "AI 빅 데이터 등의 ICT 기술 을 활용하여 공공부문의 대국민 서비스 , 공공·지역 현안 및 사회문제 해결 , 공공서비스 등에 제공하는 새로운 방식의 솔루션 또는 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-456",
+    "title": "DCAT(Data Catalog Vocabulary) 3.0",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "공공 데이터 포털 및 데이터 공유 플랫폼에서 데이터 검색과 상호운용성을 향상시키기 위해 사용되는 데이터 세트와 메타데이터를 기술하고 관리하기 위한 W3C 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-457",
+    "title": "자동화된 결정에 대한 개인정보처리자의 조치 기준",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "2023 년 개인정보 보호법 개정으로 자동화된 결정에 대한 정보주체의 권리가 새롭게 도입",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-458",
+    "title": "스마트 축산",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "ICT기술을 축산업과 융합하여 효율성과 지속 가능성을 높이고, 동물 복지, 생산성, 환경보호를 실현하는 축산업",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-459",
+    "title": "도심항공교통법(도심항공교통 활용 촉진 및 지원에 관한 법률)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "중",
+    "summary": "도심항공교통, 도심형항공기, 버티포트, 교통회랑, 실증･시범사업 구역 등 구성요소 개념정립･정의와 도심항공교통사업 세분화",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-460",
+    "title": "아파치 펄사(Apache Pulsar)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "분산 메시징 및 스트리밍 플랫폼으로 , 다중 테넌시 (Multi Tenancy) 와 지리적 분산 (Georeplication), 지연 없는 스트리밍 처리를 강점으로 하는 클라우드 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-461",
+    "title": "하이브리드 양자암호통신",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "양자 키 분배(QKD, Quantum Key Distribution) 기술과 양자내성 암호(PQC, Post-Quantum Cryptography) 기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-462",
+    "title": "재난문자 서비스",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "이상기후로 인한 재난 발생 시, 재난정보를 신속하고 효율적으로 전달하는 매체인 이동통신망을 활용하는 문자 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-463",
+    "title": "USIM(Universal Subscriber Identity Module)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "3G 이상 이동통신 시스템에서 사용되는 가입자 인증 모듈로, 이동통신 네트워크에서 단말 사용자를 식별·인증하는 역할을 수행하는 장치",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-464",
+    "title": "AI IDE",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "기존의 통합 개발환경(IDE)에 대규모 언어모델(LLM)이나 머신러닝을 접목해 코딩 생산성과 효율성을 극대화 한 개발 환경",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-465",
+    "title": "앰비언트 인비저블 인텔리전스 (Ambient Invisible Intelligence)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "사용자 주변의 Iot 디바이스를 통해 대상의 상태를 추적 및 감지하여 상황을 이해하고 필요한 정보 및 요구를 예측하고 지원하여 적시적으로 제공하는 지능형 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-466",
+    "title": "디지털 스레드(Digital Thread)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "출제예상",
+    "summary": "제품의 설계부터 제조, 운영, 유지보수에 이르기까지 제품 생애주기 전반에 걸쳐 생성되는 데이터와 정보를 하나의 연속된 흐름으로 연결하는 통신 프레임워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "ds-467",
+    "title": "스마트 선박",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "인적 여부 관계 없이 자율적 결정시스템을 가지고 운항하는 선박",
+    "mnemonic": "138_컴시응_4"
+  },
+  {
+    "id": "ds-468",
+    "title": "국제해사기구(IMO)의 자율운항선박 자율화 등급",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "스마트 선박의 자율화 운행을 위한 국제해사기구의 4단계 자율화등급",
+    "mnemonic": "138_컴시응_4"
+  },
+  {
+    "id": "ds-469",
+    "title": "선박 통합 네트워크(SAN:Ship Area Network)",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "통합 게이트웨이(Integrated Gateway)를 중심으로 로컬 제어 네트워크, 엔진룸/브리지 센서 등을 연결하며, 이중화된 통신 경로(광 네트워크, 무선 등)를 통해 데이터 ",
+    "mnemonic": "138_컴시응_4"
+  },
+  {
+    "id": "ds-470",
+    "title": "통합항해시스템(INS:Integrated Navigation System)의 모듈 구조",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "선박의 안전 운항을 위해 레이더, 전자해도(ECDIS), GNSS 등 각종 항해 센서와 정보 처리 장치를 모듈화하여 하나의 브릿지 시스템으로 통합한 구조",
+    "mnemonic": "138_컴시응_4"
+  },
+  {
+    "id": "ds-471",
+    "title": "ISO 21448",
+    "category": "디지털서비스",
+    "group": "용어",
+    "importance": "하",
+    "summary": "시스템 고장이 없더라도 의도된 기능의 한계로 인해 발생하는 위험(SOTIF)을 다루는 표준",
+    "mnemonic": "138_컴시응_2"
   }
 ]
