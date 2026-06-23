@@ -22,8 +22,11 @@ type MnemonicSet = {
 
 type Step = "learn" | "inject" | "check";
 
+const CATS = Array.from(new Set(topics.map((t) => t.category)));
+
 export default function MnemonicPage() {
   const [topic, setTopic] = useState("");
+  const [recCat, setRecCat] = useState(CATS[0]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [set, setSet] = useState<MnemonicSet | null>(null);
@@ -68,9 +71,22 @@ export default function MnemonicPage() {
           placeholder="예) 트랜잭션 ACID 특성"
           className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
-        <div className="mt-3 flex flex-wrap gap-2">
-          <span className="self-center text-xs text-slate-400">추천(중요도 상):</span>
-          {topics.filter((t) => t.importance === "상").map((t) => (
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <span className="text-xs text-slate-400">추천(중요도 상):</span>
+          <select
+            value={recCat}
+            onChange={(e) => setRecCat(e.target.value)}
+            className="rounded border border-slate-200 bg-white px-2 py-1 text-xs text-slate-600"
+          >
+            {CATS.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+          {topics
+            .filter((t) => t.category === recCat && t.importance === "상")
+            .map((t) => (
             <button
               key={t.id}
               onClick={() => setTopic(t.title)}
