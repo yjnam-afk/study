@@ -69,8 +69,8 @@ export default function MnemonicPage() {
           className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
         <div className="mt-3 flex flex-wrap gap-2">
-          <span className="self-center text-xs text-slate-400">추천 토픽:</span>
-          {topics.map((t) => (
+          <span className="self-center text-xs text-slate-400">추천(중요도 상):</span>
+          {topics.filter((t) => t.importance === "상").map((t) => (
             <button
               key={t.id}
               onClick={() => setTopic(t.title)}

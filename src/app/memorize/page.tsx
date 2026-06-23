@@ -90,8 +90,8 @@ export default function MemorizePage() {
         />
 
         <div className="mt-3 flex flex-wrap gap-2">
-          <span className="self-center text-xs text-slate-400">추천 토픽:</span>
-          {topics.map((t) => (
+          <span className="self-center text-xs text-slate-400">추천(중요도 상):</span>
+          {topics.filter((t) => t.importance === "상").map((t) => (
             <button
               key={t.id}
               onClick={() => setTopic(t.title)}
