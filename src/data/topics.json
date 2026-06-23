@@ -2319,7 +2319,7 @@
     "group": "프로젝트 위험관리",
     "importance": "상",
     "summary": "프로젝트 위험요소를 체계적으로 식별, 평가하고 관리. 조기식별중요",
-    "mnemonic": "계식성량계대감"
+    "mnemonic": "138_관리_1"
   },
   {
     "id": "pm-60",
@@ -2413,7 +2413,7 @@
   },
   {
     "id": "pm-70",
-    "title": "선언문 4개 문장",
+    "title": "애자일 프로세스",
     "category": "프로젝트관리",
     "group": "Agile 프로세스",
     "importance": "출제예상",
@@ -2481,7 +2481,7 @@
     "group": "Agile 프로세스",
     "importance": "상",
     "summary": "TPS(Toyota Production System)을 재정립한 경영방법론인 린시스템의 품질기법을 소프트웨어 개발에 적용한 개발방법론",
-    "mnemonic": "낭배늦팀빠통전"
+    "mnemonic": ""
   },
   {
     "id": "pm-78",
@@ -2508,7 +2508,7 @@
     "group": "Agile 프로세스",
     "importance": "출제예상",
     "summary": "두 사람이 한 컴퓨터를 사용해서 Pair Work로 프로그래밍을 하는 기법",
-    "mnemonic": "집버동높"
+    "mnemonic": ""
   },
   {
     "id": "pm-81",
@@ -2598,7 +2598,7 @@
     "group": "PMO/PM",
     "importance": "상",
     "summary": "[관점] 제3자 관점 / 발주자 관점",
-    "mnemonic": "목관대투근책기"
+    "mnemonic": "131회 관리 1교시"
   },
   {
     "id": "pm-91",
@@ -2607,7 +2607,7 @@
     "group": "PMO/PM",
     "importance": "상",
     "summary": "- 다수의 IT 프로젝트를 기업 비즈니스전략과 정렬하고 프로젝트 별 기업 자원 투입, PMO 간 의견 조율 등을 수행하는 최상위 PMO 도입절차] 도입계획수립-PMO가동준비-PMO",
-    "mnemonic": "도발착기집사검산제"
+    "mnemonic": "132회 컴시응 1교시"
   },
   {
     "id": "pm-92",
