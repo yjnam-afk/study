@@ -9844,5 +9844,2687 @@
     "importance": "하",
     "summary": "시스템 고장이 없더라도 의도된 기능의 한계로 인해 발생하는 위험(SOTIF)을 다루는 표준",
     "mnemonic": "138_컴시응_2"
+  },
+  {
+    "id": "net-1",
+    "title": "네트워크 프로토콜",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "네트워크 기본 규약, 프로토콜의 개념",
+    "mnemonic": "구의시"
+  },
+  {
+    "id": "net-2",
+    "title": "베이스밴드(Baseband)",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "하",
+    "summary": "디지털 데이터를 변조하지 않고, 직류 펄수 형태로 그대로 전송하는 신호(Singnal). '기저대역 전송 이라고 부르며, 원래 정보 신호들이 있는 저주파 영역 f = 0을 포함하는",
+    "mnemonic": "유폴바"
+  },
+  {
+    "id": "net-3",
+    "title": "소스코딩, 채널코딩, 라인코딩",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "소채라 - 압에디",
+    "mnemonic": "소채라-압에디 형코손-영오고가무손, 검영기-검정파구비블, 유폴파"
+  },
+  {
+    "id": "net-4",
+    "title": "맨체스터 코딩",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "manchester code",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-5",
+    "title": "PCM((Pulse Code Modulation)",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "아날로그 신호의 디지털 표현으로, 신호 등급을 균일한 주기로 표본화한 다음 디지털 코드로 양자화 처리하는 기술",
+    "mnemonic": "표양부 - 재복재"
+  },
+  {
+    "id": "net-6",
+    "title": "캡슐화",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "헤더를 입히는 과정(헤더: Header)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-7",
+    "title": "변조(Modulation)",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "하",
+    "summary": "신호 정보를 전송 매체의 채널 특성에 맞게끔 신호(정보)의 세기나 변위, 주파수를 적절한 파형 형태로 변환하는 수정 작업",
+    "mnemonic": "디아 베CA SK M"
+  },
+  {
+    "id": "net-8",
+    "title": "ASK",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "하",
+    "summary": "Amplitude shift keying",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-9",
+    "title": "PSK(Phase Shift keying)",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "하",
+    "summary": "위상 편이 변조",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-10",
+    "title": "QAM",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "출제예상",
+    "summary": "정보 신호에 따라 반송파의 진폭과 위상을 동시에 변화시켜, PSK의 변조 원리에 진폭 변조까지 포함하는 변조 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-11",
+    "title": "CSMA/CD",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "노드에서 통신 수행을 위해 회선의 사용 및 충돌 여부를 확인하고 데이터 전송을 시도하는 접근제어 프로토콜",
+    "mnemonic": "1 Non P"
+  },
+  {
+    "id": "net-12",
+    "title": "CSMA/CA",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "무선랜 환경에서 통신호스트가 무선통신 채널을 획득하기 위해 경쟁에 의해 채널 접근하는 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-13",
+    "title": "인터네트워킹",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "Internetworking, 리피터, 브리지, 라우터",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-14",
+    "title": "이더넷(Ethernet)",
+    "category": "네트워크",
+    "group": "Network 기본",
+    "importance": "중",
+    "summary": "기가비트 이더넷",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-15",
+    "title": "패킷 교환 네트워크",
+    "category": "네트워크",
+    "group": "유선 네트워크 분류",
+    "importance": "하",
+    "summary": "인터넷 네트워크(패킷 교환 네트워크(packet switched network)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-16",
+    "title": "회선 교환 네트워크",
+    "category": "네트워크",
+    "group": "유선 네트워크 분류",
+    "importance": "하",
+    "summary": "전화망 기반의 회선 교환 네트워크(Circuit switched network) 분류",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-17",
+    "title": "LAN",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "중",
+    "summary": "LAN (Local Area Network)",
+    "mnemonic": "스팅허버"
+  },
+  {
+    "id": "net-18",
+    "title": "MAN",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "하",
+    "summary": "대도시를 중심으로 한 통신망을 말하나, 컴퓨터 통신 분야에서 LAN의 발전 형태로서의 MAN 뿐만 아니라, 고속화 기반 기술로서의 MAN, 엑세스망과 백본망 사이의 MAN, 그리고",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-19",
+    "title": "WAN",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "하",
+    "summary": "도시와 도시 사이, 국가와 국가 등 원격지 사이를 연결하는 통신망, 일반적으로 범위가 10km이상",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-20",
+    "title": "WBAN",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "하",
+    "summary": "인체 중심으로 3m 내외의 통신 반경에서 인체 내외부에 이식된 의료용 기기와 수 kbps~수십 mbps급 정보 전달을 위한 무선 통신 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-21",
+    "title": "Ad-hoc Network",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "상",
+    "summary": "고정된 기간망의 도움없이 이동노트간 자율 구성되어 네트워크에 자율성과 융통성이 부여된 네트워크",
+    "mnemonic": "P홉불동전"
+  },
+  {
+    "id": "net-22",
+    "title": "LPWAN",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "중",
+    "summary": "Low-power wide area network",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-23",
+    "title": "SONET(동기식 관통신망)",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "중",
+    "summary": "synchronous optical network",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-24",
+    "title": "DNS(Domain Name System)",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "상",
+    "summary": "문자로 된 인터넷 주소를 컴퓨터가 사용하는 숫자로 된 인터넷 주소로 바꾸어 웹사이트에 접속하고자 하는 사람과 웹사이트의 서버를 연결해주는 방식.",
+    "mnemonic": "네호메로"
+  },
+  {
+    "id": "net-25",
+    "title": "EoS(Ethernet over Synchronous digital hierarchy)",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "하",
+    "summary": "Ethernet 신호 전송을 위하여 효율적 대역폭 관리 및 Ethernet 스위칭 등의 신규기술을 통합 적용한 NG-SDH 기술을 기반으로 기존 SONET/SDH 망을 거의 손대지",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-26",
+    "title": "이더넷 링 보호 절체",
+    "category": "네트워크",
+    "group": "유/무선 네트워크 형태",
+    "importance": "하",
+    "summary": "순수 이더넷으로 링 네트워크를 형성하여 SDH/SONET 망 수준의 신뢰성을 가지는 망운용을 가능하게 하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-27",
+    "title": "FDM",
+    "category": "네트워크",
+    "group": "다중화(multiplexing)",
+    "importance": "중",
+    "summary": "주파수분할 다중화(Frequency Division Multiplexing: FDM)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-28",
+    "title": "TDM",
+    "category": "네트워크",
+    "group": "다중화(multiplexing)",
+    "importance": "중",
+    "summary": "시분할 다중화(Time Division Multiplexing: TDM)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-29",
+    "title": "WDM",
+    "category": "네트워크",
+    "group": "다중화(multiplexing)",
+    "importance": "중",
+    "summary": "파장분할 다중화(Wavelength Division Multiplexing: WDM)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-30",
+    "title": "MUX",
+    "category": "네트워크",
+    "group": "다중화(multiplexing)",
+    "importance": "중",
+    "summary": "- MUltipleXer(다중화기)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-31",
+    "title": "Multicast",
+    "category": "네트워크",
+    "group": "Address Types/ Types of communication in IPv6",
+    "importance": "상",
+    "summary": "특정 송신자가 하나의 데이터 패킷을 동시에 여러 수신자에게 보내는 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-32",
+    "title": "Anycast",
+    "category": "네트워크",
+    "group": "Address Types/ Types of communication in IPv6",
+    "importance": "중",
+    "summary": "해당 그룹에 속하는 인터페이스 중 가장 가까운 거리에 있는 인터페이스에게만 패킷 전달하는 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-33",
+    "title": "Unicast",
+    "category": "네트워크",
+    "group": "Address Types/ Types of communication in IPv6",
+    "importance": "하",
+    "summary": "전화와 같이 1:1 대응",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-34",
+    "title": "Broadcast",
+    "category": "네트워크",
+    "group": "Address Types/ Types of communication in IPv6",
+    "importance": "하",
+    "summary": "자신의 호스트가 속해 있는 네트워크 전체를 대상으로 패킷을 전송하는 일대다 통신 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-35",
+    "title": "Incast",
+    "category": "네트워크",
+    "group": "Address Types/ Types of communication in IPv6",
+    "importance": "하",
+    "summary": "여러 수신자가 하나의 송신자로부터 데이터를 동시에 받는 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-36",
+    "title": "Overay Multicast",
+    "category": "네트워크",
+    "group": "Address Types/ Types of communication in IPv6",
+    "importance": "하",
+    "summary": "논리적 링크구성",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-37",
+    "title": "OSI 7 Layers",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "상",
+    "summary": "Application, Presentation, Session, Transport(segment), Network(packet), Data",
+    "mnemonic": "아파서티네다P"
+  },
+  {
+    "id": "net-38",
+    "title": "Application(7)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "하",
+    "summary": "사용자, 즉 단말기를 조작하는 사람이나 데이터 통신 서비스를 수행하는 프로그램 등에 여러 서비스를 제공하는 역할",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-39",
+    "title": "HTTP V3.0",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "중",
+    "summary": "World Wide Web에서 이진 정보를 교환하는 데 사용되는 HyperText Transfer Protocol 의 세번째 주요 버전",
+    "mnemonic": "레보효 티끊"
+  },
+  {
+    "id": "net-40",
+    "title": "Presentation(6)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "하",
+    "summary": "압축,암호화 기능을 하며,응용 계층 간에 전송하는 데이터의 표현을 담당하는 OSI 기본 참조 모델의 7계층 중 6 계층",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-41",
+    "title": "Session(5)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "하",
+    "summary": "응용프로그램 간의 대화를 유지하기 위한 구조 제공, 이를 처리하기 위해 프로세서들을 논리적 연결 담당",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-42",
+    "title": "Transport(4)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "상",
+    "summary": "종단간 사용자들이 신뢰성 있는 데이터를 송수신 할 수 있도록 흐름 제어, 오류 제어, 혼잡 제어의 역할을 수행하는 OSI 7 Layer의 4계층",
+    "mnemonic": "오름혼 훼손중순확"
+  },
+  {
+    "id": "net-43",
+    "title": "Network(3)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "상",
+    "summary": "송신자, 수신자 간 Data 전송을 위해 Logical Address를 지정하고 이를 통해 포워딩과 라우팅을 수행할 수 있도록 지원하는 계층",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-44",
+    "title": "Data Link(2)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "상",
+    "summary": "OSI 7 Layer의 하위 계층인 2계층으로 두 시스템 사이에서 오류 없이 정보 데이터를 전송하려고 상위 계층에서 받은 비트열의 데이터로 프레임을 구성하여 하위 계층으로 전송",
+    "mnemonic": "오름회"
+  },
+  {
+    "id": "net-45",
+    "title": "Physical Layer(물리 계층, 1계층)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "하",
+    "summary": "OSI 계층을 타고 내려온 데이터를 전기적 신호로 변환시켜 통신하는 계층 ( Encoding, Decoding 수행)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-46",
+    "title": "Service Primitive(프리미티브)",
+    "category": "네트워크",
+    "group": "OSI 7 layers (ISO 7498)",
+    "importance": "하",
+    "summary": "OSI 기본 참조 모델에서, 서비스 이용자와 제공자간 상호 동작하는 서비스에 주안점을 규정한 추상적인 개념",
+    "mnemonic": "Network 계층 구조의 서비스 추상화"
+  },
+  {
+    "id": "net-47",
+    "title": "TCP",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "상",
+    "summary": "네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 모여있는 4계층의 통신 프로토콜 집합",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-48",
+    "title": "MPTCP(Multipath TCP)",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "TCP Stream을 여러 개 묶어 하나의 Application에서 데이터를 송수신, 전송 성능 향상을 위한 IETF의 TCP기반 표준 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-49",
+    "title": "TCP 혼잡제어",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "네트워크로 유입되는 사용자 트래픽의 양이 네트워크 용량을 초과하지 않도록 유지시키는 매커니즘 'Slow Start, Congestion Avoidance, Fast Retransm",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-50",
+    "title": "오류제어",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "상",
+    "summary": "송수신 데이터의 노이즈, 지연, 변형 등의 통신장애로부터 오류 검출 및 세그먼트 재전송 통한 신뢰성을 확보하는 시퀀스 기반 통신 기법",
+    "mnemonic": "훼손중순확"
+  },
+  {
+    "id": "net-51",
+    "title": "Sliding Window 알고리즘",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "슬라이딩 윈도우 동작 시 송신 및 수신 응용프로그램의 낮은 데이터 생성, 소비 속도로 인한 적은 Data 전송, 동작효율 감소 현상 ex) TCP 상 1byte Data 전송 시:",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-52",
+    "title": "UDP",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "상",
+    "summary": "상위 계층에서 받은 데이터를 IP 프로토콜에 전달하지만 전송한 데이터가 목적지까지 제대로 도착했는지는 확인하지 않는 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-53",
+    "title": "IP(인터넷 프로토콜)",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "인터넷에 있는 수 많은 호스트들을 각각 구분할 수 있도록 각 호스트마다 유일한 32비트(IPv4 기준) 값 or 128비트(IPv6 기준)값을 할당하는데, 이것을 인터넷 주소 또는",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-54",
+    "title": "Subnetting",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "상",
+    "summary": "동일 네트워크를 작은 그룹으로 나누기 위해 그룹화하는 것",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-55",
+    "title": "Supernetting",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "상",
+    "summary": "다수 작은 네트워크를 하나로 통합하여 사용하는 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-56",
+    "title": "CIDR (classless inter-domain routing)",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "네트워크 등을 합치는 슈퍼네팅 등 적용한다는 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-57",
+    "title": "VLSM(Variable Length Subnet Mask)",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "VLSM(Variable Length Subnet Mask)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-58",
+    "title": "루트 서머라이제이션",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "라우팅 테이블에 라우팅 정보를 대책없이 유지함으로 발생되는 라우터의 부하, 속도 저하를 개선하기 위해, 라우터에 복수개의 라우팅(네트워크) 정보를 하나의 라우팅 정보로 표시하는 개",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-59",
+    "title": "NAT",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "외부에 공개된 공인IP와 사설IP가 다른 경우, 네트워크 전송 수행시 이 두 IP 주소를 사상시키는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-60",
+    "title": "패킷 단편화",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "중",
+    "summary": "프로토콜 기본 교환 단위인 PDU(Protocol Dta Unit)를 여러 더 작은 단위로 나누는 동작, 큰 IP 패킷들이 적은 MTU(Maximum Transmission Uni",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-61",
+    "title": "네이글 알고리즘",
+    "category": "네트워크",
+    "group": "TCP/IP 5계층",
+    "importance": "하",
+    "summary": "작은 패킷은 버퍼에 저장 후 이전 송신한 데이터에 대해 ACK가 수신되면 한번에 전송하는 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-62",
+    "title": "RTP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "하",
+    "summary": "오디오나 비디오 같은 실시간 스트림 데이터를 전송하기 위한 표준화된 End-toEnd 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-63",
+    "title": "FTP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "[FTP] TCP/IP 프로토콜을 가지고 서버와 클라이언트 사이의 파일 전송을 하기 위한 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-64",
+    "title": "IGMP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "하",
+    "summary": "멀티캐스트 그룹에 대한 가입/탈퇴 기능에 대한 매커니즘을 제공하는 프로토콜",
+    "mnemonic": "가감응탈"
+  },
+  {
+    "id": "net-65",
+    "title": "RTP, RTSP, RTCP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "하",
+    "summary": "RTP의 송수신과 관련 멀티미디어 세션 참여자들이 QoS관련 정보(패킷지연, 패킷손실, 지터 등)를 주기적으로 교환하도록 하는 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-66",
+    "title": "SCTP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "UDP 메시지 지향(message oriented) 특성과 TCP 연결형(connectionoriented) 및 신뢰성 제공 특성을 조합한 프로토콜",
+    "mnemonic": "멀멀세데"
+  },
+  {
+    "id": "net-67",
+    "title": "ARP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "논리적 주소체계인 IP주소를 데이터 링크 계층의 48비트 하드웨어 주소와 연계시키는 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-68",
+    "title": "RARP(3계층)",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "IP호스트가 자신의 물리 네트워크 주소(MAC)을 알지만 IP주소를 모르는 경우, 서버로부터 IP주소를 요청하기 위해 사용하는 기능",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-69",
+    "title": "NTP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "인터넷을 통해 컴퓨터 시간을 최상위 동기 클럭원(Master Clock)에 동기화시키는 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-70",
+    "title": "HDLC",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "ISO에서 표준화한 동기식 비트중심의 데이터 링크 프로토콜로 점대점 방식이나 다중점 방식의 통신에 사용됨",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-71",
+    "title": "DHCP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "RFC 1541를 근거하여 NAT 기능을 통하여, 클라이언트의 IP 정보를 자동으로 할당하는 프로토콜",
+    "mnemonic": "DORA RA R"
+  },
+  {
+    "id": "net-72",
+    "title": "QUIC",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "UDP 기반에서 다중화와 신뢰성 있는 전송을 수행하며, 보안성을 충족하기 위해 암호화를 기본적으로 지원 하는 프로토콜, UDP Port 443 을 사용하여 연결",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-73",
+    "title": "VRRP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "VRRP(Virtual Router Redundancy Protocol)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-74",
+    "title": "MTCP",
+    "category": "네트워크",
+    "group": "프로토콜 목록",
+    "importance": "중",
+    "summary": "인터넷의 핵심 프로토콜인 TCP 의 성능을 획기적으로 개선시키기 위해 다수 경로/인터페이스를 동시에 사용하는 표준 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-75",
+    "title": "L7 스위치",
+    "category": "네트워크",
+    "group": "Ethernet Switch",
+    "importance": "중",
+    "summary": "Application 계층까지 정보를 분석하여 클라이언트로부터 요청된 URL에 따라",
+    "mnemonic": "보컨로 큐캐트"
+  },
+  {
+    "id": "net-76",
+    "title": "L4 스위치/이중화",
+    "category": "네트워크",
+    "group": "Ethernet Switch",
+    "importance": "상",
+    "summary": "서버나 네트워크 간 로드밸런싱 용도에서 L4단계의 프로토콜인 TCP/UDP 등",
+    "mnemonic": "로버패 캐연Q"
+  },
+  {
+    "id": "net-77",
+    "title": "L3 스위치",
+    "category": "네트워크",
+    "group": "Ethernet Switch",
+    "importance": "중",
+    "summary": "L2 스위치에 라우팅(Routing) 기능을 추가.",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-78",
+    "title": "L2 스위치",
+    "category": "네트워크",
+    "group": "Ethernet Switch",
+    "importance": "중",
+    "summary": "frame 의 MAC 주소를 읽어 스위칭을 하고, MAC의 OSI 계층 중 2계층에 해당하기 때문에 Layer 2 스위치.",
+    "mnemonic": "런플포필아 VLSP"
+  },
+  {
+    "id": "net-79",
+    "title": "V2V(Vehicle to Vehicle)",
+    "category": "네트워크",
+    "group": "V2V",
+    "importance": "상",
+    "summary": "V2V(Vehicle to Vehicle)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-80",
+    "title": "Connected Car",
+    "category": "네트워크",
+    "group": "V2V",
+    "importance": "중",
+    "summary": "통신망을 연결하여 IT기기처럼 활용할 수 있는 자동차",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-81",
+    "title": "IoV",
+    "category": "네트워크",
+    "group": "V2V",
+    "importance": "하",
+    "summary": "IoV(Internet of Vehicles)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-82",
+    "title": "V2X",
+    "category": "네트워크",
+    "group": "V2V",
+    "importance": "상",
+    "summary": "차량간에 유무선망을 통해 다른 차량 및 도로등 인프라가 구축된 사물과 정보를 교환하는 기술, C-ITS에서의 ‘Connected/Networked Vehicle(Car)’를 구현하",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-83",
+    "title": "DRSC",
+    "category": "네트워크",
+    "group": "V2V",
+    "importance": "상",
+    "summary": "ITS전용 근거리 무선통신방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-84",
+    "title": "WAVE(IEEE 802.11p) / 차량 이동 환경에서의 무선 액세스",
+    "category": "네트워크",
+    "group": "V2V",
+    "importance": "상",
+    "summary": "IEEE 802.11p, IEEE 1609기반의 차량환경용 무선통신기술",
+    "mnemonic": "오빠빨리오구있소"
+  },
+  {
+    "id": "net-85",
+    "title": "LAN / 구축 유형",
+    "category": "네트워크",
+    "group": "유선 랜",
+    "importance": "중",
+    "summary": "개념도, 구성요소, 유형",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-86",
+    "title": "VLAN(Virtual LAN)",
+    "category": "네트워크",
+    "group": "유선 랜",
+    "importance": "중",
+    "summary": "하나의 물리적 네트워크를 분할하여 각각의 네트워크가 브로드캐스트 도메인을 형성하도록 하는 네트워크 분할 기술",
+    "mnemonic": "포태트"
+  },
+  {
+    "id": "net-87",
+    "title": "Wireless LAN",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "상",
+    "summary": "IEEE 802.11, SSID, WEP",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-88",
+    "title": "IEEE 802.11ac Wave 1",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "5GHz만 사용. Single User",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-89",
+    "title": "IEEE 802.11ac",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "1. 기존 802.11ac 무선 사양에 웨이브 2가 추가되면서 이론상의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-90",
+    "title": "IEEE 802.11ad(WiGig)",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "와이기그(WiGig; Wireless Gigabits),",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-91",
+    "title": "IEEE 802.11af",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "TV 화이트 스페이스에서 Wi-Fi 서비스를 제공을 목적",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-92",
+    "title": "IEEE 802.11ah",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "TV 화이트 스페이스에서 사용하지 않은 대역을 이용해서",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-93",
+    "title": "IEEE 802.11i",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "무선랜 보안문제 해결위한 표준기술, AP와 단말기사이의 인증, 키교환, 접근제어, 권한검증, 무결성, 부인방지 등을 위하여,",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-94",
+    "title": "기가파이(Giga Fi)",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "기가파이(Giga Fi)는 60GHz 대역을 이용해 데이터를 기가급으로 전송할 수 있는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-95",
+    "title": "WIFI 6",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "2018년 10월 3일 – Wi-Fi Alliance®가 802.11ax 기술 기반의 차세대 와이파이를 지원하는 제품 및 네트워크에 대한 업계 명칭인 Wi-Fi 6를 발표",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-96",
+    "title": "Wi-Fi 6E",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "출제예상",
+    "summary": "IEEE802.11ax 규격을 바탕으로 기존 Wi-Fi 6의 2.4GHz와 5GHz 대역에 추가적으로 6GHz 대역을 포함함 무선통신 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-97",
+    "title": "WI-FI 7 (IEEE 801.11be)",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "상",
+    "summary": "Wi-Fi 6 보다 3배 빠르고 초 실감 미디어 컨텐츠를 안정적으로 전송하는",
+    "mnemonic": "주변속대 하표멀"
+  },
+  {
+    "id": "net-98",
+    "title": "IEEE 802.11bn",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "상",
+    "summary": "향상된 효율성을 핵심목표로 UHR(Ultra High Reliability, 극도 높은 신뢰성)을 제공하는 차세대 Wi-Fi 표준/대역폭(2.4GHz, 5GHz, 6GHz), 최대",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-99",
+    "title": "와이파이 콜링(Wi-Fi Calling) 서비스",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "- 동통신망과 와이파이 망 간 핸드오프를 지원함으로써, 고객 단말기와 Wi-Fi간 신호가 끊어질 경우 이동통신 가입자 망으로의 즉각적인 핸드오프가 되어 Seamless한 음성전화 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-100",
+    "title": "단말 위치 설정",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "이동 단말의 위치를 설정(Localization or Positioning)하는 방안",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-101",
+    "title": "WPA3",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "중",
+    "summary": "WPA3 (Wi-Fi Protected Access 3)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-102",
+    "title": "실내/외 위치 측위 기술",
+    "category": "네트워크",
+    "group": "Wireless LAN",
+    "importance": "상",
+    "summary": "1. 실내: Wi-Fi AP 이용한 측위 기술, BLE, UWB 적용",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-103",
+    "title": "Machine to Machine",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "기계 간의 통신(Machine to Machine) 및 사람이 동작하는 디바이스와 기계간의 통신(Mat to Machine) 으로 통신과 ICT 기술을 결합하여 원격지의 사물정보를",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-104",
+    "title": "IoT",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "상",
+    "summary": "IoT(Internet of Things)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-105",
+    "title": "IoT 표준",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "oneM2M:",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-106",
+    "title": "CoAP",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "인터넷 표준 단체인 IETF(Internet Engineering Task Force)에서 만든 메모리, 에너지, 성능에 제약이 있는 환경을 위한 웹 기반 프로토콜, ‘사물인터넷 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-107",
+    "title": "MQTT",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "지연 및 손실이 심한 네트워크 환경에서 검침기, 센서 등 작은 기기들의 신뢰성 있는 메시지 전달을 위한 오픈 애플리케이션 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-108",
+    "title": "XMPP",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "2인 이상의 참여자 간에 구조적 데이터를 거의 실시간에 가깝게 교환할 수 있게 해주는 XML 기반 TCP 커뮤니케이션 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-109",
+    "title": "LwM2M",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "IoT 장치에 정의되어 있는Object와 리소스를 관리하는 체계로 장치를 관리하는 기술(OMA 표준화 단체 제정)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-110",
+    "title": "WoT",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "모든 사물이 웹으로 연결되는 환경",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-111",
+    "title": "IoE(Internet of Everything)",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "놀라운 속도로 증가하는 연결성을 지원하는 데 필요한 관리 효율성, 제어 가능성 및 확장성을 강화하는 네트워크 인텔리전스",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-112",
+    "title": "LoRa(Long Range)",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "저전력, 장거리 LPWAN(Low Power WAN) 네트워크, LoRa 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-113",
+    "title": "SigFox",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "800~900Mhz",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-114",
+    "title": "LTE-M",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "3GPP release 12.",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-115",
+    "title": "NB-IoT",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "면허대역, 가드대역내 사용하지 않은 자원블록 이용",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-116",
+    "title": "IoV",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "IoV(Internet of Vehicles)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-117",
+    "title": "D2D",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "하",
+    "summary": "D2D(Device to Device)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-118",
+    "title": "소물인터넷",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "하",
+    "summary": "저성능 컴퓨팅 파워 기반의 소물과 소량의 데이터 트래픽, Internet of small things)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-119",
+    "title": "V2X",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "차량 통신기술인 V2X(Vehicle to Everything)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-120",
+    "title": "e-IoT",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "중",
+    "summary": "에너지 전략 분야",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-121",
+    "title": "센서 라우팅",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "출제예상",
+    "summary": "데이터 전송 요구 시 경로 탐색,설정 - 정기적 라우팅 경로탐색, 설정",
+    "mnemonic": "네운 - 평게위 다질일"
+  },
+  {
+    "id": "net-122",
+    "title": "Itinerary Routing",
+    "category": "네트워크",
+    "group": "사물지능통신/IoT",
+    "importance": "하",
+    "summary": "라우팅 기법을 통해 이동 에이전트의 경로 결정과 데이터 수집에 사용되는 라우팅 기법(아이티너리 라우팅)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-123",
+    "title": "IPv6 / All IP",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "상",
+    "summary": "전환 유형, 보안 이슈 등 잘 정리!!",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-124",
+    "title": "Dual Stack",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "중",
+    "summary": "IPv4/IPv6 듀얼스택은 IPv6 노드가 IPv4 전용 노드와 호환성을 유지하는 가장 쉬운 방법이다. IPv6/IPv4 듀얼스택 노드는 IPv4와 IPv6 패킷을 모두 주고 받",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-125",
+    "title": "IPv6-in-IPv4 터널링",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "중",
+    "summary": "IPv6/IPv4 호스트와 라우터에서 IPv6 데이터그램을 IPv4 패킷에 캡슐화하여 IPv4 라우팅 토폴로지 영역을 통해 전송하는 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-126",
+    "title": "변환(G/W) 관점",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "중",
+    "summary": "주소 전환 장비를 이용하여, 기존의 IPv4에서 사용되던 NAT 기술과 마찬가지로 IPv6와 IPv4 간의 Address Table을 생성하여 양단간의 통신이 가능",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-127",
+    "title": "ND(Neighbor Discovery)",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "중",
+    "summary": "ND 기능(Neighbor Discovery Protocol)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-128",
+    "title": "ICMPv6",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "중",
+    "summary": "Internet Control Message Protocol version 6 (ICMPv6) is the implementation of the Internet Control M",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-129",
+    "title": "IPv6의 보안 문제점 해결방안",
+    "category": "네트워크",
+    "group": "IPv6",
+    "importance": "중",
+    "summary": "듀얼 스택, 6to4, 터널링 생성 공격, DAD를 통한 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-130",
+    "title": "QoS /Queue 관리분류",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "상",
+    "summary": "FIFO, PQ, CBQ, WFP(Weighted Fair Queuing) 포함 정리,",
+    "mnemonic": "기성회보"
+  },
+  {
+    "id": "net-131",
+    "title": "WFQ",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "가중치를 통한 QoS 보장 스케줄링 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-132",
+    "title": "Traffic Policing",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "상",
+    "summary": "미리 정해진 기준 이상을 초과하는 트래픽은 버림으로써 트래픽 대역폭(Bandwidth)을 제한(limitation)하는 QoS 기술",
+    "mnemonic": "미드마"
+  },
+  {
+    "id": "net-133",
+    "title": "Traffic Shaping",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "상",
+    "summary": "- 트래픽 쉐이핑으로 대역폭을 제어하는 것 뿐 아니라, 전송률(rate)를 조절하여 패킷 끊김(jitter), 패킷 손실(loss), 반응시간(low latency) 등을 최적화.",
+    "mnemonic": "CCE"
+  },
+  {
+    "id": "net-134",
+    "title": "사전 패킷 폐기",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "상",
+    "summary": "1) RED(Random Early Detection)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-135",
+    "title": "혼잡 제어",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "상",
+    "summary": "송신측에서 송신 데이터에 대한 Ack 수신 여부를 기반으로 네트워크 상황을 판단하여 송신 데이터의 크기를 조절하여 네트워크의 혼잡상황에 대해 조절하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-136",
+    "title": "IntServ",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "IntServ(Integrated Services)의 정의 - RSVP와 같은 자원예약 신호제어용 프로토콜에 의해 요구되는 자원을 사전에 예약하여 망으로 유입되는 트래 픽에 대하여",
+    "mnemonic": "호공라처 - SeTReCSAT"
+  },
+  {
+    "id": "net-137",
+    "title": "DiffServ",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "DiffServ는 IntServ 방식을 보완한 모델로 비슷한 성질을 트래픽들을 클래스로 묶어 각 클래스 마다 가중치 두어 서비스를 처리 classifying and managing",
+    "mnemonic": "ClMaMeConQue"
+  },
+  {
+    "id": "net-138",
+    "title": "MPLS",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "IP Header를 이용한 Routing 대신 4Bytes의 단순한 Label을 참조하여 고속의 2계층 Forwarding 처리를 실현하기 위한 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-139",
+    "title": "IP-MPLS/MPLS-TP(Multi-Protocol Label Switching-Transport Profile)",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "MPLS를 IP망에 구축-> IP/MPLS 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-140",
+    "title": "QoE",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "고객이 서비스에 대해 총체적으로 경험하고 인지하는 품질",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-141",
+    "title": "NP(Network performance)",
+    "category": "네트워크",
+    "group": "QoS(Quality of Service)",
+    "importance": "중",
+    "summary": "통신제공자가 관리하는 통신망 성능, 통신망이 서비스품질(QoS)에 이바지하는 능력을 말하며 이는 망설계 특성에 의존적이며 망의 개별 요소 성능",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-142",
+    "title": "ISM Band",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "중",
+    "summary": "Industrial Scientific Medical band: 산업, 과학, 의료용 기기에서 사용 가능한 무료 주파수 예약 대역",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-143",
+    "title": "블루투스(Bluetooth 4.0)",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "상",
+    "summary": "1994년 최초개발. 2.4~2.485 대역폭, IEEE 802.15.1",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-144",
+    "title": "Bluetooth 4.2",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "중",
+    "summary": "IPSP(Internet Protocol Support Profile)통한 인터넷접속(IPv6/6LowPAN과의 연결지원), 2.5배속도향상, 10배 패킷크기, AES 128bit",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-145",
+    "title": "블루투스(Bluetooth 5.0)",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "중",
+    "summary": "Stack 구조",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-146",
+    "title": "블루투스(Bluetooth 6)",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "중",
+    "summary": "2.4GHz ISM(Industrial, Scientific, and Medical) 대역을 활용하여 다양한 전자 기기 간 의 데이터 교환과 연결을 제공 하는 저전력 근거리 무선 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-147",
+    "title": "UWB",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "중",
+    "summary": "UWB (Ultra Wide band) 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-148",
+    "title": "Zigbee (Low Data Rate)",
+    "category": "네트워크",
+    "group": "WPAN",
+    "importance": "중",
+    "summary": "- 저속 전송속도로 집에 놓여있는 다양한 가전 제품 등을 리모콘 하나로 작동시킬 수 있는 저속 WPAN 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-149",
+    "title": "NFC",
+    "category": "네트워크",
+    "group": "무선 통신기술(들)",
+    "importance": "상",
+    "summary": "모바일 기기에 장착하여 13.56Mhz 주파수를 이용해 양방향 통신이 가능하고, RFID와 스마트 기능을 통합하여 다양한 비즈니스 모델이 가능한 근거리 무선통신 기술 ISO/IEC",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-150",
+    "title": "비콘(Beacon)",
+    "category": "네트워크",
+    "group": "무선 통신기술(들)",
+    "importance": "중",
+    "summary": "근거리 위치인식기술, RSS(Received Signal Strength),",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-151",
+    "title": "징(Zing)",
+    "category": "네트워크",
+    "group": "무선 통신기술(들)",
+    "importance": "중",
+    "summary": "사업자간 제각각인 플랫폼을 모두 아우르겠다는 초근접",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-152",
+    "title": "Wi-Fi Direct",
+    "category": "네트워크",
+    "group": "무선 통신기술(들)",
+    "importance": "하",
+    "summary": "와이파이 다이렉트(Wi-Fi Direct)는 Wi-Fi Alliance 기기 간 접속을 지원하는 Wi-Fi Direct AP를 거치지 않고 Wi-Fi를 탑재한 기기간 직접적으로 통",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-153",
+    "title": "Wi-SUN",
+    "category": "네트워크",
+    "group": "무선 통신기술(들)",
+    "importance": "중",
+    "summary": "Wi-SUN(Wireless Smart Utility Network) 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-154",
+    "title": "고밀도화",
+    "category": "네트워크",
+    "group": "이동통신기술(공통)",
+    "importance": "중",
+    "summary": "[네트워크 고밀도화의 정의]",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-155",
+    "title": "빔포밍(Beamforming)",
+    "category": "네트워크",
+    "group": "이동통신기술(공통)",
+    "importance": "중",
+    "summary": "특정 방향으로만 방사/수신하는 지향성을 만들어 내는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-156",
+    "title": "펨토셀",
+    "category": "네트워크",
+    "group": "이동통신기술(공통)",
+    "importance": "하",
+    "summary": "Small Cell",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-157",
+    "title": "CAPEX(Capital expenditures)",
+    "category": "네트워크",
+    "group": "이동통신기술(공통)",
+    "importance": "하",
+    "summary": "OPEX(Operating Expenditure)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-158",
+    "title": "FMC",
+    "category": "네트워크",
+    "group": "이동통신기술(공통)",
+    "importance": "하",
+    "summary": "FMC, FMS",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-159",
+    "title": "인지무선기술(CR)",
+    "category": "네트워크",
+    "group": "이동통신기술(공통)",
+    "importance": "중",
+    "summary": "Cognitive Radio, 주변 환경에 맞게 최적화해 제한된 주파수 영역을 공유하여 사용할 수 있는 인지 무선기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-160",
+    "title": "3GPP",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "3GPP(3rd Generation Partnership Project)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-161",
+    "title": "OFDM",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "OFDM의 개념 - FDM(주파수 분할 다중 방식)에 추가로 직교관계 부반송파(Sub-carrier)와 반송파를 활용해서 다중(Multiplexing) 방식으로 전송하는 변조 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-162",
+    "title": "MIMO",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "MU-MIMO, 무선랜의 경우: 250MBPS~500MBPS",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-163",
+    "title": "SDR(Radio)",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "소프트웨어 기반 이동통신(Software Defined Radio) 기술 - 주파수의 범위, 변조방식, 무선 출력 등 주요 무선 특성을 소프트웨어로 업데이트 또는 변경 가능한 무선",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-164",
+    "title": "비직교 다중접속(NOMA)",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "셀의 용량 증대 달성을 위한 후보기술로 동일한 시간, 주파수, 공간 자원 상에 두 대 이상의 단말에 대한 데이터를 동시 전송하여 주파수 효율을 향상시키는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-165",
+    "title": "Smart Antenna",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "안테나 어레이, RF Transceiver, 빔 형성기, RF Calibration",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-166",
+    "title": "멀티캐리어(Multi Carrier)",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "데이터 트래픽을 분산시키는 기술, 멀티캐리어(Multi Carrier)의 정의. 단말기가 2개 주파수 중 엘티이(LTE: Long Term Evalution) 단말기가 2개 이상의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-167",
+    "title": "Carrier Aggregation",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "Carrier Aggregation(반송파 직접) 의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-168",
+    "title": "CoMP",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "CoMP(Coordinated Multi-Point)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-169",
+    "title": "TDD-LTE",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "가. TDD-LTE(Time Division Duplexing LTE) 정의 - 주파수를 시간 단위로 나누어 송수신을 모두 처리하는 비대칭적인 데이터 처리 기술인 4세대 통신망의 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-170",
+    "title": "FDD-LTE",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "- 상하향 채널 분리 주파수대역을 할당하고 가드밴드 ,Full-Duplex(전이중) 전송으로 지연이 작으며 고속전송 및 이동성에 유리한 통신방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-171",
+    "title": "VoLTE",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "VoLTE(Voice over LTE), 고속 데이터 통신 패킷망인 LTE에서도 기존 서킷망과 같이 음성통화를 가능하게 만든 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-172",
+    "title": "IMS",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "VoLTE는 당연히 IMS를 이용함",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-173",
+    "title": "LTE-A(Advance)",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "Long term evolution-advanced",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-174",
+    "title": "LTE-U",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "중",
+    "summary": "LTE-Unlicensed (LTE-U); 모바일 트래픽 분산을 위해 와이파이 주파수대역과 같은 비면허 대역(Unlicensed Band) 을 LTE주파수로 활용하여 향상된 이동성",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-175",
+    "title": "LWA",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "차세대 LTE 기술로 주목받는 LWA(LTE-WiFi AggregationㆍLTE-WiFi 병합전송 기술 기반의 초소형 기지국, 스몰셀) 기능, 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-176",
+    "title": "LTE-LAA = LTE-U 혼용사용",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "하",
+    "summary": "1. 3GPP총회에서 Licensed-Assisted Access using LTE (LAA)가 Release 13의 Study Item (SI)으로 승인",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-177",
+    "title": "LTE-R",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "출제예상",
+    "summary": "LTE-R(철도통합무선망)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-178",
+    "title": "해상재난망",
+    "category": "네트워크",
+    "group": "LTE",
+    "importance": "출제예상",
+    "summary": "해상재난망 정의 - 700MHz 주파수대역의 초고속 해상무선통신망(LTE-Maritime) 을 구축하여 연안선박과 어선에 항로지원 서비스를 제공하여 충돌예방 및 인적과실에 의한 사",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-179",
+    "title": "LTE-X 사업",
+    "category": "네트워크",
+    "group": "LTE-X",
+    "importance": "중",
+    "summary": "-재난안전통신망(PS-LTE), 철도통합(무선)망(LTE-R), 해상망(LTE-M) 등 LTE 관련 사업을 총칭하는 개념 재난안전통신망(PS-LTE), 철도통합(무선)망(LTE-R",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-180",
+    "title": "e내비게이션(e-Navigation)",
+    "category": "네트워크",
+    "group": "LTE-X",
+    "importance": "하",
+    "summary": "정보통신기술을 선박 운항에 적용해 사고를 줄이고 항만 운영 효율성을 도모하기 위한 차세대 해양안전 종합관리체계.",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-181",
+    "title": "국가재난안전통신망",
+    "category": "네트워크",
+    "group": "PS-LTE",
+    "importance": "상",
+    "summary": "컴시응, 104회 3교시 참조",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-182",
+    "title": "TRS(TETRA, IDEN)",
+    "category": "네트워크",
+    "group": "PS-LTE",
+    "importance": "하",
+    "summary": "기존 경찰청에서 사용하는 안전통신망",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-183",
+    "title": "상호운용성",
+    "category": "네트워크",
+    "group": "PS-LTE",
+    "importance": "하",
+    "summary": "사업자 공중망과 기존 재난망의 연동기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-184",
+    "title": "저궤도 위성 기반 재난안전통신망(가칭 PS Satcomm)",
+    "category": "네트워크",
+    "group": "PS-LTE",
+    "importance": "하",
+    "summary": "대규모 재난 · 재해 상황에서 공공안전 기관 간의 신속하고 안정적인 통신 연계를 통해 현",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-185",
+    "title": "5G(IMT-2020) 주요 기술",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "상",
+    "summary": "- 4G 대비 10배이상 향상된 초고속, 초고용량, 초저지연, 초연결 네트워크 기술로 다양한 디지털 디바이스를 수용하고 Real 2D 입체 영상 서비스 기술구현을 목표로 한 차세대",
+    "mnemonic": "전체주고지연에면"
+  },
+  {
+    "id": "net-186",
+    "title": "Network Slicing",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "상",
+    "summary": "물리적으로 하나의 네트워크를 통해 Device, Access, Transport, Core를 포함하여 End-to-End로 논리적으로 분리된 네트워크를 만들어 서로 다른 특성을 갖",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-187",
+    "title": "5G 특화망(지역 5G)",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "특정지역(건물, 공장 등)에 한해 사용 가능한 5G망으로서, 해당지역에서 도입하고자 하는 서비스에 특화된 맞춤형 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-188",
+    "title": "NR/NR-MIMO",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "상",
+    "summary": "NR(New Radio) 의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-189",
+    "title": "Mobile Edge Computing",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "상",
+    "summary": "이동통신 기지국에 대용량 클라우드 기술을 적용하여 다양한 컨텐츠를 사용자와 가까운 위치에서 제공하여 모바일 코어망의 혼잡을 최소화하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-190",
+    "title": "6G",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "",
+    "summary": "6세대통신",
+    "mnemonic": "정지현대성공"
+  },
+  {
+    "id": "net-191",
+    "title": "6G Usage Scenario",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "6세대(6G) 이동통신 기술이 제공할 수 있는 주요 활용 사례로서 초고속, 초저지연, 초연결성을 바탕으로 다양한 산업 및 일상생활에 미치는 영향을 구체화한 시나리오",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-192",
+    "title": "ISAC(integrated sensing and communication)",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "무선 주파수를 통해 정보를 송수신하면서, 동시에 주변 환경을 감지하거나 특정 정보를 측정하는 통신과 센싱 기능을 단일 시스템 통합기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-193",
+    "title": "O-RAN / AI-RAN",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "네트워크 장비 운용에 필요한 RAN 구간에 가상화 기술을 적용하여 Hardware와 Software를 분리하기 위한 Apache 2.0 라이선스의 개방형 아키텍처",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-194",
+    "title": "C-RAN",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "기존 기지국의 디지털 장치와 RF장치를 분리하여, 여러 기지국의 DU를 중앙에",
+    "mnemonic": "구인 - RD CBO"
+  },
+  {
+    "id": "net-195",
+    "title": "AI-RAN(Radio Access Network)",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "무선 접속 네트워크(RAN)에 자동화된 인공지능(AI)을 적용하여 모바일 네트워크 효 율성을 개선하고 안전성을 극대화한 무선접속망(RAN) 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-196",
+    "title": "저궤도 위성",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "출제예상",
+    "summary": "궤도 위성은 지구 저궤도인 300~1500Km 에 수백기 이상의 대량 생산된 통신 위성을 배치하여 초고속 인터넷 서비스를 제공하는 통신 기술.",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-197",
+    "title": "SATIN",
+    "category": "네트워크",
+    "group": "이동통신기술5G(IMT-2020)/6G",
+    "importance": "중",
+    "summary": "위성-상공-지상 통합형 무선 네트워크(새틴; Satelite-Aerial-Terrestrial Integrated Network, SATIN)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-198",
+    "title": "유선통신기술",
+    "category": "네트워크",
+    "group": "유선통신기술",
+    "importance": "하",
+    "summary": "통신선로를 이용하여, 정보를 전달하는 방식 흐름제어, 혼잡제어, TCP 오류제어: ARQ(Automatic Repeat reQuest), DNS(Domain Name Server)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-199",
+    "title": "PoE",
+    "category": "네트워크",
+    "group": "유선통신기술",
+    "importance": "하",
+    "summary": "PoE (Power over Ethernet)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-200",
+    "title": "Network Neutrality",
+    "category": "네트워크",
+    "group": "망중립성",
+    "importance": "상",
+    "summary": "모든 네트워크 사업자와 정부는 인터넷을 통해 발생하는 데이터 트래픽을 동등하게 취급하고, 대상, 내용, 유형, 사용자, 플랫폼, 전송방식에 따른 어떠한 차별도 없이 동등하게 처리해",
+    "mnemonic": "비상접"
+  },
+  {
+    "id": "net-201",
+    "title": "NMS",
+    "category": "네트워크",
+    "group": "NMS",
+    "importance": "중",
+    "summary": "가. NMS (Network Management System)정의 - 이 기종, 분산 환경의 Network를 관리하기 위해 SNMP를 이용, Network상의 전 장비들의 중앙 감",
+    "mnemonic": "구장성보계"
+  },
+  {
+    "id": "net-202",
+    "title": "CDN",
+    "category": "네트워크",
+    "group": "CDN",
+    "importance": "상",
+    "summary": "가. CDN (Contents Delivery Network) 정의 - 콘텐츠를 중간경로를 최소화, 효율적으로 전달하기 위해 ISP의 여러 노드(웹캐시)를 가진 네트워크에 데이터를",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-203",
+    "title": "ADN",
+    "category": "네트워크",
+    "group": "CDN",
+    "importance": "하",
+    "summary": "가. ADN (Application Delivery Network) 정의 - 동적 페이지(ASP, JSP), 컨텐츠를 캐시 하지 않고 인터넷 미들 마일에 위치한 서버들 간에 컨텐츠",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-204",
+    "title": "라우팅 프로토콜",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "상",
+    "summary": "패킷을 목적지에 전달하기 위해서 경로정보를 어느 노드에 전달 하는가를 각 노드가 판단할 수 있게 하고 그 정보에 따라서 패킷을 전달하게 하는 기능 RIP vs OSPF(Open S",
+    "mnemonic": "경로당은 내외부에 테이블이 있다."
+  },
+  {
+    "id": "net-205",
+    "title": "Routed Protocol",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "하",
+    "summary": "전송 통로 역할 개념, TCP/IP 등의 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-206",
+    "title": "라우팅 경로고정",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "중",
+    "summary": "Static Routing Protocol, Dynamic Routing Protocol",
+    "mnemonic": "경로"
+  },
+  {
+    "id": "net-207",
+    "title": "내/외부 라우팅",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "중",
+    "summary": "Interior Gateway Protocol(IGP), Exterior Gateway",
+    "mnemonic": "내외부에"
+  },
+  {
+    "id": "net-208",
+    "title": "RIP",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "중",
+    "summary": "Routing Information Procotol",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-209",
+    "title": "Distance Vector Algorithm",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "상",
+    "summary": "Distance Vector Algorithm의 정의 라우터가 목적지까지 가는 경로를 SPF(Shortest Path First) 알고리즘을 통해 모든 라우팅 테이블에 기록 (모든",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-210",
+    "title": "Link State Algorithm",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "상",
+    "summary": "- 라우터가 목적지까지 가는 경로를 OSPF 알고리즘을 통해 모든 라우팅 테이블에 기록해 두는 방식으로, 각 링크 비용 합에 기반하여, 최소의 경로 비용을 계산하는 라우팅 알고리즘",
+    "mnemonic": "링크는 오이"
+  },
+  {
+    "id": "net-211",
+    "title": "Open Shortest Path First",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "중",
+    "summary": "Distance Vector Routing 기반 메트릭 (metric) 정보를 인접 라우터와 주기적 으로 교환하여 라우팅 테이블을 갱신하 고, Dijkstra의 SPF(Shorte",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-212",
+    "title": "가상 라우팅 및 포워딩",
+    "category": "네트워크",
+    "group": "라우팅 프로토콜",
+    "importance": "하",
+    "summary": "하나의 물리적 라우터 내에 다수의 독립적인 라우팅 테이블을 생성 및 관리하여 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-213",
+    "title": "Home PNA",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "1998년 3COM,AMD,루슨트,HP 등 11개 업체가 주도하여 기존의 전화선을 이용한 홈 네트워크에 대한 표준화 단체",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-214",
+    "title": "IEEE 1394",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "애플사와 TI社가 공동제창하고 1995년 표준화된 직렬버스 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-215",
+    "title": "PLC",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "Power Line Communication, 전력선 통신",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-216",
+    "title": "HAVi",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "Philips, Sony, Sun collaborate to bridge HAVi™",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-217",
+    "title": "JINI",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "Java intelligent network infra-structure",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-218",
+    "title": "UPnP",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "유니버설 플러그 앤 플레이 (UPnP)는 UPnP 포럼이 공표한 컴퓨터 네트워크 프로토콜의 집합",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-219",
+    "title": "OSGi",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "하",
+    "summary": "OSGi(Open Service Gateway initiative) Alliance는 1999년에 썬 마이크로시스템즈, IBM, 에릭손 등이 구성한 개방형 표준 단체",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-220",
+    "title": "Z-Wave",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "중",
+    "summary": "무선 통신 프로토콜로 가정 자동화과 센서 네트워크와 같은 저전력과 저대역폭을 요구하는 장치를 위해 설계, 920MHz 대역 사용, 전송량: 9.6~40Kbps",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-221",
+    "title": "스마트 홈(Smart Home)",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "중",
+    "summary": "자동화(조명이나 온도 제어, 문과 창 제어, 보안 시스템 등)를 지원하는 개인 주택",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-222",
+    "title": "매터(matter)",
+    "category": "네트워크",
+    "group": "스마트 홈",
+    "importance": "출제예상",
+    "summary": "스마트홈 기기들의 제조사 의존적인 한계를 극복하기 위해 만든, 모든 디바이스 호환이 가능한 인터넷 프로토콜(IP) 기반 스마트홈 연동 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-223",
+    "title": "스마트 팜(Smart Farm)",
+    "category": "네트워크",
+    "group": "스마트 팜",
+    "importance": "중",
+    "summary": "농사 기술에 정보통신기술(ICT)을 접목하여 만들어진 지능화된 농장.",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-224",
+    "title": "VoIP",
+    "category": "네트워크",
+    "group": "VoIP",
+    "importance": "하",
+    "summary": "Voice Over Internet Protocol",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-225",
+    "title": "H.323",
+    "category": "네트워크",
+    "group": "VoIP",
+    "importance": "하",
+    "summary": "ITU-T의 영상회의 시스템 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-226",
+    "title": "SIP",
+    "category": "네트워크",
+    "group": "VoIP",
+    "importance": "중",
+    "summary": "인터넷 기반의 멀티미디어 서비스, VoIP 서비스를 위해 세션의 생성, 수정, 종료를 위한 Signaling Protocol. UAC, UAS, Proxy, Registrar 기존",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-227",
+    "title": "MCU",
+    "category": "네트워크",
+    "group": "VoIP",
+    "importance": "하",
+    "summary": "MP(Multipoint Processor), MC(Multipoint Controller), 코덱",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-228",
+    "title": "IMS",
+    "category": "네트워크",
+    "group": "VoIP",
+    "importance": "중",
+    "summary": "IMS(IP Multimedia Subsystem) 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-229",
+    "title": "mVoIP",
+    "category": "네트워크",
+    "group": "VoIP",
+    "importance": "하",
+    "summary": "Mobile + VoIP",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-230",
+    "title": "SON",
+    "category": "네트워크",
+    "group": "표준 동향(각종 표준)",
+    "importance": "중",
+    "summary": "SON(Self Organization Network)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-231",
+    "title": "MVNO",
+    "category": "네트워크",
+    "group": "표준 동향(각종 표준)",
+    "importance": "중",
+    "summary": "이동 통신망이 없는 사업자가 기존 이동통신망 네트워크의 일부를 빌려서 특수 부가 서비스를 추가하여 자사 브랜드로 서비스를 제공하는 사업자 MVNO2.0 MNO, 단순/부분/완전 M",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-232",
+    "title": "ONVIF",
+    "category": "네트워크",
+    "group": "표준 동향(각종 표준)",
+    "importance": "하",
+    "summary": "Open Network Video Interface Forum",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-233",
+    "title": "SDN",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "상",
+    "summary": "SDN(Software Defined Networking) 개방형 API인 OpenFlow를 통해 네트워크의 트래픽 전달 동작을 프로그래밍하듯 SW기반으로 컨트롤러에서 제어하는 네",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-234",
+    "title": "OpenFlow",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "상",
+    "summary": "네트워크 장비의 표준 인터페이스 기술, OpenFlow의 정의 SDN 환경에서 제어 계층과 데이터 계층 간의 통신 프로토콜로 컨트롤러와 하드웨어 장비 간의 통신내용을 정의하는 SD",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-235",
+    "title": "SD-WAN",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "중",
+    "summary": "데이터 센터, 기업, 대학 등의 근거리 네트워크(LAN)에서 데이터 Plane과 제어Plane을 분리하는 소프트웨어 정의 네트워킹(SDN)을 통신망 사업자와 서비스 제공자 등의 W",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-236",
+    "title": "SDE",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "중",
+    "summary": "SDE(Software Defined Everything)정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-237",
+    "title": "NFV",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "상",
+    "summary": "네트워크 기능 가상화",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-238",
+    "title": "OPNFV",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "중",
+    "summary": "네트워크 가상화 관련 글로벌 프로젝트 그룹,",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-239",
+    "title": "SDDC",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "상",
+    "summary": "서버, 스토리지, 네트워킹, 보안, 관리 솔루션 등 데이터센터의 모든 구성요소를 가상화하고, 이러한 가상화 환경의 인프라를 소프트웨어로 자동 통제 및 관리하는 개념의 데이터센터. ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-240",
+    "title": "오버레이 네트워크",
+    "category": "네트워크",
+    "group": "SDx",
+    "importance": "중",
+    "summary": "기존 네트워크 위에 별도의 노드들과 논리적 링크등을 구성하여 이루어진 가상의 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-241",
+    "title": "무선충전기술",
+    "category": "네트워크",
+    "group": "무선충전기술",
+    "importance": "중",
+    "summary": "무선충전 기술은 전력선을 사용하지 않고 무선으로 전기 에너지를 자기장 혹은 전자기파 형태로 변형하여 전송하여 디바이스의 2차 전지(배터리)를 충전하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-242",
+    "title": "자기 유도방식",
+    "category": "네트워크",
+    "group": "무선충전기술",
+    "importance": "중",
+    "summary": "Inductive coupling, 1, 2차 코일간 전자기 유도현상을 이용, 송신 전력을 수신 전력으로 전달하는 것으로, WPC(Wireless Power Consortium) ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-243",
+    "title": "자기 공명방식",
+    "category": "네트워크",
+    "group": "무선충전기술",
+    "importance": "중",
+    "summary": "자기공진 (Magnetic resonance) 방식은 같은 공진 주파수를 갖는 송신과 수신 두 개의 coil 사이의 공명 현상을 이용, 전력을 송/수신하는 것으로 최근 A4WP(A",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-244",
+    "title": "전자기파",
+    "category": "네트워크",
+    "group": "무선충전기술",
+    "importance": "하",
+    "summary": "마이크로파 이용",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-245",
+    "title": "FEC",
+    "category": "네트워크",
+    "group": "오류 제어 (OSI 2계층)",
+    "importance": "상",
+    "summary": "Forward Error Correction, 전진오류수정, 무선에서 많이 사용",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-246",
+    "title": "BEC",
+    "category": "네트워크",
+    "group": "오류 제어 (OSI 2계층)",
+    "importance": "상",
+    "summary": "Backward Error Correction, 후진오류수정 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-247",
+    "title": "순환중복검사",
+    "category": "네트워크",
+    "group": "오류 제어 (OSI 2계층)",
+    "importance": "중",
+    "summary": "CRC(CRC : Cyclic Redundancy Check)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-248",
+    "title": "자동재송요구",
+    "category": "네트워크",
+    "group": "오류 제어 (OSI 2계층)",
+    "importance": "중",
+    "summary": "ARQ(Automatic Repeat reQuest)의 정의",
+    "mnemonic": "138_관리_4"
+  },
+  {
+    "id": "net-249",
+    "title": "Checksum",
+    "category": "네트워크",
+    "group": "오류 제어 (OSI 2계층)",
+    "importance": "중",
+    "summary": "검사합 맞는 거 찾기",
+    "mnemonic": "감리사 2015 76번"
+  },
+  {
+    "id": "net-250",
+    "title": "해밍코드(Hamming Code)",
+    "category": "네트워크",
+    "group": "오류 제어 (OSI 2계층)",
+    "importance": "중",
+    "summary": "패리티비트(Parity bit)에 의한 오류검출 및 1비트까지는 오류 정정까지 가능한 코드. 2개 이하의 오류의 존재를 발견 2(P승) >= M + P + 1 (M은 메시지어, P",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-251",
+    "title": "네트워크 중심성 평가",
+    "category": "네트워크",
+    "group": "네트워크 중심성 평가",
+    "importance": "하",
+    "summary": "이종망간 네트워크 연결, 확장 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-252",
+    "title": "연결중심성(Degree Centrality)",
+    "category": "네트워크",
+    "group": "네트워크 중심성 평가",
+    "importance": "하",
+    "summary": "연결중심성: 네트워크 안에서 특정노드에 인접하여 연계되어 있는 상이한 노드간의 수",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-253",
+    "title": "인접중심성(Closeness Centrality)",
+    "category": "네트워크",
+    "group": "네트워크 중심성 평가",
+    "importance": "하",
+    "summary": "매개중심성: 네트워크 안에서 특정노드가 다른 상이한 두 노드 사이에 위치하는 정도",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-254",
+    "title": "근접중심성",
+    "category": "네트워크",
+    "group": "네트워크 중심성 평가",
+    "importance": "하",
+    "summary": "하나의 노드와 연결된 모든 노드간의 거리의 합",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-255",
+    "title": "사노프의 법칙 (Sarnoff’s law)",
+    "category": "네트워크",
+    "group": "법칙",
+    "importance": "중",
+    "summary": "방송과 매스미디어로 대표되는 전통매체에서는 네트워크의 가치는 시청자(viewer)의 수에 비례한다. 예를 들어, 1명이 본다면 네트워크 가치는 1이 되고, 100명이 보면 100이",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-256",
+    "title": "리드의 법칙(Reed’s law)",
+    "category": "네트워크",
+    "group": "법칙",
+    "importance": "중",
+    "summary": "리드의 법칙에서는 ‘그룹‘의 개념이 중요하다. 리드의 법칙에 의하면 네트워크의 가치는 노드의 수가 n이라고 했을 때 2의 n승에 비례한다. (예 - 이메일발송, 한번으로 한 그룹에",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-257",
+    "title": "TCP Socket",
+    "category": "네트워크",
+    "group": "Socket 통신방식",
+    "importance": "하",
+    "summary": "4계층(Transport), Segment",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-258",
+    "title": "UDP Socket",
+    "category": "네트워크",
+    "group": "Socket 통신방식",
+    "importance": "하",
+    "summary": "UDP 소켓 함수(Function)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-259",
+    "title": "Web Socket 기술",
+    "category": "네트워크",
+    "group": "Socket 통신방식",
+    "importance": "하",
+    "summary": "7계층(Application), Message",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-260",
+    "title": "3차원 비디오 부호화(Video Encoding) 기술",
+    "category": "네트워크",
+    "group": "방송기술",
+    "importance": "하",
+    "summary": "3차원 비디오 부호화(Video Encoding) 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-261",
+    "title": "BWS MOT Carousel",
+    "category": "네트워크",
+    "group": "방송기술",
+    "importance": "하",
+    "summary": "BWS(Broadcasting Web service)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-262",
+    "title": "CCTV",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "스트리밍 방식으로 전송",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-263",
+    "title": "Tor(토르) 네트워크",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "온라인 상에서 트래픽 분석이나, IP주소 추적을 불가능하게 하여 프라이버시와 보안을 보장하는 익명성 네트워크(anonymous communication).",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-264",
+    "title": "NDN(Named Data Networking)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "NDN(Named Data Networking)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-265",
+    "title": "MCN",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "다중채널네트워크(Multi-Channel Network)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-266",
+    "title": "IX정산소",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "망간 상호접속 이슈 해법 IX(Internet eXchange)정산소",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-267",
+    "title": "802.15.3e",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "초고속 근접통신 표준기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-268",
+    "title": "Li-Fi",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "발광다이오드(LED) 조명, 가시광선(빛)이용, 와이파이 100배속도, 3~4년 상용화, IEEE802.15.7 규격",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-269",
+    "title": "리버스 프록시",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "리버스 프록시(Reverse Proxy)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-270",
+    "title": "ASN.1",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "ASN.1(Abstract Syntax Notation One)",
+    "mnemonic": "138_컴시응_3"
+  },
+  {
+    "id": "net-271",
+    "title": "BER(Basic Encoding Rules)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "ASN.1 데이터 표현을 위한 기본 인코딩 규칙으로, 동일한 데이터에 대해 여러 인코딩 표현을 허용함",
+    "mnemonic": "138_컴시응_4"
+  },
+  {
+    "id": "net-272",
+    "title": "DER(Distinguished Encoding Rules)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "BER의 부분집합으로, 유일하고 정규화된 인코딩 표현만 허용하는 규칙",
+    "mnemonic": "138_컴시응_5"
+  },
+  {
+    "id": "net-273",
+    "title": "CER(Canonical Encoding Rules)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "BER의 부분집합으로, 대용량 데이터의 정규화된 스트리밍 처리를 목적으로 정의된 인코딩 규칙",
+    "mnemonic": "138_컴시응_6"
+  },
+  {
+    "id": "net-274",
+    "title": "X.509인증서",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "DER 인코딩을 강제함으로써 서명 검증의 일관성을 확보하고 ASN.1 파서 기반 공격을 예방하는 인증서",
+    "mnemonic": "138_컴시응_7"
+  },
+  {
+    "id": "net-275",
+    "title": "노플러그인(Noplugin) 기술",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "액티브X, 플러그인, EXE등 별도 설치형 소프트웨어가 필요 없는 인터넷 무설치, 웹기술.액티브X 필요없는 기술 공인인증서, Active X, 디지털 원패스, 생체 인증",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-276",
+    "title": "대역확산(Spread Spectrum)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "직접확산방식(Direct Sequence Spread Spectrum)과 주파수 도약방식(Frequency Hopping Spread Spectrum), 그리고 시간 도약방식(Ti",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-277",
+    "title": "네트워크 운영 체제(NOS)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "네트워크 운영 체제(NOS)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-278",
+    "title": "P2P",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "- P2P는 다수 단말간 통신 아키텍처로 각 단말들이 서로 동등한 입장에서 통신을 하는 네트워크 - 블록체인 핵심 기술로 Hybrid P2P와 Pure P2P 통한 탈중개성, 확장",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-279",
+    "title": "모바일 FSO(Free Space Optics) 통신",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "모바일상에서 광을 이용한 통신 시스템 짐벌기반, 미러기반, 액정기반",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-280",
+    "title": "NaaS(Network as a Service)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "구독 기반 또는 유연한 소비 모델에서 사용되는 네트워크 인프라 하드웨어, 소프트웨어, 서비스, 관리 및 라이선스 구성 요소 유형 : On-Promise, Cloud, Hybird ",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-281",
+    "title": "머신러닝 기반의 SDN(Software Defined Networking)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "네트워크 자원을 보다 효율적으로 관리하고 최적화하기 위해 트래픽 또는 조직 내의 제어 및 운영과 관련된 데이터를 학습하여 지능적으로 네트워크 자원을 관리하는 기술 SDN, AI P",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-282",
+    "title": "IBN(Intent-Based Networking)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "중",
+    "summary": "의도 기반 네트워킹의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-283",
+    "title": "디지털 계위(Digital Hierarchy)",
+    "category": "네트워크",
+    "group": "디지털 계위(Digital Hierarchy)",
+    "importance": "하",
+    "summary": "디지털 통신 시스템에서 데이터 전송 속도와 용량을 계층적으로 구분한 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-284",
+    "title": "PDH(Plesiochronous Digital Hierarchy)",
+    "category": "네트워크",
+    "group": "디지털 계위(Digital Hierarchy)",
+    "importance": "하",
+    "summary": "각각의 디지털 다중화장치들이 자체 발진기 클럭을 사용하여, DS-n 급 신호들을 만들어가는 준동기식 다중화 전송 기반 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-285",
+    "title": "SDH(Synchronous Digital Hierarchy)",
+    "category": "네트워크",
+    "group": "디지털 계위(Digital Hierarchy)",
+    "importance": "하",
+    "summary": "동기식 전송 시스템으로, 모든 네트워크 요소가 동일한 클럭으로 동기화되어 데이터를 전송",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-286",
+    "title": "SONET(Synchronous Optical NETwork)",
+    "category": "네트워크",
+    "group": "디지털 계위(Digital Hierarchy)",
+    "importance": "하",
+    "summary": "동기식 전송 시스템으로, 모든 네트워크 요소가 동일한 클럭으로 동기화되어 데이터를 전송 (북미표준을 기반으로 만들어진 국제표준)",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-287",
+    "title": "NWDAF(Network Data Analytics Function)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "네트워크 운영 중 발생하는 다양한 정보를 수집해 AI 모델을 만들고, 이 모델을 기반으로 네트워크를 실시간으로 제어 기능을 수행하는 3GPP에서 정의한 표준 기술이며 네트워크 장비",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-288",
+    "title": "메시 네트워크(Mesh Network)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인프라가 존재하지 않는 상태에서 각 단말기 상호간의 라우팅으로 데이터 송수신 등 통신기능을 수행할 수 있는 자율적이고 독립적인 N/W",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-289",
+    "title": "앰비언트 IoT(Ambient Internet of Things)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "전파, 빛, 열 에너지와 같이 주변 환경에서 하베스팅 가능한 다양한 에너지원을 통해 전원을 공급받아 작동하는 방식의 새로운 종류의 사물인터넷 디바이스",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-290",
+    "title": "디지털 트윈 네트워크 (Digital Twin",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "네트워크 운영관리를 최적화하기 위해 데이터, 모델 및 인터페이스 기반 네트워크를 실시간 매칭, 분석, 진단, 에뮬레이션 및 제어하는 양방향 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-291",
+    "title": "SRv6(Segment Routing over IPv6)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "IPv6 주소공간을 활용하여 네트워크 경로를 효율적으로 제어하며, MPLS 없이 네이티브 IPv6 환경에서 트래픽 엔지니어링, 서비스 체이닝, 네트워크 자동화 등을 지원하는 라우팅",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-292",
+    "title": "SSE(Server Sent Event)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "서버가 클라이언트에 HTTP 기반으로 실시간 데이터를 지속 전송하는 비동기 단방향 통신 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-293",
+    "title": "MODBUS",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "SCADA시스템에서 RTU, PLC 간 제어 및 상태 정보 등의 통신을 위하여 시리얼과 TCP에서 구현이 가능한 산업용 통신 응용 계층 메시징 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-294",
+    "title": "멀티미디어 스트리밍 프로토콜",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "멀티미디어 데이터를 네트워크로 실시간·순차 전송하여 다운로드 완료 전에도 재생 가능하게 하는 통신 규약",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-295",
+    "title": "AI/ML 프레임워크",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI/ML 기능 인터페이스 절차를 정의하고 이들 사이의 관계를 공식화 하기 위해 3GPP 에서",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-296",
+    "title": "위성직접통신",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "지상이동통신 휴대폰이 위성과 직접 통신하는 기술로, 지상 네트워크와 별도로 위성망을 통해 문자, 음성, 데이터 통신이 가능한 차세대 통신 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-297",
+    "title": "울트라이더넷(Ultra Ethernet)",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 및 HPC 환경에서의 고속, 저지연 데이터 처리를 위해 RDMA, UET, 혼잡 제어 기술을 활용",
+    "mnemonic": ""
+  },
+  {
+    "id": "net-298",
+    "title": "자율 최적화",
+    "category": "네트워크",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인공지능(AI)이 네트워크 설계 단계부터 내재화된 AI-Native Network 구조를 통해, 사람이 개입하지 않아도 네트워크 스스로 상태를 분석하고 최적의 성능을 유지하는 최적",
+    "mnemonic": "138_관리_4"
   }
 ]
