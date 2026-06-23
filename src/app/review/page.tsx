@@ -26,9 +26,19 @@ const STATUS_STYLE: Record<string, string> = {
   done: "bg-emerald-100 text-emerald-700",
 };
 
+const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
+const IMP_STYLE: Record<string, string> = {
+  상: "bg-red-100 text-red-700",
+  중: "bg-amber-100 text-amber-700",
+  하: "bg-slate-100 text-slate-500",
+  출제예상: "bg-violet-100 text-violet-700",
+};
+const IMP_FILTERS = ["전체", "상", "중", "하", "출제예상"];
+
 export default function ReviewPage() {
   const [state, setState] = useState<Record<string, ReviewItem>>({});
   const [ready, setReady] = useState(false);
+  const [impFilter, setImpFilter] = useState("전체");
 
   useEffect(() => {
     setState(loadReview());
@@ -132,8 +142,36 @@ export default function ReviewPage() {
         </div>
       </div>
 
+      <div className="mb-4 flex flex-wrap gap-2">
+        {IMP_FILTERS.map((f) => {
+          const count =
+            f === "전체"
+              ? topics.length
+              : topics.filter((t) => t.importance === f).length;
+          return (
+            <button
+              key={f}
+              onClick={() => setImpFilter(f)}
+              className={`rounded-full px-3 py-1 text-xs font-medium transition ${
+                impFilter === f
+                  ? "bg-brand-600 text-white"
+                  : "border border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+              }`}
+            >
+              {f} {count}
+            </button>
+          );
+        })}
+      </div>
+
       <div className="space-y-3">
-        {topics.map((t) => {
+        {topics
+          .filter((t) => impFilter === "전체" || t.importance === impFilter)
+          .sort(
+            (a, b) =>
+              (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9),
+          )
+          .map((t) => {
           const item: ReviewItem = ready ? getItem(state, t.id) : getItem({}, t.id);
           const showDue = item.rounds > 0 && item.status !== "done";
           const dleft = daysUntilDue(item);
@@ -149,7 +187,14 @@ export default function ReviewPage() {
                   >
                     {STATUS_LABEL[item.status]}
                   </span>
-                  <span className="text-xs text-slate-400">{t.category}</span>
+                  {t.importance && (
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${IMP_STYLE[t.importance] || "bg-slate-100 text-slate-500"}`}
+                    >
+                      {t.importance}
+                    </span>
+                  )}
+                  <span className="text-xs text-slate-400">{t.group || t.category}</span>
                 </div>
                 <h3 className="mt-1 font-semibold text-slate-900">{t.title}</h3>
                 <p className="truncate text-sm text-slate-500">{t.summary}</p>

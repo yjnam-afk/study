@@ -1,158 +1,1793 @@
 [
   {
-    "id": "msa",
-    "title": "마이크로서비스 아키텍처(MSA)",
-    "category": "소프트웨어공학",
-    "summary": "애플리케이션을 독립적으로 배포 가능한 작은 서비스들의 집합으로 구성하는 아키텍처."
+    "id": "gj-1",
+    "title": "ITSM",
+    "category": "경영전략",
+    "group": "ITSM",
+    "importance": "상",
+    "summary": "고객과의 SLA(Service Level Agreement) 수준에 맞는 품질 유지 위한 프로세스, 조직, 자원, 기술의 종합적 관리 위한 IT 서비스 관리 기법",
+    "mnemonic": "인조기프"
   },
   {
-    "id": "k8s",
-    "title": "쿠버네티스(Kubernetes)",
-    "category": "클라우드/인프라",
-    "summary": "컨테이너화된 애플리케이션의 배포·확장·운영을 자동화하는 오케스트레이션 플랫폼."
+    "id": "gj-2",
+    "title": "IT Outsourcing",
+    "category": "경영전략",
+    "group": "ITSM",
+    "importance": "중",
+    "summary": "기업의 Value Chain 상의 활동 중 경쟁우위가 있는 일부 활동만 내부 수행, 비전략적 부분을 해당분야 전문가로부터 조달(Procurement)하는 정보기술 위탁서비스",
+    "mnemonic": "사조업 협이계"
   },
   {
-    "id": "cap",
-    "title": "CAP 이론",
-    "category": "데이터베이스",
-    "summary": "분산 시스템은 일관성(C)·가용성(A)·분할내성(P) 중 동시에 둘까지만 보장할 수 있다는 이론."
+    "id": "gj-3",
+    "title": "SoW",
+    "category": "경영전략",
+    "group": "ITSM",
+    "importance": "중",
+    "summary": "업무정의서, 서비스 요청에 대한 정의서, 작업명세서",
+    "mnemonic": "업책서"
   },
   {
-    "id": "zero-trust",
-    "title": "제로 트러스트(Zero Trust) 보안",
-    "category": "정보보안",
-    "summary": "‘절대 신뢰하지 않고 항상 검증한다’는 원칙으로 모든 접근을 검증하는 보안 모델."
+    "id": "gj-4",
+    "title": "SLA(협약서)",
+    "category": "경영전략",
+    "group": "ITSM",
+    "importance": "상",
+    "summary": "서비스 계약자와 서비스 업체간에 서비스 수준을 정한 협약서/계약서, 정량적 측정 지표로 산정",
+    "mnemonic": "기소카메오메보"
   },
   {
-    "id": "blockchain",
-    "title": "블록체인(Blockchain)",
-    "category": "신기술",
-    "summary": "분산 노드에 거래 기록을 블록으로 연결·저장하여 위변조를 방지하는 분산원장 기술."
+    "id": "gj-5",
+    "title": "SLM",
+    "category": "경영전략",
+    "group": "ITSM",
+    "importance": "상",
+    "summary": "서비스 수준 협약서에 대한 협약의 성과, 측정/평가 및 향후 개선 방안을 모색하기 위한 관리 체계",
+    "mnemonic": "카스(에)오 플로(리)엔"
   },
   {
-    "id": "transformer",
-    "title": "트랜스포머(Transformer)와 LLM",
-    "category": "인공지능",
-    "summary": "셀프 어텐션 기반 신경망 구조로, 대규모 언어모델(LLM)의 기반이 되는 아키텍처."
+    "id": "gj-6",
+    "title": "SLO",
+    "category": "경영전략",
+    "group": "ITSM",
+    "importance": "중",
+    "summary": "시스템 가용성에서 SLO:",
+    "mnemonic": ""
   },
   {
-    "id": "normalization",
-    "title": "데이터베이스 정규화",
-    "category": "데이터베이스",
-    "summary": "데이터 중복과 이상현상을 제거하기 위해 테이블을 분해하는 설계 기법(1NF~BCNF)."
+    "id": "gj-7",
+    "title": "Data Mining",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "상",
+    "summary": "대량의 데이터에 고급 통계 분석과 모델링 기법을 적용하여 데이터 간의 패턴과 관계를 도출, 의사결정에 활용할 수 있는 의미 있는 정보를 발견하는 과정",
+    "mnemonic": "AS 분데특신의"
   },
   {
-    "id": "devsecops",
-    "title": "DevSecOps",
-    "category": "소프트웨어공학",
-    "summary": "개발·운영 파이프라인 전반에 보안을 통합하여 자동화하는 개발 문화·방법론."
+    "id": "gj-8",
+    "title": "CRISP-DM",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "출제예상",
+    "summary": "다양한 산업 분야에서 적용이 가능한 데이터 분석 프로세스를 위해 4 개 또는 6 개의 레벨로 구성하여 표준화시킨 계층적 데이터 분석 방법론",
+    "mnemonic": "비데준 모평전"
   },
   {
-    "id": "cicd",
-    "title": "CI/CD 파이프라인",
-    "category": "소프트웨어공학",
-    "summary": "빌드·테스트·배포를 자동화하여 통합과 배포 주기를 단축하는 지속적 통합·배포 기법."
+    "id": "gj-9",
+    "title": "프로세스 마이닝",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "중",
+    "summary": "다양한 정보시스템(ERP, BPM, SCM등)에 저장된 정보시스템 로그를 분석하여 업무수행 결과에 대한 여러가지 정보 및 지식을 추출해 내는 것을 목적으로 하는 활동 및 방법론",
+    "mnemonic": "프성전현"
   },
   {
-    "id": "design-pattern",
-    "title": "디자인 패턴(GoF)",
-    "category": "소프트웨어공학",
-    "summary": "객체지향 설계에서 반복되는 문제를 해결하는 23가지 검증된 설계 템플릿(생성·구조·행위)."
+    "id": "gj-10",
+    "title": "Web Mining",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "중",
+    "summary": "웹 문서 수집 트렌드 분석 및 개인의 행동패턴 분석 -> 시장분석 및 고객 맞춤 서비스 제공",
+    "mnemonic": "구내사"
   },
   {
-    "id": "rest-api",
-    "title": "RESTful API",
-    "category": "소프트웨어공학",
-    "summary": "자원을 URI로 식별하고 HTTP 메서드로 상태를 주고받는 무상태 아키텍처 스타일."
+    "id": "gj-11",
+    "title": "오피니언 마이닝",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "중",
+    "summary": "SNS 대량 리뷰로 사용자가 원하는 정보를 분석해 유의미한 정보를 지능적으로 유추해내는 Mining 기술",
+    "mnemonic": ""
   },
   {
-    "id": "container",
-    "title": "컨테이너와 Docker",
-    "category": "클라우드/인프라",
-    "summary": "OS 커널을 공유해 애플리케이션을 격리·패키징하는 경량 가상화 기술."
+    "id": "gj-12",
+    "title": "Text Mining",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "중",
+    "summary": "구조화되지 않은 대규모의 텍스트 집단으로부터 자동적으로 정보를 추출함으로써 이전에 알려지지 않았던 새로운 정보를 발견하는 정보기술",
+    "mnemonic": ""
   },
   {
-    "id": "cloud-service-model",
-    "title": "클라우드 서비스 모델(IaaS·PaaS·SaaS)",
-    "category": "클라우드/인프라",
-    "summary": "인프라·플랫폼·소프트웨어를 책임 범위에 따라 서비스로 제공하는 클라우드 제공 모델."
+    "id": "gj-13",
+    "title": "신경망분석",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "상",
+    "summary": "인간두뇌 세포를 모방한 개념으로 뉴런들의 상호작용하고 경험을 통해 배우는 생물학적 활동을 반복적인 학습과정으로 모형화하는 분석 기법",
+    "mnemonic": ""
   },
   {
-    "id": "raid",
-    "title": "RAID",
-    "category": "클라우드/인프라",
-    "summary": "여러 디스크를 묶어 성능·가용성을 높이는 저장 기술(0·1·5·6·10 등 레벨)."
+    "id": "gj-14",
+    "title": "SEMMA",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "출제예상",
+    "summary": "SAS기업에서 개발한 데이터 마이닝 표준 가이드로써 Sample, Explore, Modify, Model, Assess의 단계로 구성되어 있으며 각 5단계 프로세스를 순차적으로 ",
+    "mnemonic": "샘탐수모평"
   },
   {
-    "id": "oauth-oidc",
-    "title": "OAuth 2.0 / OIDC",
-    "category": "정보보안",
-    "summary": "제3자 앱에 자원 접근을 위임(OAuth)하고 인증 신원까지 표준화(OIDC)하는 인가·인증 프로토콜."
+    "id": "gj-15",
+    "title": "시스템 다이내믹스",
+    "category": "경영전략",
+    "group": "(Data) Mining 총론",
+    "importance": "중",
+    "summary": "동태적, 순환적 인과관계의 시각으로 현상 이해하고 설명하거나 컴퓨터상에서 실험해 보는 방법론이자 현상을 바라보는 프레임워크",
+    "mnemonic": ""
   },
   {
-    "id": "owasp-top10",
-    "title": "OWASP Top 10",
-    "category": "정보보안",
-    "summary": "웹 애플리케이션에서 가장 빈번하고 위험한 보안 취약점 10가지 목록."
+    "id": "gj-16",
+    "title": "BCM",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "상",
+    "summary": "기업이 위기상황에서도 핵심업무와 기능을 계획된 수준으로 지속할 수 있도록 전사적인 정책 및 절차를 수립하여 이행하는 관리시스템",
+    "mnemonic": "계분전설모유"
   },
   {
-    "id": "isms-p",
-    "title": "ISMS-P 인증",
-    "category": "정보보안",
-    "summary": "정보보호 및 개인정보보호 관리체계를 통합 점검·인증하는 국내 제도."
+    "id": "gj-17",
+    "title": "ISO 22301",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "재해 , 재난 테러 등 예기치 못한 위기로 업무 중단 위험이 발생한 경우 최단 시간 내 핵 심업무를 복구 하기 위한 최상의 시행안과 목표를 설정하기 위한 국제표준",
+    "mnemonic": "조리계지운성개"
   },
   {
-    "id": "tcpip",
-    "title": "TCP/IP 프로토콜",
-    "category": "네트워크",
-    "summary": "인터넷 통신의 기반이 되는 4계층 프로토콜 스택(응용·전송·인터넷·네트워크접근)."
+    "id": "gj-18",
+    "title": "DRS",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "정보시스템에 대한 비상 대비체계 유지와 각 업무 조직 별 비상사태에 대비한 복구계획 수립을 통한 업무 연속성을 유지할 수 있는 체제",
+    "mnemonic": "미핫웜콜"
   },
   {
-    "id": "sdn",
-    "title": "SDN / NFV",
-    "category": "네트워크",
-    "summary": "제어부와 데이터부를 분리해 네트워크를 소프트웨어로 제어·가상화하는 기술."
+    "id": "gj-19",
+    "title": "RTO",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "[RTO]",
+    "mnemonic": ""
   },
   {
-    "id": "big-data",
-    "title": "빅데이터(Hadoop·Spark)",
-    "category": "데이터/AI",
-    "summary": "대용량 데이터를 분산 저장·처리하는 생태계(HDFS·MapReduce·인메모리 Spark)."
+    "id": "gj-20",
+    "title": "RPO",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "Recovery Point Objective, 재해 발생시 데이터 손실을 수용할 수 있는 시간",
+    "mnemonic": ""
   },
   {
-    "id": "data-warehouse",
-    "title": "데이터 웨어하우스·레이크",
-    "category": "데이터/AI",
-    "summary": "분석을 위해 정형 데이터를 통합(DW)하거나 원시 데이터를 그대로 저장(Lake)하는 저장소."
+    "id": "gj-21",
+    "title": "RSO",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "Recovery Scope Objective , 재해복구 범위목표",
+    "mnemonic": ""
   },
   {
-    "id": "machine-learning",
-    "title": "머신러닝(지도·비지도·강화)",
-    "category": "인공지능",
-    "summary": "데이터로부터 규칙을 학습하는 방법론으로 지도·비지도·강화학습으로 구분."
+    "id": "gj-22",
+    "title": "RCO",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "[RCO]",
+    "mnemonic": ""
   },
   {
-    "id": "rag",
-    "title": "RAG(검색증강생성)",
-    "category": "인공지능",
-    "summary": "외부 지식 검색 결과를 LLM 프롬프트에 결합해 환각을 줄이고 최신성을 높이는 기법."
+    "id": "gj-23",
+    "title": "DRP",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "재해발생시 정해진 절차대로 혼선 없이 업무복구 순서에 따라 체계적으로 복구할 수 있도록 수립한 절차와 문서의 집합",
+    "mnemonic": ""
   },
   {
-    "id": "agile-scrum",
-    "title": "애자일·스크럼",
-    "category": "관리",
-    "summary": "짧은 반복(스프린트)으로 점진적 가치를 전달하는 경량 개발 방법론."
+    "id": "gj-24",
+    "title": "BIA",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "기업의 각 비즈니스 업무에 대하여 긴급 재난사태 , 비상상황 발생시의 영향도를 평가하고 복구우선순위 및 복구 목표를 정의하는 분석활동",
+    "mnemonic": "핵중요"
   },
   {
-    "id": "ea",
-    "title": "EA(전사적 아키텍처)",
-    "category": "관리",
-    "summary": "비즈니스·데이터·애플리케이션·기술 관점에서 조직 IT를 정렬·관리하는 청사진."
+    "id": "gj-25",
+    "title": "DRaaS(Disaster Recovery as a Service)",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "클라우드 서비스를 이용하여 데이터, 어플리케이션 등을 백업한 후 재해와 정전, 사이버공격, 기타 비즈니스 장애가 발생하는 경우 데이터 복제, 호스팅, 복구 등을 제공하는 서비스",
+    "mnemonic": ""
   },
   {
-    "id": "digital-twin",
-    "title": "디지털 트윈",
-    "category": "신기술",
-    "summary": "물리 객체를 가상 공간에 동기화해 시뮬레이션·예측·최적화하는 기술."
+    "id": "gj-26",
+    "title": "다중지역 A-A DRS",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "다중지역 동시 가동방식 (Multi-Region Active-Active) 재해복구시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-27",
+    "title": "팬데믹 BCP",
+    "category": "경영전략",
+    "group": "BCP/BCM",
+    "importance": "중",
+    "summary": "천재지변 등 여타 일반적 요인과 달리 전염병 확산 영향과 범위를 예측하기 어렵고 전염기간도 2~3개월의 전염단계가 수차례 확산되는 특징을 고려한 BCP / 범유행",
+    "mnemonic": "관주경심"
+  },
+  {
+    "id": "gj-28",
+    "title": "5 Forces",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "조직의 외부환경을 기존 경쟁사를 중심으로 잠재적 경쟁자, 대체재, 공급업자, 구매자 관점에서 분석하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-29",
+    "title": "7S Model",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "조직이 잘 수행하기 위해 일곱 가지 요소가 서로 조화되고 상호 보강되어야 한다는 이론에 근거한 내부 상황 변화 평가, 모니터링하는 조직 분석 도구",
+    "mnemonic": "전시구2스공능"
+  },
+  {
+    "id": "gj-30",
+    "title": "SWOT분석",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "기업내부의 강점과 약점을 분석하고 외부환경의 기회요인과 위협요인을 파악하여 전략적 대안을 도출하는 분석 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-31",
+    "title": "4C / 3C",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "경쟁사와 비교 및 차별화 포인트를 분석함으로써 자사가 경쟁력 우위를 차지할 수 있는 전략을 분석하는 기법",
+    "mnemonic": "고환경기"
+  },
+  {
+    "id": "gj-32",
+    "title": "MECE",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "문제를 종합했을 때 상호 중복과 누락없이 정보를 수집하고 분류하기 위한 전략적 분석 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-33",
+    "title": "LISS",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "각각의 부분 집합에 속한 중요한 의미를 명확히 하는 전략적 사고 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-34",
+    "title": "TRIZ 이론",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "문제에서 모순을 찾아내고, 이를 극복함으로써 이상적인 해결안을 추구하는 창의적 문제해결 방법론",
+    "mnemonic": "모근지난"
+  },
+  {
+    "id": "gj-35",
+    "title": "BABOK",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "국제적 표준으로 통용되는 비즈니스 분석의 지식체게, 분석 참조 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-36",
+    "title": "Decision Tree",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "관찰된 데이터로부터 분할기준 속성을 판별하고, 속성에 따라 트리 형태로 모델링한 분류, 예측모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-37",
+    "title": "CPND",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "[정보통신기술(ICT) 생태계]",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-38",
+    "title": "마케팅 STP",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "고객의 요구 및 특징을 바탕으로 수요층에 대한 시장 세분화, 단편화를 통해 잠재시장 마케팅 전략 분류(Segmentation), Targeting, Positioning * 대응전",
+    "mnemonic": "SeTePo"
+  },
+  {
+    "id": "gj-39",
+    "title": "PEST 분석",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "정치(P), 경제(E), 사회문화(S), 기술(T)의 거시환경 요인 및 영향도를 통해 전략수립의 기초를 제공하는 분석기법",
+    "mnemonic": "정경사기"
+  },
+  {
+    "id": "gj-40",
+    "title": "AHP",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "하",
+    "summary": "AHP(Analytic Hierarchy Process)/1970년대/_x000B_분석적 계층 프로세스",
+    "mnemonic": "계쌍우일최"
+  },
+  {
+    "id": "gj-41",
+    "title": "IT 컨설팅",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "정보시스템을 분석, 평가하고 전략적인 중장기 정보화 추진계획과 함께 정보 시스템의 효율적 운영을 위한 시스템 설계, 개발, 유지보수 등의 정보화 방법에 대한 자문 및 해결 방안을 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-42",
+    "title": "카노모델",
+    "category": "경영전략",
+    "group": "전략수립도구",
+    "importance": "중",
+    "summary": "어떤 상품을 기획할 때 각각 구성요소에 대해 소비자가 기대하는 것과 충족 시키는 것 사이의 주관적 관계, 요구사항 만족, 불만족에 의한 객관적 관계를 설정해 분석하는 기법 (고객의",
+    "mnemonic": "무역매일당"
+  },
+  {
+    "id": "gj-43",
+    "title": "ITIL / ITIL 3.0",
+    "category": "경영전략",
+    "group": "ITIL 3.0, V4.0",
+    "importance": "중",
+    "summary": "비즈니스의 영속성을 위해 안정적인 서비스지원(Service Support)과, 서비스 이행 및 제공(Service Delivery), ICT infrastructure 관리의 “B",
+    "mnemonic": "전설전운지"
+  },
+  {
+    "id": "gj-44",
+    "title": "ITIL 4.0",
+    "category": "경영전략",
+    "group": "ITIL 3.0, V4.0",
+    "importance": "상",
+    "summary": "비즈니스 영속성을 위해 안정적인 서비스지원과 서비스 이행 및 제공, ICT 인프라 관리의 Best Pratice 모음집",
+    "mnemonic": "정파조가"
+  },
+  {
+    "id": "gj-45",
+    "title": "Service Support",
+    "category": "경영전략",
+    "group": "ITIL 3.0, V4.0",
+    "importance": "중",
+    "summary": "*구성[서데인피(프) 씨알씨]",
+    "mnemonic": "쓰데이피씨알씨"
+  },
+  {
+    "id": "gj-46",
+    "title": "Incident Management",
+    "category": "경영전략",
+    "group": "ITIL 3.0, V4.0",
+    "importance": "중",
+    "summary": "The first goal of the incident management process is to restore a normal service operation as quickl",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-47",
+    "title": "Service Delivery",
+    "category": "경영전략",
+    "group": "ITIL 3.0, V4.0",
+    "importance": "중",
+    "summary": "AC2FSL",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-48",
+    "title": "CMDB",
+    "category": "경영전략",
+    "group": "ITIL 3.0, V4.0",
+    "importance": "중",
+    "summary": "IT 서비스 관리와 CI(형상항목) 정보를 중앙 집중식으로 실시간/통합 관리하는 데이터베이스",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-49",
+    "title": "CRM",
+    "category": "경영전략",
+    "group": "기간시스템",
+    "importance": "중",
+    "summary": "eCRM, mCRM, gCRM",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-50",
+    "title": "VRM",
+    "category": "경영전략",
+    "group": "기간시스템",
+    "importance": "하",
+    "summary": "벤더 관계 관리, Vendor Relationship Management",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-51",
+    "title": "ERP",
+    "category": "경영전략",
+    "group": "기간시스템",
+    "importance": "중",
+    "summary": "ERP II, XRP",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-52",
+    "title": "BI, 2.0, 3.0",
+    "category": "경영전략",
+    "group": "의사판단시스템",
+    "importance": "하",
+    "summary": "Mobile BI, BI 3.0",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-53",
+    "title": "OLAP",
+    "category": "경영전략",
+    "group": "의사판단시스템",
+    "importance": "중",
+    "summary": "최종사용자가 다차원 정보에 직접 접근하여 대화식으로 정보를 분석하고 의사결정에 활용하는 과정 및 도구",
+    "mnemonic": "ROLAP, MOLAP, HOLAP, OnLine Analytical Processing"
+  },
+  {
+    "id": "gj-54",
+    "title": "HOLAP",
+    "category": "경영전략",
+    "group": "의사판단시스템",
+    "importance": "중",
+    "summary": "Hybrid online analytical (HOLAP) is the combination of relational online analytical processing (ROLA",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-55",
+    "title": "RTE",
+    "category": "경영전략",
+    "group": "실시간 기업",
+    "importance": "하",
+    "summary": "실시간 기업 전략 수립(Real Time Enterprise)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-56",
+    "title": "Cyclone Model",
+    "category": "경영전략",
+    "group": "실시간 기업",
+    "importance": "하",
+    "summary": "지휘(lead),관리(Manage),운영(Operate) 측면 10가지 사이클",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-57",
+    "title": "EDA",
+    "category": "경영전략",
+    "group": "실시간 기업",
+    "importance": "하",
+    "summary": "Event Driven Architecture",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-58",
+    "title": "ISP",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "상",
+    "summary": "I. 조직의 목표 달성을 위한 계획 수립, ISP의 개요",
+    "mnemonic": "환현정목통 - 경법정 업정벤차이 수 개업정데보 이총효"
+  },
+  {
+    "id": "gj-59",
+    "title": "ISMP",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "상",
+    "summary": "특정 SW 개발 사업에 대한 상세 분석과 제안요청서(RFP)를 마련하기 위해 기능점수 도출 가능수준까지 요건을 기술하여 구축전략 및 이행 전략 수립하는 활동",
+    "mnemonic": "착수요정이"
+  },
+  {
+    "id": "gj-60",
+    "title": "BCG Matrix",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "하",
+    "summary": "BostonConsultingGroup Matrix 성장-점유율 매트릭스",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-61",
+    "title": "Value Chain",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "중",
+    "summary": "1. 기업 부가가치 생성 과정의 분석, Value Chain(가치사슬)의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-62",
+    "title": "Value Chain Model",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "중",
+    "summary": "기업이 고객에게 가치를 제공함에 있어서 부가가치 창출에 직/간접적으로 관련된 주활동, 지원활동 ,기능 ,프로세스를 연계하여 분석하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-63",
+    "title": "캐즘이론",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "중",
+    "summary": "기술수용 주기상에 존재하는 여러 개의 균열과 단절 n 중 초기 시장과 주류 시장 사이에 놓여있는 대단절을 의미",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-64",
+    "title": "데스밸리",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "하",
+    "summary": "악마의 강(자금 지원 X, R&D 실패) > 죽음의 계곡(R&D 성공 -> 자금부족 시제품 개발 실패) > 다윈의 바다(시장여건, 마케팅 역량 부족 -> 사업 실패)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-65",
+    "title": "악마의 강",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "하",
+    "summary": "악마의 강, 죽음의 계곡, 다윈의 바다",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-66",
+    "title": "추격자전략, 선도자전략",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "하",
+    "summary": "병행자(Parallel Mover) 전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-67",
+    "title": "Inside-out 전략",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "하",
+    "summary": "Inside-Out 전략 : 기업이 기술을 외부로 내보내서 자사의 기존 비즈니스 모델이 아닌 다른 경로의 상업화를 모색하는 개방형 혁신의 전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-68",
+    "title": "Outside-in 전략",
+    "category": "경영전략",
+    "group": "전략 계획",
+    "importance": "하",
+    "summary": "Outside-In 전략: - 외부 및 환경을 통해, 자사 사업을 성공하기 위한 관점 및 전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-69",
+    "title": "EA Framework",
+    "category": "경영전략",
+    "group": "EA/ITA",
+    "importance": "중",
+    "summary": "I. 업무와 정보화를 체계적으로 추진하기 위한 종합설계도, EA 의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-70",
+    "title": "EAMS",
+    "category": "경영전략",
+    "group": "EA/ITA",
+    "importance": "하",
+    "summary": "산출물, 저장관리 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-71",
+    "title": "RM(참조 모델, Reference Model)",
+    "category": "경영전략",
+    "group": "EA/ITA",
+    "importance": "하",
+    "summary": "I. 아키텍처 구성요소 식별, RM(참조모델)의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-72",
+    "title": "IRM",
+    "category": "경영전략",
+    "group": "EA/ITA",
+    "importance": "하",
+    "summary": "정보자원관리, Information Resource Management 연계",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-73",
+    "title": "SEM",
+    "category": "경영전략",
+    "group": "SEM(전략적 경영 관리)",
+    "importance": "하",
+    "summary": "SEM(Strategic Enterprise Management)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-74",
+    "title": "VBM",
+    "category": "경영전략",
+    "group": "SEM(전략적 경영 관리)",
+    "importance": "하",
+    "summary": "Value Based Management",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-75",
+    "title": "BSC",
+    "category": "경영전략",
+    "group": "SEM(전략적 경영 관리)",
+    "importance": "중",
+    "summary": "- 재무적 관점과 고객, 내부프로세스, 학습과 성장측면의 3가지 비재무적 관점을 측정 가능한 핵심성과지 표(KPI)로 전환하여 관리함으로써, 균형적인 경영성과관리를 실행하도록 도와",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-76",
+    "title": "IT BSC",
+    "category": "경영전략",
+    "group": "SEM(전략적 경영 관리)",
+    "importance": "중",
+    "summary": "- IT 투자 성과평가에 BSC 개념을 도입하여 기업 공헌도 및 사용자, 운영프로세스, 미래지향적 관점에서 성과 측정을 통해 IT가 기업 전략적 목표달성에 기여할 수 있는 성과관리",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-77",
+    "title": "OKR(Objective, Key Result)",
+    "category": "경영전략",
+    "group": "SEM(전략적 경영 관리)",
+    "importance": "중",
+    "summary": "목표(Objective)와 핵심결과(Key Result)의 약자로 조직 목표 설정 및 결과 추적 위한 조직성과 평가 측정 프레임워크 MBO(Management by Objectiv",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-78",
+    "title": "BPM",
+    "category": "경영전략",
+    "group": "프로세스 관리",
+    "importance": "중",
+    "summary": "프로세스관리, 통합화, 자동화, 최적화, 가시화, 통제력 제공",
+    "mnemonic": "가좌최통"
+  },
+  {
+    "id": "gj-79",
+    "title": "BPR",
+    "category": "경영전략",
+    "group": "프로세스 관리",
+    "importance": "하",
+    "summary": "Business Process Reengineering",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-80",
+    "title": "BAM",
+    "category": "경영전략",
+    "group": "프로세스 관리",
+    "importance": "하",
+    "summary": "Business Activity Monitoring",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-81",
+    "title": "BRE",
+    "category": "경영전략",
+    "group": "프로세스 관리",
+    "importance": "하",
+    "summary": "Business Rule Engine",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-82",
+    "title": "Open Innovation",
+    "category": "경영전략",
+    "group": "프로세스 혁신",
+    "importance": "중",
+    "summary": "개방형 혁신, 내부에서 외부로, 외부에서 내부로 비용 감소, 효율성, 부가가치 창출 극대화 경영 패러다임",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-83",
+    "title": "Crowd Sourcing",
+    "category": "경영전략",
+    "group": "프로세스 혁신",
+    "importance": "중",
+    "summary": "대중, 집단지성, 온라인 비즈니스, 롱테일 현상(Long Tail)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-84",
+    "title": "PDCA",
+    "category": "경영전략",
+    "group": "프로세스 혁신",
+    "importance": "중",
+    "summary": "I. 지속적인 프로세스 개선 기법, PDCA의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-85",
+    "title": "SCM",
+    "category": "경영전략",
+    "group": "기업간 물류/관계 관리",
+    "importance": "중",
+    "summary": "물품의 공급자에서부터 고객까지 거래와 관련된 정보, 자원, 자금 등의 흐름을 총체적인 관점에서 각 기업간의 인터페이스를 통합하고 관리하는 공급망 관리",
+    "mnemonic": "SCM 공격 문제"
+  },
+  {
+    "id": "gj-86",
+    "title": "MES(Manufacturing Execution System)",
+    "category": "경영전략",
+    "group": "기업간 물류/관계 관리",
+    "importance": "중",
+    "summary": "(정의) 생산 관리 시스템: 기업의 생산 현장에서 작업 일정, 작업 지시, 품질 관리, 작업 실적 집계 등 제반 활동을 지원하기 위한 생산 공정 관리 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-87",
+    "title": "POP(Point Of Production)",
+    "category": "경영전략",
+    "group": "기업간 물류/관계 관리",
+    "importance": "하",
+    "summary": "생산활동이 행하여 질 때 발생하는 정보를 그 시점에서 획득하고, 관리상 필요한 각종의 정보를 가능하여 제공하는 생산시점관리시스템.",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-88",
+    "title": "PRM",
+    "category": "경영전략",
+    "group": "기업간 물류/관계 관리",
+    "importance": "하",
+    "summary": "ERM 한 분야, 파트너(협력업체)와 관계 관리",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-89",
+    "title": "PLM",
+    "category": "경영전략",
+    "group": "생명주기관리",
+    "importance": "중",
+    "summary": "",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-90",
+    "title": "ALM",
+    "category": "경영전략",
+    "group": "생명주기관리",
+    "importance": "하",
+    "summary": "1. 소프트웨어 개발 프로세스 개선을 위한 ALM의 개요",
+    "mnemonic": "이개소빌"
+  },
+  {
+    "id": "gj-91",
+    "title": "ILM",
+    "category": "경영전략",
+    "group": "생명주기관리",
+    "importance": "하",
+    "summary": "Information Lifecycle Management",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-92",
+    "title": "EIP",
+    "category": "경영전략",
+    "group": "통합시스템",
+    "importance": "하",
+    "summary": "Enterprise Information Portal",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-93",
+    "title": "EIP",
+    "category": "경영전략",
+    "group": "통합시스템",
+    "importance": "하",
+    "summary": "나. EIP (Enterprise Integration Pattern)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-94",
+    "title": "EAI",
+    "category": "경영전략",
+    "group": "통합시스템",
+    "importance": "중",
+    "summary": "I. E-비지니스를 위한 기본 인프라, EAI의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-95",
+    "title": "DW",
+    "category": "경영전략",
+    "group": "통합시스템",
+    "importance": "중",
+    "summary": "주통시비",
+    "mnemonic": "주통시비"
+  },
+  {
+    "id": "gj-96",
+    "title": "RFI / RFP / Proposal / RFQ",
+    "category": "경영전략",
+    "group": "(IT) Outsourcing",
+    "importance": "중",
+    "summary": "I. RFI 개념- 발주자가 RFP 작성 전 프로젝트에 필요한 자료를 공급업체에 요청하는 정보 요청서",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-97",
+    "title": "eSCM",
+    "category": "경영전략",
+    "group": "(IT) Outsourcing",
+    "importance": "하",
+    "summary": "아웃소싱 전체 절차에 관한 93개 Best Practice를 체계화하여 업무 개선 지침으로 적용하고 제공업자의 능력수준을 평가 할 수 있도록 만든 모델",
+    "mnemonic": "조인기사지"
+  },
+  {
+    "id": "gj-98",
+    "title": "ISO 20000",
+    "category": "경영전략",
+    "group": "(IT) Outsourcing",
+    "importance": "중",
+    "summary": "서통해관리(릴)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-99",
+    "title": "MSP",
+    "category": "경영전략",
+    "group": "(IT) Outsourcing",
+    "importance": "하",
+    "summary": "I. 기업의 전산 자원의 토탈 아웃소싱 서비스, MSP의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-100",
+    "title": "MRO",
+    "category": "경영전략",
+    "group": "(IT) Outsourcing",
+    "importance": "하",
+    "summary": "Maintenance, Repair, Operation",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-101",
+    "title": "SSC",
+    "category": "경영전략",
+    "group": "(IT) Outsourcing",
+    "importance": "하",
+    "summary": "Shared Service Center",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-102",
+    "title": "IT-Governance",
+    "category": "경영전략",
+    "group": "IT-Governance",
+    "importance": "상",
+    "summary": "조프리 전가위자성 기업의 전략과 목표에 부합되도록 IT와 관련된 자원와 프로세스를 통제 관리하는 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-103",
+    "title": "COBIT5",
+    "category": "경영전략",
+    "group": "IT-Governance",
+    "importance": "중",
+    "summary": "Control OBjectives for Information and related Technology 5",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-104",
+    "title": "COBIT 2019",
+    "category": "경영전략",
+    "group": "IT-Governance",
+    "importance": "중",
+    "summary": "프레임워크, 설계지침, 이행지침",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-105",
+    "title": "Val IT",
+    "category": "경영전략",
+    "group": "IT-Governance",
+    "importance": "하",
+    "summary": "Value IT, GRC(Governance, Risk, Compliance)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-106",
+    "title": "ISO/IEC 38500",
+    "category": "경영전략",
+    "group": "IT-Governance",
+    "importance": "중",
+    "summary": "IT거버넌스의 국제표준(ISO/IEC 38500:2015)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-107",
+    "title": "OSS Governance",
+    "category": "경영전략",
+    "group": "IT-Governance",
+    "importance": "중",
+    "summary": "공개SW를 통한 거버넌스 체계 구축",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-108",
+    "title": "ICO(가상화폐공개)",
+    "category": "경영전략",
+    "group": "IPO/ICO",
+    "importance": "하",
+    "summary": "ICO(Initial Coin Offering): 암호화폐 코인 발행하는 자금 확보 방식/사업 주체가 직접 판매",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-109",
+    "title": "암호화폐 거래소(Cryptocurrency exchange)",
+    "category": "경영전략",
+    "group": "IPO/ICO",
+    "importance": "하",
+    "summary": "암호화폐 거래소(Cryptocurrency exchange)는 암호화폐와 화폐를 환전해주는 거래소.",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-110",
+    "title": "Crowd Funding(크라우드",
+    "category": "경영전략",
+    "group": "IPO/ICO",
+    "importance": "하",
+    "summary": "군중(crowd)으로부터 자금조달(funding)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-111",
+    "title": "IPO(Initial Public Offering)",
+    "category": "경영전략",
+    "group": "IPO/ICO",
+    "importance": "하",
+    "summary": "비상장기업이 유가증권시장이나 코스닥시장에 상장하기 위해 그 주식을 법적인 절차와 방법에 따라 주식을 불특정 다수의 투자자들에게 팔고 재무내용 공시 제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-112",
+    "title": "IT-Compliance",
+    "category": "경영전략",
+    "group": "IT-Compliance",
+    "importance": "상",
+    "summary": "기업의 투명성, 리스크 관리를 위하여 정부나 관련 기관이 제시한 규제, 법안에 부합되도록 시스템을 정비하는 IT 관점 규제에 대응하여 정비하는 활동",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-113",
+    "title": "IFRS",
+    "category": "경영전략",
+    "group": "IT-Compliance",
+    "importance": "하",
+    "summary": "International Financial Reporting Standards",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-114",
+    "title": "규제 샌드박스",
+    "category": "경영전략",
+    "group": "범정부 IT 전략/ 정책",
+    "importance": "중",
+    "summary": "신검실법 규일임실 관련 법령의 허가 등 규제로 인해 사업 시행이 어려운 신기술•서비스를 대상으로, 일정 기간 동안 규제의 전부 또는 일부를 적용하지 않는 제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-115",
+    "title": "린 스타트업",
+    "category": "경영전략",
+    "group": "범정부 IT 전략/ 정책",
+    "importance": "하",
+    "summary": "[개념] 아이디어를 빠르게 최소기능제품으로 개발한 뒤 시장의 반응을 통해 다음 제품 개선에 반영하는 경영전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-116",
+    "title": "공공 데이터",
+    "category": "경영전략",
+    "group": "범정부 IT 전략/ 정책",
+    "importance": "중",
+    "summary": "Open Data, DATABASE 에서는 중요 토픽임",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-117",
+    "title": "디지털 컨버전스",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "중",
+    "summary": "융합 - 디지털서비스에서 다룸",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-118",
+    "title": "AI + 금융",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "상",
+    "summary": "AI(Artificial Intelligence) 기술발전에 따른 금융생태계 변화를 설명하시오.(117회 기출)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-119",
+    "title": "레그테크(RegTech)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "중",
+    "summary": "- 인공지능 등 IT신기술을 통해 규제관련 업무를 자동화하는데 초점을 두고, IT 기술을 활용하여 컴플라이언스 업무 등을 효율화 하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-120",
+    "title": "섭테크",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "중",
+    "summary": "섭테크(Suptech)'란 금융감독(Supervision)과 기술(Technology)의 합성어.",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-121",
+    "title": "리걸테크",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "중",
+    "summary": "리걸(법률)과 테크놀로지(기술)를 조합",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-122",
+    "title": "인슈어테크(InsurTech)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "하",
+    "summary": "보험+IT",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-123",
+    "title": "서비타이제이션(Servitization)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "출제예상",
+    "summary": "기존 제품 판매에서 제품 서비스 판매로의 전환을 통해 기업의 경쟁력 향상을 위한 혁신 전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-124",
+    "title": "빅블러(Big Blur)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "출제예상",
+    "summary": "기존 영역과 경계가 무너지고, 경게가 허물어지는 현상",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-125",
+    "title": "디지털 디바이드(Digital Divide)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "출제예상",
+    "summary": "지식과 정보에 대한 소외계층, 지역간 정보격차 불균형 현상",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-126",
+    "title": "디지털 리터러시(Digital Literacy)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "출제예상",
+    "summary": "컴퓨터를 통한 정보의 이해 능력과 소양",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-127",
+    "title": "디지털 포용(Digital Inclusion)",
+    "category": "경영전략",
+    "group": "디지털 컨버전스",
+    "importance": "출제예상",
+    "summary": "디지털 기술과 서비스의 혜택을 소외와 배제 없이 함께 누리는 것",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-128",
+    "title": "SW 플랫폼",
+    "category": "경영전략",
+    "group": "플랫폼(유형)",
+    "importance": "중",
+    "summary": "Ⅰ. 소프트웨어의 개발/유통/소비/실행 환경을 통합 제공하는, SW 플랫폼의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-129",
+    "title": "비즈니스 플랫폼",
+    "category": "경영전략",
+    "group": "플랫폼(유형)",
+    "importance": "중",
+    "summary": "I. 기업의 핵심 가치 창출 토대, 비즈니스 플랫폼의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-130",
+    "title": "서비스 플랫폼",
+    "category": "경영전략",
+    "group": "플랫폼(유형)",
+    "importance": "중",
+    "summary": "소셜네트워크 서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-131",
+    "title": "다면 플랫폼",
+    "category": "경영전략",
+    "group": "플랫폼(유형)",
+    "importance": "중",
+    "summary": "다면 플랫폼(Multi-sided Platform)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-132",
+    "title": "아이디어 플랫폼",
+    "category": "경영전략",
+    "group": "플랫폼(유형)",
+    "importance": "중",
+    "summary": "Idea Platform, 아이디어 연결하는 場 제공",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-133",
+    "title": "오픈 플랫폼",
+    "category": "경영전략",
+    "group": "플랫폼(유형)",
+    "importance": "상",
+    "summary": "I. 오픈 플랫폼(Open Platform)의 개념",
+    "mnemonic": "[개념] 오픈API로 제공하는 소프트웨어 플랫폼으로 서비스를 편리하게 개발할 수 있도록 지원하는 인프라"
+  },
+  {
+    "id": "gj-134",
+    "title": "표준특허, FRAND 특허",
+    "category": "경영전략",
+    "group": "특허",
+    "importance": "중",
+    "summary": "I. 공정한 경쟁을 위한, FRAND의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-135",
+    "title": "지식재산권",
+    "category": "경영전략",
+    "group": "특허",
+    "importance": "중",
+    "summary": "[지식재산권]산저신",
+    "mnemonic": "특실상디"
+  },
+  {
+    "id": "gj-136",
+    "title": "CSR(기업 사회적 책임, Corporate Social Responsibility)",
+    "category": "경영전략",
+    "group": "CSR",
+    "importance": "중",
+    "summary": "Corporate Social Responsibility: 기업 활동에 영향을 받거나 영향을 주는 직간접적 이해 관계자에 대해 법적, 경제적, 윤리적 책임을 감당하는 경영 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-137",
+    "title": "ISO 26000",
+    "category": "경영전략",
+    "group": "CSR",
+    "importance": "하",
+    "summary": "CSR을 표준화한 ISO26000의 국제규격",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-138",
+    "title": "ISO 31000",
+    "category": "경영전략",
+    "group": "CSR",
+    "importance": "하",
+    "summary": "기업의 모든 비즈니스 활동에서 발생하는 모든 종류의 리스크를 관리하기 위한 가이드라인을 제공하는 국제 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-139",
+    "title": "ISO 42001",
+    "category": "경영전략",
+    "group": "CSR",
+    "importance": "출제예상",
+    "summary": "인공지능(AI) 경영시스템을 위한 최초의 국제 표준.",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-140",
+    "title": "ESG 경영",
+    "category": "경영전략",
+    "group": "CSR",
+    "importance": "상",
+    "summary": "환경 (Environment), 사회 (Social), 지배구조 ( 를 뜻하는 말로 기업경영에서 과거 에는 재무적 성과만을 평가하던 것을 벗어나 친환경 , 사회적 책임 , 지배구조",
+    "mnemonic": "[개념] 환경(Environment), 사회(Social), 지배구조(Governance)의 약자로, 재무수치 이외에 기업의 사회적 책임과 지속가능성을 평가하는 기업 평가 지표"
+  },
+  {
+    "id": "gj-141",
+    "title": "EU-기업 지속가능성 실사 지침",
+    "category": "경영전략",
+    "group": "CSR",
+    "importance": "중",
+    "summary": "기업이 공급망 전반에서 환경적, 사회적 영향을 고려하여 지속 가능한 개발과 인권을 존중하는 방식으로 경 영 활동을 수행하도록 실사 의무화를 요구하는 EU의 규제",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-142",
+    "title": "IT 생산성 Paradox",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "하",
+    "summary": "정보기술 생산성 패러독스",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-143",
+    "title": "IT-ROI 투자 성과평가",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "중",
+    "summary": "투자 타당성 평가, 투자 효과성 평가, 지속적 관리 체계, IT투자성과, IT투자비용",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-144",
+    "title": "경제성 평가 기법",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "상",
+    "summary": "TCO, NPV, PP, 사전, 사후 평가 제도, Benefit Cost Ratio, IT-ROI",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-145",
+    "title": "전자정부 성과관리 지침",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "중",
+    "summary": "- 비용과 업무 관점 별 성과측정을 통해 정보시스템의 유지관리 유형을 분류하고 폐기검토 대상 정보시스템에 대한 유형 재분류를 통하여 상세 유형을 식별을 할 수 있음",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-146",
+    "title": "기술 가치 평가",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "중",
+    "summary": "[평가요소] - 기권시사",
+    "mnemonic": "기권시사"
+  },
+  {
+    "id": "gj-147",
+    "title": "TAM;Total Available Market)",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "하",
+    "summary": "기업, 벤처, 스타트업이 연구, 개발하는 Product, Service가 타게팅하는 대상 산업 분야를 100% 점유하였을 때 수익을 창출할 수 있을 것으로 예상되는 산업 전체 시장",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-148",
+    "title": "SAM;Serviceable Available Market",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "하",
+    "summary": "기업, 벤처, 스타트업의 Product, Service가 시장에 진입하였을 때 타 경쟁사 수준, 지리적, 환경적 제약 조건을 고려하여 사업 모델로 수익을 창출할 수 있을 것으로 예",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-149",
+    "title": "SOM;Serviceable Obtainable Market",
+    "category": "경영전략",
+    "group": "투자 평가 관리",
+    "importance": "하",
+    "summary": "기업, 벤처, 스타트업의 Product, Service가 시장에 최초 진입하여 가격 정책, 시장 확보 전략을 적용하여 단기간(0.5~2 년) 안에 수익을 창출할 수 있을 것으로 예",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-150",
+    "title": "ISO 9000",
+    "category": "경영전략",
+    "group": "품질경영",
+    "importance": "하",
+    "summary": "제품의 품질체계 기준",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-151",
+    "title": "6 Sigma",
+    "category": "경영전략",
+    "group": "품질경영",
+    "importance": "하",
+    "summary": "DMAIC, DMADV, DFSS",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-152",
+    "title": "Commerce",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "하",
+    "summary": "m-Commerce, t-Commerce, c-Commerce(Collaborative Commerce), G-Commerce (Game)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-153",
+    "title": "e-Marketplace",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "하",
+    "summary": "Escrow System, key Escrow, SW 임치제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-154",
+    "title": "매매 임치 제도",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "하",
+    "summary": "매매 임치제도(Escrow System), key Escrow, SW 임치제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-155",
+    "title": "소셜 커머스",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "하",
+    "summary": "간단 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-156",
+    "title": "온라인 광고비",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "하",
+    "summary": "CPC(Cost Per Click), 구매전환률(CVR Conversion Rate)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-157",
+    "title": "Programmatic Buying",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "하",
+    "summary": "프로그래매틱 바잉(Programmatic Buying)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-158",
+    "title": "O2O 서비스",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "중",
+    "summary": "쇼핑유형: 쇼루밍, 역소루밍, 옴니쇼핑, 모바일쇼핑",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-159",
+    "title": "O4O 서비스",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "중",
+    "summary": "O4O(Online for Offline)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-160",
+    "title": "엠비언트 커머스",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "중",
+    "summary": "센상추",
+    "mnemonic": "센상추"
+  },
+  {
+    "id": "gj-161",
+    "title": "데이터 커머스(Data Commerce)",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "중",
+    "summary": "데이터 분석 기술을 기반으로 소비자와 상품 데이터를 분석해 맞춤형 쇼핑 정보를 제공하는 커머스 (키워드) 빅데이터, 연관분석, 상관분석, 군집분석, 추천시스템",
+    "mnemonic": "센상추"
+  },
+  {
+    "id": "gj-162",
+    "title": "다크 패턴(Dark Pattern)/상술",
+    "category": "경영전략",
+    "group": "Commerce",
+    "importance": "중",
+    "summary": "소비를 유도하거나 약관 조항에 동의하도록 하는 등의 기만적이고 조작적인 사용자 인터페이스 디자인(User Interface Design) (키워드) 온라인 상술, UI, 편취형, ",
+    "mnemonic": "편오방압"
+  },
+  {
+    "id": "gj-163",
+    "title": "핀테크(FinTech)",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "중",
+    "summary": "금융+기술 융합, 컨버전스, 간편결제, 인터넷전문은행",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-164",
+    "title": "인터넷전문은행",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "중",
+    "summary": "필수인증 1개+ 선택인증 증",
+    "mnemonic": "-정의: 전자금융거래의 방법으로 업무를"
+  },
+  {
+    "id": "gj-165",
+    "title": "오픈 뱅킹",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "하",
+    "summary": "- Small License : 금융업의 인허가 단위를 세분화해 핀테크업체가 필요한 업무만 빠르고 쉽게 인허가를 받을 수 있도록 허용하는것",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-166",
+    "title": "테크핀(TechFin)",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "하",
+    "summary": "IT회사에서 제공하는 금융서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-167",
+    "title": "프롭테크",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "출제예상",
+    "summary": "부동산(Property)과 기술(Technology)의 합성어로, 2010년대 들어 유럽을 중심으로 모바일 채널과 빅데이터 분석, VR 등 하이테크 기술을 기반으로 등장한 부동산 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-168",
+    "title": "밀리테크(MiliTch)",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "출제예상",
+    "summary": "국방분야와 AI, IoT, 메타소재, 사이버 보안 등 IT기술과의 융합을 통한 군사력 강화 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-169",
+    "title": "에이블테크(AbleTech)",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "출제예상",
+    "summary": "의료용품과 보조기기를 넘어 인공지능, 모빌리티 등 IT기술과 결합하여 장애인의 불편을 덜어주는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-170",
+    "title": "딥테크(Deep Tech)",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "출제예상",
+    "summary": "(개념) 사회 전반에 복잡성, 그리고 혁신적인 영향을 미칠 수 있는 가능성을 갖고 있는 기술, 집약기술 + Tech",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-171",
+    "title": "기후테크(C-Tech)",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "출제예상",
+    "summary": "기후테크(C-Tech)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-172",
+    "title": "에듀테크",
+    "category": "경영전략",
+    "group": "Xtech / 핀테크(FinTech)",
+    "importance": "하",
+    "summary": "에듀테크는 교육(education)과 기술(technology)의 결합이다. 빅데이터, 인공지능(AI) 등 정보통신기술(ICT)을 활용한 차세대 교육",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-173",
+    "title": "공유경제(sharing economy)",
+    "category": "경영전략",
+    "group": "경제",
+    "importance": "출제예상",
+    "summary": "개인이 소유하고 있으나 활용하지 않는 물건 또는 지식, 경험, 시간 등의 유·무형 자원을 상호대여 하거나 교환함으로써 거래 참여자가 상호편익과 적정이윤을 얻는 경제활동 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-174",
+    "title": "구독경제(subscription economy)",
+    "category": "경영전략",
+    "group": "경제",
+    "importance": "출제예상",
+    "summary": "I. 무소유 사용시대, Subscription Economy 의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-175",
+    "title": "데이터 경제",
+    "category": "경영전략",
+    "group": "경제",
+    "importance": "중",
+    "summary": "데이터를 다루는 구성원들이 데이터 생성, 수집, 저장, 처리, 분배 등을 통해서 만들어 낸 데이터가 경제 활동의 중요한 생산요소로 사용되는 경제 구조 및 생태계(ecosystem)",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-176",
+    "title": "디지털 전환(DX)",
+    "category": "경영전략",
+    "group": "경제",
+    "importance": "상",
+    "summary": "디지털트랜스포메이션(Digital Transformation) 의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-177",
+    "title": "플랫폼 경제",
+    "category": "경영전략",
+    "group": "경제",
+    "importance": "중",
+    "summary": "서로 다른 이용자 그룹이 플랫폼이라는 물리적, 가상적 환경 바탕으로 거래나 상호작용 하여 경제 활동 촉진되는 경제",
+    "mnemonic": "[개념] 서로 다른 이용자 그룹이 플랫폼이라는 물리적, 가상적 혹은 제도적 환경을 바탕으로 거래나 상호작용을 함으로써 경제 및 사회 활동이 촉진되는 경제"
+  },
+  {
+    "id": "gj-178",
+    "title": "Design Thinking",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "I. 공감적 관찰 통한 창의적 문제해결, 디자인 씽킹(Design Thinking) 개요",
+    "mnemonic": "135대 FR 출제"
+  },
+  {
+    "id": "gj-179",
+    "title": "더블 다이아몬드 모델",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "[개념] 2004년 영국 디자인 카운슬에 제시한 모델로서, 서비스 디자인에 있어 문제를 해결하기 위해 디자이너들이 일하는 방식을 두 개의 다이아몬드 형태로 체계화한 방법론",
+    "mnemonic": "135대 FR 출제"
+  },
+  {
+    "id": "gj-180",
+    "title": "Process Thinking",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "하",
+    "summary": "과정적 사고: focused improvement 의미",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-181",
+    "title": "프로세스 맵",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "특정 업무(워크플로우)나 절차(프로세스)의 흐름을 시각적으로 표현한 다이어그램으로 시작부터 끝까지의 과정을 단계별로 정리하여 보여주는 도구",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-182",
+    "title": "Backcasting(백캐스팅)",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "하",
+    "summary": "불확실한 시장 상황에서 원하는 미래상을 설정하고, 바람직한 미래를 달성하기 위해 필요한 현재 시점의 문제해결에 초점을 둔 규범적인 기술 예측 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-183",
+    "title": "SMART",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "하",
+    "summary": "목표설정: Specific(구체적인)",
+    "mnemonic": "구측실결완"
+  },
+  {
+    "id": "gj-184",
+    "title": "기술경영(MOT)",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "하",
+    "summary": "Management Of Technology: 기술을 전략적으로 활용함으로써 새로운 사업 기회를 창출하고 혁신적 제품을 고안하는 등 공학과 경영학을 통합한 개념.",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-185",
+    "title": "제약 (조건) 이론(ToC)",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "I. 기업 전략의 제약 극복을 위한 TOC(Theory of Constraints)의 개요",
+    "mnemonic": "ToC(Theory of Constraints) : 기업 전략을 방해하는 제약사항을 발견하여 이를 제거하기 위한 기법으로 시스템의 목적 달성을 저해하는 제약조건(병목)을 찾아내 극복하기 위한 시스템 개선방법"
+  },
+  {
+    "id": "gj-186",
+    "title": "이슈탐색",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "Horizon Scanning",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-187",
+    "title": "4P",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "Produc, Price, Promotion, place",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-188",
+    "title": "제로 레이팅(Zero Rating)",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "특정 인터넷 서비스를 이용할 때 발생되는 데이터 이용 비용을 소비자가 아닌 사업자가 부담하는 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-189",
+    "title": "긱 이코노미",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "출제예상",
+    "summary": "I. 사람과 노동의 실시간 거래 긱 이코노미 (Gig) 의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-190",
+    "title": "고객여정지도",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "Ⅰ. 고객경험관리의 핵심도구, 고객여정지도(Customer Journey Map)의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-191",
+    "title": "리빙랩",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "1. 살아 있는 연구실. 리빙랩(Living Lab)의 개요",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-192",
+    "title": "SOS랩(Solution in Our Society Lab)",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "지역SW진흥기관 주관 실수요자 중심의 사회문제해결 R&D방식의 사회문제연구소 - 지역문제발굴, R&D 개발실증, R&D 결과물도출, 지역주민",
+    "mnemonic": "조개구실공사"
+  },
+  {
+    "id": "gj-193",
+    "title": "그로스 해킹 / 라이프 해킹 / 시빅 해킹",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "중",
+    "summary": "시빅해킹 - IT중심? 시민들이 신속하고 창의적으로 협업하여 공공의 문제를 해결하고 도시를 더 살기 좋은 곳으로 만들기 위한 운동",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-194",
+    "title": "디지털 카르텔",
+    "category": "경영전략",
+    "group": "기타",
+    "importance": "상",
+    "summary": "카르텔(가격담합)과 구분되는 점은 카르텔이 알고리즘을 이용하여 진행된다는 점.",
+    "mnemonic": "모병신자"
+  },
+  {
+    "id": "gj-195",
+    "title": "전자정부 / 발전지수",
+    "category": "경영전략",
+    "group": "지수",
+    "importance": "중",
+    "summary": "1. 정의: - UN 전자정부평가는 UN이 2002년부터 2년마다 193개 전체 회원국을 대상으로 실시",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-196",
+    "title": "DXP (Digital Experience Platform)",
+    "category": "경영전략",
+    "group": "기타용어",
+    "importance": "중",
+    "summary": "콘텐츠 관리, 데이터 분석, 개인화 기능을 통합하여 다양한 디지털 채널에서 일관된 사용자 경험을 제공하고, 기업이 고객과의 접점을 효율적으로 관리하고 맞춤형 서비스를 제공할 수 있",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-197",
+    "title": "인큐베이터(incubator)",
+    "category": "경영전략",
+    "group": "기타용어",
+    "importance": "중",
+    "summary": "기술과 아이디어를 갖고 있지만 사업화에 어려움을 겪는 창업자를 일정 기간 입주시켜 지원 및 관리 하여 기업이 산업 생태계에서 자생할 수 있도록 지원하는 기관",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-198",
+    "title": "엑셀레이터(Accelerator)",
+    "category": "경영전략",
+    "group": "기타용어",
+    "importance": "중",
+    "summary": "초기 창업자를 선별해 6 개월 내외 기간 동안 실전창업교육과 전문적인 멘토링을 지원해 창업 성공률을 높이고 성장을 가속화하는 민간 전문기관 또는 기업",
+    "mnemonic": ""
+  },
+  {
+    "id": "gj-199",
+    "title": "화이트 레이블 마케팅(White Label Marketing)",
+    "category": "경영전략",
+    "group": "기타용어",
+    "importance": "하",
+    "summary": "화이트 레이블 마케팅(White Label Marketing) 정의",
+    "mnemonic": ""
   }
 ]
