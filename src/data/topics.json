@@ -18250,5 +18250,1877 @@
     "importance": "하",
     "summary": "기업이나 국가 기관이 수집·보유한 단순한 형태의 원천 데이터를 경제적 가치를 지닌 무형의 '자산(Asset)'으로 인식하고, 이를 체계적으로 가공 및 관리하여 실제 비즈니스 모델이",
     "mnemonic": ""
+  },
+  {
+    "id": "ai-1",
+    "title": "인공지능",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "중",
+    "summary": "인간의 학습능력, 추론능력, 지각능력을 인공적으로 구현한 컴퓨터 프로그램/장치 인간 인지방식 자율학습 연구 '사례: 왓슨(IBM): 신뢰성 높은 빠른 답변, 구글 브레인 프로젝트:",
+    "mnemonic": "감독학습,무감독학습,강화학습"
+  },
+  {
+    "id": "ai-2",
+    "title": "인공지능 특이점(Technological singularity)",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "중",
+    "summary": "인간 인지방식 자율학습 연구 '사례: 왓슨(IBM): 신뢰성 높은 빠른 답변, 구글 브레인 프로젝트:",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-3",
+    "title": "모달리티(Modality)",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "모달리티(Modality)는 사전상 뜻이 ‘양식’ 또는 ‘양상’을 의미. 즉 어떤 형태로 나타나는 현상이나 그것을 받아들이는 방식.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-4",
+    "title": "멀티모달(Multi Modal)",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "멀티모달'은 시각, 청각을 비롯한 여러 인터페이스를 통해서 정보를 주고받는 것.",
+    "mnemonic": "오감, HCI"
+  },
+  {
+    "id": "ai-5",
+    "title": "멀티모달(Multi Modal) AI",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "중",
+    "summary": "- 인간이 사물의 양상을 다양한 감각기관으로 받아들이는 것처럼, 해당 역할이 가능한 여러 인터페이스를 통해 서로 다른 감각이나 유형의 정보를 컴퓨터가 학습하여, 사고할 수 있게 만",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-6",
+    "title": "전문가시스템",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "전문가시스템 기술, 구성요소, 추론",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-7",
+    "title": "추천시스템",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "추천시스템은 사용자의 과거 행동데이터 등을 바탕으로 사용자가 좋아할 만한 정보나 제품을 제시해 주는 시스템.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-8",
+    "title": "퍼지 이론(Fuzzy Theory)",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "퍼지 이론(Fuzzy Theory)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-9",
+    "title": "유전자 알고리즘",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "중",
+    "summary": "최적화 문제 해결을 위해 선택, 교배, 돌연변이 연산을 통한 알고리즘",
+    "mnemonic": "토랭룰"
+  },
+  {
+    "id": "ai-10",
+    "title": "인공지능 소프트웨어 개발 프로세스",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "인공지능 소프트웨어 개발 프로세스를 V모델 기준",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-11",
+    "title": "AGI(Artificial General Intelligence)",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "출제예상",
+    "summary": "다양한 분야에서 인간과 유사한 학습, 이해, 추론 능력을 지닌 지능의 형태를 지향 AI",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-12",
+    "title": "귀납적사고(Inductive Reasoning",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "보편성에서 구체성을 유도하는 추론 형식 · 추리 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-13",
+    "title": "튜링 테스트",
+    "category": "인공지능",
+    "group": "인공지능 개요",
+    "importance": "하",
+    "summary": "- 인간과 구별할 수 없을 정도의 지적행동을 표시 할 수 있는 기계의 능력을 확인하는 imitation game 테스트 - 인공지능의 선구자 앨런 튜링(Alan Turing)이 제",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-14",
+    "title": "기계 학습",
+    "category": "인공지능",
+    "group": "기계학습 분류",
+    "importance": "중",
+    "summary": "유전자 알고리즘, 인공지능, 신경망분석, NLQA",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-15",
+    "title": "지도 학습",
+    "category": "인공지능",
+    "group": "기계학습 분류",
+    "importance": "상",
+    "summary": "분류(classification), 은닉 마르코프 모델 (Hidden Markov model)",
+    "mnemonic": "클라큰신의다서베C"
+  },
+  {
+    "id": "ai-16",
+    "title": "비지도 학습",
+    "category": "인공지능",
+    "group": "기계학습 분류",
+    "importance": "상",
+    "summary": "입력값에 대한 목표치가 주어지지 않는 기계학습",
+    "mnemonic": "군민계자주독ED"
+  },
+  {
+    "id": "ai-17",
+    "title": "강화학습",
+    "category": "인공지능",
+    "group": "기계학습 분류",
+    "importance": "상",
+    "summary": "어떤 환경 안에서 정의된 에이전트가 현재의 상태를 인식하여, 선택 가능한 행동들 중",
+    "mnemonic": "예행환리상"
+  },
+  {
+    "id": "ai-18",
+    "title": "자기지도학습",
+    "category": "인공지능",
+    "group": "기계학습 분류",
+    "importance": "중",
+    "summary": "다량의 레이블이 없는 원데이터로부터 데이터 부분들의 관계를 통해 레이블을 자동으로",
+    "mnemonic": "테트투런"
+  },
+  {
+    "id": "ai-19",
+    "title": "머신러닝 파이프라인",
+    "category": "인공지능",
+    "group": "기계학습 분류",
+    "importance": "상",
+    "summary": "데이터 수집부터 전처리, 학습 모델 개발 및 배포, 예측까지 전과정을 순차적으로 처리하도록 설계된 머신러닝 아키텍처",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-20",
+    "title": "신경망(네트워크)",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "Deep Learning, Multi-layer Perceptron, RNN(LSTM)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-21",
+    "title": "퍼셉트론(Perceptron)",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "중",
+    "summary": "인간의 신경망과 유사하게 만든 입력층, 은닉층, 출력층으로 구성되어진 학습 능력을 가진 신경망 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-22",
+    "title": "딥러닝",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "상",
+    "summary": "딥 러닝은 인간의 뇌와 유사한 방식으로 기능하도록 구축된 알고리즘을 사용하는 기계 학습의 한 유형. 사람의 개입이 필요한 기존의 지도 학습(supervised learning)에 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-23",
+    "title": "파라미터(Parameter)",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "[하이퍼파라미터]학은배",
+    "mnemonic": "학은배"
+  },
+  {
+    "id": "ai-24",
+    "title": "활성화 함수",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "상",
+    "summary": "인간의 시냅스(Synapse)에 전달된 활동전위 신호가 최소의 자극값을 초과할 때 활성화되어 다음 뉴런으로 전달되는 과정을 구현한 함수 활성화함수는 신경망 학습 모델의 input ",
+    "mnemonic": "항경계시탄루(레)소"
+  },
+  {
+    "id": "ai-25",
+    "title": "원핫인코딩(One-Hot Encoding),",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "중",
+    "summary": "피처 값의 유형에 따라 새로운 피처를 추가해 고유 값에 해당하는 칼럼에만 1을 표시하고 나머지 칼럼에는 0을 표시하는 방법(a single high bit and all the o",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-26",
+    "title": "손실함수(Loss function)",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "신경망 학습에서 최적의 매개변수(가중치, 편향) 값을 탐색하기 위한 함수",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-27",
+    "title": "경사하강법",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "중",
+    "summary": "함수의 최소값의 위치를 찾기 위해 경사가 하강하는 방향을 관찰하고 그 쪽으로 조금씩",
+    "mnemonic": "확배미"
+  },
+  {
+    "id": "ai-28",
+    "title": "학습률(Learning Rate)",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "Loss를 줄이기 위한 경사하강법에서, 최적해까지 도달하기 위해 일정크기의 보폭(Step size)을 지정하는 대표적인 하이퍼 파라미터",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-29",
+    "title": "역전파",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "결과 데이터 오차 감소를 위해 각 가중치(w)들의 경사하강 관찰 후 오차 감소에",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-30",
+    "title": "기울기소실 문제",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "기울기소실 문제(Vanishing Gradient Problem)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-31",
+    "title": "과적합(overfitting)문제",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "과적합(overfitting)문제: 감독학습(Supervised Learning)에서 과거의 학습데이터에 대해서는 잘 예측하지만 새로 들어온 데이터에 대해서 성능이 떨어져서 일반화",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-32",
+    "title": "드랍아웃",
+    "category": "인공지능",
+    "group": "지도학습 - 신경망분석",
+    "importance": "출제예상",
+    "summary": "인공지능 역전파 수행시 과적합 문제를 해결하기 위해 무작위로 은닉 노드를 비활성 하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-33",
+    "title": "CNN",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "상",
+    "summary": "고차원 특징 추출 분류 위해 기존 신경망에 다계층의 합성곱 계층 추가하여 학습하는 딥러닝",
+    "mnemonic": "커피활패스 컨풀푸 드"
+  },
+  {
+    "id": "ai-34",
+    "title": "EfficientNet과 EfficientDet의 비교",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "중",
+    "summary": "[EfficientNet]",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-35",
+    "title": "RNN",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "상",
+    "summary": "신경망 연결에 순환구조를 넣은것, RNN(Recurrent Neural Networks)의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-36",
+    "title": "LSTM",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "출제예상",
+    "summary": "RNN의 장기의존성 문제 해결위해 Hidden Layer를 Input Gate, Output Gate,",
+    "mnemonic": "화살표 위오위오위오오 시시탄시탄 X+XX"
+  },
+  {
+    "id": "ai-37",
+    "title": "GRU(Gated Recurrent Unit)",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "중",
+    "summary": "LSTM의 은닉 상태를 업데이트하는 계산을 줄인 장단기 메모리 순환 신경망",
+    "mnemonic": "화살표 좌중우위, 시시탄 X+XX"
+  },
+  {
+    "id": "ai-38",
+    "title": "서포트 벡터 머신",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "상",
+    "summary": "기계 학습의 분야 중 하나로 패턴 인식, 자료 분석을 위한 지도 학습 모델이며, 주로 분류와 회귀 분석(하나나 그 이상의 독립변수의 종속변수에 대한 영향의 추정을 할 수 있는 통계",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-39",
+    "title": "KNN",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "상",
+    "summary": "KNN(K-Nearest Neighbor)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-40",
+    "title": "의사결정나무",
+    "category": "인공지능",
+    "group": "지도학습 - 분류(Classification)",
+    "importance": "중",
+    "summary": "엔트로피, 경사 하강법, 특정 조건을 기준으로 O/X로 나누어 분류/회귀를 진행하는 Tree구조의 분류(Classification)/회귀(Regression) 가능한 지도 학습 모",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-41",
+    "title": "SOM(Self Organizing Map)",
+    "category": "인공지능",
+    "group": "비지도학습 - Clustering",
+    "importance": "중",
+    "summary": "비지도 학습으로, 고차원 데이터의 토폴로지를 보존하여 저 차원 그리드에 매핑하는 데 사용되며, 주로 데이터 시각화와 군집화에 활용하는 알고리즘.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-42",
+    "title": "Clustering 분석",
+    "category": "인공지능",
+    "group": "비지도학습 - Clustering",
+    "importance": "출제예상",
+    "summary": "비지도학습(Unsupervised Learning)의 일종으로, 상호 간 유사 특성을 갖는",
+    "mnemonic": "문거절 수프타"
+  },
+  {
+    "id": "ai-43",
+    "title": "K-평균 알고리즘",
+    "category": "인공지능",
+    "group": "비지도학습 - Clustering",
+    "importance": "중",
+    "summary": "거리기반, 반복적 최적해",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-44",
+    "title": "기댓값 최대화 알고리즘(expectation-maximization algorithm, 약자 EM 알고리즘)",
+    "category": "인공지능",
+    "group": "비지도학습 - Clustering",
+    "importance": "출제예상",
+    "summary": "EM 알고리즘은 관측되지 않는 잠재변수에 의존하는 확률 모델에서 최대가능도(maximum likelihood)나 최대사후확률(maximum a posteriori, 약자 MAP)을",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-45",
+    "title": "DBSCAN(밀도 기반 클러스터링)",
+    "category": "인공지능",
+    "group": "비지도학습 - Clustering",
+    "importance": "중",
+    "summary": "특정 점을 기준으로 반경 x내에 n개 이상이 있을 경우, 하나의 군집으로 인식하는",
+    "mnemonic": "앱클 코보컨노"
+  },
+  {
+    "id": "ai-46",
+    "title": "자기조직화지도(Self-Organizing Map)",
+    "category": "인공지능",
+    "group": "비지도학습 - Clustering",
+    "importance": "출제예상",
+    "summary": "사람이 눈으로 볼 수 있는 저차원(2차원 내지 3차원) 격자에 고차원 데이터의 각 개체들이 대응하도록 인공신경망과 유사한 방식의 학습을 통해 군집을 도출해내는 기법",
+    "mnemonic": "입노경가"
+  },
+  {
+    "id": "ai-47",
+    "title": "차원 축소",
+    "category": "인공지능",
+    "group": "비지도학습 - 잠재변수 모델",
+    "importance": "출제예상",
+    "summary": "Demensionality Reduction",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-48",
+    "title": "PCA(주성분분석)",
+    "category": "인공지능",
+    "group": "비지도학습 - 잠재변수 모델",
+    "importance": "중",
+    "summary": "PCA(Principal Component Analysis) 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-49",
+    "title": "t-SNE(t-Distributed Stochastic Neighbor Embedding)",
+    "category": "인공지능",
+    "group": "비지도학습 - 잠재변수 모델",
+    "importance": "하",
+    "summary": "고차원 데이터를 저차원(주로 2~3차원)으로 시각화하기 위한 비선형 차원 축소 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-50",
+    "title": "GAN (Generative",
+    "category": "인공지능",
+    "group": "비지도학습 - 잠재변수 모델",
+    "importance": "상",
+    "summary": "생성자(Generator)와 판별자(Discriminator)가 서로 경쟁하는 과정을 통해 정보를 학 습하는 대표적 비지도학습",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-51",
+    "title": "DCGAN",
+    "category": "인공지능",
+    "group": "비지도학습 - 잠재변수 모델",
+    "importance": "출제예상",
+    "summary": "Deep Convolutional GAN (DCGAN)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-52",
+    "title": "Defense GAN",
+    "category": "인공지능",
+    "group": "비지도학습 - 잠재변수 모델",
+    "importance": "출제예상",
+    "summary": "적대적 훈련(Adversarial Training) 및 Defense GAN(Generative Adversarial Networks) 방어기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-53",
+    "title": "능동 학습(Active Learning)",
+    "category": "인공지능",
+    "group": "준지도학습",
+    "importance": "중",
+    "summary": "라벨링 된 데이터가 많지 않은 데이터에서 일부만 학습 시킨 후, 이를 활용해 나머지 데이터를 라벨링하는 하는 오토 라벨링 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-54",
+    "title": "Q-러닝",
+    "category": "인공지능",
+    "group": "강화학습",
+    "importance": "중",
+    "summary": "주어진 상태에서 주어진 행동을 수행하는 것이 가져다 줄 효용의 기대값을 예측하는 함수인 Q함수를 학습하는 강화학습기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-55",
+    "title": "몬테카를로 트리 탐색(MCTS)",
+    "category": "인공지능",
+    "group": "강화학습",
+    "importance": "중",
+    "summary": "MCTS(Monte Carlo tree search)은 의사 결정을 위한 체험적 탐색 알고리즘",
+    "mnemonic": "선확시역 반"
+  },
+  {
+    "id": "ai-56",
+    "title": "데이터 레이블링",
+    "category": "인공지능",
+    "group": "어노테이션 (Annotation)",
+    "importance": "출제예상",
+    "summary": "- 데이터 레이블링/라벨링(Data Labeling)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-57",
+    "title": "이미지 데이터 어노테이션(Data Annotation) 유형과 기법",
+    "category": "인공지능",
+    "group": "어노테이션 (Annotation)",
+    "importance": "하",
+    "summary": "인공지능(머신러닝 / 딥러닝) 모델을 학습시키기 위해 이미지 데이터에 레이블을 붙이는 과정",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-58",
+    "title": "Optimization Algorithm",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "상",
+    "summary": "최적화 알고리즘 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-59",
+    "title": "SGD",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "SGD(Stochastic Gradient Descent)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-60",
+    "title": "베이지안 최적화(Bayesian Optimization)",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "베이지안 최적화(Bayesian Optimization)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-61",
+    "title": "인공지능 파운데이션 모델",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "대규모 데이터셋에 의해 사전 학습되고, 출력의 범용성을 고려하여 설계되어 다양한 작업에 적용될 수 있는 AI 기초 모델자기지도학습, Adaptation, 전이학습, 사전학습, 기반",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-62",
+    "title": "파인튜닝(Fine-tuning)",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "모델의 성능 향상 과정, 파인튜닝(Fine-tuning)의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-63",
+    "title": "프롬프트 튜닝(Prompt Tuning)",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "초거대 언어모델(LLM)의 파라미터는 고정시킨 상태에서 새로운 작업에 적응시키기 위해 프롬프트(명령이나 요청 등의 텍스트)를 조정하여 모델이 원하는 방식으로 응답하도록 하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-64",
+    "title": "제로샷(Zero-shot) 학습",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "사전 학습된 대규모 언어 모델(LLM)을 추가 학습 없이 자연어 프롬프트만으로 다양한 작업을 수행하는 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-65",
+    "title": "소프트 프롬프트 튜닝(Soft Prompt Tuning)",
+    "category": "인공지능",
+    "group": "모델 학습",
+    "importance": "출제예상",
+    "summary": "사전 학습된 대규모 언어 모델(LLM)의 본체는 고정하고, 입력 앞에 붙이는 연속된 벡터 형태의 프롬프트만을 별도로 학습",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-66",
+    "title": "인공지능(AI) 모델의 성능평가",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "인공지능(AI) 모델이 학습한 결과에 대해서 주어진 문제를 얼마나 정확하고 신뢰성 있게 해",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-67",
+    "title": "교차검증",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "모델 평가 방법 중 하나로 훈련 데이터와 검증 데이터를 분리하여 훈련 데이터에 대해 학습한 모델의 정확도를 검증 데이터로 평가하는 기법.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-68",
+    "title": "혼동 행렬",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "혼동 행렬 (Confusion matrix)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-69",
+    "title": "정밀도(Precision)",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "F1 Score에서 정밀도(Precision), 재현율(Recall)",
+    "mnemonic": "정예실"
+  },
+  {
+    "id": "ai-70",
+    "title": "재현율(Recall)",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "정보 검색 분야에서 재현율(recall)은 관련 있는 문서들 중 실제로 검색된 문서들의 비율",
+    "mnemonic": "재정맞"
+  },
+  {
+    "id": "ai-71",
+    "title": "F1-Score",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "출제예상",
+    "summary": "정밀도(Precision)와 재현율(Recall)를 합친 것",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-72",
+    "title": "Precision Recall Graph/Curve",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "중",
+    "summary": "Confusion Matrix 를 통해서 계산된 Precision 과 Recall 지표를 이용하여 데이터 Label 의 분포가 불균등 할 때 사용하는 모델 성 능평가에 활용하는 그",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-73",
+    "title": "인공지능 데이터의 평가",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "기출",
+    "summary": "응집성, 다양성, 분류성, 계산량, 어노테이션, 전처리, 중복제거",
+    "mnemonic": "지영오자이"
+  },
+  {
+    "id": "ai-74",
+    "title": "클래스 불균형(Class Imbalance)",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "출제예상",
+    "summary": "accuracy paradox(정확도의 역설), Resampling, under sampling, over sampling, SMOTE(Synthetic Minority Over-",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-75",
+    "title": "IoU(Intersection over Union)",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "출제예상",
+    "summary": "두개의 물체의 위치가 얼마나 일치하는지를 수학적으로 나타내는 객체인식 모델의 평가지표",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-76",
+    "title": "벤치마크 데이터셋",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "출제예상",
+    "summary": "특정한 머신 러닝 문제를 공통된 데이터를 통해 여러 연구자들끼리 공유하여 해결하기 위해 만들어진 공통된 기준의 인공지능 정확도 평가 데이터",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-77",
+    "title": "머신러닝(Machine Learning) 성능지표",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "중",
+    "summary": "인공지능을 통해 학습된 모델의 신규 Data 예측 정확도, 계산 시간, 해석 용이성 측정 등을 평가하여 실제 만들어진 모델의 유용성 판단하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-78",
+    "title": "인공지능 신뢰성",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "인공지능이 내포한 위험과 기술적 한계를 해결하고, 활용･확산 과정에서의",
+    "mnemonic": "기활 편차휴악취 오침무혼사"
+  },
+  {
+    "id": "ai-79",
+    "title": "AI 신뢰성 인증제도 (Certification of AI Trustworthiness,",
+    "category": "인공지능",
+    "group": "모델 평가 / 신뢰성",
+    "importance": "상",
+    "summary": "AI 신뢰성 확보를 위한 사회기술적 요건을 중심으로 기업 내부의 AI 거버넌스 및 주요 신뢰성 특성에 대한 검증 , 확인 활동을 인증하는 제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-80",
+    "title": "자연어 처리 기술(NLP, natural language processing)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "음성 인터페이스 기술(Natural User Interface),",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-81",
+    "title": "NER(Named Entity Recognition)과 Word Embedding",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "[NER개념] 텍스트에서 사전 정의된 카테고리에 속한 개체명 찾아 특정 의미 가진 단어 또는 어구 인식하는 과정 또는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-82",
+    "title": "트랜스포머(Transformer)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "RNN(Recurrent Neural Network)을 탈피하고 seq2seq의 인코더-디코더 모델과 셀프 어텐션(Self-Attention) 구조만으로 구현한 자연어 처리 모델 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-83",
+    "title": "Self-Attention메커니즘",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "자연어 처리(NLP) 및 트랜스포머(Transformer) 모델에서 입력 시퀀스의 각 요소(단어 등)가 동일한 시퀀스 내의 다른 모든 요소 들과의 연관성을 스스로 계산하여 문맥을 ",
+    "mnemonic": "138_컴시응_1"
+  },
+  {
+    "id": "ai-84",
+    "title": "Textless NLP(Natural Language Processing)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "문자 변환 없이 발화된 음성 원시 오디오만으로 언어 인공지능 모델을 학습시켜 다양한 언어 어플리케이션 서비스를 개발할 수 있는 자연어 처리 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-85",
+    "title": "GSLM(Generative Spoken Language Model)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "언어 레이블이나 텍스트 없이 원시 오디오 신호를 인코더(Encoder)로 개별 단위로 변환 후 단위 기반으로 학습하여 디코더(Decoder)로 음성으로 변환하는 Textless N",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-86",
+    "title": "챗봇(Chatbot)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "인간 사용자와의 대화를 시뮬레이션하도록 미리 설계된 컴퓨터 프로그램",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-87",
+    "title": "ChatGPT",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "ChatGPT is an artificial intelligence chatbot developed by OpenAI and released in November 2022 사람이 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-88",
+    "title": "생성형 AI",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "기존 데이터 분석을 위한 A I 의 한계를 넘어 , 프롬프트 또는 요청에 따라 텍스트 이미지 미디어를 생성할 수 있는 인공지능",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-89",
+    "title": "LLM",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "상",
+    "summary": "초거대 언어모델, GPT-3.5, GPT-4, 지도학습, 강화학습, RLHF(Reinforcement Learning from Human Feedback) 알고리즘, 대형 언어 모",
+    "mnemonic": "138_컴시응_2"
+  },
+  {
+    "id": "ai-90",
+    "title": "터보퀀트(TurboQuant)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "터보퀀트(TurboQuant)는 Google Research와 DeepMind가 공동 발표한 대규모 언어 모델(LLM)의 추론 가속 및 메모리 압축 기술.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-91",
+    "title": "sLLM",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "경량화 언어모델(smaller Large Language Model·sLLM)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-92",
+    "title": "RLHF(Reinforcement Learning from Human Feedback) 학습 파이프라인",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "하",
+    "summary": "인간 피드백을 활용하여 LLM 응답 품질과 정렬(Alignment)을 강화하는 학습 방식",
+    "mnemonic": "139_관리_2_2"
+  },
+  {
+    "id": "ai-93",
+    "title": "RAFT(Retrieval Augmented Fine-Tuning) 학습 파이프라인",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "하",
+    "summary": "RAG 환경에 최적화된 Fine-Tuning 기법으로, 검색된 문서를 기반으로 LLM 이 올바른 근거를 활용하도록 학습시키는 방식",
+    "mnemonic": "139_관리_2_2"
+  },
+  {
+    "id": "ai-94",
+    "title": "Vertical LLM",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "특정 산업 및 분야 특화되어 심층 전문지식 중심으로 도메인에 한정된 대형언어모델",
+    "mnemonic": "ITPE FR_2025.08_D5"
+  },
+  {
+    "id": "ai-95",
+    "title": "OWASP LLM, OWASP Top 10 for LLM Application",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "Prompt Injection, Output Handling, Training Data Poisoning, LLM Abuse, Sensitive Data Exposure, Supp",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-96",
+    "title": "PLM(Pre trained Language Model)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "방대한 양의 텍스트 데이터로 사전 학습된 자연어 처리 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-97",
+    "title": "오토인코더(Autoencoder)/VAE",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "오토인코더(Autoencoder) 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-98",
+    "title": "환각 현상(Hallucination)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "생성형 AI가 실제로 존재하지 않거나 사실이 아닌 정보를 사실인 것처럼 말하는 현상",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-99",
+    "title": "RAG(Retrieval Augmented Generation)/검색 증강 생성 AI",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "환각 현상(Hallucination) 통제, RAG(Retrieval Augmented Generation)의 개념",
+    "mnemonic": "139_관리_1_3"
+  },
+  {
+    "id": "ai-100",
+    "title": "Advanced RAG",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "단순 검색-생성 구조의 한계를 극복하기 위해 검색 전후 단계의 정교한 최적화 공정(전처리, 후처리)를 추가하여, 외부 지식 탐색의 정밀도와 생성 답변의 신뢰성을 극대화한 고도화된 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-101",
+    "title": "Modular RAG(Retrieval-Augmented Generation)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "RAG를 검색-생성 고정 파이프라인이 아닌 독립 모듈과 연산자를 조합하는 재구성 가능한 RAG 프레임워크",
+    "mnemonic": "139_관리_1_3"
+  },
+  {
+    "id": "ai-102",
+    "title": "RIG(Retrieval Interleaved Generation)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "대규모 언어 모델 답변 생성 시 텍스트를 생성하는 중간에 필요한 정보를 반복적으로 검색 하여 언어 모델 답변의 정확성과 신뢰성을 높이는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-103",
+    "title": "MOE(Mixture of Experts)와 COT(Chain of Thought)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "- 여러 개의 전문가 모델 (Expert Model) 중에서 특정 입력에 대해 최적의 전문가를 선택 하여",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-104",
+    "title": "TEXT2SQL",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "자연어 (Natural 로 작성된 질문을 구조화된 SQL 질의문 (SQL) 로 변환 하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-105",
+    "title": "MCP(Model Context Protocol)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "AI LLM의 새로운 연결고리, MCP의 개요 가. MCP(Model Context Protocol)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-106",
+    "title": "A2A(Agent to Agent)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "A2A(Agent-to-Agent)는 Agent 간 통신 또는 자동화된 시스템 간의 상호작용을 의미하는 개념.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-107",
+    "title": "R-CNN(Region-based CNN)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "이미지 넷으로 이미 학습된 모델을 가져와 별도 SVM학습을 통해 객체인식의 정확도와 속도를 획기적으로 향상 시킨 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-108",
+    "title": "YOLO (You Only Look Once)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "하나의 뉴럴넷을 사용하여 이미지 하나에서 S x S 그리드, B개의 바운딩 박스,",
+    "mnemonic": "탐분 GBBD CSC"
+  },
+  {
+    "id": "ai-109",
+    "title": "XAI(eXplainable AI)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "XAI(eXplainable AI)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-110",
+    "title": "엑소브레인(Exobrain)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "엑소브레인(Exobrain) 소프트웨어",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-111",
+    "title": "딥뷰(Deepview)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "사람이 사물을 인지하고 시공간적으로 상황을 파악하여 직관적으로 사물을 인지하듯 사람처럼 인지하는 시각 인공지능 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-112",
+    "title": "알파고(AlphaGo)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "하",
+    "summary": "딥마인드가 2014년 구글에 인수되면서 본격적인 개발에 착수한 알파고는 완성단계가 아닌 프로토타입 단계로 2016년 현재 개발이 진행중이다.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-113",
+    "title": "텐서플로(TensorFlow)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "TensorFlow is a free and open-source software library for machine learning.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-114",
+    "title": "NPU(Neural Processing Unit)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "하",
+    "summary": "딥러닝 알고리즘 연산 수행에 필요한 모든 제어 및 산술 논리를 구현하는 머신러닝 기반 차세대 반도체",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-115",
+    "title": "TF-IDF(Term Frequency-Inverse Document Frequency)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "RNN(Recurrent Neural Network)을 탈피하고 seq2seq의 인코더-디코더 모델과 셀프 어텐션(Self-Attention) 구조만으로 구현한 자연어 처리 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-116",
+    "title": "협업필터링(Collaborative Filtering)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "추천시스템, 사용자 기반, 아이템 기반, 유클리디안, 코사인, 피어슨, 자카드",
+    "mnemonic": "사아"
+  },
+  {
+    "id": "ai-117",
+    "title": "행렬분해(Matrix Factorization) 기반 협업적 필터링",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "행렬분해(Matrix Factorization) 기반 협업적 필터링",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-118",
+    "title": "필터 버블(Filter bubble)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "정보제공자가 이용자의 관심사에 맞춰 맞춤형 정보를 제공하여 이용자는 필터링된 정보만 접하게 되는 현상 필터링된 정보, 알고리즘, 편향성",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-119",
+    "title": "전이학습(Transfer Learning)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "기존의 학습된 모델과 비슷한 유형의 다른 모델로 학습된 결과를 옮겨서",
+    "mnemonic": "적태도 레귀변자"
+  },
+  {
+    "id": "ai-120",
+    "title": "지식 증류(Knowledge Distillation)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "큰 모델(Teacher)의 지식을 작은 모델(Student)에 전달해",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-121",
+    "title": "AI 콜센터",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "STT, TTS, 고객이탈, 챗봇, 심층 질의응답, 인바운드, 아웃바운드, 모니터링, 녹취시스템, 클라우드",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-122",
+    "title": "AIaaS(AI as a Service)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "출제예상",
+    "summary": "AI를 넘어 인공지능 서비스(AIaaS)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-123",
+    "title": "딥페이크",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "딥러닝을 이용해 기존 영상에 다른 영상이나 이미지 정보를 합성하여 콘텐츠를 생성하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-124",
+    "title": "딥보이스(Deep Voice)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "하",
+    "summary": "딥러닝과 '페이크 보이스'를 합친 신조어인 '딥보이스'라고도 하며 인공지능 기술을 활 용하여 실제 사람의 목소리를 모방하거나 합성한 음성(voice)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-125",
+    "title": "AutoML(Automated Machine Learning)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "목표 데이터, 태스크가 다를 경우 해당 작업 반복 수행 필요 문제점 극복을 위해",
+    "mnemonic": "하파 그랜배경 특도피탐 모진강"
+  },
+  {
+    "id": "ai-126",
+    "title": "역강화학습, 모방학습",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "에이전트의 정책이나 행동 이력을 통해 그 행동을 설명하는 보상 함수를 구하는 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-127",
+    "title": "메타학습(Meta Learning)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "메타인지로부터 파생된 개념으로, 적은 양의 데이터와 주어진 환경만으로도 스스로 학습하고, 학습한 정보와 알고리즘이 새로운 문제에 적응하며 해결하는 학습방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-128",
+    "title": "그래프신경망(Graph Neural Network)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "복잡한 연결 관계와 객체 간의 상호 의존성을 지닌 그래프 데이터의 더 나은 표현(representation)을 위한 학습 방법 - 노드(node)와 노드 간의 연결성을 나타내는 엣",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-129",
+    "title": "연합학습",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "상",
+    "summary": "저장 데이터를 직접 공유하지 않는 다수의 로컬 기기와 하나의 중앙 서버가 협력하여 AI 모델을 학습하는 분산형 머신 러닝(Machine Learning)",
+    "mnemonic": "알SA"
+  },
+  {
+    "id": "ai-130",
+    "title": "SNN(Spiking Neural Networks)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "상",
+    "summary": "두뇌에서 실제로 정보가 전달되고 가공되는 과정을 모사하여, 뇌를 구성하는 뉴런과 시냅스로 이루어진 신경망 구성 방식으로 인공지능을 구현하는 기술 - 시간에 따라, 전기적 신호 강도",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-131",
+    "title": "패턴인식(Pattern recognition)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "계산이 가능한 기계적인 장치가 어떠한 대상을 인식하는 문제를 다루는 인공지능의 한 분야 - 공학적 접근법을 이용하여 인공지능의 실제 구현 문제인 대상을 인식하는 문제",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-132",
+    "title": "메타휴리스틱스(Metaheuristics)",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "중",
+    "summary": "특정 문제에 한정되지 않고 어떠한 문제에 대해서도 범용적으로 대응할 수 있도록 설계된 상위수준의 휴리스틱 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-133",
+    "title": "대규모 언어 모델(LLM) 성능 향상을 위한 기술",
+    "category": "인공지능",
+    "group": "자연어 처리 / Chat, LLM / 학습",
+    "importance": "하",
+    "summary": "대규모 언어 모델(LLM)의 추론 능력 부족, 정보의 정확성 문제, 지식의 일관성 유지 어려움 등의 한계를 극복하기 위한 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-134",
+    "title": "온디바이스 AI(Artificial Intelligence)",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "상",
+    "summary": "정의) - 멀리 떨어진 클라우드 서버를 거치지 않고 스마트기기 자체적으로 정보를 수집(small data)하고, 빠른 서비스,강화된 정보보안, 에너지절감, 연산할 수 있는 AI 기",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-135",
+    "title": "On-Sensor AI",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "중",
+    "summary": "On-Sensor AI의 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-136",
+    "title": "AX / AX 2.0",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "출제예상",
+    "summary": "기존의 AI 도입 및 자동화 중심의 AX 1.0 단계를 넘어 , AI 가 스스로 판단하고 행동",
+    "mnemonic": "ITPE_2025.07_관리3"
+  },
+  {
+    "id": "ai-137",
+    "title": "MLOps(모델옵스)",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "상",
+    "summary": "데이터 관리 및 ML 시스템 개발과 서비스 운영(Operations)을 통합해 안정적으로 상품·서비스를 출시할 수 있도록 신속·유연한 개발을 추구하는 협업 방식 - 개발, 통합, ",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-138",
+    "title": "AIoT(Artificial Intelligence of Things)",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "중",
+    "summary": "가. AIoT(Artificial Intelligence of Things) 개념 인공지능이 접목된 지능화된 사물인터넷 나. AIoT의 보안 취약점 다. AIoT 디바이스 보안기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-139",
+    "title": "FMOps(Foundation Model Operations)",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "중",
+    "summary": "파운데이션 모델 기반 생성형 AI 기반 애플리케이션 개발, 배포, 운영을 수행하 는 방법론",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-140",
+    "title": "LLMOps",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "하",
+    "summary": "대형 언어 모델 (Large Language Model)의 설계부터 관리, 배포, 성능 평가 및 유지 관리를 통합하고 효율화하여, 성과 및 성능을 확보하는 LLM 활용 서비스 개발",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-141",
+    "title": "피지컬 AI(Physical AI)",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "중",
+    "summary": "로봇 , 자율주행차와 같은 물리적 기기에 탑재 되어 , 물리적 세계를 인식하고 이해하며 상호작용 하는 인공지능",
+    "mnemonic": "모의_32"
+  },
+  {
+    "id": "ai-142",
+    "title": "물리AI(Artificial Intelligence)",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "하",
+    "summary": "현실 세계(Physical World)의 다양한 센서 데이터를 실시간으로 인지, 이해하고, 이를 기반으로 즉각 물리적",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-143",
+    "title": "인공지능 학습용 데이터 품질관리",
+    "category": "인공지능",
+    "group": "운영 관리",
+    "importance": "중",
+    "summary": "인공지능 학습용 데이터 품질관리 / AI 데이터 품질관리 가이드라인 v3.5",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-144",
+    "title": "편향(biased)",
+    "category": "인공지능",
+    "group": "보안 윤리",
+    "importance": "상",
+    "summary": "머신러닝과 인공지능에서 biased 결과 이유",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-145",
+    "title": "AI 윤리",
+    "category": "인공지능",
+    "group": "보안 윤리",
+    "importance": "상",
+    "summary": "자율주행차, 로드어드바이저, 로봇, 지능형 개인비서 기기 등을 연구 개발하는",
+    "mnemonic": "인사기"
+  },
+  {
+    "id": "ai-146",
+    "title": "인공지능(AI) 개인정보보호 자율점검표",
+    "category": "인공지능",
+    "group": "보안 윤리",
+    "importance": "중",
+    "summary": "인공지능(AI) 개인정보보호 자율점검표의 원칙과 총괄흐름도를 설명",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-147",
+    "title": "범용 AI(General-Purpose AI)",
+    "category": "인공지능",
+    "group": "보안 윤리",
+    "importance": "출제예상",
+    "summary": "범용 인공지능(AGI: Artificial General Intelligence)의 개발과 활용 과정에서 발생할 수 있는 다양한 위험 요소(기술적, 윤리적, 사회적, 법적 등)를 ",
+    "mnemonic": "식분평대"
+  },
+  {
+    "id": "ai-148",
+    "title": "머신러닝 학습과정에서의 적대적 공격",
+    "category": "인공지능",
+    "group": "보안 윤리",
+    "importance": "상",
+    "summary": "2. 머신러닝 보안 취약점에 대하여 설명하시오.",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-149",
+    "title": "초대규모 AI모델",
+    "category": "인공지능",
+    "group": "플랫폼",
+    "importance": "중",
+    "summary": "오픈AI에서 발표한 GPT-3를 통해 다른 모델의 백본역할 및 응용서비스 플랫폼, 범용 AI의 특징을 가진 초대규모 AI 모델이 등장함",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-150",
+    "title": "LangChain 프레임워크",
+    "category": "인공지능",
+    "group": "플랫폼",
+    "importance": "하",
+    "summary": "설비 예지정비(Predictive Maintenance) 시스템 구축 시 LangChain 프레임워크를 활용할",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-151",
+    "title": "LangGraph",
+    "category": "인공지능",
+    "group": "플랫폼",
+    "importance": "하",
+    "summary": "여러 에이전트가 협업하여 작업을 수행하는 기능을 수행하기 위한 멀티 에이전트 시스템을 구축하는 데 사용되는 LangChain 기반의 상태 관리 및 워크플로우 라이브러리",
+    "mnemonic": "FR_5_관리_1_2"
+  },
+  {
+    "id": "ai-152",
+    "title": "AI 거버넌스 (AI G overnance)",
+    "category": "인공지능",
+    "group": "플랫폼",
+    "importance": "중",
+    "summary": "AI 개발 배포 , 운영 활용 과정에서 각 단계별 발생 가능한 리스크를 정량적으로 식별하고 , 해당 리스크 및 잠재적 영향을 최소화 및 제어할 수 있는 관리 감독 체계",
+    "mnemonic": "모의_31_관리_1_1"
+  },
+  {
+    "id": "ai-153",
+    "title": "범용 AI(General-Purpose AI) 위험관리 프레임워크",
+    "category": "인공지능",
+    "group": "플랫폼",
+    "importance": "중",
+    "summary": "범용 인공지능(AGI: Artificial General Intelligence)의 개발과 활용 과정에서 발생할 수 있",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-154",
+    "title": "주목받는 인공지능(AI) 9대 핵심 기술 분석 및 주요 시사점",
+    "category": "인공지능",
+    "group": "법 지침 가이드",
+    "importance": "하",
+    "summary": "1. GPT-3 : 초대규모 AI",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-155",
+    "title": "인공지능 학습용 데이터 품질관리 가이드라인",
+    "category": "인공지능",
+    "group": "법 지침 가이드",
+    "importance": "하",
+    "summary": "인공지능 학습용 데이터 품질을 확보하는 데 필요한 조직, 절차, 품질기준, 품질관리 방법이나 활동 등을 정의하여 점검하고 조치하는 일련의 활동",
+    "mnemonic": "계구운 임 획정라학"
+  },
+  {
+    "id": "ai-156",
+    "title": "\"공공 부문 초거대 AI 도입•활용 가이드라인\"",
+    "category": "인공지능",
+    "group": "법 지침 가이드",
+    "importance": "하",
+    "summary": "\"공공 부문 초거대 AI 도입•활용 가이드라인\"",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-157",
+    "title": "AI 기본법",
+    "category": "인공지능",
+    "group": "법 지침 가이드",
+    "importance": "출제예상",
+    "summary": "인공지능 발전과 신뢰 기반 조성 등에 관한 기본법(이하 “AI 기본법”)",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-158",
+    "title": "인공지능 감리",
+    "category": "인공지능",
+    "group": "법 지침 가이드",
+    "importance": "출제예상",
+    "summary": "인공지능 기반 감리 프레임워크, 점검항목",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-159",
+    "title": "알파폴드(Alpha Fold)",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "트랜스포머(Transformer)를 활용하여 단백질 아미노산 서열과 구조간의 상호작용을 예측하기",
+    "mnemonic": "FR_3_관리_2_1"
+  },
+  {
+    "id": "ai-160",
+    "title": "홉필드 네트워크(Hopfield network)",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "특정 패턴을 기억하고 Self-feedback을 통해 회상하는 구조로 기억회로 기반의 비선형, 재귀적인 인공 신경망",
+    "mnemonic": "FR_3_관리_2_2"
+  },
+  {
+    "id": "ai-161",
+    "title": "볼츠만 머신(Restricted Boltzmann Machine)",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "확률적 생성모델로 이진상태의 뉴런을 가지고 있으며, 입력층 (visible layer)과 은닉층(hidden layer)로 구성된 이진 또는 연속형 데이터를 모델링 하는 확률적 모",
+    "mnemonic": "FR_3_컴시응_2_6"
+  },
+  {
+    "id": "ai-162",
+    "title": "AI모델의 Decoding 전략",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "언어 모델이 텍스트를 생성할 때 다음 단어나 문장 선택을 결정하는 알고리즘으로, 생성된",
+    "mnemonic": "FR_4_관리_1_13"
+  },
+  {
+    "id": "ai-163",
+    "title": "AI Agent",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "다양한 인식(Perception), 처리(Brain), 그리고 행동(Action) 과정을 통해 주어진 환경에 대응할 수 있도록 설계된 자율 시스템",
+    "mnemonic": "FR_5_관리_1_10"
+  },
+  {
+    "id": "ai-164",
+    "title": "기계고객",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "기업의 상품 구매 기준 등 활용하여 상품 및 서비스 자율적 구매하는 비인간 경제 행위자",
+    "mnemonic": "모의_31_관리_2_1"
+  },
+  {
+    "id": "ai-165",
+    "title": "GLIGEN Ground Language to Image Generation) 알고리즘",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "자연어를 기반으로 특정 객체나 구성 요소를 지정된 위치에 배치할 수 있도록 그라운딩 조건 , 레퍼런스 이미지 , 키포인트 바운딩박스가 추가된 이미지 생성 모델",
+    "mnemonic": "모의_31_관리_3_4"
+  },
+  {
+    "id": "ai-166",
+    "title": "지식 그래프",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "개체(entity), 관계(relationship), 속성(attribute)을 그래프 구조(노드, 엣지, 속성)로 정리하여 정보를 의미상으로 구조화적으로 표현한 그래프 기반 지식",
+    "mnemonic": "ITPE FR_2025.08_D1"
+  },
+  {
+    "id": "ai-167",
+    "title": "PEFT(Parameter – Efficient Fine-Tuning)",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "대규모 사전학습(Pre-trained) 모델을 보다 효율적으로 다양한 태스크에 맞춰 미세조정(fine-tuning) 방법",
+    "mnemonic": "ITPE FR_2025.08_D2"
+  },
+  {
+    "id": "ai-168",
+    "title": "A2A(Agent2Agent) Protocol",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "AI가 외부 도구 및 데이터와 연결되도록 해주는 표준 프로토콜",
+    "mnemonic": "ITPE FR_2025.08_D2"
+  },
+  {
+    "id": "ai-169",
+    "title": "LoRA (Low-Rank Adaptation)",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "초거대 AI 모델을 파인튜닝 하기 위해 전체 모델의 파라미터를 업데이트하지 않고 저차원 행렬(Low-Rank Matrix)만 학습하여 대규모 머신 러닝 모델을 조정하는 방법",
+    "mnemonic": "ITPE FR_2025.08_D4"
+  },
+  {
+    "id": "ai-170",
+    "title": "Object Segmentation",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "이미지 내의 모든 픽셀에 대해 각각 어떤 클래스에 속하는지를 분류하는 이미지 분석 기술",
+    "mnemonic": "ITPE FR_2025.08_D4"
+  },
+  {
+    "id": "ai-171",
+    "title": "베이지안 네트워크(Bayesian Networks)",
+    "category": "인공지능",
+    "group": "기타 알고리즘들",
+    "importance": "하",
+    "summary": "확률 변수 간의 조건부 의존 관계를 방향성 있는 비순환 그래프(DAG)로 표현하여, 불확실한 상황에서 변수 간 인과성과 확률 기반 추론을 체계적으로 수행하는 통계적 추론 모델",
+    "mnemonic": "ITPE FR_2025.08_D5"
+  },
+  {
+    "id": "ai-172",
+    "title": "데이터 중심 AI(Data-Centric AI)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인공지능(AI)의 성능 향상을 위해 모델이 아닌 학습에 사용되는 데이터 품질을 개선",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-173",
+    "title": "Stable Diffusion",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "딥러닝 기반의 확산 모델 (Diffusion 을 활용한 이미지 생성 기술 로 , 점진적으로 이미지를 생성하면서 고품질의 결과를 만들어내는 인공지 능 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-174",
+    "title": "범용 인공지능 위험관리 프레임워크",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "범용 인공지능(AGI: Artificial General Intelligence)의 개발과 활용 과정에서 발생할 수 있",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-175",
+    "title": "생성형 인공지능 서비스 이용자 보호 가이드라인",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "생성형 인공지능 서비스의 전반에 걸쳐 추구해야 할 원칙과 실행방식을 제시하 가이드라인",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-176",
+    "title": "인공지능 생성물",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인공지능을 포함한 알고리즘에 의해 크게 변경되거나 생성된 이미지, 동영상, 오디오, 텍스트",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-177",
+    "title": "MAS(Multi Agent System)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "중",
+    "summary": "여러 개의 자율적 소프트웨어 에이전트가 상호작용하며 협력 또는 경쟁을 통해 복잡한 문제를 분산적으로 해결하는 분산 인공지능 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "ai-178",
+    "title": "지능형 엣지 컴퓨팅",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "클라우드 중심의 연산을 네트워크 말단에서 수행하면서, AI·분석·자동화 기능을 탑재하여 실시간 의사결정과 서비스 제공을 가능하게 하는 컴퓨팅 패러다임",
+    "mnemonic": "137회 컴시응 1교시"
+  },
+  {
+    "id": "ai-179",
+    "title": "자율주행의 진화를 위한 데이터 기반 제어 기술",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "기존의 물리 모델 기반 제어의 한계를 넘어 머신러닝과 확률적 기법을 활용해 더 정확하고 적응적인 제어시스템을 설계하여, 복잡한 시스템의 동역학을 효과적으로 모델링하고 제어하 기 위",
+    "mnemonic": "ITPE_2025.07_공통1"
+  },
+  {
+    "id": "ai-180",
+    "title": "Object Detection",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "이미지 내의 특정 클래스에 해당하는 객체 존재 유무와 그 위치를 동시에 찾아내는 객체 인식 기술",
+    "mnemonic": "ITPE_2025.07_공통1"
+  },
+  {
+    "id": "ai-181",
+    "title": "Semantic Segmentation",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "이미지 내의 모든 픽셀에 대해 각각 어떤 클래스",
+    "mnemonic": "ITPE_2025.07_공통1"
+  },
+  {
+    "id": "ai-182",
+    "title": "AEO(Answer Engine Optimization)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 기반의 응답형 검색엔진에 최적화된 정보를 제공하여 정확하고 신뢰도 높은 답변으로 채택되도록 하는 콘텐츠 최적화 전략",
+    "mnemonic": "ITPE_2025.07_공통1"
+  },
+  {
+    "id": "ai-183",
+    "title": "GEO(Generative Engine Optimization)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "생성형 AI가 콘텐츠를 생성하거나 추천할 때 자사에서 만든 콘텐츠가 활용되도록 설계하거나 유도하는 콘텐츠 최적화 전략",
+    "mnemonic": "ITPE_2025.07_공통1"
+  },
+  {
+    "id": "ai-184",
+    "title": "VLM(Vision-Language Models)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "이미지인 컴퓨터 비전과 자연어 처리 기능을 결합하여 함께 처리할 수 있도록 설계된 인공 지능 모델",
+    "mnemonic": "ITPE_2025.07_공통1"
+  },
+  {
+    "id": "ai-185",
+    "title": "국가 AI컴퓨팅 센터",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인공지능 기술 발전과 산업 경쟁력 강화를 위해 국가 차원에서 구축하는 AI 전용 인프",
+    "mnemonic": "ITPE_2025.07_공통2"
+  },
+  {
+    "id": "ai-186",
+    "title": "딥시크(DeepSeek)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "GPT-4와 경쟁 가능한 성능을 지닌 R1 모델을 중심으로 중국 AI 스타트업이 개발한 오픈소스기반 대형 언어 모델(LLM)",
+    "mnemonic": "ITPE_2025.07_공통2"
+  },
+  {
+    "id": "ai-187",
+    "title": "AI 대륙 실행계획",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "‘18 년 발표된 ‘AI 에 관한 협력 계획 ’ 이후 EU 의 두 번째 AI 종합 전략으로 , 유럽 전역의 AI 경쟁력 강화를 위한 기술혁신 및 산업 전략 방안을 포괄하는 로드맵",
+    "mnemonic": "ITPE_2025.07_공통3"
+  },
+  {
+    "id": "ai-188",
+    "title": "판별형 AI (Discriminative AI)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "입력 데이터와 정답(label) 간의 경계를 학습 후 분류 또는 예측하여 데이터가 어떤 범주와 클래스에 속하는지를 구별하는 인공지능 AI",
+    "mnemonic": "ITPE_2025.07_공통4"
+  },
+  {
+    "id": "ai-189",
+    "title": "AI 프라이버시 리스크",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 의 유형 · 용례 파악 리스크 식별 , 리스크 측정 , 리스크 경감방안의 검토 · 도입 중복제거(Deduplication), 입력·출력 필터링 (Input/Output Fil",
+    "mnemonic": "ITPE_2025.07_관리4"
+  },
+  {
+    "id": "ai-190",
+    "title": "AI 보안 리스크",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 보안 리스크는 AI 모델·학습데이터·서비스 연계 과정에서 발생하는 기술적 위협으로 인해 시스템 안정성과 신뢰성이 저하되는 현상",
+    "mnemonic": "139_관리_2_1"
+  },
+  {
+    "id": "ai-191",
+    "title": "AI 사회적 리스크",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 사회적 리스크는 AI 알고리즘의 편향성과 불투명성으로 인해 사회적 불평등·민주주의 침해·디지털 격차 확대 등이 발생하는 현상",
+    "mnemonic": "139_관리_2_1"
+  },
+  {
+    "id": "ai-192",
+    "title": "양자머신러닝(Quantum Machine Learning)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "양자컴퓨팅의 원리를 머신러닝에 접목하여, 기존 고전적 머신러닝의 한계를 극복하고자 하는 첨단 융합 기술",
+    "mnemonic": "ITPE FR_2025.08_D1"
+  },
+  {
+    "id": "ai-193",
+    "title": "Latent Variable Model(LVM)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "관측되지 않는 잠재 변수(latent variable) z를 도입하여, 이 변수로부터 관측 데이터 x를 생성하는 확률 생성 모델",
+    "mnemonic": "ITPE FR_2025.08_D1"
+  },
+  {
+    "id": "ai-194",
+    "title": "Autoregressive model(AM)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "전체 데이터의 결합 확률 분포를, 순차적으로 이전 항목에 조건부로 나누어 모델링하는 생성 모델",
+    "mnemonic": "ITPE FR_2025.08_D2"
+  },
+  {
+    "id": "ai-195",
+    "title": "Flow Matching(FM)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "단순한 분포(예: 정규분포)에서 복잡한 데이터 분포로 연속적인 경로(flow)를 통해 변환하는 벡터 필드 기반 모델",
+    "mnemonic": "ITPE FR_2025.08_D3"
+  },
+  {
+    "id": "ai-196",
+    "title": "신체화 AI(Embodied Artificial Intelligence)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인공지능이 물리적 신체를 기반으로 실제 환경에서 인간과 유사한 방식으로 감지, 추론, 행동을 수행하며 학습하는 인공지능",
+    "mnemonic": "ITPE FR_2025.08_D2"
+  },
+  {
+    "id": "ai-197",
+    "title": "컨텍스트 엔지니어링(Context Engineering)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "대규모 언어 모델(LLM)의 입력과 작동 방식에 있어, 사용자 의도와 목적에 따라 문맥(Context)을 정형화, 조작, 구성하여 정확도·일관성·목적 적합성을 향상시키는 기법",
+    "mnemonic": "ITPE FR_2025.08_D2"
+  },
+  {
+    "id": "ai-198",
+    "title": "머신 언러닝(Machine Unlearning)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "한 번 학습된 머신러닝 모델에서 특정 데이터의 영향을 제거하거나 무효화하여 해당",
+    "mnemonic": "ITPE FR_2025.08_D1"
+  },
+  {
+    "id": "ai-199",
+    "title": "AI RMF(Risk Management Framework)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI RMF는 NIST가 제시한 위험 기반 프레임워크로, AI 전 생애주기에서 발생하는 다양한 위험을 체계적으로 관리하여 신뢰 가능한 AI 구현을 지원하는 관리 기능",
+    "mnemonic": "138_관리_1"
+  },
+  {
+    "id": "ai-200",
+    "title": "ISO/IEC 42001:2023",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "조직의 상황 내에서 인공지능 관리(경영)시스템(AIMS: Artificial Intelligence Management System)을 수립 및 구축, 실행, 유지 및 지속적으로 ",
+    "mnemonic": "138_관리_1, 138_컴시응_1"
+  },
+  {
+    "id": "ai-201",
+    "title": "프롬프트 인젝션(Prompt Injection)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "LLM 모델의 응답을 조작하기 위해, 공격자가 프롬프트에 정교하게 조작된 입력 값을 주입하여 민감 데이터를 유출하는 공격기법",
+    "mnemonic": "138_관리_1"
+  },
+  {
+    "id": "ai-202",
+    "title": "인공지능기본법",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "생성형 AI 확산으로 AI 산업은 기술 중심 성장의 전환점을 맞이하였으며, AI 기본법은 신뢰와 안전을 기반으로 산업이 한 단계 도약하기 위한 제도",
+    "mnemonic": "138_관리_4"
+  },
+  {
+    "id": "ai-203",
+    "title": "ModelDoS",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 모델의 계산 비용·메모리·추론 경로를 악용해 서비스 품질을 급격히 저하시키거나 중단시키는 공",
+    "mnemonic": "138_컴시응_1"
+  },
+  {
+    "id": "ai-204",
+    "title": "TTFT(Time To First Token)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "사용자가 프롬프트 입력 후 LLM 모델이 첫번째 토큰(단어)를 도출할 때 까지의 시간",
+    "mnemonic": "138_컴시응_1"
+  },
+  {
+    "id": "ai-205",
+    "title": "TPOT(Time Per Output Token)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "첫번째 토큰(단어)가 생성된 이후, 뒤 이어 나머지 토큰을 생성하는데 걸리는 평균 시간",
+    "mnemonic": "138_컴시응_1"
+  },
+  {
+    "id": "ai-206",
+    "title": "모라벡의 역설(Moravec’s Paradox)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "인공지능 연구 초기부터 관찰된 현상으로, “사람에게는 쉬운 일이 기계에는 매우 어렵고, 사람에게는 어려운 일은 기계가 의외로 쉽게 해낸다”는 역설",
+    "mnemonic": "138_컴시응_1"
+  },
+  {
+    "id": "ai-207",
+    "title": "ISO/PAS 8800:2024",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "AI 구성요소를 포함한 시스템에서 발생 가능한 안전 위험을 체계적으로 관리하기 위한 AI 안전 가이드라인으로, 기존 기능 안전 표준을 AI 특성에 맞게 확장한 표준",
+    "mnemonic": "138_컴시응_2"
+  },
+  {
+    "id": "ai-208",
+    "title": "시계열딥러닝(Time-series Deep Learning)",
+    "category": "인공지능",
+    "group": "기타",
+    "importance": "하",
+    "summary": "시간의 흐름에 따른 데이터의 숨겨진 패턴과 주기성을 파악하여 미래를 예측하는 데 특화된 인공지능 알고리즘",
+    "mnemonic": "139_관리_4_5"
   }
 ]
