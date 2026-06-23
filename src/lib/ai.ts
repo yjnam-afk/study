@@ -15,29 +15,65 @@ export type ChatMessage = {
 
 export class AIConfigError extends Error {}
 
-const provider = (process.env.AI_PROVIDER || "gemini").toLowerCase();
+type GenOpts = { system: string; user: string; temperature?: number };
 
-/** 시스템 프롬프트 + 사용자 프롬프트로 텍스트를 생성합니다. */
-export async function generateText(opts: {
-  system: string;
-  user: string;
-  /** 0(보수적) ~ 1(창의적). 기본 0.4 */
-  temperature?: number;
-}): Promise<string> {
-  switch (provider) {
-    case "gemini":
-      return generateWithGemini(opts);
-    case "groq":
-      return generateWithGroq(opts);
-    case "openrouter":
-      return generateWithOpenRouter(opts);
-    case "ollama":
-      return generateWithOllama(opts);
-    default:
-      throw new AIConfigError(
-        `알 수 없는 AI_PROVIDER 입니다: "${provider}". gemini, groq, openrouter, ollama 중 하나를 사용하세요.`,
-      );
+/** 제공자 이름 → 생성 함수 매핑. */
+const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
+  gemini: generateWithGemini,
+  groq: generateWithGroq,
+  openrouter: generateWithOpenRouter,
+  ollama: generateWithOllama,
+};
+
+/**
+ * 사용할 제공자 순서.
+ *  - AI_PROVIDERS="groq,openrouter,gemini" 처럼 콤마로 나열하면 폴백 체인으로 동작
+ *    (앞의 것이 막히면/실패하면 다음 것으로 자동 전환).
+ *  - 없으면 기존 AI_PROVIDER(단일, 기본 gemini) 사용.
+ */
+function providerChain(): string[] {
+  const multi = process.env.AI_PROVIDERS;
+  if (multi?.trim()) {
+    return multi
+      .split(",")
+      .map((s) => s.trim().toLowerCase())
+      .filter(Boolean);
   }
+  return [(process.env.AI_PROVIDER || "gemini").toLowerCase()];
+}
+
+/**
+ * 시스템/사용자 프롬프트로 텍스트를 생성합니다.
+ * 여러 제공자를 설정하면, 하나가 실패(429 토큰 초과·오류 등)할 때 다음 제공자로 자동 폴백합니다.
+ */
+export async function generateText(opts: GenOpts): Promise<string> {
+  const chain = providerChain();
+  const errors: string[] = [];
+  let allConfigError = true;
+
+  for (const name of chain) {
+    const fn = PROVIDERS[name];
+    if (!fn) {
+      allConfigError = false;
+      errors.push(`${name}: 알 수 없는 제공자`);
+      continue;
+    }
+    try {
+      return await fn(opts);
+    } catch (err) {
+      if (!(err instanceof AIConfigError)) allConfigError = false;
+      errors.push(`${name}: ${err instanceof Error ? err.message : String(err)}`);
+      // 다음 제공자로 폴백
+    }
+  }
+
+  const detail = errors.join(" | ");
+  if (allConfigError) {
+    throw new AIConfigError(
+      `사용 가능한 AI 제공자가 없습니다. 환경변수를 확인하세요. (${detail})`,
+    );
+  }
+  throw new Error(`모든 AI 제공자가 실패했습니다 → ${detail}`);
 }
 
 async function generateWithGemini({
