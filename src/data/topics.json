@@ -1789,5 +1789,869 @@
     "importance": "하",
     "summary": "화이트 레이블 마케팅(White Label Marketing) 정의",
     "mnemonic": ""
+  },
+  {
+    "id": "pm-1",
+    "title": "비용편익분석",
+    "category": "프로젝트관리",
+    "group": "비즈니스 가치 경제성 분석 기법 /프로젝트 가치 평가",
+    "importance": "상",
+    "summary": "비즈니스 케이스의 사업 및 투자 타당성 판단 위한 재무적 지표(가치판단도구) 중 하나 비용편익 분석(Cost-Benefit Analysis)에 의해서 프로젝트와 제안을 화폐 가치로",
+    "mnemonic": "정량적/재무적 - BIP RTN"
+  },
+  {
+    "id": "pm-2",
+    "title": "투자회수기간",
+    "category": "프로젝트관리",
+    "group": "비즈니스 가치 경제성 분석 기법 /프로젝트 가치 평가",
+    "importance": "상",
+    "summary": "프로젝트에 투자한 현금을 모두 회수하는 데 걸리는 기간(자본회수기간, 투자회수기간)",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-3",
+    "title": "내부수익률",
+    "category": "프로젝트관리",
+    "group": "비즈니스 가치 경제성 분석 기법 /프로젝트 가치 평가",
+    "importance": "상",
+    "summary": "투자안의 미래 현금유입의 현재가치를 현금유출의 현재가치와 같게 만드는 할인율 프로젝트 일정액의 투자에 대한 수익률",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-4",
+    "title": "순현재가치",
+    "category": "프로젝트관리",
+    "group": "비즈니스 가치 경제성 분석 기법 /프로젝트 가치 평가",
+    "importance": "상",
+    "summary": "미래 현금흐름(cash flow)을 현재 기준으로 환산한 수익과 투자금액의 차이 같은 조건이라면 NPV가 클수록 좋으며 최소한 0보다 높아야 이익",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-5",
+    "title": "특징",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "중",
+    "summary": "[프로젝트 정의] 유일한 제품(Product), 서비스, 결과물 창출 위해 한시적으로(Temporary) 리소스와 노력을 투입하는 활동",
+    "mnemonic": "유일목점비변배제"
+  },
+  {
+    "id": "pm-6",
+    "title": "기업 외부 환경 요인",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "하",
+    "summary": "기업 프로젝트에 영향 미치는 외부적 요인들과 기업 내부에서 PM들이 고려해야 하는 환경적 측면의 요소",
+    "mnemonic": "문조인 도적해"
+  },
+  {
+    "id": "pm-7",
+    "title": "조직 프로세스 자산",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "하",
+    "summary": "하나의 기업이 가지고 있는 조직적인 정책, 프로세스, 지식 베이스(Knowledge Base)",
+    "mnemonic": "재교 문데프"
+  },
+  {
+    "id": "pm-8",
+    "title": "ISO 21500",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "중",
+    "summary": "2007년 발의, 2012년 발표된 4장의 본문과 부속서 A로 이루어진 프로젝트 관리 지침 국제표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-9",
+    "title": "프로젝트 유형",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "중",
+    "summary": "[프로젝트관리] 프로젝트 관리 위한 일정, 조직, 인력, 지휘, 통제를 제공하는 기술, 지식 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-10",
+    "title": "프로젝트관리자",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "하",
+    "summary": "스폰서로부터 프로젝트 목표를 달성하도록 임무를 부여 받고, 프로젝트의 시작부터 완료까지 모든 단계를 진행하는 조직 내부의 관리자",
+    "mnemonic": "프비리"
+  },
+  {
+    "id": "pm-11",
+    "title": "프로젝트 조직유형",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "중",
+    "summary": "[유형] 기능조직, 프로젝트 중심조직, 메트릭스 조직(Weak Matrix, Balanced Matrix, Strong",
+    "mnemonic": "기프매"
+  },
+  {
+    "id": "pm-12",
+    "title": "프로세스 그룹(5개)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "상",
+    "summary": "프로젝트 관리를 하기 위한 프로세스 그룹 5개",
+    "mnemonic": "착계실통종"
+  },
+  {
+    "id": "pm-13",
+    "title": "프로젝트관리 지식 영역 관리(KA)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "상",
+    "summary": "통합관리(Integration)",
+    "mnemonic": "통범일원품자의위조이"
+  },
+  {
+    "id": "pm-14",
+    "title": "PMBOK 7판",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "출제예상",
+    "summary": "1. 기존 프로세스 그룹 5개에서 -> 가치전달 시스템 + 프로젝트 관리 원칙",
+    "mnemonic": "성테모"
+  },
+  {
+    "id": "pm-15",
+    "title": "PMBOK 8판",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "출제예상",
+    "summary": "1교시형으로만 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-16",
+    "title": "브레인 스토밍",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "하",
+    "summary": "브레인스토밍이란 머리(Brain)와 폭풍(Storm)이란 말이 합성된 것으로 머리에 폭풍이 일듯이 자유분방하게 발상하여 다양한 아이디어를 얻고자 하는 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-17",
+    "title": "조정",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "중",
+    "summary": "조직의 표준 프로세스를 커스터마이징하여 프로젝트의 비즈니스적으로 또는 기술적인 요구에 맞게 적합한 프로세스를 얻는 과정",
+    "mnemonic": "특선상세문"
+  },
+  {
+    "id": "pm-18",
+    "title": "SoW",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "하",
+    "summary": "- 프로젝트의 개괄적인 요구사항을 기술하는 문서로써 보통 프로젝트의 특별한 활동, 인도물, Timeline 등을 포함하고 있는 문서",
+    "mnemonic": "프업책"
+  },
+  {
+    "id": "pm-19",
+    "title": "교훈물 관리 대장",
+    "category": "프로젝트관리",
+    "group": "프로젝트 관리 일반",
+    "importance": "하",
+    "summary": "현재 프로젝트에서 활용하고 교훈 저장소에도 추가할 수 있도록 프로젝트 수행 과정에서 습득한 지식을 기록, 관리 하는 문서",
+    "mnemonic": "정수검저보"
+  },
+  {
+    "id": "pm-20",
+    "title": "프로젝트 통합관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 통합관리 (Integration Management)",
+    "importance": "상",
+    "summary": "프로젝트의 프로세스와 관리활동 들을 파악하고, 정의, 결합, 조정하기 위해 필요한 프로세스와 활동",
+    "mnemonic": "헌관작지작통종"
+  },
+  {
+    "id": "pm-21",
+    "title": "프로젝트 헌장(Charter)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 통합관리 (Integration Management)",
+    "importance": "중",
+    "summary": "프로젝트 자원, 예산, 목표를 부여하기 위해 권한을 가진 관리자(스폰서) 로부터 승인받은 문서(품의서)",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-22",
+    "title": "프로젝트관리계획서",
+    "category": "프로젝트관리",
+    "group": "프로젝트 통합관리 (Integration Management)",
+    "importance": "중",
+    "summary": "프로젝트를 계획, 실행, 통제 및 감시, 종료하는 방법을 명시한 여러 개의 보조 관리 계획서를 통합한 프로젝트 관리 계획 문서",
+    "mnemonic": "개업일인교통품수정"
+  },
+  {
+    "id": "pm-23",
+    "title": "인도물",
+    "category": "프로젝트관리",
+    "group": "프로젝트 통합관리 (Integration Management)",
+    "importance": "중",
+    "summary": "성공적인 프로젝트을 완료를 위해 산출해야하는 고유하면서 검증 가능한 제품, 결과 또는 서비스와 같은 수행 결과물",
+    "mnemonic": "통품범통"
+  },
+  {
+    "id": "pm-24",
+    "title": "프로젝트 범위관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "상",
+    "summary": "프로젝트를 성공적으로 완료하기 위해 필요한 모든 작업 범위 업무와 산출물을 정의하고 관리하는 지식영역",
+    "mnemonic": "계요정W확통"
+  },
+  {
+    "id": "pm-25",
+    "title": "요구사항 수집기법",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "상",
+    "summary": "[데이터수집] 인터뷰, Focus Group, 설문지 및 설문조사, 벤치마킹, 브레인스토밍",
+    "mnemonic": "수분표의데프컨"
+  },
+  {
+    "id": "pm-26",
+    "title": "요구사항명세서",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "상",
+    "summary": "SW를 분석, 설계, 구현, 유지하는 단계에서 검토, 평가, 승인의 기준이 되는 문서",
+    "mnemonic": "정명완일중검수추"
+  },
+  {
+    "id": "pm-27",
+    "title": "WBS",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "상",
+    "summary": "프로젝트의 인도물과 전체 업무 범위를 작고 관리 가능한 최소 업무 단위로 분할한 계층도",
+    "mnemonic": "작계사분통"
+  },
+  {
+    "id": "pm-28",
+    "title": "변경 요청(서)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "중",
+    "summary": "프로젝트 범위의 확장이나 축소, 정책, 프로세스, 계획 또는 절차의 수정, 원가 또는 예산의 수정, 일정 변경 등을 요청하는 공식적인 제안서, 조치 요청서",
+    "mnemonic": "시예결갱"
+  },
+  {
+    "id": "pm-29",
+    "title": "연동계획",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "중",
+    "summary": "근 시일 완료할 작업은 상세하게 계획하고 그 외의 작업은 높은 수준에서 대략적 계획하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-30",
+    "title": "통제되지 않는 범위 추가(Scope Creep)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "출제예상",
+    "summary": "고객이나 이해관계자의 요구사항의 관리오류로 인해서 프로젝트의 시간, 비용, 자원을 증가시키는 현상",
+    "mnemonic": "초관이정변"
+  },
+  {
+    "id": "pm-31",
+    "title": "Gold-plating",
+    "category": "프로젝트관리",
+    "group": "프로젝트 범위(Scope) 관리",
+    "importance": "출제예상",
+    "summary": "품질관리 시 고객이 요구한 것 이상으로 원하지도 않고 필요로 하지 않은 범위 이외의 기능이나 특성을 추가하여 비용과 일정을 초과하는 불필요한 SW 개발",
+    "mnemonic": "초현명 워구시"
+  },
+  {
+    "id": "pm-32",
+    "title": "프로젝트 일정관리(시간관리)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "상",
+    "summary": "프로젝트를 성공적으로 완수하고 납기를 준수할 수 있도록 개발 기간을 단계별로 철저히 계획하여 관리하는 프로젝트 관리영역",
+    "mnemonic": "계정순기개통"
+  },
+  {
+    "id": "pm-33",
+    "title": "성과 측정 규칙",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "중",
+    "summary": "0/100%, 50/50, 20/80%, 진척율법, 마일스톤 적용, EVM 규칙",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-34",
+    "title": "활동 기간 산정 기법들",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "중",
+    "summary": "[활동기간산정기법] 경수대의기 - 전 유모3 대예 거 상미",
+    "mnemonic": "경수대의기 -"
+  },
+  {
+    "id": "pm-35",
+    "title": "3점 산정",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "중",
+    "summary": "프로젝트 일정산정에 있어 낙관치(O), 비관치(P), 평균치(M) 의 산정 값을 계산하여 일정을 산정하는 기법",
+    "mnemonic": "삼베표"
+  },
+  {
+    "id": "pm-36",
+    "title": "CPM(임계경로관리)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "상",
+    "summary": "개별활동들을 연결하여 순방향분석과 역방향 분석을 통해 각 활동의 시작일과 종료일, 여유시간 및 전체 프로젝트 수행기간을 산출하는 기법",
+    "mnemonic": "정수네전후여주산정"
+  },
+  {
+    "id": "pm-37",
+    "title": "CCM",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "중",
+    "summary": "자원제약사항을 고려하여 활동사이의 여유시간을 별도 관리하여 일정을 타이트하게 운영하는기법",
+    "mnemonic": "프자피"
+  },
+  {
+    "id": "pm-38",
+    "title": "Free float",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "출제예상",
+    "summary": "후행 활동의 빠른 개시일(ES)을 지연시키지 않으면서 한 활동이 가질 수 있는 여유시간",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-39",
+    "title": "Total float",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "출제예상",
+    "summary": "프로젝트 종료일을 지연시키지 않으면서 한 활동이 가질 수 있는 총 여유시간",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-40",
+    "title": "자원 최적화",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "출제예상",
+    "summary": "(정의) 프로젝트 범위와 일정, 자원을 효율적으로 조정하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-41",
+    "title": "프로젝트 일정 단축기법",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "출제예상",
+    "summary": "일정계획에 근거하여 실적을 모니터링하여 일정이 지연될 경우 납기준수를 위한 활동 파자후학 - 크자패병",
+    "mnemonic": "파자후학"
+  },
+  {
+    "id": "pm-42",
+    "title": "수확 체감의 법칙",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "중",
+    "summary": "프로젝트에 작업하는 노동자수가 증가할수록 1인당 수확량은 점차 적어진다는 프로젝트 자원 관리 법칙",
+    "mnemonic": "관기 종자평활"
+  },
+  {
+    "id": "pm-43",
+    "title": "브룩스 법칙",
+    "category": "프로젝트관리",
+    "group": "프로젝트 일정관리 (시간관리)",
+    "importance": "출제예상",
+    "summary": "지연된 플젝에 추가인력을 투입하는 것은 오히려 딜레이를 초래한다는 법칙. 기존 인력들과의 의사소통 및 교육문제로 인해 딜레이",
+    "mnemonic": "편측관산"
+  },
+  {
+    "id": "pm-44",
+    "title": "프로젝트 원가(예산)관리",
+    "category": "프로젝트관리",
+    "group": "원가관리(예산관리)",
+    "importance": "중",
+    "summary": "프로젝트 활동 수행에 필요한 원가 산정, 전체 예산 확정 및 예산 내 프로젝트 완료하도록 통제하는 일련의 과정",
+    "mnemonic": "계산결통"
+  },
+  {
+    "id": "pm-45",
+    "title": "원가 산정 기법",
+    "category": "프로젝트관리",
+    "group": "원가관리(예산관리)",
+    "importance": "중",
+    "summary": "Analogous 산정, 3점 추정방식(PERT) 외 산정 방식 이해,",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-46",
+    "title": "획득가치관리(EVM)",
+    "category": "프로젝트관리",
+    "group": "원가관리(예산관리)",
+    "importance": "상",
+    "summary": "프로젝트 비용, 일정, 수행목표의 기준을 설정하고 계획 대비 실제 진도 측정 및 분석을 통해 문제점 분석, 만회 대칙 수립, 향후 예측을 가능하는 성과 위지 관리 기법",
+    "mnemonic": "측분예"
+  },
+  {
+    "id": "pm-47",
+    "title": "프로젝트 품질관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 품질(Quality) 관리",
+    "importance": "상",
+    "summary": "주어진 요구사항을 충족시키는데 필요한 품질정책, 품질목표, 품질 관련 책임사항들을 결정 및 수행하는 회사 차원의 모든 활동",
+    "mnemonic": "계보통"
+  },
+  {
+    "id": "pm-48",
+    "title": "품질관리계획수립",
+    "category": "프로젝트관리",
+    "group": "프로젝트 품질(Quality) 관리",
+    "importance": "중",
+    "summary": "프로젝트 및 산출물과 품질 요구사항이 어떻게 동작하는지 문서화 기준을 수립하는 프로세스",
+    "mnemonic": "요보통"
+  },
+  {
+    "id": "pm-49",
+    "title": "품질보증(QA), 품질관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 품질(Quality) 관리",
+    "importance": "중",
+    "summary": "프로젝트에서 품질관리 정책을 반영위한 품질 활동 실행 및 품질 관리 계획을 적용 프로세스",
+    "mnemonic": "리인웍"
+  },
+  {
+    "id": "pm-50",
+    "title": "품질통제(QC)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 품질(Quality) 관리",
+    "importance": "출제예상",
+    "summary": "프로젝트 결과가 관련 품질 기준을 준수하는지를 결정하기 위해 감시하고 기록하면서 성과를 평가하고 권고안을 제시하는 활동 ---------------------------------",
+    "mnemonic": "현원자"
+  },
+  {
+    "id": "pm-51",
+    "title": "프로젝트 형상관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 품질(Quality) 관리",
+    "importance": "상",
+    "summary": "SDLC 및 유지보수 과정에서 만들어지는 각 단계의 산출물을 체계적으로 관리하여 품질 보증활동을 향상시키는 기법",
+    "mnemonic": "식통감기"
+  },
+  {
+    "id": "pm-52",
+    "title": "프로젝트 자원관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 자원관리",
+    "importance": "중",
+    "summary": "프로젝트에 적합한 인적자원 및 물적자원을 적절히 확보하여 적기에 투입 및 관리하기 위한 프로세스",
+    "mnemonic": "계활확팀개관통"
+  },
+  {
+    "id": "pm-53",
+    "title": "RACI 기법(챠트)",
+    "category": "프로젝트관리",
+    "group": "프로젝트 자원관리",
+    "importance": "중",
+    "summary": "프로젝트 수행시 개인이나 조직의 업무나 활동에 대한 역할, 책임, 권한을 정의하는 차트",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-54",
+    "title": "가상팀/원격개발",
+    "category": "프로젝트관리",
+    "group": "프로젝트 자원관리",
+    "importance": "중",
+    "summary": "직접 대면하는 일이 극히 적거나 전혀 없이 공통의 목표 아래 주어진 역할을 완수하는 사람들로 구성된 작업 팀",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-55",
+    "title": "동기부여이론",
+    "category": "프로젝트관리",
+    "group": "프로젝트 자원관리",
+    "importance": "출제예상",
+    "summary": "조직원들이 어떤 욕구나 보상에 의해 어떠한 행동을 보이고, 그 성과가 어떠한지 분석하는 이론",
+    "mnemonic": "내과강"
+  },
+  {
+    "id": "pm-56",
+    "title": "터크만 5가지 팀개발",
+    "category": "프로젝트관리",
+    "group": "프로젝트 자원관리",
+    "importance": "중",
+    "summary": "팀 개발을 설명하기 위해 사용되는 모델로 미국 심리학자 브루스 웨인 터크만이 제시한 팀 개발 5단계 - 형성 : 프로젝트 이해단계 (팀원:독립적, PM:팀 결속력, 단결노력) - ",
+    "mnemonic": "포스노피아"
+  },
+  {
+    "id": "pm-57",
+    "title": "프로젝트 의사소통관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 의사소통관리",
+    "importance": "중",
+    "summary": "프로젝트 수행 도중 이해당사자들이 어떤 정보를 어떻게 생성 취합, 분류, 보관 배포할지 등을 결정하는 활동 - PMBOK6판 의사소통 통제 -> 의사소통 감시로 변경",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-58",
+    "title": "의사소통 채널수",
+    "category": "프로젝트관리",
+    "group": "프로젝트 의사소통관리",
+    "importance": "하",
+    "summary": "의사소통 채널 수 = ( N - 1 ) * N / 2",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-59",
+    "title": "프로젝트 위험관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 위험관리",
+    "importance": "상",
+    "summary": "프로젝트 위험요소를 체계적으로 식별, 평가하고 관리. 조기식별중요",
+    "mnemonic": "계식성량계대감"
+  },
+  {
+    "id": "pm-60",
+    "title": "정성적 위험 분석",
+    "category": "프로젝트관리",
+    "group": "프로젝트 위험관리",
+    "importance": "상",
+    "summary": "프로젝트 위험 대응을 위해 위험의 우선순위를 결정하는 프로세스",
+    "mnemonic": "수분표대기 - 인 영품기 영계 촉 전유미"
+  },
+  {
+    "id": "pm-61",
+    "title": "위험 식별",
+    "category": "프로젝트관리",
+    "group": "프로젝트 위험관리",
+    "importance": "중",
+    "summary": "프로잭트 위험을 찾는 프로세스, 산출문)위험관리대장",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-62",
+    "title": "정량적 위험 분석",
+    "category": "프로젝트관리",
+    "group": "프로젝트 위험관리",
+    "importance": "상",
+    "summary": "프로젝트 위험을 수치화 하여 프로젝트에 미치는 영향 분석하는 프로세스",
+    "mnemonic": "수분대기 -"
+  },
+  {
+    "id": "pm-63",
+    "title": "시뮬레이션 기법",
+    "category": "프로젝트관리",
+    "group": "프로젝트 위험관리",
+    "importance": "중",
+    "summary": "수리적인 방법 적용이 곤란하거나 불가능할 때 사용하는 방법으로 시스템 상태를 파악하는 묘사적 방법",
+    "mnemonic": "문수모타실분"
+  },
+  {
+    "id": "pm-64",
+    "title": "위험 대응 계획 수립",
+    "category": "프로젝트관리",
+    "group": "프로젝트 위험관리",
+    "importance": "상",
+    "summary": "[긍정적 위험전략] 에스컬레이션(경영자 보고), 활용(추가인력 투입), 공유(컨소시엄 구축)",
+    "mnemonic": "에활공증수"
+  },
+  {
+    "id": "pm-65",
+    "title": "프로젝트 조달관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 조달관리 (발주관리/외주관리/계약관리)",
+    "importance": "중",
+    "summary": "프로젝트 외부에서 프로젝트 성공을 위해 필요한 제품, 서비스 등을 구매 계약 및 변경통제, 계약 종료까지의 프로세스 관리",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-66",
+    "title": "계약 유형 3가지",
+    "category": "프로젝트관리",
+    "group": "프로젝트 조달관리 (발주관리/외주관리/계약관리)",
+    "importance": "중",
+    "summary": "[고정가 계약] 총 공급가를 확정된 고정가 총액 기준으로 하는 계약",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-67",
+    "title": "프로젝트 이해관계자관리",
+    "category": "프로젝트관리",
+    "group": "프로젝트 이해관계자관리",
+    "importance": "중",
+    "summary": "프로젝트에 직/간접적으로 영향을 미칠 수 있는 이해관계자를 식별하고 그들의 기대치/영향도를 분석하여 프로젝트에 효과적으로 참여시키기 위한 전략",
+    "mnemonic": "식계관통"
+  },
+  {
+    "id": "pm-68",
+    "title": "현저성 모델",
+    "category": "프로젝트관리",
+    "group": "프로젝트 이해관계자관리",
+    "importance": "중",
+    "summary": "이해관계자를 분석한 후에, 프로젝트 관리자가 이해관계자를 잘 관리하기 위해, 권력, 합법성, 긴급성의 3가지 속성으로 이해관계자를 분류하고, 그들의 등급을 부여, 관리하는 모델",
+    "mnemonic": "권합긴"
+  },
+  {
+    "id": "pm-69",
+    "title": "이해관계자 참여 수준 평가 매트릭스",
+    "category": "프로젝트관리",
+    "group": "프로젝트 이해관계자관리",
+    "importance": "출제예상",
+    "summary": "모든 이해관계자들에 대한 계획하는 참여 수준과 현재의 실제 참여 수준을 비교하기 위한 분석적 기법",
+    "mnemonic": "현희"
+  },
+  {
+    "id": "pm-70",
+    "title": "선언문 4개 문장",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "출제예상",
+    "summary": "절차보다 사람이 중심 되어 변화에 유연하고 신속하게 적응해 효율적으로 개발 할 수 있는 방법론",
+    "mnemonic": "개변동고"
+  },
+  {
+    "id": "pm-71",
+    "title": "12개 원칙",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "출제예상",
+    "summary": "고객만족 추구, 요구변경 수용, 짧은 배포주기, 일일의사소통, 동기부여,",
+    "mnemonic": "고요배의동"
+  },
+  {
+    "id": "pm-72",
+    "title": "스테이시 복잡도 모델",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "중",
+    "summary": "Agile 을 이해관계자에게 가장 잘 설명하고 불확실성과 복잡도를 설명 및 해결하기 위한 모델.",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-73",
+    "title": "SCRUM",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "상",
+    "summary": "product backlog를 sprint단위로 분할하여 반복적으로 개발하며 daily meeting, review통해 개선활동을 수행하는 Agile개발방법론",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-74",
+    "title": "XP",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "상",
+    "summary": "의사소통 개선, 즉각적인 피드백에 의해 단순하게 코딩하여 SW품질을 높이기 위한 방법론",
+    "mnemonic": "용단커피존"
+  },
+  {
+    "id": "pm-75",
+    "title": "Kanban (development)",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "상",
+    "summary": "workflow를 표현하는 칸반보드를 통해 공정을 시각화하고 WIP제한, 흐름관리를 통해 적시개발을 지원하는 Agile방법론",
+    "mnemonic": "가워흐정프개현변기리"
+  },
+  {
+    "id": "pm-76",
+    "title": "스크럼보드와 칸반보드 비교",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "중",
+    "summary": "[수행 원리] Sprint를 통한 반복적 개발 / Workflow를 통한 연속적 개발",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-77",
+    "title": "Lean(린) / 린 경영",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "상",
+    "summary": "TPS(Toyota Production System)을 재정립한 경영방법론인 린시스템의 품질기법을 소프트웨어 개발에 적용한 개발방법론",
+    "mnemonic": "낭배늦팀빠통전"
+  },
+  {
+    "id": "pm-78",
+    "title": "Lean UX",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "하",
+    "summary": "핵심 가치를 정의 후 기반한 가설 만들고, 빨리 검증하여, 핵심지표를 계속해서 조정해 나가면서 진행하는 방법론",
+    "mnemonic": "http://www.slideshare.net/number00/pxdlean-ux-lean-ux"
+  },
+  {
+    "id": "pm-79",
+    "title": "린스타트업",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "하",
+    "summary": "아이디어를 빠르게 MVP(Minimum Viable Product)로 개발한 뒤 시장의 반응을 통해 다음 제품 개선에 반영하는 경영전략 ' - 현장 중심의 고객 관점, 린 사고(낭",
+    "mnemonic": "빌미런 아프데"
+  },
+  {
+    "id": "pm-80",
+    "title": "Pair programming",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "출제예상",
+    "summary": "두 사람이 한 컴퓨터를 사용해서 Pair Work로 프로그래밍을 하는 기법",
+    "mnemonic": "집버동높"
+  },
+  {
+    "id": "pm-81",
+    "title": "CI, CD",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "출제예상",
+    "summary": "[CI의 정의]",
+    "mnemonic": "버통빌테인커"
+  },
+  {
+    "id": "pm-82",
+    "title": "Product Backlog",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "중",
+    "summary": "스크럼 방법론에서 프로젝트를 완료하는데 필요한 요구사항 목록들을 우선순위별로 정리된 목록",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-83",
+    "title": "Planning Poker",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "중",
+    "summary": "전통적인 방식과 달리 한 사람이 주도적으로 추정하는 것이 아니라 팀 전체가 같이 지혜를 모아 업무량을 추정 하는 실천 기법 플래닝 포커는 사용자 스토리의 규모를 추정하는 방식 각 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-84",
+    "title": "MVP",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "출제예상",
+    "summary": "최소 실행가능한 제품",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-85",
+    "title": "Story Point",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "중",
+    "summary": "User Story를 구현하는데 소요 기간, 개발 복잡도 그리고 내재된 위험성등 종합적으로 분석해 나타낸 값",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-86",
+    "title": "번다운차트",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "출제예상",
+    "summary": "Agile 프로젝트기반 조직에서 점수(Story Point)를 산정하여 Sprint 계획대비 현재진행을 파악할 수 있는 차트 스토리포인트(Story Point) 산정, Sprint",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-87",
+    "title": "기능 차트",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "하",
+    "summary": "전체 처리해야 할 기능(#Total)에 대해 완료 수(#Complete)와 남아 있는 수(#Remaining)를 표현하여, 기능 처리 속도를 측정하고 관리하기 위한 차트",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-88",
+    "title": "MSA와 Monolithic Architecture",
+    "category": "프로젝트관리",
+    "group": "Agile 프로세스",
+    "importance": "상",
+    "summary": "[모노리식 아키텍처] 기존의 전통적인 웹 시스템 개발 스타일로, 하나의 애플리케이션 내에 모든 조직들이 들어 가 있는 구조",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-89",
+    "title": "프로젝트관리 분류",
+    "category": "프로젝트관리",
+    "group": "PMO/PM",
+    "importance": "하",
+    "summary": "[프로젝트관리] 프로젝트 관리 위한 일정, 조직, 인력, 지휘, 통제를 제공하는 기술, 지식 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-90",
+    "title": "감리/PMO 비교표",
+    "category": "프로젝트관리",
+    "group": "PMO/PM",
+    "importance": "상",
+    "summary": "[관점] 제3자 관점 / 발주자 관점",
+    "mnemonic": "목관대투근책기"
+  },
+  {
+    "id": "pm-91",
+    "title": "(E)PMO",
+    "category": "프로젝트관리",
+    "group": "PMO/PM",
+    "importance": "상",
+    "summary": "- 다수의 IT 프로젝트를 기업 비즈니스전략과 정렬하고 프로젝트 별 기업 자원 투입, PMO 간 의견 조율 등을 수행하는 최상위 PMO 도입절차] 도입계획수립-PMO가동준비-PMO",
+    "mnemonic": "도발착기집사검산제"
+  },
+  {
+    "id": "pm-92",
+    "title": "공공 PMO",
+    "category": "프로젝트관리",
+    "group": "PMO/PM",
+    "importance": "상",
+    "summary": "전자정부법 64조 2항, 발주자 관점에서 프로젝트의 성공을 위해 범위,일정, 비용,위험의 관리를 위탁받은 전문조직",
+    "mnemonic": "기집사"
+  },
+  {
+    "id": "pm-93",
+    "title": "PM/촉진자 비교",
+    "category": "프로젝트관리",
+    "group": "PMO/PM",
+    "importance": "중",
+    "summary": "[PM] 수행 조직에서 프로젝트 목표를 달성할 책임을 지고 팀을 이끌도록 선임된 책임자",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-94",
+    "title": "PM Skill",
+    "category": "프로젝트관리",
+    "group": "PMO/PM",
+    "importance": "하",
+    "summary": "[소프트 스킬(Soft Skill)] 자아와 타인을 다루는 능력, 학습에 의해 취득하기 어려운 능력 ('소프트 스킬' 이란, 기업 조직 내에서 커뮤니케이션, 협상, 팀워크, 리더십",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-95",
+    "title": "기술자 등급제와 IT직무제",
+    "category": "프로젝트관리",
+    "group": "기타",
+    "importance": "하",
+    "summary": "직무제(이하 IT직무제)로 변경되어 운영되고 있으나 실무 현장에서는 여전히 폐지된 등급제가 다수 활용되고 있는 실정이다. 소프트웨어 기술자 구분에 대하여 다음을 설명",
+    "mnemonic": ""
+  },
+  {
+    "id": "pm-96",
+    "title": "Gray zone",
+    "category": "프로젝트관리",
+    "group": "기타",
+    "importance": "하",
+    "summary": "프로젝트에서 책임, 의사결정 주체가 불분명하여, 명확한 역할 정의 부족, 조직 간 경계 문제, 의사소통 단절 등으로 의사결정 지연과 비효율성을 초래하는, 업무 진행이 모호해지는 영",
+    "mnemonic": ""
   }
 ]
