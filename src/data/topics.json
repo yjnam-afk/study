@@ -12526,5 +12526,3587 @@
     "importance": "하",
     "summary": "인공지능(AI)이 네트워크 설계 단계부터 내재화된 AI-Native Network 구조를 통해, 사람이 개입하지 않아도 네트워크 스스로 상태를 분석하고 최적의 성능을 유지하는 최적",
     "mnemonic": "138_관리_4"
+  },
+  {
+    "id": "sec-1",
+    "title": "보안 특징",
+    "category": "보안",
+    "group": "기본",
+    "importance": "상",
+    "summary": "정보의 기밀성(Confidentiality), 무결성(Integrity), 가용성(Availability). 추가적으로 진정성(authenticity), 책임성(accountabi",
+    "mnemonic": "인기무부"
+  },
+  {
+    "id": "sec-2",
+    "title": "암호화(Encryption)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "상",
+    "summary": "[목적] 인증(Authentication), 기밀성(Confidentiality), 무결성(Integrity), 부인방지(NonReputation)",
+    "mnemonic": "인기무부"
+  },
+  {
+    "id": "sec-3",
+    "title": "암호화 원리",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "대체, 블록, 치환, 확장, 혼돈, 확산, 압축",
+    "mnemonic": "대블치확혼확압"
+  },
+  {
+    "id": "sec-4",
+    "title": "스트림 암호화(stream cipher)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "대칭 키 암호의 구조",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-5",
+    "title": "블록 암호화",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "상",
+    "summary": "[운영모드] ECB(Electronic CodeBook,사용금지), CBC(Cipher Block Chaning,권장),",
+    "mnemonic": "ECPCOC"
+  },
+  {
+    "id": "sec-6",
+    "title": "비밀키 암호화/비대칭키 암호봐",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "공개키 암호화",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-7",
+    "title": "Feistel(피스텔)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "하",
+    "summary": "평문을 두 블록으로 나누어 XOR (Exclusive-OR)와 Swap 기법을 이용하는 라운드를 R번 반복으로 암호문을 만드는 블록 암호화 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-8",
+    "title": "암호학적 해시 함수",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "상",
+    "summary": "역상저항, 제2역상저항, 충돌에 대해 안정성을 갖고, 임의 길이 입력값에 대해 최대 길이에 제한을 갖는 암호화 알고리즘",
+    "mnemonic": "압효단충"
+  },
+  {
+    "id": "sec-9",
+    "title": "타원곡선",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "하",
+    "summary": "[필요성] RSA의 속도와 기민성 문제 해결, IC카드,PDA 등 HW적 구현, 적은 메모리의 암/복호화 알고리즘 필요",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-10",
+    "title": "DES",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "하",
+    "summary": "56bit 키를 이용, 64Bit 평문 블록을 64bit의 암호문 블록으로 만드는 블록 암호 방식의 미국표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-11",
+    "title": "RSA",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "하",
+    "summary": "소인수분해 기반 공개키-개인키를 생성하는 암호화 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-12",
+    "title": "Diffie-Hellman 키 교환",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "암호화 키를 교환하는 하나의 방법으로 두 사람이 암호화되지 않은 통신망을 통해 공통의 비밀키를 공유하도록 하는 암호화 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-13",
+    "title": "SEED",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "KISA와 국내 기술진에 의해 개발되어, ISO/IEC 및 IETF 표준으로 제정된 128비트 대칭키 블록화 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-14",
+    "title": "AES(Advanced Encryption Standard)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "DES를 대체하는 미국의 연방 표준 암호화 알고리즘으로 암호화 복호화 과정에서 동일한 키를 사용하는 대칭키 기반 암호화 알고리즘",
+    "mnemonic": "서시미아"
+  },
+  {
+    "id": "sec-15",
+    "title": "양자암호기술",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "상",
+    "summary": "양자암호통신(Quantum Cryptography Communication)",
+    "mnemonic": "편위채퍼B"
+  },
+  {
+    "id": "sec-16",
+    "title": "큐비트(Qubit)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "- 일반 컴퓨터는 정보를 0과 1의 비트단위로 처리하고 저장하는 반면, 정보를 0과 1의 상태를 동시에 갖는 양자 컴퓨터의 기본 연산 단위(퀀텀 비트(Quantum Bit)의 줄임",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-17",
+    "title": "BB84",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "상",
+    "summary": "0비트와 1비트의 상태를 나타내는 편광을 이용해 십자필터와 대각필터를 통해 측정해 안전하게 키를 교환하는 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-18",
+    "title": "양자내성암호화",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "다변수기반(Multivariate-based), 코드기반(Code-based), 격자기반(Lattice-based), 아이소제니기반(Isogeny-based), 해시기반(Hash-",
+    "mnemonic": "다코격아해"
+  },
+  {
+    "id": "sec-19",
+    "title": "하이브리드 양자암호통신",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "양자암호통신의 보완, 하이브리드 양자암호통신",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-20",
+    "title": "LEA",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "2012년 국가보안기술연구소에서 개발한 높은 안전성과 우수한 효율성 제공하는 128bit 블록 암호 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-21",
+    "title": "블록체인기술",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "데이터 거래 시 기존의 중앙 집중형 서버 관리 방식이 아닌, 거래에 참여하는",
+    "mnemonic": "문제) 블록체인으로 암호화를 적용하는 방안 기술하라면?"
+  },
+  {
+    "id": "sec-22",
+    "title": "전자 서명(Digital Signature)/디지털 서명",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "서명자가 해당 전자문서에 서명하였음을 나타내기 위해 전자문서에 첨부되거나 논리적으로 결합된 전자적 형태의 정보(송씨 개인은 송공에 있다)",
+    "mnemonic": "송씨 개인은 송공에 있다"
+  },
+  {
+    "id": "sec-23",
+    "title": "이중 서명",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "판매자는 구매 정보만을, 금융기관은 결제 정보만 알 수 있도록 각각의 공개키로 암호화하는 두단계 서명 지급결제 보안 + 사용자 프라이버시 보안 구매 정보/결제 정보를 송신자 개인키",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-24",
+    "title": "메시지 인증(Message Authentication)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "하",
+    "summary": "데이터가 변조(수정, 삭제, 삽입 등)되었는지를 검증할 수 있도록 데이터에 덧붙이는 코드",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-25",
+    "title": "HMAC",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "송신자와 수신자만 공유하고 있는 Key와 Message를 혼합하여 Hash값을 만드는 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-26",
+    "title": "엘가멜(ElGamal)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "출제예상",
+    "summary": "암호화와 전자서명을 위해 개발한 암호화 기법으로 유한체(finite field)에서의 이산대수 문제에 바탕을 둔 암호 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-27",
+    "title": "형태보존암호화(Format-Preserving Encyption)/순서보존암호화(Order-Preserving Encyption)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "[형태보존암호화] 특정한 형태의 평문 값을 동일한 형태의 암호 값으로 변환, 시스템 변경 최소화 및 암호문 기반 통계분석 활용성 향상 지원, NIST 표준 암호화 알고리즘(FF1,",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-28",
+    "title": "동형 암호",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "중",
+    "summary": "암호화와 전자서명을 위해 개발한 암호화 기법으로 유한체(finite field)에서의 이산대수 문제에 바탕을 둔 암호 알고리즘",
+    "mnemonic": "부부스"
+  },
+  {
+    "id": "sec-29",
+    "title": "종단간 암호화(E2EE)",
+    "category": "보안",
+    "group": "암호화",
+    "importance": "하",
+    "summary": "통신하는 단말 사이에만 암호화, 복호화가 이루어지고 중간 서버나 통신 경로에서는 데이터를 해독할 수 없는 암호화 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-30",
+    "title": "Sniffing",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "컴퓨터 네트워크 상에서 자신이 아닌 다른 상대방들의 패킷 교환을 엿듣는 도청 행위 (소극적 공격)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-31",
+    "title": "부 채널 공격",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "디바이스에 구현된 암호 알고리즘이 동작할 때 발생하는 부채널 정보를 측정하여 암호 알고리즘 및 키 값 등을 분석하는 공격기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-32",
+    "title": "IP Spoofing",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "IP Protocol의 인증 취약점을 악용하여 공격자가 자신의 IP Address를 공격하고자 하는 네트워크의 호스트 IP Address로 바꾸어 IP 기반의 인증을 무력화 시키는",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-33",
+    "title": "ARP 스푸핑 공격",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "상",
+    "summary": "MAC 주소를 속이는 것. 로컬에서 통신하고 있는 서버와 클라이언트의 IP 주소에 대한 2계층 MAC 주소를 공격자의 MAC 주소로 속임으로써, 클라이언트에서 서버로 가는 패킷이나",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-34",
+    "title": "RARP",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "역순 주소 결정 프로토콜(Reverse Address Resolution Protocol, RARP)은 IP호스트가 자신의 물리 네트워크 주소(MAC)는 알지만 IP주소를 모르는 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-35",
+    "title": "ARP poisoning",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "MAC Table을 위조하는 공격기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-36",
+    "title": "ARP Redirect",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "상",
+    "summary": "네트워크상의 다른 모든 호스트들이 공격자 호스트를 라우터로 믿게끔 하여 네트워크상의 모든 트래픽을 공격자의 호스트를 경유하게 하여 훔쳐보는(Sniffing) 공격 기법.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-37",
+    "title": "DNS Spoofing",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "취약한 DNS 서버에 조작된 Query를 전송하여 DNS 서버가 저장하고 있는 주소 Cache 정보를 임의로 변조하는 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-38",
+    "title": "TCP SYN Flooding",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "상",
+    "summary": "TCP 프로토콜의 3 Way Handshake를 악용, Buffer Overflow",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-39",
+    "title": "포멧 스트링 공격(Format String Attack)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "printf()와 같은 C함수 서 숫자, 문자등을 출력시 포맷스트링의 취약점을 이용, 특정 메모리 위치 값 변경 및 시스템 권한 획득할 수 있는 공격기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-40",
+    "title": "Smurfing(스머핑)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "여러 호스트가 특정 대상자에게 다량의 ICMP Echo Request 를 보내게 하여 서비스거부(DoS)를 유발시키는 보안 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-41",
+    "title": "Buffer Overflow 공격",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "연속된 메모리 공간을 사용하는 프로그램의 할당 메모리범위를 넘어선 위치의 자료를 읽기/쓰기시 발생현상 이용, 프로그램 오동작 유발 또는 악성코드 실행 통한 공격자가 프로그램 통제권",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-42",
+    "title": "DoS, Ddos, Model DoS",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "상",
+    "summary": "[Dos 정의] 정상적인 서비스를 하는 자원을 무리하게 요청해서 원활한 서비스가 제공될 수 없도록 하는 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-43",
+    "title": "PDoS 공격",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "하",
+    "summary": "사전에 기기의 펌웨어에 악성코드 삽입, 유통시킨후 공격을 가해 DoS 및 과부하 피해를 입힌후에 제품 자체를 파괴시키는 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-44",
+    "title": "RUDY",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "하",
+    "summary": "웹 서버와 다수의 커넥션을 맺은 후 각 커넥션 별로 데이터를 매우 느리게 전송함으로써 웹 서버의 커넥션 자원을 고갈시키는 DDoS 공격 기법(RUDY는 R-U-Dead-Yet의 줄",
+    "mnemonic": "리리세"
+  },
+  {
+    "id": "sec-45",
+    "title": "APT",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "상",
+    "summary": "타겟팅이 분명한 정밀화, 지능형 타겟 지속공격 - 특수한 목적을 가진 하나의 표적에 대해 다양한 기술을 이용해 지속적으로 정보를 수집하고 취약점을 파악 후 피해 유발 공격 기법 \"",
+    "mnemonic": "침검수유"
+  },
+  {
+    "id": "sec-46",
+    "title": "드라이브 바이 다운로드(DBD)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "네트워크를 통한 취약한 서비스를 공격하는 방식에서 벗어나 웹 페이지에 악성 스크립트를 설치하고 사용자가 악의적인 웹사이트에 접속하는 순간 사용자 동의 없이 실행되어 악성코드에 감염",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-47",
+    "title": "Exploit",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "소프트웨어, 하드웨어 등의 버그 혹은 제조, 프로그래밍 과정에서 발생한 취약한 부분을 이용하여 공격자가 의도한 동작이나 명령을 실행하도록 만든 소프트웨어를 지칭하거나, 그러한 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-48",
+    "title": "랜섬웨어(Ransomware)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "상",
+    "summary": "ransom(몸값)과 ware(제품)의 합성어, 컴퓨터에 저장된 파일들을 암호화하여 사용자가 읽을 수 없는 문자들로 바꿔버린 후, 암호화를 풀어주는(복호화) 대가로 금전(몸값)을 ",
+    "mnemonic": "사금암"
+  },
+  {
+    "id": "sec-49",
+    "title": "표적형 랜섬웨어(Ransomware)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "특정기업이나 기관의 취약점을 분석하여 이를 대상으로 정보유출과 파일 암호화를 동시에 실행하며 금전적 협박을 가하는 표적공격과 랜섬웨어가 결합된 보안 위협",
+    "mnemonic": "지이특정암금"
+  },
+  {
+    "id": "sec-50",
+    "title": "Ransome Web",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "웹 서버에 저장된 DB를 암호화하고 해당 정보를 인질로 삼아 돈을 요구하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-51",
+    "title": "RaaS(Ransomeware as a Service)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "다크웹과 같은 익명 네트워크를 이용하여 비용만 지급하면 랜섬웨어 공격을 할 수 있게끔 서비스 형태로 제공되는 랜섬웨어",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-52",
+    "title": "Cryptojacking",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "가상화폐 채굴 신종 해킹",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-53",
+    "title": "워너크라이(WannaCry) - 랜섬웨어",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "하",
+    "summary": "워너크라이 개념",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-54",
+    "title": "스피어피싱(Spear Phishing)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "직장 동료나 친구, 가족을 사칭한 이메일 사기로, 특정 대상의 ID/PW 해킹하여 정보 획득하는 해킹 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-55",
+    "title": "워터링 홀 공격 (Watering-Hole Attack)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "미리 공격대상이 방문할 사이트에 미리 감염. 피해자의 컴퓨터 암성코드 설치하는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-56",
+    "title": "Slow Read DDos Attack",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "하",
+    "summary": "윈도우 사이즈를 0 또는 작은 데이터를 만들어, 웹서버의 3-way hadshaking 시에",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-57",
+    "title": "Slowloris (Dos)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "HTTP 데이터를 장시간 유지하여, 웹서버의 리소스를 모두 소진하는 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-58",
+    "title": "은닉채널(Covert Channel)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "기본 채널에 기생하는 통신 채널로서, 은닉 메시지 등 채널에 속여서, 혹은 삽입해서 전달하는 채널 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-59",
+    "title": "사회공학(Social Engineering",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "하",
+    "summary": "기술적 방법이 아닌 사람들간의 기본적인 신뢰를 기반으로 비밀정보를 획득하거나 정상적인 보안 절차를 깨뜨리는 침입수단",
+    "mnemonic": "정관공실"
+  },
+  {
+    "id": "sec-60",
+    "title": "레터럴 무브먼트(Lateral Movement)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "하",
+    "summary": "래터럴 무브먼트(Lateral movement, 내부망 이동; 옆으로의 )",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-61",
+    "title": "Shellcode",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "공격 대상 시스템의 명령어 쉘(Command Shell-ect:bash)을 실행시킨다는 의미로 파생되었으며, 주로 소프트웨어 취약점을 통한 공격(Exploitation)이후 실행 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-62",
+    "title": "레이스 컨디션(Race Condition) 공격",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "공유 자원에 여러 개의 프로세스가 동시에 접근하기 위한 경쟁 상태에서 생성된 임시 파일을 통해 관리자 권한을 탈취하는 공격 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-63",
+    "title": "Credential Stuffing",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "출제예상",
+    "summary": "이미 확보된 로그인정보를 이용해 다른 사이트나 계정에 Brute Force 하는 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-64",
+    "title": "Malvertising(멀버타이징)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "온라인 광고를 통해 악성코드(Malware)를 유포시키는 공격 행위",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-65",
+    "title": "비지니스 스캠(Business SCAM)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "인터넷 무역이 Seller 와 buyer 간의 비대면 거래를 통해 이뤄지는 형태를 이용하여, 양측의 이메일을 해킹하여 거래처로 위장해 비즈니스 거래대금을 가로채는 이메일 피싱형태의",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-66",
+    "title": "딥링크(Deeplink)",
+    "category": "보안",
+    "group": "Hacking(해킹)",
+    "importance": "중",
+    "summary": "웹링크가 사용자를 특정 웹사이트로 이동시키듯이, 딥링크는 사용자를 특정 앱으로 이동시켜서 원하는 화면을 보여주거나, 사용자 액션을 유도하는 링크 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-67",
+    "title": "Worm",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "자기복제성, 숙주 프로그램없이 독자 실행, 시스템간 전파",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-68",
+    "title": "스턱스넷(Stuxnet)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "상",
+    "summary": "1) MS 제품으로 스턱스넷이 침투",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-69",
+    "title": "Virus",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "숙주 프로그램, 실행 가능 파일에 감염, 복제/변형/전이",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-70",
+    "title": "Zombie (PC)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "바이러스에 감염됐지만 스스로 인지하지 못한 채 스팸을 보내는 등 원격조종당하는 PC",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-71",
+    "title": "트로이 목마(Trojan horse)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "하",
+    "summary": "겉으로 보기에는 전혀 해를 끼치지 않을 것처럼 보이지만 실제로는 바이러스 등의 위험 인자를 포함하고 있는 프로그램 자기 복제 능력이 없다는 것이 바이러스와의 차이점",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-72",
+    "title": "스파이웨어",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "사용자의 동의없이 특정 사이트에 접속하게 만들거나 정보를 유출하는 악성코드",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-73",
+    "title": "악성 봇",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "하",
+    "summary": "감염된 컴퓨터에서 일반 프로세스처럼 존재하지만 스스로 움직이지 않고 공격자가 원격 제어 가능하게 만드는 악성코드 DNS 싱크홀 (악성 봇에 따른 DDoS 공격 대응)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-74",
+    "title": "루트킷",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "하",
+    "summary": "전통적 UNIX 시스템에서 관리자 계정 뜻하는 root와 소프트웨어 컴포넌트 뜻하는 kit의 합성어로서, 컴퓨터의 관리자 권한을 유지하고 자신의 존재를 운영체제 또는 다른 프로그램",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-75",
+    "title": "Mirai 봇넷(미라이)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "IoT 디바이스를 마라이 봇넷으로 감염시킨 후, 좀비로 활용하는 DDoS 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-76",
+    "title": "Phishing",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "금융기관 등을 사칭하여 불특정 다수에게 이메일 등 발송해 가짜 사이트로 접속을 유도하여 개인의 금융기관 카드정보나 계좌정보 등을 빼내는 사기기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-77",
+    "title": "Pharming",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "합법적으로 소유하고 있는 도메인을 탈취하거나, 도메인네임시스템 (DNS) 이름을 속여 사용자들이 진짜 사이트로 오인하도록 유도, 개인정보를 훔치는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-78",
+    "title": "Smishing",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "하",
+    "summary": "스미싱, 문자메시지(SMS)+피싱(phishing) = 문자메시지 이용 휴대폰 해킹, 접속유도, 악성코드감염",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-79",
+    "title": "큐싱(Qshing)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "출제예상",
+    "summary": "QR코드와 피싱(Fishing)의 합성어로, 사용자를 속이기 위해 한 단계 진화된 금융사기 수법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-80",
+    "title": "스팸(Spam) 메일,",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "정보통신망법과 전기통신사업법 개정, 발신번호 변작방지",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-81",
+    "title": "크라임웨어(Crimeware)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "사이버공격에 사용되는 악성코드 및 소프트웨어를 지칭",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-82",
+    "title": "Web Shell",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "파일 업로드 취약점 등 이용하며 공격자가 원격에서 대상 웹 서버에 명령 내려 수행할 수 있도록 작성된 웹 스크립트(asp, jsp, php, cgi) 파일 - 웹 서버에 명령을 실",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-83",
+    "title": "파일리스 악성코드(Fileless Malware)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "출제예상",
+    "summary": "E-Mail의 첨부파일, 인터넷 상에서 쉽게 다운 받을 수 있는 PDF, JPEG 등에 삽입되어 배포",
+    "mnemonic": "스링파메다위"
+  },
+  {
+    "id": "sec-84",
+    "title": "인포스틸러(InfoStealer)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "출제예상",
+    "summary": "- 정보 탈취형 악성코드로서 웹 브라우저나 이메일 클라이언트 같은 프로그램에 저장되어 있는 사용자 계정 정보나 가상화폐 지갑 주소, 파일과 같은 사용자의 정보들을 탈취하는 것이 목",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-85",
+    "title": "타이포스쿼팅(Typosquatting)",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "자주 사용하는 사이트의 URL을 교묘하게 바꿔 가짜 사이트로 유도 하거나, 파일 이름을 속인 악성 소프트웨어 패키지를 내려 받도록 유도하는 사회공학적 공격 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-86",
+    "title": "기타 용어",
+    "category": "보안",
+    "group": "악성프로그램 (Malware, 악성코드)",
+    "importance": "중",
+    "summary": "논리 폭탄(logic bomb): 특정한 조건의 발생이나 특정한 데이터의 입력을 기폭제로 컴퓨터에 부정한 행위를 실행시키는 것.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-87",
+    "title": "정적 분석(Static code Analysis)",
+    "category": "보안",
+    "group": "악성코드 분석 방법",
+    "importance": "상",
+    "summary": "디스어셈블러(Dis-assembler)나 디컴파일러",
+    "mnemonic": "소코리"
+  },
+  {
+    "id": "sec-88",
+    "title": "동적 분석(Dynamic)",
+    "category": "보안",
+    "group": "악성코드 분석 방법",
+    "importance": "상",
+    "summary": "악성코드를 실제로 실행시켰을 때 수행되는 내용을 분석하는 방법",
+    "mnemonic": "디스모리"
+  },
+  {
+    "id": "sec-89",
+    "title": "자동화 분석",
+    "category": "보안",
+    "group": "악성코드 분석 방법",
+    "importance": "중",
+    "summary": "자동으로 분석하는 방법, 분석 도구 이용/Fully-automated analysis",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-90",
+    "title": "시그니처 탐지기법",
+    "category": "보안",
+    "group": "악성코드 탐지기술",
+    "importance": "상",
+    "summary": "오미공패, Misuse 모델, 지식기반, 시그니처 기반 모두 같은 용어임",
+    "mnemonic": "스명C바"
+  },
+  {
+    "id": "sec-91",
+    "title": "휴리스틱 탐지기법",
+    "category": "보안",
+    "group": "악성코드 탐지기술",
+    "importance": "상",
+    "summary": "휴리스틱(Heuristic) 탐지기법",
+    "mnemonic": "악네유"
+  },
+  {
+    "id": "sec-92",
+    "title": "행위기반 탐지기법",
+    "category": "보안",
+    "group": "악성코드 탐지기술",
+    "importance": "상",
+    "summary": "Anomaly 모델, 통계기반, 행위기반, 통계기반 모델",
+    "mnemonic": "통행무"
+  },
+  {
+    "id": "sec-93",
+    "title": "샌드박스 (Sandbox)",
+    "category": "보안",
+    "group": "악성코드 탐지기술",
+    "importance": "상",
+    "summary": "외부로부터 들어온 프로그램이 보호된 영역에서 동작해 시스템이 부정하게 조작되는 것을 막는 보안 형태",
+    "mnemonic": "무행"
+  },
+  {
+    "id": "sec-94",
+    "title": "CVE",
+    "category": "보안",
+    "group": "보안취약점",
+    "importance": "중",
+    "summary": "Common Vulnerabilities and Exposures의 약자",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-95",
+    "title": "CWE",
+    "category": "보안",
+    "group": "보안취약점",
+    "importance": "하",
+    "summary": "미국 MITRE 기관에서 일반적으로 소프트웨어에서 공통적으로 발생하는 잠재적인 취약점을 체계적으로 분류하고 표준화한 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-96",
+    "title": "SQL Injection",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "상",
+    "summary": "web application에서 입력받은 파라미터 변조 후 삽입하여 비정상적 DB접근 시도 및 쿼리 재구성하여 원하는 정보 얻는 해킹 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-97",
+    "title": "XSS",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "상",
+    "summary": "[Reflective XSS] 클라이언트에서 제공한 데이터가 서버의 응답 페이지에 바로 포함되어 돌려지는 것을 악용하는 공격 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-98",
+    "title": "CSRF",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "중",
+    "summary": "사이트에서 제공하는 기능을 신뢰된 사용자의 권한으로 요청하도록 하는 공격 - 공격자가 사용자의 Cookie 값이나 Session정보를 의도한 사이트로 보내거나 특정한 동작을 유발하",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-99",
+    "title": "Session Management",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "중",
+    "summary": "클라이언트와 웹서버 간 네트워크 연결이 지속 유지되고 있는 상태, 악용, 시간 설정",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-100",
+    "title": "OWASP Top 10",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "중",
+    "summary": "광범위한 조직에서 발생할 수 있는 가장 심각한 웹 애플리케이션 보안 위험들을 식별하여 발표한 오픈프로젝트[2021 Top10 ] 접암인 계정(안보)취식 무로위 / 4, 8, 10 ",
+    "mnemonic": "접암인 계정(안보)취식 무로위 / 4, 8, 10"
+  },
+  {
+    "id": "sec-101",
+    "title": "OWASP Top 10 for LLM Application 2025",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "중",
+    "summary": "대규모 언어 모델(LLM) 기반 어플리케이션에서 발생할 수 있는 상위 10개의 보안 취약점 기술한 가이드라인",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-102",
+    "title": "OWASP Mobile Top 10",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "하",
+    "summary": "OWASP Top 10 2017 A1~A10까지 전체 암기",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-103",
+    "title": "LC/NC OWASP TOP 10",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "하",
+    "summary": "OWASP 에서 LC/NC 플랫폼에서 발생할 수 있는 보안 및 개인정보 보호관련 취약점을 발생빈도 , 영향도 별로 정리한 보안 위험 목록",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-104",
+    "title": "OWASP LLM Top 10",
+    "category": "보안",
+    "group": "OWASP Top 10(2021)",
+    "importance": "하",
+    "summary": "프롬프트 인젝션, 민감정보 노출, 학습 데이터 조작 등 LLM 구조 특화된 취약점에",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-105",
+    "title": "ISO/IEC 27000시리즈",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "정보보안 관리시스템(ISMS, Information Security Management System)의 구축, 운영과 관련한 요구사항, 실행규범, 성과측정, 구축 가이드라인 및 I",
+    "mnemonic": "개요실이측위인 11 14 33 799 통거네의"
+  },
+  {
+    "id": "sec-106",
+    "title": "ISO 27001",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "상",
+    "summary": "기업이 각종 위협으로부터 주요 정보자산을 보호하기 위해 수립, 관리, 운영하는 종합적인 정보보호 관리체계의 적합성에 대해 인증을 부여하는 제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-107",
+    "title": "ISO 27002",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "ISO 17799",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-108",
+    "title": "ISO/IEC 27100",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "출제예상",
+    "summary": "사이버 환경에서 네트워크를 통해 연결된 조직/사용자 자산을 보호하기 위해",
+    "mnemonic": "0123 032-개구보관문"
+  },
+  {
+    "id": "sec-109",
+    "title": "ISMS, G-ISMS",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "상",
+    "summary": "정보보호관리체계(ISMS), 의무, KISA",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-110",
+    "title": "ISMS-P",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "상",
+    "summary": "기업이 개인정보보호 활동을 체계적, 지속적으로 수행하기 위해 필요한 보호조치 체계를 구축하였는지 점검하여 일정 수준 이상의 기업에 인증을 부여하는 제도",
+    "mnemonic": "관보개 4.12.5"
+  },
+  {
+    "id": "sec-111",
+    "title": "PIMS",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "PIMS(Personal Information Management System",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-112",
+    "title": "PIPL",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "PIMS로 통합, 행안부",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-113",
+    "title": "CC",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "중",
+    "summary": "국가마다 서로 다른 정보보호시스템 평가 기준을 연동하고, 평가 결과를 상호 인증하기 위해 제정된 정보보안 평가기준(ISO/IEC 15408표준 )",
+    "mnemonic": "패피 스이타"
+  },
+  {
+    "id": "sec-114",
+    "title": "CC - cPP",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "cPP(유형별 보호프로파일)는 국제CC인증을 받기 위해 참고가 되는 일종의 가이드 라인,",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-115",
+    "title": "계층적 방어 체계(Defense-in-Depth)",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "다양한 공격으로부터 정보자산을 보호 하기 위해 방어 체계를 네트워크/시스템/어플리케이션 3단계 계층으로 구분하여 단계적 대응 하는 보안 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-116",
+    "title": "보안관제서비스(Security Operation Service)",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "웜/바이러스, 해킹 시도 등 내부 정보기술(IT) 자원을 위협하는 침입시도에 대해 24시간 실시간 모니터링을 통해 안정적인 운영을 확보하기 위한 보안서비스",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-117",
+    "title": "ISO/IEC 27014",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "정보보호에 대한 최고경영층의 의사결정 권한과 책임, 비즈니스 와의 전략적 연계, 컴플라이언스 보장을 위해 지켜야 할 원칙과 수행해야 할 활동 및 과제를 정의한 표준",
+    "mnemonic": "지평모 의감"
+  },
+  {
+    "id": "sec-118",
+    "title": "ISO/IEC 27017",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "출제예상",
+    "summary": "클라우드 서비스 보안을 위해 ISO/IEC 27002를 기본으로 클라우드",
+    "mnemonic": "정조인자 접암물운 운통시 공사연법"
+  },
+  {
+    "id": "sec-119",
+    "title": "ISO/IEC 27018",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "상",
+    "summary": "클라우드 서비스 내 개인식별정보의 안전한 처리를 위한 통제와",
+    "mnemonic": "일동합수데사 정개참 책정규"
+  },
+  {
+    "id": "sec-120",
+    "title": "GDPR",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "출제예상",
+    "summary": "GDPR(General Data Protection Regulation)",
+    "mnemonic": "영D과지정동침"
+  },
+  {
+    "id": "sec-121",
+    "title": "ISO 28000",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "공급사슬 전반에 걸쳐 보안(Security)을 보장하기 위한 핵심적인 측면을 포함하여 보안경영시스템을 수립, 이행, 유지 및 발전하도록 하는 요구사항을 담은 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-122",
+    "title": "ISA/IEC 62443",
+    "category": "보안",
+    "group": "보안 표준(정책) 및 관리적 보안",
+    "importance": "하",
+    "summary": "ISA/IEC 62443",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-123",
+    "title": "*SW개발보안",
+    "category": "보안",
+    "group": "SW개발보안",
+    "importance": "상",
+    "summary": "[입력데이터 검증 및 표현] 외부 입력에 의한 직접 파일,디렉토리 생성 필터링",
+    "mnemonic": "입보시에코캡아"
+  },
+  {
+    "id": "sec-124",
+    "title": "TOCTOU",
+    "category": "보안",
+    "group": "SW개발보안",
+    "importance": "중",
+    "summary": "멀티프로세스를 구현한 응용프로그램(병렬시스템)에서 자원(파일, 소켓 등)을 사용하기전 자원을 사용하는 시점과 사용하는 시점의 시간 및 상태를 부적절하게 관리해서 발생하는 보안 취약",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-125",
+    "title": "소프트웨어 개발 보안 가이드",
+    "category": "보안",
+    "group": "SW개발보안",
+    "importance": "중",
+    "summary": "[설계단계] 입력값 데이터 검증 및 표현, 보안기능, 에러처리, 세션처리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-126",
+    "title": "PKI",
+    "category": "보안",
+    "group": "PKI",
+    "importance": "상",
+    "summary": "인증기관(CA)에서 공개키와 개인키 포함 인증서 발급받아, 네트워크 상 안전 비밀통신 가능케 하는 기반 인프라 구조",
+    "mnemonic": "인기무부"
+  },
+  {
+    "id": "sec-127",
+    "title": "인증서",
+    "category": "보안",
+    "group": "PKI",
+    "importance": "하",
+    "summary": "Certificate, 인증서 생성 및 검증, CRL",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-128",
+    "title": "전자봉투",
+    "category": "보안",
+    "group": "PKI",
+    "importance": "중",
+    "summary": "송신자의 키로 전자 서명된 메시지를 암호화하여 기밀성을 보장하기 위한 기법",
+    "mnemonic": "송씨 개인암은 비밀 수공암에 있다."
+  },
+  {
+    "id": "sec-129",
+    "title": "공인인증서 문제 및 해결방안",
+    "category": "보안",
+    "group": "PKI",
+    "importance": "중",
+    "summary": "공인인증폐지에 따른 문제점, 대응방안 답안정리 필수",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-130",
+    "title": "VPN",
+    "category": "보안",
+    "group": "VPN",
+    "importance": "중",
+    "summary": "터널링 기법을 사용해 공중망에 접속해 있는 두 네트워크 사이의 연결을 마치 전용회선 이용해 연결한 것과 같은 효과를 내는 가상 네트워크",
+    "mnemonic": "터암인키복"
+  },
+  {
+    "id": "sec-131",
+    "title": "SSL VPN",
+    "category": "보안",
+    "group": "VPN",
+    "importance": "상",
+    "summary": "전송 계층 보안 프로토콜 SSL/TLS을 이용해 데이터 송신자 인증과 암호화를 구현한 가상 네트워크",
+    "mnemonic": "핸체알레"
+  },
+  {
+    "id": "sec-132",
+    "title": "IPSec VPN",
+    "category": "보안",
+    "group": "VPN",
+    "importance": "중",
+    "summary": "IPSec 프로토콜의 AH, ESP 헤더를 이용해 데이터 송신자 인증 및 암호화를 구현한 가상 네트워크",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-133",
+    "title": "MPLS VPN",
+    "category": "보안",
+    "group": "VPN",
+    "importance": "하",
+    "summary": "패킷 스위칭 기술인 MPLS 환경을 통해 VPN 구현",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-134",
+    "title": "MoVPN",
+    "category": "보안",
+    "group": "VPN",
+    "importance": "출제예상",
+    "summary": "모바일 환경+VPN",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-135",
+    "title": "디지털/컴퓨터 포렌식",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "상",
+    "summary": "정보시스템 통한 범죄 행위에 대한 법적 증거 자료 확보를 위한 시스템, 네트워크",
+    "mnemonic": "정재신연무"
+  },
+  {
+    "id": "sec-136",
+    "title": "스마트폰 포렌식",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "출제예상",
+    "summary": "논리적 추출(Rooting, Jailbreak), 물리적 추출(JTAG)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-137",
+    "title": "네트워크 포렌식",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "네트워크를 통하여 전송되는 데이터나 패스워드 등 데이터 트래픽을 분석하거나 접근 에러로그, 네트워크 환경 등을 조사하여 수사 단서를 찾아내는 기법",
+    "mnemonic": "정전증분보"
+  },
+  {
+    "id": "sec-138",
+    "title": "클라우드 포렌식(Cloud Forensic)",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "클라우드에 존재하는 전자적 증거물 등을 사법기관에 제출하기 위해 클라우드 시그니처(Signature) 데이터 수집, 분석 및 보고서를 작성하는 과학수사 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-139",
+    "title": "증거물관리의 연속성(Chain of Custody)",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "현재의 증거가 최초로 수집된 상태에서 지금까지 어떠한 변경도 되지 않았다는 것을 보증하기 위한 절차적 방법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-140",
+    "title": "디지털 포렌식 아티팩트(Artifact)",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "컴퓨터나 디지털 기기에서 사용자의 행위나 시스템 동작의 흔적을 보여주는 데이터나 파일 조각",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-141",
+    "title": "디스크 이미징(Disk Imaging)",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "이미징 = 사본 생성",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-142",
+    "title": "안티포렌식",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "출제예상",
+    "summary": "[데이터 영구삭제] Disk Wipe: 하드디스크 기존 데이터 완벽 제거, 모든 섹터 null",
+    "mnemonic": "와디로디"
+  },
+  {
+    "id": "sec-143",
+    "title": "데이터 카빙(Data Carving)",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "출제예상",
+    "summary": "연속적 카빙(해더/푸터/램슬랙/파일크기), 비연속적 키빙(시그니처/엔트로피/바이트분포)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-144",
+    "title": "파일 카빙",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "메타데이터, 파일 복구, Header/Footer, Ram Slack, File Slack",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-145",
+    "title": "슬랙 공간",
+    "category": "보안",
+    "group": "디지털 포렌식",
+    "importance": "중",
+    "summary": "슬랙 공간 (Slack Space Area) / 기출 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-146",
+    "title": "AAA",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "출제예상",
+    "summary": "불법적 서비스 사용 방지를 위해 사용자 인증, 권한레벨 검증, 과금기능을 제공하는 서비스, 프레임워크와 기술의 총칭",
+    "mnemonic": "인권과"
+  },
+  {
+    "id": "sec-147",
+    "title": "패턴기반 인증(스마트폰)",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "하",
+    "summary": "Pattern Lock, Scribble-a-Secret, Drawing Geometric",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-148",
+    "title": "RADIUS",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "하",
+    "summary": "보안을 위해 ID, 암호, 가능한 필요 보호 조치를 통해 사용자 인증하는 네트워크 접근제어 보안 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-149",
+    "title": "DIAMETER",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "출제예상",
+    "summary": "다양한 망 연동 유무선 이동 인터넷 환경에서, 인증/권한검증/과금 서비스를 제공하기 위한 AAA 표준 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-150",
+    "title": "MAC",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "분류-규칙기반(MLP(Multi-Level Policy),CBP(Component Based Policy)),관계기반",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-151",
+    "title": "DAC",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "객체의 소유자가 접근 여부를 결정",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-152",
+    "title": "RBAC",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "개인 역할기반",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-153",
+    "title": "ABAC",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "속성 기반 접근통제",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-154",
+    "title": "AC",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "상",
+    "summary": "[구성요소]",
+    "mnemonic": "정메모"
+  },
+  {
+    "id": "sec-155",
+    "title": "접근제어 Model(Bell-Lapadula, Biba, Clark & Wilson , Access Matrix)",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "Bell-lapadula (기밀성보장, No read up, no write down), 극비/비밀/미분류 구분",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-156",
+    "title": "XML 보안(웹서비스 보안)",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "하",
+    "summary": "XML서명, XML암호화, XKMS, SAML, XACML",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-157",
+    "title": "NAC(Network Access Control)",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "출제예상",
+    "summary": "사용자 Endpoint(PC, 노트북 등)의 NW 접근 시도 시 사전 승인여부 및 보안정책 준수 여부를 확인하고, NW 접속을 승인 또는 차단하는 네트워크 접근제어 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-158",
+    "title": "TCP wrapper",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "네트워크 서비스에 관련한 트래픽을 제어하고 모니터링 할 수 있는 UNIX 기반의 방화벽 툴",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-159",
+    "title": "LDAP",
+    "category": "보안",
+    "group": "접근 제어(AC)",
+    "importance": "중",
+    "summary": "LDAP(Lightweight Directory Access Protocol)는 사용자가 조직, 구성원 등에 대한 데이터를 찾는 데 도움이 되는 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-160",
+    "title": "Honey Pot(허니팟)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "보안 담당자가 공격자의 키로그(keylog)나 공격 방법, 유형에 대한 연구를 위해 설치해놓은 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-161",
+    "title": "사이버디셉션(Cyber Deception)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "허니팟의 진화형태, 내부보안 방어 및 실시간 탐지 모니터링 가능한 공격자 기민 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-162",
+    "title": "Firewall(방화벽)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "외부로부터 불법침입과 내부의 불법정보 유출을 방지하고, 내,외부 네트워크의 상호간 영향을 차단하기 위한 보안시스템",
+    "mnemonic": "접사감프냇"
+  },
+  {
+    "id": "sec-163",
+    "title": "NAT",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "상",
+    "summary": "주소 변환 기능, 유형 3가지 잘 정리할 것",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-164",
+    "title": "IP Masquerading",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "다수의 private IP를 1개의 public IP로 변환",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-165",
+    "title": "Web Firewall(웹방화벽)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "웹서버로 들어오는 웹 트래픽을 트래픽을 검사 , 악의적인 코드나 공격유형이 포함된 웹 트래픽 차단",
+    "mnemonic": "사컨위S"
+  },
+  {
+    "id": "sec-166",
+    "title": "IDS",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "비인가된 사용자가 자원의 기밀성, 무결성, 가용성을 저해하는 일련의 행동들과 보안정책 위반 행위(침입)을 실시간 탐지하는 시스템",
+    "mnemonic": "경세실리"
+  },
+  {
+    "id": "sec-167",
+    "title": "IPS",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "침입탐지시스템의 오판와 미탐의 문제 해결 위해 침입탐지와 사전 예방 기능을 제공하는 능동형 정보보호시스템",
+    "mnemonic": "자분미세"
+  },
+  {
+    "id": "sec-168",
+    "title": "UTMS",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "다양한 보안 솔루션 기능을 하나로 통합하여 보안 문제를 쉽고 편리하게 관리 및 해결하는 통합 보안관리 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-169",
+    "title": "ESM",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "상",
+    "summary": "방화벽, 침입 탐지 시스템, 가상 사설망 등 여러 보안 시스템에서 발생한 각종 이벤트 관리,분석,통보,대응하는 보안관리 시스템",
+    "mnemonic": "에메콘"
+  },
+  {
+    "id": "sec-170",
+    "title": "ITS",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "하",
+    "summary": "보안침입에 대하여 예방, 탐지, 복구를 위하여 IDS, IPS, 가상화 기술, 실시간 분석 및 라이브 패치 기술을 적용하여 지속적인 서비스를 제공 해주는 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-171",
+    "title": "DLP",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "기업 내부의 민감한 데이터, 지적재산/사업 정보 및 고객개인정보 등의 데이터 유출을 사전에 방지하기 위한 데이터 유출 방지 솔루션",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-172",
+    "title": "FDS",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "안전한 전자 금융 거래 위해, 이용자 정보 및 이상금융거래 사례등",
+    "mnemonic": "정분대모"
+  },
+  {
+    "id": "sec-173",
+    "title": "End Point 보안",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "하",
+    "summary": "End Point에 연결된 IT 장치를 보안위협에 보호를 위해 네트워크 환경에 맞는 정책 및 프로세스 기반의 통합 보안관리 체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-174",
+    "title": "SOAR",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "다양한 사이버위협의 대응수준을 자동으로 분류하고 표준화된",
+    "mnemonic": "소시티"
+  },
+  {
+    "id": "sec-175",
+    "title": "DNSSEC",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "DNS 데이터 위, 변조 차단을 위해 공개키 암호화 방식의",
+    "mnemonic": "공서원"
+  },
+  {
+    "id": "sec-176",
+    "title": "MTD(Moving Target Defense)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "보호 대상의 주요 속성(네트워크, 플랫폼, 실행 환경, SW, 데이터 등)을",
+    "mnemonic": "써디리디 - 네메 O플 인서 분다"
+  },
+  {
+    "id": "sec-177",
+    "title": "EDR(EndPoint Detection and Response)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "엔드포인트 레벨에서 지속적인 모니터링과 대응을 제공하는 보안솔루션",
+    "mnemonic": "예방탐대- PPDR"
+  },
+  {
+    "id": "sec-178",
+    "title": "XDR(eXtended Detection & Response)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "엔드포인트뿐만 아니라 네트워크, 이메일, 클라우드 등 여러 레이어를 통합하여 위협을 탐지, 대응하는 확장형 통합 솔루션",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-179",
+    "title": "하이브리드 전쟁(Hybrid War)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "중",
+    "summary": "군사적 충돌과 함께 사이버 공격, 정보전, 경제 제재, 심리전 등 비군사적 수단을 복합적으로 활용하여 상대국을 약화시키는 새로운 전쟁 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-180",
+    "title": "사이버 레질리언스(Cyber Resilience)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "조직 내/외부의 예측 불가능한 위협 및 부정적 영향에 대응하는 보안전략 수립 및 리스크 해소 역량",
+    "mnemonic": "비보종매복"
+  },
+  {
+    "id": "sec-181",
+    "title": "CARTA 접근법",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "지속적이고 적응할 수 있는 리스크 및 신뢰 평가(CARTA) 접근법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-182",
+    "title": "SASE(Secure Access Service Edge)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "SD-WAN과 네트워크 보안을 클라우드 기반으로 융합한 보안기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-183",
+    "title": "CASB(Cloud Access Security Broker)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "클라우드 서비스 접속보안 브로커",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-184",
+    "title": "제로 트러스트(Zero Trust) 보안모델",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "상",
+    "summary": "선인증 후연결, 내·외부 사용자와 프로세스를 신뢰하지 않는 원칙하에 모든 사용자와 디바이스, 어플리케이션에 대해 확인을 요구하는 보안 모델. 선 인증 후 연결, 트러스트 보안 모델",
+    "mnemonic": "기초향최"
+  },
+  {
+    "id": "sec-185",
+    "title": "제로트러스트 가이드라인 2.0",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "기존 보안 체계의 한계를 극복하고, 네트워크 및 IT 인프라에서 절대 신뢰하지 말고 항상 검증하라(Never Trust, Always Verify)는 원칙에 기반한 보안 아키텍처의",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-186",
+    "title": "책임공유모델(SRM)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "상",
+    "summary": "과립형 경계 기행 방식",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-187",
+    "title": "런타임 애플리케이션 자가 보호(RASP, Runtime Application Self-Protection)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "상",
+    "summary": "실행 중인 애플리케이션과 결합되거나 해당 런타임 환경과 통합되어 애플리케이션에 대한 호출을 지속적으로 감시하여 보안을 확인하는 자가진단 소프트웨어",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-188",
+    "title": "다층보안체계(Multi Level Security)",
+    "category": "보안",
+    "group": "기업 보안 시스템 (기술적 보안)",
+    "importance": "출제예상",
+    "summary": "정보의 중요도에 따라 데이터의 보안 수준을 분류하여 등급별 보안통제를 차등 적용 하는 보안체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-189",
+    "title": "생체인식기술",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "상",
+    "summary": "보편성, 유일성, 영구성, 획득성 단점, 분기점, 코어, 얼굴인식 알고리즘, 홍채인식 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-190",
+    "title": "모바일 바이오인식",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "하",
+    "summary": "모바일 환경을 기반으로 사람의 고유한 바이오 정보를 이용하여 신원 확인시 , 그 사람의 ID에 해당하는 저장된 특징과 입력된 특징을 1 : 1 비교하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-191",
+    "title": "FIDO 1.0",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "중",
+    "summary": "FIDO - Fast Identification Online Alliance, 생체인증표준, FIDO 1.0의 UAF /U2F",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-192",
+    "title": "FIDO 2.0",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "상",
+    "summary": "웹브라우저 확장, 플랫폼 제공, Javascript, 자체 프로토콜 제공",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-193",
+    "title": "생체인식 Database",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "하",
+    "summary": "이미지 처리, XML 처리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-194",
+    "title": "생체인식 스푸핑 공격",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "하",
+    "summary": "공격자가 생체인증 정보의 가짜 특성을 제시하여 인증 시스템을 우회하려고 시도하는 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-195",
+    "title": "생체정보 보호 가이드라인",
+    "category": "보안",
+    "group": "생체인식기술 / FIDO",
+    "importance": "중",
+    "summary": "[생체인식정보의 정의] 생체정보 중 특정 개인을 인증·식별할 목적으로 일정한 기술적 수단을 통해 처리되는 정보",
+    "mnemonic": "6대원칙 : 비적목투안통"
+  },
+  {
+    "id": "sec-196",
+    "title": "IP 터널링/터널링",
+    "category": "보안",
+    "group": "터널링/네트워크 보안",
+    "importance": "중",
+    "summary": "IP 계층의 전용망 환경에서 Point to Point 로 연결한 것과 같은 효과를 위해 ,",
+    "mnemonic": "패키트"
+  },
+  {
+    "id": "sec-197",
+    "title": "SSL / TLS",
+    "category": "보안",
+    "group": "터널링/네트워크 보안",
+    "importance": "상",
+    "summary": "Presentation과 Session의 중간 계층에 존재하며, TCP/IP상 Web 데이터 암호화 프로토콜 스택 구성요소 - 핸싸얼레(4가지 Protocol) Handshake ",
+    "mnemonic": "핸싸얼레"
+  },
+  {
+    "id": "sec-198",
+    "title": "SSL offloading",
+    "category": "보안",
+    "group": "터널링/네트워크 보안",
+    "importance": "중",
+    "summary": "SSL 인증서를 로드 밸런서에 배치하여 백엔드 별 인증서 배포 및 암호화/복호화 수행을 최소화하여 서비스의 성능을 향상시키는 인프라 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-199",
+    "title": "IPSec",
+    "category": "보안",
+    "group": "터널링/네트워크 보안",
+    "importance": "상",
+    "summary": "IP 계층에서 다양한 보호",
+    "mnemonic": "프데키보"
+  },
+  {
+    "id": "sec-200",
+    "title": "전송 계층 보안(TLS)",
+    "category": "보안",
+    "group": "터널링/네트워크 보안",
+    "importance": "중",
+    "summary": "SSL을 IETF에서 표준화한 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-201",
+    "title": "DTLS(Datagram Transmission Layer Security)",
+    "category": "보안",
+    "group": "터널링/네트워크 보안",
+    "importance": "중",
+    "summary": "데이터그램 형식의 콘텐츠를 어플리케이션간에 통신시에 안전하게 전송할 수 있도록 고안된 통신 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-202",
+    "title": "논리적 망분리",
+    "category": "보안",
+    "group": "망분리",
+    "importance": "상",
+    "summary": "서버가상화, PC 가상화",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-203",
+    "title": "물리적 망분리",
+    "category": "보안",
+    "group": "망분리",
+    "importance": "중",
+    "summary": "복수PC, 네트워크 전환장치",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-204",
+    "title": "망구성도",
+    "category": "보안",
+    "group": "망분리",
+    "importance": "중",
+    "summary": "보안설비",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-205",
+    "title": "SSO",
+    "category": "보안",
+    "group": "기업 접근 관리 보안",
+    "importance": "하",
+    "summary": "한번의 시스템 인증으로 여러 정보시스템에 재인증 절차 없이 접근하는 통합 로그인 솔루션",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-206",
+    "title": "EAM",
+    "category": "보안",
+    "group": "기업 접근 관리 보안",
+    "importance": "하",
+    "summary": "SSO(인증)+PMI(권한 관리)+자원/보안 정책관리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-207",
+    "title": "IAM",
+    "category": "보안",
+    "group": "기업 접근 관리 보안",
+    "importance": "중",
+    "summary": "조직이 필요로하는 보안 정책 수립하고, 정책에 따라 자동으로 사용자 계정과 권한을 관리하는 솔루션",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-208",
+    "title": "커버로스(Kerberos)",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "비밀키 방식에 의한 인증 시스템으로 서비스 요구를 인증하기 위한 티켓 기반 네트워크 인증 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-209",
+    "title": "PMI",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "기업/기관 단위로 사용자에게 특정 시스템 및 어플리게이션 접근 권한 차등 부여하는 관리 체계",
+    "mnemonic": "인발위소입"
+  },
+  {
+    "id": "sec-210",
+    "title": "Oauth / Oauth 2.0",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "제 3의 앱이 자원의 소유자인 서비스 이용자 대신하여 서비스를 요청할 수 있도록 자원 접근 권한을 위임하는 OpenAPI 기반 보안 인증 기술",
+    "mnemonic": "요승토토요제"
+  },
+  {
+    "id": "sec-211",
+    "title": "OTP",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "1회용비밀번호",
+    "mnemonic": "비챌리 동시이조"
+  },
+  {
+    "id": "sec-212",
+    "title": "OTC",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "One Time Card: 국내 규격으로 1분 30초마다 바뀌는 토큰보안방식으로 결제때마다 카드번호 바뀜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-213",
+    "title": "스마트 OTP",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "NFC 휴대폰 _ 모바일앱 -> OTP 생성/입력",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-214",
+    "title": "Challenge-response 방식",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "시도-응답(Challenge-response) 인증 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-215",
+    "title": "i-PIN 1.0, 2.0",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "I-PIN(Internet Personal Identification Number)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-216",
+    "title": "보안위험관리(SRM)",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "조직의 자산을 보호하기 위하여 자산에 대한 보안 상의 위험 분석을 통하여 비용 효과적인 측면에서 적절한 보호 대책을 수립하여 이를 수행하는 관리 프로세스의 총칭",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-217",
+    "title": "정성적 위험 분석",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "2019년 감리사 105번 풀이",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-218",
+    "title": "정량적 위험 분석",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "2018년 감리사 109번 풀이",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-219",
+    "title": "ISO/IEC 13335",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "하",
+    "summary": "2016년 감리사 107 문제 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-220",
+    "title": "디지털ID",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "각종 ID와 주민번호, 전자우편주소, 신용카드번호, 주소 등 사이버 스페이스 상에서 개인을 식별할 수 있는 속성들의 집합",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-221",
+    "title": "GADI",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "Service Provider가 어떠한 Digital Address Provider(디지털 주소 공급자)를 이용하더라도 User의 신원을 신뢰 할 수 있도록 보장하는 글로벌 신뢰 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-222",
+    "title": "디바이스(Device) DNA",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "상",
+    "summary": "디바이스의 하드웨어적·행동적 특징을 자동화된 장치로 추출·저장하여 정확하고 편리하게 디바이스 신원을 확인하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-223",
+    "title": "영지식 증명(Zero-Knowledge Proof)",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "출제예상",
+    "summary": "영지식 증명(Zero-Knowledge Proof)의 정의",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-224",
+    "title": "무자각 지속 인증",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "무자각 지속 인증(Implicit Continuous Authentication)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-225",
+    "title": "SDP(Software Defined Perimeter)",
+    "category": "보안",
+    "group": "인증(Authentication)",
+    "importance": "중",
+    "summary": "선인증, 후연결, 신원중심, SDP Controller, SDP Agent, SDP Gateway",
+    "mnemonic": "선인후연 애컨게쎅"
+  },
+  {
+    "id": "sec-226",
+    "title": "컨텐츠 보안",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "상",
+    "summary": "",
+    "mnemonic": "보관배"
+  },
+  {
+    "id": "sec-227",
+    "title": "데이터 마스킹",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "중",
+    "summary": "기밀 데이터의 길이, 유형, 형식과 같은 속성을 유지한 채, 새롭고 읽기 쉬운 데이터를 익명으로 생성하는 기술",
+    "mnemonic": "정동"
+  },
+  {
+    "id": "sec-228",
+    "title": "스테가노그래피",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "하",
+    "summary": "Anti-Forensic 기법 중 하나로 디지털 매체(이미지 파일, MP3, WAV 등) 에 정보를 암호화 하여 메시지가 전송되고 있다는 사실을 숨겨 전송하는 심층 암호 기술",
+    "mnemonic": "이공주"
+  },
+  {
+    "id": "sec-229",
+    "title": "Water Marking",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "중",
+    "summary": "디지털 컨텐츠에 저작권 관련 정보를 넣어 인증기능을 부여함으로써 불법 복제 및 배포를 방지하고 제작자의 저작권과 관련된 권리를 주장 할 수 있게 하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-230",
+    "title": "Finger Printing",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "중",
+    "summary": "저작권이나 판매자의 정보가 아닌 디지털 콘텐츠의 사용자 정보를 삽입함으로써 사후에 발생 할 수 있는 콘텐츠의 불법 복제를 추적 가능한 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-231",
+    "title": "DOI",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "하",
+    "summary": "디지털 저작물에 특정한 번호를 부여하여 저작권 보호 및 정확한 위치 추적이 가능한 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-232",
+    "title": "INDECS",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "하",
+    "summary": "저작권 관련 정보, 저작권 거래 내역관리 정보, 저작자의 권리 정보 기술을 위한 전자상거래 시스템에서 상호 운용 가능한 메타데이터 프레임워크",
+    "mnemonic": "엔파CR"
+  },
+  {
+    "id": "sec-233",
+    "title": "DRM",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "상",
+    "summary": "디지털 콘텐츠의 생성에서 이용까지 유통 전 과정에 걸쳐 디지털 콘텐츠를 안전하게 관리/보호하고, 부여된 권한정보에 따라 디지털 콘텐츠의 이용을 제어/통제하는 기술",
+    "mnemonic": "투사유"
+  },
+  {
+    "id": "sec-234",
+    "title": "CAS",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "하",
+    "summary": "Conditional Access System",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-235",
+    "title": "전자지문",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "출제예상",
+    "summary": "전자지문은 전자문서로부터 뽑아낸 고유한 Hash 코드로, Hash",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-236",
+    "title": "CDR(Content Disarm & Reconstruction)",
+    "category": "보안",
+    "group": "컨텐츠 보안",
+    "importance": "출제예상",
+    "summary": "콘텐츠 분석하고 분해하여 위협요소 제거후 안전한 요소만으로 문서파일을 재구성",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-237",
+    "title": "PIT",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "하",
+    "summary": "[불법 수집형] spyware, XSS/SQL injection",
+    "mnemonic": "불공사"
+  },
+  {
+    "id": "sec-238",
+    "title": "개인정보 비식별 조치 가이드라인",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "상",
+    "summary": "빅데이터 활용에 필요한 비식별 조치 기준•절차•방법 등을 구체적으로 안내하여 안전한 빅데이터 활용기반 마련과 개인정보 보호 강화를 도모",
+    "mnemonic": "사비적사"
+  },
+  {
+    "id": "sec-239",
+    "title": "개인정보 보호기술",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "상",
+    "summary": "[정책 협상기술] P3P(W3C 제정 개인정보보호 정책 표준규격)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-240",
+    "title": "개인정보 가명 익명화",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "상",
+    "summary": "가명처리 (성명, 출신학교, 근무처 등 고유 특징)",
+    "mnemonic": "가총삭범마"
+  },
+  {
+    "id": "sec-241",
+    "title": "프라이버시 보호모델",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "상",
+    "summary": "비식별화된 데이터로부터 개인을 재식별하는 공격이 성행하고 있으므로 이에 대한 대비가 필요 K-익명성 [정의] 주어진 데이터 집합에서 준식별자 속성값들이 동일한 레코드가 적어도 k개",
+    "mnemonic": "연익"
+  },
+  {
+    "id": "sec-242",
+    "title": "PPDM",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "중",
+    "summary": "데이터 마이닝이 분석분야에 주로 활용되면서, 개인프라이버시 침해 이외에도 수집한 정보의 노출이 문제시됨. 이를 해결하고자 프라이버시 보존형 데이터 마이닝(PPDM)에 대한 기법이 ",
+    "mnemonic": "랜압기K분"
+  },
+  {
+    "id": "sec-243",
+    "title": "PPDP",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "중",
+    "summary": "데이터를 공개하지 않고 사용자가 요청한 질의를 처리해서, 질의 결과에 개인 프라이버시가 누출되지 않도록 감시 및 관리 방법(기법)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-244",
+    "title": "PIA",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "중",
+    "summary": "개인정보를 활용하는 새로운 정보시스템의 도입이나 개인정보 취급이 수반되는 기존 정보 시스템의 중대한 변경 시 등 시스템의 구축, 운영, 변경 등이 개인 프라이버시에 미치는 영향에 ",
+    "mnemonic": "사수이"
+  },
+  {
+    "id": "sec-245",
+    "title": "PbD(Privacy by Design)",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "중",
+    "summary": "- 프라이버시에 대한 위협을 예측/예방하기 위해 서비스 설계, 기획 단계에 보안요소를 적용하여 이용자 프라이버시 통제권이 보호되면서 서비스/시스템의 편리성을 해치지 않도록 설계하는",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-246",
+    "title": "CCTV 개인정보보호",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "출제예상",
+    "summary": "불특정 다수를 자동으로 촬영하는 CCTV의 특성으로 인해 개인정보 오남용, 불법 유통, 사생활 침해등의 피해 증가로 개인영상정보 보호 기술 CCTV (개인정보) 활용 증가 지능적확",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-247",
+    "title": "P3P, 추적금지 기타",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "하",
+    "summary": "특정한 웹사이트의 개인정보 보호 정책을 접속 사용자에게 알려줌으로써 자신에 관한 정보를 제공할 지 여부를 서비스하는 개인정보 보호 기술 - 릴레이션 R에 대해 X, Y, Z라는 속",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-248",
+    "title": "개인정보의 기술적, 관리적 보호조치 기준",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "하",
+    "summary": "2019년 감리사 109번 문제를 참조하여, 자료 정리와 풀이 해 오기",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-249",
+    "title": "가명정보 결합 및 반출방법",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "출제예상",
+    "summary": "사전준비 및 결합신청 -> 결합 수행 (모의결합, 결합률 확인, 가명정보 추출)-> 추가처리 및 반출 -> 활용 및 사후처리",
+    "mnemonic": "신수반사 모결가"
+  },
+  {
+    "id": "sec-250",
+    "title": "가명처리 가이드라인",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "출제예상",
+    "summary": "개인정보 일부를 삭제하거나 일부 또는 전부를 대체하는 등의 방법으로 추가 정보가 없이는 특정 개인을 알아볼 수 없도록 처리하는 것",
+    "mnemonic": "사가적사"
+  },
+  {
+    "id": "sec-251",
+    "title": "ISO/IEC 29100 프라이버시 11원칙",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "출제예상",
+    "summary": "ICT 시스템에서 처리되는 개인 식별 정보를 안전하게 보호하기 위한 High Level Privacy Framework에 대한 국제 표준",
+    "mnemonic": "동합수데사정개참책정보"
+  },
+  {
+    "id": "sec-252",
+    "title": "ISO/IEC 27701 개인정보 보호시스템",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "출제예상",
+    "summary": "개인정보 보호를 위한 ISO/IEC 27001 및 ISO/IEC 27002의 확장판으로, 조직이 개인정보보호를 위해 갖추어야하는 요구사항과 가이드라인을 동시에 제공하는 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-253",
+    "title": "개인정보의 안전성 확보조치 기준' 고시",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "출제예상",
+    "summary": "개인정보의 안전성 확보조치 기준' 고시",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-254",
+    "title": "개인정보 안심구역",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "중",
+    "summary": "유연한 개인·가명정보 활용, 개인정보 보호·활용기술 실증 등을 위해 개인정보위가 전문심의를 지원하고, 개인정보 처리에 필요한 안전한 이용환경을 지원하는 제도 드",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-255",
+    "title": "데이터 안심구역",
+    "category": "보안",
+    "group": "개인정보보호기술 (PET)",
+    "importance": "중",
+    "summary": "공공 및 민간 데이터를 안전하게 분석·활용할 수 있도록 고성능 분석 인프라와 보안 환경을 갖춘 공간. 데이터 산업 활성화와 AI 기반 서비스 개발 등을 지원하며, 데이터기본법에 따",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-256",
+    "title": "ISO 25237",
+    "category": "보안",
+    "group": "의료정보",
+    "importance": "하",
+    "summary": "개인 의료정보 개인정보보호를 위한 비식별화(pseudonymization) 서비스의 원칙과 요구사항을 포함하는 ISO국제표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-257",
+    "title": "Pseudonymization",
+    "category": "보안",
+    "group": "의료정보",
+    "importance": "상",
+    "summary": "정보주체를 식별할 수 있는 식별자 대신에 새로운 인식기호를 붙이는 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-258",
+    "title": "범주화",
+    "category": "보안",
+    "group": "의료정보",
+    "importance": "출제예상",
+    "summary": "데이터 값을 범주의 값으로 변환하여 명확한 값을 감추는 기범",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-259",
+    "title": "정보보안 부서의 신설과 정보보안 체계",
+    "category": "보안",
+    "group": "보안 역할/직업",
+    "importance": "중",
+    "summary": "보안팀 만드는 과정및 체계 수립 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-260",
+    "title": "CPO",
+    "category": "보안",
+    "group": "보안 역할/직업",
+    "importance": "하",
+    "summary": "조직에서 수집 및 이용되는 개인정보보호를 위하여 개인정보보호 계획, 실행, 감독 및 유출사고 방지를 수행하는 총괄 책임자",
+    "mnemonic": "계처유"
+  },
+  {
+    "id": "sec-261",
+    "title": "CSO",
+    "category": "보안",
+    "group": "보안 역할/직업",
+    "importance": "하",
+    "summary": "기업에서 내부 정보 보안을 위한 대책을 책임지고 기술적 대책과 법률적 대응까지 총괄 책임을 지는 최고 임원",
+    "mnemonic": "데정보시"
+  },
+  {
+    "id": "sec-262",
+    "title": "CISO 지정신고 의무화",
+    "category": "보안",
+    "group": "보안 역할/직업",
+    "importance": "하",
+    "summary": "CISO의 직무, CISO의 지정·신고 의무대상자, CISO의 겸직 제한 대상, CISO의 일반 자격요건",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-263",
+    "title": "사이버 킬 체인",
+    "category": "보안",
+    "group": "사이버 공격 및 대응",
+    "importance": "중",
+    "summary": "사이버 공격을 프로세스 기반으로 분석하여 각 단계에서 가해지는 위협 요소를 파악하고 공격활동 완화를 위한 방법을 7단계로 정의한 사이버 공격 분석 모델",
+    "mnemonic": "전시후"
+  },
+  {
+    "id": "sec-264",
+    "title": "위협헌팅(Threat Hunting)",
+    "category": "보안",
+    "group": "사이버 공격 및 대응",
+    "importance": "출제예상",
+    "summary": "사이버 공격의 흔적(아티팩트)를 발견하고 공격주체를 추적하여 조직 내에 식별 및 비식별 된 보안위협을 탐지하고 대응하는 기술 및 기능을 의미",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-265",
+    "title": "ATT&CK(Adversarial Tactics, Techniques & Common Knowledge) Matrix",
+    "category": "보안",
+    "group": "사이버 공격 및 대응",
+    "importance": "중",
+    "summary": "MITRE에서 제공하는 보안 프레임워크로서 실제 사이버공격에 대한 데이터를 기반으로 적대적인 전술 및 기술에 대한 정보를 쉽게 알아볼 수 있도록 만든 보안 매트릭스",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-266",
+    "title": "사이버전(Cyber Warfare)",
+    "category": "보안",
+    "group": "사이버 공격 및 대응",
+    "importance": "출제예상",
+    "summary": "컴퓨터 네트워크를 통해 디지털화된 정보가 유통되는 가상적인 공간에서 다양한 사이버 공격 수단을 사용하여 적의 정보 체계를 교란, 거부, 통제, 파괴하는 등의 공격과 이를 방어하는 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-267",
+    "title": "사이버보안 조직",
+    "category": "보안",
+    "group": "사이버 공격 및 대응",
+    "importance": "출제예상",
+    "summary": "사이버보안 조직의 역할 및 책임사항",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-268",
+    "title": "취약점(Vulnerability)",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "취약점(Vulnerability) 빈틈, 대상을 보호하는 것이 가짐 흠",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-269",
+    "title": "위협(Threat)",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "위협(Threat) 보호 해야 할 대상을 훼손하거나 훔쳐갈 잠재적인 요인",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-270",
+    "title": "DB 보안 취약점 및 대응기술",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "데이터베이스 내에 저장된 조직의 주요기밀 정보를 비인가된 변경, 파괴, 노출 및 비일관성 등을 발생시키는 사건이나 위협들로부터의 보호",
+    "mnemonic": "인기무가"
+  },
+  {
+    "id": "sec-271",
+    "title": "클라우드컴퓨팅 취약점, 대응기술",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "클라우드 컴퓨팅 서비스 각 영역에 존재하는 보안 취약점 및 대응 기술",
+    "mnemonic": "가중네서권과구"
+  },
+  {
+    "id": "sec-272",
+    "title": "가상화,하이퍼바이저(Hypervisor)",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "[가상화 환경에서 주요 보안 이슈 유형]",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-273",
+    "title": "모바일 취약점, 대응기술",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "단말기 자체에 내재된 취약점 또는 단말기 사용 부주의로 발생되는 보안 위협",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-274",
+    "title": "스마트그리드 취약점, 대응기술",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "ICT 기존 전력망 정보기술(IT)을 접목하여, 전력공급자와 소비자가 양방향으로 실시간 정보를 교환, 에너지효율을 최적화하는 차세대 전력망",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-275",
+    "title": "사이버범죄의 유형 및 대응방안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "넓은 의미로는 컴퓨터 네트워크 시스템에 장애를 초래하는 물리적 또는 소프트웨어적인 일체의 불법적 행위 웜/바이러스 전파속도 고속화/ 보안패치",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-276",
+    "title": "Big Data 보안 취약점 및 대응",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "대규모 다양한 형태의 데이터 및 민감도(중요사업정보, 개인정보, 프라이버시 등)가 높은 정보를 외부 위협으로부터 보호하는 활동",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-277",
+    "title": "IoT 보안 위협",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "[IoT 보안 정의] 사람-사람,사람-사물 간의 연결뿐만 아니라 사물-사물 간의 동적 연결을 가능하게 하는 진정한 유비쿼터스 환경 실현 기술을 위한 보안",
+    "mnemonic": "설배운"
+  },
+  {
+    "id": "sec-278",
+    "title": "사물인터넷(IoT) 보안등급",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "하",
+    "summary": "사물 인터넷(IoT) 장치가 보안을 위해 채택한 기술적, 관리적 측면의 평가로서 단말 자체와 시스템의 보안 수준을 평가하고 이를 인증하는 국제적인 기준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-279",
+    "title": "무선 랜 보안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "무선 접속장치(AP)를 중심으로 일정거리 내에서 단말(PDA, 노트북)을 통해 무선으로 초고속 인터넷 등을 이용할 수 있는 통신환경",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-280",
+    "title": "오픈소스 취약점",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "[오픈소스정의] 일반적으로 자유롭게 사용, 복제, 배포, 수정할 수 있으며, 소스코드가 공개되어 있는 소프트웨어",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-281",
+    "title": "포스(POS) 시스템 취약점",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "하",
+    "summary": "사업장소에서 사용하는 대금결제 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-282",
+    "title": "인터넷 뱅킹 보안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "하",
+    "summary": "인터넷을 통해 은행의 각종 업무를 처리하는 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-283",
+    "title": "스마트팩토리",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "제조업과 IoT를 중심으로 ICT 융합으로 효율화/ 자동화된 공장체계",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-284",
+    "title": "NTP",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "하",
+    "summary": "인터넷 상의 시간을 정확하게 유지시켜 주기 위한 통신망 규격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-285",
+    "title": "드론 취약점 및 대응",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "선 전파의 유도에 의해서 비행하는 무인항공기의 총칭 (UAV)",
+    "mnemonic": "군항 감정물"
+  },
+  {
+    "id": "sec-286",
+    "title": "IPv6 취약점 및 대응",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "현재 인터넷의 한계 극복을 위한 충분한 주소공간 제공과 향상된 보안기술이 적용된 차세대 인터넷 주소체계 표기 : 128비트, 8개의 16비트 구성(ex:21DA:00D3:0000:",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-287",
+    "title": "스마트카",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "자율주행차, 커넥티드 카를 포함하여 ICT 기술이 접목된 진화된 자동차",
+    "mnemonic": "회생자애"
+  },
+  {
+    "id": "sec-288",
+    "title": "가상화폐 거래소 취약점 및 대응",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "하",
+    "summary": "[가상화폐 거래소] 비트코인 등 블록체인 기반으로 구현된 가상 화폐를 실시간으로 거래 양, 거래 정보 등을 확인 할 수 있는 사이트",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-289",
+    "title": "블록체인(Block Chain) 플랫폼",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "블록체인 플랫폼 안전하게 사용하기 위한 각종 위협과 취약성에 대한 대응 기법",
+    "mnemonic": "키취블 분상스 합사개 가비권내"
+  },
+  {
+    "id": "sec-290",
+    "title": "3D 프린팅",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "3차원 설계 기반 복합물질 이용 실물모형, 프로토타입 등 인쇄하는 첨삭가공 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-291",
+    "title": "CPU 보안 취약점/스펙터(Spectre)",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "CPU 보안 취약점에서의 스펙터(Spectre)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-292",
+    "title": "멜트다운(Meltdown) 버그",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "CPU 보안 결함 중에서 멜트다운(Meltdown)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-293",
+    "title": "DNS 취약점 공격",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "중",
+    "summary": "보안 미고려 프로토콜 사용 설계상 취약점, 이용상 취약점으로 DNS에 의한 도메인 변조 공격 1) 의도치 않은 사이트 접속 : 도메인 위·변조 시에 사용자가 의도하지 않은 사이트로",
+    "mnemonic": "물방내교"
+  },
+  {
+    "id": "sec-294",
+    "title": "딥러닝 취약점",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "상",
+    "summary": "딥러닝 취약점, 적대적 공격의 개념 분류 성능이 우수한 DNN 을 이용한 Classifier 들에 적대적 교란을 적용하여 분류 알고리즘이 Misclassification 을 발생하",
+    "mnemonic": "포이인모 - 중회추모"
+  },
+  {
+    "id": "sec-295",
+    "title": "실감콘텐츠 보안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "[보안취약점] Brute Force 공격, Buffer Overflow 공격, Cyber kill Chain, Sniffing, DOS, 악성코드, 펌웨어공격, 기기 루팅",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-296",
+    "title": "MEC 취약점 및 대응방안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "엣지 컴퓨팅(Edge Computing)의 보안취약점 및 대응방안",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-297",
+    "title": "메타버스의 보안 위협 및 대응방안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "[보안위협]",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-298",
+    "title": "생성형 AI 위협 및 대응방안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "2. 국가사이버안보센터는 생성형AI의 보안위협과 안전한 활용을 위한 가이드라인(챗GPT 등 생성형 AI 활용 보안 가이드라인, 2023.6)을 발간하였다. 이와 관련하여 다음을 설",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-299",
+    "title": "생성형 인공지능 저작권",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "(저작권 이슈) - 텍스트, 이미지 제작 시 생성형 AI를 활용하여 빠르고 편리하게 제작할 수 있지만, 저작권 측면의 이슈로 인한 사회적, 문화적 이슈 발생 가능",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-300",
+    "title": "UAM 취약점 및 대응방안",
+    "category": "보안",
+    "group": "보안 취약점 및 대응",
+    "importance": "출제예상",
+    "summary": "UAM(Urban Air Mobility) 보안사고(의도한 사고)와 안전사고(의도하지 않은 사고)로 분류 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-301",
+    "title": "잊혀질 권리",
+    "category": "보안",
+    "group": "보안 교양 토픽",
+    "importance": "하",
+    "summary": "정보주체가 온라인상 자신과 관련된 모든 정보에 대한 삭제 및 확산 방지를 요구할 수 있는 권리(EU, 2012) 인터넷상에서 잠재적으로 나타나 있는 자신과 관련된 정보를 포함하는 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-302",
+    "title": "신지식재산권",
+    "category": "보안",
+    "group": "보안 교양 토픽",
+    "importance": "상",
+    "summary": "지식 재산권의 하위 개념으로 경제적, 기술적 가치를 인정받아 새로 규정한 재산권, 사회/기술의 변화에 따른 새로운 형태의 지식재산권 신지식재산권 : 산업저작권\", 반도체집적회로 배",
+    "mnemonic": "산저신"
+  },
+  {
+    "id": "sec-303",
+    "title": "사이버 망명",
+    "category": "보안",
+    "group": "보안 교양 토픽",
+    "importance": "하",
+    "summary": "토르전용접속, 패블릭 지원, 로그삭제",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-304",
+    "title": "E-Discovery",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "하",
+    "summary": "소송 과정을 공정하고 합리적으로 진행하기 위해 공판 시작 전 원고와 피고가 서로 합의한 범위 내에서 사건과 관련된 이메일 등 각종 디지털 자료를 공개하는 제도",
+    "mnemonic": "정소정보"
+  },
+  {
+    "id": "sec-305",
+    "title": "탈린매뉴얼",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "하",
+    "summary": "북대서양조약기구 NATO가 발표한 사이버테러에 관한 조항 및 대처에 대해 최초로 성문화 한 사이버교전 수칙",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-306",
+    "title": "정보보호산업진흥법",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "하",
+    "summary": "정보보호산업의 진흥에 필요한 사항을 정함으로써 정보보호산업의 기반을 조성하고 그 경쟁력을 강화하여 안전한 정보통신 이용환경 조성과 국민경제의 건전한 발전에 이바지함을 목적으로 제정",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-307",
+    "title": "개인정보보호법",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "상",
+    "summary": "[제 24조의 2항] 2018.1.1 100만명 이상 주민번호 반드시 암호화",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-308",
+    "title": "개인정보보호법 제30조",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "중",
+    "summary": "처리 목적, 처리 및 보유 기간,",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-309",
+    "title": "정보통신망법",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "중",
+    "summary": "정보통신망의 이용을 촉진하고 정보통신서비스를 이용하는 자의 개인정보를 보호함과 아울러 정보통신망을 건전하고 안전하게 이용할 수 있는 환경을 조성하여 국민생활의 향상과 공공복리의 증",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-310",
+    "title": "정보통신기반 보호법",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "중",
+    "summary": "이 법은 정보통신망의 이용을 촉진하고 정보통신서비스를 이용하는 자의 개인정보를 보호함과 아울러 정보통신망을 건전하고 안전하게 이용할 수 있는 환경을 조성하여 국민생활의 향상과 공공",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-311",
+    "title": "데이터 3법",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "중",
+    "summary": "[개인정보보호법] 가명정보 개념 도입 및 이용통제, 감독기관 일원화",
+    "mnemonic": "개정신"
+  },
+  {
+    "id": "sec-312",
+    "title": "마이테이더/ 마이데이터 전송 보안 안내서",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "출제예상",
+    "summary": "개인정보 안정한 처리를 보장하기 위한 가이드라인, 마이테이더 전송 보안 안내서",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-313",
+    "title": "데이터 전송요구권",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "출제예상",
+    "summary": "데이터3법중 신용정보법 개정으로 개인의 금융정보를 다른 금융기관이나",
+    "mnemonic": "본고전통 신전공본"
+  },
+  {
+    "id": "sec-314",
+    "title": "특정금융정보법",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "출제예상",
+    "summary": "금융거래를 이용한 자금세탁행위와 테러자금 조달행위를 규제하기 위해 금융회사 등에게 의심스러운 거래나 고액 현금거래 보고, 고객 확인, 자금세탁방지 관련 내부 업무절차 정비 등의 의",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-315",
+    "title": "프라이버시 8원칙",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "출제예상",
+    "summary": "1) 수집 제한의 원칙",
+    "mnemonic": "수저옥이아공개책"
+  },
+  {
+    "id": "sec-316",
+    "title": "CBPR(Cross Border Privacy Rules)",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "출제예상",
+    "summary": "APEC(Asia-Pacific Economic Cooperation) CBPR(Cross Border Privacy Rules)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-317",
+    "title": "FIPS",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "하",
+    "summary": "연방 정보 처리 표준 출판물 140-2(FIPS PUB 140-2) 암호화 모듈을 승인하는 데 사용되는 미국 정부 컴퓨터 보안 표준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-318",
+    "title": "정보보호 제품 신속 확인 제도",
+    "category": "보안",
+    "group": "법적 대응 법 필수 4개 정리",
+    "importance": "하",
+    "summary": "신기술, 융·복합 제품에 대해 최소한의 절차와 인증 기준으로 보안 제품을 평가한 뒤 평가 기준이 마련될 때 까지 공공부문에 제품을 적용할 수 있도록 하는 제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-319",
+    "title": "SIM",
+    "category": "보안",
+    "group": "가입자 식별 모듈",
+    "importance": "하",
+    "summary": "SIM: Subscriber Identification Module",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-320",
+    "title": "USIM",
+    "category": "보안",
+    "group": "가입자 식별 모듈",
+    "importance": "하",
+    "summary": "Universal Subscriber Identity Module 카드",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-321",
+    "title": "e-SIM",
+    "category": "보안",
+    "group": "가입자 식별 모듈",
+    "importance": "하",
+    "summary": "전자식 가입자인증모듈(e-SIM), 이통사 선택 아키텍처 포함 기능 내장되어 있음, 세계이동통신사업자협회(GSMA), 폰에서 이통사 선택기능이 있음.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-322",
+    "title": "TPM",
+    "category": "보안",
+    "group": "HW 보안 모듈",
+    "importance": "출제예상",
+    "summary": "TPM(Trusted Platform Module)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-323",
+    "title": "PCI DSS",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "가맹점 결제 대행 사업자가 취급하는 카드회원의 개인정보를 안전하게 보호하기 위해, 국제적 대표 결제 브랜드 5개사가 공동으로 책정한 신용업게 글로벌 보안기준",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-324",
+    "title": "이탈리아 해킹팀 개발 RCS",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "각 국 정보기관 등으로 도감청 용도로 판매된 이탈리아 해킹팀에서 개발된 원격제어시스템(갈릴레오 버전)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-325",
+    "title": "전자기파 이용 공격",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "HW에 강력한 전기장과 자기장을 지닌 순간적인 전자기적 충격파를 통해 정보시스템을 파괴하는 공경",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-326",
+    "title": "Signature 기반",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "출제예상",
+    "summary": "예) 시그니처 기반 멀웨어 진단 방법은 바이러스의 샘플을 수집하여 진단하는 방법.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-327",
+    "title": "Security Intelligence",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "사용자, 애플리케이션 및 인프라에 의해 생성되어 기업의 IT 보안 및 위험 상황에 영향을 미치는 데이터를 실시간으로 수집, 정규화 및 분석하는 지능화된 보안 기술(솔루션)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-328",
+    "title": "Federal RAMP",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "미국 클라우드 인증",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-329",
+    "title": "난독화(Obfuscation)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "상",
+    "summary": "SW 참조 요망",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-330",
+    "title": "사이버 게놈(Cyber Genome)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "시그니처 기반이 통하지 않을때 인간의 유전체를 분석하듯이 인터넷 악성코드 및 해커를 분석, DNA화하여 APT 공격 등 사이버 공격을 예방하는 지능형 보안 기술",
+    "mnemonic": "AA서유"
+  },
+  {
+    "id": "sec-331",
+    "title": "화이트 해커",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "인터넷 시스템과 개인 컴퓨터시스템을 파괴하는 해커(크래커)를 블랙 해커라고 하고 화이트 해커는 이에 대비하여 쓰는 개념으로 선의의 해커다.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-332",
+    "title": "PIN 비밀번호",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "개인 정보 번호인 PIN(Personal Information Number, PIN)도 본인 확인 수단으로 사용되며 타인의 데이터 접근을 막는다.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-333",
+    "title": "Linux PAM",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "Linux PAM(Pluggable Authentication Modules)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-334",
+    "title": "쉐도우 IT(Shadow IT)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "기업에서 개인 혹은 조직 단위로 회사에서 허용하지 않은 IT 디바이스, 소프트웨어, 서비스를 구매하여 IT자산관리에서 파악하지 못하는 미인증 IT환경",
+    "mnemonic": "비보통"
+  },
+  {
+    "id": "sec-335",
+    "title": "비대면 실명확인",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "상",
+    "summary": "비대면 실명인증을 위한 비대면 보안 인증기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-336",
+    "title": "SSLv2 DROWN",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "DROWN 공격 : Decrypting RSA with Obsolete and Weakened eNcryption",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-337",
+    "title": "코드서명(객체서명)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "개발회사에서 인터넷 상으로 소프트웨어를 배포하는 경우 사용자에게 신뢰할 만한 프로그램임을 알리기 위해 소프트웨어를 인증기관에서 디지털 도장을 받도록 하는 전자서명 방법 - 추가기능",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-338",
+    "title": "쇼단(shodan)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "세계최초 사물인터넷(IoT) 검색엔진으로, 웹캠, CCTV, 라우터, 스위치, FTP, 특정 웹 서버(IIS, Apache등) 에 대한 정보를 수집하고 그 결과를 보여주는 검색엔진",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-339",
+    "title": "SNI",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "HTTPS로 운영중인 불법 해외 저작권 침해 사이트의 경우 기존의 URL 차단 방식으로는 차단이 불가해 SNI필드의 주소정보로 차단",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-340",
+    "title": "디지털 윤리(Digital Ethics)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "하",
+    "summary": "디지털 윤리(Digital Ethics)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-341",
+    "title": "DevSecOps",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "출제예상",
+    "summary": "Development 와 Operation의 융합과 협업을 통한 개발 주기에서 보안 측면의 주기를 포함하는 개발 방법론",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-342",
+    "title": "Pre-Crime 프리크라임 시스템",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "범죄가 일어나기 전에 사건을 예측해 범죄자를 단죄하는 최첨단 치안 시스템",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-343",
+    "title": "ATA-4 / HPA",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "2019년 감리사 103번 문제를 참조하여, 자료 정리와 풀이 해 오기",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-344",
+    "title": "utmp, wtmp, history",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "2019년 감리사 107번 문제를 참조하여, 자료 정리와 풀이 해 오기",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-345",
+    "title": "AndroidManifest.xml",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "안드로이드 기반 보안 문제 총 정리",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-346",
+    "title": "카나리 단어, ASLR",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "2019년 감리사 115번 문제를 참조하여, 자료 정리와 풀이 해 오기",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-347",
+    "title": "이메일 보안 프로토콜",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "S/MIME(Secure/Multipurpose Internet Mail Extension)",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-348",
+    "title": "고객확인 절차(KYC: Know Your Customer)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "출제예상",
+    "summary": "자금세탁, 고객주의의무(CDD: Customer Due Diligence), 셀프 인증",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-349",
+    "title": "IoC(Indicators of Compromise), IoA(Indicators of Attack)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "상",
+    "summary": "[IoC] Signatures, Malware 등의 공격이 발생했음을 나타내는 방어자 대응 관점의 지표",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-350",
+    "title": "공격표면관리-ASM(Attack Surface Management)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "출제예상",
+    "summary": "(기업이 해커의 입장에서) 민감한 데이터를 포함하여 전송 및 처리하는 외부 디지털 자산을 지속적으로",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-351",
+    "title": "지속적인 위협 노출 관리(CTEM)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "출제예상",
+    "summary": "기업의 정보자산들에 대해 외부에 노출되어 있는지 여부의 확인 및 외부에 노출된 자산들이 어떤 취약점들을 가지고 있고, 이로 인해 발생 가능한 위험 식별 및 지속적인 관리를 통해 경",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-352",
+    "title": "팻 핑거(Fat Finger)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "담당자의 근무태만과 내부통제절차 불완전성으로 발생된 작은 실수가 회복 어려운 피해 결과 초래하는 Miss Use 행위",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-353",
+    "title": "CPTED (Crime Prevention Through Environmental Design)",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "“도시·건축환경의 적절한 설계와 효과적인 사용을 통해서 범죄 및 불안감을 감소시키고 삶의 질을 향상” 시키기 위한 다학제적(multi-disciplinary) 이론이자 실천전략 메",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-354",
+    "title": "암호공격 기법/암호문 공격",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "키의 비밀성을 유지하기 위한, 커크호프(Kerchhoff)의 원리",
+    "mnemonic": "단기 - CO P, 평암 - PC"
+  },
+  {
+    "id": "sec-355",
+    "title": "블록체인(Blockchain) 암호기술 가이드라인",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "국가·공공기관에서 안전한 블록체인을 구축하기 위해 준수해야 할 17개의 가이드라인 암호 사용기준(암호모듈 검증제도 검증대상 암호 알고리즘 사용), 계정 관리(관리 시스템 제공, 생",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-356",
+    "title": "소프트웨어 안전진단 가이드",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "중",
+    "summary": "국가, 공공기관 등에서 SW 안전 진단을 기획, 추진 및 수행하는데 참고할 수 있는 실무 지침서",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-357",
+    "title": "CSAP, CSAP(Cloud Security Assurance Program",
+    "category": "보안",
+    "group": "기타/시사",
+    "importance": "출제예상",
+    "summary": "클라우드 서비스 제공자가 제공하는 서비스에 대해 『 클라우드 컴퓨팅 발전 및 이용자 보호에 관한 법률 』 제 23조 제2항에 따라 정보보호 기준의 준수여부 확인을 인증기관이 평가·",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-358",
+    "title": "용어",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "물리적 보안은 직원, 데이터, 시설, 설비, 시스템 등의 조직의 자산에 대한 물리적 보호를 의미 잠금장치(시건장치 x), CCTV",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-359",
+    "title": "CWPP",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "중",
+    "summary": "하이브리드 및 멀티 클라우드 환경에서 서버 워크로드를 보호하기",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-360",
+    "title": "제로데이(Zero Day) 취약점",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "특정 소프트웨어의 아직까지 공표되지 않은, 혹은 공표되었지만 아직까지 패치 되지 않은 보안 취약점을 이용한 해킹의 통칭",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-361",
+    "title": "동적 WEP 키(Dynamic WEP Key)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "무선 단말기와 AP 간의 WEP 키를 주기적으로 자동 변경함으로써 무선 랜(WLAN)의 보안성을 향상시킨 방식. 정적 WEP 키 방식은 공유된 해킹 툴로도 간단하게 해킹이 가능해져",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-362",
+    "title": "MLS(Multi-Level Security)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "국가 전산망 정보를 중요도에 기반한 세등급으로 분류, 차등적 보안통제 적용하여 보안성 유지하면",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-363",
+    "title": "OT 사이버 보안 6 원칙",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "물 , 에너지 , 교통 인프라와 같은 사회 필수서비스의 운영 기술에 위협이 되는 사이버활동에 대해 국가적 시스템을 안전하게 보호하기 위한 원칙",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-364",
+    "title": "사전적정성 검토제",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "사업자가 AI 등 신기술 개발이나 신 서비스 제공을 기획하는 과정에서 개인정보 보호법 준수 여부가 불확실한 경우, 처리 환경에 적합한 개인정보 보호법 적용방안을 사업자와 개인정보보",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-365",
+    "title": "BitB(Browser-in-the-Browser) 공격",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "피싱 공격의 한 형태로, 웹 브라우저 창을 가장한 가짜 로그인 창을 통해 사용자의 인증 정보를 탈취하는 고도화된 소셜 엔지니어링 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-366",
+    "title": "J2 공격(Jailbreak 2 Attack)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "인공지능 언어모델 ( 의 내장된 윤리적 필터 , 보안 정책 , 콘텐츠 제한 시스템 가드레일 을 우회하기 위해 , 역할 주입 (Role Injection), 허구 설정 (Fictio",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-367",
+    "title": "Shift Left Security",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "소프트웨어 개발 생명주기의 초기에 보안 활동을 통합해 결함을 조기에 발견하고 대응 시간과 비용을 절감하기 위해 테스트나 보안 검증을 앞당기는 보안 전략",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-368",
+    "title": "TARA(Threat Analysis and Risk Assessment)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "사이버 보안 위협에 대한 체계적인 분석과 평가 과정을 통해, 차량 시스템이 직면할 수 있는 위험을 식별하고 대응 방안을 마련하는 방법론",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-369",
+    "title": "국가 망 보안체계(National Network Security Framework)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "출제예상",
+    "summary": "주요 기반시설과 국가 공공기관이 직면한 복합적인 사이버 위협 으로부터 국가 핵심 기능과 업무의 연속성을 보호하기 위해 위협식별 위험 파악 보호대책 수립 및 적용 을 포함한 일련의 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-370",
+    "title": "딥보이스(Deep Voice) 피싱",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "딥페이크 Deepfake) 와 보이스 피싱 Voice Phishing) 의 합성어로서 딥러닝 기반의 음성 합성 기술 (Voice Cloning) 을 활용해 실제 인물의 음성을 모방",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-371",
+    "title": "암호문 공격 기법",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "출제예상",
+    "summary": "암호키 없이 암호화된 정보를 해독하거나 인증에 필요한 패스워드를 알아내기 위한 적극적인 공격 행위",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-372",
+    "title": "위성체 보안 위협",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "미래 우주 경제 시대에 지속 가능한 우주 개발을 지원하기 위해 우주 분야 사이버보안 강화를 위한 모델",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-373",
+    "title": "프롬프트 인젝션(Prompt Injection)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "출제예상",
+    "summary": "공격자가 악의적인 목적을 갖고 고안한 입력 프롬프트를 사용하여 LLM 모델 또는 LLM 기반 응용 프로그램으로 하여금 설계된 정상 범위를 벗어난 동작을 하게끔 유도하는 AI 모델 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-374",
+    "title": "디지털 포렌식 아트팩트(Artifact)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "컴퓨터나 디지털 기기에서 사용자의 행위나 시스템 동작의 흔적을 보여주는 데이터나 파일 조각",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-375",
+    "title": "BPFdoor(Berkeley Packet Filter door) 악성코드",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "BPF를 활용해 네트워크 패킷을 감시하며 외부 명령을 은밀히 수신하고 실행하는 리눅스 기반 보안시스템 우회 공격기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-376",
+    "title": "Open XDR(Open eXtended Detection & Response)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "다양한 보안 벤더 제품과 연동 가능한 개방형 XDR 플랫폼. API와 표준 포맷 등으로 이기종 보안 기능들을 통합하는 보안 솔루션",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-377",
+    "title": "Native XDR(Native eXtended Detection & Response)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "단일 벤더의 보안 솔루션 제품군을 중심으로 설계된",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-378",
+    "title": "다자간 연산(Secure Multi-Party Computation: SMPC)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "조직 내 참여자들이 민감한 정보를 암호화하여 타인에게 공개하지 않는 범위 내에서 공동으로 각각의 데이",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-379",
+    "title": "신뢰 실행 환경(Trusted Execution Environment: TEE)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "하드웨어 보안 메커니즘을 통해 민감 데이터에 안전하게 접근하고 이를 처리할 수 있도록 격리된 보호 환경",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-380",
+    "title": "심 스와핑(SIM Swapping)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "해커가 도용된 사용자 정보로 유심(USIM)을 복제하여, 복제된 유심을 통해 타인의 전화번호로 통신 및 인증",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-381",
+    "title": "공간정보 안심구역",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "보안이 확보된 구역에서 공개가 제한된 고정밀 공간정보와 미공개 데이터를 누구나 융복합하여 분석 및 가공할 수 있는 공간",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-382",
+    "title": "KCMVP(Korea Cryptographic Module Validation Program)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "국가정보통신망에서 소통, 저장되는 비밀이 아닌 업무자료를 보호하기 위해 국가와 공공망에서 도입하는 암호모듈의 안전성과 구현 적합성을 검증하는 제도",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-383",
+    "title": "로봇 보안모델",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "최신 IT 기술을 바탕으로 인간과 상호작용하여 다양한 형태의 서비스를 제공하는 것",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-384",
+    "title": "MCP(Model Context Protocol)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "대규모 언어 모델 ( 이 다양한 데이터 소스 및 도구와 안전하고 일관되게 상호작",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-385",
+    "title": "RED(Radio Equipment Directive)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "\"Radio Equipment Directive\"의 약자로, 유럽 시장에 출시되는 무선 장치의 안전성, 주파수 사용 효율, 전자기 간섭, 보안성 등을 관리하는 법적 지침(Direc",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-386",
+    "title": "EN 18031",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "EU RED 3.3(d/e/f) 조항에 명시된 사이버 보안 요건을 충족하기 위해 CEN(CEN: 유럽표준위원회)과 CENELEC(전기전자표준위원회)이 공동으로 개발한 유럽 기술 표",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-387",
+    "title": "KISA의 데이터백업 8대 보안 수칙",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "1. 오프 사이트 운영, 2. 3-2-1 보관 전략, 3. 접근 통제 및 권한 관리, 4. 백업 서버 모니터링, 5. 정기적 복구 훈련, 6. 최신 보안패치 적용, 7. 백업 전 ",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-388",
+    "title": "Security Group",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "클라우드 인스턴스에 대한 가상 방화벽 역할로서 특정 인스턴스에 대한 트래픽 제어 장치",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-389",
+    "title": "Network ACL",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "VPC(Virtual Private Cloud)내 서브넷의 전체 트래픽을 제어하는 가상 방화벽",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-390",
+    "title": "바인드 웹셸(Bind Web Shell)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "해커가 웹 브라우저를 통해 서버에 직접 명령을 내릴 수 있는 업로드 된 서버 스크립트",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-391",
+    "title": "리버스 웹셸(Reverse Web shell)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "방화벽 우회가 가능한 웹서버가 공격자에게 역으로 연결하여 셸을 획득하는 침투 공격",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-392",
+    "title": "AI워터마크",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "AI가 생성한 인공지능 생성물에 사람이 인지할 수 있는 명시적 인지형 워터마크 또는 AI나 특수기술을 만을 이용하여 확인 가능 비인지형 워터마크 삽입 기술",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-393",
+    "title": "CIA Triad",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "정보보안의 근간을 이루는 세 가지 핵심 가치로, 정보의 기밀성, 무결성, 가용성을 지속적으로 유지하고 보호하기 위한 보안의 기본 원칙",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-394",
+    "title": "제로클릭 공격(0-Click Attack)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "사용자의 클릭이나 조작 없이 메시지 수신, 이미지 렌더링 등 단순 이벤트만으로 시스템의 취약점을 자동 실행하여 악성 행위를 유발하는 공격 기법",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-395",
+    "title": "불변(Immutable) 백업",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "한 번 저장된 데이터가 지정된 기간 동안 누구도 수정, 삭제, 암호화할 수 없는 데이터 보호 기술.",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-396",
+    "title": "Ephemeral Diffie-Hellman (DHE)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "세션마다 임시 키 쌍을 생성하여 키 교환을 수행하는 방식의 디피-헬만 알고리즘으로, Perfect Forward Secrecy(PFS)를 제공하는 보안 프로토콜",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-397",
+    "title": "Elliptic Curve DHE (ECDHE)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "타원 곡선 암호 기반으로 매 세션마다 임시 키를 생성하는 고성능 보안 키 교환 방식으로, DHE의 보안성과 효율성을 개선한 알고리즘",
+    "mnemonic": ""
+  },
+  {
+    "id": "sec-398",
+    "title": "Perfect Forward Secrecy (PFS)",
+    "category": "보안",
+    "group": "물리적 보안",
+    "importance": "하",
+    "summary": "세션 키가 유출되더라도 과거의 통신 내용을 복호화할 수 없도록 보장하며, DH 구조의 임시 키 방식(DHE, ECDHE)과 결합되어 구현되는 암호 통신 속성",
+    "mnemonic": ""
   }
 ]
