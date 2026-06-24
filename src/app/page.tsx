@@ -59,6 +59,13 @@ const menuGroups = [
         color: "from-blue-500 to-indigo-600",
       },
       {
+        href: "/exam",
+        emoji: "📜",
+        title: "기출문제",
+        desc: "실제 기출문제로 답안 연습·자가채점 (회차·교시별)",
+        color: "from-amber-500 to-yellow-600",
+      },
+      {
         href: "/grade",
         emoji: "✅",
         title: "AI 자가채점",

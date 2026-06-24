@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import questions from "@/data/questions.json";
@@ -27,6 +27,15 @@ export default function AnswerPage() {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  // 기출문제 메뉴 등에서 ?period=&question= 으로 들어오면 문제를 미리 채운다.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const p = sp.get("period");
+    if (p === "1교시" || p === "2교시") setPeriod(p);
+    const q = sp.get("question");
+    if (q) setQuestion(q);
+  }, []);
 
   const [hint, setHint] = useState<Hint | null>(null);
   const [hintLoading, setHintLoading] = useState(false);
