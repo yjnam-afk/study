@@ -1,0 +1,52 @@
+/**
+ * 서버 전용: 토픽의 저장된 실데이터(엑셀 서브노트)를 LLM 생성의 "정답 근거"로 만든다.
+ * 큰 JSON을 import 하므로 API 라우트(서버)에서만 사용한다(클라이언트 번들 금지).
+ */
+import topics from "@/data/topics.json";
+import topicDetails from "@/data/topicDetails.json";
+
+type Detail = {
+  detail?: string;
+  defKeywords?: string[];
+  featureKeywords?: string[];
+  applicationKeywords?: string[];
+  plusKeywords?: string[];
+};
+const DETAILS = topicDetails as Record<string, Detail>;
+
+/** 제목으로 토픽 id를 찾는다(직접 타이핑해도 데이터 연결되도록). */
+export function findIdByTitle(title?: string): string | undefined {
+  const t = (title || "").trim();
+  if (!t) return undefined;
+  return topics.find((x) => x.title === t)?.id;
+}
+
+/** 토픽의 저장된 실제 내용을 "원문 그대로" 근거 텍스트로 만든다. */
+export function groundingFrom(topicId?: string): string {
+  if (!topicId) return "";
+  const d = DETAILS[topicId];
+  if (!d) return "";
+  const parts: string[] = [];
+  if (d.detail) parts.push(d.detail.slice(0, 1800));
+  const kws = [
+    ...(d.defKeywords || []),
+    ...(d.featureKeywords || []),
+    ...(d.applicationKeywords || []),
+    ...(d.plusKeywords || []),
+  ];
+  const uniq = Array.from(new Set(kws));
+  if (uniq.length) parts.push(`핵심 키워드: ${uniq.join(", ")}`);
+  return parts.join("\n");
+}
+
+/** 사용자 붙여넣기 자료 + 토픽 실데이터를 합쳐 최종 근거를 만든다. */
+export function buildGrounding(opts: {
+  topicId?: string;
+  topicTitle?: string;
+  reference?: string;
+}): string {
+  const id = opts.topicId || findIdByTitle(opts.topicTitle);
+  return [groundingFrom(id), opts.reference]
+    .filter((s) => s && s.trim())
+    .join("\n\n");
+}

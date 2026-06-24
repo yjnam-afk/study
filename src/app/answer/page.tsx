@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import questions from "@/data/questions.json";
+import topics from "@/data/topics.json";
 
 type Period = "1교시" | "2교시";
 type Hint = {
@@ -13,9 +14,15 @@ type Hint = {
   outline: string[];
 };
 
+const CATS = Array.from(new Set(topics.map((t) => t.category)));
+const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
+
 export default function AnswerPage() {
   const [period, setPeriod] = useState<Period>("1교시");
   const [question, setQuestion] = useState("");
+  const [topicId, setTopicId] = useState("");
+  const [topicTitle, setTopicTitle] = useState("");
+  const [recCat, setRecCat] = useState(CATS[0]);
   const [reference, setReference] = useState("");
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
@@ -88,7 +95,7 @@ export default function AnswerPage() {
       const res = await fetch("/api/answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ period, question, reference }),
+        body: JSON.stringify({ period, question, reference, topicId, topicTitle }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
@@ -148,6 +155,62 @@ export default function AnswerPage() {
             </button>
           ))}
         </div>
+
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <span className="text-xs text-slate-400">
+            토픽 연결(선택 시 서브노트 내용을 근거로 작성):
+          </span>
+          <select
+            value={recCat}
+            onChange={(e) => setRecCat(e.target.value)}
+            className="rounded border border-slate-200 bg-white px-2 py-1 text-xs text-slate-600"
+          >
+            {CATS.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+          <select
+            key={recCat}
+            value={topicId}
+            onChange={(e) => {
+              const t = topics.find((x) => x.id === e.target.value);
+              if (t) {
+                setTopicId(t.id);
+                setTopicTitle(t.title);
+                if (!question.trim() && period === "1교시") {
+                  setQuestion(`${t.title}에 대해 설명하시오.`);
+                }
+              } else {
+                setTopicId("");
+                setTopicTitle("");
+              }
+            }}
+            className="min-w-[12rem] rounded border border-slate-200 bg-white px-2 py-1 text-xs text-slate-600"
+          >
+            <option value="">
+              연결 안 함 ({topics.filter((t) => t.category === recCat).length}개)
+            </option>
+            {topics
+              .filter((t) => t.category === recCat)
+              .slice()
+              .sort(
+                (a, b) =>
+                  (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9),
+              )
+              .map((t) => (
+                <option key={t.id} value={t.id}>
+                  [{t.importance}] {t.title}
+                </option>
+              ))}
+          </select>
+        </div>
+        {topicId && (
+          <p className="mt-1 text-xs text-emerald-600">
+            ✓ &ldquo;{topicTitle}&rdquo; 서브노트 내용을 근거로 답안을 작성합니다.
+          </p>
+        )}
 
         <details className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
           <summary className="cursor-pointer text-sm font-medium text-slate-600">
