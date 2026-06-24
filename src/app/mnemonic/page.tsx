@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import topics from "@/data/topics.json";
 
@@ -40,6 +40,23 @@ export default function MnemonicPage() {
   const [error, setError] = useState("");
   const [set, setSet] = useState<MnemonicSet | null>(null);
   const [step, setStep] = useState<Step>("learn");
+
+  // 학습 코치 등에서 ?topicId=&topic= 으로 들어오면 해당 토픽을 미리 선택한다.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const id = sp.get("topicId") || "";
+    const title = sp.get("topic") || "";
+    if (id) {
+      const t = topics.find((x) => x.id === id);
+      if (t) {
+        setTopic(t.title);
+        setTopicId(t.id);
+        setRecCat(t.category);
+        return;
+      }
+    }
+    if (title) setTopic(title);
+  }, []);
 
   async function generate() {
     if (!topic.trim()) {

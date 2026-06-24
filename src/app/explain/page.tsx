@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import topics from "@/data/topics.json";
@@ -17,6 +17,17 @@ export default function ExplainPage() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  // 학습 코치에서 ?topic= 으로 들어오면 해당 토픽을 미리 채운다.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const title = sp.get("topic") || "";
+    if (title) {
+      setTopic(title);
+      const t = topics.find((x) => x.title === title);
+      if (t) setRecCat(t.category);
+    }
+  }, []);
 
   async function generate() {
     if (!topic.trim()) {

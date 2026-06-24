@@ -4,7 +4,22 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import topics from "@/data/topics.json";
 import { ReviewItem, loadReview, getItem, isDue } from "@/lib/storage";
-import { QuizStats, loadStats, loadNotes, dueNotes } from "@/lib/notes";
+import { QuizStats, loadStats, loadNotes } from "@/lib/notes";
+import { loadSession } from "@/lib/auth";
+import {
+  CoachPlan,
+  buildPlan,
+  mnemonicLink,
+  explainLink,
+} from "@/lib/coach";
+
+const toneClass: Record<string, string> = {
+  rose: "border-rose-200 bg-rose-50 hover:border-rose-300",
+  amber: "border-amber-200 bg-amber-50 hover:border-amber-300",
+  violet: "border-violet-200 bg-violet-50 hover:border-violet-300",
+  emerald: "border-emerald-200 bg-emerald-50 hover:border-emerald-300",
+  sky: "border-sky-200 bg-sky-50 hover:border-sky-300",
+};
 
 const menuGroups = [
   {
@@ -88,14 +103,18 @@ export default function Home() {
     lastAt: null,
   });
   const [notesCount, setNotesCount] = useState(0);
-  const [dueNoteCount, setDueNoteCount] = useState(0);
+  const [plan, setPlan] = useState<CoachPlan | null>(null);
+  const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    setReview(loadReview());
-    setStats(loadStats());
+    const rev = loadReview();
+    const st = loadStats();
     const notes = loadNotes();
+    setReview(rev);
+    setStats(st);
     setNotesCount(notes.length);
-    setDueNoteCount(dueNotes(notes).length);
+    setPlan(buildPlan(rev, notes, st));
+    setUserName(loadSession()?.name || "");
   }, []);
 
   const total = topics.length;
@@ -125,36 +144,100 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-8 rounded-2xl bg-gradient-to-br from-brand-600 to-indigo-700 p-8 text-white shadow-lg">
-        <h1 className="text-3xl font-bold">기술사 답안은 "소설"입니다 ✍️</h1>
-        <p className="mt-2 max-w-2xl text-brand-50">
-          핵심은 키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기.
-          <b className="text-white"> ① 키워드를 암기</b>하고{" "}
-          <b className="text-white">② 그 키워드로 답안을 써보세요.</b>
+      <section className="mb-6 rounded-2xl bg-gradient-to-br from-brand-600 to-indigo-700 p-7 text-white shadow-lg">
+        <p className="text-sm font-medium text-brand-100">
+          {userName ? `${userName} 님, 오늘의 학습 코치예요` : "오늘의 학습 코치"}
         </p>
+        <h1 className="mt-1 text-2xl font-bold sm:text-3xl">
+          {plan ? plan.headline : "기술사 답안은 '소설'입니다 ✍️"}
+        </h1>
+        <p className="mt-2 max-w-2xl text-sm text-brand-50">
+          {plan
+            ? plan.subline
+            : "키워드를 암기하고, 그 키워드로 답안을 써보세요."}
+        </p>
+        {plan?.primary && (
+          <Link
+            href={plan.primary.href}
+            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
+          >
+            지금 시작하기 · {plan.primary.label} →
+          </Link>
+        )}
       </section>
 
-      {(dueCount > 0 || dueNoteCount > 0) && (
-        <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 shadow-sm">
-          <h2 className="text-sm font-bold text-amber-800">📌 오늘 할 일</h2>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {dueCount > 0 && (
-              <Link
-                href="/review"
-                className="rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm font-medium text-amber-800 transition hover:bg-amber-100"
-              >
-                🔁 복습할 토픽 <b>{dueCount}</b>개 →
-              </Link>
-            )}
-            {dueNoteCount > 0 && (
-              <Link
-                href="/notes"
-                className="rounded-lg border border-rose-300 bg-white px-3 py-2 text-sm font-medium text-rose-700 transition hover:bg-rose-50"
-              >
-                📕 다시 풀 오답 <b>{dueNoteCount}</b>개 →
-              </Link>
-            )}
+      {plan && plan.tasks.length > 0 && (
+        <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-sm font-bold text-slate-800">
+              ✅ 오늘의 학습 순서
+            </h2>
+            <span className="text-xs text-slate-400">
+              코치가 급한 순으로 정렬했어요
+            </span>
           </div>
+          <ol className="space-y-2">
+            {plan.tasks.map((t, i) => (
+              <li key={t.kind + i}>
+                <Link
+                  href={t.href}
+                  className={`flex items-center gap-3 rounded-xl border p-3 transition hover:shadow-sm ${toneClass[t.tone]}`}
+                >
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white/70 text-xs font-bold text-slate-500">
+                    {i + 1}
+                  </span>
+                  <span className="text-lg">{t.emoji}</span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-sm font-semibold text-slate-800">
+                      {t.title}
+                    </span>
+                    <span className="block truncate text-xs text-slate-500">
+                      {t.detail}
+                    </span>
+                  </span>
+                  <span className="shrink-0 text-slate-400">→</span>
+                </Link>
+              </li>
+            ))}
+          </ol>
+
+          {plan.newTopics.length > 0 && (
+            <div className="mt-4 border-t border-slate-100 pt-4">
+              <div className="mb-2 text-xs font-medium text-slate-500">
+                🆕 오늘 새로 시작하면 좋은 토픽 (탭 한 번이면 바로 학습)
+              </div>
+              <div className="space-y-2">
+                {plan.newTopics.map((t) => (
+                  <div
+                    key={t.id}
+                    className="flex items-center gap-2 rounded-lg border border-slate-100 bg-slate-50 p-2"
+                  >
+                    <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+                      {t.importance}
+                    </span>
+                    <span className="min-w-0 flex-1 truncate text-sm text-slate-700">
+                      {t.title}
+                    </span>
+                    <span className="hidden text-[10px] text-slate-400 sm:inline">
+                      {t.category}
+                    </span>
+                    <Link
+                      href={mnemonicLink(t)}
+                      className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                    >
+                      🥷 암기
+                    </Link>
+                    <Link
+                      href={explainLink(t)}
+                      className="shrink-0 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-100"
+                    >
+                      💡 설명
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
