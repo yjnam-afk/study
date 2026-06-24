@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateText, parseJsonFromModel, AIConfigError } from "@/lib/ai";
 import { mnemonicPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
+import topics from "@/data/topics.json";
 import topicDetails from "@/data/topicDetails.json";
 
 type Detail = {
@@ -12,18 +13,27 @@ type Detail = {
 };
 const DETAILS = topicDetails as Record<string, Detail>;
 
-/** 선택된 토픽의 저장된 실제 내용(엑셀 정의·구성요소·키워드)을 근거 텍스트로 만든다. */
+/** 제목으로 토픽 id를 찾는다(직접 타이핑해도 데이터 연결되도록). */
+function findIdByTitle(title: string): string | undefined {
+  const t = title.trim();
+  return topics.find((x) => x.title === t)?.id;
+}
+
+/** 선택/매칭된 토픽의 저장된 실제 내용을 "원문 그대로" 근거로 만든다. */
 function groundingFrom(topicId?: string): string {
   if (!topicId) return "";
   const d = DETAILS[topicId];
   if (!d) return "";
   const parts: string[] = [];
-  if (d.detail) parts.push(d.detail.slice(0, 1500));
-  if (d.defKeywords?.length) parts.push(`정의 키워드: ${d.defKeywords.join(", ")}`);
-  if (d.featureKeywords?.length)
-    parts.push(`구성요소·특징: ${d.featureKeywords.join(", ")}`);
-  if (d.applicationKeywords?.length)
-    parts.push(`활용·동작: ${d.applicationKeywords.join(", ")}`);
+  if (d.detail) parts.push(d.detail.slice(0, 1800));
+  const kws = [
+    ...(d.defKeywords || []),
+    ...(d.featureKeywords || []),
+    ...(d.applicationKeywords || []),
+    ...(d.plusKeywords || []),
+  ];
+  const uniq = Array.from(new Set(kws));
+  if (uniq.length) parts.push(`핵심 키워드: ${uniq.join(", ")}`);
   return parts.join("\n");
 }
 
@@ -61,15 +71,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "토픽을 입력하세요." }, { status: 400 });
     }
 
-    // 사용자가 붙여넣은 교재 + 선택 토픽의 저장된 실제 내용을 함께 근거로 사용
-    const grounding = [groundingFrom(topicId), reference]
+    // 직접 타이핑이어도 제목이 데이터에 있으면 그 내용을 근거로 사용
+    const resolvedId = topicId || findIdByTitle(topic);
+    // 사용자가 붙여넣은 교재 + 토픽의 저장된 실제 내용을 함께 근거로 사용
+    const grounding = [groundingFrom(resolvedId), reference]
       .filter((s) => s && s.trim())
       .join("\n\n");
 
     const raw = await generateText({
       system: TUTOR_SYSTEM,
       user: mnemonicPrompt(topic, grounding),
-      temperature: 0.6,
+      temperature: 0.4,
     });
 
     const data = parseJsonFromModel<MnemonicSet>(raw);
