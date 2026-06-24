@@ -6,6 +6,7 @@ import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import questions from "@/data/questions.json";
 import topics from "@/data/topics.json";
+import { getModelAnswerByQuestion } from "@/lib/modelAnswers";
 
 type Period = "1교시" | "2교시";
 type Hint = {
@@ -44,6 +45,7 @@ export default function AnswerPage() {
   const [storyLoading, setStoryLoading] = useState(false);
 
   const samples = questions.filter((q) => q.period === period);
+  const modelAnswer = getModelAnswerByQuestion(question);
 
   async function getHint() {
     if (!question.trim()) {
@@ -307,6 +309,26 @@ export default function AnswerPage() {
         </section>
       </div>
 
+      {modelAnswer && (
+        <div className="mt-6">
+          <details open className="rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-5 shadow-sm">
+            <summary className="cursor-pointer text-sm font-bold text-emerald-800">
+              📘 이 문제의 클로드 모범답안 (무료·즉시)
+            </summary>
+            <div className="mt-2 rounded-md bg-white px-2.5 py-1 text-[11px] text-emerald-700 ring-1 ring-emerald-200">
+              🧾 근거: {modelAnswer.source}
+            </div>
+            <article className="mt-3 rounded-xl bg-white p-5 md:p-6">
+              <Markdown>{modelAnswer.answer}</Markdown>
+            </article>
+            <p className="mt-2 text-xs text-emerald-600">
+              ↑ 미리 작성된 모범답안입니다. 아래 &ldquo;답안 생성&rdquo;은 실시간(무료 LLM)
+              결과로, 비교용이에요.
+            </p>
+          </details>
+        </div>
+      )}
+
       {(hintLoading || hint) && (
         <div className="mt-6">
           {hintLoading && <Spinner label="키워드·두음을 뽑는 중…" />}
@@ -371,6 +393,9 @@ export default function AnswerPage() {
         {error && <ErrorBox message={error} />}
         {answer && (
           <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <div className="mb-3 inline-block rounded-md bg-slate-100 px-2.5 py-1 text-[11px] text-slate-500">
+              ⚡ 실시간 생성(무료 LLM){topicId ? " · 서브노트 근거" : " · 일반지식"}
+            </div>
             <Markdown>{answer}</Markdown>
           </article>
         )}
