@@ -39,6 +39,10 @@ export default function MnemonicPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [set, setSet] = useState<MnemonicSet | null>(null);
+  const [subnote, setSubnote] = useState<{
+    mnemonic: string;
+    keywords: string[];
+  } | null>(null);
   const [step, setStep] = useState<Step>("learn");
   const [autoPending, setAutoPending] = useState(false);
 
@@ -82,6 +86,7 @@ export default function MnemonicPage() {
     setLoading(true);
     setError("");
     setSet(null);
+    setSubnote(null);
     try {
       const res = await fetch("/api/mnemonic", {
         method: "POST",
@@ -91,6 +96,11 @@ export default function MnemonicPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
       setSet(data.set);
+      setSubnote(
+        data.subnote && (data.subnote.mnemonic || data.subnote.keywords?.length)
+          ? data.subnote
+          : null,
+      );
       setStep("learn");
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
@@ -185,6 +195,45 @@ export default function MnemonicPage() {
       <div className="mt-6">
         {loading && <Spinner label="두음신공을 만드는 중입니다…" />}
         {error && <ErrorBox message={error} />}
+
+        {subnote && (subnote.mnemonic || subnote.keywords.length > 0) && (
+          <div className="mb-5 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-5 shadow-sm">
+            <h3 className="text-sm font-bold text-emerald-800">
+              📒 서브노트 원본 (교재에 실제로 있는 두음·키워드)
+            </h3>
+            {subnote.mnemonic && (
+              <div className="mt-3 rounded-xl bg-white p-4 text-center">
+                <div className="text-xs font-medium text-emerald-600">
+                  원본 두음신공
+                </div>
+                <div className="mt-1 text-2xl font-extrabold tracking-wide text-emerald-700">
+                  {subnote.mnemonic}
+                </div>
+              </div>
+            )}
+            {subnote.keywords.length > 0 && (
+              <div className="mt-3">
+                <div className="mb-1 text-xs font-medium text-emerald-600">
+                  원본 키워드
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {subnote.keywords.map((k, i) => (
+                    <span
+                      key={i}
+                      className="rounded-full bg-white px-2.5 py-1 text-xs text-emerald-700 ring-1 ring-emerald-200"
+                    >
+                      {k}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+            <p className="mt-3 text-xs text-emerald-600">
+              ↑ 서브노트에 저장된 실제 내용입니다. 아래는 학습용으로 정리한
+              버전이에요.
+            </p>
+          </div>
+        )}
 
         {set && (
           <div>

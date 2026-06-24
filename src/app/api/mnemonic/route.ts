@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateText, parseJsonFromModel, AIConfigError } from "@/lib/ai";
 import { mnemonicPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
-import { buildGrounding } from "@/lib/grounding";
+import { buildGrounding, subnoteFor } from "@/lib/grounding";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -79,7 +79,9 @@ export async function POST(req: NextRequest) {
     // 두음을 서버에서 결정적으로 보정(모델이 자모/엉뚱한 두음을 내도 교정)
     normalizeGroup(data.intro);
     normalizeGroup(data.body);
-    return NextResponse.json({ set: data });
+    // 서브노트에 원본 두음/키워드가 있으면 함께 반환(사용자가 원본을 우선 확인)
+    const subnote = subnoteFor({ topicId, topicTitle: topic });
+    return NextResponse.json({ set: data, subnote });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;
     return NextResponse.json(
