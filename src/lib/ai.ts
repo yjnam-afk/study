@@ -64,12 +64,13 @@ const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
 type ChainEntry = { name: string; model?: string; maxTokens?: number };
 
 /** Groq 무료 등급은 토큰 한도(TPD)가 "모델별"로 따로 적용되므로,
- *  같은 API 키로 여러 모델을 폴백시키면 하나가 막혀도 다음 모델로 계속 동작한다. */
+ *  같은 API 키로 여러 모델을 폴백시키면 하나가 막혀도 다음 모델로 계속 동작한다.
+ *  품질을 위해 "큰/좋은 모델"만 사용한다(작은 8b·20b는 한국어 두음 품질이 낮아 제외). */
 function groqModels(): string[] {
   const primary = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
   const fallbacks = (
     process.env.GROQ_FALLBACK_MODELS ||
-    "openai/gpt-oss-120b,openai/gpt-oss-20b,llama-3.1-8b-instant"
+    "openai/gpt-oss-120b,moonshotai/kimi-k2-instruct,qwen/qwen3-32b"
   )
     .split(",")
     .map((s) => s.trim())
