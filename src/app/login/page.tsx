@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { PageHeader, ErrorBox, Button } from "@/components/ui";
 import { login, register, loadSession, clearSession, Session } from "@/lib/auth";
 
 type Mode = "login" | "register";
 
 export default function LoginPage() {
-  const router = useRouter();
   const [mode, setMode] = useState<Mode>("login");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +28,8 @@ export default function LoginPage() {
     try {
       const s = mode === "login" ? await login(name, password) : await register(name, password);
       setSession(s);
-      router.push("/");
+      // 세션이 모든 화면(헤더·게이트)에 확실히 반영되도록 전체 새로고침으로 이동
+      window.location.href = "/";
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -48,7 +47,7 @@ export default function LoginPage() {
             님으로 로그인 중입니다.
           </p>
           <div className="mt-4 flex gap-2">
-            <Button onClick={() => router.push("/")}>학습 시작</Button>
+            <Button onClick={() => (window.location.href = "/")}>학습 시작</Button>
             <button
               onClick={() => {
                 clearSession();

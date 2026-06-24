@@ -23,6 +23,7 @@ type MnemonicSet = {
 type Step = "learn" | "inject" | "check";
 
 const CATS = Array.from(new Set(topics.map((t) => t.category)));
+const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
 
 export default function MnemonicPage() {
   const [topic, setTopic] = useState("");
@@ -72,7 +73,7 @@ export default function MnemonicPage() {
           className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <span className="text-xs text-slate-400">추천(중요도 상):</span>
+          <span className="text-xs text-slate-400">토픽 선택:</span>
           <select
             value={recCat}
             onChange={(e) => setRecCat(e.target.value)}
@@ -84,17 +85,28 @@ export default function MnemonicPage() {
               </option>
             ))}
           </select>
-          {topics
-            .filter((t) => t.category === recCat && t.importance === "상")
-            .map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setTopic(t.title)}
-              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600 hover:border-brand-300 hover:text-brand-600"
-            >
-              {t.title}
-            </button>
-          ))}
+          <select
+            key={recCat}
+            defaultValue=""
+            onChange={(e) => e.target.value && setTopic(e.target.value)}
+            className="min-w-[12rem] rounded border border-slate-200 bg-white px-2 py-1 text-xs text-slate-600"
+          >
+            <option value="" disabled>
+              토픽 선택… ({topics.filter((t) => t.category === recCat).length}개)
+            </option>
+            {topics
+              .filter((t) => t.category === recCat)
+              .slice()
+              .sort(
+                (a, b) =>
+                  (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9),
+              )
+              .map((t) => (
+                <option key={t.id} value={t.title}>
+                  [{t.importance}] {t.title}
+                </option>
+              ))}
+          </select>
         </div>
         <div className="mt-5">
           <Button onClick={generate} disabled={loading}>

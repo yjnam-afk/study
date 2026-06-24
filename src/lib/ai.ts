@@ -17,6 +17,18 @@ export class AIConfigError extends Error {}
 
 type GenOpts = { system: string; user: string; temperature?: number };
 
+/**
+ * AI 출력에 가끔 섞이는 일본어 가나·한자(중국어)·깨진 문자를 제거해 한글 답안만 남깁니다.
+ */
+function sanitizeOutput(text: string): string {
+  return text
+    .replace(/[぀-ヿｦ-ﾟ]/g, "") // 히라가나·가타카나·반각 가타카나
+    .replace(/[一-鿿㐀-䶿]/g, "") // CJK 한자
+    .replace(/�/g, "") // 대체 문자(�)
+    .replace(/[ \t]{2,}/g, " ");
+}
+
+
 /** 제공자 이름 → 생성 함수 매핑. */
 const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
   gemini: generateWithGemini,
@@ -59,7 +71,7 @@ export async function generateText(opts: GenOpts): Promise<string> {
       continue;
     }
     try {
-      return await fn(opts);
+      return sanitizeOutput(await fn(opts));
     } catch (err) {
       if (!(err instanceof AIConfigError)) allConfigError = false;
       errors.push(`${name}: ${err instanceof Error ? err.message : String(err)}`);
