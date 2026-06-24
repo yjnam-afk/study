@@ -33,6 +33,7 @@ const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상
 
 export default function MnemonicPage() {
   const [topic, setTopic] = useState("");
+  const [topicId, setTopicId] = useState("");
   const [recCat, setRecCat] = useState(CATS[0]);
   const [reference, setReference] = useState("");
   const [loading, setLoading] = useState(false);
@@ -52,7 +53,7 @@ export default function MnemonicPage() {
       const res = await fetch("/api/mnemonic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic, reference }),
+        body: JSON.stringify({ topic, topicId, reference }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
@@ -75,7 +76,10 @@ export default function MnemonicPage() {
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <input
           value={topic}
-          onChange={(e) => setTopic(e.target.value)}
+          onChange={(e) => {
+            setTopic(e.target.value);
+            setTopicId(""); // 직접 입력 시 데이터 연결 해제
+          }}
           placeholder="예) 트랜잭션 ACID 특성"
           className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
@@ -95,7 +99,13 @@ export default function MnemonicPage() {
           <select
             key={recCat}
             defaultValue=""
-            onChange={(e) => e.target.value && setTopic(e.target.value)}
+            onChange={(e) => {
+              const t = topics.find((x) => x.id === e.target.value);
+              if (t) {
+                setTopic(t.title);
+                setTopicId(t.id); // 데이터 연결 → 실제 내용 근거로 생성
+              }
+            }}
             className="min-w-[12rem] rounded border border-slate-200 bg-white px-2 py-1 text-xs text-slate-600"
           >
             <option value="" disabled>
@@ -109,7 +119,7 @@ export default function MnemonicPage() {
                   (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9),
               )
               .map((t) => (
-                <option key={t.id} value={t.title}>
+                <option key={t.id} value={t.id}>
                   [{t.importance}] {t.title}
                 </option>
               ))}

@@ -114,12 +114,12 @@ async function generateWithGemini({
         contents: [
           { role: "user", parts: [{ text: `${system}\n\n${user}` }] },
         ],
-        generationConfig: { temperature, maxOutputTokens: 4096 },
+        generationConfig: { temperature, maxOutputTokens: 8192 },
       }
     : {
         systemInstruction: { parts: [{ text: system }] },
         contents: [{ role: "user", parts: [{ text: user }] }],
-        generationConfig: { temperature, maxOutputTokens: 4096 },
+        generationConfig: { temperature, maxOutputTokens: 8192 },
       };
 
   const res = await fetch(url, {
@@ -169,7 +169,7 @@ async function generateWithGroq({
     body: JSON.stringify({
       model,
       temperature,
-      max_tokens: 4096,
+      max_tokens: 8192,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
@@ -219,7 +219,7 @@ async function generateWithOpenRouter({
     body: JSON.stringify({
       model,
       temperature,
-      max_tokens: 4096,
+      max_tokens: 8192,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
