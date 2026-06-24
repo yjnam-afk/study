@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import topics from "@/data/topics.json";
@@ -17,6 +17,27 @@ export default function ExplainPage() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [autoPending, setAutoPending] = useState(false);
+
+  // 학습 코치에서 ?topic=&auto= 으로 들어오면 미리 채우고 auto=1이면 즉시 생성.
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const title = sp.get("topic") || "";
+    if (title) {
+      setTopic(title);
+      const t = topics.find((x) => x.title === title);
+      if (t) setRecCat(t.category);
+      if (sp.get("auto") === "1") setAutoPending(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (autoPending && topic.trim() && !loading) {
+      setAutoPending(false);
+      generate();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoPending, topic]);
 
   async function generate() {
     if (!topic.trim()) {

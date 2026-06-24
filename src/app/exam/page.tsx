@@ -1,0 +1,161 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import { PageHeader } from "@/components/ui";
+import questions from "@/data/questions.json";
+
+type Q = {
+  id: string;
+  period: string;
+  category: string;
+  text: string;
+  source?: string;
+};
+
+// source(회차)가 있는 실제 기출만 모은다.
+const EXAMS = (questions as Q[]).filter((q) => q.source);
+
+// "139회 1교시" → 회차 "139회"
+function roundOf(source?: string): string {
+  return (source || "").split(" ")[0] || "기타";
+}
+
+const ROUNDS = Array.from(new Set(EXAMS.map((q) => roundOf(q.source)))).sort(
+  (a, b) => (parseInt(b) || 0) - (parseInt(a) || 0),
+);
+const PERIODS = ["전체", "1교시", "2교시"] as const;
+
+function answerLink(q: Q): string {
+  const period = q.period === "2교시" ? "2교시" : "1교시";
+  return `/answer?period=${encodeURIComponent(period)}&question=${encodeURIComponent(q.text)}`;
+}
+
+export default function ExamPage() {
+  const [round, setRound] = useState(ROUNDS[0] || "전체");
+  const [period, setPeriod] = useState<(typeof PERIODS)[number]>("전체");
+
+  const list = useMemo(
+    () =>
+      EXAMS.filter(
+        (q) =>
+          (round === "전체" || roundOf(q.source) === round) &&
+          (period === "전체" || q.period === period),
+      ),
+    [round, period],
+  );
+
+  // 교시별 그룹
+  const groups = useMemo(() => {
+    const map = new Map<string, Q[]>();
+    for (const q of list) {
+      const key = `${roundOf(q.source)} · ${q.period}`;
+      if (!map.has(key)) map.set(key, []);
+      map.get(key)!.push(q);
+    }
+    return Array.from(map.entries());
+  }, [list]);
+
+  return (
+    <div>
+      <PageHeader
+        title="📜 기출문제"
+        desc="실제 정보관리기술사 기출문제입니다. 문제를 골라 바로 답안 '소설'을 연습해 보세요."
+      />
+
+      <div className="mb-5 flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-slate-400">회차</span>
+          <select
+            value={round}
+            onChange={(e) => setRound(e.target.value)}
+            className="rounded border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700"
+          >
+            <option value="전체">전체</option>
+            {ROUNDS.map((r) => (
+              <option key={r} value={r}>
+                {r}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="inline-flex rounded-lg border border-slate-200 p-1">
+          {PERIODS.map((p) => (
+            <button
+              key={p}
+              onClick={() => setPeriod(p)}
+              className={`rounded-md px-3 py-1 text-xs font-medium transition ${
+                period === p
+                  ? "bg-brand-600 text-white"
+                  : "text-slate-600 hover:bg-slate-100"
+              }`}
+            >
+              {p}
+            </button>
+          ))}
+        </div>
+        <span className="ml-auto text-xs text-slate-400">총 {list.length}문제</span>
+      </div>
+
+      {groups.length === 0 && (
+        <p className="rounded-xl border border-slate-200 bg-white p-6 text-center text-sm text-slate-500">
+          해당 조건의 기출문제가 없습니다.
+        </p>
+      )}
+
+      <div className="space-y-6">
+        {groups.map(([key, qs]) => (
+          <section key={key}>
+            <h3 className="mb-2 flex items-center gap-2 text-sm font-bold text-slate-700">
+              <span className="rounded-md bg-amber-100 px-2 py-0.5 text-xs text-amber-700">
+                {key}
+              </span>
+              <span className="text-xs font-normal text-slate-400">
+                {qs.length}문제
+              </span>
+            </h3>
+            <div className="space-y-2">
+              {qs.map((q, i) => (
+                <div
+                  key={q.id}
+                  className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-brand-300"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-slate-100 text-xs font-bold text-slate-500">
+                      {i + 1}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-slate-800">{q.text}</p>
+                      <span className="mt-1 inline-block rounded bg-slate-50 px-1.5 py-0.5 text-[10px] text-slate-400">
+                        {q.category}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2 pl-9">
+                    <Link
+                      href={answerLink(q)}
+                      className="rounded-md bg-brand-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-brand-700"
+                    >
+                      ✍️ 이 문제로 답안 연습 →
+                    </Link>
+                    <Link
+                      href={`/grade?question=${encodeURIComponent(q.text)}&period=${encodeURIComponent(q.period)}`}
+                      className="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-100"
+                    >
+                      ✅ 내 답안 채점
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <p className="mt-8 rounded-xl border border-slate-100 bg-slate-50 p-4 text-xs text-slate-400">
+        기출문제는 계속 추가됩니다. 답안 작성 시 토픽을 연결하면 서브노트 내용을
+        근거로 더 정확한 답안이 생성됩니다.
+      </p>
+    </div>
+  );
+}
