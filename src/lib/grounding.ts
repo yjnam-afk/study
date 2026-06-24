@@ -11,8 +11,29 @@ type Detail = {
   featureKeywords?: string[];
   applicationKeywords?: string[];
   plusKeywords?: string[];
+  /** 서브노트에 들어있는 원본 두음신공(있으면 LLM 생성보다 우선). */
+  mnemonic?: string;
 };
 const DETAILS = topicDetails as Record<string, Detail>;
+
+/** 서브노트 원본 두음/키워드(있으면 그대로 사용). 제목 자동 매칭 포함. */
+export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
+  mnemonic: string;
+  keywords: string[];
+} {
+  const id = opts.topicId || findIdByTitle(opts.topicTitle);
+  const d = id ? DETAILS[id] : undefined;
+  if (!d) return { mnemonic: "", keywords: [] };
+  const keywords = Array.from(
+    new Set([
+      ...(d.defKeywords || []),
+      ...(d.featureKeywords || []),
+      ...(d.applicationKeywords || []),
+      ...(d.plusKeywords || []),
+    ]),
+  );
+  return { mnemonic: (d.mnemonic || "").trim(), keywords };
+}
 
 /** 제목으로 토픽 id를 찾는다(직접 타이핑해도 데이터 연결되도록). */
 export function findIdByTitle(title?: string): string | undefined {
@@ -36,6 +57,10 @@ export function groundingFrom(topicId?: string): string {
   ];
   const uniq = Array.from(new Set(kws));
   if (uniq.length) parts.push(`핵심 키워드: ${uniq.join(", ")}`);
+  const mnem = (d.mnemonic || "").trim();
+  if (mnem) {
+    parts.push(`서브노트 원본 두음신공(이것을 그대로 사용): ${mnem}`);
+  }
   return parts.join("\n");
 }
 
