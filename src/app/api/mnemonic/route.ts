@@ -9,6 +9,8 @@ type Group = {
   items: { term: string; initial: string; desc: string }[];
   mnemonic: string;
   mnemonicHow: string;
+  definition?: string[];
+  table?: { col1: string; col2: string; col3: string }[];
 };
 type MnemonicSet = {
   topic: string;
