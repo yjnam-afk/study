@@ -15,10 +15,9 @@ export type ScoreStats = {
 
 export async function POST(req: NextRequest) {
   try {
-    const { name: rawName, token, score, stats } = (await req.json()) as {
+    const { name: rawName, token, stats } = (await req.json()) as {
       name: string;
       token: string;
-      score: number;
       stats: ScoreStats;
     };
     const name = normalizeName(rawName);
@@ -30,8 +29,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const safeScore = Number.isFinite(score) ? Math.max(0, Math.round(score)) : 0;
-    const payload = JSON.stringify({ ...stats, updatedAt: new Date().toISOString() });
+    // 클라이언트가 보낸 score를 신뢰하지 않고 stats로 서버에서 재계산(랭킹 조작 방지)
+    const n = (v: unknown) =>
+      Number.isFinite(v) ? Math.max(0, Math.round(v as number)) : 0;
+    const s = stats || ({} as ScoreStats);
+    const safeStats: ScoreStats = {
+      progress: Math.min(100, n(s.progress)),
+      doneCount: n(s.doneCount),
+      totalRounds: n(s.totalRounds),
+      quizTotal: n(s.quizTotal),
+      quizCorrect: Math.min(n(s.quizCorrect), n(s.quizTotal)),
+      accuracy: Math.min(100, n(s.accuracy)),
+    };
+    const safeScore =
+      safeStats.doneCount * 100 +
+      safeStats.totalRounds * 10 +
+      safeStats.quizCorrect * 5;
+    const payload = JSON.stringify({
+      ...safeStats,
+      updatedAt: new Date().toISOString(),
+    });
 
     await redis("ZADD", "lb", safeScore, name);
     await redis("SET", `stats:${name}`, payload);
