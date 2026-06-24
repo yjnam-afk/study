@@ -56,6 +56,8 @@ function sanitizeOutput(text: string): string {
 
 /** 제공자 이름 → 생성 함수 매핑. */
 const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
+  anthropic: generateWithAnthropic,
+  claude: generateWithAnthropic,
   gemini: generateWithGemini,
   groq: generateWithGroq,
   openrouter: generateWithOpenRouter,
@@ -199,6 +201,56 @@ async function generateWithGemini({
     .join("");
   if (!text) {
     throw new Error("Gemini 응답이 비어 있습니다.");
+  }
+  return text.trim();
+}
+
+/**
+ * Anthropic Claude. 무료는 아니지만 Haiku는 매우 저렴(이 앱 사용량이면 월 몇 백 원 수준)하고
+ * 품질이 가장 좋다. 키만 있으면 AI_PROVIDERS="anthropic,groq" 로 최우선 사용.
+ */
+async function generateWithAnthropic({
+  system,
+  user,
+  temperature = 0.4,
+  model: modelOverride,
+  maxTokens,
+}: GenOpts): Promise<string> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    throw new AIConfigError(
+      "ANTHROPIC_API_KEY 가 설정되지 않았습니다. https://console.anthropic.com/ 에서 키를 발급해 환경변수에 추가하세요.",
+    );
+  }
+  const model = modelOverride || process.env.ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
+
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model,
+      max_tokens: maxTokens || MAX_TOKENS,
+      temperature,
+      system,
+      messages: [{ role: "user", content: user }],
+    }),
+  });
+
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`Anthropic API 오류 (${res.status}): ${detail}`);
+  }
+
+  const data = await res.json();
+  const text = Array.isArray(data?.content)
+    ? data.content.map((b: { text?: string }) => b.text || "").join("")
+    : "";
+  if (!text) {
+    throw new Error("Anthropic 응답이 비어 있습니다.");
   }
   return text.trim();
 }
