@@ -34,6 +34,7 @@ const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상
 export default function MnemonicPage() {
   const [topic, setTopic] = useState("");
   const [recCat, setRecCat] = useState(CATS[0]);
+  const [reference, setReference] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [set, setSet] = useState<MnemonicSet | null>(null);
@@ -51,7 +52,7 @@ export default function MnemonicPage() {
       const res = await fetch("/api/mnemonic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic }),
+        body: JSON.stringify({ topic, reference }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
@@ -114,6 +115,23 @@ export default function MnemonicPage() {
               ))}
           </select>
         </div>
+
+        <details className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
+          <summary className="cursor-pointer text-sm font-medium text-slate-600">
+            📚 참고자료(교재) 붙여넣기 — 실제 항목/내용을 근거로 정확하게
+          </summary>
+          <textarea
+            value={reference}
+            onChange={(e) => setReference(e.target.value)}
+            rows={6}
+            placeholder="예) OWASP Top 10 for LLM의 실제 10개 항목을 붙여넣으면 그 항목으로 두음을 만듭니다."
+            className="mt-2 w-full resize-y rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+          />
+          <p className="mt-1 text-xs text-slate-400">
+            무료 모델이 최신·정확한 항목을 모를 수 있어요. 교재 내용을 넣으면 그 근거로 정확히 만듭니다.
+          </p>
+        </details>
+
         <div className="mt-5">
           <Button onClick={generate} disabled={loading}>
             {loading ? "생성 중…" : "두음신공 만들기"}

@@ -27,15 +27,18 @@ type MnemonicSet = {
 
 export async function POST(req: NextRequest) {
   try {
-    const { topic } = (await req.json()) as { topic: string };
+    const { topic, reference } = (await req.json()) as {
+      topic: string;
+      reference?: string;
+    };
     if (!topic?.trim()) {
       return NextResponse.json({ error: "토픽을 입력하세요." }, { status: 400 });
     }
 
     const raw = await generateText({
       system: TUTOR_SYSTEM,
-      user: mnemonicPrompt(topic),
-      temperature: 0.7,
+      user: mnemonicPrompt(topic, reference),
+      temperature: 0.6,
     });
 
     const data = parseJsonFromModel<MnemonicSet>(raw);
