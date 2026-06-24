@@ -144,16 +144,24 @@ export default function AnswerPage() {
         />
 
         <div className="mt-3 flex flex-wrap gap-2">
-          <span className="self-center text-xs text-slate-400">샘플 문제:</span>
-          {samples.map((q) => (
-            <button
-              key={q.id}
-              onClick={() => setQuestion(q.text)}
-              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600 hover:border-brand-300 hover:text-brand-600"
-            >
-              {q.text.length > 24 ? q.text.slice(0, 24) + "…" : q.text}
-            </button>
-          ))}
+          <span className="self-center text-xs text-slate-400">샘플·기출:</span>
+          {samples.map((q) => {
+            const src = (q as { source?: string }).source;
+            return (
+              <button
+                key={q.id}
+                onClick={() => setQuestion(q.text)}
+                className={`rounded-full border px-3 py-1 text-xs transition ${
+                  src
+                    ? "border-amber-300 bg-amber-50 text-amber-700 hover:bg-amber-100"
+                    : "border-slate-200 bg-slate-50 text-slate-600 hover:border-brand-300 hover:text-brand-600"
+                }`}
+              >
+                {src && <span className="font-semibold">[{src.split(" ")[0]} 기출] </span>}
+                {q.text.length > 24 ? q.text.slice(0, 24) + "…" : q.text}
+              </button>
+            );
+          })}
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
