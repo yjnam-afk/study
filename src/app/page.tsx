@@ -114,14 +114,20 @@ export default function Home() {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    const rev = loadReview();
-    const st = loadStats();
-    const notes = loadNotes();
-    setReview(rev);
-    setStats(st);
-    setNotesCount(notes.length);
-    setPlan(buildPlan(rev, notes, st));
-    setUserName(loadSession()?.name || "");
+    const refresh = () => {
+      const rev = loadReview();
+      const st = loadStats();
+      const notes = loadNotes();
+      setReview(rev);
+      setStats(st);
+      setNotesCount(notes.length);
+      setPlan(buildPlan(rev, notes, st));
+      setUserName(loadSession()?.name || "");
+    };
+    refresh();
+    // 계정 동기화가 끝나면 코치를 다시 계산(다른 기기 진도 반영)
+    window.addEventListener("progress-synced", refresh);
+    return () => window.removeEventListener("progress-synced", refresh);
   }, []);
 
   const total = topics.length;

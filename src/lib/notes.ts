@@ -97,9 +97,25 @@ export function loadNotes(): WrongNote[] {
   }
 }
 
+function emitChange() {
+  if (isBrowser()) window.dispatchEvent(new Event("progress-change"));
+}
+
 function saveNotes(notes: WrongNote[]) {
   if (!isBrowser()) return;
   window.localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+  emitChange();
+}
+
+/** 동기화용: 오답노트 전체를 교체 저장한다. */
+export function replaceNotes(notes: WrongNote[]) {
+  saveNotes(notes.map(normalize));
+}
+
+/** 동기화용: 퀴즈 통계를 통째로 저장한다. */
+export function setStats(stats: QuizStats) {
+  if (!isBrowser()) return;
+  window.localStorage.setItem(STATS_KEY, JSON.stringify(stats));
 }
 
 /**
@@ -227,6 +243,7 @@ export function recordQuiz(correct: boolean): QuizStats {
   };
   if (isBrowser()) {
     window.localStorage.setItem(STATS_KEY, JSON.stringify(next));
+    emitChange();
   }
   return next;
 }
