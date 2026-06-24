@@ -21,14 +21,25 @@ type GenOpts = {
   temperature?: number;
   /** 폴백 체인에서 제공자별 모델을 덮어쓸 때 사용(예: groq의 보조 모델). */
   model?: string;
+  /** 이 호출의 응답 토큰 상한(모델별 분당 한도 TPM에 맞춰 조정). */
+  maxTokens?: number;
 };
 
 /**
- * 응답 토큰 상한. 너무 낮추면 OWASP Top 10처럼 항목이 많은 긴 답안이 잘리므로,
- * 기본값은 넉넉하게 8192로 둔다(레이트리밋은 멀티 모델 폴백으로 해결).
- * 필요 시 AI_MAX_TOKENS 로 조정.
+ * 기본 응답 토큰 상한. Groq 무료 등급은 모델마다 분당 토큰(TPM)이 작아서
+ * (요청 = 프롬프트 + max_tokens) 이 TPM을 넘으면 413이 난다. 그래서 모델별로
+ * 안전 예산(groqBudget)을 따로 주고, 그 외에는 이 기본값을 쓴다.
+ * 4096이면 일반적인 1·2교시 답안은 잘리지 않으면서 작은 모델 한도에도 들어간다.
  */
-const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS) || 8192;
+const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS) || 4096;
+
+/** Groq 모델별 안전한 응답 토큰 예산(프롬프트 ~2.5k 가정, 각 모델 TPM 내). */
+function groqBudget(model: string): number {
+  if (model.includes("llama-3.3-70b")) return 6000; // TPM 12000
+  if (model.includes("8b-instant")) return 3000; // TPM 6000
+  if (model.includes("gpt-oss")) return 4500; // TPM 8000
+  return MAX_TOKENS;
+}
 
 /**
  * AI 출력에 가끔 섞이는 일본어 가나·한자(중국어)·깨진 문자를 제거해 한글 답안만 남깁니다.
@@ -50,7 +61,7 @@ const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
   ollama: generateWithOllama,
 };
 
-type ChainEntry = { name: string; model?: string };
+type ChainEntry = { name: string; model?: string; maxTokens?: number };
 
 /** Groq 무료 등급은 토큰 한도(TPD)가 "모델별"로 따로 적용되므로,
  *  같은 API 키로 여러 모델을 폴백시키면 하나가 막혀도 다음 모델로 계속 동작한다. */
@@ -58,7 +69,7 @@ function groqModels(): string[] {
   const primary = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
   const fallbacks = (
     process.env.GROQ_FALLBACK_MODELS ||
-    "llama-3.1-8b-instant,openai/gpt-oss-20b,openai/gpt-oss-120b"
+    "openai/gpt-oss-120b,openai/gpt-oss-20b,llama-3.1-8b-instant"
   )
     .split(",")
     .map((s) => s.trim())
@@ -81,11 +92,11 @@ function providerChain(): ChainEntry[] {
 
   const entries: ChainEntry[] = [];
   const seen = new Set<string>();
-  const add = (name: string, model?: string) => {
+  const add = (name: string, model?: string, maxTokens?: number) => {
     const key = `${name}:${model || ""}`;
     if (seen.has(key)) return;
     seen.add(key);
-    entries.push({ name, model });
+    entries.push({ name, model, maxTokens });
   };
 
   for (const token of tokens) {
@@ -93,9 +104,9 @@ function providerChain(): ChainEntry[] {
     const name = idx === -1 ? token : token.slice(0, idx);
     const model = idx === -1 ? undefined : token.slice(idx + 1).trim();
     if (name === "groq" && !model) {
-      for (const m of groqModels()) add("groq", m);
+      for (const m of groqModels()) add("groq", m, groqBudget(m));
     } else {
-      add(name, model);
+      add(name, model, name === "groq" && model ? groqBudget(model) : undefined);
     }
   }
   return entries;
@@ -110,7 +121,7 @@ export async function generateText(opts: GenOpts): Promise<string> {
   const errors: string[] = [];
   let allConfigError = true;
 
-  for (const { name, model } of chain) {
+  for (const { name, model, maxTokens } of chain) {
     const fn = PROVIDERS[name];
     const label = model ? `${name}(${model})` : name;
     if (!fn) {
@@ -119,7 +130,7 @@ export async function generateText(opts: GenOpts): Promise<string> {
       continue;
     }
     try {
-      return sanitizeOutput(await fn({ ...opts, model }));
+      return sanitizeOutput(await fn({ ...opts, model, maxTokens }));
     } catch (err) {
       if (!(err instanceof AIConfigError)) allConfigError = false;
       errors.push(`${label}: ${err instanceof Error ? err.message : String(err)}`);
@@ -141,6 +152,7 @@ async function generateWithGemini({
   user,
   temperature = 0.4,
   model: modelOverride,
+  maxTokens,
 }: GenOpts): Promise<string> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
@@ -148,6 +160,7 @@ async function generateWithGemini({
       "GEMINI_API_KEY 가 설정되지 않았습니다. .env.local 파일에 키를 추가하세요. (https://aistudio.google.com/apikey)",
     );
   }
+  const max = maxTokens || MAX_TOKENS;
   const model = modelOverride || process.env.GEMINI_MODEL || "gemini-2.0-flash";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
@@ -159,12 +172,12 @@ async function generateWithGemini({
         contents: [
           { role: "user", parts: [{ text: `${system}\n\n${user}` }] },
         ],
-        generationConfig: { temperature, maxOutputTokens: MAX_TOKENS },
+        generationConfig: { temperature, maxOutputTokens: max },
       }
     : {
         systemInstruction: { parts: [{ text: system }] },
         contents: [{ role: "user", parts: [{ text: user }] }],
-        generationConfig: { temperature, maxOutputTokens: MAX_TOKENS },
+        generationConfig: { temperature, maxOutputTokens: max },
       };
 
   const res = await fetch(url, {
@@ -193,6 +206,7 @@ async function generateWithGroq({
   user,
   temperature = 0.4,
   model: modelOverride,
+  maxTokens,
 }: GenOpts): Promise<string> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
@@ -211,7 +225,7 @@ async function generateWithGroq({
     body: JSON.stringify({
       model,
       temperature,
-      max_tokens: MAX_TOKENS,
+      max_tokens: maxTokens || groqBudget(model),
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
@@ -237,6 +251,7 @@ async function generateWithOpenRouter({
   user,
   temperature = 0.4,
   model: modelOverride,
+  maxTokens,
 }: GenOpts): Promise<string> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
@@ -259,7 +274,7 @@ async function generateWithOpenRouter({
     body: JSON.stringify({
       model,
       temperature,
-      max_tokens: MAX_TOKENS,
+      max_tokens: maxTokens || MAX_TOKENS,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
