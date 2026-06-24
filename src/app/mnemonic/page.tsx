@@ -40,23 +40,39 @@ export default function MnemonicPage() {
   const [error, setError] = useState("");
   const [set, setSet] = useState<MnemonicSet | null>(null);
   const [step, setStep] = useState<Step>("learn");
+  const [autoPending, setAutoPending] = useState(false);
 
-  // 학습 코치 등에서 ?topicId=&topic= 으로 들어오면 해당 토픽을 미리 선택한다.
+  // 학습 코치 등에서 ?topicId=&topic=&auto= 으로 들어오면 해당 토픽을
+  // 미리 선택하고, auto=1이면 도착 즉시 자동 생성한다.
   useEffect(() => {
     const sp = new URLSearchParams(window.location.search);
     const id = sp.get("topicId") || "";
     const title = sp.get("topic") || "";
+    const auto = sp.get("auto") === "1";
     if (id) {
       const t = topics.find((x) => x.id === id);
       if (t) {
         setTopic(t.title);
         setTopicId(t.id);
         setRecCat(t.category);
+        if (auto) setAutoPending(true);
         return;
       }
     }
-    if (title) setTopic(title);
+    if (title) {
+      setTopic(title);
+      if (auto) setAutoPending(true);
+    }
   }, []);
+
+  // 토픽이 채워진 뒤 한 번만 자동 생성.
+  useEffect(() => {
+    if (autoPending && topic.trim() && !loading) {
+      setAutoPending(false);
+      generate();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoPending, topic]);
 
   async function generate() {
     if (!topic.trim()) {

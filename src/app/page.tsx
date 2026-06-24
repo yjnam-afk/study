@@ -176,6 +176,33 @@ export default function Home() {
               코치가 급한 순으로 정렬했어요
             </span>
           </div>
+
+          {plan.goal.target > 0 && (
+            <div className="mb-4">
+              <div className="mb-1 flex justify-between text-xs">
+                <span className="font-medium text-slate-600">
+                  🎯 오늘의 목표 {plan.goal.done}/{plan.goal.target} 회독
+                </span>
+                <span className="text-slate-400">
+                  {Math.round((plan.goal.done / plan.goal.target) * 100)}%
+                </span>
+              </div>
+              <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
+                <div
+                  className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all"
+                  style={{
+                    width: `${Math.min(100, Math.round((plan.goal.done / plan.goal.target) * 100))}%`,
+                  }}
+                />
+              </div>
+              {plan.goal.done >= plan.goal.target && (
+                <p className="mt-1 text-xs font-medium text-emerald-600">
+                  🎉 오늘 목표 달성! 새 토픽으로 더 나아가도 좋아요.
+                </p>
+              )}
+            </div>
+          )}
+
           <ol className="space-y-2">
             {plan.tasks.map((t, i) => (
               <li key={t.kind + i}>
@@ -222,13 +249,13 @@ export default function Home() {
                       {t.category}
                     </span>
                     <Link
-                      href={mnemonicLink(t)}
+                      href={mnemonicLink(t, true)}
                       className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
                     >
                       🥷 암기
                     </Link>
                     <Link
-                      href={explainLink(t)}
+                      href={explainLink(t, true)}
                       className="shrink-0 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-100"
                     >
                       💡 설명

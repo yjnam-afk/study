@@ -43,14 +43,31 @@ export type CoachPlan = {
 
 const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
 
-/** 토픽을 두음신공에 바로 연결해서 여는 링크. */
-export function mnemonicLink(t: { id: string; title: string }): string {
-  return `/mnemonic?topicId=${encodeURIComponent(t.id)}&topic=${encodeURIComponent(t.title)}`;
+/** 토픽을 두음신공에 바로 연결해서 여는 링크. auto=true면 도착 즉시 생성. */
+export function mnemonicLink(
+  t: { id: string; title: string },
+  auto = false,
+): string {
+  const q = `/mnemonic?topicId=${encodeURIComponent(t.id)}&topic=${encodeURIComponent(t.title)}`;
+  return auto ? `${q}&auto=1` : q;
 }
 
-/** 토픽을 설명 화면에 바로 연결해서 여는 링크. */
-export function explainLink(t: { title: string }): string {
-  return `/explain?topic=${encodeURIComponent(t.title)}`;
+/** 토픽을 설명 화면에 바로 연결해서 여는 링크. auto=true면 도착 즉시 생성. */
+export function explainLink(t: { title: string }, auto = false): string {
+  const q = `/explain?topic=${encodeURIComponent(t.title)}`;
+  return auto ? `${q}&auto=1` : q;
+}
+
+/** 어떤 날짜 문자열이 오늘인지. */
+function isToday(iso: string | null | undefined, now: number): boolean {
+  if (!iso) return false;
+  const d = new Date(iso);
+  const n = new Date(now);
+  return (
+    d.getFullYear() === n.getFullYear() &&
+    d.getMonth() === n.getMonth() &&
+    d.getDate() === n.getDate()
+  );
 }
 
 /**
@@ -62,6 +79,7 @@ export function buildPlan(
   review: Record<string, ReviewItem>,
   notes: WrongNote[],
   stats: QuizStats,
+  now: number = Date.now(),
 ): CoachPlan {
   const all = topics as TopicLite[];
   const due = dueNotes(notes);
@@ -137,7 +155,7 @@ export function buildPlan(
       emoji: "🆕",
       title: `새 토픽 ${newPicks.length}개 시작 (중요도 ${imp} 우선)`,
       detail: "두음신공으로 키워드부터 외우고 답안 소설을 써보세요.",
-      href: mnemonicLink(newPicks[0]),
+      href: mnemonicLink(newPicks[0], true),
       priority: 3,
       tone: "violet",
     });
@@ -156,11 +174,16 @@ export function buildPlan(
 
   tasks.sort((a, b) => a.priority - b.priority);
 
-  // 오늘의 목표: 오답+복습+새토픽 합쳐 최대 5개
-  const target = Math.min(
-    5,
-    Math.max(1, due.length + reviewDue.length + newPicks.length),
-  );
+  // 오늘의 목표 진행도 — 오늘 실제로 한 회독 수(=완료) 대비
+  // 아직 남은 할 일(오답+복습)을 더해 목표치를 잡는다. 일을 할수록 채워진다.
+  const doneToday = all.filter((t) =>
+    isToday(getItem(review, t.id).lastReviewedAt, now),
+  ).length;
+  const remaining = due.length + reviewDue.length;
+  const target =
+    doneToday + remaining > 0
+      ? doneToday + remaining
+      : Math.max(1, Math.min(3, newPicks.length));
 
   // 헤드라인/서브라인 — 상황별 코칭 멘트
   let headline: string;
@@ -182,7 +205,7 @@ export function buildPlan(
   const primary = tasks.length
     ? { label: `${tasks[0].emoji} ${tasks[0].title}`, href: tasks[0].href }
     : newPicks.length
-      ? { label: "🆕 새 토픽 시작하기", href: mnemonicLink(newPicks[0]) }
+      ? { label: "🆕 새 토픽 시작하기", href: mnemonicLink(newPicks[0], true) }
       : null;
 
   return {
@@ -191,6 +214,6 @@ export function buildPlan(
     primary,
     tasks,
     newTopics: newPicks,
-    goal: { done: 0, target },
+    goal: { done: doneToday, target },
   };
 }
