@@ -26,7 +26,7 @@ type MnemonicSet = {
   recall: { prompt: string; answers: string[] };
 };
 
-type Step = "learn" | "inject" | "check";
+type Step = "learn" | "inject" | "check" | "write";
 
 const CATS = Array.from(new Set(topics.map((t) => t.category)));
 const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
@@ -242,7 +242,10 @@ export default function MnemonicPage() {
             {step === "inject" && (
               <Inject mc={set.mc} onNext={() => setStep("check")} />
             )}
-            {step === "check" && <Check recall={set.recall} />}
+            {step === "check" && (
+              <Check recall={set.recall} onNext={() => setStep("write")} />
+            )}
+            {step === "write" && <Write group={set.body} />}
           </div>
         )}
       </div>
@@ -254,7 +257,8 @@ function Stepper({ step, onStep }: { step: Step; onStep: (s: Step) => void }) {
   const steps: [Step, string][] = [
     ["learn", "1. 암기"],
     ["inject", "2. 주입(객관식)"],
-    ["check", "3. 확인(주관식)"],
+    ["check", "3. 키워드 확인"],
+    ["write", "4. 설명 쓰기(찐소설)"],
   ];
   return (
     <div className="mb-5 inline-flex rounded-lg border border-slate-200 p-1">
@@ -438,7 +442,13 @@ function normalize(s: string): string {
   return s.replace(/\s+/g, "").toLowerCase();
 }
 
-function Check({ recall }: { recall: { prompt: string; answers: string[] } }) {
+function Check({
+  recall,
+  onNext,
+}: {
+  recall: { prompt: string; answers: string[] };
+  onNext: () => void;
+}) {
   const [input, setInput] = useState("");
   const [graded, setGraded] = useState(false);
 
@@ -501,6 +511,78 @@ function Check({ recall }: { recall: { prompt: string; answers: string[] } }) {
           </div>
         </div>
       )}
+
+      <Button onClick={onNext}>
+        키워드는 됐다 → ✍️ 설명(찐소설) 쓰러 가기
+      </Button>
+    </div>
+  );
+}
+
+/**
+ * 찐소설 = 답안 표의 "설명(3열)" 쓰기 연습.
+ * 외운 키워드별로 설명을 직접 써보고, 모범 설명(서브노트/모델)과 비교한다.
+ * 키워드만 외우는 데서 끝나지 않고 "설명을 쓰는 힘"을 기르는 핵심 단계.
+ */
+function Write({ group }: { group: Group }) {
+  const items = group.items || [];
+  const [revealed, setRevealed] = useState<Record<number, boolean>>({});
+  const [drafts, setDrafts] = useState<Record<number, string>>({});
+
+  return (
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4">
+        <p className="text-sm font-bold text-amber-800">
+          ✍️ 찐소설은 &ldquo;설명(3열)&rdquo;입니다
+        </p>
+        <p className="mt-1 text-xs text-amber-700">
+          키워드(2열)는 뼈대일 뿐, 점수는 각 키워드를 풀어 쓴 <b>설명</b>에서
+          갈립니다. 만능 공식:{" "}
+          <b>[구성요소]가 [무엇을·어떻게]하여 [효과]를 달성</b>. 직접 써보고
+          모범 설명과 비교하세요.
+        </p>
+      </div>
+
+      {items.map((it, i) => (
+        <div
+          key={i}
+          className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+        >
+          <div className="flex items-center gap-2">
+            <span className="grid h-6 w-6 place-items-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">
+              {it.initial}
+            </span>
+            <span className="font-semibold text-slate-900">{it.term}</span>
+          </div>
+          <textarea
+            value={drafts[i] || ""}
+            onChange={(e) =>
+              setDrafts((d) => ({ ...d, [i]: e.target.value }))
+            }
+            rows={2}
+            placeholder={`${it.term}의 '설명'을 한 문장으로 써보세요`}
+            className="mt-3 w-full resize-none rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+          />
+          <button
+            onClick={() => setRevealed((r) => ({ ...r, [i]: !r[i] }))}
+            className="mt-2 text-xs font-medium text-brand-600 hover:underline"
+          >
+            {revealed[i] ? "모범 설명 숨기기" : "모범 설명 보기 →"}
+          </button>
+          {revealed[i] && (
+            <div className="mt-2 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-slate-700">
+              <span className="text-xs font-semibold text-emerald-700">
+                모범 설명{" "}
+              </span>
+              {it.desc}
+            </div>
+          )}
+        </div>
+      ))}
+
+      <p className="text-center text-xs text-slate-400">
+        이 표(키워드 + 설명)가 그대로 답안지 본론의 3열 표가 됩니다.
+      </p>
     </div>
   );
 }
