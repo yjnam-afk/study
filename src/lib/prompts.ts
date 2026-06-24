@@ -253,8 +253,10 @@ export function mnemonicPrompt(topic: string): string {
     ``,
     `[intro = 서론(정의)용 키워드 묶음]`,
     `- 토픽을 "정의"할 때 들어가는 핵심 키워드 3~5개(개념·목적·핵심속성 위주).`,
+    `- definition: 그 키워드를 열거식으로 조합한 "정의 2줄". 각 줄은 한글 17~19자 내외(답안지 1줄 기준).`,
     `[body = 본론(2단락 이후)용 키워드 묶음]`,
     `- 구성요소·특징·유형·절차 등 본론에서 전개할 핵심 항목 4~7개.`,
+    `- table: 본론을 3열 표로 정리한 행들. 각 행은 col1(구분), col2(항목/키워드), col3(핵심 설명).`,
     ``,
     `[각 묶음 공통 규칙]`,
     `- items: 각 항목은 term(키워드), initial(term의 첫 글자), desc(한 줄 설명).`,
@@ -266,7 +268,7 @@ export function mnemonicPrompt(topic: string): string {
     `- recall(주관식 확인): prompt(본론 두음을 보여주고 핵심 키워드를 모두 쓰라는 문제), answers(정답 키워드 배열 = body items의 term들).`,
     ``,
     `[출력 형식] 반드시 아래 JSON 객체만 출력(설명·코드블록 텍스트 금지):`,
-    `{"topic":"${topic}","intro":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법"},"body":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법"},"mc":[{"question":"문제","options":["a","b","c","d"],"answer":0,"explanation":"해설"}],"recall":{"prompt":"본론 두음 '○○○'이 의미하는 키워드를 모두 쓰시오.","answers":["키워드1","키워드2"]}}`,
+    `{"topic":"${topic}","intro":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법","definition":["정의 1줄(17~19자)","정의 2줄(17~19자)"]},"body":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법","table":[{"col1":"구분","col2":"항목","col3":"설명"}]},"mc":[{"question":"문제","options":["a","b","c","d"],"answer":0,"explanation":"해설"}],"recall":{"prompt":"본론 두음 '○○○'이 의미하는 키워드를 모두 쓰시오.","answers":["키워드1","키워드2"]}}`,
   ].join("\n");
 }
 
