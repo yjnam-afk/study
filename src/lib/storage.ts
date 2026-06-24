@@ -42,6 +42,7 @@ export function loadReview(): Record<string, ReviewItem> {
 export function saveReview(state: Record<string, ReviewItem>) {
   if (!isBrowser()) return;
   window.localStorage.setItem(KEY, JSON.stringify(state));
+  window.dispatchEvent(new Event("progress-change"));
 }
 
 export function getItem(
