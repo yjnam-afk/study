@@ -15,7 +15,16 @@ export type ChatMessage = {
 
 export class AIConfigError extends Error {}
 
-type GenOpts = { system: string; user: string; temperature?: number };
+type GenOpts = {
+  system: string;
+  user: string;
+  temperature?: number;
+  /** 폴백 체인에서 제공자별 모델을 덮어쓸 때 사용(예: groq의 보조 모델). */
+  model?: string;
+};
+
+/** 응답 토큰 상한. 낮출수록 무료 등급 일일 토큰 한도(TPD)를 덜 소모합니다. */
+const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS) || 4096;
 
 /**
  * AI 출력에 가끔 섞이는 일본어 가나·한자(중국어)·깨진 문자를 제거해 한글 답안만 남깁니다.
@@ -37,21 +46,55 @@ const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
   ollama: generateWithOllama,
 };
 
+type ChainEntry = { name: string; model?: string };
+
+/** Groq 무료 등급은 토큰 한도(TPD)가 "모델별"로 따로 적용되므로,
+ *  같은 API 키로 여러 모델을 폴백시키면 하나가 막혀도 다음 모델로 계속 동작한다. */
+function groqModels(): string[] {
+  const primary = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+  const fallbacks = (
+    process.env.GROQ_FALLBACK_MODELS ||
+    "llama-3.1-8b-instant,openai/gpt-oss-20b,openai/gpt-oss-120b"
+  )
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return Array.from(new Set([primary, ...fallbacks]));
+}
+
 /**
- * 사용할 제공자 순서.
- *  - AI_PROVIDERS="groq,openrouter,gemini" 처럼 콤마로 나열하면 폴백 체인으로 동작
- *    (앞의 것이 막히면/실패하면 다음 것으로 자동 전환).
+ * 사용할 제공자 순서(폴백 체인).
+ *  - AI_PROVIDERS="groq,openrouter,gemini" 처럼 콤마로 나열(앞의 것이 막히면 다음으로).
+ *  - "groq:llama-3.1-8b-instant" 처럼 제공자:모델 로 모델까지 지정 가능.
+ *  - groq를 모델 지정 없이 넣으면 여러 Groq 모델로 자동 확장(같은 키, 모델별 한도 분리).
  *  - 없으면 기존 AI_PROVIDER(단일, 기본 gemini) 사용.
  */
-function providerChain(): string[] {
+function providerChain(): ChainEntry[] {
   const multi = process.env.AI_PROVIDERS;
-  if (multi?.trim()) {
-    return multi
-      .split(",")
-      .map((s) => s.trim().toLowerCase())
-      .filter(Boolean);
+  const tokens = multi?.trim()
+    ? multi.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
+    : [(process.env.AI_PROVIDER || "gemini").toLowerCase()];
+
+  const entries: ChainEntry[] = [];
+  const seen = new Set<string>();
+  const add = (name: string, model?: string) => {
+    const key = `${name}:${model || ""}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    entries.push({ name, model });
+  };
+
+  for (const token of tokens) {
+    const idx = token.indexOf(":");
+    const name = idx === -1 ? token : token.slice(0, idx);
+    const model = idx === -1 ? undefined : token.slice(idx + 1).trim();
+    if (name === "groq" && !model) {
+      for (const m of groqModels()) add("groq", m);
+    } else {
+      add(name, model);
+    }
   }
-  return [(process.env.AI_PROVIDER || "gemini").toLowerCase()];
+  return entries;
 }
 
 /**
@@ -63,19 +106,20 @@ export async function generateText(opts: GenOpts): Promise<string> {
   const errors: string[] = [];
   let allConfigError = true;
 
-  for (const name of chain) {
+  for (const { name, model } of chain) {
     const fn = PROVIDERS[name];
+    const label = model ? `${name}(${model})` : name;
     if (!fn) {
       allConfigError = false;
-      errors.push(`${name}: 알 수 없는 제공자`);
+      errors.push(`${label}: 알 수 없는 제공자`);
       continue;
     }
     try {
-      return sanitizeOutput(await fn(opts));
+      return sanitizeOutput(await fn({ ...opts, model }));
     } catch (err) {
       if (!(err instanceof AIConfigError)) allConfigError = false;
-      errors.push(`${name}: ${err instanceof Error ? err.message : String(err)}`);
-      // 다음 제공자로 폴백
+      errors.push(`${label}: ${err instanceof Error ? err.message : String(err)}`);
+      // 다음 제공자(또는 다음 모델)로 폴백
     }
   }
 
@@ -92,18 +136,15 @@ async function generateWithGemini({
   system,
   user,
   temperature = 0.4,
-}: {
-  system: string;
-  user: string;
-  temperature?: number;
-}): Promise<string> {
+  model: modelOverride,
+}: GenOpts): Promise<string> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new AIConfigError(
       "GEMINI_API_KEY 가 설정되지 않았습니다. .env.local 파일에 키를 추가하세요. (https://aistudio.google.com/apikey)",
     );
   }
-  const model = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+  const model = modelOverride || process.env.GEMINI_MODEL || "gemini-2.0-flash";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
   // Gemma 계열 모델은 systemInstruction 필드를 지원하지 않으므로,
@@ -114,12 +155,12 @@ async function generateWithGemini({
         contents: [
           { role: "user", parts: [{ text: `${system}\n\n${user}` }] },
         ],
-        generationConfig: { temperature, maxOutputTokens: 8192 },
+        generationConfig: { temperature, maxOutputTokens: MAX_TOKENS },
       }
     : {
         systemInstruction: { parts: [{ text: system }] },
         contents: [{ role: "user", parts: [{ text: user }] }],
-        generationConfig: { temperature, maxOutputTokens: 8192 },
+        generationConfig: { temperature, maxOutputTokens: MAX_TOKENS },
       };
 
   const res = await fetch(url, {
@@ -147,18 +188,15 @@ async function generateWithGroq({
   system,
   user,
   temperature = 0.4,
-}: {
-  system: string;
-  user: string;
-  temperature?: number;
-}): Promise<string> {
+  model: modelOverride,
+}: GenOpts): Promise<string> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     throw new AIConfigError(
       "GROQ_API_KEY 가 설정되지 않았습니다. .env.local 파일에 키를 추가하세요. (https://console.groq.com/keys)",
     );
   }
-  const model = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+  const model = modelOverride || process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
 
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -169,7 +207,7 @@ async function generateWithGroq({
     body: JSON.stringify({
       model,
       temperature,
-      max_tokens: 8192,
+      max_tokens: MAX_TOKENS,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
@@ -194,11 +232,8 @@ async function generateWithOpenRouter({
   system,
   user,
   temperature = 0.4,
-}: {
-  system: string;
-  user: string;
-  temperature?: number;
-}): Promise<string> {
+  model: modelOverride,
+}: GenOpts): Promise<string> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
     throw new AIConfigError(
@@ -206,7 +241,8 @@ async function generateWithOpenRouter({
     );
   }
   // 기본값: 무료 Gemma. 다른 무료 모델은 https://openrouter.ai/models 에서 확인.
-  const model = process.env.OPENROUTER_MODEL || "google/gemma-2-9b-it:free";
+  const model =
+    modelOverride || process.env.OPENROUTER_MODEL || "google/gemma-2-9b-it:free";
 
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
@@ -219,7 +255,7 @@ async function generateWithOpenRouter({
     body: JSON.stringify({
       model,
       temperature,
-      max_tokens: 8192,
+      max_tokens: MAX_TOKENS,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
@@ -248,13 +284,10 @@ async function generateWithOllama({
   system,
   user,
   temperature = 0.4,
-}: {
-  system: string;
-  user: string;
-  temperature?: number;
-}): Promise<string> {
+  model: modelOverride,
+}: GenOpts): Promise<string> {
   const base = process.env.OLLAMA_BASE_URL || "http://localhost:11434";
-  const model = process.env.OLLAMA_MODEL || "gemma3:4b";
+  const model = modelOverride || process.env.OLLAMA_MODEL || "gemma3:4b";
 
   let res: Response;
   try {
