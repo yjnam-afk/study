@@ -23,8 +23,12 @@ type GenOpts = {
   model?: string;
 };
 
-/** 응답 토큰 상한. 낮출수록 무료 등급 일일 토큰 한도(TPD)를 덜 소모합니다. */
-const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS) || 4096;
+/**
+ * 응답 토큰 상한. 너무 낮추면 OWASP Top 10처럼 항목이 많은 긴 답안이 잘리므로,
+ * 기본값은 넉넉하게 8192로 둔다(레이트리밋은 멀티 모델 폴백으로 해결).
+ * 필요 시 AI_MAX_TOKENS 로 조정.
+ */
+const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS) || 8192;
 
 /**
  * AI 출력에 가끔 섞이는 일본어 가나·한자(중국어)·깨진 문자를 제거해 한글 답안만 남깁니다.
