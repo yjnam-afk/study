@@ -81,7 +81,7 @@ export default function AnswerPage() {
       const res = await fetch("/api/story", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ period, question }),
+        body: JSON.stringify({ period, question, reference, topicId, topicTitle }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "가이드 생성 실패");
