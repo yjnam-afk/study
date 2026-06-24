@@ -5,6 +5,7 @@ import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import topics from "@/data/topics.json";
 
 type Item = { term: string; initial: string; desc: string };
+type Group = { items: Item[]; mnemonic: string; mnemonicHow: string };
 type MC = {
   question: string;
   options: string[];
@@ -13,9 +14,8 @@ type MC = {
 };
 type MnemonicSet = {
   topic: string;
-  items: Item[];
-  mnemonic: string;
-  mnemonicHow: string;
+  intro: Group;
+  body: Group;
   mc: MC[];
   recall: { prompt: string; answers: string[] };
 };
@@ -62,7 +62,7 @@ export default function MnemonicPage() {
     <div>
       <PageHeader
         title="🥷 두음신공 — 키워드 암기"
-        desc="핵심 키워드의 두음(첫 글자)으로 암기하고, 객관식으로 주입한 뒤 주관식으로 확인합니다."
+        desc="서론(정의)용·본론(2단락+)용 키워드 두음을 각각 만들어 암기 → 객관식 주입 → 주관식 확인."
       />
 
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -157,17 +157,18 @@ function Stepper({ step, onStep }: { step: Step; onStep: (s: Step) => void }) {
   );
 }
 
-function Learn({ set, onNext }: { set: MnemonicSet; onNext: () => void }) {
+function GroupCard({ label, sub, group }: { label: string; sub: string; group: Group }) {
   return (
-    <div className="space-y-5">
-      <div className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-indigo-50 p-6 text-center shadow-sm">
-        <div className="text-xs font-medium text-brand-500">두음신공</div>
-        <div className="mt-1 text-3xl font-extrabold tracking-wide text-brand-700">
-          {set.mnemonic}
+    <div className="space-y-3">
+      <div className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-indigo-50 p-5 text-center shadow-sm">
+        <div className="text-xs font-medium text-brand-500">
+          {label} · <span className="text-slate-400">{sub}</span>
         </div>
-        <p className="mt-2 text-sm text-slate-600">{set.mnemonicHow}</p>
+        <div className="mt-1 text-2xl font-extrabold tracking-wide text-brand-700">
+          {group.mnemonic}
+        </div>
+        <p className="mt-1 text-xs text-slate-600">{group.mnemonicHow}</p>
       </div>
-
       <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <table className="w-full text-sm">
           <thead className="bg-slate-50 text-xs text-slate-500">
@@ -178,7 +179,7 @@ function Learn({ set, onNext }: { set: MnemonicSet; onNext: () => void }) {
             </tr>
           </thead>
           <tbody>
-            {set.items.map((it, i) => (
+            {group.items.map((it, i) => (
               <tr key={i} className="border-t border-slate-100">
                 <td className="px-4 py-3 text-center text-lg font-bold text-brand-600">
                   {it.initial}
@@ -190,7 +191,15 @@ function Learn({ set, onNext }: { set: MnemonicSet; onNext: () => void }) {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
 
+function Learn({ set, onNext }: { set: MnemonicSet; onNext: () => void }) {
+  return (
+    <div className="space-y-6">
+      <GroupCard label="📌 서론(정의) 두음" sub="I단락 정의에 쓸 키워드" group={set.intro} />
+      <GroupCard label="📝 본론(2단락+) 두음" sub="구성요소·특징·절차 등" group={set.body} />
       <Button onClick={onNext}>외웠어요 → 객관식으로 주입</Button>
     </div>
   );
