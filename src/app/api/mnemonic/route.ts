@@ -5,11 +5,15 @@ import { mnemonicPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
-type MnemonicSet = {
-  topic: string;
+type Group = {
   items: { term: string; initial: string; desc: string }[];
   mnemonic: string;
   mnemonicHow: string;
+};
+type MnemonicSet = {
+  topic: string;
+  intro: Group;
+  body: Group;
   mc: {
     question: string;
     options: string[];
