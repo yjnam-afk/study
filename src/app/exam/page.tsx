@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
+import Markdown from "@/components/Markdown";
 import questions from "@/data/questions.json";
+import { getModelAnswer } from "@/lib/modelAnswers";
 
 type Q = {
   id: string;
@@ -115,7 +117,9 @@ export default function ExamPage() {
               </span>
             </h3>
             <div className="space-y-2">
-              {qs.map((q, i) => (
+              {qs.map((q, i) => {
+                const ma = getModelAnswer(q.id);
+                return (
                 <div
                   key={q.id}
                   className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-brand-300"
@@ -132,6 +136,11 @@ export default function ExamPage() {
                     </div>
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2 pl-9">
+                    {ma && (
+                      <span className="self-center rounded-md bg-emerald-100 px-2 py-1 text-[10px] font-bold text-emerald-700">
+                        📘 모범답안 제공
+                      </span>
+                    )}
                     <Link
                       href={answerLink(q)}
                       className="rounded-md bg-brand-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-brand-700"
@@ -145,8 +154,25 @@ export default function ExamPage() {
                       ✅ 내 답안 채점
                     </Link>
                   </div>
+
+                  {ma && (
+                    <details className="mt-3 pl-9">
+                      <summary className="cursor-pointer text-xs font-semibold text-emerald-700 hover:underline">
+                        📘 클로드 모범답안 보기
+                      </summary>
+                      <div className="mt-2 rounded-xl border border-emerald-200 bg-emerald-50/40 p-4">
+                        <div className="mb-2 rounded-md bg-white px-2.5 py-1 text-[10px] text-emerald-700 ring-1 ring-emerald-200">
+                          🧾 근거: {ma.source}
+                        </div>
+                        <article className="rounded-lg bg-white p-4">
+                          <Markdown>{ma.answer}</Markdown>
+                        </article>
+                      </div>
+                    </details>
+                  )}
                 </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         ))}
