@@ -13,9 +13,13 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [session, setSession] = useState<Session | null>(null);
+  const [next, setNext] = useState("/");
 
   useEffect(() => {
     setSession(loadSession());
+    // 로그인 후 돌아갈 경로(?next=). 외부 URL 차단(상대 경로만 허용).
+    const raw = new URLSearchParams(window.location.search).get("next") || "/";
+    setNext(raw.startsWith("/") && !raw.startsWith("//") ? raw : "/");
   }, []);
 
   async function submit() {
@@ -29,7 +33,7 @@ export default function LoginPage() {
       const s = mode === "login" ? await login(name, password) : await register(name, password);
       setSession(s);
       // 세션이 모든 화면(헤더·게이트)에 확실히 반영되도록 전체 새로고침으로 이동
-      window.location.href = "/";
+      window.location.href = next;
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -47,7 +51,9 @@ export default function LoginPage() {
             님으로 로그인 중입니다.
           </p>
           <div className="mt-4 flex gap-2">
-            <Button onClick={() => (window.location.href = "/")}>학습 시작</Button>
+            <Button onClick={() => (window.location.href = next)}>
+              {next === "/" ? "학습 시작" : "이어서 하기"}
+            </Button>
             <button
               onClick={() => {
                 clearSession();
