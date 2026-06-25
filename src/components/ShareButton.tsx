@@ -2,58 +2,114 @@
 
 import { useState } from "react";
 
+/* 카카오 JS 키가 있으면 카카오톡 공유, 없으면 링크 복사로 폴백. */
+const KAKAO_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+
+declare global {
+  interface Window {
+    // 카카오 SDK
+    Kakao?: {
+      isInitialized?: () => boolean;
+      init: (k: string) => void;
+      Share?: { sendDefault: (o: unknown) => void };
+    };
+  }
+}
+
+async function ensureKakao() {
+  if (!KAKAO_KEY || typeof window === "undefined") return null;
+  if (!window.Kakao) {
+    await new Promise<void>((resolve) => {
+      const s = document.createElement("script");
+      s.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js";
+      s.async = true;
+      s.onload = () => resolve();
+      s.onerror = () => resolve();
+      document.head.appendChild(s);
+    });
+  }
+  const K = window.Kakao;
+  if (K && !K.isInitialized?.()) {
+    try {
+      K.init(KAKAO_KEY);
+    } catch {
+      /* ignore */
+    }
+  }
+  return K?.Share ? K : null;
+}
+
 /**
- * 공유 버튼. 지원 기기에서는 Web Share API(navigator.share)로 네이티브 공유 시트를,
- * 미지원 환경에서는 클립보드 복사로 폴백한다.
+ * 공유 버튼: 카카오톡 + 주소 복사.
+ *  - title: 카카오톡 메시지 제목/짧은 본문
+ *  - text: 클립보드에 복사할 본문(길어도 됨, 답안 전문 등)
+ *  - url:  공유 링크(없으면 현재 페이지)
  */
 export default function ShareButton({
   title,
   text,
   url,
-  label = "공유",
-  className = "",
+  dark = false,
 }: {
   title?: string;
   text?: string;
   url?: string;
-  label?: string;
-  className?: string;
+  dark?: boolean;
 }) {
   const [copied, setCopied] = useState(false);
 
-  async function handleShare() {
-    const link =
-      url || (typeof window !== "undefined" ? window.location.href : "");
-    const shareData: ShareData = { title, text, url: link };
+  function link() {
+    return url || (typeof window !== "undefined" ? window.location.href : "");
+  }
+
+  async function copyUrl() {
+    const payload = [text, link()].filter(Boolean).join("\n\n");
     try {
-      if (typeof navigator !== "undefined" && navigator.share) {
-        await navigator.share(shareData);
-        return;
-      }
-    } catch {
-      // 사용자가 공유 시트를 취소한 경우 등 — 폴백으로 진행하지 않고 종료
-      return;
-    }
-    // 폴백: 클립보드 복사
-    try {
-      const payload = [text, link].filter(Boolean).join("\n\n");
       await navigator.clipboard.writeText(payload);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      setCopied(false);
+      /* ignore */
     }
   }
 
-  return (
-    <button
-      onClick={handleShare}
-      className={
-        className ||
-        "inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+  async function shareKakao() {
+    const K = await ensureKakao();
+    if (K?.Share) {
+      try {
+        K.Share.sendDefault({
+          objectType: "text",
+          text: (title ? title + "\n" : "") + "스파르타 소설클럽",
+          link: { mobileWebUrl: link(), webUrl: link() },
+        });
+        return;
+      } catch {
+        /* fall through */
       }
-    >
-      {copied ? "✓ 복사됨" : `🔗 ${label}`}
-    </button>
+    }
+    // 폴백: 링크 복사 안내
+    await copyUrl();
+    alert("링크를 복사했어요. 카카오톡 대화창에 붙여넣어 공유하세요.");
+  }
+
+  const base = dark
+    ? "border-white/40 bg-white/10 text-white hover:bg-white/20"
+    : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50";
+
+  return (
+    <div className="inline-flex gap-2">
+      <button
+        onClick={shareKakao}
+        className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${base}`}
+      >
+        💬 카카오톡
+      </button>
+      <button
+        onClick={copyUrl}
+        className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${base}`}
+      >
+        {copied ? "✓ 복사됨" : "📋 주소 복사"}
+      </button>
+    </div>
   );
 }

@@ -399,7 +399,6 @@ export default function AnswerPage() {
                 ⚡ 실시간 생성(무료 LLM){topicId ? " · 서브노트 근거" : " · 일반지식"}
               </span>
               <ShareButton
-                label="답안 공유"
                 title={`[스파르타 소설클럽] ${question.slice(0, 40)}`}
                 text={`📝 ${question}\n\n${answer}`}
               />
