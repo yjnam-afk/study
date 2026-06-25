@@ -18,7 +18,9 @@ export default function AuthGate({ children }: { children: React.ReactNode }) {
     setAuthed(ok);
     setReady(true);
     if (!ok && !PUBLIC_PATHS.includes(pathname)) {
-      router.replace("/login");
+      // 로그인 후 원래 가려던 페이지로 돌아오도록 next 에 현재 경로를 담는다.
+      const next = pathname + (window.location.search || "");
+      router.replace(`/login?next=${encodeURIComponent(next)}`);
     }
   }, [pathname, router]);
 
