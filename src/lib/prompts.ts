@@ -265,8 +265,10 @@ export function mnemonicPrompt(topic: string, reference?: string): string {
     `- 토픽을 "정의"하는 핵심 키워드 3~5개(개념·목적·핵심속성). 절대 본론의 나열 항목을 여기 넣지 말 것.`,
     `- definition: 그 키워드를 "나열식"으로 조합한 "정의 2줄". 반드시 배열 길이 2(두 줄 모두 내용 채움, 빈 문자열 금지). 각 줄 한글 17~19자 내외. 조사(은/는/이/가/을/를/의 등)·서술어(~이다/~한다) 빼고 명사·명사구를 중점(·)/쉼표로 나열, 끝은 명사형 범주어로(완전한 문장 금지). 예) ["데이터 중복 최소화·이상현상 제거", "함수 종속성 기반 릴레이션 분해 기법"].`,
     `[body = 본론(2단락 이후)용 키워드 묶음]`,
-    `- 문제에서 실제로 묻는 내용 항목(나열형이면 그 항목 자체) 4~10개. 정확한 실제 항목으로 작성(모르면 일반적으로 통용되는 항목).`,
-    `- table: 본론을 3열 표로 정리한 행들. 각 행은 col1(구분), col2(항목/키워드), col3(핵심 설명).`,
+    `- 항목은 그 토픽의 "표준적이고 실제적인 구성요소" 그 자체여야 한다. 참고자료(정의·내용)에 등장하는 실제 구성요소를 그대로 사용한다.`,
+    `  · 예) ESG → "환경(E)·사회(S)·지배구조(G)" 3개. / OWASP Top10 → 실제 10개 항목. / 트랜잭션 → ACID 4개.`,
+    `  · 절대 금지: "OO적 측면", "OO 역할" 처럼 일반적 껍데기 단어를 지어내는 것, 같은 개념을 두 번 넣는 중복, 참고자료에 없는 항목 창작.`,
+    `- 4~10개. 참고자료에 본론 항목이 명시돼 있으면 그것을 최우선으로 사용한다.`,
     ``,
     `[각 묶음 공통 규칙]`,
     `- items: 각 항목은 term(키워드), initial(term의 첫 글자), desc(한 줄 설명).`,
@@ -281,7 +283,7 @@ export function mnemonicPrompt(topic: string, reference?: string): string {
     `- recall(주관식 확인): prompt(본론 두음을 보여주고 핵심 키워드를 모두 쓰라는 문제), answers(정답 키워드 배열 = body items의 term들).`,
     ``,
     `[출력 형식] 반드시 아래 JSON 객체만 출력(설명·코드블록 텍스트 금지):`,
-    `{"topic":"${topic}","intro":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법","definition":["정의 1줄(17~19자)","정의 2줄(17~19자)"]},"body":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법","table":[{"col1":"구분","col2":"항목","col3":"설명"}]},"mc":[{"question":"문제","options":["a","b","c","d"],"answer":0,"explanation":"해설"}],"recall":{"prompt":"본론 두음 '○○○'이 의미하는 키워드를 모두 쓰시오.","answers":["키워드1","키워드2"]}}`,
+    `{"topic":"${topic}","intro":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법","definition":["정의 1줄(17~19자)","정의 2줄(17~19자)"]},"body":{"items":[{"term":"키워드","initial":"키","desc":"설명"}],"mnemonic":"두음","mnemonicHow":"연상법"},"mc":[{"question":"문제","options":["a","b","c","d"],"answer":0,"explanation":"해설"}],"recall":{"prompt":"본론 두음 '○○○'이 의미하는 키워드를 모두 쓰시오.","answers":["키워드1","키워드2"]}}`,
   ].join("\n");
 }
 
