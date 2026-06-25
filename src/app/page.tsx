@@ -180,10 +180,9 @@ export default function Home() {
             </Link>
           )}
           <ShareButton
-            label="친구 초대"
-            title="스파르타 소설클럽 — 정보관리기술사 학습"
-            text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기. 같이 공부해요!"
-            className="inline-flex items-center gap-1.5 rounded-xl border border-white/40 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+            dark
+            title="스파르타 소설클럽 — 정보관리기술사 학습 같이해요!"
+            text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기"
           />
         </div>
       </section>
