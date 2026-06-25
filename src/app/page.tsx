@@ -12,6 +12,7 @@ import {
   mnemonicLink,
   explainLink,
 } from "@/lib/coach";
+import ShareButton from "@/components/ShareButton";
 
 const toneClass: Record<string, string> = {
   rose: "border-rose-200 bg-rose-50 hover:border-rose-300",
@@ -169,14 +170,22 @@ export default function Home() {
             ? plan.subline
             : "키워드를 암기하고, 그 키워드로 답안을 써보세요."}
         </p>
-        {plan?.primary && (
-          <Link
-            href={plan.primary.href}
-            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
-          >
-            지금 시작하기 · {plan.primary.label} →
-          </Link>
-        )}
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {plan?.primary && (
+            <Link
+              href={plan.primary.href}
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
+            >
+              지금 시작하기 · {plan.primary.label} →
+            </Link>
+          )}
+          <ShareButton
+            label="친구 초대"
+            title="스파르타 소설클럽 — 정보관리기술사 학습"
+            text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기. 같이 공부해요!"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-white/40 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+          />
+        </div>
       </section>
 
       {plan && plan.tasks.length > 0 && (

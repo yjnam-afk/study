@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
+import ShareButton from "@/components/ShareButton";
 import questions from "@/data/questions.json";
 import topics from "@/data/topics.json";
 import { getModelAnswerByQuestion } from "@/lib/modelAnswers";
@@ -393,8 +394,15 @@ export default function AnswerPage() {
         {error && <ErrorBox message={error} />}
         {answer && (
           <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-            <div className="mb-3 inline-block rounded-md bg-slate-100 px-2.5 py-1 text-[11px] text-slate-500">
-              ⚡ 실시간 생성(무료 LLM){topicId ? " · 서브노트 근거" : " · 일반지식"}
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <span className="inline-block rounded-md bg-slate-100 px-2.5 py-1 text-[11px] text-slate-500">
+                ⚡ 실시간 생성(무료 LLM){topicId ? " · 서브노트 근거" : " · 일반지식"}
+              </span>
+              <ShareButton
+                label="답안 공유"
+                title={`[스파르타 소설클럽] ${question.slice(0, 40)}`}
+                text={`📝 ${question}\n\n${answer}`}
+              />
             </div>
             <Markdown>{answer}</Markdown>
           </article>
