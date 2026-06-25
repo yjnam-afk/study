@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
+import ShareButton from "@/components/ShareButton";
 import topics from "@/data/topics.json";
 
 type Item = { term: string; initial: string; desc: string };
@@ -237,6 +238,13 @@ export default function MnemonicPage() {
 
         {set && (
           <div>
+            <div className="mb-3 flex justify-end">
+              <ShareButton
+                label="두음 공유"
+                title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
+                text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
+              />
+            </div>
             <Stepper step={step} onStep={setStep} />
             {step === "learn" && <Learn set={set} onNext={() => setStep("inject")} />}
             {step === "inject" && (
