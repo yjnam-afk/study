@@ -324,38 +324,6 @@ function GroupCard({ label, sub, group }: { label: string; sub: string; group: G
           </div>
         </div>
       )}
-
-      {group.table && group.table.length > 0 && (
-        <div className="rounded-2xl border border-emerald-200 bg-white p-1">
-          <div className="px-3 py-2 text-xs font-semibold text-emerald-700">
-            ✍️ 답안지 본론 — 3열 표
-          </div>
-          <table className="w-full text-sm">
-            <thead className="bg-slate-50 text-xs text-slate-500">
-              <tr>
-                <th className="border border-slate-200 px-3 py-2 text-left">구분</th>
-                <th className="border border-slate-200 px-3 py-2 text-left">항목</th>
-                <th className="border border-slate-200 px-3 py-2 text-left">설명</th>
-              </tr>
-            </thead>
-            <tbody>
-              {group.table.map((r, i) => (
-                <tr key={i}>
-                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-700">
-                    {r.col1}
-                  </td>
-                  <td className="border border-slate-200 px-3 py-2 font-medium text-slate-900">
-                    {r.col2}
-                  </td>
-                  <td className="border border-slate-200 px-3 py-2 text-slate-600">
-                    {r.col3}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
     </div>
   );
 }
