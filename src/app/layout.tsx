@@ -6,9 +6,19 @@ import ProgressSync from "@/components/ProgressSync";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://study-teal-eight.vercel.app"),
   title: "스파르타 소설클럽",
   description:
     "기술사 답안은 '소설'이다 — 키워드 암기(두음신공)와 키워드로 답안 쓰기를 스파르타식으로 훈련하는 정보관리기술사 학습 앱",
+  openGraph: {
+    title: "스파르타 소설클럽",
+    description:
+      "기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기. 같이 공부해요!",
+    url: "https://study-teal-eight.vercel.app",
+    siteName: "스파르타 소설클럽",
+    images: [{ url: "/api/og", width: 1200, height: 630 }],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
