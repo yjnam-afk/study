@@ -121,18 +121,19 @@ export default function ShareButton({
     : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50";
 
   return (
-    <div className="inline-flex gap-2">
+    <div className="inline-flex flex-wrap gap-2">
+      <button
+        onClick={copyUrl}
+        title="PC·모바일 모두 클릭되는 링크가 복사됩니다"
+        className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-semibold transition ${base}`}
+      >
+        {copied ? "✓ 복사됨! 붙여넣기" : "📋 링크 복사 (PC·모바일)"}
+      </button>
       <button
         onClick={shareKakao}
         className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${base}`}
       >
         💬 카카오톡
-      </button>
-      <button
-        onClick={copyUrl}
-        className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${base}`}
-      >
-        {copied ? "✓ 복사됨" : "📋 주소 복사"}
       </button>
     </div>
   );
