@@ -33,13 +33,16 @@ type GenOpts = {
  */
 const MAX_TOKENS = Number(process.env.AI_MAX_TOKENS) || 4096;
 
-/** Groq 모델별 안전한 응답 토큰 예산(프롬프트 ~2.5k 가정, 각 모델 TPM 내). */
+/** Groq 모델별 안전한 응답 토큰 예산.
+ *  요청(=프롬프트+max_tokens)이 모델별 분당한도(TPM)를 넘으면 413이 나므로
+ *  프롬프트 ~3.5k를 가정해 TPM 안에 들어가도록 보수적으로 잡는다. */
 function groqBudget(model: string): number {
-  if (model.includes("llama-3.3-70b")) return 6000; // TPM 12000
-  if (model.includes("kimi-k2")) return 5000; // 대형 MoE
-  if (model.includes("gpt-oss")) return 4500; // TPM 8000
-  if (model.includes("8b-instant")) return 3000; // TPM 6000
-  return MAX_TOKENS;
+  if (model.includes("llama-3.3-70b")) return 5000; // TPM 12000
+  if (model.includes("kimi-k2")) return 3000; // TPM 8000
+  if (model.includes("gpt-oss-120b")) return 3000; // TPM 8000
+  if (model.includes("gpt-oss-20b")) return 3000; // TPM 8000
+  if (model.includes("8b-instant")) return 2000; // TPM 6000
+  return 3000;
 }
 
 /**
@@ -68,12 +71,12 @@ type ChainEntry = { name: string; model?: string; maxTokens?: number };
 
 /** Groq 무료 등급은 토큰 한도(TPD)가 "모델별"로 따로 적용되므로,
  *  같은 API 키로 여러 모델을 폴백시키면 하나가 막혀도 다음 모델로 계속 동작한다.
- *  "최고사양(대형 플래그십)" 모델만 사용한다 — 중소형 모델 제외. */
+ *  앞쪽이 최고사양(품질), 뒤쪽은 비상용(작지만 한도 여유) — 앱이 완전히 멈추지 않도록. */
 function groqModels(): string[] {
   const primary = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
   const fallbacks = (
     process.env.GROQ_FALLBACK_MODELS ||
-    "moonshotai/kimi-k2-instruct,openai/gpt-oss-120b"
+    "openai/gpt-oss-120b,moonshotai/kimi-k2-instruct,openai/gpt-oss-20b,llama-3.1-8b-instant"
   )
     .split(",")
     .map((s) => s.trim())
@@ -148,7 +151,16 @@ export async function generateText(opts: GenOpts): Promise<string> {
       `사용 가능한 AI 제공자가 없습니다. 환경변수를 확인하세요. (${detail})`,
     );
   }
-  throw new Error(`모든 AI 제공자가 실패했습니다 → ${detail}`);
+  // 전부 사용량 한도(429/413)면 사용자에게 깔끔한 안내 메시지로 바꿔준다.
+  const allRateLimited =
+    /rate.?limit|too large|tokens per|429|413/i.test(detail) &&
+    !/api key|unauthorized|not found|invalid/i.test(detail);
+  if (allRateLimited) {
+    throw new Error(
+      "지금 무료 AI 사용량이 가득 찼어요(하루·분당 한도). 몇 분 뒤 다시 시도하거나, 기출 메뉴의 '클로드 모범답안'을 이용해 주세요.",
+    );
+  }
+  throw new Error("AI 생성에 실패했어요. 잠시 후 다시 시도해 주세요.");
 }
 
 async function generateWithGemini({

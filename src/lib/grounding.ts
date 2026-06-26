@@ -48,7 +48,7 @@ export function groundingFrom(topicId?: string): string {
   const d = DETAILS[topicId];
   if (!d) return "";
   const parts: string[] = [];
-  if (d.detail) parts.push(d.detail.slice(0, 1300));
+  if (d.detail) parts.push(d.detail.slice(0, 900));
   const kws = [
     ...(d.defKeywords || []),
     ...(d.featureKeywords || []),
