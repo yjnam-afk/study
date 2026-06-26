@@ -158,26 +158,48 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-6 rounded-2xl bg-gradient-to-br from-brand-600 to-indigo-700 p-7 text-white shadow-lg">
-        <p className="text-sm font-medium text-brand-100">
-          {userName ? `${userName} 님, 오늘의 학습 코치예요` : "오늘의 학습 코치"}
-        </p>
-        <h1 className="mt-1 text-2xl font-bold sm:text-3xl">
-          {plan ? plan.headline : "기술사 답안은 '소설'입니다 ✍️"}
+      <section className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-indigo-700 to-violet-700 p-7 text-white shadow-lg sm:p-9">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
+          📖 스파르타 소설클럽
+        </span>
+        <h1 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">
+          기술사 답안은{" "}
+          <span className="underline decoration-amber-300 decoration-4 underline-offset-4">
+            소설
+          </span>
+          이다 ✍️
         </h1>
-        <p className="mt-2 max-w-2xl text-sm text-brand-50">
-          {plan
-            ? plan.subline
-            : "키워드를 암기하고, 그 키워드로 답안을 써보세요."}
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-brand-50 sm:text-base">
+          핵심은 <b className="text-white">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
+          어려운 토픽도 키워드만 외우면 한 편의 소설처럼 답안을 완성할 수 있어요.
         </p>
-        {plan?.primary && (
-          <Link
-            href={plan.primary.href}
-            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
-          >
-            지금 시작하기 · {plan.primary.label} →
-          </Link>
-        )}
+        <div className="mt-4 flex flex-wrap gap-2">
+          <span className="rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium">
+            🥷 1단계 · 키워드 암기(두음신공)
+          </span>
+          <span className="rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium">
+            ✍️ 2단계 · 키워드로 답안 쓰기
+          </span>
+        </div>
+
+        {/* 개인화 코치 — 클럽 소개 아래에 자연스럽게 */}
+        <div className="mt-5 rounded-xl bg-black/15 p-4">
+          <p className="text-sm font-semibold text-white">
+            {userName ? `${userName} 님 — ` : ""}
+            {plan ? plan.headline : "오늘부터 시작해 볼까요? 🚀"}
+          </p>
+          {plan?.subline && (
+            <p className="mt-0.5 text-xs text-brand-100">{plan.subline}</p>
+          )}
+          {plan?.primary && (
+            <Link
+              href={plan.primary.href}
+              className="mt-3 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
+            >
+              지금 시작하기 · {plan.primary.label} →
+            </Link>
+          )}
+        </div>
       </section>
 
       {plan && plan.tasks.length > 0 && (
