@@ -272,15 +272,19 @@ async function generateWithAnthropic({
 /** Groq API 키 목록. 한도는 키(계정)별로 따로라 여러 개면 그만큼 한도가 늘어난다.
  *  GROQ_API_KEYS(콤마 구분) + GROQ_API_KEY / GROQ_API_KEY_2 / _3 ... 모두 모은다. */
 function groqKeys(): string[] {
-  const keys: string[] = [];
-  const multi = process.env.GROQ_API_KEYS;
-  if (multi) keys.push(...multi.split(",").map((s) => s.trim()));
-  if (process.env.GROQ_API_KEY) keys.push(process.env.GROQ_API_KEY.trim());
+  const raw: string[] = [];
+  // GROQ_API_KEYS, GROQ_API_KEY, GROQ_API_KEY_2.. 모두 콤마로 분리 허용
+  // (기존 GROQ_API_KEY 변수에 콤마로 여러 개 넣어도 동작하도록)
+  if (process.env.GROQ_API_KEYS) raw.push(...process.env.GROQ_API_KEYS.split(","));
+  if (process.env.GROQ_API_KEY) raw.push(...process.env.GROQ_API_KEY.split(","));
   for (let i = 2; i <= 6; i++) {
     const k = process.env[`GROQ_API_KEY_${i}`];
-    if (k) keys.push(k.trim());
+    if (k) raw.push(...k.split(","));
   }
-  return Array.from(new Set(keys.filter(Boolean)));
+  // 각 키에서 공백·줄바꿈 완전 제거(붙여넣기 시 섞인 whitespace/return 문자 방지)
+  return Array.from(
+    new Set(raw.map((s) => s.replace(/\s/g, "")).filter(Boolean)),
+  );
 }
 
 async function generateWithGroq({
