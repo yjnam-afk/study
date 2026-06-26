@@ -2,7 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { PageHeader, ErrorBox, Button } from "@/components/ui";
-import { login, register, loadSession, clearSession, Session } from "@/lib/auth";
+import {
+  login,
+  register,
+  loadSession,
+  clearSession,
+  updateProfile,
+  Session,
+} from "@/lib/auth";
 
 type Mode = "login" | "register";
 
@@ -14,6 +21,46 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [session, setSession] = useState<Session | null>(null);
   const [next, setNext] = useState("/");
+
+  // 회원정보 수정
+  const [editOpen, setEditOpen] = useState(false);
+  const [curPw, setCurPw] = useState("");
+  const [newName, setNewName] = useState("");
+  const [newPw, setNewPw] = useState("");
+  const [editMsg, setEditMsg] = useState("");
+  const [editErr, setEditErr] = useState("");
+  const [editLoading, setEditLoading] = useState(false);
+
+  async function saveProfile() {
+    if (!session) return;
+    if (!curPw) {
+      setEditErr("현재 비밀번호를 입력하세요.");
+      return;
+    }
+    if (!newName.trim() && !newPw) {
+      setEditErr("바꿀 이름 또는 새 비밀번호를 입력하세요.");
+      return;
+    }
+    setEditLoading(true);
+    setEditErr("");
+    setEditMsg("");
+    try {
+      const s = await updateProfile(session, {
+        currentPassword: curPw,
+        newName: newName.trim() || undefined,
+        newPassword: newPw || undefined,
+      });
+      setSession(s);
+      setCurPw("");
+      setNewName("");
+      setNewPw("");
+      setEditMsg("저장되었습니다.");
+    } catch (e) {
+      setEditErr(e instanceof Error ? e.message : "수정에 실패했습니다.");
+    } finally {
+      setEditLoading(false);
+    }
+  }
 
   useEffect(() => {
     setSession(loadSession());
@@ -63,7 +110,75 @@ export default function LoginPage() {
             >
               로그아웃
             </button>
+            <button
+              onClick={() => {
+                setEditOpen((v) => !v);
+                setEditErr("");
+                setEditMsg("");
+              }}
+              className="rounded-lg border border-slate-200 px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50"
+            >
+              {editOpen ? "닫기" : "회원정보 수정"}
+            </button>
           </div>
+
+          {editOpen && (
+            <div className="mt-5 border-t border-slate-100 pt-5">
+              <h3 className="mb-3 text-sm font-bold text-slate-800">
+                회원정보 수정
+              </h3>
+              <label className="mb-1 block text-xs font-medium text-slate-500">
+                현재 비밀번호 (확인용, 필수)
+              </label>
+              <input
+                type="password"
+                value={curPw}
+                onChange={(e) => setCurPw(e.target.value)}
+                placeholder="현재 비밀번호"
+                className="mb-3 w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+              />
+              <label className="mb-1 block text-xs font-medium text-slate-500">
+                새 이름 (안 바꾸면 비워두기)
+              </label>
+              <input
+                value={newName}
+                onChange={(e) => setNewName(e.target.value)}
+                maxLength={20}
+                placeholder={session.name}
+                className="mb-3 w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+              />
+              <label className="mb-1 block text-xs font-medium text-slate-500">
+                새 비밀번호 (안 바꾸면 비워두기, 4자 이상)
+              </label>
+              <input
+                type="password"
+                value={newPw}
+                onChange={(e) => setNewPw(e.target.value)}
+                placeholder="새 비밀번호"
+                className="mb-4 w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+              />
+              {editErr && (
+                <div className="mb-3">
+                  <ErrorBox message={editErr} />
+                </div>
+              )}
+              {editMsg && (
+                <p className="mb-3 text-sm font-medium text-emerald-600">
+                  ✓ {editMsg}
+                </p>
+              )}
+              <Button
+                onClick={saveProfile}
+                disabled={editLoading}
+                className="w-full"
+              >
+                {editLoading ? "저장 중…" : "변경 저장"}
+              </Button>
+              <p className="mt-2 text-xs text-slate-400">
+                이름을 바꿔도 학습 기록·랭킹은 그대로 따라옵니다.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     );
