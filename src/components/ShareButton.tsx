@@ -78,10 +78,13 @@ export default function ShareButton({
     const K = await ensureKakao();
     if (K?.Share) {
       try {
+        const here = link();
         K.Share.sendDefault({
           objectType: "text",
-          text: (title ? title + "\n" : "") + "스파르타 소설클럽",
-          link: { mobileWebUrl: link(), webUrl: link() },
+          text: (title ? title + "\n" : "") + "스파르타 소설클럽 — 같이 공부해요!",
+          link: { mobileWebUrl: here, webUrl: here },
+          // 카톡방에서 확실히 눌리도록 명시 버튼 추가
+          buttonTitle: "앱 열기",
         });
         return;
       } catch {
