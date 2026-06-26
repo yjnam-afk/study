@@ -267,6 +267,20 @@ async function generateWithAnthropic({
   return text.trim();
 }
 
+/** Groq API 키 목록. 한도는 키(계정)별로 따로라 여러 개면 그만큼 한도가 늘어난다.
+ *  GROQ_API_KEYS(콤마 구분) + GROQ_API_KEY / GROQ_API_KEY_2 / _3 ... 모두 모은다. */
+function groqKeys(): string[] {
+  const keys: string[] = [];
+  const multi = process.env.GROQ_API_KEYS;
+  if (multi) keys.push(...multi.split(",").map((s) => s.trim()));
+  if (process.env.GROQ_API_KEY) keys.push(process.env.GROQ_API_KEY.trim());
+  for (let i = 2; i <= 6; i++) {
+    const k = process.env[`GROQ_API_KEY_${i}`];
+    if (k) keys.push(k.trim());
+  }
+  return Array.from(new Set(keys.filter(Boolean)));
+}
+
 async function generateWithGroq({
   system,
   user,
@@ -274,42 +288,45 @@ async function generateWithGroq({
   model: modelOverride,
   maxTokens,
 }: GenOpts): Promise<string> {
-  const apiKey = process.env.GROQ_API_KEY;
-  if (!apiKey) {
+  const keys = groqKeys();
+  if (keys.length === 0) {
     throw new AIConfigError(
       "GROQ_API_KEY 가 설정되지 않았습니다. .env.local 파일에 키를 추가하세요. (https://console.groq.com/keys)",
     );
   }
   const model = modelOverride || process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
-
-  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      temperature,
-      max_tokens: maxTokens || groqBudget(model),
-      messages: [
-        { role: "system", content: system },
-        { role: "user", content: user },
-      ],
-    }),
+  const body = JSON.stringify({
+    model,
+    temperature,
+    max_tokens: maxTokens || groqBudget(model),
+    messages: [
+      { role: "system", content: system },
+      { role: "user", content: user },
+    ],
   });
 
-  if (!res.ok) {
+  let lastErr = "";
+  for (const apiKey of keys) {
+    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body,
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const text = data?.choices?.[0]?.message?.content;
+      if (!text) throw new Error("Groq 응답이 비어 있습니다.");
+      return text.trim();
+    }
     const detail = await res.text();
-    throw new Error(`Groq API 오류 (${res.status}): ${detail}`);
+    lastErr = `Groq API 오류 (${res.status}): ${detail}`;
+    // 429(한도 초과)·5xx만 다음 키로 재시도. 400/413 등은 키 바꿔도 동일 → 즉시 중단.
+    if (res.status !== 429 && res.status < 500) break;
   }
-
-  const data = await res.json();
-  const text = data?.choices?.[0]?.message?.content;
-  if (!text) {
-    throw new Error("Groq 응답이 비어 있습니다.");
-  }
-  return text.trim();
+  throw new Error(lastErr || "Groq 호출 실패");
 }
 
 async function generateWithOpenRouter({
