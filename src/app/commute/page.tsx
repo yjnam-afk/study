@@ -59,6 +59,17 @@ export default function CommutePage() {
 
   const rounds = card ? getItem(loadReview(), card.id).rounds : 0;
 
+  // 두음을 항상 키워드와 일치시킨다: 저장 두음 글자수가 키워드 수와 같으면 그대로,
+  // 아니면 키워드 첫 글자로 두음을 생성(불일치 방지).
+  const shownMnemonic = (() => {
+    if (!card) return "";
+    const init = card.keywords.map((k) => k.trim().charAt(0)).join("");
+    const stored = (card.mnemonic || "").replace(/\s/g, "");
+    return stored && [...stored].length === card.keywords.length
+      ? card.mnemonic
+      : init;
+  })();
+
   return (
     <div>
       <PageHeader
@@ -124,13 +135,13 @@ export default function CommutePage() {
               </p>
             ) : (
               <div className="mt-6">
-                {card.mnemonic && (
+                {shownMnemonic && (
                   <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
                     <div className="text-xs font-medium text-brand-500">
                       두음신공
                     </div>
                     <div className="mt-1 text-3xl font-extrabold tracking-wide text-brand-700">
-                      {card.mnemonic}
+                      {shownMnemonic}
                     </div>
                   </div>
                 )}
