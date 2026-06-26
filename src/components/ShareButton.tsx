@@ -77,13 +77,33 @@ export default function ShareButton({
   async function shareKakao() {
     const K = await ensureKakao();
     if (K?.Share) {
+      const here = link();
+      const origin =
+        typeof window !== "undefined" ? window.location.origin : "";
+      const links = { mobileWebUrl: here, webUrl: here };
+      // 클릭 가능한 카드(이미지+버튼) 형식
       try {
-        const here = link();
+        K.Share.sendDefault({
+          objectType: "feed",
+          content: {
+            title: title || "스파르타 소설클럽",
+            description:
+              (text && text.slice(0, 80)) ||
+              "정보관리기술사 학습 — 두음신공 + 답안쓰기",
+            imageUrl: `${origin}/api/og`,
+            link: links,
+          },
+          buttons: [{ title: "앱 열기", link: links }],
+        });
+        return;
+      } catch {
+        /* feed 실패 시 텍스트+버튼으로 재시도 */
+      }
+      try {
         K.Share.sendDefault({
           objectType: "text",
           text: (title ? title + "\n" : "") + "스파르타 소설클럽 — 같이 공부해요!",
-          link: { mobileWebUrl: here, webUrl: here },
-          // 카톡방에서 확실히 눌리도록 명시 버튼 추가
+          link: links,
           buttonTitle: "앱 열기",
         });
         return;
