@@ -189,14 +189,16 @@ export default function Home() {
             {plan ? plan.headline : "오늘부터 시작해 볼까요? 🚀"}
           </p>
           {plan?.subline && (
-            <p className="mt-0.5 text-xs text-brand-100">{plan.subline}</p>
+            <p className="mt-1 text-xs leading-relaxed text-brand-100">
+              {plan.subline}
+            </p>
           )}
           {plan?.primary && (
             <Link
               href={plan.primary.href}
-              className="mt-3 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
+              className="mt-3 inline-flex items-center gap-1.5 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
             >
-              지금 시작하기 · {plan.primary.label} →
+              지금 시작하기 →
             </Link>
           )}
         </div>
