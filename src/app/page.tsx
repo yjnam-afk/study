@@ -170,21 +170,14 @@ export default function Home() {
             ? plan.subline
             : "키워드를 암기하고, 그 키워드로 답안을 써보세요."}
         </p>
-        <div className="mt-4 flex flex-wrap items-center gap-2">
-          {plan?.primary && (
-            <Link
-              href={plan.primary.href}
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
-            >
-              지금 시작하기 · {plan.primary.label} →
-            </Link>
-          )}
-          <ShareButton
-            dark
-            title="스파르타 소설클럽 — 정보관리기술사 학습 같이해요!"
-            text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기"
-          />
-        </div>
+        {plan?.primary && (
+          <Link
+            href={plan.primary.href}
+            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 shadow-sm transition hover:bg-brand-50"
+          >
+            지금 시작하기 · {plan.primary.label} →
+          </Link>
+        )}
       </section>
 
       {plan && plan.tasks.length > 0 && (
@@ -412,6 +405,16 @@ export default function Home() {
             </div>
           </section>
         ))}
+      </div>
+
+      <div className="mt-10 flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center sm:flex-row sm:justify-between sm:text-left">
+        <p className="text-sm text-slate-600">
+          🏆 친구를 초대해 <b>학습 랭킹</b>으로 같이 경쟁해요.
+        </p>
+        <ShareButton
+          title="스파르타 소설클럽 — 정보관리기술사 학습 같이해요!"
+          text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기"
+        />
       </div>
     </div>
   );
