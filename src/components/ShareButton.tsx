@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 
-/* 카카오 JS 키가 있으면 카카오톡 공유, 없으면 링크 복사로 폴백. */
-const KAKAO_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+/* 카카오 JS 키(공개 키 — 도메인 제한으로 보호됨). env 우선, 없으면 기본값 사용. */
+const KAKAO_KEY =
+  process.env.NEXT_PUBLIC_KAKAO_JS_KEY || "01a30e83734c5fea54d11788b1a6c228";
 
 declare global {
   interface Window {
