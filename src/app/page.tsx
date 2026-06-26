@@ -34,6 +34,13 @@ const menuGroups = [
         color: "from-violet-500 to-purple-600",
       },
       {
+        href: "/commute",
+        emoji: "🚇",
+        title: "지하철 모드 (틈새 두음)",
+        desc: "한 손으로 넘기는 두음 카드 · AI 없이 즉시 · 통신 약해도 OK",
+        color: "from-slate-500 to-gray-600",
+      },
+      {
         href: "/memorize",
         emoji: "🧠",
         title: "암기 (카드·퀴즈)",

@@ -41,6 +41,7 @@ export default function RootLayout({
               <nav className="hidden gap-4 text-sm font-medium text-slate-600 lg:flex">
                 <Link href="/" className="hover:text-brand-600">대시보드</Link>
                 <Link href="/mnemonic" className="hover:text-brand-600">두음신공</Link>
+                <Link href="/commute" className="hover:text-brand-600">🚇 지하철</Link>
                 <Link href="/memorize" className="hover:text-brand-600">암기</Link>
                 <Link href="/notes" className="hover:text-brand-600">오답노트</Link>
                 <Link href="/answer" className="font-semibold text-brand-600 hover:text-brand-700">답안쓰기</Link>
