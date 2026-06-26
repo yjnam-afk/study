@@ -125,7 +125,7 @@ export default function CommutePage() {
             ) : (
               <div className="mt-6">
                 {card.mnemonic && (
-                  <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-5 text-center">
+                  <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
                     <div className="text-xs font-medium text-brand-500">
                       두음신공
                     </div>
@@ -134,17 +134,18 @@ export default function CommutePage() {
                     </div>
                   </div>
                 )}
+                {/* 두음 글자 ↔ 키워드 매핑 (두음만 보면 모르니 풀어서) */}
                 {card.keywords.length > 0 && (
-                  <div className="mt-4 flex flex-wrap gap-1.5">
+                  <ul className="mt-4 space-y-1.5">
                     {card.keywords.map((k, i) => (
-                      <span
-                        key={i}
-                        className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-700"
-                      >
-                        {k}
-                      </span>
+                      <li key={i} className="flex items-center gap-3">
+                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-100 text-base font-extrabold text-brand-700">
+                          {k.trim().charAt(0)}
+                        </span>
+                        <span className="text-sm text-slate-800">{k}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 )}
               </div>
             )}
