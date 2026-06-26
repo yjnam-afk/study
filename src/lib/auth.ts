@@ -68,6 +68,20 @@ export async function login(name: string, password: string): Promise<Session> {
   return s;
 }
 
+/** 이름·비밀번호 수정. 현재 비밀번호 확인 후, 변경된 새 세션을 저장한다. */
+export async function updateProfile(
+  session: Session,
+  opts: { currentPassword: string; newName?: string; newPassword?: string },
+): Promise<Session> {
+  const s = await postJson<Session>("/api/auth/update", {
+    name: session.name,
+    token: session.token,
+    ...opts,
+  });
+  saveSession(s);
+  return s;
+}
+
 /** 내 학습 기록(localStorage)에서 랭킹 통계를 계산합니다. */
 export function buildMyStats(): MyStats {
   const review = loadReview();
