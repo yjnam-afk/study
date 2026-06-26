@@ -151,11 +151,13 @@ export async function generateText(opts: GenOpts): Promise<string> {
       `사용 가능한 AI 제공자가 없습니다. 환경변수를 확인하세요. (${detail})`,
     );
   }
-  // 전부 사용량 한도(429/413)면 사용자에게 깔끔한 안내 메시지로 바꿔준다.
-  const allRateLimited =
-    /rate.?limit|too large|tokens per|429|413/i.test(detail) &&
-    !/api key|unauthorized|not found|invalid/i.test(detail);
-  if (allRateLimited) {
+  // 사용량 한도(429/413/TPD/TPM) 신호가 있으면 깔끔한 안내 메시지로 바꿔준다.
+  const rateLimited =
+    /rate.?limit|too large|tokens per|\bTP[DM]\b|quota|\b429\b|\b413\b/i.test(
+      detail,
+    );
+  const authIssue = /unauthorized|\b401\b|invalid.?api.?key/i.test(detail);
+  if (rateLimited && !authIssue) {
     throw new Error(
       "지금 무료 AI 사용량이 가득 찼어요(하루·분당 한도). 몇 분 뒤 다시 시도하거나, 기출 메뉴의 '클로드 모범답안'을 이용해 주세요.",
     );
