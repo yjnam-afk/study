@@ -306,7 +306,10 @@ export default function Home() {
         </div>
       )}
 
-      <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <h2 className="mb-3 mt-10 text-lg font-bold text-slate-900">
+        📊 내 학습 현황
+      </h2>
+      <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Stat label="완료 진도" value={`${progress}%`} accent />
         <Stat label="퀴즈 정답률" value={stats.total > 0 ? `${accuracy}%` : "—"} />
         <Stat label="총 회독 수" value={`${totalRounds}회`} />
