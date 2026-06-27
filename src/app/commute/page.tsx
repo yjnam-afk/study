@@ -10,6 +10,7 @@ type Card = {
   title: string;
   category: string;
   importance: string;
+  definition: string;
   mnemonic: string;
   keywords: string[];
 };
@@ -131,10 +132,20 @@ export default function CommutePage() {
 
             {!flipped ? (
               <p className="mt-8 text-center text-sm text-slate-400">
-                👆 탭해서 두음·키워드 확인
+                👆 탭해서 정의·두음·키워드 확인
               </p>
             ) : (
-              <div className="mt-6">
+              <div className="mt-5">
+                {card.definition && (
+                  <div className="mb-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+                    <div className="text-xs font-semibold text-emerald-700">
+                      📖 정의
+                    </div>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-800">
+                      {card.definition}
+                    </p>
+                  </div>
+                )}
                 {shownMnemonic && (
                   <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
                     <div className="text-xs font-medium text-brand-500">
