@@ -3,95 +3,53 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
-import topics from "@/data/topics.json";
 import { mnemonicLink } from "@/lib/coach";
+import {
+  PlanTopic,
+  PLAN_START,
+  PLAN_TOTAL_DAYS,
+  ymd,
+  getPerDay,
+  setPerDay as persistPerDay,
+  loadDone,
+  saveDone,
+  orderedTopics,
+  dateOfDay,
+  todayIndex,
+  topicsForDay,
+  coveredDays,
+} from "@/lib/plan";
 
-type Topic = {
-  id: string;
-  title: string;
-  category: string;
-  importance: string;
-};
-
-const IMP: Record<string, number> = { 상: 0, 중: 1, 출제예상: 2, 하: 3 };
 const WEEK = ["일", "월", "화", "수", "목", "금", "토"];
-
-// 학습 기간: 2026-06-29(내일) ~ 2026-08-31
-const START = new Date(2026, 5, 29);
-const END = new Date(2026, 7, 31);
 const DAY = 86400000;
-const TOTAL_DAYS = Math.round((END.getTime() - START.getTime()) / DAY) + 1;
-
-const DONE_KEY = "info-pe-plan-done-v1";
-
-function ymd(d: Date): string {
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
-    d.getDate(),
-  ).padStart(2, "0")}`;
-}
-
-/** 중요도 우선 + 도메인 라운드로빈으로 토픽 순서를 정한다(매일 다양한 분야). */
-function orderedTopics(): Topic[] {
-  const all = topics as Topic[];
-  const tiers = ["상", "중", "출제예상", "하"];
-  const out: Topic[] = [];
-  for (const tier of tiers) {
-    const inTier = all.filter((t) => t.importance === tier);
-    const byCat: Record<string, Topic[]> = {};
-    for (const t of inTier) (byCat[t.category] ||= []).push(t);
-    const cats = Object.keys(byCat).sort();
-    let added = true;
-    while (added) {
-      added = false;
-      for (const c of cats) {
-        const arr = byCat[c];
-        if (arr.length) {
-          out.push(arr.shift()!);
-          added = true;
-        }
-      }
-    }
-  }
-  return out;
-}
 
 export default function PlanPage() {
   const [perDay, setPerDay] = useState(10);
-  const [selected, setSelected] = useState<number>(-1); // 선택한 dayIndex
+  const [selected, setSelected] = useState<number>(-1);
   const [done, setDone] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(DONE_KEY);
-      if (raw) setDone(new Set(JSON.parse(raw) as string[]));
-    } catch {
-      /* ignore */
-    }
-    // 오늘이 기간 내면 오늘 선택
-    const todayIdx = Math.round((Date.now() - START.getTime()) / DAY);
-    setSelected(todayIdx >= 0 && todayIdx < TOTAL_DAYS ? todayIdx : 0);
+    setPerDay(getPerDay());
+    setDone(loadDone());
+    const ti = todayIndex();
+    setSelected(ti >= 0 && ti < PLAN_TOTAL_DAYS ? ti : 0);
   }, []);
 
   const ordered = useMemo(() => orderedTopics(), []);
+  const covered = coveredDays(ordered, perDay);
 
-  function dayTopics(idx: number): Topic[] {
-    return ordered.slice(idx * perDay, idx * perDay + perDay);
+  function changePerDay(n: number) {
+    setPerDay(n);
+    persistPerDay(n);
   }
-  function dateOf(idx: number): Date {
-    return new Date(START.getTime() + idx * DAY);
-  }
-  const coveredDays = Math.min(TOTAL_DAYS, Math.ceil(ordered.length / perDay));
-
   function toggleDone(idx: number) {
-    const key = ymd(dateOf(idx));
+    const key = ymd(dateOfDay(idx));
     const next = new Set(done);
-    if (next.has(key)) next.delete(key);
-    else next.add(key);
+    next.has(key) ? next.delete(key) : next.add(key);
     setDone(next);
-    localStorage.setItem(DONE_KEY, JSON.stringify([...next]));
+    saveDone(next);
   }
 
-  // 렌더할 달: 2026-06, 07, 08
   const months = [
     [2026, 5],
     [2026, 6],
@@ -110,7 +68,7 @@ export default function PlanPage() {
         <span className="text-xs text-slate-500">하루 토픽 수</span>
         <select
           value={perDay}
-          onChange={(e) => setPerDay(Number(e.target.value))}
+          onChange={(e) => changePerDay(Number(e.target.value))}
           className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm"
         >
           {[5, 8, 10, 15, 20].map((n) => (
@@ -120,12 +78,11 @@ export default function PlanPage() {
           ))}
         </select>
         <span className="ml-auto text-xs text-slate-400">
-          {TOTAL_DAYS}일 · {coveredDays}일간 {Math.min(ordered.length, coveredDays * perDay)}토픽 ·
-          완료 {done.size}일
+          {PLAN_TOTAL_DAYS}일 · {covered}일간{" "}
+          {Math.min(ordered.length, covered * perDay)}토픽 · 완료 {done.size}일
         </span>
       </div>
 
-      {/* 달력들 */}
       <div className="space-y-6">
         {months.map(([y, m]) => {
           const first = new Date(y, m, 1);
@@ -147,7 +104,11 @@ export default function PlanPage() {
                   <div
                     key={w}
                     className={`pb-1 text-[11px] font-medium ${
-                      i === 0 ? "text-rose-400" : i === 6 ? "text-blue-400" : "text-slate-400"
+                      i === 0
+                        ? "text-rose-400"
+                        : i === 6
+                          ? "text-blue-400"
+                          : "text-slate-400"
                     }`}
                   >
                     {w}
@@ -155,12 +116,13 @@ export default function PlanPage() {
                 ))}
                 {cells.map((d, i) => {
                   if (!d) return <div key={i} />;
-                  const idx = Math.round((d.getTime() - START.getTime()) / DAY);
-                  const inRange = idx >= 0 && idx < coveredDays;
+                  const idx = Math.round(
+                    (d.getTime() - PLAN_START.getTime()) / DAY,
+                  );
+                  const inRange = idx >= 0 && idx < covered;
                   const key = ymd(d);
                   const isToday = key === todayKey;
                   const isDone = done.has(key);
-                  const cnt = inRange ? dayTopics(idx).length : 0;
                   return (
                     <button
                       key={i}
@@ -182,11 +144,13 @@ export default function PlanPage() {
                         >
                           {d.getDate()}
                         </span>
-                        {isDone && <span className="text-[9px] text-emerald-600">✓</span>}
+                        {isDone && (
+                          <span className="text-[9px] text-emerald-600">✓</span>
+                        )}
                       </div>
                       {inRange && (
                         <div className="mt-0.5 text-[9px] leading-tight text-slate-400">
-                          {cnt}토픽
+                          {topicsForDay(ordered, idx, perDay).length}토픽
                         </div>
                       )}
                     </button>
@@ -198,13 +162,12 @@ export default function PlanPage() {
         })}
       </div>
 
-      {/* 선택한 날의 토픽 */}
-      {selected >= 0 && selected < coveredDays && (
+      {selected >= 0 && selected < covered && (
         <DayDetail
           idx={selected}
-          date={dateOf(selected)}
-          list={dayTopics(selected)}
-          done={done.has(ymd(dateOf(selected)))}
+          date={dateOfDay(selected)}
+          list={topicsForDay(ordered, selected, perDay)}
+          done={done.has(ymd(dateOfDay(selected)))}
           onToggle={() => toggleDone(selected)}
         />
       )}
@@ -221,7 +184,7 @@ function DayDetail({
 }: {
   idx: number;
   date: Date;
-  list: Topic[];
+  list: PlanTopic[];
   done: boolean;
   onToggle: () => void;
 }) {
@@ -231,7 +194,8 @@ function DayDetail({
       <div className="mb-3 flex items-center justify-between">
         <h3 className="text-sm font-bold text-slate-800">
           {isToday && <span className="text-brand-600">오늘 · </span>}
-          {date.getMonth() + 1}/{date.getDate()} ({WEEK[date.getDay()]}) · Day {idx + 1}
+          {date.getMonth() + 1}/{date.getDate()} ({WEEK[date.getDay()]}) · Day{" "}
+          {idx + 1}
         </h3>
         <button
           onClick={onToggle}

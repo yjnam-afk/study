@@ -13,6 +13,18 @@ import {
   explainLink,
 } from "@/lib/coach";
 import ShareButton from "@/components/ShareButton";
+import {
+  PlanTopic,
+  orderedTopics,
+  todayIndex,
+  topicsForDay,
+  getPerDay,
+  dateOfDay,
+  ymd,
+  loadDone,
+  saveDone,
+  PLAN_TOTAL_DAYS,
+} from "@/lib/plan";
 
 const toneClass: Record<string, string> = {
   rose: "border-rose-200 bg-rose-50 hover:border-rose-300",
@@ -128,6 +140,29 @@ export default function Home() {
   const [plan, setPlan] = useState<CoachPlan | null>(null);
   const [userName, setUserName] = useState("");
 
+  // 데일리 계획 — 오늘의 토픽(메인)
+  const [dayIdx, setDayIdx] = useState(-1);
+  const [todayTopics, setTodayTopics] = useState<PlanTopic[]>([]);
+  const [todayDone, setTodayDone] = useState(false);
+
+  useEffect(() => {
+    const ti = todayIndex();
+    setDayIdx(ti);
+    if (ti >= 0 && ti < PLAN_TOTAL_DAYS) {
+      setTodayTopics(topicsForDay(orderedTopics(), ti, getPerDay()));
+      setTodayDone(loadDone().has(ymd(dateOfDay(ti))));
+    }
+  }, []);
+
+  function markTodayDone() {
+    if (dayIdx < 0) return;
+    const key = ymd(dateOfDay(dayIdx));
+    const d = loadDone();
+    d.add(key);
+    saveDone(d);
+    setTodayDone(true);
+  }
+
   useEffect(() => {
     const refresh = () => {
       const rev = loadReview();
@@ -217,6 +252,82 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* 메인 — 오늘의 데일리 계획 토픽 */}
+      <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-white p-5 shadow-sm">
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-sm font-bold text-slate-800">
+            🗓️ 오늘의 토픽{" "}
+            {dayIdx >= 0 && dayIdx < PLAN_TOTAL_DAYS && (
+              <span className="text-rose-500">· Day {dayIdx + 1}</span>
+            )}
+          </h2>
+          <Link href="/plan" className="text-xs font-medium text-rose-600 hover:underline">
+            전체 달력 →
+          </Link>
+        </div>
+
+        {dayIdx < 0 ? (
+          <p className="rounded-lg bg-rose-50 p-4 text-sm text-slate-600">
+            데일리 계획은 <b>6/29부터</b> 시작돼요. 그 전엔 두음신공·지하철 모드로
+            예열하세요!
+          </p>
+        ) : dayIdx >= PLAN_TOTAL_DAYS ? (
+          <p className="rounded-lg bg-emerald-50 p-4 text-sm text-emerald-700">
+            🎉 8월 말 계획을 모두 마쳤어요! 복습·기출로 마무리하세요.
+          </p>
+        ) : todayTopics.length === 0 ? (
+          <p className="text-sm text-slate-500">오늘 배정된 토픽이 없습니다.</p>
+        ) : (
+          <>
+            <ol className="space-y-2">
+              {todayTopics.map((t, i) => (
+                <li
+                  key={t.id}
+                  className="flex items-center gap-2 rounded-lg border border-slate-100 bg-slate-50 p-2"
+                >
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white text-[11px] font-bold text-slate-500">
+                    {i + 1}
+                  </span>
+                  <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+                    {t.importance}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate text-sm text-slate-800">
+                    {t.title}
+                  </span>
+                  <span className="hidden text-[10px] text-slate-400 sm:inline">
+                    {t.category}
+                  </span>
+                  <Link
+                    href={mnemonicLink(t, true)}
+                    className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                  >
+                    🥷 학습
+                  </Link>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <Link
+                href="/commute"
+                className="rounded-lg bg-slate-700 px-3 py-2 text-xs font-semibold text-white hover:bg-slate-800"
+              >
+                🚇 지하철 모드로 카드 넘기기
+              </Link>
+              <button
+                onClick={markTodayDone}
+                className={`rounded-lg border px-3 py-2 text-xs font-semibold transition ${
+                  todayDone
+                    ? "border-emerald-300 bg-emerald-50 text-emerald-700"
+                    : "border-slate-300 bg-white text-slate-600 hover:bg-slate-50"
+                }`}
+              >
+                {todayDone ? "✓ 오늘 완료함" : "오늘 완료 체크"}
+              </button>
+            </div>
+          </>
+        )}
+      </div>
 
       {plan && plan.tasks.length > 0 && (
         <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
