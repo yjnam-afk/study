@@ -287,7 +287,17 @@ function Stepper({ step, onStep }: { step: Step; onStep: (s: Step) => void }) {
   );
 }
 
-function GroupCard({ label, sub, group }: { label: string; sub: string; group: Group }) {
+function GroupCard({
+  label,
+  sub,
+  group,
+  hideDesc,
+}: {
+  label: string;
+  sub: string;
+  group: Group;
+  hideDesc?: boolean;
+}) {
   return (
     <div className="space-y-3">
       <div className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-indigo-50 p-5 text-center shadow-sm">
@@ -305,7 +315,7 @@ function GroupCard({ label, sub, group }: { label: string; sub: string; group: G
             <tr>
               <th className="px-4 py-3 text-left">두음</th>
               <th className="px-4 py-3 text-left">키워드</th>
-              <th className="px-4 py-3 text-left">설명</th>
+              {!hideDesc && <th className="px-4 py-3 text-left">설명</th>}
             </tr>
           </thead>
           <tbody>
@@ -315,7 +325,9 @@ function GroupCard({ label, sub, group }: { label: string; sub: string; group: G
                   {it.initial}
                 </td>
                 <td className="px-4 py-3 font-medium text-slate-900">{it.term}</td>
-                <td className="px-4 py-3 text-slate-600">{it.desc}</td>
+                {!hideDesc && (
+                  <td className="px-4 py-3 text-slate-600">{it.desc}</td>
+                )}
               </tr>
             ))}
           </tbody>
@@ -360,7 +372,12 @@ function GroupCard({ label, sub, group }: { label: string; sub: string; group: G
 function Learn({ set, onNext }: { set: MnemonicSet; onNext: () => void }) {
   return (
     <div className="space-y-6">
-      <GroupCard label="📌 서론(정의) 두음" sub="I단락 정의에 쓸 키워드" group={set.intro} />
+      <GroupCard
+        label="📌 서론(정의) 두음"
+        sub="I단락 정의에 쓸 키워드"
+        group={set.intro}
+        hideDesc
+      />
       <GroupCard label="📝 본론(2단락+) 두음" sub="구성요소·특징·절차 등" group={set.body} />
       <Button onClick={onNext}>외웠어요 → 객관식으로 주입</Button>
     </div>

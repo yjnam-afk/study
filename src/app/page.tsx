@@ -6,7 +6,7 @@ import topics from "@/data/topics.json";
 import { ReviewItem, loadReview, getItem, isDue } from "@/lib/storage";
 import { QuizStats, loadStats, loadNotes } from "@/lib/notes";
 import { loadSession } from "@/lib/auth";
-import { CoachPlan, buildPlan, mnemonicLink } from "@/lib/coach";
+import { CoachPlan, buildPlan, mnemonicLink, explainLink } from "@/lib/coach";
 import ShareButton from "@/components/ShareButton";
 import {
   PlanTopic,
@@ -334,6 +334,12 @@ export default function Home() {
                       className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
                     >
                       🥷 학습
+                    </Link>
+                    <Link
+                      href={explainLink(t)}
+                      className="shrink-0 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-100"
+                    >
+                      💡 설명
                     </Link>
                   </li>
                 );
