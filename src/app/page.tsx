@@ -6,12 +6,7 @@ import topics from "@/data/topics.json";
 import { ReviewItem, loadReview, getItem, isDue } from "@/lib/storage";
 import { QuizStats, loadStats, loadNotes } from "@/lib/notes";
 import { loadSession } from "@/lib/auth";
-import {
-  CoachPlan,
-  buildPlan,
-  mnemonicLink,
-  explainLink,
-} from "@/lib/coach";
+import { CoachPlan, buildPlan, mnemonicLink } from "@/lib/coach";
 import ShareButton from "@/components/ShareButton";
 import {
   PlanTopic,
@@ -174,7 +169,13 @@ export default function Home() {
       setReview(rev);
       setStats(st);
       setNotesCount(notes.length);
-      setPlan(buildPlan(rev, notes, st));
+      // 오늘의 데일리 계획 토픽을 코치에 넘겨 "오늘의 학습"을 "오늘의 토픽"과 동일하게 맞춘다.
+      const ti = todayIndex();
+      const planToday =
+        ti >= 0 && ti < PLAN_TOTAL_DAYS
+          ? effectiveTopicsForDay(orderedTopics(), ti, getPerDay(), loadOverrides())
+          : undefined;
+      setPlan(buildPlan(rev, notes, st, Date.now(), planToday));
       setUserName(loadSession()?.name || "");
     };
     refresh();
@@ -393,44 +394,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-
-          {plan.newTopics.length > 0 && (
-            <div className="mt-4 border-t border-slate-100 pt-4">
-              <div className="mb-2 text-xs font-medium text-slate-500">
-                🆕 오늘 새로 시작하면 좋은 토픽 (탭 한 번이면 바로 학습)
-              </div>
-              <div className="space-y-2">
-                {plan.newTopics.map((t) => (
-                  <div
-                    key={t.id}
-                    className="flex items-center gap-2 rounded-lg border border-slate-100 bg-slate-50 p-2"
-                  >
-                    <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
-                      {t.importance}
-                    </span>
-                    <span className="min-w-0 flex-1 truncate text-sm text-slate-700">
-                      {t.title}
-                    </span>
-                    <span className="hidden text-[10px] text-slate-400 sm:inline">
-                      {t.category}
-                    </span>
-                    <Link
-                      href={mnemonicLink(t, true)}
-                      className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
-                    >
-                      🥷 암기
-                    </Link>
-                    <Link
-                      href={explainLink(t, true)}
-                      className="shrink-0 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-100"
-                    >
-                      💡 설명
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       )}
 

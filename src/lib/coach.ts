@@ -41,7 +41,7 @@ export type CoachPlan = {
   goal: { done: number; target: number };
 };
 
-const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
+const IMP_ORDER: Record<string, number> = { 상: 0, 출제예상: 1, 중: 2, 하: 3 };
 
 /** 토픽을 두음신공에 바로 연결해서 여는 링크. auto=true면 도착 즉시 생성. */
 export function mnemonicLink(
@@ -80,22 +80,28 @@ export function buildPlan(
   notes: WrongNote[],
   stats: QuizStats,
   now: number = Date.now(),
+  /** 오늘의 데일리 계획 토픽 — 주어지면 "오늘의 학습"이 이 토픽들과 동일해진다. */
+  todayPlanTopics?: TopicLite[],
 ): CoachPlan {
   const all = topics as TopicLite[];
   const due = dueNotes(notes);
 
   // 회독 복습 대상(오늘 지난 것)
   const reviewDue = all.filter((t) => isDue(getItem(review, t.id)));
-  // 아직 한 번도 시작 안 한(rounds 0) 중요도 상 토픽 — 새로 시작 추천
-  const untouched = all.filter((t) => getItem(review, t.id).rounds === 0);
-  const newPicks = untouched
-    .slice()
-    .sort(
-      (a, b) =>
-        (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9) ||
-        a.category.localeCompare(b.category),
-    )
-    .slice(0, 3);
+  // 새로 시작 추천 토픽 — 데일리 계획이 있으면 그 토픽과 "동일"하게 맞춘다.
+  // (계획이 없을 때만) 아직 시작 안 한 중요도 상 토픽을 자동 추천.
+  const newPicks =
+    todayPlanTopics && todayPlanTopics.length
+      ? todayPlanTopics
+      : all
+          .filter((t) => getItem(review, t.id).rounds === 0)
+          .slice()
+          .sort(
+            (a, b) =>
+              (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9) ||
+              a.category.localeCompare(b.category),
+          )
+          .slice(0, 3);
 
   // 분야별 완료율 → 가장 뒤처진 분야
   const cats = Array.from(new Set(all.map((t) => t.category)));

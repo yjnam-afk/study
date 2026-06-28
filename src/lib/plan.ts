@@ -75,10 +75,11 @@ export function saveDone(s: Set<string>) {
     localStorage.setItem(DONE_KEY, JSON.stringify([...s]));
 }
 
-/** 중요도 우선 + 도메인 라운드로빈(매일 다양한 분야). */
+/** 중요도 우선 + 도메인 라운드로빈(매일 다양한 분야).
+ * 시험 적중 우선: 상 → 출제예상 → 중 → 하 순으로 앞에 배치한다. */
 export function orderedTopics(): PlanTopic[] {
   const all = topics as PlanTopic[];
-  const tiers = ["상", "중", "출제예상", "하"];
+  const tiers = ["상", "출제예상", "중", "하"];
   const out: PlanTopic[] = [];
   for (const tier of tiers) {
     const inTier = all.filter((t) => t.importance === tier);
@@ -154,11 +155,34 @@ export function finishForecast(perDay: number): {
   finishDate: Date;
   withinPlan: boolean;
   requiredPerDay: number;
+  /** 시험 적중 핵심(상+출제예상) 토픽 수 */
+  coreCount: number;
+  /** 핵심만 8/31까지 끝내는 데 필요한 하루 토픽 수 */
+  coreRequiredPerDay: number;
+  /** 현재 속도로 핵심을 끝내는 날짜 */
+  coreFinishDate: Date;
 } {
-  const total = totalTopicCount();
+  const all = topics as PlanTopic[];
+  const total = all.length;
+  const coreCount = all.filter(
+    (t) => t.importance === "상" || t.importance === "출제예상",
+  ).length;
   const needDays = Math.ceil(total / Math.max(1, perDay));
   const finishDate = dateOfDay(needDays - 1);
   const withinPlan = needDays <= PLAN_TOTAL_DAYS;
   const requiredPerDay = Math.ceil(total / PLAN_TOTAL_DAYS);
-  return { total, needDays, finishDate, withinPlan, requiredPerDay };
+  const coreRequiredPerDay = Math.ceil(coreCount / PLAN_TOTAL_DAYS);
+  const coreFinishDate = dateOfDay(
+    Math.ceil(coreCount / Math.max(1, perDay)) - 1,
+  );
+  return {
+    total,
+    needDays,
+    finishDate,
+    withinPlan,
+    requiredPerDay,
+    coreCount,
+    coreRequiredPerDay,
+    coreFinishDate,
+  };
 }
