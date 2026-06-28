@@ -66,6 +66,8 @@ export default function CommutePage() {
     if (!card) return "";
     const init = card.keywords.map((k) => k.trim().charAt(0)).join("");
     const stored = (card.mnemonic || "").replace(/\s/g, "");
+    // 키워드가 없으면(매핑 불가) 저장 두음을 그대로, 있으면 글자수 일치 시 그대로.
+    if (card.keywords.length === 0) return card.mnemonic || "";
     return stored && [...stored].length === card.keywords.length
       ? card.mnemonic
       : init;
