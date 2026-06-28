@@ -413,31 +413,40 @@ export default function AnswerPage() {
   );
 }
 
-/** 답안 작성 방법론(ITPE 작성론) 치트시트 — 교시별 구조와 핵심 원칙. */
+/** 답안 작성 방법론(ITPE 강정배 작성론 원문 기준) 치트시트 — 교시별 구조와 핵심 원칙. */
 function MethodGuide({ period }: { period: Period }) {
-  const struct1 = [
-    ["I. 개요", "정의 2줄(조사 뺀 키워드 나열) + 특징·등장배경"],
+  const struct1: [string, string][] = [
     [
-      "II. 개념도·구성요소 (일도일표)",
-      "Mermaid 개념도(~6줄) + 3열표(구분|항목|설명), 개념도 노드=표 행 1:1, 나열 항목은 두음신공",
+      "I. 서론 (I 단독 또는 가·나)",
+      "정의 2줄(키워드 나열·밑줄·\"\", 문장 금지) + 특징/등장배경. '개요·개념'이라 쓰지 말 것. 리드문 18자. 서론 4타입: ①정의만 ②정의+특징 ③정의+특징(표) ④정의+특징(그림)",
     ],
-    ["III. 활용·비교·고려", "수직 심화/수평 연계/비교표/사례 + 차별화(+α)"],
+    [
+      "II. 본론 — 일도일표",
+      "가. 개념도(구성도·아키텍처, 5~7줄/평균 6줄) + 나. 3단표(2:2:6 비율, 구성요소·기술요소·절차). 개념도 노드 = 표 행 1:1",
+    ],
+    [
+      "III. 결론 (7점 단락)",
+      "수직 확장(T자)·수평 연계(I자) 또는 비교표로 차별화(3~4줄), 활용 사례/분야",
+    ],
   ];
-  const struct2 = [
+  const struct2: [string, string][] = [
     [
-      "I. 서론 (0.5P)",
-      "6타입 중 택1: ①1교시 상속 ②도식 ③Why(중요성) ④로드맵 개념도 ⑤병렬 나열 ⑥발전단계",
+      "I. 서론 (0.5P) — 도입부 6타입",
+      "①1교시 상속·확장(정의2줄→5~6줄+특징표) ②정의+특징(그림/도식) ③Why 관점(중요성·필요성, 억지정의 금지·보안) ④로드맵(가·나·다를 한 그림, Top-down 6~7줄) ⑤병렬식(답 있는 다항문제) ⑥발전단계(순서·절차)",
     ],
-    ["II. 본론1", "물어본 가·나·다 지문 그대로 목차화 + 일도일표"],
-    ["III. 본론2 (승부처)", "동작원리·단계·비교표 — 물어본 내용 충실히"],
-    ["IV. 결론 (+α)", "고려사항·최신동향·실무사례·타토픽 응용(17점 알파)"],
+    ["II. 본론1 (1P)", "질문 요구사항, 없으면 구성도+구성요소/기술요소(1교시와 동일)"],
+    [
+      "III. 본론2 (1P · 승부처)",
+      "물어본 것이 안 물어본 것보다 많아야 함. 동작원리·단계·비교표 (15점)",
+    ],
+    ["IV. 결론 (+α, 0.3~0.5P)", "차별화 알파 — 특강·신문·타토픽 응용·경험 사례 (17점)"],
   ];
   const rows = period === "1교시" ? struct1 : struct2;
 
   return (
     <details className="mb-5 rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
       <summary className="cursor-pointer text-sm font-bold text-indigo-800">
-        📐 답안 작성 방법론 ({period} 구조 · 작성론 핵심) — 펼쳐보기
+        📐 답안 작성 방법론 ({period} · ITPE 강정배 작성론 원문 기준) — 펼쳐보기
       </summary>
       <div className="mt-3 space-y-2">
         {rows.map(([h, b]) => (
@@ -449,24 +458,38 @@ function MethodGuide({ period }: { period: Period }) {
           </div>
         ))}
       </div>
+
       <div className="mt-3 rounded-lg bg-white p-3">
         <div className="mb-1 text-xs font-bold text-slate-700">
-          ✅ 공통 원칙 (감점 방지)
+          📏 분량·시간
+        </div>
+        <p className="text-xs leading-relaxed text-slate-600">
+          {period === "1교시"
+            ? "13개 중 10개 선택 · 1문제 10분(100분) · 기본 1.2P, 최대 1.4P · 2단락/1P 전략은 6점에 그침"
+            : "4문제 25분씩 · 문제당 3~3.5P(총 12~14P) · 단락별 1줄 띄움(2교시만), 문제당 2줄 띄움"}
+        </p>
+      </div>
+
+      <div className="mt-3 rounded-lg bg-white p-3">
+        <div className="mb-1 text-xs font-bold text-slate-700">
+          ✅ 공통 원칙 (1·2교시 동일)
         </div>
         <ul className="list-disc space-y-0.5 pl-4 text-xs leading-relaxed text-slate-600">
-          <li>맨 위 리드문: &ldquo;문 N) 토픽 Full Name&rdquo; 1줄(요구사항 누락 금지)</li>
+          <li>리드문: &ldquo;문 N) 토픽 Full Name&rdquo; (2교시는 물어본 것 요약, 누락 금지)</li>
           <li>
-            목차 = 지문 그대로(물어본 가·나·다를 제목에 노출), 핵심 키워드{" "}
-            <b>굵게</b>, 약어 풀어쓰기
+            정의 = 키워드 나열(밑줄·&ldquo;&rdquo; 강조), <b>문장·주저리 금지</b>, 명사형. 시험 전 키워드 3개 미리 도출
           </li>
+          <li>목차 = 지문 그대로(물어본 text 그대로, 순서 주의), 키워드 <b>굵게</b>·3회 노출</li>
+          <li>일도일표 = 개념도(6줄) + 3단표(2:2:6), 노드=행 1:1, 표는 점 대신 &ldquo;–&rdquo;로 줄 구분</li>
           <li>
-            정의 = 조사·서술어 빼고 키워드 나열 2줄, 끝은 명사형 범주어
+            <b>찐소설은 표의 3열(설명)</b> — 키워드는 1·2열, 설명에서 점수가 갈림
           </li>
-          <li>일도일표 = 개념도(약 6줄) + 3열표, 노드와 표 행 1:1 일치</li>
-          <li>
-            <b>찐소설은 표의 3열(설명)</b> — 키워드 암기는 1·2열, 설명에서 점수가
-            갈림
-          </li>
+          {period === "1교시" && (
+            <li className="font-medium text-rose-600">
+              1교시는 <b>사실 중심</b> — 추상적 기대효과·고려사항·답 없는 간글 지양
+            </li>
+          )}
+          <li>물어본 것으로만 작성 — &lsquo;상위&rsquo;·&lsquo;옆&rsquo;으로 가지 말 것(방어 제외)</li>
         </ul>
       </div>
     </details>
