@@ -19,6 +19,31 @@ export const PLAN_TOTAL_DAYS =
 
 const PERDAY_KEY = "info-pe-plan-perday-v1";
 const DONE_KEY = "info-pe-plan-done-v1";
+const OVERRIDE_KEY = "info-pe-plan-overrides-v1";
+
+const BY_ID: Record<string, PlanTopic> = {};
+for (const t of topics as PlanTopic[]) BY_ID[t.id] = t;
+
+export function topicById(id: string): PlanTopic | undefined {
+  return BY_ID[id];
+}
+
+/** 날짜별 직접 편집(검수) 내용. { "YYYY-MM-DD": [topicId, ...] } — 있으면 그 날은 이 목록을 사용. */
+export type Overrides = Record<string, string[]>;
+
+export function loadOverrides(): Overrides {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(OVERRIDE_KEY);
+    return raw ? (JSON.parse(raw) as Overrides) : {};
+  } catch {
+    return {};
+  }
+}
+export function saveOverrides(o: Overrides) {
+  if (typeof window !== "undefined")
+    localStorage.setItem(OVERRIDE_KEY, JSON.stringify(o));
+}
 
 export function ymd(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
@@ -95,7 +120,45 @@ export function topicsForDay(
   return ordered.slice(idx * perDay, idx * perDay + perDay);
 }
 
+/** 편집(오버라이드) 반영된 그 날의 토픽. 오버라이드 있으면 그것을, 없으면 자동 배정. */
+export function effectiveTopicsForDay(
+  ordered: PlanTopic[],
+  idx: number,
+  perDay: number,
+  overrides: Overrides,
+): PlanTopic[] {
+  if (idx < 0) return [];
+  const key = ymd(dateOfDay(idx));
+  const ov = overrides[key];
+  if (ov) return ov.map((id) => BY_ID[id]).filter(Boolean);
+  return topicsForDay(ordered, idx, perDay);
+}
+
 /** 계획이 토픽을 모두 소진하는 마지막 날 수. */
 export function coveredDays(ordered: PlanTopic[], perDay: number): number {
   return Math.min(PLAN_TOTAL_DAYS, Math.ceil(ordered.length / perDay));
+}
+
+/** 전체 토픽 수. */
+export function totalTopicCount(): number {
+  return (topics as PlanTopic[]).length;
+}
+
+/**
+ * 완주 예측. perDay 속도로 전체 토픽을 끝내는 데 며칠/언제까지 걸리는지,
+ * 8/31(기간 내)에 끝나는지 + 기간 내 완주에 필요한 하루 토픽 수를 계산한다.
+ */
+export function finishForecast(perDay: number): {
+  total: number;
+  needDays: number;
+  finishDate: Date;
+  withinPlan: boolean;
+  requiredPerDay: number;
+} {
+  const total = totalTopicCount();
+  const needDays = Math.ceil(total / Math.max(1, perDay));
+  const finishDate = dateOfDay(needDays - 1);
+  const withinPlan = needDays <= PLAN_TOTAL_DAYS;
+  const requiredPerDay = Math.ceil(total / PLAN_TOTAL_DAYS);
+  return { total, needDays, finishDate, withinPlan, requiredPerDay };
 }

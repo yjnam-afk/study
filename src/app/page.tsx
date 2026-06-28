@@ -17,12 +17,13 @@ import {
   PlanTopic,
   orderedTopics,
   todayIndex,
-  topicsForDay,
+  effectiveTopicsForDay,
   getPerDay,
   dateOfDay,
   ymd,
   loadDone,
   saveDone,
+  loadOverrides,
   PLAN_TOTAL_DAYS,
 } from "@/lib/plan";
 
@@ -149,7 +150,9 @@ export default function Home() {
     const ti = todayIndex();
     setDayIdx(ti);
     if (ti >= 0 && ti < PLAN_TOTAL_DAYS) {
-      setTodayTopics(topicsForDay(orderedTopics(), ti, getPerDay()));
+      setTodayTopics(
+        effectiveTopicsForDay(orderedTopics(), ti, getPerDay(), loadOverrides()),
+      );
       setTodayDone(loadDone().has(ymd(dateOfDay(ti))));
     }
   }, []);
