@@ -46,6 +46,7 @@ export default function MnemonicPage() {
   const [subnote, setSubnote] = useState<{
     mnemonic: string;
     keywords: string[];
+    sections?: { label: string; mnemonic: string; keywords: string[] }[];
   } | null>(null);
   const [step, setStep] = useState<Step>("learn");
   const [autoPending, setAutoPending] = useState(false);
@@ -215,6 +216,7 @@ export default function MnemonicPage() {
                 fromSubnote={Boolean(
                   subnote && (subnote.mnemonic || subnote.keywords.length > 0),
                 )}
+                sections={subnote?.sections || []}
                 onNext={() => setStep("inject")}
               />
             )}
@@ -348,12 +350,15 @@ function GroupCard({
 function Learn({
   set,
   fromSubnote,
+  sections,
   onNext,
 }: {
   set: MnemonicSet;
   fromSubnote?: boolean;
+  sections?: { label: string; mnemonic: string; keywords: string[] }[];
   onNext: () => void;
 }) {
+  const hasSections = (sections || []).length > 0;
   return (
     <div className="space-y-6">
       <GroupCard
@@ -362,13 +367,63 @@ function Learn({
         group={set.intro}
         hideDesc
       />
-      <GroupCard
-        label="📝 본론(2단락+) 두음"
-        sub="답안 II. 본론 구성요소·설명(3열)"
-        group={set.body}
-        originBadge={fromSubnote}
-      />
+      {hasSections ? (
+        // 교재에 섹션별 두음(특징·기술요소·분류 등)이 있으면 각각 별도 카드로.
+        <div className="space-y-3">
+          <div className="flex items-center gap-2">
+            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-300">
+              📒 교재 원본 두음
+            </span>
+            <span className="text-xs text-slate-500">
+              본론(2단락+) — 섹션마다 두음이 따로예요
+            </span>
+          </div>
+          {sections!.map((s, i) => (
+            <SectionCard key={i} section={s} />
+          ))}
+        </div>
+      ) : (
+        <GroupCard
+          label="📝 본론(2단락+) 두음"
+          sub="답안 II. 본론 구성요소·설명(3열)"
+          group={set.body}
+          originBadge={fromSubnote}
+        />
+      )}
       <Button onClick={onNext}>외웠어요 → 객관식으로 주입</Button>
+    </div>
+  );
+}
+
+/** 교재 원본의 한 섹션(특징/기술요소/분류 등) 두음 카드 — 두음 ↔ 키워드 매핑. */
+function SectionCard({
+  section,
+}: {
+  section: { label: string; mnemonic: string; keywords: string[] };
+}) {
+  // 두음이 키워드 수와 맞으면 글자별로 매핑, 아니면 두음 문자열만 표시.
+  const letters = [...(section.mnemonic || "").replace(/\s/g, "")];
+  const aligned = letters.length === section.keywords.length;
+  return (
+    <div className="overflow-hidden rounded-2xl border border-emerald-200 bg-white shadow-sm">
+      <div className="flex items-center justify-between bg-emerald-50 px-4 py-2">
+        <span className="text-xs font-bold text-emerald-800">
+          📝 {section.label}
+        </span>
+        <span className="text-lg font-extrabold tracking-wide text-emerald-700">
+          {section.mnemonic}
+        </span>
+      </div>
+      <ul className="divide-y divide-slate-100">
+        {section.keywords.map((k, i) => (
+          <li key={i} className="flex items-center gap-3 px-4 py-2 text-sm">
+            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-emerald-100 text-xs font-extrabold text-emerald-700">
+              {aligned ? letters[i] : i + 1}
+            </span>
+            <span className="text-slate-800">{k}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

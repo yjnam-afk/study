@@ -5,6 +5,11 @@
 import topics from "@/data/topics.json";
 import topicDetails from "@/data/topicDetails.json";
 
+export type SubnoteSection = {
+  label: string;
+  mnemonic: string;
+  keywords: string[];
+};
 type Detail = {
   detail?: string;
   defKeywords?: string[];
@@ -15,6 +20,8 @@ type Detail = {
   mnemonic?: string;
   /** 검증된 관계형 개념도(mermaid). 있으면 이 구조를 그대로 그리도록 지시. */
   conceptMap?: string;
+  /** 교재 원본의 섹션별 두음(특징·기술요소·분류 등 각각 별도 두음). */
+  sections?: SubnoteSection[];
 };
 const DETAILS = topicDetails as Record<string, Detail>;
 
@@ -22,10 +29,11 @@ const DETAILS = topicDetails as Record<string, Detail>;
 export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
   mnemonic: string;
   keywords: string[];
+  sections: SubnoteSection[];
 } {
   const id = opts.topicId || findIdByTitle(opts.topicTitle);
   const d = id ? DETAILS[id] : undefined;
-  if (!d) return { mnemonic: "", keywords: [] };
+  if (!d) return { mnemonic: "", keywords: [], sections: [] };
   const keywords = Array.from(
     new Set([
       ...(d.defKeywords || []),
@@ -34,7 +42,11 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
       ...(d.plusKeywords || []),
     ]),
   );
-  return { mnemonic: (d.mnemonic || "").trim(), keywords };
+  return {
+    mnemonic: (d.mnemonic || "").trim(),
+    keywords,
+    sections: Array.isArray(d.sections) ? d.sections : [],
+  };
 }
 
 /** 제목으로 토픽 id를 찾는다(직접 타이핑해도 데이터 연결되도록). */
