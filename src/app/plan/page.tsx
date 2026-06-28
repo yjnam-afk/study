@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
-import { mnemonicLink } from "@/lib/coach";
+import { mnemonicLink, explainLink } from "@/lib/coach";
 import topics from "@/data/topics.json";
 import {
   PlanTopic,
@@ -385,12 +385,20 @@ function DayDetail({
                   ✕
                 </button>
               ) : (
-                <Link
-                  href={mnemonicLink(t, true)}
-                  className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
-                >
-                  🥷 학습
-                </Link>
+                <>
+                  <Link
+                    href={mnemonicLink(t, true)}
+                    className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                  >
+                    🥷 학습
+                  </Link>
+                  <Link
+                    href={explainLink(t)}
+                    className="shrink-0 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-600 hover:bg-slate-100"
+                  >
+                    💡 설명
+                  </Link>
+                </>
               )}
             </li>
           );
