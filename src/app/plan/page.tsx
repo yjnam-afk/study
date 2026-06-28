@@ -12,8 +12,10 @@ import {
   ymd,
   getPerDay,
   setPerDay as persistPerDay,
-  loadDone,
-  saveDone,
+  loadTopicDone,
+  saveTopicDone,
+  isDayComplete,
+  dayDoneCount,
   orderedTopics,
   dateOfDay,
   todayIndex,
@@ -33,12 +35,12 @@ const IMP_ORDER: Record<string, number> = { 상: 0, 출제예상: 1, 중: 2, 하
 export default function PlanPage() {
   const [perDay, setPerDay] = useState(10);
   const [selected, setSelected] = useState<number>(-1);
-  const [done, setDone] = useState<Set<string>>(new Set());
+  const [topicDone, setTopicDone] = useState<Set<string>>(new Set());
   const [overrides, setOverrides] = useState<Overrides>({});
 
   useEffect(() => {
     setPerDay(getPerDay());
-    setDone(loadDone());
+    setTopicDone(loadTopicDone());
     setOverrides(loadOverrides());
     const ti = todayIndex();
     setSelected(ti >= 0 && ti < PLAN_TOTAL_DAYS ? ti : 0);
@@ -48,16 +50,22 @@ export default function PlanPage() {
   const covered = coveredDays(ordered, perDay);
   const forecast = finishForecast(perDay);
 
+  // 모든 토픽을 체크한 '완료된 날' 수
+  let completedDays = 0;
+  for (let i = 0; i < covered; i++) {
+    if (isDayComplete(effectiveTopicsForDay(ordered, i, perDay, overrides), topicDone))
+      completedDays++;
+  }
+
   function changePerDay(n: number) {
     setPerDay(n);
     persistPerDay(n);
   }
-  function toggleDone(idx: number) {
-    const key = ymd(dateOfDay(idx));
-    const next = new Set(done);
-    next.has(key) ? next.delete(key) : next.add(key);
-    setDone(next);
-    saveDone(next);
+  function toggleTopic(id: string) {
+    const next = new Set(topicDone);
+    next.has(id) ? next.delete(id) : next.add(id);
+    setTopicDone(next);
+    saveTopicDone(next);
   }
   function updateDay(idx: number, ids: string[] | null) {
     const key = ymd(dateOfDay(idx));
@@ -101,7 +109,7 @@ export default function PlanPage() {
             ))}
           </select>
           <span className="ml-auto text-xs text-slate-400">
-            전체 {forecast.total}토픽 · {PLAN_TOTAL_DAYS}일 · 완료 {done.size}일
+            전체 {forecast.total}토픽 · {PLAN_TOTAL_DAYS}일 · 완료 {completedDays}일
           </span>
         </div>
 
@@ -183,19 +191,21 @@ export default function PlanPage() {
                   const inRange = idx >= 0 && idx < covered;
                   const key = ymd(d);
                   const isToday = key === todayKey;
-                  const isDone = done.has(key);
+                  const list = inRange ? dayList(idx) : [];
+                  const doneN = inRange ? dayDoneCount(list, topicDone) : 0;
+                  const isDone = inRange && isDayComplete(list, topicDone);
                   return (
                     <button
                       key={i}
                       disabled={!inRange}
                       onClick={() => setSelected(idx)}
-                      className={`aspect-square rounded-lg border p-1 text-left transition ${
+                      className={`relative aspect-square rounded-lg border p-1 text-left transition ${
                         !inRange
                           ? "border-transparent text-slate-300"
                           : selected === idx
                             ? "border-brand-500 bg-brand-50 ring-1 ring-brand-500"
                             : isDone
-                              ? "border-emerald-200 bg-emerald-50"
+                              ? "border-emerald-300 bg-emerald-50"
                               : "border-slate-200 hover:border-brand-300"
                       } ${isToday ? "font-bold" : ""}`}
                     >
@@ -205,18 +215,23 @@ export default function PlanPage() {
                         >
                           {d.getDate()}
                         </span>
-                        {isDone && (
-                          <span className="text-[9px] text-emerald-600">✓</span>
+                        {overrides[key] && (
+                          <span className="text-[9px] text-amber-500">✎</span>
                         )}
                       </div>
-                      {inRange && (
-                        <div className="mt-0.5 text-[9px] leading-tight text-slate-400">
-                          {dayList(idx).length}토픽
-                          {overrides[key] && (
-                            <span className="text-amber-500"> ✎</span>
-                          )}
-                        </div>
-                      )}
+                      {inRange &&
+                        (isDone ? (
+                          <div className="mt-0.5 flex flex-col items-center leading-none">
+                            <span className="text-base">🌟</span>
+                            <span className="text-[8px] font-bold text-rose-500">
+                              참잘했어요
+                            </span>
+                          </div>
+                        ) : (
+                          <div className="mt-0.5 text-[9px] leading-tight text-slate-400">
+                            {doneN > 0 ? `${doneN}/${list.length}` : `${list.length}토픽`}
+                          </div>
+                        ))}
                     </button>
                   );
                 })}
@@ -231,9 +246,9 @@ export default function PlanPage() {
           idx={selected}
           date={dateOfDay(selected)}
           list={dayList(selected)}
-          done={done.has(ymd(dateOfDay(selected)))}
+          topicDone={topicDone}
+          onToggleTopic={toggleTopic}
           edited={Boolean(overrides[ymd(dateOfDay(selected))])}
-          onToggle={() => toggleDone(selected)}
           onRemove={(id) =>
             updateDay(
               selected,
@@ -257,9 +272,9 @@ function DayDetail({
   idx,
   date,
   list,
-  done,
+  topicDone,
   edited,
-  onToggle,
+  onToggleTopic,
   onRemove,
   onAdd,
   onReset,
@@ -267,9 +282,9 @@ function DayDetail({
   idx: number;
   date: Date;
   list: PlanTopic[];
-  done: boolean;
+  topicDone: Set<string>;
   edited: boolean;
-  onToggle: () => void;
+  onToggleTopic: (id: string) => void;
   onRemove: (id: string) => void;
   onAdd: (id: string) => void;
   onReset: () => void;
@@ -282,6 +297,9 @@ function DayDetail({
     .filter((t) => t.category === cat && !list.some((x) => x.id === t.id))
     .sort((a, b) => (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9));
 
+  const doneN = dayDoneCount(list, topicDone);
+  const allDone = isDayComplete(list, topicDone);
+
   return (
     <div className="mt-6 rounded-2xl border border-brand-200 bg-white p-5 shadow-sm">
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -291,7 +309,10 @@ function DayDetail({
           {idx + 1}
           {edited && <span className="ml-1 text-amber-500">✎ 수정됨</span>}
         </h3>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-semibold text-slate-500">
+            {doneN}/{list.length} 완료
+          </span>
           <button
             onClick={() => setEditing((v) => !v)}
             className={`rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
@@ -302,55 +323,78 @@ function DayDetail({
           >
             {editing ? "검수 완료" : "✎ 검수·수정"}
           </button>
-          <button
-            onClick={onToggle}
-            className={`rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${
-              done
-                ? "border-emerald-300 bg-emerald-50 text-emerald-700"
-                : "border-slate-300 bg-white text-slate-600 hover:bg-slate-50"
-            }`}
-          >
-            {done ? "✓ 완료함" : "완료 체크"}
-          </button>
         </div>
       </div>
 
+      {allDone && (
+        <div className="mb-3 flex items-center gap-2 rounded-xl border border-rose-200 bg-rose-50 p-3">
+          <span className="text-2xl">🌟</span>
+          <span className="text-sm font-bold text-rose-600">
+            참 잘했어요! 오늘 토픽을 모두 끝냈어요.
+          </span>
+        </div>
+      )}
+
       <ol className="space-y-2">
-        {list.map((t, i) => (
-          <li
-            key={t.id}
-            className="flex items-center gap-2 rounded-lg border border-slate-100 bg-slate-50 p-2"
-          >
-            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white text-[11px] font-bold text-slate-500">
-              {i + 1}
-            </span>
-            <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
-              {t.importance}
-            </span>
-            <span className="min-w-0 flex-1 truncate text-sm text-slate-800">
-              {t.title}
-            </span>
-            <span className="hidden text-[10px] text-slate-400 sm:inline">
-              {t.category}
-            </span>
-            {editing ? (
-              <button
-                onClick={() => onRemove(t.id)}
-                className="shrink-0 rounded-md border border-rose-200 bg-white px-2 py-1 text-xs font-bold text-rose-500 hover:bg-rose-50"
-                aria-label="제거"
+        {list.map((t, i) => {
+          const checked = topicDone.has(t.id);
+          return (
+            <li
+              key={t.id}
+              className={`flex items-center gap-2 rounded-lg border p-2 ${
+                checked
+                  ? "border-emerald-200 bg-emerald-50"
+                  : "border-slate-100 bg-slate-50"
+              }`}
+            >
+              {!editing && (
+                <button
+                  onClick={() => onToggleTopic(t.id)}
+                  aria-label="완료"
+                  className={`grid h-6 w-6 shrink-0 place-items-center rounded-md border text-xs font-bold transition ${
+                    checked
+                      ? "border-emerald-400 bg-emerald-500 text-white"
+                      : "border-slate-300 bg-white text-transparent hover:border-emerald-400"
+                  }`}
+                >
+                  ✓
+                </button>
+              )}
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white text-[11px] font-bold text-slate-500">
+                {i + 1}
+              </span>
+              <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+                {t.importance}
+              </span>
+              <span
+                className={`min-w-0 flex-1 truncate text-sm ${
+                  checked ? "text-slate-400 line-through" : "text-slate-800"
+                }`}
               >
-                ✕
-              </button>
-            ) : (
-              <Link
-                href={mnemonicLink(t, true)}
-                className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
-              >
-                🥷 학습
-              </Link>
-            )}
-          </li>
-        ))}
+                {t.title}
+              </span>
+              <span className="hidden text-[10px] text-slate-400 sm:inline">
+                {t.category}
+              </span>
+              {editing ? (
+                <button
+                  onClick={() => onRemove(t.id)}
+                  className="shrink-0 rounded-md border border-rose-200 bg-white px-2 py-1 text-xs font-bold text-rose-500 hover:bg-rose-50"
+                  aria-label="제거"
+                >
+                  ✕
+                </button>
+              ) : (
+                <Link
+                  href={mnemonicLink(t, true)}
+                  className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                >
+                  🥷 학습
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ol>
 
       {editing ? (
