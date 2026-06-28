@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
+import ShareButton from "@/components/ShareButton";
 import { mnemonicLink, explainLink } from "@/lib/coach";
 import topics from "@/data/topics.json";
 import {
@@ -88,10 +89,18 @@ export default function PlanPage() {
 
   return (
     <div>
-      <PageHeader
-        title="🗓️ 데일리 학습 계획"
-        desc="내일(6/29)부터 8월 말까지, 매일 스파르타 소설클럽이 토픽을 배정합니다."
-      />
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <PageHeader
+          title="🗓️ 데일리 학습 계획"
+          desc="내일(6/29)부터 8월 말까지, 매일 스파르타 소설클럽이 토픽을 배정합니다."
+        />
+        <div className="shrink-0">
+          <ShareButton
+            title="스파르타 소설클럽 — 데일리 학습 계획 같이해요!"
+            text={`🗓️ 정보관리기술사 데일리 학습 계획 (6/29~8/31)\n하루 ${perDay}개씩 · 상·출제예상 위주로 ${completedDays}일 완료!\n매일 토픽 받고 같이 공부해요 ✍️`}
+          />
+        </div>
+      </div>
 
       <div className="mb-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex flex-wrap items-center gap-3">
