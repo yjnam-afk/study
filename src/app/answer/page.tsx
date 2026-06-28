@@ -127,6 +127,8 @@ export default function AnswerPage() {
         desc="교시를 선택하고 문제를 입력하면 시험 답안지 형식으로 작성해 줍니다."
       />
 
+      <MethodGuide period={period} />
+
       <div className="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         {/* STEP 1 — 교시 */}
         <section>
@@ -408,6 +410,66 @@ export default function AnswerPage() {
         )}
       </div>
     </div>
+  );
+}
+
+/** 답안 작성 방법론(ITPE 작성론) 치트시트 — 교시별 구조와 핵심 원칙. */
+function MethodGuide({ period }: { period: Period }) {
+  const struct1 = [
+    ["I. 개요", "정의 2줄(조사 뺀 키워드 나열) + 특징·등장배경"],
+    [
+      "II. 개념도·구성요소 (일도일표)",
+      "Mermaid 개념도(~6줄) + 3열표(구분|항목|설명), 개념도 노드=표 행 1:1, 나열 항목은 두음신공",
+    ],
+    ["III. 활용·비교·고려", "수직 심화/수평 연계/비교표/사례 + 차별화(+α)"],
+  ];
+  const struct2 = [
+    [
+      "I. 서론 (0.5P)",
+      "6타입 중 택1: ①1교시 상속 ②도식 ③Why(중요성) ④로드맵 개념도 ⑤병렬 나열 ⑥발전단계",
+    ],
+    ["II. 본론1", "물어본 가·나·다 지문 그대로 목차화 + 일도일표"],
+    ["III. 본론2 (승부처)", "동작원리·단계·비교표 — 물어본 내용 충실히"],
+    ["IV. 결론 (+α)", "고려사항·최신동향·실무사례·타토픽 응용(17점 알파)"],
+  ];
+  const rows = period === "1교시" ? struct1 : struct2;
+
+  return (
+    <details className="mb-5 rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
+      <summary className="cursor-pointer text-sm font-bold text-indigo-800">
+        📐 답안 작성 방법론 ({period} 구조 · 작성론 핵심) — 펼쳐보기
+      </summary>
+      <div className="mt-3 space-y-2">
+        {rows.map(([h, b]) => (
+          <div key={h} className="rounded-lg bg-white p-3">
+            <div className="text-sm font-semibold text-indigo-700">{h}</div>
+            <div className="mt-0.5 text-xs leading-relaxed text-slate-600">
+              {b}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 rounded-lg bg-white p-3">
+        <div className="mb-1 text-xs font-bold text-slate-700">
+          ✅ 공통 원칙 (감점 방지)
+        </div>
+        <ul className="list-disc space-y-0.5 pl-4 text-xs leading-relaxed text-slate-600">
+          <li>맨 위 리드문: &ldquo;문 N) 토픽 Full Name&rdquo; 1줄(요구사항 누락 금지)</li>
+          <li>
+            목차 = 지문 그대로(물어본 가·나·다를 제목에 노출), 핵심 키워드{" "}
+            <b>굵게</b>, 약어 풀어쓰기
+          </li>
+          <li>
+            정의 = 조사·서술어 빼고 키워드 나열 2줄, 끝은 명사형 범주어
+          </li>
+          <li>일도일표 = 개념도(약 6줄) + 3열표, 노드와 표 행 1:1 일치</li>
+          <li>
+            <b>찐소설은 표의 3열(설명)</b> — 키워드 암기는 1·2열, 설명에서 점수가
+            갈림
+          </li>
+        </ul>
+      </div>
+    </details>
   );
 }
 
