@@ -10,7 +10,10 @@ type Group = {
   items: Item[];
   mnemonic: string;
   mnemonicHow: string;
-  definition?: string[];
+  /** 정의 — 한 문장(약 2줄). 구버전 호환 위해 배열도 허용. */
+  definition?: string | string[];
+  /** 정의 아래 핵심 특징 3개. */
+  features?: string[];
   table?: { col1: string; col2: string; col3: string }[];
 };
 type MC = {
@@ -319,18 +322,37 @@ function GroupCard({ label, sub, group }: { label: string; sub: string; group: G
         </table>
       </div>
 
-      {group.definition && group.definition.length > 0 && (
-        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-          <div className="mb-2 text-xs font-semibold text-emerald-700">
-            ✍️ 답안지 서론(정의) — 2줄, 키워드 열거식
+      {(() => {
+        const defText = Array.isArray(group.definition)
+          ? group.definition.filter(Boolean).join(" ")
+          : (group.definition || "").trim();
+        const feats = (group.features || []).filter(Boolean);
+        if (!defText && feats.length === 0) return null;
+        return (
+          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+            <div className="mb-2 text-xs font-semibold text-emerald-700">
+              ✍️ 답안지 서론(정의) — 키워드 나열식 한 문장(약 2줄)
+            </div>
+            {defText && (
+              <p className="font-medium leading-relaxed text-slate-800">
+                {defText}
+              </p>
+            )}
+            {feats.length > 0 && (
+              <div className="mt-3 border-t border-emerald-200 pt-3">
+                <div className="mb-1 text-xs font-semibold text-emerald-700">
+                  ⭐ 특징
+                </div>
+                <ul className="space-y-0.5 text-sm text-slate-700">
+                  {feats.map((f, i) => (
+                    <li key={i}>· {f}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          <div className="space-y-1 font-medium leading-relaxed text-slate-800">
-            {group.definition.map((line, i) => (
-              <p key={i}>- {line}</p>
-            ))}
-          </div>
-        </div>
-      )}
+        );
+      })()}
     </div>
   );
 }

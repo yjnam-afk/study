@@ -13,6 +13,8 @@ type Detail = {
   plusKeywords?: string[];
   /** 서브노트에 들어있는 원본 두음신공(있으면 LLM 생성보다 우선). */
   mnemonic?: string;
+  /** 검증된 관계형 개념도(mermaid). 있으면 이 구조를 그대로 그리도록 지시. */
+  conceptMap?: string;
 };
 const DETAILS = topicDetails as Record<string, Detail>;
 
@@ -62,6 +64,12 @@ export function groundingFrom(topicId?: string): string {
   const mnem = (d.mnemonic || "").trim();
   if (mnem) {
     parts.push(`서브노트 원본 두음신공(이것을 그대로 사용): ${mnem}`);
+  }
+  const cmap = (d.conceptMap || "").trim();
+  if (cmap) {
+    parts.push(
+      `검증된 개념도(★개념도는 아래 구조를 그대로 mermaid로 그려라★):\n${cmap}`,
+    );
   }
   return parts.join("\n");
 }
