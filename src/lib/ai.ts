@@ -92,11 +92,6 @@ function groqModels(): string[] {
  *  - 없으면 기존 AI_PROVIDER(단일, 기본 gemini) 사용.
  */
 function providerChain(): ChainEntry[] {
-  const multi = process.env.AI_PROVIDERS;
-  const tokens = multi?.trim()
-    ? multi.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
-    : [(process.env.AI_PROVIDER || "gemini").toLowerCase()];
-
   const entries: ChainEntry[] = [];
   const seen = new Set<string>();
   const add = (name: string, model?: string, maxTokens?: number) => {
@@ -105,17 +100,46 @@ function providerChain(): ChainEntry[] {
     seen.add(key);
     entries.push({ name, model, maxTokens });
   };
-
-  for (const token of tokens) {
-    const idx = token.indexOf(":");
-    const name = idx === -1 ? token : token.slice(0, idx);
-    const model = idx === -1 ? undefined : token.slice(idx + 1).trim();
+  // 제공자 1개 추가(groq는 모델 미지정 시 여러 모델로 자동 확장).
+  const addProvider = (name: string, model?: string) => {
     if (name === "groq" && !model) {
       for (const m of groqModels()) add("groq", m, groqBudget(m));
     } else {
       add(name, model, name === "groq" && model ? groqBudget(model) : undefined);
     }
+  };
+
+  // 1) 명시적으로 설정한 순서를 최우선으로 사용.
+  const multi = process.env.AI_PROVIDERS;
+  const explicit = multi?.trim()
+    ? multi.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
+    : process.env.AI_PROVIDER
+      ? [process.env.AI_PROVIDER.toLowerCase()]
+      : [];
+  for (const token of explicit) {
+    const idx = token.indexOf(":");
+    const name = idx === -1 ? token : token.slice(0, idx);
+    const model = idx === -1 ? undefined : token.slice(idx + 1).trim();
+    addProvider(name, model);
   }
+
+  // 2) (자동 폴백) 키가 설정된 모든 무료 제공자를 체인 뒤에 자동으로 덧붙인다.
+  //    → AI_PROVIDERS를 일일이 맞추지 않아도, 키만 있으면 한도 소진 시 다음 제공자로 넘어간다.
+  if (groqKeys().length) addProvider("groq"); // 여러 모델 × 여러 키 = 한도 폭 ↑
+  if (process.env.GEMINI_API_KEY) {
+    // Gemini 무료 등급은 일일 한도가 Groq보다 훨씬 커서 강력한 폴백.
+    addProvider("gemini");
+    addProvider("gemini", "gemini-2.0-flash-lite");
+  }
+  if (process.env.OPENROUTER_API_KEY) {
+    addProvider("openrouter");
+    addProvider("openrouter", "meta-llama/llama-3.3-70b-instruct:free");
+  }
+  if (process.env.ANTHROPIC_API_KEY) addProvider("anthropic"); // 최후 보루(저렴·고품질)
+  if (process.env.OLLAMA_BASE_URL) addProvider("ollama");
+
+  // 3) 아무것도 없으면 기존 기본값(gemini).
+  if (!entries.length) addProvider("gemini");
   return entries;
 }
 
