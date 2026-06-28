@@ -49,14 +49,16 @@ export function groundingFrom(topicId?: string): string {
   if (!d) return "";
   const parts: string[] = [];
   if (d.detail) parts.push(d.detail.slice(0, 900));
-  const kws = [
-    ...(d.defKeywords || []),
-    ...(d.featureKeywords || []),
-    ...(d.applicationKeywords || []),
-    ...(d.plusKeywords || []),
-  ];
-  const uniq = Array.from(new Set(kws));
-  if (uniq.length) parts.push(`핵심 키워드: ${uniq.join(", ")}`);
+  // 서론(정의)용과 본론(구성요소)용 키워드를 분리해 제시 → 서론·본론이 같아지지 않게
+  const def = Array.from(new Set(d.defKeywords || []));
+  const feat = Array.from(new Set(d.featureKeywords || []));
+  const extra = Array.from(
+    new Set([...(d.applicationKeywords || []), ...(d.plusKeywords || [])]),
+  );
+  if (def.length) parts.push(`정의(서론)용 키워드: ${def.join(", ")}`);
+  if (feat.length)
+    parts.push(`본론(구성요소·나열 항목)용 키워드: ${feat.join(", ")}`);
+  if (extra.length) parts.push(`추가/활용 키워드: ${extra.join(", ")}`);
   const mnem = (d.mnemonic || "").trim();
   if (mnem) {
     parts.push(`서브노트 원본 두음신공(이것을 그대로 사용): ${mnem}`);
