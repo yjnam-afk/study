@@ -34,6 +34,13 @@ const menuGroups = [
         color: "from-violet-500 to-purple-600",
       },
       {
+        href: "/plan",
+        emoji: "🗓️",
+        title: "데일리 계획 (달력)",
+        desc: "내일~8월 말, 매일 배정되는 토픽을 달력으로",
+        color: "from-rose-500 to-pink-600",
+      },
+      {
         href: "/commute",
         emoji: "🚇",
         title: "지하철 모드 (틈새 두음)",
