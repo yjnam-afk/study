@@ -14,10 +14,8 @@ import {
   todayIndex,
   effectiveTopicsForDay,
   getPerDay,
-  dateOfDay,
-  ymd,
-  loadDone,
-  saveDone,
+  loadTopicDone,
+  saveTopicDone,
   loadOverrides,
   PLAN_TOTAL_DAYS,
 } from "@/lib/plan";
@@ -139,7 +137,7 @@ export default function Home() {
   // 데일리 계획 — 오늘의 토픽(메인)
   const [dayIdx, setDayIdx] = useState(-1);
   const [todayTopics, setTodayTopics] = useState<PlanTopic[]>([]);
-  const [todayDone, setTodayDone] = useState(false);
+  const [topicDone, setTopicDone] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const ti = todayIndex();
@@ -148,18 +146,19 @@ export default function Home() {
       setTodayTopics(
         effectiveTopicsForDay(orderedTopics(), ti, getPerDay(), loadOverrides()),
       );
-      setTodayDone(loadDone().has(ymd(dateOfDay(ti))));
     }
+    setTopicDone(loadTopicDone());
   }, []);
 
-  function markTodayDone() {
-    if (dayIdx < 0) return;
-    const key = ymd(dateOfDay(dayIdx));
-    const d = loadDone();
-    d.add(key);
-    saveDone(d);
-    setTodayDone(true);
+  function toggleTopicDone(id: string) {
+    const next = new Set(topicDone);
+    next.has(id) ? next.delete(id) : next.add(id);
+    setTopicDone(next);
+    saveTopicDone(next);
   }
+  const todayDoneN = todayTopics.filter((t) => topicDone.has(t.id)).length;
+  const todayAllDone =
+    todayTopics.length > 0 && todayDoneN === todayTopics.length;
 
   useEffect(() => {
     const refresh = () => {
@@ -284,32 +283,61 @@ export default function Home() {
           <p className="text-sm text-slate-500">오늘 배정된 토픽이 없습니다.</p>
         ) : (
           <>
+            <div className="mb-2 flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-500">
+                학습한 토픽을 체크하세요 · {todayDoneN}/{todayTopics.length} 완료
+              </span>
+              {todayAllDone && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600">
+                  🌟 참 잘했어요!
+                </span>
+              )}
+            </div>
             <ol className="space-y-2">
-              {todayTopics.map((t, i) => (
-                <li
-                  key={t.id}
-                  className="flex items-center gap-2 rounded-lg border border-slate-100 bg-slate-50 p-2"
-                >
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white text-[11px] font-bold text-slate-500">
-                    {i + 1}
-                  </span>
-                  <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
-                    {t.importance}
-                  </span>
-                  <span className="min-w-0 flex-1 truncate text-sm text-slate-800">
-                    {t.title}
-                  </span>
-                  <span className="hidden text-[10px] text-slate-400 sm:inline">
-                    {t.category}
-                  </span>
-                  <Link
-                    href={mnemonicLink(t, true)}
-                    className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+              {todayTopics.map((t, i) => {
+                const checked = topicDone.has(t.id);
+                return (
+                  <li
+                    key={t.id}
+                    className={`flex items-center gap-2 rounded-lg border p-2 ${
+                      checked
+                        ? "border-emerald-200 bg-emerald-50"
+                        : "border-slate-100 bg-slate-50"
+                    }`}
                   >
-                    🥷 학습
-                  </Link>
-                </li>
-              ))}
+                    <button
+                      onClick={() => toggleTopicDone(t.id)}
+                      aria-label="완료"
+                      className={`grid h-6 w-6 shrink-0 place-items-center rounded-md border text-xs font-bold transition ${
+                        checked
+                          ? "border-emerald-400 bg-emerald-500 text-white"
+                          : "border-slate-300 bg-white text-transparent hover:border-emerald-400"
+                      }`}
+                    >
+                      ✓
+                    </button>
+                    <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+                      {t.importance}
+                    </span>
+                    <span
+                      className={`min-w-0 flex-1 truncate text-sm ${
+                        checked ? "text-slate-400 line-through" : "text-slate-800"
+                      }`}
+                    >
+                      {t.title}
+                    </span>
+                    <span className="hidden text-[10px] text-slate-400 sm:inline">
+                      {t.category}
+                    </span>
+                    <Link
+                      href={mnemonicLink(t, true)}
+                      className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                    >
+                      🥷 학습
+                    </Link>
+                  </li>
+                );
+              })}
             </ol>
             <div className="mt-3 flex flex-wrap items-center gap-2">
               <Link
@@ -318,16 +346,6 @@ export default function Home() {
               >
                 🚇 지하철 모드로 카드 넘기기
               </Link>
-              <button
-                onClick={markTodayDone}
-                className={`rounded-lg border px-3 py-2 text-xs font-semibold transition ${
-                  todayDone
-                    ? "border-emerald-300 bg-emerald-50 text-emerald-700"
-                    : "border-slate-300 bg-white text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                {todayDone ? "✓ 오늘 완료함" : "오늘 완료 체크"}
-              </button>
             </div>
           </>
         )}

@@ -20,6 +20,7 @@ export const PLAN_TOTAL_DAYS =
 const PERDAY_KEY = "info-pe-plan-perday-v1";
 const DONE_KEY = "info-pe-plan-done-v1";
 const OVERRIDE_KEY = "info-pe-plan-overrides-v1";
+const TOPICDONE_KEY = "info-pe-plan-topicdone-v1";
 
 const BY_ID: Record<string, PlanTopic> = {};
 for (const t of topics as PlanTopic[]) BY_ID[t.id] = t;
@@ -73,6 +74,35 @@ export function loadDone(): Set<string> {
 export function saveDone(s: Set<string>) {
   if (typeof window !== "undefined")
     localStorage.setItem(DONE_KEY, JSON.stringify([...s]));
+}
+
+/** 토픽 단위 완료 체크(실제로 학습한 토픽 id). 하루의 토픽을 모두 체크하면 그 날이 완료된다. */
+export function loadTopicDone(): Set<string> {
+  if (typeof window === "undefined") return new Set();
+  try {
+    const raw = localStorage.getItem(TOPICDONE_KEY);
+    return raw ? new Set(JSON.parse(raw) as string[]) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+export function saveTopicDone(s: Set<string>) {
+  if (typeof window !== "undefined")
+    localStorage.setItem(TOPICDONE_KEY, JSON.stringify([...s]));
+}
+/** 그 날의 토픽이 모두 완료됐는지(= 달력 '참 잘했어요' 도장 조건). */
+export function isDayComplete(
+  list: { id: string }[],
+  topicDone: Set<string>,
+): boolean {
+  return list.length > 0 && list.every((t) => topicDone.has(t.id));
+}
+/** 그 날의 완료 토픽 수. */
+export function dayDoneCount(
+  list: { id: string }[],
+  topicDone: Set<string>,
+): number {
+  return list.filter((t) => topicDone.has(t.id)).length;
 }
 
 /** 중요도 우선 + 도메인 라운드로빈(매일 다양한 분야).
