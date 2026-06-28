@@ -39,17 +39,12 @@ export default function RootLayout({
             </Link>
             <div className="flex items-center gap-4">
               <nav className="hidden gap-4 text-sm font-medium text-slate-600 lg:flex">
-                <Link href="/" className="hover:text-brand-600">대시보드</Link>
-                <Link href="/plan" className="hover:text-brand-600">🗓️ 계획</Link>
+                <Link href="/plan" className="font-semibold text-rose-600 hover:text-rose-700">🗓️ 계획</Link>
                 <Link href="/mnemonic" className="hover:text-brand-600">두음신공</Link>
                 <Link href="/commute" className="hover:text-brand-600">🚇 지하철</Link>
-                <Link href="/memorize" className="hover:text-brand-600">암기</Link>
-                <Link href="/notes" className="hover:text-brand-600">오답노트</Link>
                 <Link href="/answer" className="font-semibold text-brand-600 hover:text-brand-700">답안쓰기</Link>
                 <Link href="/exam" className="hover:text-brand-600">기출문제</Link>
                 <Link href="/grade" className="hover:text-brand-600">자가채점</Link>
-                <Link href="/explain" className="hover:text-brand-600">토픽설명</Link>
-                <Link href="/review" className="hover:text-brand-600">회독</Link>
               </nav>
               <AuthNav />
             </div>
