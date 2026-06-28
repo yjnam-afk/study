@@ -20,7 +20,6 @@ import {
   effectiveTopicsForDay,
   coveredDays,
   finishForecast,
-  PLAN_END,
   Overrides,
   loadOverrides,
   saveOverrides,
@@ -29,7 +28,7 @@ import {
 const WEEK = ["일", "월", "화", "수", "목", "금", "토"];
 const DAY = 86400000;
 const CATS = Array.from(new Set((topics as PlanTopic[]).map((t) => t.category)));
-const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 출제예상: 2, 하: 3 };
+const IMP_ORDER: Record<string, number> = { 상: 0, 출제예상: 1, 중: 2, 하: 3 };
 
 export default function PlanPage() {
   const [perDay, setPerDay] = useState(10);
@@ -106,8 +105,20 @@ export default function PlanPage() {
           </span>
         </div>
 
+        <div className="mt-3 rounded-xl border border-rose-200 bg-rose-50 p-3 text-xs leading-relaxed text-rose-800">
+          🎯 <b>상·출제예상 위주</b>로 배정합니다 (앞 토픽일수록 시험 적중↑).
+          핵심 <b>상+출제예상 {forecast.coreCount}토픽</b>만 보면{" "}
+          <b>하루 {forecast.coreRequiredPerDay}개</b>로 8/31까지 완주 →{" "}
+          현재 {perDay}개/일이면{" "}
+          <b>
+            {forecast.coreFinishDate.getMonth() + 1}/
+            {forecast.coreFinishDate.getDate()}
+          </b>{" "}
+          핵심 완료
+        </div>
+
         <div
-          className={`mt-3 rounded-xl border p-3 text-xs leading-relaxed ${
+          className={`mt-2 rounded-xl border p-3 text-xs leading-relaxed ${
             forecast.withinPlan
               ? "border-emerald-200 bg-emerald-50 text-emerald-800"
               : "border-amber-200 bg-amber-50 text-amber-800"
@@ -115,8 +126,7 @@ export default function PlanPage() {
         >
           {forecast.withinPlan ? (
             <>
-              📊 <b>{perDay}개/일</b>이면 전체 {forecast.total}토픽을{" "}
-              <b>{forecast.needDays}일</b> 만에 끝내요 →{" "}
+              📊 전체 {forecast.total}토픽까지 다 보려면 <b>{perDay}개/일</b>로{" "}
               <b>
                 {forecast.finishDate.getMonth() + 1}/
                 {forecast.finishDate.getDate()} 완주
@@ -125,10 +135,10 @@ export default function PlanPage() {
             </>
           ) : (
             <>
-              ⚠️ <b>{perDay}개/일</b>로는 8월 말까지 전체 {forecast.total}토픽을 못
-              끝내요 ({forecast.needDays}일 필요). 8/31(
-              {PLAN_END.getMonth() + 1}/{PLAN_END.getDate()})까지 완주하려면{" "}
-              <b>하루 {forecast.requiredPerDay}개</b>씩 해야 합니다.
+              📊 전체 {forecast.total}토픽까지 다 보려면 <b>{perDay}개/일</b>로는
+              부족해요 ({forecast.needDays}일 필요). 8/31까지 전체 완주엔{" "}
+              <b>하루 {forecast.requiredPerDay}개</b> 필요 — 무리면 핵심부터
+              하세요.
             </>
           )}
         </div>
