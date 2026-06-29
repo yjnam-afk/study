@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { generateText, AIConfigError } from "@/lib/ai";
 import { storyPrompt, TUTOR_SYSTEM, ExamPeriod } from "@/lib/prompts";
 import { buildGrounding } from "@/lib/grounding";
+import { cached, hashKey } from "@/lib/cache";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -22,11 +23,16 @@ export async function POST(req: NextRequest) {
     const examPeriod: ExamPeriod = period === "2교시" ? "2교시" : "1교시";
     const grounding = buildGrounding({ topicId, topicTitle, reference });
 
-    const text = await generateText({
-      system: TUTOR_SYSTEM,
-      user: storyPrompt(examPeriod, question, grounding),
-      temperature: 0.6,
-    });
+    const text = await cached(
+      `story:${examPeriod}:${hashKey(question + "|" + (topicId || ""))}`,
+      14 * 86400,
+      () =>
+        generateText({
+          system: TUTOR_SYSTEM,
+          user: storyPrompt(examPeriod, question, grounding),
+          temperature: 0.6,
+        }),
+    );
 
     return NextResponse.json({ guide: text });
   } catch (err) {

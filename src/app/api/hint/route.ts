@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateJSON, AIConfigError } from "@/lib/ai";
 import { hintPrompt, TUTOR_SYSTEM, ExamPeriod } from "@/lib/prompts";
+import { cached, hashKey } from "@/lib/cache";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -23,11 +24,16 @@ export async function POST(req: NextRequest) {
     }
     const examPeriod: ExamPeriod = period === "2교시" ? "2교시" : "1교시";
 
-    const hint = await generateJSON<Hint>({
-      system: TUTOR_SYSTEM,
-      user: hintPrompt(examPeriod, question),
-      temperature: 0.6,
-    });
+    const hint = await cached<Hint>(
+      `hint:${examPeriod}:${hashKey(question)}`,
+      14 * 86400,
+      () =>
+        generateJSON<Hint>({
+          system: TUTOR_SYSTEM,
+          user: hintPrompt(examPeriod, question),
+          temperature: 0.6,
+        }),
+    );
     return NextResponse.json({ hint });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;

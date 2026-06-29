@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { generateJSON, AIConfigError } from "@/lib/ai";
 import { mnemonicPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
 import { buildGrounding, subnoteFor } from "@/lib/grounding";
+import { cached, hashKey } from "@/lib/cache";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -69,15 +70,20 @@ export async function POST(req: NextRequest) {
     // 토픽 실데이터(엑셀) + 붙여넣은 교재를 근거로 사용(제목 자동 매칭 포함)
     const grounding = buildGrounding({ topicId, topicTitle: topic, reference });
 
-    const data = await generateJSON<MnemonicSet>({
-      system: TUTOR_SYSTEM,
-      user: mnemonicPrompt(topic, grounding),
-      temperature: 0.4,
+    // 같은 토픽(같은 근거)이면 캐시에서 즉시 반환 → 무료 AI 한도 절약.
+    const cacheKey = `mnemonic:${topicId || topic}:${reference ? hashKey(reference) : "-"}`;
+    const data = await cached<MnemonicSet>(cacheKey, 14 * 86400, async () => {
+      const set = await generateJSON<MnemonicSet>({
+        system: TUTOR_SYSTEM,
+        user: mnemonicPrompt(topic, grounding),
+        temperature: 0.4,
+      });
+      // 두음을 서버에서 결정적으로 보정(모델이 자모/엉뚱한 두음을 내도 교정)
+      normalizeGroup(set.intro);
+      normalizeGroup(set.body);
+      return set;
     });
-    // 두음을 서버에서 결정적으로 보정(모델이 자모/엉뚱한 두음을 내도 교정)
-    normalizeGroup(data.intro);
-    normalizeGroup(data.body);
-    // 서브노트에 원본 두음/키워드가 있으면 함께 반환(사용자가 원본을 우선 확인)
+    // 서브노트 원본 두음/키워드/섹션은 항상 최신 데이터로(캐시와 무관)
     const subnote = subnoteFor({ topicId, topicTitle: topic });
     return NextResponse.json({ set: data, subnote });
   } catch (err) {
