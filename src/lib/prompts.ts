@@ -187,12 +187,17 @@ export function gradePrompt(
   ].join("\n");
 }
 
-export function explainPrompt(topic: string, level: string): string {
+export function explainPrompt(
+  topic: string,
+  level: string,
+  reference?: string,
+): string {
   return [
     `정보관리기술사 수험생에게 아래 토픽을 "${level}" 눈높이로 이해하기 쉽게 설명하세요.`,
     ``,
     `[토픽]`,
     topic,
+    ...refBlock(reference),
     ``,
     `[작성 지침 — 마크다운, 아래 구조]`,
     `## 한 줄 요약`,

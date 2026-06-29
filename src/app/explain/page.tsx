@@ -49,10 +49,11 @@ export default function ExplainPage() {
     setError("");
     setResult("");
     try {
+      const matched = topics.find((x) => x.title === topic.trim());
       const res = await fetch("/api/explain", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic, level }),
+        body: JSON.stringify({ topic, level, topicId: matched?.id }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");

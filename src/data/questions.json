@@ -391,5 +391,131 @@
     "category": "보안",
     "source": "138회 1교시",
     "text": "모델 전도 공격(Model Inversion Attack)을 설명하시오."
+  },
+  {
+    "id": "k137-201",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "137회 2교시",
+    "text": "캐시 메모리(Cache Memory)에 대하여 설명하시오. 가. 캐시 쓰기 정책(Write Policy) 나. 캐시 일관성(Cache Coherence) 문제의 원인과 해결 방법"
+  },
+  {
+    "id": "k137-202",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "137회 2교시",
+    "text": "(A)기업의 전자상거래 정보시스템 운영 전환과 관련하여 가. SLA(Service Level Agreement) 구성요소와 절차 나. 하드웨어·소프트웨어·네트워크 영역별 SLA 평가지표와 측정방법 사례를 설명하시오."
+  },
+  {
+    "id": "k137-203",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "137회 2교시",
+    "text": "MCP(Model Context Protocol)를 이용한 인공지능 서비스 구축 시 보안 취약점을 설명하고 대응방안을 제시하시오."
+  },
+  {
+    "id": "k137-204",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "137회 2교시",
+    "text": "\"공공부문 초거대 AI 도입·활용 가이드라인 2.0\"에 대하여 가. 초거대 AI의 개념과 구성요소 나. 기술요소 다. 도입절차를 설명하시오."
+  },
+  {
+    "id": "k137-205",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "137회 2교시",
+    "text": "소프트웨어 테스트 중 동적 테스트에 대하여 가. 명세 기반 테스트와 구조 기반 테스트 비교 나. 동등 분할과 분류 트리 기법의 테스트 케이스 작성을 설명하시오."
+  },
+  {
+    "id": "k137-206",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "137회 2교시",
+    "text": "TEXT2SQL에 대하여 가. 개념 나. 활용 사례 2가지를 설명하시오."
+  },
+  {
+    "id": "k137-301",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "137회 3교시",
+    "text": "운영체제 스케줄링 기법에 대하여 가. CPU 스케줄링과 디스크 스케줄링의 개념 나. SJF와 SRT 다. SSTF와 SLTF를 설명하시오."
+  },
+  {
+    "id": "k137-302",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "137회 3교시",
+    "text": "정보시스템 감리의 시스템 운영 및 유지보수 감리에 대하여 가. 개념 나. 운영 감리의 점검분야 다. 유지보수 감리의 점검분야를 설명하시오."
+  },
+  {
+    "id": "k137-303",
+    "period": "3교시",
+    "category": "경영전략",
+    "source": "137회 3교시",
+    "text": "다중지역 동시 가동방식(Multi-Region Active-Active) 재해복구시스템에 대하여 가. 개념 및 특징 나. 주요 기술 요소를 설명하시오."
+  },
+  {
+    "id": "k137-304",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "137회 3교시",
+    "text": "데이터베이스 트랜잭션 격리 수준(Transactional Isolation Level)에 대하여 가. 격리수준 4가지 나. 격리 수준에 따라 발생할 수 있는 이상 현상을 설명하시오."
+  },
+  {
+    "id": "k137-305",
+    "period": "3교시",
+    "category": "네트워크",
+    "source": "137회 3교시",
+    "text": "통신 프로토콜에 대하여 가. 오류 제어·혼잡 제어 나. 슬라이딩 윈도우(Sliding Window) 기법 다. 프로토콜 설계 시 고려 사항을 설명하시오."
+  },
+  {
+    "id": "k137-306",
+    "period": "3교시",
+    "category": "보안",
+    "source": "137회 3교시",
+    "text": "국가 망 보안체계(N2SF, National Network Security Framework)에 대하여 가. 개념 나. 적용 절차 다. 고려사항을 설명하시오."
+  },
+  {
+    "id": "k137-401",
+    "period": "4교시",
+    "category": "보안",
+    "source": "137회 4교시",
+    "text": "BPFdoor(Berkeley Packet Filter door) 악성코드에 대하여 가. 개념 및 기존 백도어와의 차이점 나. 위협 요소와 영향 다. 기술적·관리적 대응방안을 설명하시오."
+  },
+  {
+    "id": "k137-402",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "137회 4교시",
+    "text": "벡터 데이터베이스(Vector Database)의 효율적 검색을 위한 HNSW(Hierarchical Navigable Small World)와 IVF(Inverted File Index)의 동작원리를 설명하시오."
+  },
+  {
+    "id": "k137-403",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "137회 4교시",
+    "text": "쿠버네티스(Kubernetes)에 대하여 가. 개념 및 특징 나. 주요 컴포넌트 다. HPA(Horizontal Pod Autoscaler)를 설명하시오."
+  },
+  {
+    "id": "k137-404",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "137회 4교시",
+    "text": "UML의 행위 다이어그램인 활동 다이어그램(Activity), 상태 다이어그램(State), 유스케이스 다이어그램(Use-Case)을 각각 설명하시오."
+  },
+  {
+    "id": "k137-405",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "137회 4교시",
+    "text": "유전 알고리즘(Genetic Algorithm)에 대하여 가. 개념 및 절차 나. 최적화 방법을 설명하시오."
+  },
+  {
+    "id": "k137-406",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "137회 4교시",
+    "text": "소프트웨어 사업 대가산정(\"SW 사업 대가산정 가이드 2025년 개정판\" 기준)에 대하여 가. 가이드 목적 나. AI 서비스 도입 사업유형과 사업비 산정 절차를 설명하시오."
   }
 ]
