@@ -3,6 +3,7 @@ import Link from "next/link";
 import AuthNav from "@/components/AuthNav";
 import AuthGate from "@/components/AuthGate";
 import ProgressSync from "@/components/ProgressSync";
+import DeployBanner from "@/components/DeployBanner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function RootLayout({
           </div>
         </header>
         <ProgressSync />
+        <DeployBanner />
         <main className="mx-auto max-w-5xl px-4 py-8">
           <AuthGate>{children}</AuthGate>
         </main>

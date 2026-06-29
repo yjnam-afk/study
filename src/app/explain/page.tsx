@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
+import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 
 const levels = ["입문자", "수험생", "실무자"];
@@ -71,11 +72,14 @@ export default function ExplainPage() {
       />
 
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <input
+        <TopicAutocomplete
           value={topic}
-          onChange={(e) => setTopic(e.target.value)}
-          placeholder="예) 트랜스포머의 셀프 어텐션"
-          className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+          onChange={(v) => setTopic(v)}
+          onSelect={(t) => {
+            setTopic(t.title);
+            setRecCat(t.category);
+          }}
+          placeholder="토픽/키워드 입력 — 비슷한 토픽이 떠요"
         />
 
         <div className="mt-3 flex items-center gap-2">

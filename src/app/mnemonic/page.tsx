@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
+import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 
 type Item = { term: string; initial: string; desc: string };
@@ -122,14 +123,17 @@ export default function MnemonicPage() {
       />
 
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <input
+        <TopicAutocomplete
           value={topic}
-          onChange={(e) => {
-            setTopic(e.target.value);
+          onChange={(v) => {
+            setTopic(v);
             setTopicId(""); // 직접 입력 시 데이터 연결 해제
           }}
-          placeholder="예) 트랜잭션 ACID 특성"
-          className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+          onSelect={(t) => {
+            setTopic(t.title);
+            setTopicId(t.id); // 제안 선택 → 교재 근거 연결
+          }}
+          placeholder="토픽/키워드 입력 (예: 트랜잭션, ACID) — 비슷한 토픽이 떠요"
         />
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <span className="text-xs text-slate-400">토픽 선택:</span>
