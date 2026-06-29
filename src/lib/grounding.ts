@@ -97,3 +97,110 @@ export function buildGrounding(opts: {
     .filter((s) => s && s.trim())
     .join("\n\n");
 }
+
+// ── 데이터-우선 두음신공 (AI 토큰 0) ───────────────────────────────────
+// 교재 섹션 두음이 완비된 토픽은 AI 없이 데이터만으로 학습세트를 만든다.
+
+type DItem = { term: string; initial: string; desc: string };
+type DGroup = {
+  items: DItem[];
+  mnemonic: string;
+  mnemonicHow: string;
+  definition?: string;
+  features?: string[];
+};
+export type DataMnemonicSet = {
+  topic: string;
+  intro: DGroup;
+  body: DGroup;
+  mc: {
+    question: string;
+    options: string[];
+    answer: number;
+    explanation: string;
+  }[];
+  recall: { prompt: string; answers: string[] };
+  /** 데이터로 만들었음을 표시(AI 미사용). */
+  fromData: true;
+};
+
+const firstCh = (s: string) => (s || "").trim().charAt(0);
+const toItems = (kws: string[]): DItem[] =>
+  kws.map((k) => ({ term: k, initial: firstCh(k), desc: "" }));
+
+/** 다른 토픽 키워드를 모아 객관식 오답(distractor) 풀을 만든다. */
+function distractorPool(excludeId?: string): string[] {
+  const pool: string[] = [];
+  for (const t of topics as { id: string }[]) {
+    if (t.id === excludeId) continue;
+    const e = DETAILS[t.id];
+    const ks = e?.featureKeywords;
+    if (ks && ks.length) pool.push(...ks);
+    if (pool.length > 400) break;
+  }
+  return Array.from(new Set(pool));
+}
+
+/**
+ * 교재에 섹션 두음이 있는 토픽이면 AI 없이 데이터로 학습세트를 생성.
+ * 데이터가 부족하면 null(→ 호출부가 AI 생성으로 폴백).
+ */
+export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
+  if (!topicId) return null;
+  const d = DETAILS[topicId];
+  const t = (topics as { id: string; title: string; summary?: string }[]).find(
+    (x) => x.id === topicId,
+  );
+  if (!d || !t) return null;
+  const sections = Array.isArray(d.sections) ? d.sections : [];
+  if (sections.length === 0) return null; // 큐레이션된 섹션이 있을 때만 데이터-우선
+
+  const defKw = (d.defKeywords || []).slice(0, 5);
+  const intro: DGroup = {
+    items: toItems(defKw),
+    mnemonic: defKw.map(firstCh).join(""),
+    mnemonicHow: "정의 키워드의 첫 글자를 모았어요.",
+    definition: t.summary || "",
+    features: (d.featureKeywords || []).slice(0, 3),
+  };
+
+  const first = sections[0];
+  const body: DGroup = {
+    items: toItems(first.keywords),
+    mnemonic: first.mnemonic || first.keywords.map(firstCh).join(""),
+    mnemonicHow: `${first.label}의 두음`,
+  };
+
+  // 객관식: 섹션마다 1문제(최대 3). 정답=그 섹션 키워드, 오답=다른 토픽 키워드.
+  const pool = distractorPool(topicId);
+  const ownSet = new Set(sections.flatMap((s) => s.keywords));
+  const mc: DataMnemonicSet["mc"] = [];
+  for (let i = 0; i < sections.length && mc.length < 3; i++) {
+    const s = sections[i];
+    const correct = s.keywords[0];
+    const distractors: string[] = [];
+    for (let j = 0; j < pool.length && distractors.length < 3; j++) {
+      // 인덱스 기반으로 결정적으로 골라 캐시 일관성 유지(난수 미사용)
+      const cand = pool[(i * 37 + j * 13 + 7) % pool.length];
+      if (!ownSet.has(cand) && !distractors.includes(cand)) distractors.push(cand);
+    }
+    if (distractors.length < 3) continue;
+    const options = [correct, ...distractors];
+    // 정답 위치를 섹션 인덱스로 결정적으로 회전
+    const pos = i % 4;
+    [options[0], options[pos]] = [options[pos], options[0]];
+    mc.push({
+      question: `'${t.title}'의 [${s.label}](두음 ${s.mnemonic})에 해당하는 것은?`,
+      options,
+      answer: options.indexOf(correct),
+      explanation: `${s.label}: ${s.keywords.join(", ")}`,
+    });
+  }
+
+  const recall = {
+    prompt: `[${first.label}] 두음 '${first.mnemonic}'이 의미하는 키워드를 모두 쓰시오.`,
+    answers: first.keywords,
+  };
+
+  return { topic: t.title, intro, body, mc, recall, fromData: true };
+}
