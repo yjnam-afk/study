@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateText, parseJsonFromModel, AIConfigError } from "@/lib/ai";
+import { generateJSON, AIConfigError } from "@/lib/ai";
 import { flashcardPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
 
 export const runtime = "nodejs";
@@ -19,13 +19,11 @@ export async function POST(req: NextRequest) {
     }
     const n = Math.min(Math.max(count || 6, 1), 20);
 
-    const raw = await generateText({
+    const cards = await generateJSON<Flashcard[]>({
       system: TUTOR_SYSTEM,
       user: flashcardPrompt(topic, n),
       temperature: 0.6,
     });
-
-    const cards = parseJsonFromModel<Flashcard[]>(raw);
     return NextResponse.json({ cards });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;

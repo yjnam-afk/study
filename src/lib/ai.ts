@@ -472,5 +472,48 @@ export function parseJsonFromModel<T>(raw: string): T {
       text = text.slice(start, end + 1);
     }
   }
-  return JSON.parse(text) as T;
+  try {
+    return JSON.parse(text) as T;
+  } catch {
+    // 약한 모델이 흔히 내는 깨짐을 보정해 한 번 더 시도한다.
+    const repaired = text
+      .replace(/[“”]/g, '"') // 스마트 큰따옴표 → "
+      .replace(/[‘’]/g, "'") // 스마트 작은따옴표 → '
+      .replace(/,(\s*[}\]])/g, "$1"); // 후행 콤마 제거
+    return JSON.parse(repaired) as T;
+  }
+}
+
+/**
+ * 텍스트를 생성하고 JSON으로 파싱한다. 무료 모델이 깨진 JSON을 내면
+ * "유효한 JSON만" 다시 요청해 자동 재시도한다(기본 1회).
+ */
+export async function generateJSON<T>(
+  opts: GenOpts,
+  retries = 1,
+): Promise<T> {
+  let lastErr: unknown;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const o: GenOpts =
+      attempt === 0
+        ? opts
+        : {
+            ...opts,
+            temperature: 0,
+            user:
+              opts.user +
+              "\n\n★중요: 직전 출력이 '유효한 JSON'이 아니었습니다. 설명·코드블록 없이 유효한 JSON 객체만 출력하세요. 문자열 값 안에서는 큰따옴표(\")를 쓰지 말고(필요하면 작은따옴표 '로), 줄바꿈 대신 공백을 쓰세요.★",
+          };
+    try {
+      const raw = await generateText(o);
+      return parseJsonFromModel<T>(raw);
+    } catch (e) {
+      lastErr = e;
+      // AIConfigError(키 없음)는 재시도 무의미 → 즉시 전파
+      if (e instanceof AIConfigError) throw e;
+    }
+  }
+  throw lastErr instanceof Error
+    ? lastErr
+    : new Error("JSON 생성에 실패했습니다.");
 }

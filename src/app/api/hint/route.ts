@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateText, parseJsonFromModel, AIConfigError } from "@/lib/ai";
+import { generateJSON, AIConfigError } from "@/lib/ai";
 import { hintPrompt, TUTOR_SYSTEM, ExamPeriod } from "@/lib/prompts";
 
 export const runtime = "nodejs";
@@ -23,13 +23,11 @@ export async function POST(req: NextRequest) {
     }
     const examPeriod: ExamPeriod = period === "2교시" ? "2교시" : "1교시";
 
-    const raw = await generateText({
+    const hint = await generateJSON<Hint>({
       system: TUTOR_SYSTEM,
       user: hintPrompt(examPeriod, question),
       temperature: 0.6,
     });
-
-    const hint = parseJsonFromModel<Hint>(raw);
     return NextResponse.json({ hint });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;

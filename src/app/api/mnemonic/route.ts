@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { generateText, parseJsonFromModel, AIConfigError } from "@/lib/ai";
+import { generateJSON, AIConfigError } from "@/lib/ai";
 import { mnemonicPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
 import { buildGrounding, subnoteFor } from "@/lib/grounding";
 
@@ -69,13 +69,11 @@ export async function POST(req: NextRequest) {
     // 토픽 실데이터(엑셀) + 붙여넣은 교재를 근거로 사용(제목 자동 매칭 포함)
     const grounding = buildGrounding({ topicId, topicTitle: topic, reference });
 
-    const raw = await generateText({
+    const data = await generateJSON<MnemonicSet>({
       system: TUTOR_SYSTEM,
       user: mnemonicPrompt(topic, grounding),
       temperature: 0.4,
     });
-
-    const data = parseJsonFromModel<MnemonicSet>(raw);
     // 두음을 서버에서 결정적으로 보정(모델이 자모/엉뚱한 두음을 내도 교정)
     normalizeGroup(data.intro);
     normalizeGroup(data.body);
