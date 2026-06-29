@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateJSON, AIConfigError } from "@/lib/ai";
 import { mnemonicPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
-import { buildGrounding, subnoteFor } from "@/lib/grounding";
+import {
+  buildGrounding,
+  subnoteFor,
+  findIdByTitle,
+  mnemonicFromData,
+} from "@/lib/grounding";
 import { cached, hashKey } from "@/lib/cache";
 
 export const runtime = "nodejs";
@@ -65,6 +70,17 @@ export async function POST(req: NextRequest) {
     };
     if (!topic?.trim()) {
       return NextResponse.json({ error: "토픽을 입력하세요." }, { status: 400 });
+    }
+
+    // 데이터-우선: 교재 섹션 두음이 완비된 토픽은 AI 없이 즉시 생성(토큰 0).
+    // 단, 사용자가 별도 교재(reference)를 붙여넣으면 그 근거로 새로 생성한다.
+    const resolvedId = topicId || findIdByTitle(topic);
+    if (!reference?.trim()) {
+      const dataSet = mnemonicFromData(resolvedId);
+      if (dataSet) {
+        const subnote = subnoteFor({ topicId, topicTitle: topic });
+        return NextResponse.json({ set: dataSet, subnote });
+      }
     }
 
     // 토픽 실데이터(엑셀) + 붙여넣은 교재를 근거로 사용(제목 자동 매칭 포함)
