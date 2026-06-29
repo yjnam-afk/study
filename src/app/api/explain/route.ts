@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateText, AIConfigError } from "@/lib/ai";
 import { explainPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
+import { cached } from "@/lib/cache";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -16,11 +17,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "토픽을 입력하세요." }, { status: 400 });
     }
 
-    const text = await generateText({
-      system: TUTOR_SYSTEM,
-      user: explainPrompt(topic, level || "수험생"),
-      temperature: 0.5,
-    });
+    const lv = level || "수험생";
+    const text = await cached(`explain:${topic}:${lv}`, 14 * 86400, () =>
+      generateText({
+        system: TUTOR_SYSTEM,
+        user: explainPrompt(topic, lv),
+        temperature: 0.5,
+      }),
+    );
 
     return NextResponse.json({ explanation: text });
   } catch (err) {
