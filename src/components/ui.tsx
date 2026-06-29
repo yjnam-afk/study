@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function PageHeader({
   title,
@@ -9,11 +10,28 @@ export function PageHeader({
   title: string;
   desc: string;
 }) {
+  const router = useRouter();
+  // 이전 페이지로 돌아간다(설명→데일리계획 등). 직접 진입(히스토리 없음)이면 홈으로.
+  function goBack() {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  }
   return (
     <div className="mb-6">
-      <Link href="/" className="text-sm text-brand-600 hover:underline">
-        ← 홈으로
-      </Link>
+      <div className="flex items-center gap-3 text-sm">
+        <button
+          onClick={goBack}
+          className="text-brand-600 hover:underline"
+        >
+          ← 뒤로
+        </button>
+        <Link href="/" className="text-slate-400 hover:text-brand-600">
+          홈
+        </Link>
+      </div>
       <h1 className="mt-2 text-2xl font-bold text-slate-900">{title}</h1>
       <p className="mt-1 text-sm text-slate-500">{desc}</p>
     </div>
