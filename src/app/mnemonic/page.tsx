@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
@@ -401,7 +401,7 @@ function Learn({
   );
 }
 
-/** 교재 원본의 한 섹션(특징/기술요소/분류 등) 두음 카드 — 두음 ↔ 키워드 매핑. */
+/** 교재 원본의 한 섹션(특징/기술요소/분류 등) 두음 카드 — 두음 ↔ 키워드 매핑 + 가리고 외우기. */
 function SectionCard({
   section,
 }: {
@@ -410,25 +410,63 @@ function SectionCard({
   // 두음이 키워드 수와 맞으면 글자별로 매핑, 아니면 두음 문자열만 표시.
   const letters = [...(section.mnemonic || "").replace(/\s/g, "")];
   const aligned = letters.length === section.keywords.length;
+  const [hide, setHide] = useState(false);
+  const [shown, setShown] = useState<Set<number>>(new Set());
+
+  function toggleHide() {
+    setHide((h) => !h);
+    setShown(new Set());
+  }
+  function reveal(i: number) {
+    setShown((s) => new Set(s).add(i));
+  }
+
   return (
     <div className="overflow-hidden rounded-2xl border border-emerald-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between bg-emerald-50 px-4 py-2">
+      <div className="flex items-center justify-between gap-2 bg-emerald-50 px-4 py-2">
         <span className="text-xs font-bold text-emerald-800">
           📝 {section.label}
         </span>
-        <span className="text-lg font-extrabold tracking-wide text-emerald-700">
-          {section.mnemonic}
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="text-lg font-extrabold tracking-wide text-emerald-700">
+            {section.mnemonic}
+          </span>
+          <button
+            onClick={toggleHide}
+            className={`rounded-md border px-2 py-0.5 text-[10px] font-bold transition ${
+              hide
+                ? "border-emerald-400 bg-emerald-500 text-white"
+                : "border-slate-300 bg-white text-slate-500 hover:bg-slate-50"
+            }`}
+          >
+            {hide ? "👁 보기" : "🙈 가리고 외우기"}
+          </button>
+        </div>
       </div>
       <ul className="divide-y divide-slate-100">
-        {section.keywords.map((k, i) => (
-          <li key={i} className="flex items-center gap-3 px-4 py-2 text-sm">
-            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-emerald-100 text-xs font-extrabold text-emerald-700">
-              {aligned ? letters[i] : i + 1}
-            </span>
-            <span className="text-slate-800">{k}</span>
-          </li>
-        ))}
+        {section.keywords.map((k, i) => {
+          const masked = hide && !shown.has(i);
+          return (
+            <li
+              key={i}
+              onClick={() => masked && reveal(i)}
+              className={`flex items-center gap-3 px-4 py-2 text-sm ${
+                masked ? "cursor-pointer" : ""
+              }`}
+            >
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-emerald-100 text-xs font-extrabold text-emerald-700">
+                {aligned ? letters[i] : i + 1}
+              </span>
+              {masked ? (
+                <span className="select-none text-slate-300">
+                  ●●●●●　<span className="text-[11px]">탭하여 확인</span>
+                </span>
+              ) : (
+                <span className="text-slate-800">{k}</span>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
@@ -595,12 +633,22 @@ function Write({ group, topic }: { group: Group; topic: string }) {
   const [aiDescs, setAiDescs] = useState<Record<string, string>>({});
   const [descLoading, setDescLoading] = useState(false);
   const [descError, setDescError] = useState("");
+  const autoTried = useRef(false);
 
-  // 데이터-우선 토픽은 키워드별 '모범 설명'이 비어있다 → 필요 시 AI로 보완(캐시됨).
+  // 데이터-우선 토픽은 키워드별 '모범 설명'이 비어있다 → 자동으로 한 번 생성(캐시됨).
   const missingDesc =
     items.length > 0 &&
     items.every((it) => !(it.desc && it.desc.trim()) && !aiDescs[it.term]);
   const descOf = (it: Item) => (it.desc && it.desc.trim()) || aiDescs[it.term] || "";
+
+  // Write 단계 진입 시 모범설명이 비어있으면 자동 생성(1회·캐시). 외울 내용을 바로 보여주기 위함.
+  useEffect(() => {
+    if (missingDesc && topic && !autoTried.current) {
+      autoTried.current = true;
+      loadDescs();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   async function loadDescs() {
     setDescLoading(true);
@@ -638,18 +686,20 @@ function Write({ group, topic }: { group: Group; topic: string }) {
           <b>[구성요소]가 [무엇을·어떻게]하여 [효과]를 달성</b>. 직접 써보고
           모범 설명과 비교하세요.
         </p>
-        {missingDesc && (
+        {descLoading && (
+          <p className="mt-3 text-xs font-medium text-amber-700">
+            ✨ 모범 설명을 불러오는 중이에요… (처음 한 번만, 이후엔 바로 떠요)
+          </p>
+        )}
+        {descError && (
           <div className="mt-3">
             <button
               onClick={loadDescs}
-              disabled={descLoading}
-              className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-amber-600 disabled:opacity-60"
+              className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-amber-600"
             >
-              {descLoading ? "모범 설명 생성 중…" : "✨ AI 모범 설명 불러오기"}
+              ↻ 모범 설명 다시 불러오기
             </button>
-            {descError && (
-              <span className="ml-2 text-xs text-red-600">{descError}</span>
-            )}
+            <span className="ml-2 text-xs text-red-600">{descError}</span>
           </div>
         )}
       </div>
