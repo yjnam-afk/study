@@ -230,7 +230,9 @@ export default function MnemonicPage() {
             {step === "check" && (
               <Check recall={set.recall} onNext={() => setStep("write")} />
             )}
-            {step === "write" && <Write group={set.body} />}
+            {step === "write" && (
+              <Write group={set.body} topic={set.topic} />
+            )}
           </div>
         )}
       </div>
@@ -586,10 +588,43 @@ function Check({
  * 외운 키워드별로 설명을 직접 써보고, 모범 설명(서브노트/모델)과 비교한다.
  * 키워드만 외우는 데서 끝나지 않고 "설명을 쓰는 힘"을 기르는 핵심 단계.
  */
-function Write({ group }: { group: Group }) {
+function Write({ group, topic }: { group: Group; topic: string }) {
   const items = group.items || [];
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
   const [drafts, setDrafts] = useState<Record<number, string>>({});
+  const [aiDescs, setAiDescs] = useState<Record<string, string>>({});
+  const [descLoading, setDescLoading] = useState(false);
+  const [descError, setDescError] = useState("");
+
+  // 데이터-우선 토픽은 키워드별 '모범 설명'이 비어있다 → 필요 시 AI로 보완(캐시됨).
+  const missingDesc =
+    items.length > 0 &&
+    items.every((it) => !(it.desc && it.desc.trim()) && !aiDescs[it.term]);
+  const descOf = (it: Item) => (it.desc && it.desc.trim()) || aiDescs[it.term] || "";
+
+  async function loadDescs() {
+    setDescLoading(true);
+    setDescError("");
+    try {
+      const res = await fetch("/api/describe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic, terms: items.map((it) => it.term) }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "생성 실패");
+      const map: Record<string, string> = {};
+      for (const d of data.descs as { term: string; desc: string }[]) {
+        if (d?.term) map[d.term] = d.desc || "";
+      }
+      setAiDescs(map);
+      setRevealed(Object.fromEntries(items.map((_, i) => [i, true])));
+    } catch (e) {
+      setDescError(e instanceof Error ? e.message : "오류가 발생했습니다.");
+    } finally {
+      setDescLoading(false);
+    }
+  }
 
   return (
     <div className="space-y-4">
@@ -603,6 +638,20 @@ function Write({ group }: { group: Group }) {
           <b>[구성요소]가 [무엇을·어떻게]하여 [효과]를 달성</b>. 직접 써보고
           모범 설명과 비교하세요.
         </p>
+        {missingDesc && (
+          <div className="mt-3">
+            <button
+              onClick={loadDescs}
+              disabled={descLoading}
+              className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-amber-600 disabled:opacity-60"
+            >
+              {descLoading ? "모범 설명 생성 중…" : "✨ AI 모범 설명 불러오기"}
+            </button>
+            {descError && (
+              <span className="ml-2 text-xs text-red-600">{descError}</span>
+            )}
+          </div>
+        )}
       </div>
 
       {items.map((it, i) => (
@@ -636,7 +685,12 @@ function Write({ group }: { group: Group }) {
               <span className="text-xs font-semibold text-emerald-700">
                 모범 설명{" "}
               </span>
-              {it.desc}
+              {descOf(it) || (
+                <span className="text-slate-400">
+                  교재에 설명이 없어요 — 위의 &ldquo;✨ AI 모범 설명 불러오기&rdquo;를
+                  눌러 채우세요.
+                </span>
+              )}
             </div>
           )}
         </div>

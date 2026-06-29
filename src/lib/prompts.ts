@@ -238,6 +238,20 @@ export function flashcardPrompt(topic: string, count: number): string {
   ].join("\n");
 }
 
+/** 키워드별 "모범 설명(답안 3열)"을 한 문장씩 생성한다(데이터-우선 토픽 보완용). */
+export function describePrompt(topic: string, terms: string[]): string {
+  return [
+    `정보관리기술사 토픽 "${topic}"의 아래 구성요소/키워드 각각에 대한 "모범 설명"을 작성하세요.`,
+    `각 설명은 답안 표의 3열(설명)에 들어갈 한 문장입니다 — "[키워드]가 [무엇을·어떻게]하여 [효과/목적]을 달성" 형태, 한국어, 25~55자.`,
+    ``,
+    `[키워드 목록]`,
+    terms.map((t, i) => `${i + 1}. ${t}`).join("\n"),
+    ``,
+    `[출력 형식] 반드시 아래 JSON 배열만 출력(설명·코드블록 금지). 입력 키워드 순서·개수 그대로:`,
+    `[{"term":"키워드","desc":"한 문장 설명"}]`,
+  ].join("\n");
+}
+
 export function quizPrompt(topic: string, count: number): string {
   return [
     `정보관리기술사 학습용 4지선다 객관식 퀴즈를 ${count}개 생성하세요. 토픽: "${topic}".`,
