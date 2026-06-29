@@ -22,6 +22,8 @@ type Detail = {
   conceptMap?: string;
   /** 교재 원본의 섹션별 두음(특징·기술요소·분류 등 각각 별도 두음). */
   sections?: SubnoteSection[];
+  /** 타연관 토픽(쉼표/슬래시 구분 문자열). */
+  related?: string;
 };
 const DETAILS = topicDetails as Record<string, Detail>;
 
@@ -30,10 +32,11 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
   mnemonic: string;
   keywords: string[];
   sections: SubnoteSection[];
+  related: string[];
 } {
   const id = opts.topicId || findIdByTitle(opts.topicTitle);
   const d = id ? DETAILS[id] : undefined;
-  if (!d) return { mnemonic: "", keywords: [], sections: [] };
+  if (!d) return { mnemonic: "", keywords: [], sections: [], related: [] };
   const keywords = Array.from(
     new Set([
       ...(d.defKeywords || []),
@@ -42,10 +45,16 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
       ...(d.plusKeywords || []),
     ]),
   );
+  // 타연관 토픽: 쉼표/슬래시/가운뎃점으로 분리
+  const related = (d.related || "")
+    .split(/[,/·、]/)
+    .map((s) => s.trim())
+    .filter(Boolean);
   return {
     mnemonic: (d.mnemonic || "").trim(),
     keywords,
     sections: Array.isArray(d.sections) ? d.sections : [],
+    related,
   };
 }
 

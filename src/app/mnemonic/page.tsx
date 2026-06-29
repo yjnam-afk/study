@@ -48,6 +48,7 @@ export default function MnemonicPage() {
     mnemonic: string;
     keywords: string[];
     sections?: { label: string; mnemonic: string; keywords: string[] }[];
+    related?: string[];
   } | null>(null);
   const [step, setStep] = useState<Step>("learn");
   const [autoPending, setAutoPending] = useState(false);
@@ -213,6 +214,24 @@ export default function MnemonicPage() {
                 text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
               />
             </div>
+            {subnote?.related && subnote.related.length > 0 && (
+              <div className="mb-4 rounded-2xl border border-sky-200 bg-sky-50 p-4">
+                <div className="mb-2 text-xs font-semibold text-sky-700">
+                  🔗 연관 토픽 (답안 차별화·융합에 활용)
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {subnote.related.map((r, i) => (
+                    <a
+                      key={i}
+                      href={`/mnemonic?topic=${encodeURIComponent(r)}&auto=1`}
+                      className="rounded-full border border-sky-300 bg-white px-3 py-1 text-xs font-medium text-sky-700 hover:bg-sky-100"
+                    >
+                      {r} →
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
             <Stepper step={step} onStep={setStep} />
             {step === "learn" && (
               <Learn
