@@ -22,6 +22,7 @@ export default function TopicAutocomplete({
   placeholder?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
   const q = value.trim().toLowerCase();
 
   const matches = useMemo(() => {
@@ -47,28 +48,51 @@ export default function TopicAutocomplete({
         onChange={(e) => {
           onChange(e.target.value);
           setOpen(true);
+          setActive(0);
         }}
         onFocus={() => setOpen(true)}
         onBlur={() => setTimeout(() => setOpen(false), 150)}
+        onKeyDown={(e) => {
+          if (!open || matches.length === 0) return;
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setActive((a) => (a + 1) % matches.length);
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setActive((a) => (a - 1 + matches.length) % matches.length);
+          } else if (e.key === "Enter") {
+            const t = matches[active];
+            if (t) {
+              e.preventDefault();
+              onSelect(t);
+              setOpen(false);
+            }
+          } else if (e.key === "Escape") {
+            setOpen(false);
+          }
+        }}
         placeholder={placeholder}
         className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
       />
       {open && matches.length > 0 && (
         <ul className="absolute z-20 mt-1 max-h-72 w-full overflow-auto rounded-lg border border-slate-200 bg-white shadow-lg">
           <li className="px-3 py-1.5 text-[10px] text-slate-400">
-            비슷한 토픽 {matches.length}개 — 선택하면 교재 근거로 정확히 생성돼요
+            ↑↓ 이동 · Enter 선택 · 선택하면 교재 근거로 정확히 생성돼요
           </li>
-          {matches.map((t) => (
+          {matches.map((t, idx) => (
             <li key={t.id}>
               <button
                 type="button"
+                onMouseEnter={() => setActive(idx)}
                 onMouseDown={(e) => {
                   // blur보다 먼저 실행되도록 mousedown + preventDefault
                   e.preventDefault();
                   onSelect(t);
                   setOpen(false);
                 }}
-                className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2 text-left text-sm hover:bg-brand-50"
+                className={`flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2 text-left text-sm ${
+                  idx === active ? "bg-brand-50" : "hover:bg-brand-50"
+                }`}
               >
                 <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
                   {t.importance}
