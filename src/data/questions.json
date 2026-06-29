@@ -209,5 +209,187 @@
     "period": "2교시",
     "category": "정보보안",
     "text": "OWASP Top 10을 기반으로 웹 애플리케이션의 주요 취약점과 대응 방안을 설명하시오."
+  },
+  {
+    "id": "k137-101",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "137회 1교시",
+    "text": "동적 라우팅 프로토콜인 IGP(Interior Gateway Protocol)와 EGP(Exterior Gateway Protocol)를 설명하시오."
+  },
+  {
+    "id": "k137-102",
+    "period": "1교시",
+    "category": "보안",
+    "source": "137회 1교시",
+    "text": "디지털 포렌식에서 아트팩트(Artifact)를 설명하시오."
+  },
+  {
+    "id": "k137-103",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "137회 1교시",
+    "text": "MODBUS 프로토콜을 설명하시오."
+  },
+  {
+    "id": "k137-104",
+    "period": "1교시",
+    "category": "보안",
+    "source": "137회 1교시",
+    "text": "암호문 공격(Ciphertext Attack)을 설명하시오."
+  },
+  {
+    "id": "k137-105",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "137회 1교시",
+    "text": "GNN(Graph Neural Network)을 설명하시오."
+  },
+  {
+    "id": "k137-106",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "137회 1교시",
+    "text": "AI 거버넌스(Artificial Intelligence Governance)를 설명하시오."
+  },
+  {
+    "id": "k137-107",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "137회 1교시",
+    "text": "트랜스포머(Transformer)와 MoE(Mixture of Experts)를 설명하시오."
+  },
+  {
+    "id": "k137-108",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "137회 1교시",
+    "text": "AI 신뢰성 검인증 제도(CAT, Certification of AI Trustworthiness)를 설명하시오."
+  },
+  {
+    "id": "k137-109",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "137회 1교시",
+    "text": "A/B 테스팅을 설명하시오."
+  },
+  {
+    "id": "k137-110",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "137회 1교시",
+    "text": "데이터 늪(Data Swamp)을 설명하시오."
+  },
+  {
+    "id": "k137-111",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "137회 1교시",
+    "text": "소프트웨어 역공학과 재공학을 설명하시오."
+  },
+  {
+    "id": "k137-112",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "137회 1교시",
+    "text": "이진 탐색 트리(Binary Search Tree)를 설명하시오."
+  },
+  {
+    "id": "k137-113",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "137회 1교시",
+    "text": "데이터마이닝의 연관 규칙 분석(Association Rule Analysis) 지표를 설명하시오."
+  },
+  {
+    "id": "k138-101",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "138회 1교시",
+    "text": "미국 국립표준기술연구소(NIST)가 발행한 AI RMF(Risk Management Framework)의 개념과 4가지 핵심구조, 7가지 신뢰 가능한 특성을 설명하시오."
+  },
+  {
+    "id": "k138-102",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "138회 1교시",
+    "text": "프로젝트 위험관리에 대해 설명하시오."
+  },
+  {
+    "id": "k138-103",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "138회 1교시",
+    "text": "ISO/IEC 42001:2023(AI 관리시스템)을 설명하시오."
+  },
+  {
+    "id": "k138-104",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "138회 1교시",
+    "text": "베이즈 정리(Bayes Theorem)를 설명하시오."
+  },
+  {
+    "id": "k138-105",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "138회 1교시",
+    "text": "안면인식 결제 서비스를 설명하시오."
+  },
+  {
+    "id": "k138-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "138회 1교시",
+    "text": "소프트웨어 개발 프로젝트에서 선도개발을 위한 개발방법론 테일러링(Tailoring)을 설명하시오."
+  },
+  {
+    "id": "k138-107",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "138회 1교시",
+    "text": "자기회귀모형(Autoregressive Model)과 이동평균모형(Moving Average Model)을 설명하시오."
+  },
+  {
+    "id": "k138-108",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "138회 1교시",
+    "text": "데이터 관측가능성(Data Observability)을 설명하시오."
+  },
+  {
+    "id": "k138-109",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "138회 1교시",
+    "text": "정보모델링의 참조 무결성을 설명하시오."
+  },
+  {
+    "id": "k138-110",
+    "period": "1교시",
+    "category": "보안",
+    "source": "138회 1교시",
+    "text": "TTPs(Tactics, Techniques and Procedures)를 설명하시오."
+  },
+  {
+    "id": "k138-111",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "138회 1교시",
+    "text": "은행가 알고리즘(Banker’s Algorithm)을 설명하시오."
+  },
+  {
+    "id": "k138-112",
+    "period": "1교시",
+    "category": "보안",
+    "source": "138회 1교시",
+    "text": "프롬프트 인젝션(Prompt Injection)을 설명하시오."
+  },
+  {
+    "id": "k138-113",
+    "period": "1교시",
+    "category": "보안",
+    "source": "138회 1교시",
+    "text": "모델 전도 공격(Model Inversion Attack)을 설명하시오."
   }
 ]
