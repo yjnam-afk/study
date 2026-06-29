@@ -114,10 +114,17 @@ export default function CommutePage() {
         </p>
       ) : (
         <>
-          {/* 카드 (탭하면 뒤집기) */}
-          <button
-            onClick={() => setFlipped((f) => !f)}
-            className="block w-full rounded-3xl border border-slate-200 bg-white p-8 text-left shadow-sm transition active:scale-[0.99] min-h-[19rem]"
+          {/* 카드 (탭하면 뒤집기 · 텍스트 드래그 선택 가능) */}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              // 텍스트를 드래그 선택 중이면 뒤집지 않는다(복사 가능하게).
+              if ((window.getSelection()?.toString() || "").trim().length > 0)
+                return;
+              setFlipped((f) => !f);
+            }}
+            className="block w-full cursor-pointer select-text rounded-3xl border border-slate-200 bg-white p-8 text-left shadow-sm transition active:scale-[0.99] min-h-[19rem]"
           >
             <div className="flex items-center gap-2">
               <span className="rounded bg-violet-100 px-2 py-0.5 text-[11px] font-bold text-violet-700">
@@ -173,7 +180,7 @@ export default function CommutePage() {
                 )}
               </div>
             )}
-          </button>
+          </div>
 
           {/* 하단 큰 버튼 (한 손 조작) */}
           <div className="mt-4 grid grid-cols-2 gap-3">
