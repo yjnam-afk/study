@@ -122,13 +122,10 @@
     ],
     "featureKeywords": [
       "기본계약서",
-      "SoW",
+      "SoW(작업기술서)",
       "서비스 카탈로그",
-      "서비스 수준 Metrics",
-      "서비스 수준 Objectives",
-      "Measurement Criteria",
-      "서비스 수준 보고",
-      "보상 체계"
+      "메트릭(서비스 수준 관리지표·목표수준·성과측정기준·수준보고)",
+      "보상체계"
     ],
     "applicationKeywords": [],
     "plusKeywords": [
@@ -137,20 +134,17 @@
       "SR 적기 처리율",
       "네트워크 장애건수"
     ],
-    "mnemonic": "기소카메오메보",
+    "mnemonic": "기소카메보",
     "sections": [
       {
         "label": "구성요소",
-        "mnemonic": "기소카메오메보",
+        "mnemonic": "기소카메보",
         "keywords": [
           "기본계약서",
-          "SoW",
+          "SoW(작업기술서)",
           "서비스 카탈로그",
-          "서비스 수준 Metrics",
-          "서비스 수준 Objectives",
-          "Measurement Criteria",
-          "서비스 수준 보고",
-          "보상 체계"
+          "메트릭(서비스 수준 관리지표·목표수준·성과측정기준·수준보고)",
+          "보상체계"
         ]
       }
     ]
