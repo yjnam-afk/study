@@ -686,20 +686,21 @@ function Write({ group, topic }: { group: Group; topic: string }) {
           <b>[구성요소]가 [무엇을·어떻게]하여 [효과]를 달성</b>. 직접 써보고
           모범 설명과 비교하세요.
         </p>
-        {descLoading && (
-          <p className="mt-3 text-xs font-medium text-amber-700">
-            ✨ 모범 설명을 불러오는 중이에요… (처음 한 번만, 이후엔 바로 떠요)
-          </p>
-        )}
-        {descError && (
-          <div className="mt-3">
+        {missingDesc && (
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             <button
               onClick={loadDescs}
-              className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-amber-600"
+              disabled={descLoading}
+              className="rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-amber-600 disabled:opacity-60"
             >
-              ↻ 모범 설명 다시 불러오기
+              {descLoading ? "✨ 불러오는 중…" : "✨ AI 모범 설명 불러오기"}
             </button>
-            <span className="ml-2 text-xs text-red-600">{descError}</span>
+            <span className="text-xs text-amber-700">
+              처음 한 번만 생성하면 이후엔 바로 떠요.
+            </span>
+            {descError && (
+              <span className="w-full text-xs text-red-600">{descError}</span>
+            )}
           </div>
         )}
       </div>
