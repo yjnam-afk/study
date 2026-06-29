@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     }
     const list = terms.slice(0, 12).map((t) => String(t));
     const descs = await cached<Desc[]>(
-      `describe:${topic}:${hashKey(list.join("|"))}`,
+      `describe:v2:${topic}:${hashKey(list.join("|"))}`,
       30 * 86400,
       () =>
         generateJSON<Desc[]>({

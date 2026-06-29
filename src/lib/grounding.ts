@@ -128,17 +128,21 @@ const firstCh = (s: string) => (s || "").trim().charAt(0);
 const toItems = (kws: string[]): DItem[] =>
   kws.map((k) => ({ term: k, initial: firstCh(k), desc: "" }));
 
-/** 다른 토픽 키워드를 모아 객관식 오답(distractor) 풀을 만든다. */
-function distractorPool(excludeId?: string): string[] {
-  const pool: string[] = [];
-  for (const t of topics as { id: string }[]) {
+/** 객관식 오답(distractor) 풀. 같은 분야 키워드를 우선(헷갈리게) + 그 외 분야. */
+function distractorPool(
+  excludeId: string | undefined,
+  category: string | undefined,
+): { same: string[]; other: string[] } {
+  const same: string[] = [];
+  const other: string[] = [];
+  for (const t of topics as { id: string; category: string }[]) {
     if (t.id === excludeId) continue;
-    const e = DETAILS[t.id];
-    const ks = e?.featureKeywords;
-    if (ks && ks.length) pool.push(...ks);
-    if (pool.length > 400) break;
+    const ks = DETAILS[t.id]?.featureKeywords;
+    if (!ks || !ks.length) continue;
+    if (t.category === category) same.push(...ks);
+    else other.push(...ks);
   }
-  return Array.from(new Set(pool));
+  return { same: Array.from(new Set(same)), other: Array.from(new Set(other)) };
 }
 
 /**
@@ -171,30 +175,67 @@ export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
     mnemonicHow: `${first.label}의 두음`,
   };
 
-  // 객관식: 섹션마다 1문제(최대 3). 정답=그 섹션 키워드, 오답=다른 토픽 키워드.
-  const pool = distractorPool(topicId);
+  // 객관식: 같은 분야의 헷갈리는 오답을 쓰고, 가능하면 "해당하지 않는 것은?"(전부 알아야 푸는) 형태로.
+  const cat = (
+    topics as { id: string; category?: string }[]
+  ).find((x) => x.id === topicId)?.category;
+  const pool = distractorPool(topicId, cat);
   const ownSet = new Set(sections.flatMap((s) => s.keywords));
-  const mc: DataMnemonicSet["mc"] = [];
-  for (let i = 0; i < sections.length && mc.length < 3; i++) {
-    const s = sections[i];
-    const correct = s.keywords[0];
-    const distractors: string[] = [];
-    for (let j = 0; j < pool.length && distractors.length < 3; j++) {
-      // 인덱스 기반으로 결정적으로 골라 캐시 일관성 유지(난수 미사용)
-      const cand = pool[(i * 37 + j * 13 + 7) % pool.length];
-      if (!ownSet.has(cand) && !distractors.includes(cand)) distractors.push(cand);
+  // 결정적으로 오답 후보를 뽑는다(같은 분야 우선 → 그 외). 난수 미사용(캐시 일관성).
+  const pickDistractor = (
+    salt: number,
+    used: Set<string>,
+  ): string | null => {
+    for (const bucket of [pool.same, pool.other]) {
+      for (let j = 0; j < bucket.length; j++) {
+        const cand = bucket[(salt * 13 + j * 7 + 5) % bucket.length];
+        if (!ownSet.has(cand) && !used.has(cand)) return cand;
+      }
     }
-    if (distractors.length < 3) continue;
-    const options = [correct, ...distractors];
-    // 정답 위치를 섹션 인덱스로 결정적으로 회전
-    const pos = i % 4;
-    [options[0], options[pos]] = [options[pos], options[0]];
-    mc.push({
-      question: `'${t.title}'의 [${s.label}](두음 ${s.mnemonic})에 해당하는 것은?`,
-      options,
-      answer: options.indexOf(correct),
-      explanation: `${s.label}: ${s.keywords.join(", ")}`,
-    });
+    return null;
+  };
+  const mc: DataMnemonicSet["mc"] = [];
+  for (let i = 0; i < sections.length && mc.length < 4; i++) {
+    const s = sections[i];
+    const used = new Set<string>();
+    if (s.keywords.length >= 3) {
+      // "해당하지 않는 것은?" — 정답(=오답 키워드) 1 + 진짜 구성요소 3
+      const d = pickDistractor(i + 1, used);
+      if (!d) continue;
+      const reals = s.keywords.slice(0, 3);
+      const options = [...reals, d];
+      const pos = (i * 3 + 1) % 4;
+      [options[options.length - 1], options[pos]] = [
+        options[pos],
+        options[options.length - 1],
+      ];
+      mc.push({
+        question: `다음 중 '${t.title}'의 [${s.label}](두음 ${s.mnemonic}) 구성요소가 "아닌" 것은?`,
+        options,
+        answer: options.indexOf(d),
+        explanation: `'${d}'은(는) 이 토픽 항목이 아닙니다. ${s.label}: ${s.keywords.join(", ")}`,
+      });
+    } else {
+      // 항목이 적으면 "해당하는 것은?" — 정답 1 + 헷갈리는 오답 3
+      const correct = s.keywords[0];
+      const distractors: string[] = [];
+      for (let k = 0; k < 6 && distractors.length < 3; k++) {
+        const d = pickDistractor(i * 10 + k, used);
+        if (!d) break;
+        used.add(d);
+        distractors.push(d);
+      }
+      if (distractors.length < 3) continue;
+      const options = [correct, ...distractors];
+      const pos = (i + 1) % 4;
+      [options[0], options[pos]] = [options[pos], options[0]];
+      mc.push({
+        question: `'${t.title}'의 [${s.label}](두음 ${s.mnemonic})에 해당하는 것은?`,
+        options,
+        answer: options.indexOf(correct),
+        explanation: `${s.label}: ${s.keywords.join(", ")}`,
+      });
+    }
   }
 
   const recall = {
