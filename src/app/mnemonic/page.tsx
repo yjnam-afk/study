@@ -5,6 +5,8 @@ import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
+import { loadReview, saveReview, markReviewed } from "@/lib/storage";
+import { loadTopicDone, saveTopicDone } from "@/lib/plan";
 
 type Item = { term: string; initial: string; desc: string };
 type Group = {
@@ -250,7 +252,7 @@ export default function MnemonicPage() {
               <Check recall={set.recall} onNext={() => setStep("write")} />
             )}
             {step === "write" && (
-              <Write group={set.body} topic={set.topic} />
+              <Write group={set.body} topic={set.topic} topicId={topicId} />
             )}
           </div>
         )}
@@ -645,10 +647,34 @@ function Check({
  * 외운 키워드별로 설명을 직접 써보고, 모범 설명(서브노트/모델)과 비교한다.
  * 키워드만 외우는 데서 끝나지 않고 "설명을 쓰는 힘"을 기르는 핵심 단계.
  */
-function Write({ group, topic }: { group: Group; topic: string }) {
+function Write({
+  group,
+  topic,
+  topicId,
+}: {
+  group: Group;
+  topic: string;
+  topicId?: string;
+}) {
   const items = group.items || [];
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
   const [drafts, setDrafts] = useState<Record<number, string>>({});
+  const [submitted, setSubmitted] = useState(false);
+
+  function submit() {
+    // 회독 1회 기록 + 데일리 계획 완료 체크(토픽 데이터가 연결된 경우)
+    if (topicId) {
+      try {
+        saveReview(markReviewed(loadReview(), topicId));
+        const td = loadTopicDone();
+        td.add(topicId);
+        saveTopicDone(td);
+      } catch {
+        /* 저장 실패는 무시 */
+      }
+    }
+    setSubmitted(true);
+  }
   const [aiDescs, setAiDescs] = useState<Record<string, string>>({});
   const [descLoading, setDescLoading] = useState(false);
   const [descError, setDescError] = useState("");
@@ -776,6 +802,35 @@ function Write({ group, topic }: { group: Group; topic: string }) {
       <p className="text-center text-xs text-slate-400">
         이 표(키워드 + 설명)가 그대로 답안지 본론의 3열 표가 됩니다.
       </p>
+
+      {submitted ? (
+        <div className="rounded-2xl border border-emerald-300 bg-emerald-50 p-5 text-center">
+          <p className="text-base font-bold text-emerald-700">
+            🎉 학습 완료! 제출됐어요
+          </p>
+          <p className="mt-1 text-xs text-emerald-600">
+            {topicId
+              ? "회독 1회가 기록되고 오늘의 데일리 계획에 완료 체크됐어요."
+              : "기록하려면 토픽을 검색·선택해서 학습해 주세요."}
+          </p>
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            <a
+              href="/plan"
+              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
+            >
+              🗓️ 데일리 계획으로
+            </a>
+            <a
+              href="/mnemonic"
+              className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50"
+            >
+              다른 토픽 외우기
+            </a>
+          </div>
+        </div>
+      ) : (
+        <Button onClick={submit}>✅ 외우기 완료 — 제출</Button>
+      )}
     </div>
   );
 }
