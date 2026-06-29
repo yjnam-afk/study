@@ -661,10 +661,17 @@ function Write({ group, topic }: { group: Group; topic: string }) {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
+      const arr = (data.descs || []) as { term?: string; desc?: string }[];
       const map: Record<string, string> = {};
-      for (const d of data.descs as { term: string; desc: string }[]) {
-        if (d?.term) map[d.term] = d.desc || "";
-      }
+      // 순서(인덱스)로 매칭 — 모델이 키워드 텍스트를 바꿔도 안전. term 매칭은 보조.
+      items.forEach((it, i) => {
+        const byIdx = arr[i]?.desc;
+        const byTerm = arr.find((d) => d.term && d.term === it.term)?.desc;
+        const v = (byIdx || byTerm || "").trim();
+        if (v) map[it.term] = v;
+      });
+      if (Object.keys(map).length === 0)
+        throw new Error("모범 설명을 받지 못했어요. 다시 시도해 주세요.");
       setAiDescs(map);
       setRevealed(Object.fromEntries(items.map((_, i) => [i, true])));
     } catch (e) {
