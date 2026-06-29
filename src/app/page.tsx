@@ -352,6 +352,16 @@ export default function Home() {
               >
                 🚇 지하철 모드로 카드 넘기기
               </Link>
+              <ShareButton
+                title="오늘의 학습 토픽 — 스파르타 소설클럽"
+                text={
+                  `🗓️ 오늘의 토픽 · Day ${dayIdx + 1}\n` +
+                  todayTopics
+                    .map((t, i) => `${i + 1}. [${t.importance}] ${t.title}`)
+                    .join("\n") +
+                  `\n\n스파르타 소설클럽 — 기술사 답안은 소설이다 ✍️ 같이 공부해요!`
+                }
+              />
             </div>
           </>
         )}
