@@ -155,8 +155,10 @@ function distractorPool(
 }
 
 /**
- * 교재에 섹션 두음이 있는 토픽이면 AI 없이 데이터로 학습세트를 생성.
- * 데이터가 부족하면 null(→ 호출부가 AI 생성으로 폴백).
+ * AI 없이 데이터(엑셀 서브노트)만으로 학습세트를 생성.
+ *  - 교재 섹션 두음이 큐레이션된 토픽 → 그 섹션을 그대로 사용(최고 품질).
+ *  - 섹션이 없어도 정의/특징 키워드가 있으면 그 키워드로 합성(품질은 낮아도 토큰 0·즉시).
+ * 키워드가 전혀 없으면 null(→ 호출부가 AI 생성으로 폴백).
  */
 export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
   if (!topicId) return null;
@@ -165,23 +167,63 @@ export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
     (x) => x.id === topicId,
   );
   if (!d || !t) return null;
-  const sections = Array.isArray(d.sections) ? d.sections : [];
-  if (sections.length === 0) return null; // 큐레이션된 섹션이 있을 때만 데이터-우선
 
-  const defKw = (d.defKeywords || []).slice(0, 5);
+  const curated = Array.isArray(d.sections) ? d.sections : [];
+  const defKw = (d.defKeywords || []).filter(Boolean);
+  const featKw = (d.featureKeywords || []).filter(Boolean);
+  const appKw = (d.applicationKeywords || []).filter(Boolean);
+
+  // 본론 섹션 결정: 큐레이션 섹션이 있으면 그대로, 없으면 키워드로 합성.
+  let sections: SubnoteSection[];
+  if (curated.length) {
+    sections = curated;
+  } else {
+    sections = [];
+    const bodyKw = (featKw.length ? featKw : appKw).slice(0, 8);
+    if (bodyKw.length) {
+      sections.push({
+        label: "핵심 키워드",
+        mnemonic: bodyKw.map(firstCh).join(""),
+        keywords: bodyKw,
+      });
+    }
+    // 특징과 활용이 둘 다 있으면 활용을 별도 그룹으로(서론·본론이 같아지지 않게).
+    if (featKw.length && appKw.length) {
+      const ak = appKw.slice(0, 6);
+      sections.push({
+        label: "활용·적용",
+        mnemonic: ak.map(firstCh).join(""),
+        keywords: ak,
+      });
+    }
+  }
+
+  // 서론(정의) 키워드: 정의 키워드 우선, 없으면 본론 키워드로라도 채운다.
+  const introKw = (defKw.length ? defKw : sections[0]?.keywords || []).slice(
+    0,
+    5,
+  );
+  // 데이터가 전혀 없으면(키워드·섹션 모두 비었으면) AI로 폴백.
+  if (introKw.length === 0 && sections.length === 0) return null;
+
   const intro: DGroup = {
-    items: toItems(defKw),
-    mnemonic: defKw.map(firstCh).join(""),
+    items: toItems(introKw),
+    mnemonic: introKw.map(firstCh).join(""),
     mnemonicHow: "정의 키워드의 첫 글자를 모았어요.",
     definition: t.summary || "",
-    features: (d.featureKeywords || []).slice(0, 3),
+    features: (featKw.length ? featKw : appKw).slice(0, 3),
   };
 
-  const first = sections[0];
+  // 본론 그룹: 섹션이 있으면 첫 섹션, 없으면 정의 키워드로라도 구성.
+  const first: SubnoteSection = sections[0] || {
+    label: "핵심 키워드",
+    mnemonic: introKw.map(firstCh).join(""),
+    keywords: introKw,
+  };
   const body: DGroup = {
     items: toItems(first.keywords),
     mnemonic: first.mnemonic || first.keywords.map(firstCh).join(""),
-    mnemonicHow: `${first.label}의 두음`,
+    mnemonicHow: curated.length ? `${first.label}의 두음` : "핵심 키워드의 두음",
   };
 
   // 객관식: 같은 분야의 헷갈리는 오답을 쓰고, 가능하면 "해당하지 않는 것은?"(전부 알아야 푸는) 형태로.
