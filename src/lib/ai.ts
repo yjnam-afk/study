@@ -143,11 +143,21 @@ function providerChain(): ChainEntry[] {
   return entries;
 }
 
-/**
- * 시스템/사용자 프롬프트로 텍스트를 생성합니다.
- * 여러 제공자를 설정하면, 하나가 실패(429 토큰 초과·오류 등)할 때 다음 제공자로 자동 폴백합니다.
- */
-export async function generateText(opts: GenOpts): Promise<string> {
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** 제공자별 일시적(순간적) 실패 신호 — 같은 키로 곧바로 재시도하면 풀리는 경우가 많다.
+ *  무료 등급의 분당 한도(TPM)·동시요청 제한·5xx 는 잠깐 기다리면 회복된다. */
+function isTransient(detail: string): boolean {
+  return /rate.?limit|too large|tokens per|\bTP[M]\b|\b429\b|\b5\d\d\b|timeout|fetch failed|ECONN|empty|비어/i.test(
+    detail,
+  );
+}
+
+/** 폴백 체인을 한 번 끝까지 시도한다(각 제공자/모델 순서대로). */
+async function runChainOnce(opts: GenOpts): Promise<
+  | { ok: true; text: string }
+  | { ok: false; detail: string; allConfigError: boolean; transient: boolean }
+> {
   const chain = providerChain();
   const errors: string[] = [];
   let allConfigError = true;
@@ -161,16 +171,46 @@ export async function generateText(opts: GenOpts): Promise<string> {
       continue;
     }
     try {
-      return sanitizeOutput(await fn({ ...opts, model, maxTokens }));
+      return { ok: true, text: sanitizeOutput(await fn({ ...opts, model, maxTokens })) };
     } catch (err) {
       if (!(err instanceof AIConfigError)) allConfigError = false;
       errors.push(`${label}: ${err instanceof Error ? err.message : String(err)}`);
       // 다음 제공자(또는 다음 모델)로 폴백
     }
   }
-
   const detail = errors.join(" | ");
-  if (allConfigError) {
+  return { ok: false, detail, allConfigError, transient: isTransient(detail) };
+}
+
+/**
+ * 시스템/사용자 프롬프트로 텍스트를 생성합니다.
+ * 여러 제공자를 설정하면, 하나가 실패(429 토큰 초과·오류 등)할 때 다음 제공자로 자동 폴백합니다.
+ * 무료 등급의 429/5xx 는 "순간적"인 경우가 많아(사용자가 새로고침 2~3번 하면 풀리는 현상),
+ * 체인 전체가 일시적 사유로 실패하면 짧은 백오프 후 서버가 알아서 몇 번 더 재시도합니다.
+ */
+export async function generateText(opts: GenOpts): Promise<string> {
+  // 체인 전체 재시도 횟수(maxDuration 60s 안에 들어오도록 보수적으로). 0,0.8s,2s,3.5s 백오프.
+  const backoffs = [0, 800, 2000, 3500];
+  let last:
+    | { ok: false; detail: string; allConfigError: boolean; transient: boolean }
+    | undefined;
+
+  for (let attempt = 0; attempt < backoffs.length; attempt++) {
+    if (backoffs[attempt]) {
+      // 살짝의 지터로 같은 분당창에서 동시에 몰리지 않게.
+      await sleep(backoffs[attempt] + Math.floor(Math.random() * 250));
+    }
+    const r = await runChainOnce(opts);
+    if (r.ok) return r.text;
+    last = r;
+    // 키 자체가 없으면(설정 문제) 재시도해도 의미 없음 → 즉시 중단.
+    if (r.allConfigError) break;
+    // 일시적 사유가 아니면(예: 잘못된 요청) 더 시도해도 동일 → 중단.
+    if (!r.transient) break;
+  }
+
+  const detail = last?.detail || "";
+  if (last?.allConfigError) {
     throw new AIConfigError(
       `사용 가능한 AI 제공자가 없습니다. 환경변수를 확인하세요. (${detail})`,
     );

@@ -643,5 +643,96 @@
     "category": "보안",
     "source": "138회 4교시",
     "text": "개인정보 보호 강화기술(PET)에 대하여 가. 정의 및 등장 배경 나. 주요 기술 분류 및 핵심 기술 다. 동형암호·차분 프라이버시·합성데이터의 상세 비교를 설명하시오."
+  },
+  {
+    "id": "k136-101",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "136회 1교시",
+    "text": "화이트 레이블 마케팅(White Label Marketing)을 설명하시오."
+  },
+  {
+    "id": "k136-102",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "136회 1교시",
+    "text": "범용 AI(General-Purpose AI) 위험관리 프레임워크를 설명하시오."
+  },
+  {
+    "id": "k136-103",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "136회 1교시",
+    "text": "에이전틱 AI(Agentic AI)를 설명하시오."
+  },
+  {
+    "id": "k136-104",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "136회 1교시",
+    "text": "4차 정규화를 설명하시오."
+  },
+  {
+    "id": "k136-105",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "프록시 디자인 패턴(Proxy Design Pattern)을 설명하시오."
+  },
+  {
+    "id": "k136-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "DevOps의 장점과 단점을 설명하시오."
+  },
+  {
+    "id": "k136-107",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "세그먼테이션 오류(Segmentation Fault)를 설명하시오."
+  },
+  {
+    "id": "k136-108",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "CXL(Compute Express Link)을 설명하시오."
+  },
+  {
+    "id": "k136-109",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "136회 1교시",
+    "text": "서버리스 컴퓨팅(Serverless Computing)을 설명하시오."
+  },
+  {
+    "id": "k136-110",
+    "period": "1교시",
+    "category": "보안",
+    "source": "136회 1교시",
+    "text": "개인정보 안심구역과 데이터안심구역을 비교하여 설명하시오."
+  },
+  {
+    "id": "k136-111",
+    "period": "1교시",
+    "category": "보안",
+    "source": "136회 1교시",
+    "text": "CC(Common Criteria)를 설명하시오."
+  },
+  {
+    "id": "k136-112",
+    "period": "1교시",
+    "category": "보안",
+    "source": "136회 1교시",
+    "text": "타원곡선 암호(ECC, Elliptic Curve Cryptography)를 설명하시오."
+  },
+  {
+    "id": "k136-113",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "136회 1교시",
+    "text": "MCP(Model Context Protocol)를 설명하시오."
   }
 ]
