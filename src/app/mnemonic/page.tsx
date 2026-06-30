@@ -52,6 +52,7 @@ export default function MnemonicPage() {
     sections?: { label: string; mnemonic: string; keywords: string[] }[];
     related?: string[];
     classification?: string;
+    memo?: string;
   } | null>(null);
   const [step, setStep] = useState<Step>("learn");
   const [autoPending, setAutoPending] = useState(false);
@@ -115,7 +116,8 @@ export default function MnemonicPage() {
             sn.keywords?.length ||
             sn.related?.length ||
             sn.sections?.length ||
-            sn.classification)
+            sn.classification ||
+            sn.memo)
           ? sn
           : null,
       );
@@ -272,6 +274,16 @@ export default function MnemonicPage() {
                     </a>
                   ))}
                 </div>
+              </div>
+            )}
+            {subnote?.memo && (
+              <div className="mb-4 rounded-2xl border border-amber-300 bg-amber-50 p-4">
+                <div className="mb-1 text-xs font-bold text-amber-800">
+                  📖 교재 암기법 (서브노트 원본)
+                </div>
+                <p className="whitespace-pre-line text-sm font-medium leading-relaxed text-slate-800">
+                  {subnote.memo}
+                </p>
               </div>
             )}
             <Stepper step={step} onStep={setStep} />
