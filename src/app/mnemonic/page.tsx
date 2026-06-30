@@ -51,6 +51,7 @@ export default function MnemonicPage() {
     keywords: string[];
     sections?: { label: string; mnemonic: string; keywords: string[] }[];
     related?: string[];
+    classification?: string;
   } | null>(null);
   const [step, setStep] = useState<Step>("learn");
   const [autoPending, setAutoPending] = useState(false);
@@ -225,7 +226,30 @@ export default function MnemonicPage() {
 
         {set && (
           <div>
-            <div className="mb-3 flex justify-end">
+            <div className="mb-3 flex items-center justify-between gap-2">
+              {subnote?.classification ? (
+                <div className="flex flex-wrap items-center gap-1 text-xs text-slate-500">
+                  <span className="text-slate-400">📂</span>
+                  {subnote.classification.split(/\s*>\s*/).map((seg, i, arr) => (
+                    <span key={i} className="flex items-center gap-1">
+                      <span
+                        className={
+                          i === arr.length - 1
+                            ? "font-semibold text-brand-600"
+                            : ""
+                        }
+                      >
+                        {seg}
+                      </span>
+                      {i < arr.length - 1 && (
+                        <span className="text-slate-300">›</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <span />
+              )}
               <ShareButton
                 title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
                 text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}

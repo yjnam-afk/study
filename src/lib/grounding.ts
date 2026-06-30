@@ -24,6 +24,8 @@ type Detail = {
   sections?: SubnoteSection[];
   /** 타연관 토픽(쉼표/슬래시 구분 문자열). */
   related?: string;
+  /** 교재 분류 경로(예: "보안 > 정책 > 데이터 3법"). */
+  classification?: string;
 };
 const DETAILS = topicDetails as Record<string, Detail>;
 
@@ -33,10 +35,18 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
   keywords: string[];
   sections: SubnoteSection[];
   related: string[];
+  classification: string;
 } {
   const id = opts.topicId || findIdByTitle(opts.topicTitle);
   const d = id ? DETAILS[id] : undefined;
-  if (!d) return { mnemonic: "", keywords: [], sections: [], related: [] };
+  if (!d)
+    return {
+      mnemonic: "",
+      keywords: [],
+      sections: [],
+      related: [],
+      classification: "",
+    };
   const keywords = Array.from(
     new Set([
       ...(d.defKeywords || []),
@@ -55,6 +65,7 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
     keywords,
     sections: Array.isArray(d.sections) ? d.sections : [],
     related,
+    classification: (d.classification || "").trim(),
   };
 }
 
