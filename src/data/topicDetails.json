@@ -20817,7 +20817,7 @@
     "mnemonic": "인기무부"
   },
   "sec-2": {
-    "detail": "평문을 키와 알고리즘으로 암호문으로 변환해 인증·기밀성·무결성·부인방지를 보장하는 기술. 혼돈(Confusion)·확산(Diffusion)으로 암호학적 강도를 높임.",
+    "detail": "평문(Plain text)을 알고리즘과 암호화 키에 따라 재구성하여, 내용이 불명확한 암호문(Cipher text)으로 만드는 과정.\n무결성·기밀성 확보를 위해 정보를 쉽게 해독되지 않는 형태로 변환하는 기술.\n복호화(Decryption): 암호화의 역과정으로 불명확한 메시지로부터 본래 메시지로 환원하는 과정.",
     "related": "*암호학적 강도 높이기 위해 혼돈 (Confusion)과 확산(Diffusion) 이용 이소타전",
     "defKeywords": [
       "인증(Authentication)",
