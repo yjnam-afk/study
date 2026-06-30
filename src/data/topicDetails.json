@@ -17200,9 +17200,13 @@
     "mnemonic": ""
   },
   "net-31": {
-    "detail": "[정의] 특정 송신자가 하나의 데이터 패킷을 동시에 여러 수신자에게 보내는 방식\n[요소기술] 주소체계, IGMP, 멀티캐스트 라우팅 프로토콜\n[정보 전송 구간] 정보 송신 구간 - 멀티 캐스트 라우팅 구간(멀티캐스트 라우팅 수행0 - IGMP/MLD\n구간(사용자구간, 사용자들 멀티캐스트 그룹 등록/해제 담당)\n[멀티캐스트 그룹관리 프로토콜] Membership Report, Leave Report, General Query, Special Query",
-    "related": "특정 송신자가 하나의 데이터 패킷을 동시에 여러 수신자에게 보내는 서비스 IGMP/Mbone",
-    "defKeywords": [],
+    "detail": "특정 송신자가 하나의 데이터 패킷을 동시에 여러 수신자(그룹)에게 보내는 전송 방식. 송신→멀티캐스트 라우팅→IGMP/MLD(사용자) 구간으로 전달.",
+    "related": "IGMP, Mbone",
+    "defKeywords": [
+      "주소체계",
+      "IGMP",
+      "멀티캐스트 라우팅 프로토콜"
+    ],
     "featureKeywords": [
       "주소체계",
       "IGMP",
@@ -17210,7 +17214,37 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "주I멀",
+    "sections": [
+      {
+        "label": "요소기술",
+        "mnemonic": "주I멀",
+        "keywords": [
+          "주소체계",
+          "IGMP",
+          "멀티캐스트 라우팅 프로토콜"
+        ]
+      },
+      {
+        "label": "정보 전송 구간",
+        "mnemonic": "정멀I",
+        "keywords": [
+          "정보 송신 구간",
+          "멀티캐스트 라우팅 구간",
+          "IGMP/MLD 구간(사용자 구간·그룹 등록/해제)"
+        ]
+      },
+      {
+        "label": "그룹관리 프로토콜",
+        "mnemonic": "MLGS",
+        "keywords": [
+          "Membership Report",
+          "Leave Report",
+          "General Query",
+          "Special Query"
+        ]
+      }
+    ]
   },
   "net-32": {
     "detail": "[정의] 해당 그룹에 속하는 인터페이스 중 가장 가까운 거리에 있는 인터페이스에게만 패킷 전달하는 방식\n[주소형식] Prefix 이후 모두 0, 여러 I/F에 동일 anycast 주소 부여 가능\n[패킷전달] 라우터 I/F에 주로 사용, 메트릭스 참조 가장 가까운 I/F에 전달\n[활용] BGP/DNS/IPv6전환/CDN에서 많이 사용됨",

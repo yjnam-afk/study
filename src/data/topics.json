@@ -8997,7 +8997,7 @@
     "category": "네트워크",
     "group": "Address Types/ / Types of communication in IPv6",
     "importance": "상",
-    "summary": "특정 송신자가 하나의 데이터 패킷을 동시에 여러 수신자에게 보내는 방식"
+    "summary": "특정 송신자가 하나의 데이터 패킷을 동시에 여러 수신자에게 보내는 전송 방식"
   },
   {
     "id": "net-32",
