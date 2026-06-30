@@ -3325,19 +3325,26 @@
     "mnemonic": ""
   },
   "pm-3": {
-    "detail": "[정의] 투자안의 미래 현금유입의 현재가치를 현금유출의 현재가치와 같게 만드는 할인율\n프로젝트 일정액의 투자에 대한 수익률",
+    "detail": "투자안의 미래 현금유입의 현재가치를, 현금유출의 현재가치와 같게 만드는 할인율. 프로젝트 일정액 투자에 대한 수익률.",
     "related": "NPV = 0이 되는 할인율",
-    "defKeywords": [],
+    "defKeywords": [
+      "현금유입 현재가치",
+      "현금유출 현재가치",
+      "할인율",
+      "수익률"
+    ],
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": ""
   },
   "pm-4": {
-    "detail": "[정의] 미래 현금흐름(cash flow)을 현재 기준으로 환산한 수익과 투자금액의 차이\n같은 조건이라면 NPV가 클수록 좋으며 최소한 0보다 높아야 이익",
+    "detail": "미래 현금흐름(cash flow)을 현재 기준으로 환산한 수익과 투자금액의 차이. 같은 조건이면 NPV가 클수록 좋고, 최소 0보다 커야 이익.",
     "related": "",
     "defKeywords": [
-      "cash flow"
+      "현금흐름 현재가치",
+      "투자금액",
+      "차이(수익)"
     ],
     "featureKeywords": [],
     "applicationKeywords": [],
@@ -3464,10 +3471,22 @@
     "mnemonic": "기프매"
   },
   "pm-12": {
-    "detail": "[정의] 프로젝트 관리를 하기 위한 프로세스 그룹 5개\n[절차] 착수, 기획, 이행, 통제, 종료 프로세스 그룹 5개\n5개 지식영역으로, 매핑한 표로 서브프로세스까지 이해 및 일부 암기할 것",
+    "detail": "프로젝트 관리를 위한 5개 프로세스 그룹(착수·계획·실행·통제·종료). 5개 지식영역과 매핑된 표로 서브프로세스까지 이해.",
     "related": "예측적 개발",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "defKeywords": [
+      "착수",
+      "계획(기획)",
+      "실행(이행)",
+      "통제",
+      "종료"
+    ],
+    "featureKeywords": [
+      "착수",
+      "계획(기획)",
+      "실행(이행)",
+      "통제",
+      "종료"
+    ],
     "applicationKeywords": [
       "착수",
       "기획",
@@ -3476,7 +3495,20 @@
       "5개 지식영역으로"
     ],
     "plusKeywords": [],
-    "mnemonic": "착계실통종"
+    "mnemonic": "착계실통종",
+    "sections": [
+      {
+        "label": "프로세스 그룹(5개)",
+        "mnemonic": "착계실통종",
+        "keywords": [
+          "착수",
+          "계획(기획)",
+          "실행(이행)",
+          "통제",
+          "종료"
+        ]
+      }
+    ]
   },
   "pm-13": {
     "detail": "통합관리(Integration)\n범위관리(Scope)\n일정관리(Schedule)\n원가관리(Cost)\n품질관리(Quality)\n자원관리(Resource)\n의사소통관리(Communication)\n위험관리(Risk)\n조달관리(Procurement)\n이해관계자관리(Stakeholder)",
@@ -30604,18 +30636,21 @@
     ]
   },
   "ai-17": {
-    "detail": "[정의] 환경 안에서 정의된 에이전트가 현재 상태를 인식하여 보상을 최대화하는 행동(또는 행동 순서)을 선택하는 학습 방법\n[구성요소] 에행환리상\n- Agent, 행동, 환경, 리워드, 상태\n[종류] 브몬마 큐다디\n- Brute force(전수 계산), Monte Carlo(몬테카를로), MDP(Markov Decision Process), Q-Learning(큐러닝), Dynamic Programming(동적계획법), DQN(Deep Q-Network)",
+    "detail": "환경 안의 에이전트가 현재 상태를 인식해, 보상을 최대화하는 행동 혹은 행동 순서를 선택하는 학습.",
     "related": "역강화학습, 모방학습",
     "defKeywords": [
-      "에이전트-환경 상호작용",
-      "보상 최대화 행동 선택"
+      "Agent(에이전트)",
+      "행동",
+      "환경",
+      "리워드",
+      "상태"
     ],
     "featureKeywords": [
       "Agent(에이전트)",
-      "행동(Action)",
-      "환경(Environment)",
-      "리워드(Reward)",
-      "상태(State)"
+      "행동",
+      "환경",
+      "리워드",
+      "상태"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
@@ -30626,22 +30661,22 @@
         "mnemonic": "에행환리상",
         "keywords": [
           "Agent(에이전트)",
-          "행동(Action)",
-          "환경(Environment)",
-          "리워드(Reward)",
-          "상태(State)"
+          "행동",
+          "환경",
+          "리워드",
+          "상태"
         ]
       },
       {
         "label": "종류",
-        "mnemonic": "브몬마 큐다디",
+        "mnemonic": "브몬마큐다디",
         "keywords": [
-          "Brute force(전수 계산)",
-          "Monte Carlo(몬테카를로)",
+          "Brute force",
+          "Monte Carlo methods",
           "MDP(Markov Decision Process)",
-          "Q-Learning(큐러닝)",
+          "Q-Learning",
           "Dynamic Programming(동적계획법)",
-          "DQN(Deep Q-Network)"
+          "DQN"
         ]
       }
     ]
