@@ -38,6 +38,7 @@ export default function PlanPage() {
   const [selected, setSelected] = useState<number>(-1);
   const [topicDone, setTopicDone] = useState<Set<string>>(new Set());
   const [overrides, setOverrides] = useState<Overrides>({});
+  const [monthIdx, setMonthIdx] = useState(0);
 
   useEffect(() => {
     setPerDay(getPerDay());
@@ -45,6 +46,12 @@ export default function PlanPage() {
     setOverrides(loadOverrides());
     const ti = todayIndex();
     setSelected(ti >= 0 && ti < PLAN_TOTAL_DAYS ? ti : 0);
+    // 기본으로 '오늘이 속한 달'을 펼친다.
+    const now = new Date();
+    const mi = months.findIndex(
+      ([y, m]) => y === now.getFullYear() && m === now.getMonth(),
+    );
+    if (mi >= 0) setMonthIdx(mi);
   }, []);
 
   const ordered = useMemo(() => orderedTopics(), []);
@@ -161,8 +168,9 @@ export default function PlanPage() {
         </div>
       </div>
 
-      <div className="space-y-6">
-        {months.map(([y, m]) => {
+      <div>
+        {(() => {
+          const [y, m] = months[monthIdx];
           const first = new Date(y, m, 1);
           const daysInMonth = new Date(y, m + 1, 0).getDate();
           const lead = first.getDay();
@@ -174,9 +182,42 @@ export default function PlanPage() {
               key={`${y}-${m}`}
               className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
             >
-              <h3 className="mb-3 text-sm font-bold text-slate-800">
-                {y}년 {m + 1}월
-              </h3>
+              {/* 월 전환: 한 번에 한 달만 — 세 달 세로 나열 방지 */}
+              <div className="mb-3 flex items-center justify-between gap-2">
+                <button
+                  onClick={() => setMonthIdx((i) => Math.max(0, i - 1))}
+                  disabled={monthIdx === 0}
+                  className="rounded-lg border border-slate-200 px-2.5 py-1 text-sm text-slate-600 disabled:opacity-30 hover:bg-slate-50"
+                  aria-label="이전 달"
+                >
+                  ‹
+                </button>
+                <div className="flex items-center gap-1.5">
+                  {months.map(([yy, mm], i) => (
+                    <button
+                      key={`${yy}-${mm}`}
+                      onClick={() => setMonthIdx(i)}
+                      className={`rounded-lg px-3 py-1 text-sm font-bold transition ${
+                        i === monthIdx
+                          ? "bg-brand-600 text-white"
+                          : "border border-slate-200 text-slate-600 hover:bg-slate-50"
+                      }`}
+                    >
+                      {mm + 1}월
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() =>
+                    setMonthIdx((i) => Math.min(months.length - 1, i + 1))
+                  }
+                  disabled={monthIdx === months.length - 1}
+                  className="rounded-lg border border-slate-200 px-2.5 py-1 text-sm text-slate-600 disabled:opacity-30 hover:bg-slate-50"
+                  aria-label="다음 달"
+                >
+                  ›
+                </button>
+              </div>
               <div className="grid grid-cols-7 gap-1 text-center">
                 {WEEK.map((w, i) => (
                   <div
@@ -247,7 +288,7 @@ export default function PlanPage() {
               </div>
             </div>
           );
-        })}
+        })()}
       </div>
 
       {selected >= 0 && selected < covered && (
