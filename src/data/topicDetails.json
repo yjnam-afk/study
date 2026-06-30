@@ -5523,13 +5523,38 @@
     "mnemonic": "기무근경"
   },
   "se-39": {
-    "detail": "[상세화방안] 기요구데품\n기능 세분화 및 FP연계 측면\n요구성능 목표수립 측면\n도입시스템 효과적 구성 측면\n데이터보호 기밀성 및 무결성 측면\n목표시스템 품질 만족 요건 측면",
+    "detail": "공공SW 제안요청서(RFP) 작성을 위해 요구사항을 5개 측면으로 상세화하는 실무 가이드라인(2018년 공공SW사업 제안요청서 작성 가이드).",
     "related": "[출처] 2018년 공공SW사업 제안요청서 작성을 위한 요구사항 상세화 실무가이드라인",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "defKeywords": [
+      "기능 세분화 및 FP연계 측면",
+      "요구성능 목표수립 측면",
+      "도입시스템 효과적 구성 측면",
+      "데이터보호 기밀성 및 무결성 측면",
+      "목표시스템 품질 만족 요건 측면"
+    ],
+    "featureKeywords": [
+      "기능 세분화 및 FP연계 측면",
+      "요구성능 목표수립 측면",
+      "도입시스템 효과적 구성 측면",
+      "데이터보호 기밀성 및 무결성 측면",
+      "목표시스템 품질 만족 요건 측면"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "기요구데품"
+    "mnemonic": "기요구데품",
+    "sections": [
+      {
+        "label": "상세화 방안",
+        "mnemonic": "기요구데품",
+        "keywords": [
+          "기능 세분화 및 FP연계 측면",
+          "요구성능 목표수립 측면",
+          "도입시스템 효과적 구성 측면",
+          "데이터보호 기밀성 및 무결성 측면",
+          "목표시스템 품질 만족 요건 측면"
+        ]
+      }
+    ]
   },
   "se-40": {
     "detail": "공공소프트웨어사업에서 불필요한 과업변경을 방지하고 적정한 과업변경 \n판단기준, 방법 및 절차를 제시한 가이드라인\n[배경] 요구과미업소\n요구사항 모호 > 프로젝트 진행 요구사항의 점진적 구체화 > 과업 변경 불가피 > \n계약금액 기간 조정 등 후속 조치 미흡 > 업무량 증가 및 사업수행기간 예산 부족 > \n소프트웨어 근로환경 열악 원인\n[근거] 진시계\n- 소프트웨어진흥법 - 회\n - 5장 50조 과업심의위원회\n- 소프트웨어진흥법 시행령 - 구운절\n - 제 45조 과업변경심의위원회 구성 : 전문가(5명 이상 10명 이내)로 즉시 구성, 14일 이내 \n - 제 46조 과업심의위원회 운영 \n - 제 47조 과업내용의 확정/변경 절차\n- 소프트웨어사업 계약 및 관리감독에 관한 지침 - 신심결\n - 제 26조 과업내용의 변경 신청\n - 제 27조 과업 내용 변경 심의 기준\n - 제 28조 과업내용 변경 결과 조치",
@@ -21042,23 +21067,79 @@
     "mnemonic": ""
   },
   "sec-5": {
-    "detail": "[운영모드] ECB(Electronic CodeBook,사용금지), CBC(Cipher Block Chaning,권장), \nPCBC(Propagating Cipher Block Chaining)\nCFB(Cipher Feedback,미권장), OFB(Output FeedBack), CTR(Counter,권장)\n[증명방법] 차분공격(Differential Cryptanalysis,입력값에 따른 출력 값 변화), 선형공격(Linear Cryptanalysis)\n[암호구조] Feistel(좌우분리,XOR,Round), SPN(S-Box,P-Box,혼돈,확산)\n[유형] DES, SEED, AES, RC5, ARIA",
+    "detail": "평문을 고정 크기 블록 단위로 키와 함께 암호화하는 대칭키 방식. 운영모드(ECPCOC)·암호구조(Feistel/SPN)로 혼돈·확산 구현. 기본 연산: 스왑·XOR·쉬프트·패딩.",
     "related": "스왑, XOR, 쉬프트, 패딩",
-    "defKeywords": [],
+    "defKeywords": [
+      "ECB(사용금지)",
+      "CBC(권장)",
+      "PCBC",
+      "CFB(미권장)",
+      "OFB",
+      "CTR(권장)"
+    ],
     "featureKeywords": [
+      "ECB(사용금지)",
+      "CBC(권장)",
+      "PCBC",
+      "CFB(미권장)",
+      "OFB",
+      "CTR(권장)"
+    ],
+    "applicationKeywords": [
       "DES",
       "SEED",
       "AES",
       "RC5",
       "ARIA"
     ],
-    "applicationKeywords": [
-      "Linear Cryptanalysis",
-      "차분공격",
-      "선형공격"
+    "plusKeywords": [
+      "스왑",
+      "XOR",
+      "쉬프트",
+      "패딩"
     ],
-    "plusKeywords": [],
-    "mnemonic": "ECPCOC"
+    "mnemonic": "ECPCOC",
+    "sections": [
+      {
+        "label": "운영모드",
+        "mnemonic": "ECPCOC",
+        "keywords": [
+          "ECB(사용금지)",
+          "CBC(권장)",
+          "PCBC",
+          "CFB(미권장)",
+          "OFB",
+          "CTR(권장)"
+        ]
+      },
+      {
+        "label": "암호구조",
+        "mnemonic": "FS",
+        "keywords": [
+          "Feistel(좌우분리·XOR·Round)",
+          "SPN(S-Box·P-Box·혼돈·확산)"
+        ]
+      },
+      {
+        "label": "공격(증명방법)",
+        "mnemonic": "차선",
+        "keywords": [
+          "차분공격(Differential)",
+          "선형공격(Linear)"
+        ]
+      },
+      {
+        "label": "유형",
+        "mnemonic": "DSARA",
+        "keywords": [
+          "DES",
+          "SEED",
+          "AES",
+          "RC5",
+          "ARIA"
+        ]
+      }
+    ]
   },
   "sec-6": {
     "detail": "공개키 암호화\n대칭 암호화와 비대칭(공개키) 암호화",
