@@ -114,7 +114,8 @@ export default function MnemonicPage() {
           (sn.mnemonic ||
             sn.keywords?.length ||
             sn.related?.length ||
-            sn.sections?.length)
+            sn.sections?.length ||
+            sn.classification)
           ? sn
           : null,
       );
