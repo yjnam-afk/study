@@ -137,10 +137,22 @@ export default function ExplainPage() {
           </select>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 flex flex-wrap items-center gap-3">
           <Button onClick={generate} disabled={loading}>
             {loading ? "설명 중…" : "설명 보기"}
           </Button>
+          {topic.trim() && (
+            <a
+              href={`/mnemonic?topic=${encodeURIComponent(topic.trim())}${
+                topics.find((x) => x.title === topic.trim())
+                  ? `&topicId=${topics.find((x) => x.title === topic.trim())!.id}`
+                  : ""
+              }&auto=1`}
+              className="rounded-lg border border-violet-200 bg-violet-50 px-3 py-2 text-sm font-medium text-violet-700 hover:bg-violet-100"
+            >
+              🥷 이 토픽 두음신공 학습 →
+            </a>
+          )}
         </div>
       </div>
 
