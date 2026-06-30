@@ -10205,7 +10205,13 @@
       "SLA",
       "보안 및 프라이버시"
     ],
-    "plusKeywords": [],
+    "plusKeywords": [
+      "공용(Public)",
+      "사설(Private)",
+      "혼합(Hybrid)",
+      "On-Demand",
+      "Pay-Per-Use"
+    ],
     "mnemonic": "온멀유서",
     "sections": [
       {
@@ -10267,6 +10273,25 @@
           "자원 유틸리티",
           "SLA",
           "보안 및 프라이버시"
+        ]
+      },
+      {
+        "label": "배포모델(인프라)",
+        "mnemonic": "공사혼",
+        "keywords": [
+          "공용(Public)",
+          "사설(Private)",
+          "혼합(Hybrid)"
+        ]
+      },
+      {
+        "label": "클라우드 전환기술",
+        "mnemonic": "OADV",
+        "keywords": [
+          "OS",
+          "App",
+          "Data",
+          "Validation(전환검증)"
         ]
       }
     ]
