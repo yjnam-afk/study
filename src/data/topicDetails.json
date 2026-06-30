@@ -150,18 +150,23 @@
     ]
   },
   "gj-5": {
-    "detail": "[정의] 서비스 수준 협약서에 대한 협약의 성과, 측정/평가 및 향후 개선 방안을 모색하기 위한 관리 체계\n[구성요소] 카스(에)오 플로(리)엔\n서비스 카탈로그, SLA, OLA, Service Quality Plan, Service Report, SLM엔진(Report, Monitoring)\n[추진 프로세스]계계운평\n- 계획단계 : 계획수립, 사전 준비, 사용자 인식 조사\n- 계약단계 : 서비스 카탈로그 생성, SLA 작성, SLA 협상, 관련 계약 검토, SLA 체결\n- 운영단계 : 모니터링과 문서화, 서비스 검토(Review)\n- 평가단계 : 평가 및 개선",
+    "detail": "SLA(서비스 수준 협약서)에 대한 협약의 성과를 측정·평가하고 향후 개선 방안을 모색하기 위한 관리 체계. 계획→계약→운영→평가 단계로 추진.",
     "related": "HA, FTS",
     "defKeywords": [
-      "측정"
-    ],
-    "featureKeywords": [
-      "Report",
       "서비스 카탈로그",
       "SLA",
       "OLA",
+      "Service Quality Plan",
       "Service Report",
-      "SLM엔진"
+      "SLM엔진(Report·Monitoring)"
+    ],
+    "featureKeywords": [
+      "서비스 카탈로그",
+      "SLA",
+      "OLA",
+      "Service Quality Plan",
+      "Service Report",
+      "SLM엔진(Report·Monitoring)"
     ],
     "applicationKeywords": [
       "Review",
@@ -175,7 +180,31 @@
       "서비스 검토"
     ],
     "plusKeywords": [],
-    "mnemonic": "카스"
+    "mnemonic": "카스(에)오 플로(리)엔",
+    "sections": [
+      {
+        "label": "구성요소",
+        "mnemonic": "카스(에)오 플로(리)엔",
+        "keywords": [
+          "서비스 카탈로그",
+          "SLA",
+          "OLA",
+          "Service Quality Plan",
+          "Service Report",
+          "SLM엔진(Report·Monitoring)"
+        ]
+      },
+      {
+        "label": "추진 프로세스",
+        "mnemonic": "계계운평",
+        "keywords": [
+          "계획단계(계획수립·사전준비·사용자 인식조사)",
+          "계약단계(카탈로그 생성·SLA 작성·협상·검토·체결)",
+          "운영단계(모니터링·문서화·서비스 검토)",
+          "평가단계(평가 및 개선)"
+        ]
+      }
+    ]
   },
   "gj-6": {
     "detail": "시스템 가용성에서 SLO: \nSLO는 서비스가 달성해야 할 신뢰성 목표치를 정량적으로 정의한 내부 운영 기준\n2) 에러 버짓(Error Budget) 설명.\n에러 버짓은 SLO를 기준으로 허용 가능한 실패(에러)의 총량\n-> “망가져도 되는 한도(0.1%)”\n결론) 100-0.1=99.9(SLO)",
