@@ -38,6 +38,15 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
   classification: string;
 } {
   const id = opts.topicId || findIdByTitle(opts.topicTitle);
+  // 교재 분류: 명시적 classification이 없으면 분야(category) > 그룹(group) > 토픽 으로 자동 구성.
+  const t = id
+    ? (topics as { id: string; title: string; category?: string; group?: string }[]).find(
+        (x) => x.id === id,
+      )
+    : undefined;
+  const autoClassification = t
+    ? [t.category, t.group, t.title].filter((s) => s && String(s).trim()).join(" > ")
+    : "";
   const d = id ? DETAILS[id] : undefined;
   if (!d)
     return {
@@ -45,7 +54,7 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
       keywords: [],
       sections: [],
       related: [],
-      classification: "",
+      classification: autoClassification,
     };
   const keywords = Array.from(
     new Set([
@@ -65,7 +74,7 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
     keywords,
     sections: Array.isArray(d.sections) ? d.sections : [],
     related,
-    classification: (d.classification || "").trim(),
+    classification: (d.classification || "").trim() || autoClassification,
   };
 }
 
