@@ -11149,7 +11149,7 @@
     "category": "보안",
     "group": "암호화",
     "importance": "상",
-    "summary": "[목적] 인증(Authentication), 기밀성(Confidentiality), 무결성(Integrity), 부인방지(NonReputation)"
+    "summary": "평문을 알고리즘과 키로 재구성해 쉽게 해독되지 않는 암호문으로 변환하여 기밀성·무결성을 확보하는 기술"
   },
   {
     "id": "sec-3",
