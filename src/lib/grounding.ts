@@ -26,6 +26,8 @@ type Detail = {
   related?: string;
   /** 교재 분류 경로(예: "보안 > 정책 > 데이터 3법"). */
   classification?: string;
+  /** 교재 암기법 원문(여러 두음 줄 포함). 엑셀 '암기법' 컬럼 그대로. */
+  memo?: string;
 };
 const DETAILS = topicDetails as Record<string, Detail>;
 
@@ -36,6 +38,7 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
   sections: SubnoteSection[];
   related: string[];
   classification: string;
+  memo: string;
 } {
   const id = opts.topicId || findIdByTitle(opts.topicTitle);
   // 교재 분류: 명시적 classification이 없으면 분야(category) > 그룹(group) > 토픽 으로 자동 구성.
@@ -55,6 +58,7 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
       sections: [],
       related: [],
       classification: autoClassification,
+      memo: "",
     };
   const keywords = Array.from(
     new Set([
@@ -75,6 +79,7 @@ export function subnoteFor(opts: { topicId?: string; topicTitle?: string }): {
     sections: Array.isArray(d.sections) ? d.sections : [],
     related,
     classification: (d.classification || "").trim() || autoClassification,
+    memo: (d.memo || "").trim(),
   };
 }
 
