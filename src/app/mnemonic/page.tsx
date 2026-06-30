@@ -105,9 +105,16 @@ export default function MnemonicPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "생성 실패");
       setSet(data.set);
+      // related·sections는 mnemonic/keywords와 독립이므로 함께 살린다
+      // (키워드가 비어도 연관 토픽·섹션 두음은 노출되도록).
+      const sn = data.subnote;
       setSubnote(
-        data.subnote && (data.subnote.mnemonic || data.subnote.keywords?.length)
-          ? data.subnote
+        sn &&
+          (sn.mnemonic ||
+            sn.keywords?.length ||
+            sn.related?.length ||
+            sn.sections?.length)
+          ? sn
           : null,
       );
       setStep("learn");

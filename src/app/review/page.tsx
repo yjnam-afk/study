@@ -34,16 +34,24 @@ const IMP_STYLE: Record<string, string> = {
   출제예상: "bg-violet-100 text-violet-700",
 };
 const IMP_FILTERS = ["전체", "상", "중", "하", "출제예상"];
+const PAGE_SIZE = 50;
 
 export default function ReviewPage() {
   const [state, setState] = useState<Record<string, ReviewItem>>({});
   const [ready, setReady] = useState(false);
   const [impFilter, setImpFilter] = useState("전체");
+  const [query, setQuery] = useState("");
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     setState(loadReview());
     setReady(true);
   }, []);
+
+  // 필터·검색이 바뀌면 첫 페이지로
+  useEffect(() => {
+    setPage(0);
+  }, [impFilter, query]);
 
   function update(next: Record<string, ReviewItem>) {
     setState(next);
@@ -164,14 +172,57 @@ export default function ReviewPage() {
         })}
       </div>
 
-      <div className="space-y-3">
-        {topics
+      <div className="mb-4">
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="🔎 토픽·분야 검색 (전체 2,603개 중에서 찾기)"
+          className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm outline-none focus:border-brand-400"
+        />
+      </div>
+
+      {(() => {
+        const q = query.trim().toLowerCase();
+        const filtered = topics
           .filter((t) => impFilter === "전체" || t.importance === impFilter)
+          .filter(
+            (t) =>
+              !q ||
+              t.title.toLowerCase().includes(q) ||
+              (t.category || "").toLowerCase().includes(q) ||
+              (t.summary || "").toLowerCase().includes(q),
+          )
           .sort(
             (a, b) =>
               (IMP_ORDER[a.importance] ?? 9) - (IMP_ORDER[b.importance] ?? 9),
-          )
-          .map((t) => {
+          );
+        const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+        const cur = Math.min(page, totalPages - 1);
+        const pageItems = filtered.slice(
+          cur * PAGE_SIZE,
+          cur * PAGE_SIZE + PAGE_SIZE,
+        );
+        return (
+          <>
+            <div className="mb-3 flex items-center justify-between text-xs text-slate-500">
+              <span>
+                검색 결과 <b className="text-slate-700">{filtered.length}</b>개
+                {filtered.length > PAGE_SIZE && (
+                  <>
+                    {" "}
+                    · {cur * PAGE_SIZE + 1}–
+                    {Math.min(cur * PAGE_SIZE + PAGE_SIZE, filtered.length)} 표시
+                  </>
+                )}
+              </span>
+              {totalPages > 1 && (
+                <span>
+                  {cur + 1} / {totalPages} 페이지
+                </span>
+              )}
+            </div>
+            <div className="space-y-3">
+              {pageItems.map((t) => {
           const item: ReviewItem = ready ? getItem(state, t.id) : getItem({}, t.id);
           const showDue = item.rounds > 0 && item.status !== "done";
           const dleft = daysUntilDue(item);
@@ -250,7 +301,32 @@ export default function ReviewPage() {
             </div>
           );
         })}
-      </div>
+            </div>
+
+            {totalPages > 1 && (
+              <div className="mt-5 flex items-center justify-center gap-2">
+                <button
+                  onClick={() => setPage((p) => Math.max(0, p - 1))}
+                  disabled={cur === 0}
+                  className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-600 disabled:opacity-30 hover:bg-slate-50"
+                >
+                  ‹ 이전
+                </button>
+                <span className="px-2 text-sm text-slate-500">
+                  {cur + 1} / {totalPages}
+                </span>
+                <button
+                  onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                  disabled={cur >= totalPages - 1}
+                  className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-600 disabled:opacity-30 hover:bg-slate-50"
+                >
+                  다음 ›
+                </button>
+              </div>
+            )}
+          </>
+        );
+      })()}
     </div>
   );
 }

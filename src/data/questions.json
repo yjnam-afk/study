@@ -643,5 +643,180 @@
     "category": "보안",
     "source": "138회 4교시",
     "text": "개인정보 보호 강화기술(PET)에 대하여 가. 정의 및 등장 배경 나. 주요 기술 분류 및 핵심 기술 다. 동형암호·차분 프라이버시·합성데이터의 상세 비교를 설명하시오."
+  },
+  {
+    "id": "k136-101",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "136회 1교시",
+    "text": "화이트 레이블 마케팅(White Label Marketing)을 설명하시오."
+  },
+  {
+    "id": "k136-102",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "136회 1교시",
+    "text": "범용 AI(General-Purpose AI) 위험관리 프레임워크를 설명하시오."
+  },
+  {
+    "id": "k136-103",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "136회 1교시",
+    "text": "에이전틱 AI(Agentic AI)를 설명하시오."
+  },
+  {
+    "id": "k136-104",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "136회 1교시",
+    "text": "4차 정규화를 설명하시오."
+  },
+  {
+    "id": "k136-105",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "프록시 디자인 패턴(Proxy Design Pattern)을 설명하시오."
+  },
+  {
+    "id": "k136-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "DevOps의 장점과 단점을 설명하시오."
+  },
+  {
+    "id": "k136-107",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "세그먼테이션 오류(Segmentation Fault)를 설명하시오."
+  },
+  {
+    "id": "k136-108",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "136회 1교시",
+    "text": "CXL(Compute Express Link)을 설명하시오."
+  },
+  {
+    "id": "k136-109",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "136회 1교시",
+    "text": "서버리스 컴퓨팅(Serverless Computing)을 설명하시오."
+  },
+  {
+    "id": "k136-110",
+    "period": "1교시",
+    "category": "보안",
+    "source": "136회 1교시",
+    "text": "개인정보 안심구역과 데이터안심구역을 비교하여 설명하시오."
+  },
+  {
+    "id": "k136-111",
+    "period": "1교시",
+    "category": "보안",
+    "source": "136회 1교시",
+    "text": "CC(Common Criteria)를 설명하시오."
+  },
+  {
+    "id": "k136-112",
+    "period": "1교시",
+    "category": "보안",
+    "source": "136회 1교시",
+    "text": "타원곡선 암호(ECC, Elliptic Curve Cryptography)를 설명하시오."
+  },
+  {
+    "id": "k136-113",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "136회 1교시",
+    "text": "MCP(Model Context Protocol)를 설명하시오."
+  },
+  {
+    "id": "k139-301",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "139회 3교시",
+    "text": "기업의 업무구조를 바꾸는 다중 에이전트 시스템(MAS, Multi Agent System)에 관하여 다음을 설명하시오. 가. 다중 에이전트 시스템의 정의 및 필요성 나. 단일 에이전트 시스템과 다중 에이전트 시스템 비교 다. 다중 에이전트 시스템의 효과와 고려사항"
+  },
+  {
+    "id": "k139-302",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "139회 3교시",
+    "text": "데이터 분석에서 이상치(Outlier)와 편향(Bias)의 개념을 설명하고, 분석 결과에 미치는 영향 및 처리 방안을 설명하시오."
+  },
+  {
+    "id": "k139-303",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "139회 3교시",
+    "text": "명확하지 않은 요구사항으로 인해 발생하는 소프트웨어 품질저하 문제를 아래의 관점에서 설명하시오. 가. 기술부채(Technical Debt) 나. 코드스멜(Code Smell) 다. 리팩토링(Refactoring)"
+  },
+  {
+    "id": "k139-304",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "139회 3교시",
+    "text": "소프트웨어 테스트에 대하여 다음을 설명하시오. 가. 소프트웨어 테스트의 7대 원리 나. 화이트박스 테스트와 블랙박스 테스트의 개념 및 기법 비교 다. 명세(점수 0~100, 90이상 A·80이상 B·70이상 C·60이상 D·60미만 F·범위 외 ERROR)를 기반으로 동등 분할(Equivalence Partitioning)과 경계값 분석(Boundary Value Analysis) 기법을 적용한 테스트 케이스 작성"
+  },
+  {
+    "id": "k139-305",
+    "period": "3교시",
+    "category": "네트워크",
+    "source": "139회 3교시",
+    "text": "이진 탐색 트리와 라우팅 테이블 탐색 알고리즘의 상관관계에 대하여 설명하시오."
+  },
+  {
+    "id": "k139-306",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "139회 3교시",
+    "text": "AI(인공지능) 데이터 수요 증가에 따라 체계적인 데이터 품질관리가 중요해지고 있다. AI 학습용 데이터 품질관리에 대하여 다음을 설명하시오. 가. AI 학습용 데이터 특성 나. AI 학습용 데이터 품질관리 지표 다. AI 학습용 데이터 품질관리 활동"
+  },
+  {
+    "id": "k139-401",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "139회 4교시",
+    "text": "빅데이터 분석기법 중 클러스터링, 필터링, 이상치 탐지를 설명하시오."
+  },
+  {
+    "id": "k139-402",
+    "period": "4교시",
+    "category": "운영체제",
+    "source": "139회 4교시",
+    "text": "운영체제의 프로세스 동기화 기법 중 뮤택스(Mutex), 세마포어(Semaphore), 모니터(Monitor)에 대하여 설명하시오."
+  },
+  {
+    "id": "k139-403",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "139회 4교시",
+    "text": "전쟁 등과 같은 재난, 재해를 대비한 데이터센터(IDC)의 지리적 위치선정 및 대응전략을 설명하시오."
+  },
+  {
+    "id": "k139-404",
+    "period": "4교시",
+    "category": "운영체제",
+    "source": "139회 4교시",
+    "text": "가상메모리에 대하여 다음을 설명하시오. 가. 가상메모리 관리기법 나. 가상메모리 단편화 유형 다. 가상메모리 단편화를 최소화하기 위한 방안"
+  },
+  {
+    "id": "k139-405",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "139회 4교시",
+    "text": "VPP(Virtual Power Plant) 가상발전소에서는 전력수요 예측을 위해 AI 기술을 사용하고 있다. 이와 관련해서 다음을 설명하시오. 가. 시계열딥러닝(Time-series Deep Learning) 나. 강화학습(Reinforcement Learning) 다. 그래프신경망(Graph Neural Network)"
+  },
+  {
+    "id": "k139-406",
+    "period": "4교시",
+    "category": "네트워크",
+    "source": "139회 4교시",
+    "text": "네트워크 서브네팅(Subnetting)과 관련하여 다음을 설명하시오. 가. 슈퍼네팅(Supernetting)과 서브네팅(Subnetting) 개념 나. 192.168.0.0/22 네트워크 대역을 사용하여 인사팀 125명, 영업팀 250명, 보안팀 125명, 개발팀 500명이 사용할 수 있도록 4개의 VLSM(Variable Length Subnet Mask)으로 분할한 각각의 Subnet Mask 값과 할당 가능한 Host IP 대역"
   }
 ]

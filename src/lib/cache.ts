@@ -14,23 +14,32 @@ export function hashKey(s: string): string {
   return h.toString(36);
 }
 
-/** 캐시에 있으면 그대로, 없으면 produce()로 생성 후 저장한다. */
+/** 캐시에 있으면 그대로, 없으면 produce()로 생성 후 저장한다.
+ *  valid(선택): 생성 결과가 "완성본"일 때만 true를 반환하도록 주면,
+ *  검증을 통과한 결과만 캐시에 저장한다(한도 초과 시 약한 모델이 낸 잘린/빈
+ *  결과가 캐시에 박혀 계속 재노출되는 문제 방지). 불완전하면 저장하지 않아
+ *  다음 호출 때 자동으로 다시 생성한다. */
 export async function cached<T>(
   key: string,
   ttlSec: number,
   produce: () => Promise<T>,
+  valid?: (v: T) => boolean,
 ): Promise<T> {
   const full = PREFIX + key;
   if (dbConfigured()) {
     try {
       const hit = await redis<string | null>("GET", full);
-      if (hit) return JSON.parse(hit) as T;
+      if (hit) {
+        const parsed = JSON.parse(hit) as T;
+        // 과거에 저장된 불량(불완전) 캐시는 무시하고 새로 생성한다.
+        if (!valid || valid(parsed)) return parsed;
+      }
     } catch {
       // 캐시 조회 실패는 무시하고 생성 진행
     }
   }
   const value = await produce();
-  if (dbConfigured()) {
+  if (dbConfigured() && (!valid || valid(value))) {
     try {
       await redis("SET", full, JSON.stringify(value), "EX", ttlSec);
     } catch {
