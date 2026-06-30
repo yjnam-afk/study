@@ -10180,30 +10180,96 @@
     "mnemonic": ""
   },
   "ds-30": {
-    "detail": "[정의] 인터넷 기술을 활용하여 다수의 고객들에게 높은 수준의 확장성을 가진 IT 자원들을 ‘서비스’로\n제공하는 컴퓨팅\n[구성요소] 유저 인터랙션 I/F, 서비스 카탈로그, System mgmt, 프로비저닝 tool, 모니터링&미터링, 서버\n[기술요소] 가상화기술, 대규모분산처리, Open I/F, 서비스프로비저닝, 자원 유틸리티, SLA, \n보안 및 프라이버시\n[특징]온멀유서\nOn-Demand, Multi-tenants, Multi-Client, Utility Computing, 서비스를 위한 서비스\n[6대 핵심 기술] 서대관(멀) C분병\n서버가상화, 대용량클라우드, 가상서버관리(멀티테넌시), CDN, 분산스토리지, 병렬처리\n[9대 주변 기술] 오모빌네 보P브모\n오픈API, 모니터링, 빌링, 네트워크가상화(VLan), 보안SLA, P2V/V2V, \nVPC(Virtual Private Cloud), 모바일 클라우드",
+    "detail": "인터넷 기술을 활용하여 다수의 고객에게 높은 확장성을 가진 IT 자원들을 '서비스'로 제공하는 컴퓨팅. 가상화·분산처리 기반으로 On-Demand·Pay-Per-Use 제공.",
     "related": "On-Demand, Pay-Per-Use 인프라(Public, Private, Hybird) 오픈스택, CPNDS SLA, 서비스카탈로그 OS, App, Data, Validation(전환기술) 사클마확서안(전환절차) 서대가C분병 오모빌네클SPV모",
     "defKeywords": [
-      "제공하는 컴퓨팅"
+      "유저 인터랙션 I/F",
+      "서비스 카탈로그",
+      "System Mgmt",
+      "프로비저닝 Tool",
+      "모니터링&미터링",
+      "서버"
     ],
     "featureKeywords": [
-      "유저 인터랙션 I",
-      "F",
-      "서비스 카탈로그",
-      "System mgmt",
-      "프로비저닝 tool",
-      "모니터링&미터링",
-      "서버",
+      "On-Demand(온디맨드)",
+      "Multi-tenant·Multi-Client(멀티)",
+      "Utility Computing(유틸리티)",
+      "서비스를 위한 서비스"
+    ],
+    "applicationKeywords": [
       "가상화기술",
-      "대규모분산처리",
-      "Open I",
-      "서비스프로비저닝",
+      "대규모 분산처리",
+      "Open I/F",
+      "서비스 프로비저닝",
       "자원 유틸리티",
       "SLA",
       "보안 및 프라이버시"
     ],
-    "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "온멀유서"
+    "mnemonic": "온멀유서",
+    "sections": [
+      {
+        "label": "특징",
+        "mnemonic": "온멀유서",
+        "keywords": [
+          "On-Demand(온디맨드)",
+          "Multi-tenant·Multi-Client(멀티)",
+          "Utility Computing(유틸리티)",
+          "서비스를 위한 서비스"
+        ]
+      },
+      {
+        "label": "6대 핵심기술",
+        "mnemonic": "서대관C분병",
+        "keywords": [
+          "서버가상화",
+          "대용량클라우드",
+          "가상서버관리(멀티테넌시)",
+          "CDN",
+          "분산스토리지",
+          "병렬처리"
+        ]
+      },
+      {
+        "label": "9대 주변기술",
+        "mnemonic": "오모빌네보P브모",
+        "keywords": [
+          "오픈API",
+          "모니터링",
+          "빌링",
+          "네트워크가상화(VLan)",
+          "보안SLA",
+          "P2V/V2V",
+          "VPC(Virtual Private Cloud)",
+          "모바일 클라우드"
+        ]
+      },
+      {
+        "label": "구성요소",
+        "mnemonic": "유서S프모서",
+        "keywords": [
+          "유저 인터랙션 I/F",
+          "서비스 카탈로그",
+          "System Mgmt",
+          "프로비저닝 Tool",
+          "모니터링&미터링",
+          "서버"
+        ]
+      },
+      {
+        "label": "기술요소",
+        "mnemonic": "가대O서자S보",
+        "keywords": [
+          "가상화기술",
+          "대규모 분산처리",
+          "Open I/F",
+          "서비스 프로비저닝",
+          "자원 유틸리티",
+          "SLA",
+          "보안 및 프라이버시"
+        ]
+      }
+    ]
   },
   "ds-31": {
     "detail": "대상서비스 사례 정리\n클라우드 마이그레이션 전략",
