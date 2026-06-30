@@ -223,6 +223,7 @@ export default function Home() {
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-brand-50 sm:text-base">
           핵심은 <b className="text-white">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
+          <br />
           어려운 토픽도 키워드만 외우면 한 편의 소설처럼 답안을 완성할 수 있어요.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
