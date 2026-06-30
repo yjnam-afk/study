@@ -20817,25 +20817,19 @@
     "mnemonic": "인기무부"
   },
   "sec-2": {
-    "detail": "[목적] 인증(Authentication), 기밀성(Confidentiality), 무결성(Integrity), 부인방지(NonReputation)\n[원리] 대체, 블록, 치환, 확장, 혼돈, 확산, 압축\n[방식] 대체법(Substitution), 치환법(Transposition), 대수법(Algebraic글자->숫자),빈도수분석법, \n비즈네르 암호화, 스테가노그래피\n[유형] 대칭키(비밀키)-스트림(LFSR,SEL,RC4), 블록(DES,IDEA,SEED,RC5,AES)\n공개키-이산대수기반, 소인수분해기반, 타원곡선방식(ECC), 전자서명방식",
+    "detail": "평문을 키와 알고리즘으로 암호문으로 변환해 인증·기밀성·무결성·부인방지를 보장하는 기술. 혼돈(Confusion)·확산(Diffusion)으로 암호학적 강도를 높임.",
     "related": "*암호학적 강도 높이기 위해 혼돈 (Confusion)과 확산(Diffusion) 이용 이소타전",
-    "defKeywords": [],
+    "defKeywords": [
+      "인증(Authentication)",
+      "기밀성(Confidentiality)",
+      "무결성(Integrity)",
+      "부인방지(Non-Repudiation)"
+    ],
     "featureKeywords": [
-      "Authentication",
-      "Confidentiality",
-      "Integrity",
-      "NonReputation",
-      "인증",
-      "기밀성",
-      "무결성",
-      "부인방지",
-      "LFSR",
-      "DES",
-      "ECC",
-      "대칭키 -스트림",
-      "블록",
-      "공개키-이산대수기반",
-      "소인수분해기반"
+      "인증(Authentication)",
+      "기밀성(Confidentiality)",
+      "무결성(Integrity)",
+      "부인방지(Non-Repudiation)"
     ],
     "applicationKeywords": [
       "대체",
@@ -20847,7 +20841,62 @@
       "압축"
     ],
     "plusKeywords": [],
-    "mnemonic": "인기무부"
+    "mnemonic": "인기무부",
+    "sections": [
+      {
+        "label": "목적",
+        "mnemonic": "인기무부",
+        "keywords": [
+          "인증(Authentication)",
+          "기밀성(Confidentiality)",
+          "무결성(Integrity)",
+          "부인방지(Non-Repudiation)"
+        ]
+      },
+      {
+        "label": "원리",
+        "mnemonic": "대블치확혼확압",
+        "keywords": [
+          "대체",
+          "블록",
+          "치환",
+          "확장",
+          "혼돈",
+          "확산",
+          "압축"
+        ]
+      },
+      {
+        "label": "방식",
+        "mnemonic": "대치대빈비스",
+        "keywords": [
+          "대체법(Substitution)",
+          "치환법(Transposition)",
+          "대수법(Algebraic)",
+          "빈도수분석법",
+          "비즈네르 암호화",
+          "스테가노그래피"
+        ]
+      },
+      {
+        "label": "공개키 유형",
+        "mnemonic": "이소타전",
+        "keywords": [
+          "이산대수기반",
+          "소인수분해기반",
+          "타원곡선방식(ECC)",
+          "전자서명방식"
+        ]
+      },
+      {
+        "label": "대칭키 유형",
+        "mnemonic": "스블",
+        "keywords": [
+          "스트림(LFSR·SEL·RC4)",
+          "블록(DES·IDEA·SEED·RC5·AES)"
+        ]
+      }
+    ]
   },
   "sec-3": {
     "detail": "대체, 블록, 치환, 확장, 혼돈, 확산, 압축 \n혼대치수(혼돈, 대치, 치환, S-BOX), 확전순P(확산, 전치, 순열, P-BOX)",
