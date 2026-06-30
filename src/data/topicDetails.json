@@ -26943,17 +26943,58 @@
     "mnemonic": "유투어원널"
   },
   "db-5": {
-    "detail": "[정의] 트랜잭션 실행 중 중간연산 결과가 다른 트랜잭션으로 접근 불가능하도록 고립성을 유지하기 위한 허용 수준\n[특징] 일관성 높으면 병행성 낮아짐 ( 고일저병 )\n[문제점] Dirty Read, Repeatable Read, Phantom Read\n[고립성수준] Read Uncommitted, Read Committed, Repeatable Read(읽기 락), Serializable Read\n                      (동시성 상 <--> 고립성 저)",
-    "related": "ANSI/ISO SQL Standard92 (SQL92)",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "트랜잭션 실행 중 중간 연산 결과가 다른 트랜잭션에서 접근되지 않도록 고립성을 유지하기 위한 허용 수준. 일관성↑이면 병행성↓(고일저병). 표준: ANSI/ISO SQL Standard92(SQL92).",
+    "related": "Transaction, ACID",
+    "defKeywords": [
+      "Read Uncommitted",
+      "Read Committed",
+      "Repeatable Read(읽기 락)",
+      "Serializable Read"
+    ],
+    "featureKeywords": [
+      "Read Uncommitted",
+      "Read Committed",
+      "Repeatable Read(읽기 락)",
+      "Serializable Read"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [
       "Dirty Read",
       "Repeatable Read",
       "Phantom Read"
     ],
-    "mnemonic": "고일저병"
+    "mnemonic": "언커리시",
+    "sections": [
+      {
+        "label": "고립성 수준(동시성 상→고립성 저)",
+        "mnemonic": "언커리시",
+        "keywords": [
+          "Read Uncommitted",
+          "Read Committed",
+          "Repeatable Read(읽기 락)",
+          "Serializable Read"
+        ]
+      },
+      {
+        "label": "문제점(이상현상)",
+        "mnemonic": "부비가",
+        "keywords": [
+          "Dirty Read(부정확 읽기)",
+          "Non-Repeatable Read(비반복 읽기)",
+          "Phantom Read(가상 읽기)"
+        ]
+      },
+      {
+        "label": "특징(trade-off)",
+        "mnemonic": "고일저병",
+        "keywords": [
+          "고립성↑",
+          "일관성↑",
+          "저하(trade-off)",
+          "병행성↓"
+        ]
+      }
+    ]
   },
   "db-6": {
     "detail": "[정의] 두 개 이상의 트랜잭션이 실제 DB에 저장되어 있는 tuple이 아니라 팬텀 튜플(가상 튜플)에 의해 트랜잭션이 충돌되어 일관성 및 무결성이 보장되지 않는 현상\n팬텀 충돌\n해결방법:Locking 단위 확대, Index Locking",
