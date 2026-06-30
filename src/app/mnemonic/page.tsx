@@ -204,10 +204,18 @@ export default function MnemonicPage() {
           </p>
         </details>
 
-        <div className="mt-5">
+        <div className="mt-5 flex flex-wrap items-center gap-3">
           <Button onClick={generate} disabled={loading}>
             {loading ? "생성 중…" : "두음신공 만들기"}
           </Button>
+          {topic.trim() && (
+            <a
+              href={`/explain?topic=${encodeURIComponent(topic)}&auto=1`}
+              className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-700 hover:bg-amber-100"
+            >
+              💡 이 토픽 설명 보기 →
+            </a>
+          )}
         </div>
       </div>
 
