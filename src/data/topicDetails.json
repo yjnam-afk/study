@@ -225,30 +225,62 @@
     "mnemonic": ""
   },
   "gj-7": {
-    "detail": "[정의] 대량의 데이터에 고급 통계 분석과 모델링 기법을 적용하여 데이터 간의 패턴과 관계를 도출, 의사결정에 활용할 수 있는 의미 있는 정보를 발견하는 과정 \n[데이터 마이닝 기법 종류]\n- 탐색적모델 : 연관성기법(association, 지지도/신뢰도/향상도), 연속성(Sequence), \n                  군집화(Clustering)\n- 예측적모델 : 의사결정트리(Decision Tree), 신경망분석(NN), 분류화(Classification), \n                  특성화(Characterization)\n[Data Mining 적용 기술]\n연관성 규칙(Association), 연속성 규칙(Sequence), 분류, 데이터군집화, 특성화,신경망, 의사결정\n[지지도, 신뢰도, 향상도 공식]\n지지도 : P(A∩B)\n신뢰도 : P(A|B) = P(A∩B) / P(A)\n향상도 : P(A∩B) / P(A)P(B)",
-    "related": "Big Data 분석 의사결정트리 Smart Data",
-    "defKeywords": [],
-    "featureKeywords": [],
-    "applicationKeywords": [
-      "association",
-      "Sequence",
-      "Clustering",
-      "Decision Tree",
-      "NN",
-      "Classification",
-      "Characterization",
-      "연관성기법",
-      "연속성",
-      "군집화",
-      "의사결정트리",
-      "신경망분석",
-      "분류화",
-      "특성화",
-      "연관성 규칙"
+    "detail": "대량의 데이터에 고급 통계 분석과 모델링 기법을 적용하여 데이터 간의 패턴·관계를 도출하고, 의사결정에 활용할 수 있는 의미 있는 정보를 발견하는 과정.",
+    "related": "Big Data 분석 / 의사결정트리 / Smart Data",
+    "defKeywords": [
+      "패턴 발견",
+      "관계 도출",
+      "의사결정 지원",
+      "고급통계·모델링"
     ],
+    "featureKeywords": [
+      "Association(연관성 규칙)",
+      "Sequence(연속성 규칙)",
+      "분류(Classification)",
+      "데이터 군집화(Clustering)",
+      "특성화(Characterization)",
+      "신경망(NN)",
+      "의사결정(Decision)"
+    ],
+    "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "AS 분데특신의",
-    "memo": "AS 분데특신의"
+    "mnemonic": "AS분데특신의",
+    "conceptMap": "",
+    "sections": [
+      {
+        "label": "적용 기술(7)",
+        "mnemonic": "AS분데특신의",
+        "keywords": [
+          "Association(연관성 규칙)",
+          "Sequence(연속성 규칙)",
+          "분류(Classification)",
+          "데이터 군집화(Clustering)",
+          "특성화(Characterization)",
+          "신경망(NN)",
+          "의사결정(Decision)"
+        ]
+      },
+      {
+        "label": "기법 종류 - 탐색적 모델",
+        "mnemonic": "연연군",
+        "keywords": [
+          "연관성기법(지지도·신뢰도·향상도)",
+          "연속성(Sequence)",
+          "군집화(Clustering)"
+        ]
+      },
+      {
+        "label": "기법 종류 - 예측적 모델",
+        "mnemonic": "의신분특",
+        "keywords": [
+          "의사결정트리(Decision Tree)",
+          "신경망분석(NN)",
+          "분류화(Classification)",
+          "특성화(Characterization)"
+        ]
+      }
+    ],
+    "memo": "[적용기술 AS분데특신의] Association·Sequence·분류·데이터군집화·특성화·신경망·의사결정\n[연관분석 공식]\n지지도 : P(A∩B)\n신뢰도 : P(A|B) = P(A∩B) / P(A)\n향상도 : P(A∩B) / (P(A)·P(B))"
   },
   "gj-8": {
     "detail": "[정의] 다양한 산업 분야에서 적용이 가능한 데이터 분석 프로세스를 위해 4 개 또는 6 개의 레벨로 구성하여 표준화시킨 계층적 데이터 분석 방법론\n[프로세스] \n- Business Understanding(고객이해, 영향평가,목표수립)\n- Data Understanding(데이터 수집,추출,품질)\n- Data Preparation(데이터선별,품질확보)\n- Modeling(모델순위지정,유효 모델링)\n- Evaluation(모델링결과,중요항목)\n- Deployment(최종보고서작성,검토)\n[CRISP-DM 개선 방법론] ASUM-DM (the Analytics Solutions Unified Method)",
