@@ -3331,5 +3331,439 @@
     "category": "보안",
     "source": "125회 4교시",
     "text": "산업제어시스템(ICS)의 퍼듀(Purdue) 모델에 대하여 다음을 설명하시오. 가. 퍼듀 모델의 개념 나. 퍼듀 모델의 계층과 계층별 특징"
+  },
+  {
+    "id": "k124-101",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "124회 1교시",
+    "text": "가치사슬(Value-chain) 관점에서 ERP, SCM, MES, CRM을 비교 설명하시오."
+  },
+  {
+    "id": "k124-102",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "124회 1교시",
+    "text": "통계학의 4가지 척도를 구분하고, 이 관점에서 다중회귀분석(Multiple Regression Analysis)과 로지스틱회귀분석(Logistic Regression Analysis)을 비교 설명하시오."
+  },
+  {
+    "id": "k124-103",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "124회 1교시",
+    "text": "스마트팩토리에서 MES 참조모델인 ISA-88과 ISA-95를 비교 설명하시오."
+  },
+  {
+    "id": "k124-104",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "124회 1교시",
+    "text": "디지털 휴먼증강(Digital Human Augmentation)에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-105",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "124회 1교시",
+    "text": "반응형 웹 디자인(Responsive Web Design, RWD)에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "124회 1교시",
+    "text": "의존성 주입(Dependency Injection)의 장점에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-107",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "124회 1교시",
+    "text": "OGC(Open Geospatial Consortium)의 IMDF(Indoor Mapping Data Format) 표준화 동향에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-108",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "124회 1교시",
+    "text": "데이터베이스 제5정규형에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-109",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "124회 1교시",
+    "text": "다차원 색인구조(Multidimensional Index Structure) 3가지에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-110",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "124회 1교시",
+    "text": "프레임 릴레이(Frame Relay)에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-111",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "124회 1교시",
+    "text": "거리벡터 라우팅(Distance Vector Routing)에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-112",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "124회 1교시",
+    "text": "적대적 공격(Adversarial Attack)에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-113",
+    "period": "1교시",
+    "category": "보안",
+    "source": "124회 1교시",
+    "text": "NAC(Network Access Control)에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-201",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "124회 2교시",
+    "text": "코로나-19로 인한 언택트 시대의 데이터 주권 이슈와 데이터 거버넌스 전략 방향에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-202",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "124회 2교시",
+    "text": "디자인 싱킹(Design Thinking)에서 요구분석을 위한 공감(Empathize) 방법의 중요성을 설명하시오."
+  },
+  {
+    "id": "k124-203",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "124회 2교시",
+    "text": "사용자 요구사항 도출 기법 4가지 및 요구사항 도출 시 유의사항을 설명하시오."
+  },
+  {
+    "id": "k124-204",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "124회 2교시",
+    "text": "소프트웨어 신뢰성 성장 모델(SRGM, Software Reliability Growth Model)을 2가지 설명하시오."
+  },
+  {
+    "id": "k124-205",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "124회 2교시",
+    "text": "DA(Data Architect)와 DBA(Database Administrator)의 역할을 비교하여 설명하시오."
+  },
+  {
+    "id": "k124-206",
+    "period": "2교시",
+    "category": "보안",
+    "source": "124회 2교시",
+    "text": "OWASP에서 발표한 보안 위협 인젝션(Injection)의 개념과 대응 방안을 설명하시오."
+  },
+  {
+    "id": "k124-301",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "124회 3교시",
+    "text": "IT 기업의 개발자 공급부족 문제와 관련하여 다음을 설명하시오. 가. IT 서비스 분야의 산업 특수성과 노동 특성 관점에서의 원인 나. 소프트웨어산업진흥법에 명시된 하도급 구조 개선 제도의 한계점 및 개선방안"
+  },
+  {
+    "id": "k124-302",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "124회 3교시",
+    "text": "자료구조 Heap의 2가지 유형인 Max-heap과 Min-heap을 설명하시오."
+  },
+  {
+    "id": "k124-303",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "124회 3교시",
+    "text": "NoSQL 모델링 패턴 3가지 및 NoSQL 모델링 절차를 설명하시오."
+  },
+  {
+    "id": "k124-304",
+    "period": "3교시",
+    "category": "운영체제",
+    "source": "124회 3교시",
+    "text": "교착 상태(Dead Lock)의 개념과 교착상태를 회피하기 위한 은행가 알고리즘(Banker's Algorithm)의 개념 및 자료구조를 설명하시오."
+  },
+  {
+    "id": "k124-305",
+    "period": "3교시",
+    "category": "네트워크",
+    "source": "124회 3교시",
+    "text": "OSI 7 Layer의 각 계층과 특징을 설명하시오."
+  },
+  {
+    "id": "k124-306",
+    "period": "3교시",
+    "category": "보안",
+    "source": "124회 3교시",
+    "text": "침입탐지시스템(IDS)과 침입방지시스템(IPS)의 개념을 비교하여 설명하시오."
+  },
+  {
+    "id": "k124-401",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "124회 4교시",
+    "text": "인공지능(AI)을 이용한 자연어 처리 임베딩(Embedding) 기술에 대하여 설명하시오."
+  },
+  {
+    "id": "k124-402",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "124회 4교시",
+    "text": "오픈소스의 개념, 특징, 현황을 기술하고 오픈소스가 4차 산업혁명에 기여하는 시사점을 설명하시오."
+  },
+  {
+    "id": "k124-403",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "124회 4교시",
+    "text": "공간 DB에서 사용되는 공간 연산자(Spatial Operator)를 5개 나열하고 설명하시오."
+  },
+  {
+    "id": "k124-404",
+    "period": "4교시",
+    "category": "보안",
+    "source": "124회 4교시",
+    "text": "정보보호 관리체계(ISMS)의 개념과 관리과정을 설명하시오."
+  },
+  {
+    "id": "k124-405",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "124회 4교시",
+    "text": "퍼블릭(Public) 블록체인과 프라이빗(Private) 블록체인의 차이점을 비교하여 설명하시오."
+  },
+  {
+    "id": "k124-406",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "124회 4교시",
+    "text": "인공지능(AI)에서 윤리의 필요성 및 선진국의 정책 동향을 설명하고, 바람직한 AI 윤리정책 수립 시 고려사항에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-101",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "123회 1교시",
+    "text": "SCRUM의 팀구성 및 개발프로세스에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-102",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "123회 1교시",
+    "text": "타당도(Validity)와 신뢰도(Reliability)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-103",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "123회 1교시",
+    "text": "EfficientNet과 EfficientDet을 비교 설명하시오."
+  },
+  {
+    "id": "k123-104",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "123회 1교시",
+    "text": "디파이(De-Fi)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-105",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "123회 1교시",
+    "text": "지능정보화 기본법에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "123회 1교시",
+    "text": "로우코드(Low Code)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-107",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "123회 1교시",
+    "text": "OAS(OpenAPI Specification)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-108",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "123회 1교시",
+    "text": "오픈소스 프로젝트관리 소프트웨어에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-109",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "123회 1교시",
+    "text": "WebRTC(Web Real-Time Communication)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-110",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "123회 1교시",
+    "text": "HAZOP(Hazard and Operability analysis)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-111",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "123회 1교시",
+    "text": "Column Family 데이터베이스에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-112",
+    "period": "1교시",
+    "category": "보안",
+    "source": "123회 1교시",
+    "text": "GADI(Global Architecture for Digital Identity)에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-113",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "123회 1교시",
+    "text": "해저케이블 에퀴아노(Equiano) 프로젝트에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-201",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "123회 2교시",
+    "text": "소프트웨어 공학에 대하여 다음을 설명하시오. 가. 소프트웨어의 주요 특성과 공학의 발전원리 나. 소프트웨어 공학이 다루는 주제와 그 목표 다. 좋은 소프트웨어의 조건들과 개발에 영향을 미치는 요인들"
+  },
+  {
+    "id": "k123-202",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "123회 2교시",
+    "text": "머신러닝 보안 취약점에 대하여 다음을 설명하시오. 가. 머신러닝 학습과정에서의 적대적 공격 4가지 나. 각각 적대적 공격의 방어기법"
+  },
+  {
+    "id": "k123-203",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "123회 2교시",
+    "text": "차세대 플랫폼 기술로 등장하는 메타버스(초월우주)에 대하여 다음을 설명하시오. 가. 개념 나. 운영사례 다. 시사점"
+  },
+  {
+    "id": "k123-204",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "123회 2교시",
+    "text": "다음의 분석기법에 대하여 설명하시오. 가. 변수의 차원을 줄이는 다변량회귀분석 나. 변수의 차원을 줄이는 주성분분석 다. 케이스의 차원을 줄이는 다차원척도법"
+  },
+  {
+    "id": "k123-205",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "123회 2교시",
+    "text": "'정보시스템 감리 수행 가이드'의 검사기준서에 대하여 다음을 설명하시오. 가. 기능 및 비기능 요구사항의 검사기준 점검방법 나. 과업이행여부 점검결과에 대한 적부 판정방법"
+  },
+  {
+    "id": "k123-206",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "123회 2교시",
+    "text": "'정보화전략계획수립(ISP) 공통가이드(제4판)'에 대하여 다음을 설명하시오. 가. ISP 추진 및 검토 절차 나. ISP 기본 구성 내용(단계별 활동, 세부내용, 산출물)"
+  },
+  {
+    "id": "k123-301",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "123회 3교시",
+    "text": "메시지큐잉(Message Queuing)에 대한 개념과 필요성, 종류, 기능에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-302",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "123회 3교시",
+    "text": "데이터 품질관리 프레임워크, 데이터 관리, 데이터 구조관리, 데이터 관리 프로세스에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-303",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "123회 3교시",
+    "text": "기술통계와 추론통계에 대하여 다음을 설명하시오. 가. 기술통계와 추론통계의 차이점 비교 나. 기술통계와 추론통계에 사용되는 기술(각각 4개)"
+  },
+  {
+    "id": "k123-304",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "123회 3교시",
+    "text": "API Gateway의 역할과 필요성, 주요기능, 적용 시 고려사항과 적용사례에 대하여 설명하시오."
+  },
+  {
+    "id": "k123-305",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "123회 3교시",
+    "text": "코로나19 비대면 언택트 시대에 부각되는 가상융합기술에 대하여 다음을 설명하시오. 가. 가상현실, 증강현실, 가상융합기술 비교 나. 가상융합경제 발전전략"
+  },
+  {
+    "id": "k123-306",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "123회 3교시",
+    "text": "행동인터넷(IoB, Internet of Behavior)에 대하여 다음을 설명하시오. 가. 개념과 배경 나. IoT와의 비교 다. 기술의 영향"
+  },
+  {
+    "id": "k123-401",
+    "period": "4교시",
+    "category": "네트워크",
+    "source": "123회 4교시",
+    "text": "4차 산업혁명시대의 망중립성 이슈에 대하여 다음을 설명하시오. 가. 쟁점 사항 및 정책 이슈 나. 시사점 및 대응 방안"
+  },
+  {
+    "id": "k123-402",
+    "period": "4교시",
+    "category": "프로젝트관리",
+    "source": "123회 4교시",
+    "text": "IT 아웃소싱 업무 위탁과 관련하여 다음을 설명하시오. 가. 발주가능한 아웃소싱의 유형 나. SLA(Service Level Agreement)와 OLA(Operational Level Agreement) 다. Penalty/Incentive 관리체계, SIP, Annual Reset"
+  },
+  {
+    "id": "k123-403",
+    "period": "4교시",
+    "category": "보안",
+    "source": "123회 4교시",
+    "text": "정보윤리와 관련하여 다음을 설명하시오. 가. 정보윤리 정의 및 원칙 나. 컴퓨터(사이버) 범죄의 정의와 특징, 종류와 대응책 다. 컴퓨터(사이버) 중독의 정의, 종류와 문제점"
+  },
+  {
+    "id": "k123-404",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "123회 4교시",
+    "text": "자연어처리와 관련하여 다음을 설명하시오. 가. NER(Named Entity Recognition)과 Word Embedding 나. BERT와 GPT-3의 비교"
+  },
+  {
+    "id": "k123-405",
+    "period": "4교시",
+    "category": "프로젝트관리",
+    "source": "123회 4교시",
+    "text": "정량적 위험분석의 정의와 필요성을 설명하고, 다음 4가지 위험분석 기법을 예시를 들어 설명하시오. 의사결정나무 분석, 금전적 기대값(EMV) 분석, 몬테카를로 시뮬레이션, 민감도 분석"
+  },
+  {
+    "id": "k123-406",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "123회 4교시",
+    "text": "최단경로 알고리즘에 대하여 다음을 설명하시오. 가. 최단경로 알고리즘의 유형 4가지 나. 주어진 그래프(A출발, E목적지)에서 4가지 알고리즘 계산 방법 다. 4가지 알고리즘 계산결과 비교"
   }
 ]
