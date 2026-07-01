@@ -5067,5 +5067,222 @@
     "category": "인공지능",
     "source": "117회 4교시",
     "text": "머신러닝(Machine Learning)과 인공지능(AI)에서 편향(biased)된 결과를 만들어 내는 이유를 3가지 설명하시오."
+  },
+  {
+    "id": "k116-101",
+    "period": "1교시",
+    "category": "보안",
+    "source": "116회 1교시",
+    "text": "전자서명에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-102",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "116회 1교시",
+    "text": "SQL(Structured Query Language)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-103",
+    "period": "1교시",
+    "category": "보안",
+    "source": "116회 1교시",
+    "text": "해쉬 알고리즘(Hash Algorithm)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-104",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "116회 1교시",
+    "text": "교착상태(Deadlock)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-105",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "116회 1교시",
+    "text": "파스-타(PaaS-TA) 3.0에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-106",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "116회 1교시",
+    "text": "제로 레이팅(Zero Rating)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-107",
+    "period": "1교시",
+    "category": "보안",
+    "source": "116회 1교시",
+    "text": "스피어 피싱(Spear Phishing)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-108",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "116회 1교시",
+    "text": "레그테크(RegTech)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-109",
+    "period": "1교시",
+    "category": "보안",
+    "source": "116회 1교시",
+    "text": "스펙터(Spectre)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-110",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "116회 1교시",
+    "text": "정밀도(Precision)와 재현율(Recall)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-111",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "116회 1교시",
+    "text": "사물인터넷 디바이스 식별체계에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-112",
+    "period": "1교시",
+    "category": "보안",
+    "source": "116회 1교시",
+    "text": "포맷 스트링 공격(Format String Attack)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-113",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "116회 1교시",
+    "text": "R-tree에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-201",
+    "period": "2교시",
+    "category": "보안",
+    "source": "116회 2교시",
+    "text": "지능형 지속공격(APT, Advanced Persistent Threat)의 정의, 특징, 공격과정 및 대응방안을 관리적·기술적 관점에서 설명하시오."
+  },
+  {
+    "id": "k116-202",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "116회 2교시",
+    "text": "FTP(File Transfer Protocol), FTPS(FTP Secure), SFTP(SSH FTP)의 정의 및 특징을 비교 설명하시오."
+  },
+  {
+    "id": "k116-203",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "116회 2교시",
+    "text": "4차 산업혁명의 개념 및 주요 정보화 활용 기술에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-204",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "116회 2교시",
+    "text": "공공기관 정보화사업 예비타당성조사 제도의 필요성, 주요기준, 문제점 및 개선방향에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-205",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "116회 2교시",
+    "text": "IT 컴플라이언스(Compliance)의 주요 요구사항을 제시하고, 기업의 IT 컴플라이언스 위험 대응 방안을 인식 전환, 제도 및 기술 측면에서 설명하시오."
+  },
+  {
+    "id": "k116-206",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "116회 2교시",
+    "text": "Unix 파일 시스템의 구조 및 /etc/passwd 파일의 구성에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-301",
+    "period": "3교시",
+    "category": "보안",
+    "source": "116회 3교시",
+    "text": "이상금융거래 탐지시스템(FDS, Fraud Detection System)의 정의 및 주요기능, 이상 금융거래 판정방식에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-302",
+    "period": "3교시",
+    "category": "보안",
+    "source": "116회 3교시",
+    "text": "개인정보 보호에 대하여 다음을 설명하시오. 가. 개인정보의 정의 및 유출 원인 나. 오남용 행위 탐지 시나리오 생성방안별(4W1H, 데이터 생명주기) 생성기준 및 구성요소"
+  },
+  {
+    "id": "k116-303",
+    "period": "3교시",
+    "category": "보안",
+    "source": "116회 3교시",
+    "text": "블록체인(Block Chain) 플랫폼의 보안 위협과 대응 방안에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-304",
+    "period": "3교시",
+    "category": "운영체제",
+    "source": "116회 3교시",
+    "text": "스레드(Thread), 멀티스레드(Multi Thread), 프로세스(Process)에 대하여 비교 설명하시오."
+  },
+  {
+    "id": "k116-305",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "116회 3교시",
+    "text": "대기행렬이론(Queuing Theory)의 개념과 처리 기법에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-306",
+    "period": "3교시",
+    "category": "네트워크",
+    "source": "116회 3교시",
+    "text": "소켓(Socket) 통신방식의 개념, TCP Socket 및 Web Socket 기술을 비교하여 설명하시오."
+  },
+  {
+    "id": "k116-401",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "116회 4교시",
+    "text": "데스크톱 가상화(VDI, Virtual Desktop Infrastructure)의 정의, 특징 및 계층별 구성 요소에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-402",
+    "period": "4교시",
+    "category": "보안",
+    "source": "116회 4교시",
+    "text": "DDoS 공격 대응을 위한 클라우드 기반 보안서비스 구축 방식인 스크러빙 센터(Scrubbing Center) 및 콘텐츠 전송 네트워크(CDN)에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-403",
+    "period": "4교시",
+    "category": "보안",
+    "source": "116회 4교시",
+    "text": "FIDO(Fast Identity Online) 1.0과 FIDO 2.0을 비교하여 설명하시오."
+  },
+  {
+    "id": "k116-404",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "116회 4교시",
+    "text": "아키텍처 모델 중 기능의 분할과 배치 관점에서 데이터 중심형 모델, 클라이언트-서버 모델, 계층 모델 및 MVC(Model View Controller) 모델을 각각 설명하시오."
+  },
+  {
+    "id": "k116-405",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "116회 4교시",
+    "text": "영상감시시스템(Video Surveillance System)의 주요 요소인 영상 전처리 기술, 객체 탐지 및 분류 기술, 객체 추적 기술, 영상 보안 기술에 대하여 설명하시오."
+  },
+  {
+    "id": "k116-406",
+    "period": "4교시",
+    "category": "경영전략",
+    "source": "116회 4교시",
+    "text": "BPR/PI 컨설팅 사업에서 정량적 기대효과를 명확히 제시하기 위한 시뮬레이션 기법에 대하여 설명하시오."
   }
 ]
