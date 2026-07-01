@@ -1812,5 +1812,222 @@
     "category": "보안",
     "source": "132회 4교시",
     "text": "정보보안 체계 수립에 대하여 설명하시오. 가. 정보보호 정책의 개념 나. 정보보호 시점 별 보안 활동(Security Action Cycle) 다. 정보보안 전문가의 역할과 역량"
+  },
+  {
+    "id": "k131-101",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "131회 1교시",
+    "text": "디지털 트랜스포메이션(Digital Transformation)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-102",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "131회 1교시",
+    "text": "NFC(Near Field Communication)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-103",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "131회 1교시",
+    "text": "폭포수 개발 방법론과 애자일 개발 방법론의 특징 및 장단점을 비교 설명하시오."
+  },
+  {
+    "id": "k131-104",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "131회 1교시",
+    "text": "클라우드 컴퓨팅의 Service Model과 Deployment Model을 비교 설명하시오."
+  },
+  {
+    "id": "k131-105",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "131회 1교시",
+    "text": "데이터 차원 축소(Data Dimensionality Reduction)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-106",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "131회 1교시",
+    "text": "정보시스템 감리와 PMO(Project Management Office)를 비교 설명하시오."
+  },
+  {
+    "id": "k131-107",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "131회 1교시",
+    "text": "머신러닝(Machine Learning)과 딥러닝(Deep Learning)의 차이를 설명하시오."
+  },
+  {
+    "id": "k131-108",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "131회 1교시",
+    "text": "오토 스케일링(Auto Scaling)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-109",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "131회 1교시",
+    "text": "독립표본 t-검정(Independent t-test)과 대응표본 t-검정(Paired t-test)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-110",
+    "period": "1교시",
+    "category": "보안",
+    "source": "131회 1교시",
+    "text": "크리덴셜 스터핑(Credential Stuffing)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-111",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "131회 1교시",
+    "text": "데이터 표준화의 필요성과 기대효과에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-112",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "131회 1교시",
+    "text": "객체지향 방법론에서 캡슐화(Encapsulation)와 정보은닉(Information Hiding)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-113",
+    "period": "1교시",
+    "category": "보안",
+    "source": "131회 1교시",
+    "text": "SBOM(Software Bill of Materials)에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-201",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "131회 2교시",
+    "text": "ISP(Information Strategy Planning)와 BPR(Business Process Reengineering)의 개념과 수행절차를 비교 설명하고, 기업에서 이 두 가지를 상호 보완적으로 활용하기 위한 방안을 설명하시오."
+  },
+  {
+    "id": "k131-202",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "131회 2교시",
+    "text": "데이터 시각화(Data Visualization)와 관련하여 다음을 설명하시오. 가. 데이터 시각화의 개요 나. 데이터 시각화의 원리 및 절차 다. 데이터 시각화 유형 라. 효과적인 데이터 시각화를 위한 효율화 방안"
+  },
+  {
+    "id": "k131-203",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "131회 2교시",
+    "text": "인공지능의 개발 및 적용과정에서 윤리적으로 다루어져야 할 주요 내용과 인공지능을 효과적으로 관리하고 규제하기 위한 거버넌스 모형에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-204",
+    "period": "2교시",
+    "category": "보안",
+    "source": "131회 2교시",
+    "text": "제로 트러스트 보안(Zero Trust Security) 모델의 보안원리, 핵심원칙, 적용분야를 트러스트 보안(Trust Security) 모델과 비교하여 설명하시오."
+  },
+  {
+    "id": "k131-205",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "131회 2교시",
+    "text": "소켓(Socket) 통신과 관련하여 다음을 설명하시오. 가. 소켓 통신 정의 나. 소켓 통신 방식 개념도 및 유형 다. TCP 소켓 및 Web 소켓 흐름 설명 라. 소켓 통신 방식과 HTTP 통신 방식 비교"
+  },
+  {
+    "id": "k131-206",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "131회 2교시",
+    "text": "아키텍처 스타일과 디자인 패턴에 대하여 다음을 설명하시오. 가. 아키텍처 스타일과 디자인 패턴의 차이점 나. 대표적인 아키텍처 스타일 3가지 다. GoF(Gang of Four) 디자인 패턴의 유형을 구분하고, 유형별 대표적인 디자인 패턴 설명"
+  },
+  {
+    "id": "k131-301",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "131회 3교시",
+    "text": "인공지능 학습용 데이터 허브 구축 과정에서 생성된 학습용 데이터 셋의 품질확보를 위한 주요활동과 데이터 생애 주기별 품질관리 수행절차에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-302",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "131회 3교시",
+    "text": "데이터 구조(Data Structure)에 대하여 다음을 설명하시오. 가. 선형 구조(Linear Structure)의 개념 및 유형 나. 비선형 구조(Non-Linear Structure)의 개념 및 유형 다. 선형 구조와 비선형 구조 비교"
+  },
+  {
+    "id": "k131-303",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "131회 3교시",
+    "text": "통합테스트(Integration Test)에 대하여 다음을 설명하시오. 가. 비점진적 통합 방식과 점진적 통합 방식 나. 하향식(Top Down) 통합 테스트와 상향식(Bottom Up) 통합 테스트 다. 테스트 드라이버(Test Driver)와 테스트 스텁(Test Stub)"
+  },
+  {
+    "id": "k131-304",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "131회 3교시",
+    "text": "소프트웨어 안전성 분석의 필요성과 다음의 분석 기법을 설명하시오. 가. FTA(Fault Tree Analysis) 나. FMEA(Failure Mode and Effects Analysis) 다. HAZOP(Hazard and Operability Analysis)"
+  },
+  {
+    "id": "k131-305",
+    "period": "3교시",
+    "category": "운영체제",
+    "source": "131회 3교시",
+    "text": "운영체제 메모리 관리 기법 중 페이징 기법과 세그멘테이션 기법의 개념을 설명하고, 두 기법을 비교 설명하시오."
+  },
+  {
+    "id": "k131-306",
+    "period": "3교시",
+    "category": "보안",
+    "source": "131회 3교시",
+    "text": "정보보호 및 개인정보보호 관리체계 인증제도(ISMS)에 대하여 다음을 설명하시오. 가. ISMS와 ISMS-P 차이점 나. ISMS 의무 대상 기준"
+  },
+  {
+    "id": "k131-401",
+    "period": "4교시",
+    "category": "경영전략",
+    "source": "131회 4교시",
+    "text": "전략적 기업경영(Strategic Enterprise Management)에 대하여 다음을 설명하시오. 가. 전략적 기업경영의 정의 나. 전략적 기업경영의 구성요소 다. 전략적 기업경영의 구축 방안 및 구축 절차"
+  },
+  {
+    "id": "k131-402",
+    "period": "4교시",
+    "category": "보안",
+    "source": "131회 4교시",
+    "text": "개인정보보호를 위한 '개인정보의 안전성 확보조치 기준' 고시 내용 중 다음을 설명하시오. 가. 내부관리계획 수립·이행 나. 암호화 적용방안 다. 테이블 재구성"
+  },
+  {
+    "id": "k131-403",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "131회 4교시",
+    "text": "데이터 품질관리에 대하여 다음을 설명하시오. 가. 데이터 품질관리 아키텍처 나. 데이터 품질관리 성숙도 다. 정형 데이터 및 비정형 데이터 품질기준 라. 데이터 품질관리 전략"
+  },
+  {
+    "id": "k131-404",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "131회 4교시",
+    "text": "인공지능 분야에서 파운데이션 모델의 개념, 특징, 기반기술 및 구현 시 법적·환경적·사회적 측면의 고려사항에 대하여 설명하시오."
+  },
+  {
+    "id": "k131-405",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "131회 4교시",
+    "text": "소프트웨어 규모산정에 대하여 다음을 설명하시오. 가. 필요성과 산정방법 나. 규모산정 방식의 종류별 특징"
+  },
+  {
+    "id": "k131-406",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "131회 4교시",
+    "text": "정렬 알고리즘과 관련하여 다음에 대하여 설명하시오. 가. 버블 정렬 나. 삽입 정렬 다. 퀵 정렬"
   }
 ]
