@@ -276,7 +276,7 @@ export default function MnemonicPage() {
                 </div>
               </div>
             )}
-            {subnote?.memo && (
+            {subnote?.memo && step !== "learn" && (
               <div className="mb-4 rounded-2xl border border-amber-300 bg-amber-50 p-4">
                 <div className="mb-1 text-xs font-bold text-amber-800">
                   📖 교재 암기법 (서브노트 원본)
@@ -294,6 +294,7 @@ export default function MnemonicPage() {
                   subnote && (subnote.mnemonic || subnote.keywords.length > 0),
                 )}
                 sections={subnote?.sections || []}
+                memo={subnote?.memo}
                 onNext={() => setStep("inject")}
               />
             )}
@@ -430,22 +431,30 @@ function Learn({
   set,
   fromSubnote,
   sections,
+  memo,
   onNext,
 }: {
   set: MnemonicSet;
   fromSubnote?: boolean;
   sections?: { label: string; mnemonic: string; keywords: string[] }[];
+  memo?: string;
   onNext: () => void;
 }) {
   const hasSections = (sections || []).length > 0;
+  const hasMemo = Boolean(memo && memo.trim());
   return (
     <div className="space-y-6">
-      <GroupCard
-        label="📌 서론(정의) 두음"
-        sub="답안 I. 개요에 쓸 키워드"
-        group={set.intro}
-        hideDesc
-      />
+      {/* 교재 두음(memo)이 있으면 그걸 메인 카드로. 자동생성 두음은 숨긴다. */}
+      {hasMemo ? (
+        <MemoCard memo={memo!} items={set.body.items} />
+      ) : (
+        <GroupCard
+          label="📌 서론(정의) 두음"
+          sub="답안 I. 개요에 쓸 키워드"
+          group={set.intro}
+          hideDesc
+        />
+      )}
       {hasSections ? (
         // 교재에 섹션별 두음(특징·기술요소·분류 등)이 있으면 각각 별도 카드로.
         <div className="space-y-3">
@@ -461,7 +470,7 @@ function Learn({
             <SectionCard key={i} section={s} />
           ))}
         </div>
-      ) : (
+      ) : hasMemo ? null : (
         <GroupCard
           label="📝 본론(2단락+) 두음"
           sub="답안 II. 본론 구성요소·설명(3열)"
@@ -470,6 +479,59 @@ function Learn({
         />
       )}
       <Button onClick={onNext}>외웠어요 → 객관식으로 주입</Button>
+    </div>
+  );
+}
+
+/** 교재 암기법(memo)을 메인 두음 카드로 표시 — 원본 두음(여러 줄)을 크게 + 키워드 참고 목록. */
+function MemoCard({
+  memo,
+  items,
+}: {
+  memo: string;
+  items: { initial: string; term: string; desc: string }[];
+}) {
+  const lines = memo
+    .split(/\n/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return (
+    <div className="space-y-3">
+      <div className="rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 p-5 text-center shadow-sm">
+        <span className="mb-1 inline-block rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-300">
+          📒 교재 암기법 (원본 두음)
+        </span>
+        <div className="mt-1 space-y-0.5">
+          {lines.map((l, i) => (
+            <div
+              key={i}
+              className="text-2xl font-extrabold tracking-wide text-emerald-700"
+            >
+              {l}
+            </div>
+          ))}
+        </div>
+        <p className="mt-1 text-xs text-slate-600">
+          교재에 정리된 두음이에요. 이걸로 외우세요.
+        </p>
+      </div>
+      {items.length > 0 && (
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="bg-slate-50 px-4 py-2 text-xs font-semibold text-slate-500">
+            핵심 키워드
+          </div>
+          <ul className="divide-y divide-slate-100">
+            {items.map((it, i) => (
+              <li
+                key={i}
+                className="px-4 py-2 text-sm font-medium text-slate-900"
+              >
+                {it.term}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
