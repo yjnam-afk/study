@@ -14,6 +14,8 @@ import {
   isDue,
   daysUntilDue,
 } from "@/lib/storage";
+import { loadSession, Session } from "@/lib/auth";
+import { syncNow } from "@/lib/sync";
 
 const STATUS_LABEL: Record<string, string> = {
   todo: "시작 전",
@@ -42,19 +44,65 @@ export default function ReviewPage() {
   const [impFilter, setImpFilter] = useState("전체");
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
+  const [session, setSession] = useState<Session | null>(null);
+  const [syncState, setSyncState] = useState<
+    "idle" | "syncing" | "done" | "error"
+  >("idle");
+  const [syncMsg, setSyncMsg] = useState("");
 
   useEffect(() => {
     const refresh = () => setState(loadReview());
     refresh();
     setReady(true);
+    setSession(loadSession());
+    const onAuth = () => setSession(loadSession());
     // 서버 동기화 완료(로그인 시 서버→로컬 복원)·다른 탭 변경 시 진도를 다시 읽어 화면에 반영
     window.addEventListener("progress-synced", refresh);
     window.addEventListener("storage", refresh);
+    window.addEventListener("auth-change", onAuth);
     return () => {
       window.removeEventListener("progress-synced", refresh);
       window.removeEventListener("storage", refresh);
+      window.removeEventListener("auth-change", onAuth);
     };
   }, []);
+
+  // 서버에서 내 진도를 수동으로 불러온다(에러를 눈에 보이게 표시).
+  async function restoreFromServer() {
+    const s = loadSession();
+    if (!s) {
+      setSyncState("error");
+      setSyncMsg("로그인이 필요합니다. 우측 상단에서 로그인하세요.");
+      return;
+    }
+    setSyncState("syncing");
+    setSyncMsg("서버에서 불러오는 중…");
+    try {
+      const before = topics.filter(
+        (t) => getItem(loadReview(), t.id).status === "done",
+      ).length;
+      await syncNow(s);
+      const merged = loadReview();
+      setState(merged);
+      const after = topics.filter(
+        (t) => getItem(merged, t.id).status === "done",
+      ).length;
+      const rounds = topics.reduce(
+        (sum, t) => sum + getItem(merged, t.id).rounds,
+        0,
+      );
+      setSyncState("done");
+      setSyncMsg(
+        `동기화 완료 · 완료 ${after}개 / 총 회독 ${rounds}회` +
+          (after > before ? ` (서버에서 ${after - before}개 복원)` : ""),
+      );
+    } catch (e) {
+      setSyncState("error");
+      setSyncMsg(
+        `동기화 실패: ${e instanceof Error ? e.message : "알 수 없는 오류"}`,
+      );
+    }
+  }
 
   // 필터·검색이 바뀌면 첫 페이지로
   useEffect(() => {
@@ -91,8 +139,50 @@ export default function ReviewPage() {
     <div>
       <PageHeader
         title="🔁 회독 관리"
-        desc="망각곡선(1·3·7·14·30일) 간격으로 복습할 토픽을 추천합니다. 3회독 시 완료. (진도는 이 브라우저에 저장됩니다.)"
+        desc="망각곡선(1·3·7·14·30일) 간격으로 복습할 토픽을 추천합니다. 3회독 시 완료. (로그인하면 계정에 저장되어 다른 기기에서도 이어집니다.)"
       />
+
+      <div
+        className={`mb-6 flex flex-col gap-2 rounded-2xl border p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between ${
+          syncState === "error"
+            ? "border-red-200 bg-red-50"
+            : "border-indigo-200 bg-indigo-50"
+        }`}
+      >
+        <div className="min-w-0 text-sm">
+          {session ? (
+            <p className="font-medium text-slate-700">
+              ☁️ <b>{session.name}</b> 계정으로 로그인됨
+              {syncMsg && (
+                <span
+                  className={`ml-1 ${syncState === "error" ? "text-red-600" : "text-slate-500"}`}
+                >
+                  — {syncMsg}
+                </span>
+              )}
+            </p>
+          ) : (
+            <p className="text-slate-600">
+              로그인하면 이 계정에 저장된 회독 기록을 서버에서 불러올 수 있어요.{" "}
+              <Link
+                href="/login"
+                className="font-semibold text-indigo-600 hover:underline"
+              >
+                로그인 →
+              </Link>
+            </p>
+          )}
+        </div>
+        {session && (
+          <button
+            onClick={restoreFromServer}
+            disabled={syncState === "syncing"}
+            className="shrink-0 rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
+          >
+            {syncState === "syncing" ? "불러오는 중…" : "☁️ 서버에서 내 진도 불러오기"}
+          </button>
+        )}
+      </div>
 
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <Stat label="전체 토픽" value={`${total}개`} />
