@@ -17686,24 +17686,59 @@
     "mnemonic": ""
   },
   "net-37": {
-    "detail": "Application, Presentation, Session, Transport(segment), Network(packet), Data\nlink(frame), Physical(bits)\n7(HTTP, FTP, Telnet, SMTP), 6(압축,암호화,coding format,SSL,MPEG,ASCII)\n5(연결,세션유지,종료, RPC, Winsock)\n4(정보 분할,병헙, Flow control,TCP-RFC793, UDP-비연결성,RTP)\n3(최선 경로선택,IP,IGMP-그룹통신 RFC1112, ICMP-ping, IPSec,ARP,RIP,BGP,EGP)\n2(물리통신로 확립,재전송,Ethernet,HDLC,PPP), 1(전송역할,RS-232,X.25/X.21)",
-    "related": "",
+    "detail": "OSI(Open Systems Interconnection, 개방형 시스템간 상호접속) 참조모델(ISO 7498): 네트워크 통신에서 발생하는 여러 충돌 문제를 완화하기 위해 국제표준화기구(ISO)가 표준화한 네트워크 구조를 제시한 기본 모델. 컴퓨터의 통신절차(프로토콜)에 관한 국제표준규격.",
+    "related": "TCP/IP 4계층 / 프로토콜 / 캡슐화",
     "defKeywords": [
-      "segment",
-      "packet",
-      "frame",
-      "bits",
-      "HTTP",
-      "Application",
-      "Presentation",
-      "Session",
-      "Transport",
-      "Network"
+      "물리 (Physical/bits)",
+      "데이터링크 (Data link/frame)",
+      "네트워크 (Network/packet)",
+      "전송 (Transport/segment)",
+      "표현 (Presentation)",
+      "세션 (Session)",
+      "응용 (Application)"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "물리 (Physical/bits)",
+      "데이터링크 (Data link/frame)",
+      "네트워크 (Network/packet)",
+      "전송 (Transport/segment)",
+      "표현 (Presentation)",
+      "세션 (Session)",
+      "응용 (Application)"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "아파서티네다P"
+    "mnemonic": "물데네트표세응",
+    "conceptMap": "",
+    "sections": [
+      {
+        "label": "7계층 (하위1→상위7)",
+        "mnemonic": "물데네트표세응",
+        "keywords": [
+          "물리 (Physical/bits)",
+          "데이터링크 (Data link/frame)",
+          "네트워크 (Network/packet)",
+          "전송 (Transport/segment)",
+          "표현 (Presentation)",
+          "세션 (Session)",
+          "응용 (Application)"
+        ]
+      },
+      {
+        "label": "7계층 (상위7→하위1)",
+        "mnemonic": "아파서티네다P",
+        "keywords": [
+          "응용 (Application)",
+          "표현 (Presentation)",
+          "세션 (Session)",
+          "전송 (Transport/segment)",
+          "네트워크 (Network/packet)",
+          "데이터링크 (Data link/frame)",
+          "물리 (Physical/bits)"
+        ]
+      }
+    ],
+    "memo": "[두음] 하위→상위 : 물데네트표세응 (물리·데이터링크·네트워크·전송·표현·세션·응용)\n        상위→하위 : 아파서티네다P (Application·Presentation·Session·Transport·Network·Datalink·Physical)\n[계층별 역할·프로토콜]\n7 응용 : HTTP, FTP, Telnet, SMTP\n6 표현 : 압축, 암호화, coding format, SSL, MPEG, ASCII\n5 세션 : 연결·세션유지·종료, RPC, Winsock\n4 전송 : 정보 분할·병합, Flow control, TCP(RFC793), UDP(비연결성), RTP\n3 네트워크 : 최선 경로선택, IP, IGMP(RFC1112), ICMP(ping), IPSec, ARP, RIP, BGP, EGP\n2 데이터링크 : 물리통신로 확립·재전송, Ethernet, HDLC, PPP\n1 물리 : 전송역할, RS-232, X.25/X.21"
   },
   "net-38": {
     "detail": "[정의] 사용자, 즉 단말기를 조작하는 사람이나 데이터 통신 서비스를 수행하는 \n프로그램 등에 여러 서비스를 제공하는 역할\n[특징] 사용자 연결, L7스위치, UI/입출력\n[프로토콜] HTTP, DNS, SMTP, Telnet, SIP, DHCP\n[기능] Keep Alive, MODBUS",
