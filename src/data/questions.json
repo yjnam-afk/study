@@ -4199,5 +4199,439 @@
     "category": "데이터베이스",
     "source": "121회 4교시",
     "text": "공급자(Suppliers)와 상품(Products) 데이터베이스 설계와 관련하여 다음을 작성하시오. 가. 바커(Barker) 표기법으로 표현된 ERD 나. DDL 및 SQL"
+  },
+  {
+    "id": "k120-101",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "120회 1교시",
+    "text": "바코드(Barcode)와 QR 코드(Quick Response Code)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-102",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "120회 1교시",
+    "text": "스크래핑(Scraping)과 API(Application Programming Interface)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-103",
+    "period": "1교시",
+    "category": "보안",
+    "source": "120회 1교시",
+    "text": "무자각 지속 인증(Implicit Continuous Authentication)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-104",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "120회 1교시",
+    "text": "앰비언트 커머스(Ambient Commerce)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-105",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "120회 1교시",
+    "text": "국제은행간통신협회(SWIFT)의 Pay Later API 표준에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-106",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "120회 1교시",
+    "text": "가상물리시스템(Cyber Physical System)의 구축 절차에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-107",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "120회 1교시",
+    "text": "스마트팩토리시스템(Smart Factory System)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-108",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "120회 1교시",
+    "text": "RAID(Redundant Array of Independent Disks)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-109",
+    "period": "1교시",
+    "category": "보안",
+    "source": "120회 1교시",
+    "text": "해쉬 알고리즘(Hash Algorithm)의 특성 및 종류에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-110",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "120회 1교시",
+    "text": "카오스 테스트(Chaos Test)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-111",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "120회 1교시",
+    "text": "정규 표현식(Regular Expression)과 유한오토마타(Finite Automata)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-112",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "120회 1교시",
+    "text": "CPU(Central Processing Unit)와 GPGPU(General-Purpose computing on GPU)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-113",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "120회 1교시",
+    "text": "워크플로우 관리(Workflow Management)의 백필(Backfill)에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-201",
+    "period": "2교시",
+    "category": "보안",
+    "source": "120회 2교시",
+    "text": "바이오정보 분산관리와 관련하여 다음을 설명하시오. 가. 개념, 필요성 및 특징 나. 처리과정별 보안위협 및 대책 다. 적용 사례 및 전망"
+  },
+  {
+    "id": "k120-202",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "120회 2교시",
+    "text": "마이데이터(MyData) 산업과 관련하여 다음을 설명하시오. 가. 마이데이터 및 마이데이터 산업의 개념 나. 필요성과 특징 다. 마이데이터 산업 주체별 역할과 처리 흐름"
+  },
+  {
+    "id": "k120-203",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "120회 2교시",
+    "text": "모놀리스(Monolith)와 마이크로서비스(Microservice) 아키텍처를 비교하여 설명하시오."
+  },
+  {
+    "id": "k120-204",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "120회 2교시",
+    "text": "가상머신(Virtual Machine)과 컨테이너(Container)를 비교하여 설명하시오."
+  },
+  {
+    "id": "k120-205",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "120회 2교시",
+    "text": "스마트팩토리 정보시스템 구축 사업의 성과측정 항목을 생산성, 품질, 비용, 납기의 4가지 관점으로 구분하여 설명하고 매출·원가 관점의 효과를 설명하시오."
+  },
+  {
+    "id": "k120-206",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "120회 2교시",
+    "text": "대기행렬시스템(Queue System)의 개념을 설명하고, 처리 기법을 예를 들어 설명하시오."
+  },
+  {
+    "id": "k120-301",
+    "period": "3교시",
+    "category": "보안",
+    "source": "120회 3교시",
+    "text": "QR 코드 기반의 결제 방식과 관련하여 다음을 설명하시오. 가. MPM(Merchant Presented Mode)/CPM(Customer Presented Mode) 비교 나. 도입 시 보안 고려사항 및 시사점"
+  },
+  {
+    "id": "k120-302",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "120회 3교시",
+    "text": "레그테크(Regtech)와 관련하여 다음을 설명하시오. 가. 레그테크 정의와 필요성 나. 주요 특징 다. 추진동향 및 도입 시 고려사항"
+  },
+  {
+    "id": "k120-303",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "120회 3교시",
+    "text": "머신러닝(Machine Learning)에서 활용되는 앙상블(Ensemble) 기법을 설명하시오."
+  },
+  {
+    "id": "k120-304",
+    "period": "3교시",
+    "category": "네트워크",
+    "source": "120회 3교시",
+    "text": "네트워크 가상화 기술인 VLAN(Virtual LAN), VPN(Virtual Private Network), NFV(Network Function Virtualization)를 비교하여 설명하시오."
+  },
+  {
+    "id": "k120-305",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "120회 3교시",
+    "text": "소프트웨어 아키텍처(Architecture)의 모델 유형에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-306",
+    "period": "3교시",
+    "category": "보안",
+    "source": "120회 3교시",
+    "text": "클라우드 컴퓨팅 서비스에 대한 공공기관의 보안인증제도를 설명하시오."
+  },
+  {
+    "id": "k120-401",
+    "period": "4교시",
+    "category": "보안",
+    "source": "120회 4교시",
+    "text": "정보시스템의 사용자 인증 요소(User Authentication Factor)와 관련하여 다음을 설명하시오. 가. 사용자 인증의 정의 및 필요성 나. 사용자 인증의 절차"
+  },
+  {
+    "id": "k120-402",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "120회 4교시",
+    "text": "오픈뱅킹(Open Banking)과 관련하여 다음을 설명하시오. 가. 개념 및 등장 배경 나. 구성 주체 및 역할 다. 기대 효과 및 시장 전망"
+  },
+  {
+    "id": "k120-403",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "120회 4교시",
+    "text": "딥러닝(Deep Learning)의 파라미터(Parameter)와 하이퍼파라미터(Hyperparameter)를 비교하고, 하이퍼파라미터의 튜닝 방법을 설명하시오."
+  },
+  {
+    "id": "k120-404",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "120회 4교시",
+    "text": "웹 서비스를 제공하기 위하여 여러 서버에 데이터를 복제하는 경우의 복제 유형에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-405",
+    "period": "4교시",
+    "category": "보안",
+    "source": "120회 4교시",
+    "text": "개인정보의 비식별조치 가이드라인에 대하여 설명하시오."
+  },
+  {
+    "id": "k120-406",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "120회 4교시",
+    "text": "블록체인 플랫폼 구축과정에서 성능 및 보안 측면의 고려사항을 설명하시오."
+  },
+  {
+    "id": "k119-101",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "119회 1교시",
+    "text": "Post-Architecture Model에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-102",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "119회 1교시",
+    "text": "TOC(Theory of Constraints)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-103",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "119회 1교시",
+    "text": "Docker에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-104",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "119회 1교시",
+    "text": "블록체인(Blockchain)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-105",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "119회 1교시",
+    "text": "제로 레이팅(Zero Rating)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "119회 1교시",
+    "text": "디자인 싱킹(Design Thinking)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-107",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "119회 1교시",
+    "text": "데이터 레이크(Data Lake)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-108",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "119회 1교시",
+    "text": "데이터베이스 샤드(Database Shard)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-109",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "119회 1교시",
+    "text": "기계학습의 경사하강법(Gradient Descent Algorithm)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-110",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "119회 1교시",
+    "text": "Lehman의 SW 변화 원리에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-111",
+    "period": "1교시",
+    "category": "보안",
+    "source": "119회 1교시",
+    "text": "머클트리(Merkle Tree)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-112",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "119회 1교시",
+    "text": "리쇼링(Reshoring)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-113",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "119회 1교시",
+    "text": "데이터베이스 격리 수준(Database Isolation Level)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-201",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "119회 2교시",
+    "text": "데이터 마이닝을 활용한 연관성 발견과 관련하여 다음을 설명하시오. 가. 연관규칙의 특징과 도출 과정 나. 연관정도를 측정하기 위한 3가지 기준"
+  },
+  {
+    "id": "k119-202",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "119회 2교시",
+    "text": "'SW 진흥법' 전면개정안과 관련하여 SRS(Software Requirement Specification)의 중요성 및 작성 방안에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-203",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "119회 2교시",
+    "text": "IT 투자성과 평가에 대하여 다음을 설명하시오. 가. 품질지표, 이용지표, 효과지표 나. 정보화 투자 성과평가 측정 기법"
+  },
+  {
+    "id": "k119-204",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "119회 2교시",
+    "text": "공공 소프트웨어 개발 프로젝트 규모 산정을 위한 기능점수(Function Point)에 대하여 'SW 사업 대가산정 가이드 2018 개정판' 기준으로 설명하시오."
+  },
+  {
+    "id": "k119-205",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "119회 2교시",
+    "text": "개발방법론과 Agile 프로세스의 테일러링(Tailoring)과 관련하여 EVM(Earned Value Management)과 Burn Down Chart를 비교하고 프로젝트 적용 방안을 설명하시오."
+  },
+  {
+    "id": "k119-206",
+    "period": "2교시",
+    "category": "보안",
+    "source": "119회 2교시",
+    "text": "기업에 블록체인 기술을 도입하기 위한 보안 고려사항을 설명하시오."
+  },
+  {
+    "id": "k119-301",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "119회 3교시",
+    "text": "디지털 트윈(Digital Twin) 기술을 활용한 스마트 시티 구현과 관련하여 다음을 설명하시오. 가. 디지털 트윈 기술의 정의 및 역할 나. 디지털 트윈의 구성도 및 구축기술"
+  },
+  {
+    "id": "k119-302",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "119회 3교시",
+    "text": "데이터 사이언스에 대하여 다음을 설명하시오. 가. 데이터 사이언스의 영역, 요구역량(Soft Skill/Hard Skill) 나. 데이터 사이언스 발전 방안"
+  },
+  {
+    "id": "k119-303",
+    "period": "3교시",
+    "category": "보안",
+    "source": "119회 3교시",
+    "text": "ISMS(Information Security Management System)에 대하여 다음을 설명하시오. 가. ISMS 인증 의무대상자 기준(정보통신망법 제47조 2항) 나. ISMS-P 인증기준과 주요 개정 사항"
+  },
+  {
+    "id": "k119-304",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "119회 3교시",
+    "text": "산재된 지식과 시스템을 통합하기 위한 페이퍼리스 프로젝트와 ECM(Enterprise Content Management)을 활용한 업무 효율성 향상 방안을 설명하시오."
+  },
+  {
+    "id": "k119-305",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "119회 3교시",
+    "text": "클라우드 서비스 PaaS(Platform as a Service) 기반의 소프트웨어 개발 방법론을 제시하시오."
+  },
+  {
+    "id": "k119-306",
+    "period": "3교시",
+    "category": "운영체제",
+    "source": "119회 3교시",
+    "text": "CPU 스케줄링 알고리즘에 대하여 다음을 설명하시오. 가. SJF(Shortest Job First)와 HRN(Highest Response-ratio Next) 나. MLQ(Multi Level Queue)와 MLFQ(Multi Level Feedback Queue)"
+  },
+  {
+    "id": "k119-401",
+    "period": "4교시",
+    "category": "네트워크",
+    "source": "119회 4교시",
+    "text": "IPS(Indoor Positioning System)에 대하여 다음을 설명하시오. 가. 정의 및 특징 나. IPS 측위 기술 다. 활용 서비스 유형"
+  },
+  {
+    "id": "k119-402",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "119회 4교시",
+    "text": "정보시스템 운영 및 유지보수 관점에서 리팩토링(Refactoring) 기법을 활용한 3R(Reverse-Engineering, Re-Engineering, Re-use)에 대하여 설명하시오."
+  },
+  {
+    "id": "k119-403",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "119회 4교시",
+    "text": "ISMP(Information System Master Plan)에 대하여 다음을 설명하시오. 가. 정의 및 목적 나. ISMP 수행방법론 체계와 절차 다. ISP, EA/ITA, ISMP 비교"
+  },
+  {
+    "id": "k119-404",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "119회 4교시",
+    "text": "소프트웨어 안전성 분석의 개념 및 안전성 분석 기법을 설명하시오."
+  },
+  {
+    "id": "k119-405",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "119회 4교시",
+    "text": "빅데이터 분석 기술 중 오픈데이터 플랫폼을 구성하기 위한 LOD(Linked Open Data) 기술요소를 설명하시오."
+  },
+  {
+    "id": "k119-406",
+    "period": "4교시",
+    "category": "프로젝트관리",
+    "source": "119회 4교시",
+    "text": "고시된 감리기준(행정안전부 고시 제2017-1호)에 대하여 다음을 설명하시오. 가. 감리 실시 시기 및 감리 인력 배치기준 나. 감리 제안서 기술평가 항목"
   }
 ]
