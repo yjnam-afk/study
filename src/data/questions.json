@@ -944,5 +944,222 @@
     "category": "소프트웨어공학",
     "source": "136회 4교시",
     "text": "소프트웨어 품질 속성 중 보안 품질에 대하여 설명하시오. 가. 소프트웨어 보안 품질의 정의와 중요성 나. 보안 품질 확보를 위한 자동화 기술과 도구 다. 소프트웨어 라이프사이클 관점에서 보안 품질 확보 자동화 구현방안 라. 보안 품질 확보 자동화의 기대 효과와 시사점"
+  },
+  {
+    "id": "k135-101",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "135회 1교시",
+    "text": "PR(Precision-Recall) 곡선과 ROC(Receiver Operating Characteristic) 곡선을 비교하여 설명하시오."
+  },
+  {
+    "id": "k135-102",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "135회 1교시",
+    "text": "Multimodal LLM(Large Language Model)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-103",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "135회 1교시",
+    "text": "요구사항 추적표(RTM, Requirement Traceability Matrix)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-104",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "135회 1교시",
+    "text": "IBN(Intent-Based Networking)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-105",
+    "period": "1교시",
+    "category": "보안",
+    "source": "135회 1교시",
+    "text": "SIEM(Security Information & Event Management)과 SOAR(Security Orchestration Automation & Response)를 비교하여 설명하시오."
+  },
+  {
+    "id": "k135-106",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "135회 1교시",
+    "text": "실루엣 계수(Silhouette Coefficient)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-107",
+    "period": "1교시",
+    "category": "보안",
+    "source": "135회 1교시",
+    "text": "개인정보 안심구역에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-108",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "135회 1교시",
+    "text": "불편추정량(Unbiased Estimator)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-109",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "135회 1교시",
+    "text": "소프트웨어 기술 부채의 유형과 관리 방법에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-110",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "135회 1교시",
+    "text": "IEEE 802.11bn에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-111",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "135회 1교시",
+    "text": "팬텀 충돌(Phantom Conflict)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-112",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "135회 1교시",
+    "text": "VAE(Variational AutoEncoder)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-113",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "135회 1교시",
+    "text": "AGI(Artificial General Intelligence) 측면에서 ANI(Artificial Narrow Intelligence)의 필요성에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-201",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "135회 2교시",
+    "text": "물리 데이터 모델링 중 반정규화에 대하여 설명하시오. 가. 반정규화 절차 나. 반정규화 유형 다. 반정규화 시 고려사항"
+  },
+  {
+    "id": "k135-202",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "135회 2교시",
+    "text": "CI/CD 파이프라인에서 DevSecOps 적용방안에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-203",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "135회 2교시",
+    "text": "회귀모형에서 오차의 등분산성(Homoscedasticity)과 다중공선성(Multicollinearity)에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-204",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "135회 2교시",
+    "text": "6G 이동통신 기술에 대하여 설명하시오. 가. 서비스 특징 나. 성능 요구사항 다. 주파수 동향"
+  },
+  {
+    "id": "k135-205",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "135회 2교시",
+    "text": "공공기관의 거대 언어 모델(LLM) 적용에 대하여 설명하시오. 가. 거대 언어 모델 적용을 위한 5가지 고려사항 나. 현재 구현 가능한 5가지 거대 언어 모델 아키텍처"
+  },
+  {
+    "id": "k135-206",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "135회 2교시",
+    "text": "AI 디지털교과서에 대하여 설명하시오. 가. 개념 및 특징 나. 플랫폼 구조 다. 기능 및 핵심 서비스"
+  },
+  {
+    "id": "k135-301",
+    "period": "3교시",
+    "category": "프로젝트관리",
+    "source": "135회 3교시",
+    "text": "프로젝트 관리에 대하여 설명하시오. 가. IT 프로젝트 관리의 개념 나. IT 프로젝트 관리 프로세스 다. IT 프로젝트 관리·프로그램 관리·포트폴리오 관리의 비교"
+  },
+  {
+    "id": "k135-302",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "135회 3교시",
+    "text": "프롬프트 엔지니어링(Prompt Engineering)의 기술 요소와 활용 방안에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-303",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "135회 3교시",
+    "text": "멀티클라우드(MultiCloud)에 대하여 설명하시오. 가. 개념 및 필요성 나. 시스템 요구사항 다. 주요 기술"
+  },
+  {
+    "id": "k135-304",
+    "period": "3교시",
+    "category": "보안",
+    "source": "135회 3교시",
+    "text": "양자 암호 기술에 대하여 설명하시오. 가. 양자키분배(QKD) 나. 양자내성암호(PQC) 다. QKD와 PQC 비교"
+  },
+  {
+    "id": "k135-305",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "135회 3교시",
+    "text": "데이터 거래를 위한 데이터 가치평가에 대하여 설명하시오. 가. 데이터 재화와 데이터 가치의 특징 나. 데이터 가치평가의 모델 및 절차 다. 데이터 가치평가의 활용방안"
+  },
+  {
+    "id": "k135-306",
+    "period": "3교시",
+    "category": "보안",
+    "source": "135회 3교시",
+    "text": "딥페이크(Deepfake)에 대하여 설명하시오. 가. 딥페이크의 개념 및 핵심 기술 나. 딥페이크의 문제점 다. 딥페이크 대응방안"
+  },
+  {
+    "id": "k135-401",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "135회 4교시",
+    "text": "확장성 해싱(Extendible Hashing) 기법에 대하여 설명하시오. 가. 개념 및 구성요소 나. 충돌회피 기법"
+  },
+  {
+    "id": "k135-402",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "135회 4교시",
+    "text": "릴레이션 무결성 제약의 유형과 사례를 제시하고, 구현 방법에 대하여 설명하시오."
+  },
+  {
+    "id": "k135-403",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "135회 4교시",
+    "text": "이항 분포(Binomial Distribution)와 포아송 분포(Poisson Distribution)를 비교 설명하시오."
+  },
+  {
+    "id": "k135-404",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "135회 4교시",
+    "text": "빅데이터 시각화(Visualization)에 대하여 설명하시오. 가. 개념 및 절차 나. 방법 및 도구"
+  },
+  {
+    "id": "k135-405",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "135회 4교시",
+    "text": "인공지능 소프트웨어 품질 보증을 위한 테스트 기법에 대하여 설명하시오. 가. 메타모픽 테스트 나. 뉴런 커버리지 테스트 다. 안전 변경 최대화 테스트"
+  },
+  {
+    "id": "k135-406",
+    "period": "4교시",
+    "category": "보안",
+    "source": "135회 4교시",
+    "text": "경계 기반 보안(Perimeter Security)과 제로 트러스트 성숙도모델 2.0을 비교 설명하고, 제로 트러스트 아키텍처 도입 시 고려사항을 설명하시오."
   }
 ]
