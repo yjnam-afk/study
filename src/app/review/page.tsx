@@ -44,8 +44,16 @@ export default function ReviewPage() {
   const [page, setPage] = useState(0);
 
   useEffect(() => {
-    setState(loadReview());
+    const refresh = () => setState(loadReview());
+    refresh();
     setReady(true);
+    // 서버 동기화 완료(로그인 시 서버→로컬 복원)·다른 탭 변경 시 진도를 다시 읽어 화면에 반영
+    window.addEventListener("progress-synced", refresh);
+    window.addEventListener("storage", refresh);
+    return () => {
+      window.removeEventListener("progress-synced", refresh);
+      window.removeEventListener("storage", refresh);
+    };
   }, []);
 
   // 필터·검색이 바뀌면 첫 페이지로
