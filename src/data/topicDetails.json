@@ -17387,8 +17387,8 @@
     "mnemonic": ""
   },
   "net-21": {
-    "detail": "[정의] 고정된 기간망의 도움없이 이동노트간 자율 구성되어 네트워크에 자율성과 융통성이 부여된 네트워크\n[특징] P홉불동전\n P2P, 멀티 홉, 불안정한 링크, 동적 네트워크, Ad-hoc 전용 프로토콜\n[기술요소] 객주이라 저멀기\n- 객체 교환, 주문거리 백터, 이동 에드혹, 라우팅, 저전력, 멀티링크, 기기소형화\n[분류] DW Z ADA\nDSDV, WRP, ZRP, AODV, DSR, ABR",
-    "related": "Proactive 라우팅 방식, Reactive 라우팅방식 Proactive 라우팅 방식: DSDV(주기적 라우팅 정보 갱신) Reactive 라우팅방식: AODV(발생 시에)",
+    "detail": "고정 기간망 도움 없이 이동노드 간 자율 구성되어 자율성·융통성이 부여된 네트워크.",
+    "related": "Proactive(DSDV)·Reactive(AODV) 라우팅",
     "defKeywords": [],
     "featureKeywords": [
       "P2P",
@@ -17444,7 +17444,8 @@
           "ABR"
         ]
       }
-    ]
+    ],
+    "memo": "[특징] P홉불동전 : P2P·멀티홉·불안정 링크·동적 네트워크·Ad-hoc 전용 프로토콜\n[기술요소] 객주이라 저멀기 : 객체교환·주문거리벡터·이동에드혹·라우팅·저전력·멀티링크·기기소형화\n[분류] DW Z ADA : DSDV·WRP·ZRP·AODV·DSR·ABR"
   },
   "net-22": {
     "detail": "Low-power wide area network\nLPWA(Low Power Wide Area)\n사물들을 유무선 네트워크로 연결하는 사물인터넷(IoT) 전용 통신 기술",
@@ -17471,7 +17472,7 @@
     "mnemonic": ""
   },
   "net-24": {
-    "detail": "[정의] 문자로 된 인터넷 주소를 컴퓨터가 사용하는 숫자(IP) 주소로 바꾸어, 접속하려는 사람과 웹사이트 서버를 연결해주는 방식\n[구성요소] Domain Name Space, Resource Record, Name Server, Resolver\n[주요기능] 네호메로\n- Name Resolution(URL>IP 전환), Host Aliasing(호스트 별칭), Mail Server Aliasing(메일서버 정보 제공), Local Distribution(부하분산)\n[관리정보] 주네정권 포메문\n- 주소(A):IP주소, 네임서버(NS):서버의 네임, 정규네임(CNAME):별칭, 권한개시정보(SOA):Zone 등록정보, 포인터(PTR):다른 위치 가리키는 포인터, 메일교환(MX):수신 메일 처리 메일서버, 문자열(TXT):도메인 관련 임의 문자",
+    "detail": "문자 인터넷 주소를 숫자 IP로 변환해 사용자와 웹서버를 연결해주는 방식.",
     "related": "122회 기출",
     "defKeywords": [
       "문자 주소→숫자(IP) 변환",
@@ -17518,7 +17519,8 @@
           "문자열(TXT)"
         ]
       }
-    ]
+    ],
+    "memo": "[주요기능] 네호메로 : Name Resolution·Host Aliasing·Mail Server Aliasing·Local Distribution\n[관리정보(RR)] 주네정권 포메문 : A·NS·CNAME·SOA·PTR·MX·TXT"
   },
   "net-25": {
     "detail": "[정의] Ethernet 신호 전송을 위하여 효율적 대역폭 관리 및 Ethernet 스위칭 등의 신규기술을 통합 적용한 NG-SDH 기술을 기반으로 기존 SONET/SDH 망을 거의 손대지 않고도 Ethernet 네트워크 구축이 가능한 기술",
@@ -17803,8 +17805,8 @@
     "mnemonic": ""
   },
   "net-42": {
-    "detail": "[정의] 종단간 사용자들이 신뢰성 있는 데이터를 송수신 할 수 있도록 \n흐름 제어, 오류 제어, 혼잡 제어의 역할을 수행하는 OSI 7 Layer의 4계층\n[역할] 흐름제어(슬라이딩 윈도우), 혼잡제어(TCP 혼잡제어), 오류제어(Sequence number)\n[프로토콜] TCP(가상회선), UDP(데이터그램)\n[오류제어] 오류검출(check sum, 확인, timeout)\n오류정정(훼손 세그먼트, 손실 세그먼트, 중복 세그먼트, 순서 어긋난 세그먼트, 확인 응답 세그먼트)\n[오류종류] 감쇠 현상, 지연 왜곡, 잡음, 에코, 지터, 백색잡음\n\n종단간 연결 : end-to-end 에러없이 전송 위한 연결\n서비스 지점 주소지정 : socket addr-=ip addr+port#\n다중화/역다중화 : 전송 효율 향상\n연결제어 : 연결 설정,유지,해제\n분할,재조립 : segment,reassembly, segment에 순서부여, 손실패킷 발견/대책\n[기법] 오름혼 훼손중순확\n오류제어 : seq #, Act, RTO \n 훼손중순확 : 훼손, 손실, 중복, 순서, 확인응답\n흐름제어 : Sliding Window, 버퍼이용, (pushing-소비자 요구없이,pulling-소비자요구 시)\n혼잡제어 : 개방루프,폐루프 네트워크 처리용량 초과 방지, Taho TCP, Reno TCP",
-    "related": "세그먼트 단위, 신뢰성 있는 데이터를 송수신할 수 있도록 흐름제어: 슬라이딩 윈도우 이용 혼잡제어: TCP 혼잡제어(그림 이용) 오류제어:각각의 세크먼트에 ACK 가 도착안하면, 재전송 (Data link의 에러제어와 같이 쓰면 안됨)",
+    "detail": "종단간 신뢰성 있는 데이터 송수신 위해 흐름·오류·혼잡 제어를 수행하는 OSI 4계층.",
+    "related": "세그먼트 단위 / TCP·UDP",
     "defKeywords": [
       "흐름 제어",
       "오류 제어"
@@ -17840,11 +17842,12 @@
       "Reno TCP"
     ],
     "plusKeywords": [],
-    "mnemonic": "오름혼 훼손중순확"
+    "mnemonic": "오름혼 훼손중순확",
+    "memo": "[기법] 오름혼 훼손중순확\n오류제어(seq#·ACK·RTO), 흐름제어(Sliding Window), 혼잡제어(개방/폐루프, Taho/Reno TCP)\n오류정정 훼손중순확 : 훼손·손실·중복·순서·확인응답"
   },
   "net-43": {
-    "detail": "[정의] 송신자, 수신자 간 Data 전송을 위해 Logical Address를 지정하고 이를 통해 포워딩과 라우팅을 \n수행할 수 있도록 지원하는 계층\n[프로토콜] ARP, IP, ICMP, IPsec, IGMP\n[기능] 포워딩, 라우팅\n[장비] 라우터, L3 Switch\n[표준] ISO/IEC 8208",
-    "related": "주소들을 어떻게 할당할 것인지. 패킷에 대한 통신경로 선택(라우팅), packet이라는 용어 사용함",
+    "detail": "송수신자 간 데이터 전송 위해 Logical Address 지정·포워딩·라우팅을 수행하는 OSI 3계층.",
+    "related": "packet 단위 / 경로선택",
     "defKeywords": [
       "송신자"
     ],
@@ -17854,11 +17857,12 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "memo": "[프로토콜] ARP·IP·ICMP·IPsec·IGMP\n[기능] 포워딩·라우팅 [장비] 라우터·L3 Switch [표준] ISO/IEC 8208"
   },
   "net-44": {
-    "detail": "[정의] OSI 7 Layer의 하위 계층인 2계층으로 두 시스템 사이에서 오류 없이 정보 데이터를 전송하려고 \n상위 계층에서 받은 비트열의 데이터로 프레임을 구성하여 하위 계층으로 전송\n[역할] 오류제어, 흐름제어, 접근제어, 주소지정, 정보전달\n[오류제어 유형] FEC(해밍코드, RS CODE, Convolutional Code, Turbo Code), \nBEC(패리티검사, 블록합, 순환증복검사, Checksum, Stop & wait ARQ, Go Back N ARQ, Selective ARQ)\n[장비] L2 Switch\n'프로토콜 : MAC, PPP, LLC 프로토콜 , 오름회 ENQ/ACK, Polling\n표준 : IEEE 802.11 표준(토큰, 링, 버스형 방식), IEEE 802.3(Ethernet)\n특징 : 프레임 단위, 체크섬 계산, 패리티 검사(Parity Check), 장비: Bridge, L2 Switch\n오류제어 : FEC - 해리코텉 블럭(Hamming Code, R-S Code)\n                               넌블럭( Convolutional Code, Turbo Code), \n             BEC - 탐지(CRC, Parity Check, Checksum, Blocksum), \n                  재전송(스고셀아합-Stop and wait ARQ, Go Back N ARQ, Selective ARQ,\n                                   Adapted ARQ, Hybird ARQ)\n흐름제어 : Sliding Window\n회선제어 경폴인토 EA P: 다수의 노드가 하나의 회선을 공유하는 방법\n- 경쟁방식, 폴링방식, 인터럽트 방식, 토큰 방식\n   : ENQ/ACK (1:1 링크전용), \n             Polling ( Select 모드 - 수진자 선택, Poll 모드 - 수신자 Data 수신 응답 확인 )",
-    "related": "오류 검사(제어), 프레임 단위, 체크섬 계산 패리티 검사(Parity Check)",
+    "detail": "두 시스템 사이에서 오류 없이 프레임을 전송하는 OSI 2계층.",
+    "related": "프레임 단위 / 체크섬·패리티 / L2 Switch",
     "defKeywords": [],
     "featureKeywords": [
       "FEC",
@@ -17866,7 +17870,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "오름회"
+    "mnemonic": "오름회",
+    "memo": "[오류제어] 오름회 / 해리코텉(FEC:Hamming·RS / Convolutional·Turbo) / 스고셀아합(BEC 재전송: Stop&Wait·Go-Back-N·Selective·Adaptive·Hybrid ARQ)\n[회선제어] 경폴인토 EA P : 경쟁·폴링·인터럽트·토큰 / ENQ-ACK·Polling"
   },
   "net-45": {
     "detail": "[정의] OSI 계층을 타고 내려온 데이터를 전기적 신호로 변환시켜 통신하는 계층 ( Encoding, Decoding 수행)\n[프로토콜] EIA/TIA-232, EIA-449, V.35, 10Base-2, 10Base-5, 10Base-T\n[토폴리지] star, bus, ring, tree, mesh\n[장비] 허브, 리피터",
@@ -17934,7 +17939,7 @@
     "mnemonic": ""
   },
   "net-50": {
-    "detail": "송수신 데이터의 노이즈, 지연, 변형 등의 통신장애로부터 오류 검출 및 세그먼트 재전송 통한 신뢰성을 확보하는 시퀀스 기반 통신 기법\n제어 - 훼손중순확 : 손상(훼손) 세그먼트 제어, 손실 세그먼트 제어, \n중복 세그먼트 제어 ( 확인응답 미도착 세그먼트에 대한 송신 TCP의 재전송으로 발생, 늦게 도착한 것 폐기), \n순서가 뒤바뀐 세그먼트 제어 ( TCP 세그먼트가 IP에 의해 전달되어 발생, 모두 폐기 )\n확인응답의 손실 제어, \n오류 감지 : 검사합 ( 손상 세그먼트 검사, 손상된 세그먼트 발견 시 폐기 ), 확인응답( 손상되지 않은 세그먼트 수신을 통보 ), \n              시간초과 ( 송신 TCP는 각 세그먼트 별로 시간초과 카운터 설정, 시간초과 카운터가 설정된 값이 되면, 손상 혹은 손실로 간주하고 재전송함 )",
+    "detail": "송수신 데이터의 노이즈·지연·변형 등 장애로부터 오류 검출 및 세그먼트 재전송으로 신뢰성을 확보하는 기법.",
     "related": "",
     "defKeywords": [
       "송수신 데이터의 노이즈",
@@ -17948,7 +17953,8 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "훼손중순확"
+    "mnemonic": "훼손중순확",
+    "memo": "[제어] 훼손중순확 : 손상·손실·중복·순서·확인응답 세그먼트 제어\n[오류감지] 검사합·확인응답·시간초과"
   },
   "net-51": {
     "detail": "[정의] 슬라이딩 윈도우 동작 시 송신 및 수신 응용프로그램의 낮은 데이터 생성, \n소비 속도로 인한 적은 Data 전송, 동작효율 감소 현상\nex) TCP 상 1byte Data 전송 시: 1) TCP 헤더 20bytes + 2) IP 헤더 20bytes + 3) Data 1byte \n= 41bytes의 데이터그램 전송 필요. 오버헤드 = 41/1\n\n[해결방안] Nagle's Algorithn(송신측, 일정크기까지 전송 보류 -> 송신 Data 크기의 적정 수준 유지)\nClark's Solution(수신측, 최소 절반이상 공간 확보 이전에는 rwnd: 0 으로 응답, 송신 방지 -> 요청 Data 크기 적정 수준 유지)",
@@ -18320,7 +18326,7 @@
     "mnemonic": "보컨로 큐캐트"
   },
   "net-76": {
-    "detail": "서버나 네트워크 간 로드밸런싱 용도에서 L4단계의 프로토콜인 TCP/UDP 등 \n스위칭 수행하는 로드밸런서\n[기능]로버패 캐연Q \nload balancing(서버,보안장비,트래픽), virtual IP(서버증설 시 IP변경없이 사용가능), \nFail-over(Master 서버 장애 시 slave서버로 스위칭), 캐싱, 서비스연결, QoS \n로드밸런싱 Metrics 값\n[장비] G/W, SLB, TLB\n[알고리즘] 라가해최(R해리컨)\n - RR(time slot기반) , - Weighted RR(서로 다른 능력치 서버이용, 가중치)\n - Hasing(hashing key로 경로지정) , - Least connection(연결수 가장적은,최소)\n - weighted leaset connection(서버 처리 능력 고려)\n웹방화벽 사용\n(이중화) L4스위치 기반 이중화방안   나. 소프트웨어 기반 이중화 방안",
+    "detail": "서버·네트워크 간 로드밸런싱 용도로 L4(TCP/UDP) 스위칭을 수행하는 로드밸런서.",
     "related": "",
     "defKeywords": [
       "UDP",
@@ -18337,7 +18343,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "로버패 캐연Q"
+    "mnemonic": "로버패 캐연Q",
+    "memo": "[기능] 로버패 캐연Q : Load balancing·Virtual IP·Fail-over·캐싱·서비스연결·QoS\n[알고리즘] 라가해최(R해리컨) : RR·Weighted RR·Hashing·Least connection·Weighted least connection"
   },
   "net-77": {
     "detail": "L2 스위치에 라우팅(Routing) 기능을 추가.\nIP를 이용한 논리적 주소를 기반으로 경로 결정\n고성능 패킷 스위칭",
@@ -18454,8 +18461,8 @@
     "mnemonic": ""
   },
   "net-84": {
-    "detail": "[정의] IEEE 802.11p, IEEE 1609기반의 차량환경용 무선통신기술\n[구성요소]\n802.11p - WAVE 통신스택 하위계층(PHY, MAC계층정의)\nIEEE 1609.1 - 자원을 관리하는 리소스 매니저 정의\nIEEE 1609.2 - 무선 네트워크 통하여 보안통신 제공\nIEEE 1609.3 - N/W 계층 및 전송계층 서비스\nIEEE 1609.4 - WAVE MAC 계층의 멀티채널 오퍼레이션 제공\n[통신 기술] 통신대역폭: 75 MHz (5.850 - 5.925 GHz)-오빠빨리오구있소, \n- 채널 수: 7개 , - 채널 대역폭: 10Mhz(20Mhz) , - 최대 전송속도: 27Mbps\n- 전송범위: 최대 1000m - 지원 차량 속도: 최대 200Km/h - 기술: RF, OFDM, MAC와 라우팅기술",
-    "related": "ITS 적용, iEEE 1609 http://blog.naver.com/babodume?Redirect=Log&logNo=30169399790",
+    "detail": "IEEE 802.11p·1609 기반 차량환경용 무선통신(WAVE) 기술.",
+    "related": "ITS 적용 / IEEE 1609",
     "defKeywords": [],
     "featureKeywords": [
       "PHY",
@@ -18463,7 +18470,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "오빠빨리오구있소"
+    "mnemonic": "오빠빨리오구있소",
+    "memo": "[통신] 오빠빨리오구있소 : 통신대역폭 75MHz(5.850~5.925GHz)\n채널 7개·10MHz, 최대 27Mbps, 전송범위 1000m, 최대 200km/h, RF·OFDM"
   },
   "net-85": {
     "detail": "개념도, 구성요소, 유형\nLAN 카드에 전용 메모리(ROM)을 가지고 있고, 그곳에 고유의\n주소가 기록됨.  이것을 MAC 주소하고 함.\n48비트 중(24비트: 제조사별 할당된 코드, 하위24비트는 시리얼번호)",
@@ -18627,8 +18635,8 @@
     "mnemonic": ""
   },
   "net-97": {
-    "detail": "Wi-Fi 6 보다 3배 빠르고 초 실감 미디어 컨텐츠를 안정적으로 전송하는 \n차세대 무선통신 기술\n[표준] IEEE 801.11be\n[특징] 5G 음영지역 해소, 초고속 / 저지연(5ms), 비면허 주파수 대역 확대, \n콘텐츠 전송(4K,8K) 지원\n[성능목표]주변속대 하표멀\n주파수(2.4Ghz, 5Ghz, 6Ghz), 변조-4096 QAM, 속도(최대30Gbps), 최대대역폭(320Mhz), \n하위호환성( IEEE 802.11 지원), ,표준기술명(IEEE 802.11be(Extremely High Throught)\n멀티 플랙싱(in-band Full duplex Multiplexing, ap 송수신 가능)\n[기술요소]에하 빔쾀미\nMAC (AP 간 다중협력 통신, H-ARQ )\nPHY ( 혼합 빔포밍, 4096-QAM, 16 X 16 MIMO )\n3단락.  WIFI 7와 WIFI 6비교\n속대주표\n최대속도(30Gbps/9.6Gbps), 최대 대역폭(320Mhz, 160Mhz), 지원주파수(6Ghz), 표준(be/ax)",
-    "related": "비교표 139_관리_1_10",
+    "detail": "Wi-Fi 6 대비 3배 빠르고 초실감 미디어를 안정 전송하는 차세대 무선통신(IEEE 802.11be).",
+    "related": "139_관리_1_10 비교표",
     "defKeywords": [
       "차세대 무선통신 기술"
     ],
@@ -18649,7 +18657,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "주변속대 하표멀"
+    "mnemonic": "주변속대 하표멀",
+    "memo": "[성능목표] 주변속대 하표멀 : 주파수(2.4·5·6GHz)·변조(4096QAM)·속도(30Gbps)·대역폭(320MHz)·하위호환·표준명·멀티플렉싱\n[기술요소] 에하 빔쾀미 : MAC(다중협력·H-ARQ)·PHY(빔포밍·4096QAM·16x16MIMO)\n[6세대 비교] 속대주표"
   },
   "net-98": {
     "detail": "향상된 효율성을 핵심목표로 UHR(Ultra High Reliability, 극도 높은 신뢰성)을 제공하는 차세대 Wi-Fi 표준/대역폭(2.4GHz, 5GHz, 6GHz), 최대속도(100Gbps)",
@@ -19087,8 +19096,8 @@
     "mnemonic": ""
   },
   "net-130": {
-    "detail": "FIFO, PQ, CBQ, WFP(Weighted Fair Queuing) 포함 정리, \n지표 대지패지 (대역폭, 지연, 패킷손실, 지터)\n측정레벨 - 베디구 (Best-effort, Differentaiated, Guaranted)\nQoE(Quality of Experience)",
-    "related": "트래픽관리",
+    "detail": "트래픽에 우선순위·대역폭을 부여해 통신 품질을 보장하는 기술.",
+    "related": "트래픽관리 / QoE",
     "defKeywords": [
       "Weighted Fair Queuing",
       "Quality of Experience",
@@ -19103,7 +19112,8 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "기성회보"
+    "mnemonic": "기성회보",
+    "memo": "[방식] 기성회보 (FIFO·PQ·CBQ·WFQ)\n[지표] 대지패지 : 대역폭·지연·패킷손실·지터\n[측정레벨] 베디구 : Best-effort·Differentiated·Guaranteed"
   },
   "net-131": {
     "detail": "가중치를 통한 QoS 보장 스케줄링 기법\nQ2와 Q3가 3:2로 분할하여 트래픽 전송",
@@ -19115,7 +19125,7 @@
     "mnemonic": ""
   },
   "net-132": {
-    "detail": "[정의]미리 정해진 기준 이상을 초과하는 트래픽은 버림으로써 트래픽 대역폭(Bandwidth)을 제한(limitation)하는 QoS 기술\n[키워드]  Meter(bps), Drop, Mark, Leaky Bucket, Token Bucket",
+    "detail": "기준 이상 초과 트래픽을 버려 대역폭을 제한(limitation)하는 QoS 기술.",
     "related": "",
     "defKeywords": [
       "Bandwidth",
@@ -19124,10 +19134,11 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "미드마"
+    "mnemonic": "미드마",
+    "memo": "[키워드] 미드마 : Meter(bps)·Drop·Mark / Leaky Bucket·Token Bucket"
   },
   "net-133": {
-    "detail": "[정의]- 트래픽 쉐이핑으로 대역폭을 제어하는 것 뿐 아니라, 전송률(rate)를 조절하여 패킷 끊김(jitter), 패킷 손실(loss), 반응시간(low latency) 등을 최적화.\n트래픽 쉐이핑(Shaping), Leaky Bucket, Tocken Bucket\n[구성 요소]CCE\n1) CBS - 허용 버스트 크기(Committed Burst Size: Bc)\n- 프레임 폐기나 DE 비트 설정 없이 정해진 시간 동안 네트워크에서 전송할 수 있는 최대 비트 수\n2) CIR  - 허용 정보율(Committed Information Rate)\n- CIR = Bc / T bps\n3) EBS - 초과 버스트 크기(Excess Burst Size: Be)",
+    "detail": "대역폭 제어와 전송률(rate) 조절로 지터·손실·지연을 최적화하는 QoS 기술.",
     "related": "트래픽관리",
     "defKeywords": [
       "rate",
@@ -19149,7 +19160,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "CCE"
+    "mnemonic": "CCE",
+    "memo": "[구성요소] CCE : CBS(허용 버스트 Bc)·CIR(허용 정보율=Bc/T)·EBS(초과 버스트 Be)\nLeaky Bucket·Token Bucket"
   },
   "net-134": {
     "detail": "1) RED(Random Early Detection)\n2) WRED(Weighted Random Early Detection)",
@@ -19790,7 +19802,7 @@
     "mnemonic": ""
   },
   "net-185": {
-    "detail": "[정의]- 4G 대비 10배이상 향상된 초고속, 초고용량, 초저지연, 초연결 네트워크 기술로 다양한 디지털 디바이스를 수용하고 Real 2D 입체 영상 서비스 기술구현을 목표로 한 차세대 네트워크의 핵심 인프라기술\n5G 기술, 고밀도화, Massive MIMO, 저지연(Low Latency), \n전이중통신(Full Duplex Radio): 주파수 효율과 속도를 2배로.\n퀄컴: NSA(Non-Standalone) 기술 제시\n적응형 빔포밍(Adaptive Beamforming): 장애물을 피하는 기술",
+    "detail": "4G 대비 10배 향상된 초고속·초저지연·초연결 차세대 네트워크 핵심 인프라 기술.",
     "related": "4G 비교",
     "defKeywords": [
       "Low Latency",
@@ -19807,7 +19819,8 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "전체주고지연에면"
+    "mnemonic": "전체주고지연에면",
+    "memo": "[핵심기술] 전체주고지연에면\nMassive MIMO, 저지연, 전이중통신(Full Duplex), NSA, 적응형 빔포밍"
   },
   "net-186": {
     "detail": "네트워크 슬라이싱(Network Slicing) 기술\n[정의]물리적으로 하나의 네트워크를 통해 Device, Access, Transport, Core를 포함하여 End-to-End로 논리적으로 분리된 네트워크를 만들어 서로 다른 특성을 갖는 다양한 서비스들에 대해 그 서비스에 특화된 전용 네트워크를 제공하는 5G 네트워크의 핵심기술\n[키워드]NFVI, NFVs, MANO, E2E Networking",
@@ -19990,8 +20003,8 @@
     "mnemonic": ""
   },
   "net-200": {
-    "detail": "[정의]모든 네트워크 사업자와 정부는 인터넷을 통해 발생하는 데이터 트래픽을 동등하게 취급하고, 대상, 내용, 유형, 사용자, 플랫폼, 전송방식에 따른 어떠한 차별도 없이 동등하게 처리해야 한다는 것\n[키워드] no discrimination(비차별), 상호접속, 접근성 등 3가지 원칙\n미국 ‘망 중립성’ 폐지/장,단점, ISP사업자, CP사업자, 요금제, 네트워크 트래픽, 관리형 서비스, 네트워크 슬라이싱\n[특징] 비상접\n비차별성(no discrimination), 상호접속(interconnection), 접근성(accessibility)\n[서비스] 관네특 \n 관리형 서비스, 네트워크 슬라이싱, 특수서비스\n(참고) 2003년에 컬럼비아 대학교의 미디어 법 교수인 팀 우(Tim Wu)가 만든 용어.",
-    "related": "",
+    "detail": "모든 네트워크 사업자·정부는 인터넷 데이터 트래픽을 대상·내용·유형·사용자 차별 없이 동등 처리해야 한다는 원칙.",
+    "related": "Tim Wu(2003)",
     "defKeywords": [
       "대상",
       "내용",
@@ -20009,7 +20022,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "비상접"
+    "mnemonic": "비상접",
+    "memo": "[특징] 비상접 : 비차별성·상호접속·접근성\n[서비스] 관네특 : 관리형 서비스·네트워크 슬라이싱·특수서비스"
   },
   "net-201": {
     "detail": "[정의]가. NMS (Network Management System)정의\n- 이 기종, 분산 환경의 Network를 관리하기 위해 SNMP를 이용, Network상의 전 장비들의 중앙 감시체제를 구축하고 Monitoring, Planning, 분석한 데이터를 보관, 즉시 활용 가능한 관리 시스템.\n주요 관리 기능, SNMP",
@@ -20055,7 +20069,7 @@
     "mnemonic": ""
   },
   "net-204": {
-    "detail": "[정의]패킷을 목적지에 전달하기 위해서 경로정보를 어느 노드에 전달 하는가를 각 노드가 판단할 수  있게 하고 그 정보에 따라서 패킷을 전달하게 하는 기능\nRIP vs OSPF(Open Shortest Path First)\nBGP((Border Gateway Protocol) vs IGP\nDistance Vector vs Link State 알고리즘",
+    "detail": "패킷을 목적지에 전달하기 위한 경로정보를 각 노드가 판단·전달하게 하는 기능.",
     "related": "",
     "defKeywords": [
       "Open Shortest Path First",
@@ -20066,7 +20080,8 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "memo": "경로당은 내외부에 테이블이 있다 / 거리, 링은 오리(거리벡터·링크상태)\nRIP vs OSPF, BGP vs IGP, Distance Vector vs Link State"
   },
   "net-205": {
     "detail": "전송 통로 역할 개념, TCP/IP 등의 프로토콜",
@@ -20119,8 +20134,8 @@
     "mnemonic": ""
   },
   "net-209": {
-    "detail": "[정의]Distance Vector Algorithm의 정의\n라우터가 목적지까지 가는 경로를 SPF(Shortest Path First) 알고리즘을 통해 모든 라우팅 테이블에 기록 (모든 라우터) 하는 라우팅 방식.\nRIP(Routing Information Protocol), IGRP(Interior Gateway Routing Protocol)\n거리벡터, 일정시간마다 이웃경로 교환",
-    "related": "거리수베, 링오이다",
+    "detail": "목적지까지 경로를 SPF로 모든 라우팅 테이블에 기록하는 라우팅 방식(RIP·IGRP).",
+    "related": "RIP·IGRP",
     "defKeywords": [
       "Shortest Path First",
       "RIP",
@@ -20131,11 +20146,12 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "memo": "거리수베, 링오이다 / 거리벡터, 일정시간마다 이웃경로 교환"
   },
   "net-210": {
-    "detail": "[정의] - 라우터가 목적지까지 가는 경로를 OSPF 알고리즘을 통해 모든 라우팅 테이블에 기록해 두는 방식으로, 각 링크 비용 합에 기반하여, 최소의 경로 비용을 계산하는 라우팅 알고리즘.\nOSPF(Open Shortest Path First; 최단 경로 우선 프로토콜)\nIS-IS(Intermediate System to Intermediate System): \n다익스트라 알고리즘으로 내용 기술, 그림 그릴 수 있어야 함",
-    "related": "다익스트라 알고리즘",
+    "detail": "각 링크 비용 합에 기반해 최소 경로비용을 계산하는 라우팅 알고리즘(OSPF·IS-IS).",
+    "related": "다익스트라 / OSPF·IS-IS",
     "defKeywords": [
       "OSPF",
       "IS-IS"
@@ -20143,7 +20159,8 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "링크는 오이"
+    "mnemonic": "링크는 오이",
+    "memo": "링크는 오이 / 다익스트라 알고리즘 기반"
   },
   "net-211": {
     "detail": "Distance Vector Routing 기반 메트릭 (metric) 정보를 인접 라우터와 주기적 으로 교환하여 라우팅 테이블을 갱신하 고, Dijkstra의 SPF(Shortest Path First) 알고리즘을 사용 테이블을 구성/계산하는 내부 라우 팅 프로토콜.\n[배경] 1980년대 중반에 RIP 라우팅 프로토콜이 대규모 이질적인 망간 라우팅에 비효율이어서, IETF에서 SPF 알고리즘에 기초하여 공개(Open)적으로 개발되어 인터넷에 적용\n- Hop Count + 대역폭 + 이용도",
