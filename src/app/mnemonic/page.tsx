@@ -444,17 +444,14 @@ function Learn({
   const hasMemo = Boolean(memo && memo.trim());
   return (
     <div className="space-y-6">
-      {/* 교재 두음(memo)이 있으면 그걸 메인 카드로. 자동생성 두음은 숨긴다. */}
-      {hasMemo ? (
-        <MemoCard memo={memo!} items={set.body.items} />
-      ) : (
-        <GroupCard
-          label="📌 서론(정의) 두음"
-          sub="답안 I. 개요에 쓸 키워드"
-          group={set.intro}
-          hideDesc
-        />
-      )}
+      {/* 서론(정의) 두음 — 항상 유지 */}
+      <GroupCard
+        label="📌 서론(정의) 두음"
+        sub="답안 I. 개요에 쓸 키워드"
+        group={set.intro}
+        hideDesc
+      />
+      {/* 본론 두음 — 교재 섹션 > 교재 암기법(memo) > 자동생성 순으로 표시 */}
       {hasSections ? (
         // 교재에 섹션별 두음(특징·기술요소·분류 등)이 있으면 각각 별도 카드로.
         <div className="space-y-3">
@@ -470,7 +467,9 @@ function Learn({
             <SectionCard key={i} section={s} />
           ))}
         </div>
-      ) : hasMemo ? null : (
+      ) : hasMemo ? (
+        <MemoCard memo={memo!} items={set.body.items} />
+      ) : (
         <GroupCard
           label="📝 본론(2단락+) 두음"
           sub="답안 II. 본론 구성요소·설명(3열)"
