@@ -108,8 +108,24 @@ export async function pullAndMerge(session: Session): Promise<void> {
   );
 }
 
-/** 현재 로컬 진도를 서버에 올린다. */
+/** 로컬에 실질적인 학습 기록이 없으면 true(서버를 덮어써 지우면 안 되는 상태). */
+function isEmptyBlob(b: ProgressBlob): boolean {
+  return (
+    Object.keys(b.review || {}).length === 0 &&
+    (b.notes?.length || 0) === 0 &&
+    (b.stats?.total || 0) === 0
+  );
+}
+
+/**
+ * 현재 로컬 진도를 서버에 올린다.
+ * 단, 로컬이 완전히 비어있으면 올리지 않는다(빈 기기가 서버의 기존 기록을
+ * 통째로 덮어써 지우는 사고를 방지). 저장할 게 있으면 항상 서버와 병합한
+ * 뒤(pull) 올려, 어떤 경우에도 서버 데이터가 줄어들지 않게 한다.
+ */
 export async function pushLocal(session: Session): Promise<void> {
+  if (isEmptyBlob(gather())) return; // 빈 로컬로 서버를 덮어쓰지 않음
+  await pullAndMerge(session); // 올리기 전에 서버 최신본과 병합(단조 증가 보장)
   await post(session, gather());
 }
 

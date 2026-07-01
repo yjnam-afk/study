@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
 import topics from "@/data/topics.json";
@@ -104,6 +104,70 @@ export default function ReviewPage() {
     }
   }
 
+  const fileRef = useRef<HTMLInputElement | null>(null);
+
+  // 현재 브라우저의 회독 진도를 JSON 파일로 내려받는다(백업).
+  function exportProgress() {
+    const review = loadReview();
+    const done = topics.filter(
+      (t) => getItem(review, t.id).status === "done",
+    ).length;
+    const blob = new Blob(
+      [
+        JSON.stringify(
+          { type: "info-pe-review", exportedAt: new Date().toISOString(), review },
+          null,
+          2,
+        ),
+      ],
+      { type: "application/json" },
+    );
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `회독진도_완료${done}개_${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setSyncState("done");
+    setSyncMsg(`백업 내려받음 · 완료 ${done}개 포함`);
+  }
+
+  // 백업 JSON을 읽어 현재 진도와 병합 저장한다(더 많이 진행된 쪽 채택).
+  async function importProgress(file: File) {
+    try {
+      const parsed = JSON.parse(await file.text());
+      const incoming: Record<string, ReviewItem> = parsed.review || parsed;
+      if (!incoming || typeof incoming !== "object")
+        throw new Error("형식이 올바르지 않습니다.");
+      const cur = loadReview();
+      const merged: Record<string, ReviewItem> = { ...cur };
+      for (const [id, s] of Object.entries(incoming)) {
+        const l = merged[id];
+        const sWins =
+          !l ||
+          s.rounds > l.rounds ||
+          (s.rounds === l.rounds &&
+            Date.parse(s.lastReviewedAt || "") >
+              Date.parse(l.lastReviewedAt || ""));
+        if (sWins) merged[id] = s;
+      }
+      saveReview(merged); // progress-change 발행 → 로그인 시 서버로도 업로드
+      setState(merged);
+      const done = topics.filter(
+        (t) => getItem(merged, t.id).status === "done",
+      ).length;
+      setSyncState("done");
+      setSyncMsg(`백업 가져오기 완료 · 완료 ${done}개`);
+      const s = loadSession();
+      if (s) syncNow(s).catch(() => {});
+    } catch (e) {
+      setSyncState("error");
+      setSyncMsg(
+        `가져오기 실패: ${e instanceof Error ? e.message : "알 수 없는 오류"}`,
+      );
+    }
+  }
+
   // 필터·검색이 바뀌면 첫 페이지로
   useEffect(() => {
     setPage(0);
@@ -173,15 +237,42 @@ export default function ReviewPage() {
             </p>
           )}
         </div>
-        {session && (
+        <div className="flex shrink-0 flex-wrap items-center gap-2">
+          {session && (
+            <button
+              onClick={restoreFromServer}
+              disabled={syncState === "syncing"}
+              className="rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
+            >
+              {syncState === "syncing"
+                ? "불러오는 중…"
+                : "☁️ 서버에서 내 진도 불러오기"}
+            </button>
+          )}
           <button
-            onClick={restoreFromServer}
-            disabled={syncState === "syncing"}
-            className="shrink-0 rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
+            onClick={exportProgress}
+            className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
           >
-            {syncState === "syncing" ? "불러오는 중…" : "☁️ 서버에서 내 진도 불러오기"}
+            ⬇️ 백업 내보내기
           </button>
-        )}
+          <button
+            onClick={() => fileRef.current?.click()}
+            className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50"
+          >
+            ⬆️ 백업 가져오기
+          </button>
+          <input
+            ref={fileRef}
+            type="file"
+            accept="application/json,.json"
+            className="hidden"
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) importProgress(f);
+              e.target.value = "";
+            }}
+          />
+        </div>
       </div>
 
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
