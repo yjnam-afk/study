@@ -3765,5 +3765,439 @@
     "category": "소프트웨어공학",
     "source": "123회 4교시",
     "text": "최단경로 알고리즘에 대하여 다음을 설명하시오. 가. 최단경로 알고리즘의 유형 4가지 나. 주어진 그래프(A출발, E목적지)에서 4가지 알고리즘 계산 방법 다. 4가지 알고리즘 계산결과 비교"
+  },
+  {
+    "id": "k122-101",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "122회 1교시",
+    "text": "세마포어(Semaphore)와 모니터(Monitor)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-102",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "122회 1교시",
+    "text": "인슈어테크(InsurTech)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-103",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "122회 1교시",
+    "text": "LOD(Linked Open Data)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-104",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "122회 1교시",
+    "text": "허용적 라이선스(Permissive License)와 카피레프트 라이선스(Copyleft License)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-105",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "122회 1교시",
+    "text": "군집분석(Cluster Analysis)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-106",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "122회 1교시",
+    "text": "텐서플로(TensorFlow)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-107",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "122회 1교시",
+    "text": "DAS(Direct Attached Storage), NAS(Network Attached Storage), SAN(Storage Area Network)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-108",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "122회 1교시",
+    "text": "하이퍼바이저(Hypervisor)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-109",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "122회 1교시",
+    "text": "스프라이트(Sprite)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-110",
+    "period": "1교시",
+    "category": "보안",
+    "source": "122회 1교시",
+    "text": "고객확인 절차(KYC, Know Your Customer)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-111",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "122회 1교시",
+    "text": "오피니언 마이닝(Opinion Mining)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-112",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "122회 1교시",
+    "text": "술어 논리(Predicate Logic)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-113",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "122회 1교시",
+    "text": "스타 스키마(Star Schema)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-201",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "122회 2교시",
+    "text": "파이썬(Python)의 특징 및 자료형(Data Type)을 설명하시오."
+  },
+  {
+    "id": "k122-202",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "122회 2교시",
+    "text": "블록체인 합의 알고리즘(Consensus Algorithm)에 대하여 설명하시오. 가. 합의 알고리즘의 목적 나. 주요 합의 알고리즘의 유형 및 특징"
+  },
+  {
+    "id": "k122-203",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "122회 2교시",
+    "text": "개방형 API(Open Application Programming Interface)에 대하여 다음을 설명하시오. 가. 정의 및 필요성 나. 구성 및 활용방안"
+  },
+  {
+    "id": "k122-204",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "122회 2교시",
+    "text": "서비스 워커(Service Worker)에 대하여 다음을 설명하시오. 가. 서비스 워커의 개념 나. 동작 원리 및 활용"
+  },
+  {
+    "id": "k122-205",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "122회 2교시",
+    "text": "정보시스템 운영환경 변환과정에서 장애 예방 및 대응과 관련하여 다음을 설명하시오. 가. 목적 및 필요성 나. 장애 예방 및 대응 방안"
+  },
+  {
+    "id": "k122-206",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "122회 2교시",
+    "text": "스택(Stack)의 개념을 설명하고, 주어진 조건을 만족하는 스택의 작동 알고리즘을 작성하시오."
+  },
+  {
+    "id": "k122-301",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "122회 3교시",
+    "text": "웹크롤링(Web Crawling)에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-302",
+    "period": "3교시",
+    "category": "보안",
+    "source": "122회 3교시",
+    "text": "ISO/IEC 27017(클라우드 서비스 정보보호 통제)을 설명하시오."
+  },
+  {
+    "id": "k122-303",
+    "period": "3교시",
+    "category": "보안",
+    "source": "122회 3교시",
+    "text": "분산 ID(Decentralized Identity, DID)에 대하여 다음을 설명하시오. 가. 개념 및 등장배경 나. 구성요소 및 동작 원리"
+  },
+  {
+    "id": "k122-304",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "122회 3교시",
+    "text": "블랙박스 테스트(Black Box Test) 기법을 설명하고, YYYY-MM-DD 형식의 날짜 처리 모듈을 위한 블랙박스 테스트 케이스를 작성하시오."
+  },
+  {
+    "id": "k122-305",
+    "period": "3교시",
+    "category": "경영전략",
+    "source": "122회 3교시",
+    "text": "IT 투자관리와 관련하여 다음을 설명하시오. 가. 개념 및 필요성 나. 추진단계별 주요 활동 다. IT 투자 평가 항목 및 내용(정량적, 정성적) 라. 기대효과"
+  },
+  {
+    "id": "k122-306",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "122회 3교시",
+    "text": "고객과 점주가 사용하는 주문 시스템에 대한 Use Case Diagram을 주어진 시나리오를 기반으로 작성하시오."
+  },
+  {
+    "id": "k122-401",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "122회 4교시",
+    "text": "IaaS(Infrastructure as a Service), PaaS(Platform as a Service), SaaS(Software as a Service)의 특징 및 구축방법을 설명하시오."
+  },
+  {
+    "id": "k122-402",
+    "period": "4교시",
+    "category": "프로젝트관리",
+    "source": "122회 4교시",
+    "text": "공공 기관의 정보시스템 구축업체 선정 및 계약 체결과 관련하여 다음을 설명하시오. 가. 협상에 의한 계약체결 방식과 품질 등에 따른 낙찰자 결정방식의 비교 나. 협상에 의한 계약체결 방식의 진행 절차 다. 제안서의 평가항목 및 배점한도"
+  },
+  {
+    "id": "k122-403",
+    "period": "4교시",
+    "category": "보안",
+    "source": "122회 4교시",
+    "text": "2020년 5월 개정된 전자서명법(공인인증서와 사설인증서 구별 폐지)에 따른 사설인증서의 종류 및 전자서명 시장의 발전방향에 대하여 설명하시오."
+  },
+  {
+    "id": "k122-404",
+    "period": "4교시",
+    "category": "프로젝트관리",
+    "source": "122회 4교시",
+    "text": "IT 프로젝트 관리과정에서의 IT 개발 요구사항과 관련하여 다음을 설명하시오. 가. IT 프로젝트 관리의 정의 및 관리 영역 나. IT 개발 요구사항의 정의 및 특징 다. 요구사항의 유형(기능, 비기능, 인터페이스) 라. 요구사항의 명세 조건"
+  },
+  {
+    "id": "k122-405",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "122회 4교시",
+    "text": "학생과 수강신청서 간의 일 대 다 관계에 대하여 다음을 작성하시오. 가. ERD(Entity Relationship Diagram) 나. 관계형 데이터 모델(Relational Data Model)"
+  },
+  {
+    "id": "k122-406",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "122회 4교시",
+    "text": "훈련교사(Trainer)와 종목(Program)의 관계를 반영한 클래스 다이어그램(Class Diagram)을 작성하시오."
+  },
+  {
+    "id": "k121-101",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "121회 1교시",
+    "text": "지능형 CCTV 스마트 관제에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-102",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "121회 1교시",
+    "text": "그로스 해킹(Growth Hacking)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-103",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "121회 1교시",
+    "text": "서버리스 아키텍처(Serverless Architecture)의 BaaS(Backend as a Service)와 FaaS(Function as a Service)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-104",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "121회 1교시",
+    "text": "앰비언트 컴퓨팅(Ambient Computing)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-105",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "121회 1교시",
+    "text": "ALM(Application Lifecycle Management)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-106",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "121회 1교시",
+    "text": "통계적 가설 검정(Statistical Hypothesis Test)의 절차에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-107",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "121회 1교시",
+    "text": "도커 스웜(Docker Swarm)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-108",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "121회 1교시",
+    "text": "모바일 FSO(Free Space Optics) 광 무선통신에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-109",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "121회 1교시",
+    "text": "차량·사물 셀룰러 통신(C-V2X, Cellular Vehicle to Everything)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-110",
+    "period": "1교시",
+    "category": "보안",
+    "source": "121회 1교시",
+    "text": "CDR(Content Disarm & Reconstruction) 문서보안에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-111",
+    "period": "1교시",
+    "category": "보안",
+    "source": "121회 1교시",
+    "text": "모바일 신분증에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-112",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "121회 1교시",
+    "text": "전문성의 민주화(Democratization of Expertise)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-113",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "121회 1교시",
+    "text": "머신러닝 파이프라인(Machine Learning Pipeline)에 대하여 설명하시오."
+  },
+  {
+    "id": "k121-201",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "121회 2교시",
+    "text": "로지컬 데이터웨어하우스(LDW, Logical Data Warehouse)에 대하여 다음을 설명하시오. 가. LDW의 정의 및 특징 나. 구성요소 다. 아키텍처 라. 활용방안"
+  },
+  {
+    "id": "k121-202",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "121회 2교시",
+    "text": "DBMS 병행수행(Concurrency) 제어가 되지 않는 경우 발생할 수 있는 3가지 문제와 그 해결방법에 대하여 예시를 들어 각각 설명하시오."
+  },
+  {
+    "id": "k121-203",
+    "period": "2교시",
+    "category": "보안",
+    "source": "121회 2교시",
+    "text": "침해사고 대응 측면과 디지털 감사(Audit) 측면에서 디지털 포렌식의 필요성을 설명하고, 디지털 포렌식 절차 및 활용되는 기술을 설명하시오."
+  },
+  {
+    "id": "k121-204",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "121회 2교시",
+    "text": "객체지향 설계 5대 원칙과 관련하여 다음을 설명하시오. 가. 의존성 역전 원칙(Dependency Inversion Principle) 나. 의존성 주입(Dependency Injection)"
+  },
+  {
+    "id": "k121-205",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "121회 2교시",
+    "text": "클라우드 서비스의 Auto Scale 기능에 대하여 다음을 설명하시오. 가. Auto Scale Up과 Auto Scale Out 아키텍처 비교 나. 스케줄 기반과 부하 기반의 Auto Scale"
+  },
+  {
+    "id": "k121-206",
+    "period": "2교시",
+    "category": "보안",
+    "source": "121회 2교시",
+    "text": "2020년 1월 1일부터 적용된 개정 「정보통신망법」의 CISO(Chief Information Security Officer)와 관련하여 다음을 설명하시오. 가. CISO의 직무 나. 자격요건 및 겸직 여부"
+  },
+  {
+    "id": "k121-301",
+    "period": "3교시",
+    "category": "경영전략",
+    "source": "121회 3교시",
+    "text": "행정안전부 '정보시스템 운영 성과측정 매뉴얼'에 따른 정보시스템 운영 성과 측정과 관련하여 다음을 설명하시오. 가. 정보시스템 운영 성과관리 개념 나. 성과측정 기준 다. 성과측정 방법"
+  },
+  {
+    "id": "k121-302",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "121회 3교시",
+    "text": "소프트웨어 테스트 자동화의 개념과 방법에 대하여 각각 설명하시오."
+  },
+  {
+    "id": "k121-303",
+    "period": "3교시",
+    "category": "프로젝트관리",
+    "source": "121회 3교시",
+    "text": "소프트웨어사업의 단계별 발주제도에 대하여 다음을 설명하시오. 가. 단계별 발주제도의 정의 나. 일반 발주와 단계별 발주의 비교"
+  },
+  {
+    "id": "k121-304",
+    "period": "3교시",
+    "category": "보안",
+    "source": "121회 3교시",
+    "text": "데이터 3법 시행령 개정안(2020.3.31~5.11 입법예고)과 관련하여 다음을 설명하시오. 가. 개인정보의 추가 이용을 위한 4가지 충족요건 나. 개인정보처리자 간 가명정보 결합 및 반출 방법"
+  },
+  {
+    "id": "k121-305",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "121회 3교시",
+    "text": "인터넷쇼핑몰 시스템 개발을 위한 문제 설명서를 바탕으로 다음을 작성하시오. 가. 유즈케이스 다이어그램(Use Case Diagram) 나. 상품등록 유즈케이스 시나리오"
+  },
+  {
+    "id": "k121-306",
+    "period": "3교시",
+    "category": "디지털서비스",
+    "source": "121회 3교시",
+    "text": "신규 클라우드 존 구성과 관련하여 다음을 설계하시오. 가. IPS, 웹 방화벽, L3/L4 스위치, 방화벽 이중화를 고려한 클라우드 공통인프라(보안, 네트워크) 아키텍처"
+  },
+  {
+    "id": "k121-401",
+    "period": "4교시",
+    "category": "프로젝트관리",
+    "source": "121회 4교시",
+    "text": "공공정보화 사업 유형이 PMO를 준비하는 경우 제안요청서(RFP)와 관련하여 다음을 작성하시오. 가. RFP 목차 구성 나. 제안요청내용 중 필수 요구사항"
+  },
+  {
+    "id": "k121-402",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "121회 4교시",
+    "text": "행정안전부 전자문서 증명서 사업과 관련하여 다음을 설명하시오. 가. 전자문서중계소를 포함한 전자문서증명서의 기술적 아키텍처 나. 활용할 수 있는 비즈니스 케이스"
+  },
+  {
+    "id": "k121-403",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "121회 4교시",
+    "text": "HCI(Hyper Converged Infrastructure)에 대하여 다음을 설명하시오. 가. HCI의 개념 나. HCI의 특징"
+  },
+  {
+    "id": "k121-404",
+    "period": "4교시",
+    "category": "보안",
+    "source": "121회 4교시",
+    "text": "안전한 소프트웨어 개발과 관련하여 다음을 설명하시오. 가. 보안 소프트웨어 개발 생명주기(Secure SDLC) 방법론의 유형 나. 주어진 Java 코드를 보안 위험이 없는 안전한 코드로 변경"
+  },
+  {
+    "id": "k121-405",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "121회 4교시",
+    "text": "사용성 평가(Usability Evaluation)의 절차, 평가항목, 측정 지표에 대하여 각각 설명하시오."
+  },
+  {
+    "id": "k121-406",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "121회 4교시",
+    "text": "공급자(Suppliers)와 상품(Products) 데이터베이스 설계와 관련하여 다음을 작성하시오. 가. 바커(Barker) 표기법으로 표현된 ERD 나. DDL 및 SQL"
   }
 ]
