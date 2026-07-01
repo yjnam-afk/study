@@ -2897,5 +2897,439 @@
     "category": "보안",
     "source": "127회 4교시",
     "text": "블록(Block) 암호 모드에 대하여 설명하시오. (ECB, CBC, CFB, OFB, CTR 등)"
+  },
+  {
+    "id": "k126-101",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "126회 1교시",
+    "text": "정규분포의 특징에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-102",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "126회 1교시",
+    "text": "메타휴리스틱스(Metaheuristics)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-103",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "126회 1교시",
+    "text": "경쟁조건(Race Condition)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-104",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "126회 1교시",
+    "text": "SNN(Spiking Neural Networks)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-105",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "126회 1교시",
+    "text": "빅데이터 분석도구를 선택하는 원칙에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-106",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "126회 1교시",
+    "text": "소프트웨어 품질인증에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-107",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "126회 1교시",
+    "text": "CAP 이론의 한계와 PACELC(Partition Availability Consistency Else Latency Consistency) 이론에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-108",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "126회 1교시",
+    "text": "의사결정나무의 지니 지수(Gini Index)와 엔트로피 지수(Entropy Index)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-109",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "126회 1교시",
+    "text": "임베디드 소프트웨어 테스트에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-110",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "126회 1교시",
+    "text": "스레싱(Thrashing)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-111",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "126회 1교시",
+    "text": "빅 엔디언(Big Endian)과 리틀 엔디언(Little Endian)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-112",
+    "period": "1교시",
+    "category": "보안",
+    "source": "126회 1교시",
+    "text": "네트워크 스캐닝(Network Scanning)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-113",
+    "period": "1교시",
+    "category": "보안",
+    "source": "126회 1교시",
+    "text": "파일 슬랙(File Slack)에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-201",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "126회 2교시",
+    "text": "소프트웨어 비용 산정 방법에 대하여 설명하고, 각각의 장·단점을 비교하시오."
+  },
+  {
+    "id": "k126-202",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "126회 2교시",
+    "text": "포스트 코로나 시대의 지속가능 경영전략인 ESG(Environmental, Social and Governance) 경영에서 정보기술(IT)의 역할에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-203",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "126회 2교시",
+    "text": "OECD가 2023년부터 부과하기로 합의한 디지털세의 내용과 의미 및 전망에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-204",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "126회 2교시",
+    "text": "주사위게임 유스케이스(두 주사위 합이 8이면 승리)에 대하여 다음을 작성하시오. 1) 개념적 객체 모델 2) 시퀀스 다이어그램 3) 클래스 다이어그램"
+  },
+  {
+    "id": "k126-205",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "126회 2교시",
+    "text": "퍼블릭 블록체인(Public Blockchain), 프라이빗 블록체인(Private Blockchain), 하이브리드 블록체인(Hybrid Blockchain)을 비교 설명하시오."
+  },
+  {
+    "id": "k126-206",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "126회 2교시",
+    "text": "빅데이터 플랫폼 아키텍처 설계와 관련하여 다음을 설명하시오. 1) 빅데이터 플랫폼 인프라 구조 설계 2) 빅데이터 데이터 구조 분석 3) 빅데이터 입출력 구조 설계"
+  },
+  {
+    "id": "k126-301",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "126회 3교시",
+    "text": "공공기관의 데이터베이스 표준화지침에서 정의하는 테이블 정의서에 기록될 항목과 항목의 작성 지침에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-302",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "126회 3교시",
+    "text": "전자정부 웹사이트 UI/UX 설계기준 7가지와 웹접근성, 웹호환성, 웹개방성, 웹최적화에 대하여 각각 설명하시오."
+  },
+  {
+    "id": "k126-303",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "126회 3교시",
+    "text": "<소프트웨어 안전진단 가이드(공통분야)>에 따른 소프트웨어 안전성 진단 항목 중 기능동작 정확성 진단의 단계별 절차 및 주요 활동 내용을 설명하시오."
+  },
+  {
+    "id": "k126-304",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "126회 3교시",
+    "text": "앙상블(Ensemble) 모형의 Bagging과 Boosting 알고리즘을 설명하시오."
+  },
+  {
+    "id": "k126-305",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "126회 3교시",
+    "text": "소프트웨어 아키텍처 분석 방법에 대하여 다음을 설명하시오. 1) 소프트웨어 아키텍처 분석의 필요성 2) 정방향 분석과 역방향 분석 개념 3) ATAM(Architecture Trade-off Analysis Method)"
+  },
+  {
+    "id": "k126-306",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "126회 3교시",
+    "text": "디지털 뉴딜 '데이터 댐'의 인공지능 학습용 빅데이터 구축과 관련하여 다음을 설명하시오. 1) 인공지능 학습용 데이터의 특성 2) 데이터 획득·정제 방법과 기준 3) 데이터 라벨링 및 어노테이션 방식"
+  },
+  {
+    "id": "k126-401",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "126회 4교시",
+    "text": "메타버스(Metaverse)에 대하여 다음을 설명하시오. 1) 메타버스의 특징 2) 정보시스템 측면의 메타버스 보안 위협 3) 메타버스에서 발생할 수 있는 사회적 문제점 4) 안전한 메타버스를 위한 방안"
+  },
+  {
+    "id": "k126-402",
+    "period": "4교시",
+    "category": "운영체제",
+    "source": "126회 4교시",
+    "text": "실시간 스케줄링(Real Time Scheduling)의 우선순위 역전(Priority Inversion)을 Task1·Task2·Task3 우선순위 사례 기반으로 설명하고, 해결하기 위한 2가지 기법을 설명하시오."
+  },
+  {
+    "id": "k126-403",
+    "period": "4교시",
+    "category": "보안",
+    "source": "126회 4교시",
+    "text": "미라이 봇넷(Mirai Botnet)에 대하여 다음을 설명하시오. 1) 미라이 봇넷의 개념 2) IoT 서비스 생애주기별 보안위협 및 해결방안 3) IoT 공통보안 7대원칙"
+  },
+  {
+    "id": "k126-404",
+    "period": "4교시",
+    "category": "보안",
+    "source": "126회 4교시",
+    "text": "VPN(Virtual Private Network)과 Tor에 대하여 설명하시오."
+  },
+  {
+    "id": "k126-405",
+    "period": "4교시",
+    "category": "보안",
+    "source": "126회 4교시",
+    "text": "RSA(Rivest-Shamir-Adleman) 알고리즘과 DSA(Digital Signature Algorithm)를 비교하여 설명하시오."
+  },
+  {
+    "id": "k126-406",
+    "period": "4교시",
+    "category": "보안",
+    "source": "126회 4교시",
+    "text": "디지털 포렌식의 증거수집 방법 중 하나인 파일 카빙(File Carving)에 대하여 다음을 설명하시오. 1) 파일 카빙의 개념 2) 파일 카빙의 4종류 기법의 특징"
+  },
+  {
+    "id": "k125-101",
+    "period": "1교시",
+    "category": "보안",
+    "source": "125회 1교시",
+    "text": "SECaaS(Security as a Service)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-102",
+    "period": "1교시",
+    "category": "보안",
+    "source": "125회 1교시",
+    "text": "동형암호(Homomorphic Encryption)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-103",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "125회 1교시",
+    "text": "자바(Java) 언어의 AWT와 SWING에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-104",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "125회 1교시",
+    "text": "선형 자료구조와 비선형 자료구조에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-105",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "125회 1교시",
+    "text": "메타버스(Metaverse)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-106",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "125회 1교시",
+    "text": "관계형 데이터베이스의 정규화와 역정규화에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-107",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "125회 1교시",
+    "text": "데브옵스(DevOps)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-108",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "125회 1교시",
+    "text": "MECE(Mutually Exclusive Collectively Exhaustive)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-109",
+    "period": "1교시",
+    "category": "보안",
+    "source": "125회 1교시",
+    "text": "포스트 양자 암호(Post-Quantum Cryptography)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-110",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "125회 1교시",
+    "text": "WFQ(Weighted Fair Queuing)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-111",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "125회 1교시",
+    "text": "5G 특화망(지역 5G)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-112",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "125회 1교시",
+    "text": "SDR(Software Defined Radio)에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-113",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "125회 1교시",
+    "text": "소프트웨어 형상관리에 대하여 설명하시오."
+  },
+  {
+    "id": "k125-201",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "125회 2교시",
+    "text": "ISMP(Information System Master Plan)의 방법론 체계를 설명하고, 정보시스템 구축사업 이행방안 수립 절차와 산출물을 설명하시오."
+  },
+  {
+    "id": "k125-202",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "125회 2교시",
+    "text": "프로젝트 획득가치관리(EVM) 보고서에서 EV=500만원, PV=600만원, AC=450만원일 때 다음을 설명하시오. 가. 획득가치관리 분석 및 일정·비용 위험요소 나. 부정적인 위험대응 방법과 일정·비용에 대한 부정적 위험대응 방안 예시"
+  },
+  {
+    "id": "k125-203",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "125회 2교시",
+    "text": "병렬처리 시스템의 상호연결망(Interconnection Network)에 대하여 다음을 설명하시오. 가. 상호연결망의 개념과 종류 나. 토러스(Torus) 구조"
+  },
+  {
+    "id": "k125-204",
+    "period": "2교시",
+    "category": "보안",
+    "source": "125회 2교시",
+    "text": "구현단계에서 발생 가능한 코딩 보안 약점인 검사시점과 사용시점(TOCTOU)에 대하여 다음을 설명하시오. 가. TOCTOU의 정의와 개념 나. 문제가 발생하는 상황과 보안대책 다. TOCTOU 관점의 코드 실행 시 문제점과 해결 방안"
+  },
+  {
+    "id": "k125-205",
+    "period": "2교시",
+    "category": "보안",
+    "source": "125회 2교시",
+    "text": "EMP 공격(ElectroMagnetic Pulse attack)에 대하여 다음을 설명하시오. 가. EMP 공격의 정의와 구분 나. HEMP(High altitude EMP)의 원리 다. EMP 공격의 위협 정의 및 위협별 방호방안"
+  },
+  {
+    "id": "k125-206",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "125회 2교시",
+    "text": "소프트웨어 시험(Test) 기법에 대하여 다음을 설명하시오. 가. 블랙박스(Black Box) 시험 나. 화이트박스(White Box) 시험"
+  },
+  {
+    "id": "k125-301",
+    "period": "3교시",
+    "category": "소프트웨어공학",
+    "source": "125회 3교시",
+    "text": "배열을 이용하여 큐(Queue)를 구성할 때의 단점과 해결 방법을 설명하시오."
+  },
+  {
+    "id": "k125-302",
+    "period": "3교시",
+    "category": "프로젝트관리",
+    "source": "125회 3교시",
+    "text": "상주감리 업무 수행 범위와 절차를 설명하고, PMO(Project Management Office)와의 연관관계를 설명하시오."
+  },
+  {
+    "id": "k125-303",
+    "period": "3교시",
+    "category": "네트워크",
+    "source": "125회 3교시",
+    "text": "QoS(Quality of Service) 방식인 DiffServ와 IntServ를 설명하시오."
+  },
+  {
+    "id": "k125-304",
+    "period": "3교시",
+    "category": "보안",
+    "source": "125회 3교시",
+    "text": "개인정보보호위원회가 확정한 인공지능(AI) 개인정보보호 자율점검표의 원칙과 총괄흐름도를 설명하시오."
+  },
+  {
+    "id": "k125-305",
+    "period": "3교시",
+    "category": "보안",
+    "source": "125회 3교시",
+    "text": "JSON Web Token에 대하여 다음을 설명하시오. 가. JSON Web Token의 개념 나. 구성과 인증 메커니즘 다. 장·단점과 활용방안"
+  },
+  {
+    "id": "k125-306",
+    "period": "3교시",
+    "category": "경영전략",
+    "source": "125회 3교시",
+    "text": "IT 투자평가 기법에 대하여 다음을 설명하시오. 가. IT 투자 평가의 정량적·정성적 평가 항목 및 내용 나. 배송시간 절감과 만족도 증가를 제공하려는 기업의 BSC 전략맵 작성"
+  },
+  {
+    "id": "k125-401",
+    "period": "4교시",
+    "category": "디지털서비스",
+    "source": "125회 4교시",
+    "text": "은행권 공동 오픈 플랫폼과 관련하여 다음을 설명하시오. 가. 오픈 플랫폼의 개념 나. 오픈 플랫폼의 주요기술인 Open API 다. 오픈 플랫폼의 제공기능"
+  },
+  {
+    "id": "k125-402",
+    "period": "4교시",
+    "category": "네트워크",
+    "source": "125회 4교시",
+    "text": "정보이론(Information Theory)과 샤논(Shannon)의 정리에 대하여 다음을 설명하시오. 가. 정보이론의 개념 나. 샤논의 제1정리 및 제2정리"
+  },
+  {
+    "id": "k125-403",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "125회 4교시",
+    "text": "스마트 팩토리 적용 공정(표본 49개, 평균 28.5분, 표준편차 5분)이 기존 공정(평균 30분, 표준편차 5분) 대비 생산시간이 단축되었는지 유의수준 5%에서 가설을 설정하고 검정하시오."
+  },
+  {
+    "id": "k125-404",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "125회 4교시",
+    "text": "방향성 비순환 그래프(Directed Acyclic Graph)에 대하여 다음을 설명하시오. 가. DAG의 개념과 특징 나. 주어진 DAG에 대한 위상정렬(Topology Sort) 실시 및 결과값 제시"
+  },
+  {
+    "id": "k125-405",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "125회 4교시",
+    "text": "절차지향 프로그래밍(Procedure Oriented Programming)과 객체지향 프로그래밍(Object Oriented Programming)을 비교 설명하시오."
+  },
+  {
+    "id": "k125-406",
+    "period": "4교시",
+    "category": "보안",
+    "source": "125회 4교시",
+    "text": "산업제어시스템(ICS)의 퍼듀(Purdue) 모델에 대하여 다음을 설명하시오. 가. 퍼듀 모델의 개념 나. 퍼듀 모델의 계층과 계층별 특징"
   }
 ]
