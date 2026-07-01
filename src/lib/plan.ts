@@ -58,8 +58,55 @@ export function getPerDay(): number {
   return v >= 3 && v <= 50 ? v : 10;
 }
 export function setPerDay(n: number) {
+  if (typeof window === "undefined") return;
+  // '오늘 시작점 고정': 개수를 바꿔도 오늘 칸이 시작하는 토픽 위치는 그대로 두고
+  // 창(개수)만 넓힌다. 변경 직전 오늘의 시작 오프셋을 오늘 날짜에 다시 앵커링한다.
+  const ti = todayIndex();
+  const todayStart = Math.max(0, dayStartOffset(ti, getPerDay()));
+  localStorage.setItem(PERDAY_KEY, String(n));
+  saveAnchor({ dayIndex: ti, offset: todayStart });
+}
+
+/**
+ * '오늘 시작점 고정' 앵커. 개수(perDay)를 바꿔도 오늘 칸의 시작 토픽이
+ * 흔들리지 않도록, 오늘의 시작 오프셋과 그 날짜를 저장한다.
+ */
+const ANCHOR_KEY = "info-pe-plan-anchor-v1";
+type PlanAnchor = { dayIndex: number; offset: number };
+
+function loadAnchor(): PlanAnchor {
+  // 앵커가 없으면 기존 방식(idx×perDay)과 동일해지는 기본값을 쓴다.
+  const fallback: PlanAnchor = {
+    dayIndex: todayIndex(),
+    offset: todayIndex() * getPerDay(),
+  };
+  if (typeof window === "undefined") return fallback;
+  try {
+    const raw = localStorage.getItem(ANCHOR_KEY);
+    if (raw) {
+      const a = JSON.parse(raw) as PlanAnchor;
+      if (
+        a &&
+        Number.isFinite(a.dayIndex) &&
+        Number.isFinite(a.offset)
+      )
+        return a;
+    }
+  } catch {
+    /* 무시하고 기본값 */
+  }
+  return fallback;
+}
+
+function saveAnchor(a: PlanAnchor) {
   if (typeof window !== "undefined")
-    localStorage.setItem(PERDAY_KEY, String(n));
+    localStorage.setItem(ANCHOR_KEY, JSON.stringify(a));
+}
+
+/** 앵커 기준 그 날의 ordered 시작 오프셋(오늘=고정, 다른 날은 perDay 간격). */
+export function dayStartOffset(idx: number, perDay: number): number {
+  const a = loadAnchor();
+  return a.offset + (idx - a.dayIndex) * perDay;
 }
 
 export function loadDone(): Set<string> {
@@ -148,7 +195,10 @@ export function topicsForDay(
   perDay: number,
 ): PlanTopic[] {
   if (idx < 0) return [];
-  return ordered.slice(idx * perDay, idx * perDay + perDay);
+  // '오늘 시작점 고정' 앵커 기준 시작 오프셋(개수 변경 시 오늘 칸이 안 흔들림).
+  const start = dayStartOffset(idx, perDay);
+  if (start < 0) return [];
+  return ordered.slice(start, start + perDay);
 }
 
 /** 편집(오버라이드) 반영된 그 날의 토픽. 오버라이드 있으면 그것을, 없으면 자동 배정. */
