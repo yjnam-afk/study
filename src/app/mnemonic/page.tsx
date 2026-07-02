@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
+import SpeakButton from "@/components/SpeakButton";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 import { loadReview, saveReview, markReviewed } from "@/lib/storage";
@@ -253,10 +254,19 @@ export default function MnemonicPage() {
               ) : (
                 <span />
               )}
-              <ShareButton
-                title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
-                text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
-              />
+              <div className="flex items-center gap-2">
+                <SpeakButton
+                  label="듣기"
+                  getText={() => {
+                    const kw = set.body.items.map((i) => i.term).join(", ");
+                    return `${set.topic}. 서론 두음, ${set.intro.mnemonic}. 본론 두음, ${set.body.mnemonic}. 핵심 키워드, ${kw}.`;
+                  }}
+                />
+                <ShareButton
+                  title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
+                  text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
+                />
+              </div>
             </div>
             {subnote?.related && subnote.related.length > 0 && (
               <div className="mb-4 rounded-2xl border border-sky-200 bg-sky-50 p-4">

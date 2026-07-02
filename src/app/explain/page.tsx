@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
+import SpeakButton, { toSpeech } from "@/components/SpeakButton";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 
@@ -161,6 +162,9 @@ export default function ExplainPage() {
         {error && <ErrorBox message={error} />}
         {result && (
           <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <div className="mb-3 flex justify-end">
+              <SpeakButton getText={() => toSpeech(result)} label="설명 듣기" />
+            </div>
             <Markdown>{result}</Markdown>
           </article>
         )}
