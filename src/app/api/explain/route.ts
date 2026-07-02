@@ -3,6 +3,7 @@ import { generateText, AIConfigError } from "@/lib/ai";
 import { explainPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
 import { buildGrounding } from "@/lib/grounding";
 import { cached, hashKey } from "@/lib/cache";
+import { sanitizeKo } from "@/lib/sanitize";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -64,7 +65,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json({ explanation: text });
+    return NextResponse.json({ explanation: sanitizeKo(text) });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;
     return NextResponse.json(
