@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateText, AIConfigError } from "@/lib/ai";
 import { explainPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
-import { buildGrounding } from "@/lib/grounding";
+import { buildGrounding, subnoteFor } from "@/lib/grounding";
 import { cached, hashKey } from "@/lib/cache";
 import { sanitizeKo } from "@/lib/sanitize";
 
@@ -9,6 +9,9 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
+  // 교재 두음 데이터(서브노트)는 AI와 무관하게 항상 확보 → AI가 실패/한도초과여도
+  // 화면이 비지 않게 응답에 함께 실어 보낸다.
+  let subnote: ReturnType<typeof subnoteFor> | null = null;
   try {
     const { topic, level, topicId } = (await req.json()) as {
       topic: string;
@@ -22,6 +25,7 @@ export async function POST(req: NextRequest) {
 
     const lv = level || "수험생";
     // 우리 토픽 데이터(서브노트)를 근거로 설명 → ACID 등 교재 핵심이 빠지지 않게.
+    subnote = subnoteFor({ topicId, topicTitle: topic });
     const grounding = buildGrounding({ topicId, topicTitle: topic });
 
     // "완성된 설명"인지 검사: 한도 초과 시 약한 모델이 첫 섹션(한 줄 요약)만 내고
@@ -59,18 +63,27 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "지금은 설명을 끝까지 생성하지 못했어요(무료 AI 한도). 잠시 후 다시 시도해 주세요. 두음신공·기출 메뉴는 토큰 없이 바로 보실 수 있어요.",
+            "지금은 설명을 끝까지 생성하지 못했어요(무료 AI 한도). 잠시 후 다시 시도해 주세요. 아래 교재 두음신공은 토큰 없이 바로 보실 수 있어요.",
+          subnote,
         },
-        { status: 503 },
+        { status: 200 },
       );
     }
 
-    return NextResponse.json({ explanation: sanitizeKo(text) });
+    return NextResponse.json({ explanation: sanitizeKo(text), subnote });
   } catch (err) {
-    const status = err instanceof AIConfigError ? 503 : 500;
+    // AI 실패(한도·설정)여도 교재 두음은 함께 돌려줘 화면이 비지 않게 한다.
+    const rateLimited = err instanceof AIConfigError;
     return NextResponse.json(
-      { error: err instanceof Error ? err.message : "알 수 없는 오류" },
-      { status },
+      {
+        error: rateLimited
+          ? "지금 무료 AI 사용량이 가득 찼어요(하루·분당 한도). 몇 분 뒤 다시 시도하거나, 아래 교재 두음신공을 활용해 주세요."
+          : err instanceof Error
+            ? err.message
+            : "알 수 없는 오류",
+        subnote,
+      },
+      { status: 200 },
     );
   }
 }
