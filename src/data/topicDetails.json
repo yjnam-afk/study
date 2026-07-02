@@ -28417,16 +28417,36 @@
   },
   "db-12": {
     "detail": "[정의]논리적으로 하나의 가상 시스템으로 구현되어 있으나, 물리적으로 네트워크를 통하여 분산화 된 형태로 관리되는 데이터베이스 설계 전략 \n설계(Top Down, Bottom Up, Hybrid)",
-    "related": "투명성\n2PC\n중복투명성(Replication Transparency)",
+    "related": "2PC / 3PC / 투명성 / 데이터 분할(Fragmentation)",
     "defKeywords": [
-      "Top Down",
-      "설계"
+      "논리적 단일 가상시스템",
+      "물리적 분산",
+      "네트워크 통한 관리"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "위치투명성",
+      "중복투명성",
+      "병행투명성",
+      "분할투명성",
+      "장애투명성"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "위복병분장",
-    "memo": "위복병분장"
+    "memo": "위복병분장 (위치·중복·병행·분할·장애 투명성)\n[설계전략] Top Down · Bottom Up · Hybrid\n[관련] 2PC·3PC 분산 커밋(원자성 보장)",
+    "sections": [
+      {
+        "label": "투명성 5종",
+        "mnemonic": "위복병분장",
+        "keywords": [
+          "위치투명성",
+          "중복투명성",
+          "병행투명성",
+          "분할투명성",
+          "장애투명성"
+        ]
+      }
+    ]
   },
   "db-13": {
     "detail": "[정의] 제한된 메모리와 성능을 가지고 특정기능 구현을 목적으로 하는 임베디드 시스템 환경에 적합하도록 만든 DB\n[특징] Small footprint, 실시간 처리, 데이터 보안, 이식성, 최적화 기술(저전력)\n[기술요소] T-Tree 인덱스, Hard Transactioin",
