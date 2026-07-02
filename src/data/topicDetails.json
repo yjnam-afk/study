@@ -384,20 +384,46 @@
   "gj-13": {
     "detail": "[정의] 인간두뇌 세포를 모방한 개념으로 뉴런들의 상호작용하고 경험을 통해 배우는 생물학적 활동을 반복적인 학습과정으로 모형화하는 분석 기법\n[구성요소] 입력층, 은닉층, 출력층, 활성화 함수, 가중치\n[학습유형] 지도학습, 비지도학습, 자기지도학습",
     "related": "Machine Learning, Deep learning",
-    "defKeywords": [],
+    "defKeywords": [
+      "인간두뇌 모방",
+      "뉴런 상호작용",
+      "경험 학습",
+      "반복 학습과정",
+      "모형화"
+    ],
     "featureKeywords": [
       "입력층",
       "은닉층",
       "출력층",
       "활성화 함수",
-      "가중치",
-      "지도학습",
-      "비지도학습",
-      "자기지도학습"
+      "가중치"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "입은출활가 / 지비자",
+    "sections": [
+      {
+        "label": "구성요소",
+        "mnemonic": "입은출활가",
+        "keywords": [
+          "입력층",
+          "은닉층",
+          "출력층",
+          "활성화 함수",
+          "가중치"
+        ]
+      },
+      {
+        "label": "학습유형",
+        "mnemonic": "지비자",
+        "keywords": [
+          "지도학습",
+          "비지도학습",
+          "자기지도학습"
+        ]
+      }
+    ],
+    "memo": "입은출활가 (입력층·은닉층·출력층·활성화함수·가중치)\n지비자 (지도학습·비지도학습·자기지도학습)\n[정의] 인간두뇌 세포를 모방해 뉴런들의 상호작용과 경험 학습을 반복적 학습과정으로 모형화하는 분석 기법"
   },
   "gj-14": {
     "detail": "[정의] SAS기업에서 개발한 데이터 마이닝 표준 가이드로써 Sample, Explore, Modify, Model, Assess의 단계로 구성되어 있으며 각 5단계 프로세스를 순차적으로 실행하는 데이터 분석 방법론\n- SEMMA: SAS Enterprise Miner Tool의 작업을 수행하기 위한 기능적 논리 구성\n[단계별 프로세스]\nSample(통계적 추출, 조건추출) - 분석 데이터 생성, 데이터준비\nexplore(Clustering, 변수유의성) - 비즈니스 이해, 이해현상 및 변화탐색\nmodify(filter outlier, barchart, variable selection, datamaning) - 변수, 생성, 선택, 변형\nmodeling(regression, data splits, neural network), assess(assessment)",
