@@ -31338,15 +31338,38 @@
     "mnemonic": "테트투런"
   },
   "ai-19": {
-    "detail": "데이터 수집부터 전처리, 학습 모델 개발 및 배포, 예측까지 전과정을 순차적으로 처리하도록 설계된 머신러닝 아키텍처",
-    "related": "",
+    "detail": "데이터 수집부터 전처리, 학습(모델 개발)·배포, 예측까지 전 과정을 순차적으로 처리하도록 설계된 머신러닝 아키텍처.",
+    "related": "MLOps / 모델옵스(ModelOps)",
     "defKeywords": [
-      "데이터 수집부터 전처리"
+      "순차 처리",
+      "자동화",
+      "재현성"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "수집(데이터 수집)",
+      "전처리",
+      "학습(모델 개발)",
+      "배포",
+      "예측"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "수전학배예",
+    "conceptMap": "",
+    "sections": [
+      {
+        "label": "파이프라인 5단계",
+        "mnemonic": "수전학배예",
+        "keywords": [
+          "수집(데이터 수집)",
+          "전처리",
+          "학습(모델 개발)",
+          "배포",
+          "예측"
+        ]
+      }
+    ],
+    "memo": "수전학배예 (수집 → 전처리 → 학습 → 배포 → 예측)"
   },
   "ai-20": {
     "detail": "Deep Learning, Multi-layer Perceptron, RNN(LSTM)",
