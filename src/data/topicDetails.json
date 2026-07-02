@@ -613,7 +613,22 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "조리계지운성개",
-    "memo": "조리계지운성개"
+    "memo": "조리계지운성개 (조직·리더쉽·계획수립·지원·운영·성과관리·개선)",
+    "sections": [
+      {
+        "label": "대상",
+        "mnemonic": "조리계지운성개",
+        "keywords": [
+          "조직",
+          "리더쉽",
+          "계획수립",
+          "지원",
+          "운영",
+          "성과관리",
+          "개선"
+        ]
+      }
+    ]
   },
   "gj-18": {
     "detail": "[정의] 정보시스템에 대한 비상 대비체계 유지와 각 업무 조직 별 비상사태에 대비한 복구계획 수립을 통한 업무 연속성을 유지할 수 있는 체제 \n[기능요소]\n- 시스템 : IP-SAN, DWDM, HA, FT, \n- 네트워크 : L2~L7 스위치, Backbone Router, QoS, WAN, FDDI\n[기술요소] \nHA(High Availability) - 최단 복구를 위한 H/W Clustering 또는 Stand-By 형태\nFT (Fault Tolerant) - 실시간 복구가 가능한 Dual 시스템\nIP-SAN - SAN Traffic을 IP Packet에 실어 전송\nDWDM - Dense Wavelength Division Multiplexing\n고속의 Data 전송을 위한 통신,고밀도파장분할다중화\n[DR센터 구축유형]\nMirror(RTO = 0), Hot(RTO <= 2H), Warm(RTO <= 1W), Cold(수개월)\n[운영형태]\n상호계약형, 공동계약형, 외주위탁형, 독립구축형\n[복구 절차]\n업무영향분석 > 재해복구 전략 수립 > 시스템구축 및 복구계획수립 > 운영 및 모의훈련\n[지표] RTO,RPO,RSO,RCO",
@@ -642,8 +657,20 @@
       "Cold"
     ],
     "plusKeywords": [],
-    "mnemonic": "미핫웜콜",
-    "memo": "미핫웜콜\n상공외독\n분재시운"
+    "mnemonic": "상공외독",
+    "memo": "상공외독 (상호계약형·공동계약형·외주위탁형·독립구축형)",
+    "sections": [
+      {
+        "label": "운영형태",
+        "mnemonic": "상공외독",
+        "keywords": [
+          "상호계약형",
+          "공동계약형",
+          "외주위탁형",
+          "독립구축형"
+        ]
+      }
+    ]
   },
   "gj-19": {
     "detail": "[RTO]\nRecovery Time Objective, 재해복구 시간목표 (업무 관점)\n예) 업무중단시점부터 ‘업무’가 복구하여 가동될 때 까지의 시간목표\n\n[MTPD]\nMaximum Tolerable Period of Disruption, 운영 중단 최대 허용 기간\n\n[MBCO]\nMinimum Business Continuity Objective, 사업연속성 최소 목표",
@@ -950,8 +977,8 @@
       "논리적 융합",
       "문추분해"
     ],
-    "mnemonic": "분통추국비",
-    "memo": "분통추국비 (분할·통합·추출·국소품질·비대칭)",
+    "mnemonic": "분통추국비 / 문추분해",
+    "memo": "분통추국비 (분할·통합·추출·국소품질·비대칭)\n문추분해 (문제 -·추상화 -·분석 -·해결방안 도출)",
     "sections": [
       {
         "label": "TRIZ의 세부요소",
@@ -962,6 +989,16 @@
           "추출",
           "국소품질",
           "비대칭"
+        ]
+      },
+      {
+        "label": "구분-내용-사례",
+        "mnemonic": "문추분해",
+        "keywords": [
+          "문제 -",
+          "추상화 -",
+          "분석 -",
+          "해결방안 도출"
         ]
       }
     ]
@@ -1479,7 +1516,13 @@
     "defKeywords": [
       "Chasm 이론"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "혁신수용자",
+      "선각 수용자",
+      "전기 수용자",
+      "후기 수용자",
+      "지각 수용자"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [
       "Hype Cycle",
@@ -1493,7 +1536,21 @@
       "기후변화",
       "wiki"
     ],
-    "mnemonic": ""
+    "mnemonic": "혁선전후지",
+    "sections": [
+      {
+        "label": "기술수용주기 그래프",
+        "mnemonic": "혁선전후지",
+        "keywords": [
+          "혁신수용자",
+          "선각 수용자",
+          "전기 수용자",
+          "후기 수용자",
+          "지각 수용자"
+        ]
+      }
+    ],
+    "memo": "혁선전후지 (혁신수용자·선각 수용자·전기 수용자·후기 수용자·지각 수용자)"
   },
   "gj-64": {
     "detail": "악마의 강(자금 지원 X, R&D 실패) > 죽음의 계곡(R&D 성공 -> 자금부족 시제품 개발 실패) > 다윈의 바다(시장여건, 마케팅 역량 부족 -> 사업 실패)",
@@ -1780,8 +1837,20 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "가좌최통",
-    "memo": "가좌최통"
+    "mnemonic": "가자최통",
+    "memo": "가자최통 (가시화·자동화·최적화·통합화)",
+    "sections": [
+      {
+        "label": "특징",
+        "mnemonic": "가자최통",
+        "keywords": [
+          "가시화",
+          "자동화",
+          "최적화",
+          "통합화"
+        ]
+      }
+    ]
   },
   "gj-79": {
     "detail": "Business Process Reengineering",
@@ -1892,8 +1961,19 @@
       "배송"
     ],
     "plusKeywords": [],
-    "mnemonic": "SCM 공격 문제",
-    "memo": "SCM 공격 문제"
+    "mnemonic": "PEI",
+    "memo": "PEI (SCI·성과측정·프로세스개선)",
+    "sections": [
+      {
+        "label": "구성요소",
+        "mnemonic": "PEI",
+        "keywords": [
+          "SCI",
+          "성과측정",
+          "프로세스개선"
+        ]
+      }
+    ]
   },
   "gj-86": {
     "detail": "(정의) 생산 관리 시스템: 기업의 생산 현장에서 작업 일정, 작업 지시, 품질 관리, 작업 실적 집계 등 제반 활동을 지원하기 위한 생산 공정 관리 시스템",
@@ -2685,12 +2765,32 @@
     "detail": "컴퓨터를 통한 정보의 이해 능력과 소양\n\n[세부항목] 기코데미소\n기술, 코드, 데이터, 미디어, 소셜미디어\n\n디지털 가짜 뉴스 식별 능력\n\n[디지털리터러시DQ] 윤소해의 생활기\nethics(윤리), input(소비), processing(해석),output(생산),utilzation(활용),contribution(기여)\n* Digital Quotient:디지털역량 검증",
     "related": "",
     "defKeywords": [],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "기술",
+      "코드",
+      "데이터",
+      "미디어",
+      "소셜미디어"
+    ],
     "applicationKeywords": [
       "contribution"
     ],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "기코데미소",
+    "sections": [
+      {
+        "label": "세부항목",
+        "mnemonic": "기코데미소",
+        "keywords": [
+          "기술",
+          "코드",
+          "데이터",
+          "미디어",
+          "소셜미디어"
+        ]
+      }
+    ],
+    "memo": "기코데미소 (기술·코드·데이터·미디어·소셜미디어)"
   },
   "gj-127": {
     "detail": "디지털 기술과 서비스의 혜택을 소외와 배제 없이 함께 누리는 것\n\n[영역] 블록체인, 메타버스 적용 시 간글로 활용\n\n[격차 문제점]\n세대간, 지역간, 국제간, 성별, 남북한, u-Life, 악순환의 계속\n\n[전략]\n정보 격차 해소 전략, 유니버셜 디자인 전략, 디지털 프리 라이프 전략(포용적 혁신)",
@@ -2815,17 +2915,44 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "공타비",
+    "sections": [
+      {
+        "label": "특징",
+        "mnemonic": "공타비",
+        "keywords": [
+          "공정성",
+          "타당성",
+          "비차별성"
+        ]
+      }
+    ],
+    "memo": "공타비 (공정성·타당성·비차별성)"
   },
   "gj-135": {
     "detail": "[지식재산권]산저신\n산업재산권, 저작권, 신지식재산권\n\n산업재산권(특실상디) : 특허, 실용신안, 상표권, 디자인권\n저작권(저인) : 저작권, 인접저작권\n신지식재산권(첨산정) : 첨단지식재산권(반도체,바이오), 산업저작권, 정보재산권(데이터베이스의 데이터)\n\n\n\n※ 보호방안: 저작권법, 특허법, 난독화 기술, OSS 라이선스 적용",
     "related": "SW 소스코드 저작권서비스-Codejam 서비스",
     "defKeywords": [],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "산업재산권",
+      "저작권",
+      "신지식재산권"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "특실상디",
-    "memo": "특실상디\n저인\n첨산정"
+    "mnemonic": "산저신",
+    "memo": "산저신 (산업재산권·저작권·신지식재산권)",
+    "sections": [
+      {
+        "label": "지식재산권",
+        "mnemonic": "산저신",
+        "keywords": [
+          "산업재산권",
+          "저작권",
+          "신지식재산권"
+        ]
+      }
+    ]
   },
   "gj-136": {
     "detail": "Corporate Social Responsibility: 기업 활동에 영향을 받거나 영향을 주는 직간접적 이해 관계자에 대해 법적, 경제적, 윤리적 책임을 감당하는 경영 기법\n\n- ISO-26000 : 기업의 사회적 책임에 대한 국제표준\n- ISO-14001: 환경경영, 정도(正道)경영, 사회공헌",
