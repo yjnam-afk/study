@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
-import SpeakButton from "@/components/SpeakButton";
+import SpeakButton, { mnemonicScript } from "@/components/SpeakButton";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 import { loadReview, saveReview, markReviewed } from "@/lib/storage";
@@ -257,10 +257,26 @@ export default function MnemonicPage() {
               <div className="flex items-center gap-2">
                 <SpeakButton
                   label="듣기"
-                  getText={() => {
-                    const kw = set.body.items.map((i) => i.term).join(", ");
-                    return `${set.topic}. 서론 두음, ${set.intro.mnemonic}. 본론 두음, ${set.body.mnemonic}. 핵심 키워드, ${kw}.`;
-                  }}
+                  getText={() =>
+                    // 원문 낭독이 아니라 "두음 → 글자별 풀이 → 복창" 학습 대본으로 읽는다.
+                    mnemonicScript({
+                      topic: set.topic,
+                      sections: subnote?.sections?.length
+                        ? subnote.sections
+                        : [
+                            {
+                              label: "서론 두음",
+                              mnemonic: set.intro.mnemonic,
+                              keywords: set.intro.items.map((i) => i.term),
+                            },
+                            {
+                              label: "본론 두음",
+                              mnemonic: set.body.mnemonic,
+                              keywords: set.body.items.map((i) => i.term),
+                            },
+                          ],
+                    })
+                  }
                 />
                 <ShareButton
                   title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
