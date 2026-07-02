@@ -306,6 +306,15 @@ export default function Home() {
                         : "border-slate-100 bg-slate-50"
                     }`}
                   >
+                    <span
+                      className={`grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] font-bold tabular-nums ${
+                        checked
+                          ? "bg-emerald-200 text-emerald-700"
+                          : "bg-slate-200 text-slate-500"
+                      }`}
+                    >
+                      {i + 1}
+                    </span>
                     <button
                       onClick={() => toggleTopicDone(t.id)}
                       aria-label="완료"

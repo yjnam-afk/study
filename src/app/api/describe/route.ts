@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { generateJSON, AIConfigError } from "@/lib/ai";
 import { describePrompt, TUTOR_SYSTEM } from "@/lib/prompts";
 import { cached, hashKey } from "@/lib/cache";
+import { sanitizeKo } from "@/lib/sanitize";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -32,7 +33,11 @@ export async function POST(req: NextRequest) {
           temperature: 0.4,
         }),
     );
-    return NextResponse.json({ descs });
+    const clean = (descs || []).map((d) => ({
+      term: sanitizeKo(d.term),
+      desc: sanitizeKo(d.desc),
+    }));
+    return NextResponse.json({ descs: clean });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;
     return NextResponse.json(
