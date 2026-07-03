@@ -4460,19 +4460,13 @@
     "memo": "착계실통종 (착수·계획(기획)·실행(이행)·통제·종료)"
   },
   "pm-13": {
-    "detail": "통합관리(Integration)\n범위관리(Scope)\n일정관리(Schedule)\n원가관리(Cost)\n품질관리(Quality)\n자원관리(Resource)\n의사소통관리(Communication)\n위험관리(Risk)\n조달관리(Procurement)\n이해관계자관리(Stakeholder)",
-    "related": "PMBOK 6판 / 국제 표준 공통\nPLP 자격증 공통",
+    "detail": "[정의] 프로젝트 관리 활동을 지식 기준으로 분류한 PMBOK의 10대 관리 영역(Knowledge Area).\n통합(Integration)·범위(Scope)·일정(Schedule)·원가(Cost)·품질(Quality)·자원(Resource)·의사소통(Communication)·위험(Risk)·조달(Procurement)·이해관계자(Stakeholder)",
+    "related": "PMBOK 6판 / 49개 프로세스 / 5개 프로세스 그룹",
     "defKeywords": [
-      "Integration",
-      "Scope",
-      "Schedule",
-      "Cost",
-      "Quality",
-      "Resource",
-      "Communication",
-      "Risk",
-      "Procurement",
-      "Stakeholder"
+      "프로젝트 관리",
+      "지식 기준 분류",
+      "10대 영역",
+      "PMBOK 표준"
     ],
     "featureKeywords": [],
     "applicationKeywords": [],
