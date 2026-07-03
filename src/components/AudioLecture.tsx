@@ -20,19 +20,18 @@ function parseScript(raw: string): Turn[] {
   return turns;
 }
 
-function pickVoices(): {
-  host: SpeechSynthesisVoice | null;
-  expert: SpeechSynthesisVoice | null;
-} {
+/** 폴백용 보이스: 두 화자 모두 "가장 좋은" 한국어 보이스 하나만 쓴다.
+ *  (두 번째 보이스는 대개 품질이 나빠 전문가 목소리가 이상해지는 원인이었음.
+ *  화자 구분은 피치·속도의 미세한 차이로만.) */
+function pickBestVoice(): SpeechSynthesisVoice | null {
   const all = window.speechSynthesis.getVoices();
   const ko = all.filter((v) => v.lang?.toLowerCase().startsWith("ko"));
-  const ranked = [
-    ...ko.filter((v) => /natural|premium|neural/i.test(v.name)),
-    ...ko.filter((v) => /google/i.test(v.name)),
-    ...ko,
-  ];
-  const uniq = Array.from(new Set(ranked));
-  return { host: uniq[0] || null, expert: uniq[1] || uniq[0] || null };
+  return (
+    ko.find((v) => /natural|premium|neural/i.test(v.name)) ||
+    ko.find((v) => /google/i.test(v.name)) ||
+    ko[0] ||
+    null
+  );
 }
 
 export default function AudioLecture({
@@ -104,14 +103,14 @@ export default function AudioLecture({
     const t = list[i];
     const u = new SpeechSynthesisUtterance(t.text);
     u.lang = "ko-KR";
-    const { host, expert } = pickVoices();
-    const same = !host || !expert || host === expert;
+    const best = pickBestVoice();
+    if (best) u.voice = best; // 두 화자 모두 최고 보이스 사용
     if (t.speaker === "진행자") {
-      if (host) u.voice = host;
-      u.pitch = same ? 1.15 : 1.05;
+      u.pitch = 1.08;
+      u.rate = 1.04;
     } else {
-      if (expert) u.voice = expert;
-      u.pitch = same ? 0.9 : 1.0;
+      u.pitch = 0.97; // 미세한 차이만 — 어색한 저음 금지
+      u.rate = 0.99;
     }
     u.onend = () => playFallback(list, i + 1);
     u.onerror = () => playFallback(list, i + 1);

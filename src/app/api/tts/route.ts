@@ -1,20 +1,47 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Mp3Encoder } from "@breezystack/lamejs";
 import { cached, hashKey } from "@/lib/cache";
+import { edgeSynthesize, EDGE_VOICES } from "@/lib/edgetts";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
 /**
- * 🎙️ 신경망 TTS — Gemini 멀티스피커 음성합성.
- * 팟캐스트 대본(진행자/전문가)을 "두 명의 진짜 사람 목소리"로 한 번에 합성한다.
- * 브라우저 내장 TTS(기계음)를 대체. 결과 mp3는 Redis에 30일 캐시해
- * 재생할 때마다 API를 다시 부르지 않는다.
+ * 🎙️ 신경망 TTS — 팟캐스트 대본을 진짜 사람 같은 두 목소리 mp3로 합성.
+ * 1순위 Edge 신경망(무료·키 불필요, 선히/인준), 2순위 Gemini 멀티스피커.
+ * 결과 mp3는 Redis 30일 캐시(재생마다 재합성하지 않음).
  */
+
+type Turn = { speaker: "진행자" | "전문가"; text: string };
+
+function parseTurns(script: string): Turn[] {
+  const turns: Turn[] = [];
+  for (const line of script.split("\n")) {
+    const m = line.trim().match(/^(진행자|전문가)\s*[:：]\s*(.+)$/);
+    if (m) turns.push({ speaker: m[1] as Turn["speaker"], text: m[2].trim() });
+  }
+  return turns;
+}
+
+/** Edge 신경망: 턴별로 화자 보이스로 합성해 mp3 프레임을 이어붙인다. */
+async function synthesizeEdge(script: string): Promise<Buffer> {
+  const turns = parseTurns(script);
+  if (!turns.length) throw new Error("대본에 대사가 없습니다.");
+  const parts: Buffer[] = [];
+  for (const t of turns) {
+    const isHost = t.speaker === "진행자";
+    const buf = await edgeSynthesize(
+      t.text,
+      isHost ? EDGE_VOICES.host : EDGE_VOICES.expert,
+      { rate: isHost ? "+8%" : "+4%", pauseMs: 350 },
+    );
+    parts.push(buf);
+  }
+  return Buffer.concat(parts);
+}
 
 const TTS_MODEL = process.env.GEMINI_TTS_MODEL || "gemini-2.5-flash-preview-tts";
 
-/** PCM(s16le) → mp3(mono 48kbps). 5~6MB PCM이 ~700KB로 줄어 캐시 가능해진다. */
 function pcmToMp3(pcm: Buffer, sampleRate: number): Buffer {
   const samples = new Int16Array(pcm.buffer, pcm.byteOffset, pcm.byteLength / 2);
   const enc = new Mp3Encoder(1, sampleRate, 48);
@@ -29,62 +56,52 @@ function pcmToMp3(pcm: Buffer, sampleRate: number): Buffer {
   return Buffer.concat(out);
 }
 
-async function synthesize(script: string): Promise<string> {
+/** Gemini 멀티스피커(프로젝트에 TTS 권한이 있을 때만 성공). */
+async function synthesizeGemini(script: string): Promise<Buffer> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error("GEMINI_API_KEY 미설정");
-
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${apiKey}`;
-  const body = {
-    contents: [
-      {
-        parts: [
-          {
-            text:
-              "다음은 한국어 학습 팟캐스트 대화입니다. 두 사람이 자연스럽고 생기있게, 적당한 속도로 대화하듯 읽어주세요.\n\n" +
-              script,
-          },
-        ],
-      },
-    ],
-    generationConfig: {
-      responseModalities: ["AUDIO"],
-      speechConfig: {
-        multiSpeakerVoiceConfig: {
-          speakerVoiceConfigs: [
-            {
-              speaker: "진행자",
-              voiceConfig: { prebuiltVoiceConfig: { voiceName: "Kore" } },
-            },
-            {
-              speaker: "전문가",
-              voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } },
-            },
-          ],
-        },
-      },
-    },
-  };
-
   const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    body: JSON.stringify({
+      contents: [
+        {
+          parts: [
+            {
+              text:
+                "다음은 한국어 학습 팟캐스트 대화입니다. 두 사람이 자연스럽고 생기있게 읽어주세요.\n\n" +
+                script,
+            },
+          ],
+        },
+      ],
+      generationConfig: {
+        responseModalities: ["AUDIO"],
+        speechConfig: {
+          multiSpeakerVoiceConfig: {
+            speakerVoiceConfigs: [
+              { speaker: "진행자", voiceConfig: { prebuiltVoiceConfig: { voiceName: "Kore" } } },
+              { speaker: "전문가", voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } } },
+            ],
+          },
+        },
+      },
+    }),
   });
   if (!res.ok) {
     const detail = await res.text();
-    throw new Error(`Gemini TTS 오류 (${res.status}): ${detail.slice(0, 300)}`);
+    throw new Error(`Gemini TTS (${res.status}): ${detail.slice(0, 200)}`);
   }
   const data = await res.json();
   const part = data?.candidates?.[0]?.content?.parts?.find(
     (p: { inlineData?: { data?: string; mimeType?: string } }) => p.inlineData?.data,
   );
-  const b64 = part?.inlineData?.data as string | undefined;
-  if (!b64) throw new Error("TTS 응답에 오디오가 없습니다.");
-  const mime = (part?.inlineData?.mimeType as string) || "audio/L16;rate=24000";
-  const rate = Number(mime.match(/rate=(\d+)/)?.[1] || 24000);
-  const pcm = Buffer.from(b64, "base64");
-  const mp3 = pcmToMp3(pcm, rate);
-  return mp3.toString("base64");
+  if (!part?.inlineData?.data) throw new Error("TTS 응답에 오디오 없음");
+  const rate = Number(
+    (part.inlineData.mimeType || "").match(/rate=(\d+)/)?.[1] || 24000,
+  );
+  return pcmToMp3(Buffer.from(part.inlineData.data, "base64"), rate);
 }
 
 export async function POST(req: NextRequest) {
@@ -94,11 +111,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "대본이 없거나 너무 깁니다." }, { status: 400 });
     }
 
-    // mp3 base64 캐시: Upstash 요청 상한(1MB)에 맞게 ~950KB까지만 저장.
     const mp3b64 = await cached(
-      `tts:v1:${hashKey(script)}`,
+      `tts:v2:${hashKey(script)}`,
       30 * 86400,
-      () => synthesize(script),
+      async () => {
+        // Edge(무료·고품질) 먼저, 안 되면 Gemini.
+        try {
+          return (await synthesizeEdge(script)).toString("base64");
+        } catch (e) {
+          const edgeErr = e instanceof Error ? e.message : "edge 실패";
+          try {
+            return (await synthesizeGemini(script)).toString("base64");
+          } catch (g) {
+            const gemErr = g instanceof Error ? g.message : "gemini 실패";
+            throw new Error(`${edgeErr} / ${gemErr}`);
+          }
+        }
+      },
       (v) => typeof v === "string" && v.length > 2000 && v.length < 1_250_000,
     );
 
