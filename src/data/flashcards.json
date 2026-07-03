@@ -15681,18 +15681,51 @@
   "definition": "OSI 7 Layer의 하위 계층인 2계층으로 두 시스템 사이에서 오류 없이 정보 데이터를 전송하려고 상위 계층에서 받은 비트열의 데이터로 프레임을 구성하여 하위 계층으로 전송",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "FB",
+    "label": "핵심 기능 3",
+    "mnemonic": "오름회",
     "keywords": [
-     "FEC",
-     "BEC"
+     "오류제어",
+     "흐름제어",
+     "회선제어"
+    ]
+   },
+   {
+    "label": "FEC 코드",
+    "mnemonic": "해리코터",
+    "keywords": [
+     "해밍 코드",
+     "리드솔로몬(R-S)",
+     "콘볼루션 코드",
+     "터보 코드"
+    ]
+   },
+   {
+    "label": "재전송 ARQ 5",
+    "mnemonic": "스고셀아합",
+    "keywords": [
+     "Stop & Wait ARQ",
+     "Go-Back-N ARQ",
+     "Selective ARQ",
+     "Adaptive ARQ",
+     "Hybrid ARQ"
+    ]
+   },
+   {
+    "label": "회선제어 방식",
+    "mnemonic": "경폴인토",
+    "keywords": [
+     "경쟁 방식",
+     "폴링 방식",
+     "인터럽트 방식",
+     "토큰 방식"
     ]
    }
   ],
-  "mnemonic": "FB",
+  "mnemonic": "오름회",
   "keywords": [
-   "FEC",
-   "BEC"
+   "오류제어",
+   "흐름제어",
+   "회선제어"
   ]
  },
  {
