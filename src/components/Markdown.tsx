@@ -4,6 +4,37 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Mermaid from "./Mermaid";
 
+/**
+ * AI가 내는 마크다운 표는 자주 깨진다(표 앞 빈 줄 누락, |---| 구분행 누락).
+ * 렌더 전에 구조를 복구해 어떤 페이지에서든 표가 표로 보이게 한다.
+ */
+function repairTables(md: string): string {
+  const lines = md.split("\n");
+  const out: string[] = [];
+  const isRow = (s: string) => /^\s*\|.+\|\s*$/.test(s);
+  const isSep = (s: string) => /^\s*\|(\s*:?-{2,}:?\s*\|)+\s*$/.test(s);
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i];
+    if (isRow(l)) {
+      const prev = out.length ? out[out.length - 1] : "";
+      const tableStart = !isRow(prev);
+      // 표 시작 앞에는 빈 줄이 있어야 GFM이 표로 인식한다.
+      if (tableStart && prev.trim() !== "") out.push("");
+      // 헤더 다음 줄이 구분행이 아니면 구분행을 삽입한다.
+      if (tableStart && !isSep(lines[i + 1] ?? "")) {
+        const cols = l.split("|").length - 2;
+        if (cols >= 2) {
+          out.push(l);
+          out.push("|" + Array(cols).fill(" --- ").join("|") + "|");
+          continue;
+        }
+      }
+    }
+    out.push(l);
+  }
+  return out.join("\n");
+}
+
 /** AI 답안/설명을 표·목록·개념도(mermaid) 포함 마크다운으로 렌더링합니다. */
 export default function Markdown({ children }: { children: string }) {
   return (
@@ -21,7 +52,7 @@ export default function Markdown({ children }: { children: string }) {
           },
         }}
       >
-        {children}
+        {repairTables(children)}
       </ReactMarkdown>
     </div>
   );

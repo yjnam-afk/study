@@ -26,10 +26,11 @@ function roundOf(source?: string): string {
 const ROUNDS = Array.from(new Set(EXAMS.map((q) => roundOf(q.source)))).sort(
   (a, b) => (parseInt(b) || 0) - (parseInt(a) || 0),
 );
-const PERIODS = ["전체", "1교시", "2교시"] as const;
+const PERIODS = ["전체", "1교시", "2교시", "3교시", "4교시"] as const;
 
 function answerLink(q: Q): string {
-  const period = q.period === "2교시" ? "2교시" : "1교시";
+  // 답안 유형: 1교시=용어형 단답, 2·3·4교시=서술형(작성 방법론 동일).
+  const period = q.period === "1교시" ? "1교시" : "2교시";
   return `/answer?period=${encodeURIComponent(period)}&question=${encodeURIComponent(q.text)}`;
 }
 

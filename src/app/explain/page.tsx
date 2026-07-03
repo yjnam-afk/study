@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import AudioLecture from "@/components/AudioLecture";
@@ -12,7 +14,7 @@ const levels = ["입문자", "수험생", "실무자"];
 const CATS = Array.from(new Set(topics.map((t) => t.category)));
 const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
 
-export default function ExplainPage() {
+function ExplainInner() {
   const [topic, setTopic] = useState("");
   const [recCat, setRecCat] = useState(CATS[0]);
   const [level, setLevel] = useState("수험생");
@@ -21,17 +23,18 @@ export default function ExplainPage() {
   const [error, setError] = useState("");
   const [autoPending, setAutoPending] = useState(false);
 
-  // 학습 코치에서 ?topic=&auto= 으로 들어오면 미리 채우고 auto=1이면 즉시 생성.
+  // 학습 코치 등에서 ?topic=&auto= 으로 들어오면 미리 채우고 auto=1이면 즉시 생성.
+  // SPA 이동으로 쿼리만 바뀌어도 반응하도록 searchParams 의존.
+  const searchParams = useSearchParams();
   useEffect(() => {
-    const sp = new URLSearchParams(window.location.search);
-    const title = sp.get("topic") || "";
+    const title = searchParams.get("topic") || "";
     if (title) {
       setTopic(title);
       const t = topics.find((x) => x.title === title);
       if (t) setRecCat(t.category);
-      if (sp.get("auto") === "1") setAutoPending(true);
+      if (searchParams.get("auto") === "1") setAutoPending(true);
     }
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     if (autoPending && topic.trim() && !loading) {
@@ -143,7 +146,7 @@ export default function ExplainPage() {
             {loading ? "설명 중…" : "설명 보기"}
           </Button>
           {topic.trim() && (
-            <a
+            <Link
               href={`/mnemonic?topic=${encodeURIComponent(topic.trim())}${
                 topics.find((x) => x.title === topic.trim())
                   ? `&topicId=${topics.find((x) => x.title === topic.trim())!.id}`
@@ -152,7 +155,7 @@ export default function ExplainPage() {
               className="rounded-lg border border-violet-200 bg-violet-50 px-3 py-2 text-sm font-medium text-violet-700 hover:bg-violet-100"
             >
               🥷 이 토픽 두음신공 학습 →
-            </a>
+            </Link>
           )}
         </div>
       </div>
@@ -174,5 +177,14 @@ export default function ExplainPage() {
         )}
       </div>
     </div>
+  );
+}
+
+// useSearchParams는 Suspense 경계가 필요하다(Next App Router).
+export default function ExplainPage() {
+  return (
+    <Suspense fallback={null}>
+      <ExplainInner />
+    </Suspense>
   );
 }
