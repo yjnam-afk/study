@@ -4,6 +4,7 @@ import AuthNav from "@/components/AuthNav";
 import AuthGate from "@/components/AuthGate";
 import ProgressSync from "@/components/ProgressSync";
 import DeployBanner from "@/components/DeployBanner";
+import GlobalAudioPlayer from "@/components/GlobalAudioPlayer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -59,6 +60,7 @@ export default function RootLayout({
         <footer className="mx-auto max-w-5xl px-4 py-10 text-center text-xs text-slate-400">
           스파르타 소설클럽 · 정보관리기술사 학습 · AI 응답은 참고용이며 실제 채점 기준과 다를 수 있습니다.
         </footer>
+        <GlobalAudioPlayer />
       </body>
     </html>
   );
