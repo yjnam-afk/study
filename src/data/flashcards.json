@@ -15815,20 +15815,30 @@
   "definition": "네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 모여있는 4계층의 통신 프로토콜 집합",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "3F혼",
+    "label": "연결 설정(3-way)",
+    "mnemonic": "SSA",
     "keywords": [
-     "3-Way Handshake",
-     "Flow Control",
-     "혼잡제어"
+     "SYN",
+     "SYN+ACK",
+     "ACK"
+    ]
+   },
+   {
+    "label": "연결 종료(4-way)",
+    "mnemonic": "FAFA",
+    "keywords": [
+     "FIN",
+     "ACK",
+     "FIN",
+     "ACK"
     ]
    }
   ],
-  "mnemonic": "3F혼",
+  "mnemonic": "SSA",
   "keywords": [
-   "3-Way Handshake",
-   "Flow Control",
-   "혼잡제어"
+   "SYN",
+   "SYN+ACK",
+   "ACK"
   ]
  },
  {
@@ -15889,18 +15899,22 @@
   "definition": "상위 계층에서 받은 데이터를 IP 프로토콜에 전달하지만 전송한 데이터가 목적지까지 제대로 도착했는지는 확인하지 않는 프로토콜",
   "sections": [
    {
-    "label": "헤더",
-    "mnemonic": "HD",
+    "label": "헤더 구성(8B)",
+    "mnemonic": "SDLC",
     "keywords": [
-     "UDP Header",
-     "UDP Data"
+     "Source Port",
+     "Destination Port",
+     "Length",
+     "Checksum"
     ]
    }
   ],
-  "mnemonic": "HD",
+  "mnemonic": "SDLC",
   "keywords": [
-   "UDP Header",
-   "UDP Data"
+   "Source Port",
+   "Destination Port",
+   "Length",
+   "Checksum"
   ]
  },
  {
@@ -15928,6 +15942,32 @@
   ]
  },
  {
+  "id": "net-54",
+  "title": "Subnetting",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "동일 네트워크를 작은 그룹으로 나누기 위해 그룹화하는 것",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "호전마서",
+    "keywords": [
+     "호스트 수 확인",
+     "전환 bit 결정",
+     "마스크 계산",
+     "서브넷 ID 산출"
+    ]
+   }
+  ],
+  "mnemonic": "호전마서",
+  "keywords": [
+   "호스트 수 확인",
+   "전환 bit 결정",
+   "마스크 계산",
+   "서브넷 ID 산출"
+  ]
+ },
+ {
   "id": "net-55",
   "title": "Supernetting",
   "category": "네트워크",
@@ -15935,26 +15975,20 @@
   "definition": "다수 작은 네트워크를 하나로 통합하여 사용하는 방법",
   "sections": [
    {
-    "label": "기법",
-    "mnemonic": "Cs",
-    "keywords": [
-     "Classless",
-     "subnet mask"
-    ]
-   },
-   {
-    "label": "계산",
-    "mnemonic": "공N",
+    "label": "핵심 키워드",
+    "mnemonic": "공마유",
     "keywords": [
      "공통비트 도출",
-     "NetID 도출"
+     "마스크·NetID 산출",
+     "유효 IP 계산"
     ]
    }
   ],
-  "mnemonic": "Cs",
+  "mnemonic": "공마유",
   "keywords": [
-   "Classless",
-   "subnet mask"
+   "공통비트 도출",
+   "마스크·NetID 산출",
+   "유효 IP 계산"
   ]
  },
  {
@@ -16271,28 +16305,36 @@
   "definition": "서버나 네트워크 간 로드밸런싱 용도에서 L4단계의 프로토콜인 TCP/UDP 등",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "lvF캐서Q로",
+    "label": "기능",
+    "mnemonic": "로버패캐연Q",
     "keywords": [
-     "load balancing",
-     "virtual IP",
-     "Fail-over",
+     "로드밸런싱",
+     "버추얼 IP",
+     "패일오버(Fail-over)",
      "캐싱",
-     "서비스연결",
-     "QoS",
-     "로드밸런싱 Metrics 값"
+     "연결(서비스)",
+     "QoS"
+    ]
+   },
+   {
+    "label": "알고리즘",
+    "mnemonic": "라가해최",
+    "keywords": [
+     "라운드로빈(RR)",
+     "가중 RR(Weighted RR)",
+     "해싱(Hashing)",
+     "최소연결(Least Connection)"
     ]
    }
   ],
-  "mnemonic": "lvF캐서Q로",
+  "mnemonic": "로버패캐연Q",
   "keywords": [
-   "load balancing",
-   "virtual IP",
-   "Fail-over",
+   "로드밸런싱",
+   "버추얼 IP",
+   "패일오버(Fail-over)",
    "캐싱",
-   "서비스연결",
-   "QoS",
-   "로드밸런싱 Metrics 값"
+   "연결(서비스)",
+   "QoS"
   ]
  },
  {
@@ -16312,6 +16354,32 @@
   "keywords": []
  },
  {
+  "id": "net-79",
+  "title": "V2V(Vehicle to Vehicle)",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "V2V(Vehicle to Vehicle)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "WL충군",
+    "keywords": [
+     "WAVE",
+     "LTE-V2X",
+     "충돌 경고",
+     "군집주행"
+    ]
+   }
+  ],
+  "mnemonic": "WL충군",
+  "keywords": [
+   "WAVE",
+   "LTE-V2X",
+   "충돌 경고",
+   "군집주행"
+  ]
+ },
+ {
   "id": "net-82",
   "title": "V2X",
   "category": "네트워크",
@@ -16319,22 +16387,24 @@
   "definition": "차량간에 유무선망을 통해 다른 차량 및 도로등 인프라가 구축된 사물과 정보를 교환하는 기술, C-ITS에서의 ‘Connected/Networked Vehicle(Car)’를 구현하",
   "sections": [
    {
-    "label": "기술",
-    "mnemonic": "VCGV",
+    "label": "종류 5",
+    "mnemonic": "IVNP내",
     "keywords": [
-     "V2V-WAVE",
-     "C-V2X",
-     "G-V2X",
-     "VMC"
+     "V2I(ISO TC204 CALM)",
+     "V2V(WAVE·LTE-V2X)",
+     "V2N(ISO WG17)",
+     "V2P(LTE·5G·GPS)",
+     "IVN(CAN·FlexRay·LIN·MOST)"
     ]
    }
   ],
-  "mnemonic": "VCGV",
+  "mnemonic": "IVNP내",
   "keywords": [
-   "V2V-WAVE",
-   "C-V2X",
-   "G-V2X",
-   "VMC"
+   "V2I(ISO TC204 CALM)",
+   "V2V(WAVE·LTE-V2X)",
+   "V2N(ISO WG17)",
+   "V2P(LTE·5G·GPS)",
+   "IVN(CAN·FlexRay·LIN·MOST)"
   ]
  },
  {
@@ -16345,24 +16415,24 @@
   "definition": "ITS전용 근거리 무선통신방식",
   "sections": [
    {
-    "label": "스펙",
+    "label": "핵심 키워드",
     "mnemonic": "G변mM:",
     "keywords": [
-     "Ghz",
-     "변복조",
-     "m이내",
-     "Mbps",
-     ":M통신가능"
+     "5.9GHz 대역",
+     "ASK 변복조",
+     "100m 이내",
+     "1Mbps",
+     "1:M 통신"
     ]
    }
   ],
   "mnemonic": "G변mM:",
   "keywords": [
-   "Ghz",
-   "변복조",
-   "m이내",
-   "Mbps",
-   ":M통신가능"
+   "5.9GHz 대역",
+   "ASK 변복조",
+   "100m 이내",
+   "1Mbps",
+   "1:M 통신"
   ]
  },
  {
@@ -16373,18 +16443,24 @@
   "definition": "IEEE 802.11p, IEEE 1609기반의 차량환경용 무선통신기술",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "PW",
+    "label": "표준 스택",
+    "mnemonic": "p1234",
     "keywords": [
-     "PHY",
-     "WAVE 통신스택 하위계층"
+     "802.11p(PHY·MAC)",
+     "1609.1(리소스 관리)",
+     "1609.2(보안 통신)",
+     "1609.3(NW·전송 서비스)",
+     "1609.4(멀티채널)"
     ]
    }
   ],
-  "mnemonic": "PW",
+  "mnemonic": "p1234",
   "keywords": [
-   "PHY",
-   "WAVE 통신스택 하위계층"
+   "802.11p(PHY·MAC)",
+   "1609.1(리소스 관리)",
+   "1609.2(보안 통신)",
+   "1609.3(NW·전송 서비스)",
+   "1609.4(멀티채널)"
   ]
  },
  {
@@ -16409,6 +16485,32 @@
    "효율성",
    "보안성",
    "안전성"
+  ]
+ },
+ {
+  "id": "net-87",
+  "title": "Wireless LAN",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "IEEE 802.11, SSID, WEP",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "SWAC",
+    "keywords": [
+     "SSID",
+     "WEP/WPA",
+     "AP 로밍",
+     "CSMA/CA"
+    ]
+   }
+  ],
+  "mnemonic": "SWAC",
+  "keywords": [
+   "SSID",
+   "WEP/WPA",
+   "AP 로밍",
+   "CSMA/CA"
   ]
  },
  {
@@ -16441,40 +16543,103 @@
   "definition": "Wi-Fi 6 보다 3배 빠르고 초 실감 미디어 컨텐츠를 안정적으로 전송하는",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "5초저콘AbMP속최최지표",
+    "label": "성능목표",
+    "mnemonic": "주변속대하표멀",
     "keywords": [
-     "5G 음영지역 해소",
-     "초고속",
-     "저지연",
-     "콘텐츠 전송  지원",
-     "AP 간 다중협력 통신",
-     "be/ax",
-     "MAC",
-     "PHY",
-     "속대주표",
-     "최대속도",
-     "최대 대역폭",
-     "지원주파수",
-     "표준"
+     "주파수(2.4/5/6GHz)",
+     "변조(4096-QAM)",
+     "속도(최대 30Gbps)",
+     "대역폭(320MHz)",
+     "하위호환(802.11)",
+     "표준명(11be·EHT)",
+     "멀티플렉싱(Full Duplex)"
+    ]
+   },
+   {
+    "label": "기술요소",
+    "mnemonic": "에하빔쾀미",
+    "keywords": [
+     "에이피 다중협력(MAC)",
+     "H-ARQ",
+     "빔포밍(혼합)",
+     "쾀(4096-QAM)",
+     "미모(16×16 MIMO)"
+    ]
+   },
+   {
+    "label": "WiFi7 vs 6 비교",
+    "mnemonic": "속대주표",
+    "keywords": [
+     "속도(30/9.6Gbps)",
+     "대역폭(320/160MHz)",
+     "주파수(6GHz 지원)",
+     "표준(be/ax)"
     ]
    }
   ],
-  "mnemonic": "5초저콘AbMP속최최지표",
+  "mnemonic": "주변속대하표멀",
   "keywords": [
-   "5G 음영지역 해소",
-   "초고속",
-   "저지연",
-   "콘텐츠 전송  지원",
-   "AP 간 다중협력 통신",
-   "be/ax",
-   "MAC",
-   "PHY",
-   "속대주표",
-   "최대속도",
-   "최대 대역폭",
-   "지원주파수",
-   "표준"
+   "주파수(2.4/5/6GHz)",
+   "변조(4096-QAM)",
+   "속도(최대 30Gbps)",
+   "대역폭(320MHz)",
+   "하위호환(802.11)",
+   "표준명(11be·EHT)",
+   "멀티플렉싱(Full Duplex)"
+  ]
+ },
+ {
+  "id": "net-98",
+  "title": "IEEE 802.11bn",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "향상된 효율성을 핵심목표로 UHR(Ultra High Reliability, 극도 높은 신뢰성)을 제공하는 차세대 Wi-Fi 표준/대역폭(2.4GHz, 5GHz, 6GHz), 최대",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "2최신",
+    "keywords": [
+     "2.4/5/6GHz",
+     "최대 100Gbps",
+     "신뢰성 중심"
+    ]
+   }
+  ],
+  "mnemonic": "2최신",
+  "keywords": [
+   "2.4/5/6GHz",
+   "최대 100Gbps",
+   "신뢰성 중심"
+  ]
+ },
+ {
+  "id": "net-102",
+  "title": "실내/외 위치 측위 기술",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "1. 실내: Wi-Fi AP 이용한 측위 기술, BLE, UWB 적용",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "WBUGSL",
+    "keywords": [
+     "Wi-Fi AP",
+     "BLE",
+     "UWB",
+     "GPS·A-GPS",
+     "SBAS",
+     "LPWA"
+    ]
+   }
+  ],
+  "mnemonic": "WBUGSL",
+  "keywords": [
+   "Wi-Fi AP",
+   "BLE",
+   "UWB",
+   "GPS·A-GPS",
+   "SBAS",
+   "LPWA"
   ]
  },
  {
@@ -16503,6 +16668,32 @@
    "운행관리",
    "원격감시",
    "배송관리"
+  ]
+ },
+ {
+  "id": "net-104",
+  "title": "IoT",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "IoT(Internet of Things)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "센네서보",
+    "keywords": [
+     "센싱",
+     "네트워크",
+     "서비스 인터페이스",
+     "보안"
+    ]
+   }
+  ],
+  "mnemonic": "센네서보",
+  "keywords": [
+   "센싱",
+   "네트워크",
+   "서비스 인터페이스",
+   "보안"
   ]
  },
  {
@@ -16695,6 +16886,36 @@
   ]
  },
  {
+  "id": "net-123",
+  "title": "IPv6 / All IP",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "전환 유형, 보안 이슈 등 잘 정리!!",
+  "sections": [
+   {
+    "label": "헤더 구조",
+    "mnemonic": "버터플파네호",
+    "keywords": [
+     "버전(Version)",
+     "터래픽 클래스",
+     "플로우 라벨",
+     "파이로드 길이",
+     "넥스트 헤더",
+     "호프 리밋"
+    ]
+   }
+  ],
+  "mnemonic": "버터플파네호",
+  "keywords": [
+   "버전(Version)",
+   "터래픽 클래스",
+   "플로우 라벨",
+   "파이로드 길이",
+   "넥스트 헤더",
+   "호프 리밋"
+  ]
+ },
+ {
   "id": "net-130",
   "title": "QoS /Queue 관리분류",
   "category": "네트워크",
@@ -16719,6 +16940,16 @@
      "DiffServ",
      "IntServ(보장형)"
     ]
+   },
+   {
+    "label": "큐잉 기법",
+    "mnemonic": "FPCW",
+    "keywords": [
+     "FIFO",
+     "PQ(Priority)",
+     "CBQ(Class-Based)",
+     "WFQ(Weighted Fair)"
+    ]
    }
   ],
   "mnemonic": "대지패지",
@@ -16737,13 +16968,21 @@
   "definition": "미리 정해진 기준 이상을 초과하는 트래픽은 버림으로써 트래픽 대역폭(Bandwidth)을 제한(limitation)하는 QoS 기술",
   "sections": [
    {
-    "label": "두음",
+    "label": "동작 3단계",
     "mnemonic": "미드마",
-    "keywords": []
+    "keywords": [
+     "미터(Meter·측정)",
+     "드롭(Drop·폐기)",
+     "마크(Mark·표시)"
+    ]
    }
   ],
   "mnemonic": "미드마",
-  "keywords": []
+  "keywords": [
+   "미터(Meter·측정)",
+   "드롭(Drop·폐기)",
+   "마크(Mark·표시)"
+  ]
  },
  {
   "id": "net-133",
@@ -16753,20 +16992,68 @@
   "definition": "- 트래픽 쉐이핑으로 대역폭을 제어하는 것 뿐 아니라, 전송률(rate)를 조절하여 패킷 끊김(jitter), 패킷 손실(loss), 반응시간(low latency) 등을 최적화.",
   "sections": [
    {
-    "label": "Shaping 파라미터",
+    "label": "구성요소",
     "mnemonic": "CCE",
     "keywords": [
-     "CIR",
-     "CBS",
-     "EBS"
+     "CBS(허용 버스트 Bc)",
+     "CIR(허용 정보율)",
+     "EBS(초과 버스트 Be)"
     ]
    }
   ],
   "mnemonic": "CCE",
   "keywords": [
-   "CIR",
-   "CBS",
-   "EBS"
+   "CBS(허용 버스트 Bc)",
+   "CIR(허용 정보율)",
+   "EBS(초과 버스트 Be)"
+  ]
+ },
+ {
+  "id": "net-134",
+  "title": "사전 패킷 폐기",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "1) RED(Random Early Detection)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "RW",
+    "keywords": [
+     "RED",
+     "WRED"
+    ]
+   }
+  ],
+  "mnemonic": "RW",
+  "keywords": [
+   "RED",
+   "WRED"
+  ]
+ },
+ {
+  "id": "net-135",
+  "title": "혼잡 제어",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "송신측에서 송신 데이터에 대한 Ack 수신 여부를 기반으로 네트워크 상황을 판단하여 송신 데이터의 크기를 조절하여 네트워크의 혼잡상황에 대해 조절하는 기술",
+  "sections": [
+   {
+    "label": "4대 알고리즘",
+    "mnemonic": "슬혼빠빠",
+    "keywords": [
+     "슬로우 스타트",
+     "혼잡 회피",
+     "빠른 재전송",
+     "빠른 회복"
+    ]
+   }
+  ],
+  "mnemonic": "슬혼빠빠",
+  "keywords": [
+   "슬로우 스타트",
+   "혼잡 회피",
+   "빠른 재전송",
+   "빠른 회복"
   ]
  },
  {
@@ -16819,6 +17106,56 @@
    "품질 관리방법",
    "MoS",
    "PExQ"
+  ]
+ },
+ {
+  "id": "net-143",
+  "title": "블루투스(Bluetooth 4.0)",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "1994년 최초개발. 2.4~2.485 대역폭, IEEE 802.15.1",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "3418",
+    "keywords": [
+     "3.0 High Speed",
+     "4.0 LE",
+     "100m/10m",
+     "802.11 PAL"
+    ]
+   }
+  ],
+  "mnemonic": "3418",
+  "keywords": [
+   "3.0 High Speed",
+   "4.0 LE",
+   "100m/10m",
+   "802.11 PAL"
+  ]
+ },
+ {
+  "id": "net-149",
+  "title": "NFC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "모바일 기기에 장착하여 13.56Mhz 주파수를 이용해 양방향 통신이 가능하고, RFID와 스마트 기능을 통합하여 다양한 비즈니스 모델이 가능한 근거리 무선통신 기술 ISO/IEC",
+  "sections": [
+   {
+    "label": "동작 모드 3",
+    "mnemonic": "카리피",
+    "keywords": [
+     "카드 에뮬레이션",
+     "리드/라이트",
+     "피어투피어"
+    ]
+   }
+  ],
+  "mnemonic": "카리피",
+  "keywords": [
+   "카드 에뮬레이션",
+   "리드/라이트",
+   "피어투피어"
   ]
  },
  {
@@ -16906,6 +17243,32 @@
   ]
  },
  {
+  "id": "net-181",
+  "title": "국가재난안전통신망",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "컴시응, 104회 3교시 참조",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "P단우생",
+    "keywords": [
+     "PS-LTE",
+     "단말 간 직접통신",
+     "우선순위 보장",
+     "생존성"
+    ]
+   }
+  ],
+  "mnemonic": "P단우생",
+  "keywords": [
+   "PS-LTE",
+   "단말 간 직접통신",
+   "우선순위 보장",
+   "생존성"
+  ]
+ },
+ {
   "id": "net-185",
   "title": "5G(IMT-2020) 주요 기술",
   "category": "네트워크",
@@ -16913,13 +17276,99 @@
   "definition": "- 4G 대비 10배이상 향상된 초고속, 초고용량, 초저지연, 초연결 네트워크 기술로 다양한 디지털 디바이스를 수용하고 Real 2D 입체 영상 서비스 기술구현을 목표로 한 차세대",
   "sections": [
    {
-    "label": "두음",
-    "mnemonic": "전체주고지연에면",
-    "keywords": []
+    "label": "3대 서비스",
+    "mnemonic": "eum",
+    "keywords": [
+     "eMBB(초광대역)",
+     "URLLC(초저지연·고신뢰)",
+     "mMTC(초연결)"
+    ]
    }
   ],
-  "mnemonic": "전체주고지연에면",
-  "keywords": []
+  "mnemonic": "eum",
+  "keywords": [
+   "eMBB(초광대역)",
+   "URLLC(초저지연·고신뢰)",
+   "mMTC(초연결)"
+  ]
+ },
+ {
+  "id": "net-186",
+  "title": "Network Slicing",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "물리적으로 하나의 네트워크를 통해 Device, Access, Transport, Core를 포함하여 End-to-End로 논리적으로 분리된 네트워크를 만들어 서로 다른 특성을 갖",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "NVME",
+    "keywords": [
+     "NFVI",
+     "VNF",
+     "MANO",
+     "E2E 슬라이스"
+    ]
+   }
+  ],
+  "mnemonic": "NVME",
+  "keywords": [
+   "NFVI",
+   "VNF",
+   "MANO",
+   "E2E 슬라이스"
+  ]
+ },
+ {
+  "id": "net-188",
+  "title": "NR/NR-MIMO",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "NR(New Radio) 의 정의",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "NSmM",
+    "keywords": [
+     "NSA(LTE 코어+5G)",
+     "SA(5G 단독)",
+     "mmWave",
+     "Massive MIMO"
+    ]
+   }
+  ],
+  "mnemonic": "NSmM",
+  "keywords": [
+   "NSA(LTE 코어+5G)",
+   "SA(5G 단독)",
+   "mmWave",
+   "Massive MIMO"
+  ]
+ },
+ {
+  "id": "net-189",
+  "title": "Mobile Edge Computing",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "이동통신 기지국에 대용량 클라우드 기술을 적용하여 다양한 컨텐츠를 사용자와 가까운 위치에서 제공하여 모바일 코어망의 혼잡을 최소화하는 기술",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "엣근캐저",
+    "keywords": [
+     "엣지 노드",
+     "근접성",
+     "캐싱",
+     "저지연"
+    ]
+   }
+  ],
+  "mnemonic": "엣근캐저",
+  "keywords": [
+   "엣지 노드",
+   "근접성",
+   "캐싱",
+   "저지연"
+  ]
  },
  {
   "id": "net-190",
@@ -16999,29 +17448,29 @@
   "definition": "모든 네트워크 사업자와 정부는 인터넷을 통해 발생하는 데이터 트래픽을 동등하게 취급하고, 대상, 내용, 유형, 사용자, 플랫폼, 전송방식에 따른 어떠한 차별도 없이 동등하게 처리해",
   "sections": [
    {
-    "label": "특징",
+    "label": "3원칙",
     "mnemonic": "비상접",
     "keywords": [
-     "비차별성",
-     "상호접속",
-     "접근성"
+     "비차별성(no discrimination)",
+     "상호접속(interconnection)",
+     "접근성(accessibility)"
     ]
    },
    {
-    "label": "서비스",
+    "label": "예외 서비스",
     "mnemonic": "관네특",
     "keywords": [
      "관리형 서비스",
      "네트워크 슬라이싱",
-     "특수서비스"
+     "특수 서비스"
     ]
    }
   ],
   "mnemonic": "비상접",
   "keywords": [
-   "비차별성",
-   "상호접속",
-   "접근성"
+   "비차별성(no discrimination)",
+   "상호접속(interconnection)",
+   "접근성(accessibility)"
   ]
  },
  {
@@ -17048,28 +17497,44 @@
   "definition": "가. CDN (Contents Delivery Network) 정의 - 콘텐츠를 중간경로를 최소화, 효율적으로 전달하기 위해 ISP의 여러 노드(웹캐시)를 가진 네트워크에 데이터를",
   "sections": [
    {
-    "label": "키워드",
-    "mnemonic": "MCCIUPI",
+    "label": "핵심 키워드",
+    "mnemonic": "PGM캐",
     "keywords": [
-     "Middle Mile",
-     "CDN SP",
-     "CP",
-     "ISP",
-     "User",
      "POP",
-     "IX"
+     "GSLB",
+     "Middle Mile",
+     "캐싱"
     ]
    }
   ],
-  "mnemonic": "MCCIUPI",
+  "mnemonic": "PGM캐",
   "keywords": [
-   "Middle Mile",
-   "CDN SP",
-   "CP",
-   "ISP",
-   "User",
    "POP",
-   "IX"
+   "GSLB",
+   "Middle Mile",
+   "캐싱"
+  ]
+ },
+ {
+  "id": "net-204",
+  "title": "라우팅 프로토콜",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "패킷을 목적지에 전달하기 위해서 경로정보를 어느 노드에 전달 하는가를 각 노드가 판단할 수 있게 하고 그 정보에 따라서 패킷을 전달하게 하는 기능 RIP vs OSPF(Open S",
+  "sections": [
+   {
+    "label": "알고리즘 분류",
+    "mnemonic": "거링",
+    "keywords": [
+     "거리벡터(RIP·IGRP·BGP)",
+     "링크상태(OSPF·IS-IS)"
+    ]
+   }
+  ],
+  "mnemonic": "거링",
+  "keywords": [
+   "거리벡터(RIP·IGRP·BGP)",
+   "링크상태(OSPF·IS-IS)"
   ]
  },
  {
@@ -17103,6 +17568,32 @@
   ],
   "mnemonic": "내외부에",
   "keywords": []
+ },
+ {
+  "id": "net-209",
+  "title": "Distance Vector Algorithm",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "Distance Vector Algorithm의 정의 라우터가 목적지까지 가는 경로를 SPF(Shortest Path First) 알고리즘을 통해 모든 라우팅 테이블에 기록 (모든",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "RI홉수",
+    "keywords": [
+     "RIP",
+     "IGRP",
+     "홉 카운트",
+     "수렴 느림"
+    ]
+   }
+  ],
+  "mnemonic": "RI홉수",
+  "keywords": [
+   "RIP",
+   "IGRP",
+   "홉 카운트",
+   "수렴 느림"
+  ]
  },
  {
   "id": "net-210",
@@ -17161,6 +17652,108 @@
   ]
  },
  {
+  "id": "net-233",
+  "title": "SDN",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "SDN(Software Defined Networking) 개방형 API인 OpenFlow를 통해 네트워크의 트래픽 전달 동작을 프로그래밍하듯 SW기반으로 컨트롤러에서 제어하는 네",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "SO제데",
+    "keywords": [
+     "SDN 컨트롤러",
+     "OpenFlow",
+     "제어평면",
+     "데이터평면"
+    ]
+   }
+  ],
+  "mnemonic": "SO제데",
+  "keywords": [
+   "SDN 컨트롤러",
+   "OpenFlow",
+   "제어평면",
+   "데이터평면"
+  ]
+ },
+ {
+  "id": "net-234",
+  "title": "OpenFlow",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "네트워크 장비의 표준 인터페이스 기술, OpenFlow의 정의 SDN 환경에서 제어 계층과 데이터 계층 간의 통신 프로토콜로 컨트롤러와 하드웨어 장비 간의 통신내용을 정의하는 SD",
+  "sections": [
+   {
+    "label": "Flow Table 구성",
+    "mnemonic": "HAC",
+    "keywords": [
+     "Header(매칭 규칙)",
+     "Action(처리)",
+     "Counter(통계)"
+    ]
+   }
+  ],
+  "mnemonic": "HAC",
+  "keywords": [
+   "Header(매칭 규칙)",
+   "Action(처리)",
+   "Counter(통계)"
+  ]
+ },
+ {
+  "id": "net-237",
+  "title": "NFV",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "네트워크 기능 가상화",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "VNMO",
+    "keywords": [
+     "VNF",
+     "NFVI",
+     "MANO",
+     "OSS/BSS"
+    ]
+   }
+  ],
+  "mnemonic": "VNMO",
+  "keywords": [
+   "VNF",
+   "NFVI",
+   "MANO",
+   "OSS/BSS"
+  ]
+ },
+ {
+  "id": "net-239",
+  "title": "SDDC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "서버, 스토리지, 네트워킹, 보안, 관리 솔루션 등 데이터센터의 모든 구성요소를 가상화하고, 이러한 가상화 환경의 인프라를 소프트웨어로 자동 통제 및 관리하는 개념의 데이터센터. ",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "CSNF",
+    "keywords": [
+     "Compute(CPU·메모리)",
+     "Storage",
+     "Network",
+     "Facility"
+    ]
+   }
+  ],
+  "mnemonic": "CSNF",
+  "keywords": [
+   "Compute(CPU·메모리)",
+   "Storage",
+   "Network",
+   "Facility"
+  ]
+ },
+ {
   "id": "net-240",
   "title": "오버레이 네트워크",
   "category": "네트워크",
@@ -17204,6 +17797,54 @@
   "keywords": [
    "자기유도",
    "전자기파"
+  ]
+ },
+ {
+  "id": "net-245",
+  "title": "FEC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "Forward Error Correction, 전진오류수정, 무선에서 많이 사용",
+  "sections": [
+   {
+    "label": "부호 분류",
+    "mnemonic": "블넌",
+    "keywords": [
+     "블록(해밍·RS)",
+     "넌블록(길쌈·터보)"
+    ]
+   }
+  ],
+  "mnemonic": "블넌",
+  "keywords": [
+   "블록(해밍·RS)",
+   "넌블록(길쌈·터보)"
+  ]
+ },
+ {
+  "id": "net-246",
+  "title": "BEC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "Backward Error Correction, 후진오류수정 정의",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "패C체재",
+    "keywords": [
+     "패리티",
+     "CRC",
+     "체크섬",
+     "재전송(ARQ)"
+    ]
+   }
+  ],
+  "mnemonic": "패C체재",
+  "keywords": [
+   "패리티",
+   "CRC",
+   "체크섬",
+   "재전송(ARQ)"
   ]
  },
  {
@@ -24480,28 +25121,119 @@
   "definition": "고차원 특징 추출 분류 위해 기존 신경망에 다계층의 합성곱 계층 추가하여 학습하는 딥러닝",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "커F활패SPD",
+    "label": "절차",
+    "mnemonic": "원컨풀컨풀전",
+    "keywords": [
+     "원본 이미지",
+     "컨볼루션",
+     "풀링",
+     "컨볼루션(2차)",
+     "풀링(2차)",
+     "전체연결(FC)"
+    ]
+   },
+   {
+    "label": "구성요소",
+    "mnemonic": "커피활패스컨풀푸드",
     "keywords": [
      "커널",
-     "Feature Map",
+     "피처맵(Feature Map)",
      "활성화함수",
      "패딩",
-     "Stride",
-     "Pooling Layer",
-     "Drop out"
+     "스트라이드(Stride)",
+     "컨볼루션 계층",
+     "풀링 계층",
+     "푸리커넥티드(FC) 계층",
+     "드롭아웃"
     ]
    }
   ],
-  "mnemonic": "커F활패SPD",
+  "mnemonic": "원컨풀컨풀전",
   "keywords": [
-   "커널",
-   "Feature Map",
-   "활성화함수",
-   "패딩",
-   "Stride",
-   "Pooling Layer",
-   "Drop out"
+   "원본 이미지",
+   "컨볼루션",
+   "풀링",
+   "컨볼루션(2차)",
+   "풀링(2차)",
+   "전체연결(FC)"
+  ]
+ },
+ {
+  "id": "ai-35",
+  "title": "RNN",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "신경망 연결에 순환구조를 넣은것, RNN(Recurrent Neural Networks)의 개념",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "순시은다",
+    "keywords": [
+     "순환구조",
+     "시퀀스 적용(음성·언어)",
+     "은닉노드 값 저장",
+     "다음 학습에 재사용"
+    ]
+   }
+  ],
+  "mnemonic": "순시은다",
+  "keywords": [
+   "순환구조",
+   "시퀀스 적용(음성·언어)",
+   "은닉노드 값 저장",
+   "다음 학습에 재사용"
+  ]
+ },
+ {
+  "id": "ai-38",
+  "title": "서포트 벡터 머신",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "기계 학습의 분야 중 하나로 패턴 인식, 자료 분석을 위한 지도 학습 모델이며, 주로 분류와 회귀 분석(하나나 그 이상의 독립변수의 종속변수에 대한 영향의 추정을 할 수 있는 통계",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "마초서분",
+    "keywords": [
+     "마진(Margin)",
+     "초평면(Hyperplane)",
+     "서포트 벡터",
+     "분류·회귀분석"
+    ]
+   }
+  ],
+  "mnemonic": "마초서분",
+  "keywords": [
+   "마진(Margin)",
+   "초평면(Hyperplane)",
+   "서포트 벡터",
+   "분류·회귀분석"
+  ]
+ },
+ {
+  "id": "ai-39",
+  "title": "KNN",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "KNN(K-Nearest Neighbor)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "K거다K",
+    "keywords": [
+     "K개 이웃 선택",
+     "거리 계산",
+     "다수결 분류",
+     "K값 민감"
+    ]
+   }
+  ],
+  "mnemonic": "K거다K",
+  "keywords": [
+   "K개 이웃 선택",
+   "거리 계산",
+   "다수결 분류",
+   "K값 민감"
   ]
  },
  {
@@ -24589,6 +25321,32 @@
   ]
  },
  {
+  "id": "ai-50",
+  "title": "GAN (Generative",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "생성자(Generator)와 판별자(Discriminator)가 서로 경쟁하는 과정을 통해 정보를 학 습하는 대표적 비지도학습",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "생판경D",
+    "keywords": [
+     "생성자(Generator)",
+     "판별자(Discriminator)",
+     "경쟁 학습",
+     "DCGAN"
+    ]
+   }
+  ],
+  "mnemonic": "생판경D",
+  "keywords": [
+   "생성자(Generator)",
+   "판별자(Discriminator)",
+   "경쟁 학습",
+   "DCGAN"
+  ]
+ },
+ {
   "id": "ai-55",
   "title": "몬테카를로 트리 탐색(MCTS)",
   "category": "인공지능",
@@ -24605,6 +25363,118 @@
   "keywords": []
  },
  {
+  "id": "ai-58",
+  "title": "Optimization Algorithm",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "최적화 알고리즘 정의",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "경S모RAA",
+    "keywords": [
+     "경사하강법",
+     "SGD",
+     "모멘텀",
+     "RMSProp",
+     "Adam",
+     "AdamW"
+    ]
+   }
+  ],
+  "mnemonic": "경S모RAA",
+  "keywords": [
+   "경사하강법",
+   "SGD",
+   "모멘텀",
+   "RMSProp",
+   "Adam",
+   "AdamW"
+  ]
+ },
+ {
+  "id": "ai-66",
+  "title": "인공지능(AI) 모델의 성능평가",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "인공지능(AI) 모델이 학습한 결과에 대해서 주어진 문제를 얼마나 정확하고 신뢰성 있게 해",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "정정재FR혼",
+    "keywords": [
+     "정확도",
+     "정밀도",
+     "재현율",
+     "F1 Score",
+     "ROC-AUC",
+     "혼동행렬"
+    ]
+   }
+  ],
+  "mnemonic": "정정재FR혼",
+  "keywords": [
+   "정확도",
+   "정밀도",
+   "재현율",
+   "F1 Score",
+   "ROC-AUC",
+   "혼동행렬"
+  ]
+ },
+ {
+  "id": "ai-67",
+  "title": "교차검증",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "모델 평가 방법 중 하나로 훈련 데이터와 검증 데이터를 분리하여 훈련 데이터에 대해 학습한 모델의 정확도를 검증 데이터로 평가하는 기법.",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "KSLH",
+    "keywords": [
+     "K-Fold",
+     "Stratified K-Fold",
+     "LOOCV",
+     "Hold-out"
+    ]
+   }
+  ],
+  "mnemonic": "KSLH",
+  "keywords": [
+   "K-Fold",
+   "Stratified K-Fold",
+   "LOOCV",
+   "Hold-out"
+  ]
+ },
+ {
+  "id": "ai-68",
+  "title": "혼동 행렬",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "혼동 행렬 (Confusion matrix)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "TFFT",
+    "keywords": [
+     "TP(진양성)",
+     "FP(위양성)",
+     "FN(위음성)",
+     "TN(진음성)"
+    ]
+   }
+  ],
+  "mnemonic": "TFFT",
+  "keywords": [
+   "TP(진양성)",
+   "FP(위양성)",
+   "FN(위음성)",
+   "TN(진음성)"
+  ]
+ },
+ {
   "id": "ai-69",
   "title": "정밀도(Precision)",
   "category": "인공지능",
@@ -24612,13 +25482,21 @@
   "definition": "F1 Score에서 정밀도(Precision), 재현율(Recall)",
   "sections": [
    {
-    "label": "두음",
+    "label": "암기법",
     "mnemonic": "정예실",
-    "keywords": []
+    "keywords": [
+     "정밀도는",
+     "예측한 것 중",
+     "실제 맞춘 비율"
+    ]
    }
   ],
   "mnemonic": "정예실",
-  "keywords": []
+  "keywords": [
+   "정밀도는",
+   "예측한 것 중",
+   "실제 맞춘 비율"
+  ]
  },
  {
   "id": "ai-70",
@@ -24628,13 +25506,21 @@
   "definition": "정보 검색 분야에서 재현율(recall)은 관련 있는 문서들 중 실제로 검색된 문서들의 비율",
   "sections": [
    {
-    "label": "두음",
+    "label": "암기법",
     "mnemonic": "재정맞",
-    "keywords": []
+    "keywords": [
+     "재현율은",
+     "정답 중에서",
+     "맞춘 비율"
+    ]
    }
   ],
   "mnemonic": "재정맞",
-  "keywords": []
+  "keywords": [
+   "재현율은",
+   "정답 중에서",
+   "맞춘 비율"
+  ]
  },
  {
   "id": "ai-73",
@@ -24680,6 +25566,146 @@
    "파일럿 테스트",
    "벤치마크",
    "모델 공유"
+  ]
+ },
+ {
+  "id": "ai-78",
+  "title": "인공지능 신뢰성",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "인공지능이 내포한 위험과 기술적 한계를 해결하고, 활용･확산 과정에서의",
+  "sections": [
+   {
+    "label": "특성 구분",
+    "mnemonic": "기활",
+    "keywords": [
+     "기술적",
+     "활용적"
+    ]
+   },
+   {
+    "label": "기술적 위험",
+    "mnemonic": "편차휴악취",
+    "keywords": [
+     "편향(학습데이터)",
+     "차별(알고리즘)",
+     "휴먼 에러",
+     "악의적 의도",
+     "취약점"
+    ]
+   },
+   {
+    "label": "활용적 위험",
+    "mnemonic": "오침무혼사",
+    "keywords": [
+     "오남용(기술)",
+     "침해(사생활·개인정보)",
+     "무분별 정보수집",
+     "혼란(사회적)",
+     "사고(안전)"
+    ]
+   },
+   {
+    "label": "목표",
+    "mnemonic": "책신사",
+    "keywords": [
+     "책임있는 AI 활용",
+     "신뢰있는 사회",
+     "안전한 사이버국가"
+    ]
+   },
+   {
+    "label": "추진전략",
+    "mnemonic": "환기확",
+    "keywords": [
+     "환경 조성",
+     "기반 마련",
+     "의식 확산"
+    ]
+   },
+   {
+    "label": "환경조성",
+    "mnemonic": "체민원",
+    "keywords": [
+     "체계 마련(제품·서비스 신뢰)",
+     "민간 지원",
+     "원천기술 개발"
+    ]
+   },
+   {
+    "label": "기반마련",
+    "mnemonic": "학고영제",
+    "keywords": [
+     "학습데이터 신뢰성 제고",
+     "고위험 AI 신뢰 확보",
+     "영향평가 추진",
+     "제도 개선"
+    ]
+   },
+   {
+    "label": "의식확산",
+    "mnemonic": "교주플",
+    "keywords": [
+     "교육 강화(윤리)",
+     "주체별 체크리스트",
+     "플랫폼 운영(윤리정책)"
+    ]
+   }
+  ],
+  "mnemonic": "기활",
+  "keywords": [
+   "기술적",
+   "활용적"
+  ]
+ },
+ {
+  "id": "ai-79",
+  "title": "AI 신뢰성 인증제도 (Certification of AI Trustworthiness,",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "AI 신뢰성 확보를 위한 사회기술적 요건을 중심으로 기업 내부의 AI 거버넌스 및 주요 신뢰성 특성에 대한 검증 , 확인 활동을 인증하는 제도",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "거신검",
+    "keywords": [
+     "거버넌스 검증",
+     "신뢰성 특성 확인",
+     "검증·확인 활동"
+    ]
+   }
+  ],
+  "mnemonic": "거신검",
+  "keywords": [
+   "거버넌스 검증",
+   "신뢰성 특성 확인",
+   "검증·확인 활동"
+  ]
+ },
+ {
+  "id": "ai-89",
+  "title": "LLM",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "초거대 언어모델, GPT-3.5, GPT-4, 지도학습, 강화학습, RLHF(Reinforcement Learning from Human Feedback) 알고리즘, 대형 언어 모",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "GR지강",
+    "keywords": [
+     "GPT-3.5/GPT-4",
+     "RLHF",
+     "지도학습",
+     "강화학습"
+    ]
+   }
+  ],
+  "mnemonic": "GR지강",
+  "keywords": [
+   "GPT-3.5/GPT-4",
+   "RLHF",
+   "지도학습",
+   "강화학습"
   ]
  },
  {
@@ -24806,20 +25832,60 @@
   "definition": "저장 데이터를 직접 공유하지 않는 다수의 로컬 기기와 하나의 중앙 서버가 협력하여 AI 모델을 학습하는 분산형 머신 러닝(Machine Learning)",
   "sections": [
    {
-    "label": "핵심 키워드",
+    "label": "연합 알고리즘",
     "mnemonic": "알SA",
     "keywords": [
+     "알고리즘(연합학습)",
      "FedSGD",
-     "연합학습 알고리즘",
-     "프라이버시 보호 기술"
+     "FedAVG"
+    ]
+   },
+   {
+    "label": "프라이버시 보호기술",
+    "mnemonic": "프자동다",
+    "keywords": [
+     "프라이버시 보호",
+     "차등정보보호",
+     "동형암호",
+     "다자간 계산"
     ]
    }
   ],
   "mnemonic": "알SA",
   "keywords": [
+   "알고리즘(연합학습)",
    "FedSGD",
-   "연합학습 알고리즘",
-   "프라이버시 보호 기술"
+   "FedAVG"
+  ]
+ },
+ {
+  "id": "ai-130",
+  "title": "SNN(Spiking Neural Networks)",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "두뇌에서 실제로 정보가 전달되고 가공되는 과정을 모사하여, 뇌를 구성하는 뉴런과 시냅스로 이루어진 신경망 구성 방식으로 인공지능을 구현하는 기술 - 시간에 따라, 전기적 신호 강도",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "ISWNOS",
+    "keywords": [
+     "Input Spike",
+     "Synapse",
+     "Weight",
+     "Neuron",
+     "Output Spike",
+     "STDP 모델"
+    ]
+   }
+  ],
+  "mnemonic": "ISWNOS",
+  "keywords": [
+   "Input Spike",
+   "Synapse",
+   "Weight",
+   "Neuron",
+   "Output Spike",
+   "STDP 모델"
   ]
  },
  {
@@ -24877,6 +25943,84 @@
   ]
  },
  {
+  "id": "ai-134",
+  "title": "온디바이스 AI(Artificial Intelligence)",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "정의) - 멀리 떨어진 클라우드 서버를 거치지 않고 스마트기기 자체적으로 정보를 수집(small data)하고, 빠른 서비스,강화된 정보보안, 에너지절감, 연산할 수 있는 AI 기",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "빠강에자",
+    "keywords": [
+     "빠른 서비스",
+     "강화된 정보보안",
+     "에너지 절감",
+     "자체 연산"
+    ]
+   }
+  ],
+  "mnemonic": "빠강에자",
+  "keywords": [
+   "빠른 서비스",
+   "강화된 정보보안",
+   "에너지 절감",
+   "자체 연산"
+  ]
+ },
+ {
+  "id": "ai-137",
+  "title": "MLOps(모델옵스)",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "데이터 관리 및 ML 시스템 개발과 서비스 운영(Operations)을 통합해 안정적으로 상품·서비스를 출시할 수 있도록 신속·유연한 개발을 추구하는 협업 방식 - 개발, 통합, ",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "개출인재모",
+    "keywords": [
+     "개발·통합·테스트",
+     "출시·배포",
+     "인프라 관리",
+     "재학습 자동화",
+     "모니터링"
+    ]
+   }
+  ],
+  "mnemonic": "개출인재모",
+  "keywords": [
+   "개발·통합·테스트",
+   "출시·배포",
+   "인프라 관리",
+   "재학습 자동화",
+   "모니터링"
+  ]
+ },
+ {
+  "id": "ai-144",
+  "title": "편향(biased)",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "머신러닝과 인공지능에서 biased 결과 이유",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "편가알",
+    "keywords": [
+     "편향된 데이터 학습",
+     "가공 과정의 문제",
+     "알고리즘 모델 문제"
+    ]
+   }
+  ],
+  "mnemonic": "편가알",
+  "keywords": [
+   "편향된 데이터 학습",
+   "가공 과정의 문제",
+   "알고리즘 모델 문제"
+  ]
+ },
+ {
   "id": "ai-145",
   "title": "AI 윤리",
   "category": "인공지능",
@@ -24884,13 +26028,37 @@
   "definition": "자율주행차, 로드어드바이저, 로봇, 지능형 개인비서 기기 등을 연구 개발하는",
   "sections": [
    {
-    "label": "두음",
+    "label": "3대 기본원칙",
     "mnemonic": "인사기",
-    "keywords": []
+    "keywords": [
+     "인간 존엄성",
+     "사회의 공공선",
+     "기술의 합목적성"
+    ]
+   },
+   {
+    "label": "10대 핵심요건",
+    "mnemonic": "인프다침공연데책안투",
+    "keywords": [
+     "인권 보장",
+     "프라이버시 보호",
+     "다양성 존중",
+     "침해 금지",
+     "공공성",
+     "연대성",
+     "데이터 관리",
+     "책임성",
+     "안전성",
+     "투명성"
+    ]
    }
   ],
   "mnemonic": "인사기",
-  "keywords": []
+  "keywords": [
+   "인간 존엄성",
+   "사회의 공공선",
+   "기술의 합목적성"
+  ]
  },
  {
   "id": "ai-147",
@@ -24907,6 +26075,32 @@
   ],
   "mnemonic": "식분평대",
   "keywords": []
+ },
+ {
+  "id": "ai-148",
+  "title": "머신러닝 학습과정에서의 적대적 공격",
+  "category": "인공지능",
+  "importance": "상",
+  "definition": "2. 머신러닝 보안 취약점에 대하여 설명하시오.",
+  "sections": [
+   {
+    "label": "적대적 공격 4",
+    "mnemonic": "중회추전",
+    "keywords": [
+     "중독(Poisoning) — 학습데이터 오염",
+     "회피(Evasion) — 입력 교란",
+     "추출(Extraction) — 모델 탈취",
+     "전도(Inversion) — 학습데이터 복원"
+    ]
+   }
+  ],
+  "mnemonic": "중회추전",
+  "keywords": [
+   "중독(Poisoning) — 학습데이터 오염",
+   "회피(Evasion) — 입력 교란",
+   "추출(Extraction) — 모델 탈취",
+   "전도(Inversion) — 학습데이터 복원"
+  ]
  },
  {
   "id": "ai-155",
