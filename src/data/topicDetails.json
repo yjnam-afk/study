@@ -24291,17 +24291,69 @@
     ]
   },
   "net-44": {
-    "detail": "두 시스템 사이에서 오류 없이 프레임을 전송하는 OSI 2계층.",
-    "related": "오류 검사(제어), 프레임 단위, 체크섬 계산\n 패리티 검사(Parity Check)",
-    "defKeywords": [],
-    "featureKeywords": [
-      "FEC",
-      "BEC"
+    "detail": "[정의] OSI 2계층 — 상위 계층의 비트열로 프레임을 구성해 두 시스템 간 오류 없이 전송하는 계층.\n[역할] 오류제어, 흐름제어, 접근제어, 주소지정, 정보전달\n[오류제어] FEC(해밍·R-S·콘볼루션·터보) / BEC 탐지(CRC·패리티·체크섬·블록섬) + 재전송(ARQ 5종)\n[흐름제어] Sliding Window  [회선제어] 경쟁·폴링·인터럽트·토큰, ENQ/ACK(1:1)·Polling(Select/Poll)\n[프로토콜] MAC, PPP, LLC  [표준] IEEE 802.11(토큰·링·버스), 802.3(Ethernet)  [장비] Bridge, L2 Switch",
+    "related": "OSI 7 Layers / Network(3) / MAC / Sliding Window",
+    "defKeywords": [
+      "OSI 2계층",
+      "프레임 구성",
+      "무오류 전송",
+      "MAC·LLC"
     ],
-    "applicationKeywords": [],
+    "featureKeywords": [
+      "오류제어",
+      "흐름제어",
+      "회선제어"
+    ],
+    "applicationKeywords": [
+      "Sliding Window",
+      "L2 Switch",
+      "Bridge"
+    ],
     "plusKeywords": [],
-    "mnemonic": "오름회",
-    "memo": "오름회 \n해리코텉\n스고셀아합\n경폴인토 EA P"
+    "mnemonic": "오름회 / 해리코터 / 스고셀아합 / 경폴인토",
+    "memo": "오름회 (오류·흐름·회선제어)\n해리코터 (해밍·리드솔로몬·콘볼루션·터보 — FEC / 교재 표기: 해리코텉, 블럭=해밍·R-S, 넌블럭=콘볼루션·터보)\n스고셀아합 (Stop&Wait·GoBackN·Selective·Adaptive·Hybrid ARQ — BEC 재전송)\n경폴인토 (경쟁·폴링·인터럽트·토큰) + ENQ/ACK(1:1 링크), Polling(Select=수신자 선택·Poll=수신 응답 확인)\nBEC 탐지: CRC·패리티·체크섬·블록섬 / 흐름제어: Sliding Window\n[기출] 138회 관리 4교시",
+    "sections": [
+      {
+        "label": "핵심 기능 3",
+        "mnemonic": "오름회",
+        "keywords": [
+          "오류제어",
+          "흐름제어",
+          "회선제어"
+        ]
+      },
+      {
+        "label": "FEC 코드",
+        "mnemonic": "해리코터",
+        "keywords": [
+          "해밍 코드",
+          "리드솔로몬(R-S)",
+          "콘볼루션 코드",
+          "터보 코드"
+        ]
+      },
+      {
+        "label": "재전송 ARQ 5",
+        "mnemonic": "스고셀아합",
+        "keywords": [
+          "Stop & Wait ARQ",
+          "Go-Back-N ARQ",
+          "Selective ARQ",
+          "Adaptive ARQ",
+          "Hybrid ARQ"
+        ]
+      },
+      {
+        "label": "회선제어 방식",
+        "mnemonic": "경폴인토",
+        "keywords": [
+          "경쟁 방식",
+          "폴링 방식",
+          "인터럽트 방식",
+          "토큰 방식"
+        ]
+      }
+    ]
   },
   "net-45": {
     "detail": "[정의] OSI 계층을 타고 내려온 데이터를 전기적 신호로 변환시켜 통신하는 계층 ( Encoding, Decoding 수행)\n[프로토콜] EIA/TIA-232, EIA-449, V.35, 10Base-2, 10Base-5, 10Base-T\n[토폴리지] star, bus, ring, tree, mesh\n[장비] 허브, 리피터",
