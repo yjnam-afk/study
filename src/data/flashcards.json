@@ -16354,6 +16354,32 @@
   "keywords": []
  },
  {
+  "id": "net-79",
+  "title": "V2V(Vehicle to Vehicle)",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "V2V(Vehicle to Vehicle)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "WL충군",
+    "keywords": [
+     "WAVE",
+     "LTE-V2X",
+     "충돌 경고",
+     "군집주행"
+    ]
+   }
+  ],
+  "mnemonic": "WL충군",
+  "keywords": [
+   "WAVE",
+   "LTE-V2X",
+   "충돌 경고",
+   "군집주행"
+  ]
+ },
+ {
   "id": "net-82",
   "title": "V2X",
   "category": "네트워크",
@@ -16361,22 +16387,24 @@
   "definition": "차량간에 유무선망을 통해 다른 차량 및 도로등 인프라가 구축된 사물과 정보를 교환하는 기술, C-ITS에서의 ‘Connected/Networked Vehicle(Car)’를 구현하",
   "sections": [
    {
-    "label": "기술",
-    "mnemonic": "VCGV",
+    "label": "종류 5",
+    "mnemonic": "IVNP내",
     "keywords": [
-     "V2V-WAVE",
-     "C-V2X",
-     "G-V2X",
-     "VMC"
+     "V2I(ISO TC204 CALM)",
+     "V2V(WAVE·LTE-V2X)",
+     "V2N(ISO WG17)",
+     "V2P(LTE·5G·GPS)",
+     "IVN(CAN·FlexRay·LIN·MOST)"
     ]
    }
   ],
-  "mnemonic": "VCGV",
+  "mnemonic": "IVNP내",
   "keywords": [
-   "V2V-WAVE",
-   "C-V2X",
-   "G-V2X",
-   "VMC"
+   "V2I(ISO TC204 CALM)",
+   "V2V(WAVE·LTE-V2X)",
+   "V2N(ISO WG17)",
+   "V2P(LTE·5G·GPS)",
+   "IVN(CAN·FlexRay·LIN·MOST)"
   ]
  },
  {
@@ -16387,24 +16415,24 @@
   "definition": "ITS전용 근거리 무선통신방식",
   "sections": [
    {
-    "label": "스펙",
+    "label": "핵심 키워드",
     "mnemonic": "G변mM:",
     "keywords": [
-     "Ghz",
-     "변복조",
-     "m이내",
-     "Mbps",
-     ":M통신가능"
+     "5.9GHz 대역",
+     "ASK 변복조",
+     "100m 이내",
+     "1Mbps",
+     "1:M 통신"
     ]
    }
   ],
   "mnemonic": "G변mM:",
   "keywords": [
-   "Ghz",
-   "변복조",
-   "m이내",
-   "Mbps",
-   ":M통신가능"
+   "5.9GHz 대역",
+   "ASK 변복조",
+   "100m 이내",
+   "1Mbps",
+   "1:M 통신"
   ]
  },
  {
@@ -16415,18 +16443,24 @@
   "definition": "IEEE 802.11p, IEEE 1609기반의 차량환경용 무선통신기술",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "PW",
+    "label": "표준 스택",
+    "mnemonic": "p1234",
     "keywords": [
-     "PHY",
-     "WAVE 통신스택 하위계층"
+     "802.11p(PHY·MAC)",
+     "1609.1(리소스 관리)",
+     "1609.2(보안 통신)",
+     "1609.3(NW·전송 서비스)",
+     "1609.4(멀티채널)"
     ]
    }
   ],
-  "mnemonic": "PW",
+  "mnemonic": "p1234",
   "keywords": [
-   "PHY",
-   "WAVE 통신스택 하위계층"
+   "802.11p(PHY·MAC)",
+   "1609.1(리소스 관리)",
+   "1609.2(보안 통신)",
+   "1609.3(NW·전송 서비스)",
+   "1609.4(멀티채널)"
   ]
  },
  {
@@ -16451,6 +16485,32 @@
    "효율성",
    "보안성",
    "안전성"
+  ]
+ },
+ {
+  "id": "net-87",
+  "title": "Wireless LAN",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "IEEE 802.11, SSID, WEP",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "SWAC",
+    "keywords": [
+     "SSID",
+     "WEP/WPA",
+     "AP 로밍",
+     "CSMA/CA"
+    ]
+   }
+  ],
+  "mnemonic": "SWAC",
+  "keywords": [
+   "SSID",
+   "WEP/WPA",
+   "AP 로밍",
+   "CSMA/CA"
   ]
  },
  {
@@ -16483,40 +16543,103 @@
   "definition": "Wi-Fi 6 보다 3배 빠르고 초 실감 미디어 컨텐츠를 안정적으로 전송하는",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "5초저콘AbMP속최최지표",
+    "label": "성능목표",
+    "mnemonic": "주변속대하표멀",
     "keywords": [
-     "5G 음영지역 해소",
-     "초고속",
-     "저지연",
-     "콘텐츠 전송  지원",
-     "AP 간 다중협력 통신",
-     "be/ax",
-     "MAC",
-     "PHY",
-     "속대주표",
-     "최대속도",
-     "최대 대역폭",
-     "지원주파수",
-     "표준"
+     "주파수(2.4/5/6GHz)",
+     "변조(4096-QAM)",
+     "속도(최대 30Gbps)",
+     "대역폭(320MHz)",
+     "하위호환(802.11)",
+     "표준명(11be·EHT)",
+     "멀티플렉싱(Full Duplex)"
+    ]
+   },
+   {
+    "label": "기술요소",
+    "mnemonic": "에하빔쾀미",
+    "keywords": [
+     "에이피 다중협력(MAC)",
+     "H-ARQ",
+     "빔포밍(혼합)",
+     "쾀(4096-QAM)",
+     "미모(16×16 MIMO)"
+    ]
+   },
+   {
+    "label": "WiFi7 vs 6 비교",
+    "mnemonic": "속대주표",
+    "keywords": [
+     "속도(30/9.6Gbps)",
+     "대역폭(320/160MHz)",
+     "주파수(6GHz 지원)",
+     "표준(be/ax)"
     ]
    }
   ],
-  "mnemonic": "5초저콘AbMP속최최지표",
+  "mnemonic": "주변속대하표멀",
   "keywords": [
-   "5G 음영지역 해소",
-   "초고속",
-   "저지연",
-   "콘텐츠 전송  지원",
-   "AP 간 다중협력 통신",
-   "be/ax",
-   "MAC",
-   "PHY",
-   "속대주표",
-   "최대속도",
-   "최대 대역폭",
-   "지원주파수",
-   "표준"
+   "주파수(2.4/5/6GHz)",
+   "변조(4096-QAM)",
+   "속도(최대 30Gbps)",
+   "대역폭(320MHz)",
+   "하위호환(802.11)",
+   "표준명(11be·EHT)",
+   "멀티플렉싱(Full Duplex)"
+  ]
+ },
+ {
+  "id": "net-98",
+  "title": "IEEE 802.11bn",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "향상된 효율성을 핵심목표로 UHR(Ultra High Reliability, 극도 높은 신뢰성)을 제공하는 차세대 Wi-Fi 표준/대역폭(2.4GHz, 5GHz, 6GHz), 최대",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "2최신",
+    "keywords": [
+     "2.4/5/6GHz",
+     "최대 100Gbps",
+     "신뢰성 중심"
+    ]
+   }
+  ],
+  "mnemonic": "2최신",
+  "keywords": [
+   "2.4/5/6GHz",
+   "최대 100Gbps",
+   "신뢰성 중심"
+  ]
+ },
+ {
+  "id": "net-102",
+  "title": "실내/외 위치 측위 기술",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "1. 실내: Wi-Fi AP 이용한 측위 기술, BLE, UWB 적용",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "WBUGSL",
+    "keywords": [
+     "Wi-Fi AP",
+     "BLE",
+     "UWB",
+     "GPS·A-GPS",
+     "SBAS",
+     "LPWA"
+    ]
+   }
+  ],
+  "mnemonic": "WBUGSL",
+  "keywords": [
+   "Wi-Fi AP",
+   "BLE",
+   "UWB",
+   "GPS·A-GPS",
+   "SBAS",
+   "LPWA"
   ]
  },
  {
@@ -16545,6 +16668,32 @@
    "운행관리",
    "원격감시",
    "배송관리"
+  ]
+ },
+ {
+  "id": "net-104",
+  "title": "IoT",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "IoT(Internet of Things)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "센네서보",
+    "keywords": [
+     "센싱",
+     "네트워크",
+     "서비스 인터페이스",
+     "보안"
+    ]
+   }
+  ],
+  "mnemonic": "센네서보",
+  "keywords": [
+   "센싱",
+   "네트워크",
+   "서비스 인터페이스",
+   "보안"
   ]
  },
  {
@@ -16737,6 +16886,36 @@
   ]
  },
  {
+  "id": "net-123",
+  "title": "IPv6 / All IP",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "전환 유형, 보안 이슈 등 잘 정리!!",
+  "sections": [
+   {
+    "label": "헤더 구조",
+    "mnemonic": "버터플파네호",
+    "keywords": [
+     "버전(Version)",
+     "터래픽 클래스",
+     "플로우 라벨",
+     "파이로드 길이",
+     "넥스트 헤더",
+     "호프 리밋"
+    ]
+   }
+  ],
+  "mnemonic": "버터플파네호",
+  "keywords": [
+   "버전(Version)",
+   "터래픽 클래스",
+   "플로우 라벨",
+   "파이로드 길이",
+   "넥스트 헤더",
+   "호프 리밋"
+  ]
+ },
+ {
   "id": "net-130",
   "title": "QoS /Queue 관리분류",
   "category": "네트워크",
@@ -16761,6 +16940,16 @@
      "DiffServ",
      "IntServ(보장형)"
     ]
+   },
+   {
+    "label": "큐잉 기법",
+    "mnemonic": "FPCW",
+    "keywords": [
+     "FIFO",
+     "PQ(Priority)",
+     "CBQ(Class-Based)",
+     "WFQ(Weighted Fair)"
+    ]
    }
   ],
   "mnemonic": "대지패지",
@@ -16779,13 +16968,21 @@
   "definition": "미리 정해진 기준 이상을 초과하는 트래픽은 버림으로써 트래픽 대역폭(Bandwidth)을 제한(limitation)하는 QoS 기술",
   "sections": [
    {
-    "label": "두음",
+    "label": "동작 3단계",
     "mnemonic": "미드마",
-    "keywords": []
+    "keywords": [
+     "미터(Meter·측정)",
+     "드롭(Drop·폐기)",
+     "마크(Mark·표시)"
+    ]
    }
   ],
   "mnemonic": "미드마",
-  "keywords": []
+  "keywords": [
+   "미터(Meter·측정)",
+   "드롭(Drop·폐기)",
+   "마크(Mark·표시)"
+  ]
  },
  {
   "id": "net-133",
@@ -16795,20 +16992,68 @@
   "definition": "- 트래픽 쉐이핑으로 대역폭을 제어하는 것 뿐 아니라, 전송률(rate)를 조절하여 패킷 끊김(jitter), 패킷 손실(loss), 반응시간(low latency) 등을 최적화.",
   "sections": [
    {
-    "label": "Shaping 파라미터",
+    "label": "구성요소",
     "mnemonic": "CCE",
     "keywords": [
-     "CIR",
-     "CBS",
-     "EBS"
+     "CBS(허용 버스트 Bc)",
+     "CIR(허용 정보율)",
+     "EBS(초과 버스트 Be)"
     ]
    }
   ],
   "mnemonic": "CCE",
   "keywords": [
-   "CIR",
-   "CBS",
-   "EBS"
+   "CBS(허용 버스트 Bc)",
+   "CIR(허용 정보율)",
+   "EBS(초과 버스트 Be)"
+  ]
+ },
+ {
+  "id": "net-134",
+  "title": "사전 패킷 폐기",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "1) RED(Random Early Detection)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "RW",
+    "keywords": [
+     "RED",
+     "WRED"
+    ]
+   }
+  ],
+  "mnemonic": "RW",
+  "keywords": [
+   "RED",
+   "WRED"
+  ]
+ },
+ {
+  "id": "net-135",
+  "title": "혼잡 제어",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "송신측에서 송신 데이터에 대한 Ack 수신 여부를 기반으로 네트워크 상황을 판단하여 송신 데이터의 크기를 조절하여 네트워크의 혼잡상황에 대해 조절하는 기술",
+  "sections": [
+   {
+    "label": "4대 알고리즘",
+    "mnemonic": "슬혼빠빠",
+    "keywords": [
+     "슬로우 스타트",
+     "혼잡 회피",
+     "빠른 재전송",
+     "빠른 회복"
+    ]
+   }
+  ],
+  "mnemonic": "슬혼빠빠",
+  "keywords": [
+   "슬로우 스타트",
+   "혼잡 회피",
+   "빠른 재전송",
+   "빠른 회복"
   ]
  },
  {
@@ -16861,6 +17106,56 @@
    "품질 관리방법",
    "MoS",
    "PExQ"
+  ]
+ },
+ {
+  "id": "net-143",
+  "title": "블루투스(Bluetooth 4.0)",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "1994년 최초개발. 2.4~2.485 대역폭, IEEE 802.15.1",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "3418",
+    "keywords": [
+     "3.0 High Speed",
+     "4.0 LE",
+     "100m/10m",
+     "802.11 PAL"
+    ]
+   }
+  ],
+  "mnemonic": "3418",
+  "keywords": [
+   "3.0 High Speed",
+   "4.0 LE",
+   "100m/10m",
+   "802.11 PAL"
+  ]
+ },
+ {
+  "id": "net-149",
+  "title": "NFC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "모바일 기기에 장착하여 13.56Mhz 주파수를 이용해 양방향 통신이 가능하고, RFID와 스마트 기능을 통합하여 다양한 비즈니스 모델이 가능한 근거리 무선통신 기술 ISO/IEC",
+  "sections": [
+   {
+    "label": "동작 모드 3",
+    "mnemonic": "카리피",
+    "keywords": [
+     "카드 에뮬레이션",
+     "리드/라이트",
+     "피어투피어"
+    ]
+   }
+  ],
+  "mnemonic": "카리피",
+  "keywords": [
+   "카드 에뮬레이션",
+   "리드/라이트",
+   "피어투피어"
   ]
  },
  {
@@ -16948,6 +17243,32 @@
   ]
  },
  {
+  "id": "net-181",
+  "title": "국가재난안전통신망",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "컴시응, 104회 3교시 참조",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "P단우생",
+    "keywords": [
+     "PS-LTE",
+     "단말 간 직접통신",
+     "우선순위 보장",
+     "생존성"
+    ]
+   }
+  ],
+  "mnemonic": "P단우생",
+  "keywords": [
+   "PS-LTE",
+   "단말 간 직접통신",
+   "우선순위 보장",
+   "생존성"
+  ]
+ },
+ {
   "id": "net-185",
   "title": "5G(IMT-2020) 주요 기술",
   "category": "네트워크",
@@ -16955,13 +17276,99 @@
   "definition": "- 4G 대비 10배이상 향상된 초고속, 초고용량, 초저지연, 초연결 네트워크 기술로 다양한 디지털 디바이스를 수용하고 Real 2D 입체 영상 서비스 기술구현을 목표로 한 차세대",
   "sections": [
    {
-    "label": "두음",
-    "mnemonic": "전체주고지연에면",
-    "keywords": []
+    "label": "3대 서비스",
+    "mnemonic": "eum",
+    "keywords": [
+     "eMBB(초광대역)",
+     "URLLC(초저지연·고신뢰)",
+     "mMTC(초연결)"
+    ]
    }
   ],
-  "mnemonic": "전체주고지연에면",
-  "keywords": []
+  "mnemonic": "eum",
+  "keywords": [
+   "eMBB(초광대역)",
+   "URLLC(초저지연·고신뢰)",
+   "mMTC(초연결)"
+  ]
+ },
+ {
+  "id": "net-186",
+  "title": "Network Slicing",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "물리적으로 하나의 네트워크를 통해 Device, Access, Transport, Core를 포함하여 End-to-End로 논리적으로 분리된 네트워크를 만들어 서로 다른 특성을 갖",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "NVME",
+    "keywords": [
+     "NFVI",
+     "VNF",
+     "MANO",
+     "E2E 슬라이스"
+    ]
+   }
+  ],
+  "mnemonic": "NVME",
+  "keywords": [
+   "NFVI",
+   "VNF",
+   "MANO",
+   "E2E 슬라이스"
+  ]
+ },
+ {
+  "id": "net-188",
+  "title": "NR/NR-MIMO",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "NR(New Radio) 의 정의",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "NSmM",
+    "keywords": [
+     "NSA(LTE 코어+5G)",
+     "SA(5G 단독)",
+     "mmWave",
+     "Massive MIMO"
+    ]
+   }
+  ],
+  "mnemonic": "NSmM",
+  "keywords": [
+   "NSA(LTE 코어+5G)",
+   "SA(5G 단독)",
+   "mmWave",
+   "Massive MIMO"
+  ]
+ },
+ {
+  "id": "net-189",
+  "title": "Mobile Edge Computing",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "이동통신 기지국에 대용량 클라우드 기술을 적용하여 다양한 컨텐츠를 사용자와 가까운 위치에서 제공하여 모바일 코어망의 혼잡을 최소화하는 기술",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "엣근캐저",
+    "keywords": [
+     "엣지 노드",
+     "근접성",
+     "캐싱",
+     "저지연"
+    ]
+   }
+  ],
+  "mnemonic": "엣근캐저",
+  "keywords": [
+   "엣지 노드",
+   "근접성",
+   "캐싱",
+   "저지연"
+  ]
  },
  {
   "id": "net-190",
@@ -17041,29 +17448,29 @@
   "definition": "모든 네트워크 사업자와 정부는 인터넷을 통해 발생하는 데이터 트래픽을 동등하게 취급하고, 대상, 내용, 유형, 사용자, 플랫폼, 전송방식에 따른 어떠한 차별도 없이 동등하게 처리해",
   "sections": [
    {
-    "label": "특징",
+    "label": "3원칙",
     "mnemonic": "비상접",
     "keywords": [
-     "비차별성",
-     "상호접속",
-     "접근성"
+     "비차별성(no discrimination)",
+     "상호접속(interconnection)",
+     "접근성(accessibility)"
     ]
    },
    {
-    "label": "서비스",
+    "label": "예외 서비스",
     "mnemonic": "관네특",
     "keywords": [
      "관리형 서비스",
      "네트워크 슬라이싱",
-     "특수서비스"
+     "특수 서비스"
     ]
    }
   ],
   "mnemonic": "비상접",
   "keywords": [
-   "비차별성",
-   "상호접속",
-   "접근성"
+   "비차별성(no discrimination)",
+   "상호접속(interconnection)",
+   "접근성(accessibility)"
   ]
  },
  {
@@ -17090,28 +17497,44 @@
   "definition": "가. CDN (Contents Delivery Network) 정의 - 콘텐츠를 중간경로를 최소화, 효율적으로 전달하기 위해 ISP의 여러 노드(웹캐시)를 가진 네트워크에 데이터를",
   "sections": [
    {
-    "label": "키워드",
-    "mnemonic": "MCCIUPI",
+    "label": "핵심 키워드",
+    "mnemonic": "PGM캐",
     "keywords": [
-     "Middle Mile",
-     "CDN SP",
-     "CP",
-     "ISP",
-     "User",
      "POP",
-     "IX"
+     "GSLB",
+     "Middle Mile",
+     "캐싱"
     ]
    }
   ],
-  "mnemonic": "MCCIUPI",
+  "mnemonic": "PGM캐",
   "keywords": [
-   "Middle Mile",
-   "CDN SP",
-   "CP",
-   "ISP",
-   "User",
    "POP",
-   "IX"
+   "GSLB",
+   "Middle Mile",
+   "캐싱"
+  ]
+ },
+ {
+  "id": "net-204",
+  "title": "라우팅 프로토콜",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "패킷을 목적지에 전달하기 위해서 경로정보를 어느 노드에 전달 하는가를 각 노드가 판단할 수 있게 하고 그 정보에 따라서 패킷을 전달하게 하는 기능 RIP vs OSPF(Open S",
+  "sections": [
+   {
+    "label": "알고리즘 분류",
+    "mnemonic": "거링",
+    "keywords": [
+     "거리벡터(RIP·IGRP·BGP)",
+     "링크상태(OSPF·IS-IS)"
+    ]
+   }
+  ],
+  "mnemonic": "거링",
+  "keywords": [
+   "거리벡터(RIP·IGRP·BGP)",
+   "링크상태(OSPF·IS-IS)"
   ]
  },
  {
@@ -17145,6 +17568,32 @@
   ],
   "mnemonic": "내외부에",
   "keywords": []
+ },
+ {
+  "id": "net-209",
+  "title": "Distance Vector Algorithm",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "Distance Vector Algorithm의 정의 라우터가 목적지까지 가는 경로를 SPF(Shortest Path First) 알고리즘을 통해 모든 라우팅 테이블에 기록 (모든",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "RI홉수",
+    "keywords": [
+     "RIP",
+     "IGRP",
+     "홉 카운트",
+     "수렴 느림"
+    ]
+   }
+  ],
+  "mnemonic": "RI홉수",
+  "keywords": [
+   "RIP",
+   "IGRP",
+   "홉 카운트",
+   "수렴 느림"
+  ]
  },
  {
   "id": "net-210",
@@ -17203,6 +17652,108 @@
   ]
  },
  {
+  "id": "net-233",
+  "title": "SDN",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "SDN(Software Defined Networking) 개방형 API인 OpenFlow를 통해 네트워크의 트래픽 전달 동작을 프로그래밍하듯 SW기반으로 컨트롤러에서 제어하는 네",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "SO제데",
+    "keywords": [
+     "SDN 컨트롤러",
+     "OpenFlow",
+     "제어평면",
+     "데이터평면"
+    ]
+   }
+  ],
+  "mnemonic": "SO제데",
+  "keywords": [
+   "SDN 컨트롤러",
+   "OpenFlow",
+   "제어평면",
+   "데이터평면"
+  ]
+ },
+ {
+  "id": "net-234",
+  "title": "OpenFlow",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "네트워크 장비의 표준 인터페이스 기술, OpenFlow의 정의 SDN 환경에서 제어 계층과 데이터 계층 간의 통신 프로토콜로 컨트롤러와 하드웨어 장비 간의 통신내용을 정의하는 SD",
+  "sections": [
+   {
+    "label": "Flow Table 구성",
+    "mnemonic": "HAC",
+    "keywords": [
+     "Header(매칭 규칙)",
+     "Action(처리)",
+     "Counter(통계)"
+    ]
+   }
+  ],
+  "mnemonic": "HAC",
+  "keywords": [
+   "Header(매칭 규칙)",
+   "Action(처리)",
+   "Counter(통계)"
+  ]
+ },
+ {
+  "id": "net-237",
+  "title": "NFV",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "네트워크 기능 가상화",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "VNMO",
+    "keywords": [
+     "VNF",
+     "NFVI",
+     "MANO",
+     "OSS/BSS"
+    ]
+   }
+  ],
+  "mnemonic": "VNMO",
+  "keywords": [
+   "VNF",
+   "NFVI",
+   "MANO",
+   "OSS/BSS"
+  ]
+ },
+ {
+  "id": "net-239",
+  "title": "SDDC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "서버, 스토리지, 네트워킹, 보안, 관리 솔루션 등 데이터센터의 모든 구성요소를 가상화하고, 이러한 가상화 환경의 인프라를 소프트웨어로 자동 통제 및 관리하는 개념의 데이터센터. ",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "CSNF",
+    "keywords": [
+     "Compute(CPU·메모리)",
+     "Storage",
+     "Network",
+     "Facility"
+    ]
+   }
+  ],
+  "mnemonic": "CSNF",
+  "keywords": [
+   "Compute(CPU·메모리)",
+   "Storage",
+   "Network",
+   "Facility"
+  ]
+ },
+ {
   "id": "net-240",
   "title": "오버레이 네트워크",
   "category": "네트워크",
@@ -17246,6 +17797,54 @@
   "keywords": [
    "자기유도",
    "전자기파"
+  ]
+ },
+ {
+  "id": "net-245",
+  "title": "FEC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "Forward Error Correction, 전진오류수정, 무선에서 많이 사용",
+  "sections": [
+   {
+    "label": "부호 분류",
+    "mnemonic": "블넌",
+    "keywords": [
+     "블록(해밍·RS)",
+     "넌블록(길쌈·터보)"
+    ]
+   }
+  ],
+  "mnemonic": "블넌",
+  "keywords": [
+   "블록(해밍·RS)",
+   "넌블록(길쌈·터보)"
+  ]
+ },
+ {
+  "id": "net-246",
+  "title": "BEC",
+  "category": "네트워크",
+  "importance": "상",
+  "definition": "Backward Error Correction, 후진오류수정 정의",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "패C체재",
+    "keywords": [
+     "패리티",
+     "CRC",
+     "체크섬",
+     "재전송(ARQ)"
+    ]
+   }
+  ],
+  "mnemonic": "패C체재",
+  "keywords": [
+   "패리티",
+   "CRC",
+   "체크섬",
+   "재전송(ARQ)"
   ]
  },
  {
