@@ -24437,17 +24437,45 @@
     ]
   },
   "net-47": {
-    "detail": "[정의] 네트워크를 상호 연결시켜 정보를 전송할 수 있도록 하는 기능을 가진 다수의 프로토콜이 \n모여있는 4계층의 통신 프로토콜 집합\n[특징] 3-Way Handshake, Flow Control, 혼잡제어\n[전송절차] SYN -> SYN + ACK -> ACK\n[접속종료] FIN -> ACK -> FIN -> ACK",
-    "related": "Sliding Window 알고리즘, \n TCP의 Three-way Handshaking 절차 5계층 암기\nTCP 연결 초기화, TCP 연결 종료 절차, TCP Half open",
-    "defKeywords": [],
+    "detail": "[정의] 네트워크 상호 연결·정보 전송 기능의 프로토콜 집합 중 4계층 연결지향 프로토콜.\n[특징] 3-Way Handshake, Flow Control, 혼잡제어\n[연결설정] SYN → SYN+ACK → ACK  [종료] FIN → ACK → FIN → ACK",
+    "related": "UDP / Transport(4) / 오류제어 / 혼잡제어",
+    "defKeywords": [
+      "연결지향",
+      "신뢰성 보장",
+      "4계층",
+      "흐름·혼잡제어"
+    ],
     "featureKeywords": [
       "3-Way Handshake",
       "Flow Control",
-      "혼잡제어"
+      "혼잡제어",
+      "Sliding Window"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "SSA / FAFA",
+    "sections": [
+      {
+        "label": "연결 설정(3-way)",
+        "mnemonic": "SSA",
+        "keywords": [
+          "SYN",
+          "SYN+ACK",
+          "ACK"
+        ]
+      },
+      {
+        "label": "연결 종료(4-way)",
+        "mnemonic": "FAFA",
+        "keywords": [
+          "FIN",
+          "ACK",
+          "FIN",
+          "ACK"
+        ]
+      }
+    ],
+    "memo": "설정 SSA (SYN→SYN+ACK→ACK) / 종료 FAFA (FIN→ACK→FIN→ACK)\nTCP Half Open·Sliding Window 함께 정리"
   },
   "net-48": {
     "detail": "[정의] TCP Stream을 여러 개 묶어 하나의 Application에서 데이터를 송수신, 전송\n성능 향상을 위한 IETF의 TCP기반 표준 프로토콜\n[stack] TCP+IP-> MPTCP+여러 개(TCP Subflow+IP)\n[프로토콜 메시지] MP_CAPABLE(첫번째 MPTCP 연결설정), MP_JOIN(다중 경로\n연결 설정)\n[프로토콜스택] MPTCP(다중경로 TCP 제어계층), Subflow TCP(개별 경로에 대한\nTCP전송 계층), 개별 IP(다중 IP통한 multi-path지원)\n[proxy서버 기반 MPTCP지원 시스템] LTE, WiFi",
@@ -24492,7 +24520,7 @@
     "mnemonic": ""
   },
   "net-50": {
-    "detail": "송수신 데이터의 노이즈·지연·변형 등 장애로부터 오류 검출 및 세그먼트 재전송으로 신뢰성을 확보하는 기법.",
+    "detail": "송수신 데이터의 노이즈·지연·변형 등 통신장애로부터 오류 검출·세그먼트 재전송으로 신뢰성을 확보하는 시퀀스 기반 통신 기법.\n[제어] 훼손·손실·중복·순서 어긋남·확인응답 손실 세그먼트 제어\n[감지] 검사합, 확인응답, 시간초과",
     "related": "",
     "defKeywords": [
       "송수신 데이터의 노이즈",
@@ -24507,7 +24535,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "훼손중순확",
-    "memo": "훼손중순확 (훼손·손실·중복·순서·확인응답)",
+    "memo": "훼손중순확 (훼손·손실·중복·순서·확인응답 — 세그먼트 제어)\n[감지 3종] 검사합(손상 세그먼트 폐기)·확인응답(정상 수신 통보)·시간초과(카운터 만료 시 재전송)\n중복=재전송으로 발생(늦게 온 것 폐기) / 순서=IP 전달 특성으로 발생",
     "sections": [
       {
         "label": "오류정정 대상",
@@ -24537,29 +24565,36 @@
     "mnemonic": ""
   },
   "net-52": {
-    "detail": "[정의] 상위 계층에서 받은 데이터를 IP 프로토콜에 전달하지만 전송한 데이터가 \n목적지까지 제대로 도착했는지는 확인하지 않는 프로토콜\n[특징] 비연결형, 순서 유지하지 않음, 데이터 중복, 손실가능\n[헤더] UDP Header(8Byte), UDP Data\n> [UDP Header] Source Port, Destination Port, Length(Header+Data) Checksum, Application Data(Message)",
-    "related": "122회 기출",
-    "defKeywords": [],
+    "detail": "[정의] 상위 계층 데이터를 IP에 전달하되 목적지 도착을 확인하지 않는 비연결형 프로토콜.\n[특징] 비연결형, 순서 미유지, 중복·손실 가능\n[헤더 8B] Source Port, Destination Port, Length, Checksum",
+    "related": "TCP / RTP / DNS",
+    "defKeywords": [
+      "비연결형",
+      "도착 미확인",
+      "순서 미보장",
+      "저오버헤드"
+    ],
     "featureKeywords": [
       "비연결형",
-      "순서 유지하지 않음",
-      "데이터 중복",
-      "손실가능"
+      "순서 미유지",
+      "중복·손실 가능",
+      "8Byte 헤더"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "HD",
+    "mnemonic": "SDLC",
     "sections": [
       {
-        "label": "헤더",
-        "mnemonic": "HD",
+        "label": "헤더 구성(8B)",
+        "mnemonic": "SDLC",
         "keywords": [
-          "UDP Header",
-          "UDP Data"
+          "Source Port",
+          "Destination Port",
+          "Length",
+          "Checksum"
         ]
       }
     ],
-    "memo": "HD (UDP Header·UDP Data)"
+    "memo": "실시간(스트리밍·DNS·VoIP)에 유리 — 빠르지만 신뢰성 없음\n[기출] 122회"
   },
   "net-53": {
     "detail": "[정의] 인터넷에 있는 수 많은 호스트들을 각각 구분할 수 있도록 각 호스트마다 유일한 32비트(IPv4 기준) 값 or 128비트(IPv6 기준)값을 할당하는데, 이것을 인터넷 주소 또는 IP주소라고 부름\n[특징] IPv4, IPv6, NIC",
@@ -24590,21 +24625,37 @@
     "memo": "IIN (IPv4·IPv6·NIC)"
   },
   "net-54": {
-    "detail": "[정의] 동일 네트워크를 작은 그룹으로 나누기 위해 그룹화하는 것\n[필요성] Broadcasting 범위 지정하여 효율성, 보안성, 라우팅 속도 개선\n[계산] 각 호스트 수 확인(가장 큰 host부터 확인) - 전환 bit 수 결정(큰 host수에맞는 서브넷 크기 계산) - \n서브넷 마스크 계산(NW ID 1로 치환) - 서브넷 ID, Host수 계산",
-    "related": "[고려사항] 회사에서 필요로하는 네트워크 수\n필요네트워크 수+향후 1년내 확장가능 수\n필요 네트워크 ID위한 bit수\n\n139_관리_4_6",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "[정의] 동일 네트워크를 작은 그룹으로 나누는 것.\n[필요성] Broadcasting 범위 지정 — 효율성·보안성·라우팅 속도 개선\n[계산] 호스트 수 확인(최대부터) → 전환 bit 수 결정 → 서브넷 마스크 계산(NW ID를 1로) → 서브넷 ID·호스트 수 계산",
+    "related": "Supernetting / CIDR / IP 주소체계",
+    "defKeywords": [
+      "네트워크 분할",
+      "브로드캐스트 범위 축소",
+      "서브넷 마스크"
+    ],
+    "featureKeywords": [
+      "호스트 수 확인",
+      "전환 bit 결정",
+      "마스크 계산",
+      "서브넷 ID 산출"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "[고려사항] 필요 네트워크 수 + 1년 내 확장분, 네트워크 ID용 bit 수\n[기출] 139회 관리 4교시 6번"
   },
   "net-55": {
-    "detail": "[정의] 다수 작은 네트워크를 하나로 통합하여 사용하는 방법\n[기법] Classless(CIDR 프로토콜 이용), subnet mask\n[필요성] IP 부족시 융통성, 라우팅 개수 감소 관리 용이\n[계산] 공통비트 도출 - 공통부분에서 Subnet mask(모두1), NetID(공통부분) 도출\n- 유효IP호스트수 도출(NetID, Broadcast IP제외)",
-    "related": "139_관리_4_6",
-    "defKeywords": [],
+    "detail": "[정의] 다수의 작은 네트워크를 하나로 통합해 사용하는 방법.\n[기법] Classless(CIDR), Subnet Mask\n[필요성] IP 부족 시 융통성, 라우팅 엔트리 감소·관리 용이\n[계산] 공통비트 도출 → Subnet Mask(공통부 1)·NetID 도출 → 유효 IP 수(NetID·Broadcast 제외)",
+    "related": "Subnetting / CIDR / 라우팅 프로토콜",
+    "defKeywords": [
+      "네트워크 통합",
+      "CIDR",
+      "라우팅 집약"
+    ],
     "featureKeywords": [
-      "Classless",
-      "subnet mask"
+      "공통비트 도출",
+      "마스크·NetID 산출",
+      "유효 IP 계산"
     ],
     "applicationKeywords": [
       "CIDR 프로토콜 이용",
@@ -24612,26 +24663,9 @@
       "subnet mask"
     ],
     "plusKeywords": [],
-    "mnemonic": "Cs / 공N",
-    "sections": [
-      {
-        "label": "기법",
-        "mnemonic": "Cs",
-        "keywords": [
-          "Classless",
-          "subnet mask"
-        ]
-      },
-      {
-        "label": "계산",
-        "mnemonic": "공N",
-        "keywords": [
-          "공통비트 도출",
-          "NetID 도출"
-        ]
-      }
-    ],
-    "memo": "Cs (Classless·subnet mask)\n공N (공통비트 도출·NetID 도출)"
+    "mnemonic": "",
+    "sections": [],
+    "memo": "[기출] 139회 관리 4교시 6번"
   },
   "net-56": {
     "detail": "네트워크 등을 합치는 슈퍼네팅 등 적용한다는 개념\nIP 주소 할당 방법의 하나로, 기존 8비트 단위로 통신망부와 호스트부를 구획하지 않는 방법(병합)",
@@ -25014,25 +25048,49 @@
     ]
   },
   "net-76": {
-    "detail": "서버·네트워크 간 로드밸런싱 용도로 L4(TCP/UDP) 스위칭을 수행하는 로드밸런서.",
-    "related": "",
+    "detail": "서버·네트워크 간 로드밸런싱 용도로 L4(TCP/UDP) 스위칭을 수행하는 로드밸런서.\n[장비] G/W, SLB, TLB — 웹방화벽 병행. (이중화) L4 기반 / SW 기반",
+    "related": "L7 스위치 / SLB / 이중화",
     "defKeywords": [
-      "UDP",
-      "스위칭 수행하는 로드밸런서"
+      "L4 로드밸런서",
+      "TCP/UDP 스위칭",
+      "서버 이중화"
     ],
     "featureKeywords": [
-      "load balancing",
-      "virtual IP",
+      "Load Balancing",
+      "Virtual IP",
       "Fail-over",
       "캐싱",
-      "서비스연결",
-      "QoS",
-      "로드밸런싱 Metrics 값"
+      "서비스 연결",
+      "QoS"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "로버패 캐연Q",
-    "memo": "로버패 캐연Q \n라가해최(R해리컨)"
+    "mnemonic": "로버패캐연Q / 라가해최",
+    "memo": "로버패 캐연Q (기능 6) / 라가해최 = R해리컨 (RR·가중RR·해싱·최소연결 + 가중최소연결)\nVirtual IP=서버 증설 시 IP 변경 없음 / Fail-over=Master 장애 시 Slave 전환",
+    "sections": [
+      {
+        "label": "기능",
+        "mnemonic": "로버패캐연Q",
+        "keywords": [
+          "로드밸런싱",
+          "버추얼 IP",
+          "패일오버(Fail-over)",
+          "캐싱",
+          "연결(서비스)",
+          "QoS"
+        ]
+      },
+      {
+        "label": "알고리즘",
+        "mnemonic": "라가해최",
+        "keywords": [
+          "라운드로빈(RR)",
+          "가중 RR(Weighted RR)",
+          "해싱(Hashing)",
+          "최소연결(Least Connection)"
+        ]
+      }
+    ]
   },
   "net-77": {
     "detail": "L2 스위치에 라우팅(Routing) 기능을 추가.\nIP를 이용한 논리적 주소를 기반으로 경로 결정\n고성능 패킷 스위칭",
@@ -41286,25 +41344,54 @@
     "mnemonic": ""
   },
   "ai-33": {
-    "detail": "고차원 특징 추출 분류 위해 기존 신경망에 다계층의 합성곱 계층 추가하여 학습하는 딥러닝\n절차 : 원컨풀컨풀전\n원본이미지 -> 컨볼루션 -> 풀링 – 컨볼루션 -> 풀링 – 전체 연결된 신경망\n(중요) pooling - 이미지 특징을 반영하며, 차원을 축소\n[구성요소]커피활패스 컨풀푸 드\n- 커널\n- Feature Map\n- 활성화함수\n- 패딩\n- Stride\n- Convolution layer\n- Pooling Layer\n- Fully Connected Layer\n- Drop out",
-    "related": "",
+    "detail": "고차원 특징 추출·분류를 위해 기존 신경망에 다계층 합성곱 계층을 추가해 학습하는 딥러닝.\n[절차] 원본이미지→컨볼루션→풀링→컨볼루션→풀링→전체연결 신경망\n(중요) Pooling: 이미지 특징을 반영하며 차원을 축소",
+    "related": "딥러닝 / R-CNN / 활성화 함수",
     "defKeywords": [
-      "원컨풀컨풀전",
-      "이미지 특징을 반영하며",
-      "차원을 축소"
+      "합성곱 계층",
+      "고차원 특징 추출",
+      "다계층 학습",
+      "이미지 분류"
     ],
     "featureKeywords": [
       "커널",
       "Feature Map",
       "활성화함수",
       "패딩",
-      "Stride",
-      "Pooling Layer",
-      "Drop out"
+      "Stride"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "커피활패스 컨풀푸 드"
+    "mnemonic": "원컨풀컨풀전 / 커피활패스컨풀푸드",
+    "sections": [
+      {
+        "label": "절차",
+        "mnemonic": "원컨풀컨풀전",
+        "keywords": [
+          "원본 이미지",
+          "컨볼루션",
+          "풀링",
+          "컨볼루션(2차)",
+          "풀링(2차)",
+          "전체연결(FC)"
+        ]
+      },
+      {
+        "label": "구성요소",
+        "mnemonic": "커피활패스컨풀푸드",
+        "keywords": [
+          "커널",
+          "피처맵(Feature Map)",
+          "활성화함수",
+          "패딩",
+          "스트라이드(Stride)",
+          "컨볼루션 계층",
+          "풀링 계층",
+          "푸리커넥티드(FC) 계층",
+          "드롭아웃"
+        ]
+      }
+    ],
+    "memo": "원컨풀컨풀전 (원본→컨볼루션→풀링→컨볼루션→풀링→전체연결)\n커피활패스 컨풀푸 드 (커널·피처맵·활성화함수·패딩·스트라이드 / 컨볼루션·풀링·FC / 드롭아웃)\n(중요) Pooling = 특징 반영 + 차원 축소"
   },
   "ai-34": {
     "detail": "[EfficientNet]\n- Compound Scaling 통해 적은 파라미터수를 가지고 정확성, 효율성 향상시킨 Image 분류 모델\n[EfficientDet]\n- AutoML 및 모델 확장 통해 정확성, 효율성 향상 - EfficientNet을 backbone으로 하고 BiFPN과 Compound Scaling을 조합하여 적은 파라미터수로 더욱 좋은 성능을 보여주는 Object Detection 모델",
@@ -41316,17 +41403,25 @@
     "mnemonic": ""
   },
   "ai-35": {
-    "detail": "신경망 연결에 순환구조를 넣은것, RNN(Recurrent Neural Networks)의 개념\n  - 음성이나 언어 등 연속된 입력 데이터에 적용이 용이한 딥러닝 모델\n  - 연속된 데이터 상에서 이전 순서의 히든 노드(hidden node)의 값을 저장 이후, 다음 순서의 입력 데이터로 학습할 때 이전에 저장해 놓은 값을 이용",
-    "related": "",
+    "detail": "신경망 연결에 순환구조를 넣은 모델 — 음성·언어 등 연속 입력 데이터에 적용이 용이한 딥러닝.\n이전 순서 히든 노드 값을 저장했다가 다음 순서 입력 학습에 이용.",
+    "related": "딥러닝 / LSTM / 시계열딥러닝",
     "defKeywords": [
-      "Recurrent Neural Networks",
-      "hidden node",
-      "RNN 의 개념"
+      "순환 구조",
+      "연속(시퀀스) 데이터",
+      "은닉상태 저장",
+      "이전 값 재사용"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "순환구조",
+      "시퀀스 적용(음성·언어)",
+      "은닉노드 값 저장",
+      "다음 학습에 재사용"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "순환구조 → 이전 hidden 값 저장 → 다음 입력 학습에 이용\n한계: 장기 의존성(기울기 소실) → LSTM/GRU로 보완"
   },
   "ai-36": {
     "detail": "RNN의 장기의존성 문제 해결위해 Hidden Layer를 Input Gate, Output Gate, \nForget Gate라는 세가지 게이트를 이용하여 해결한 알고리즘\n화살표 위오위오위오오 시시탄시탄 X+XX",
@@ -41349,34 +41444,46 @@
     "mnemonic": ""
   },
   "ai-38": {
-    "detail": "기계 학습의 분야 중 하나로 패턴 인식, 자료 분석을 위한 지도 학습 모델이며, 주로 분류와 회귀 분석(하나나 그 이상의 독립변수의 종속변수에 대한 영향의 추정을 할 수 있는 통계기법, regression analysis)\n  을 위해 사용한다. 두 카테고리 중 어느 하나에 속한 데이터의 집합이 주어졌을 때, SVM 알고리즘은 주어진 데이터 집합을 바탕으로 하여 새로운 데이터가 어느 카테고리에 속할지 판단하는 비확률적 이진 선형 분류 모델을 만든다. \n  - Margin: 학습 데이터 중에서 분류 경계에 가장 가까운 데이터로부터 분류 경계까지의 거리\n  \n  - 초평면(Hyperplane: 클래스를 구분하는 면/선/곡선), 분류, 회귀분석\n  - 지지도 이용, 벡터 이용, 기계학습\n  - 각 분류의 경계선에 가장 가까이 있는 데이터를(그림에서 굵은 테두리를 가진 벡터)를 서포트 벡터라고 부름(Support Vector)",
-    "related": "빅데이터 분류 벡터: 변위(물체가 운동하고 있을 때 물체의 위치 변화), 크기, 방향을 동시에 나타내는 (물리)량",
+    "detail": "패턴 인식·자료 분석용 지도학습 모델 — 분류·회귀에 사용. 두 카테고리 데이터에서 새 데이터의 소속을 판단하는 비확률적 이진 선형 분류.\n- Margin: 분류 경계에 가장 가까운 데이터~경계 거리\n- 초평면(Hyperplane): 클래스를 구분하는 면/선/곡선\n- Support Vector: 경계선에 가장 가까운 데이터",
+    "related": "빅데이터 분류 / 커널 트릭",
     "defKeywords": [
-      "Support Vector",
-      "초평면",
-      "분류",
-      "회귀분석",
-      "지지도 이용",
-      "벡터 이용",
-      "기계학습"
+      "지도학습",
+      "비확률적 이진 선형분류",
+      "마진 최대화",
+      "초평면"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "마진(Margin)",
+      "초평면(Hyperplane)",
+      "서포트 벡터",
+      "분류·회귀분석"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "마진 최대화하는 초평면 탐색 / 서포트벡터=경계 최근접 데이터\n벡터: 크기·방향 동시 표현 (물리)량"
   },
   "ai-39": {
-    "detail": "KNN(K-Nearest Neighbor) \n  k-최근접 이웃 알고리즘\n  k-NN 알고리즘은 가장 간단한 기계 학습 알고리즘",
-    "related": "",
+    "detail": "K-최근접 이웃(K-Nearest Neighbor) — 가장 간단한 기계학습 알고리즘. 새 데이터를 가장 가까운 K개 이웃의 다수결로 분류.",
+    "related": "분류 알고리즘 / 유클리드 거리",
     "defKeywords": [
-      "K-Nearest Neighbor",
-      "KNN",
-      "k-최근접 이웃 알고리즘"
+      "K-최근접 이웃",
+      "거리 기반 분류",
+      "지도학습",
+      "최단순 ML"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "K개 이웃 선택",
+      "거리 계산",
+      "다수결 분류",
+      "K값 민감"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "게으른 학습(Lazy Learning) — 학습단계 없이 예측 시 거리 계산"
   },
   "ai-40": {
     "detail": "Decision Tree\n(정의)  엔트로피, 경사 하강법, 특정 조건을 기준으로 O/X로 나누어 분류/회귀를 진행하는\u000b  Tree구조의 분류(Classification)/회귀(Regression) 가능한 지도 학습 모델/데이터마이닝 기법\n예) 프로젝트 관리 정량적리스크 관리",
@@ -41572,20 +41679,25 @@
     "mnemonic": ""
   },
   "ai-50": {
-    "detail": "생성자(Generator)와 판별자(Discriminator)가 서로 경쟁하는 과정을 통해 정보를 학 습하는 대표적 비지도학습 \n  생성자, 구별자, DCGAN(Deep Convolutional GAN)",
-    "related": "",
+    "detail": "생성자(Generator)와 판별자(Discriminator)가 서로 경쟁하며 학습하는 대표적 비지도학습.",
+    "related": "DCGAN / Defense GAN / 딥페이크",
     "defKeywords": [
-      "Generator",
-      "Discriminator",
-      "Deep Convolutional GAN",
       "생성자",
-      "구별자",
+      "판별자",
+      "적대적 경쟁 학습",
+      "비지도학습"
+    ],
+    "featureKeywords": [
+      "생성자(Generator)",
+      "판별자(Discriminator)",
+      "경쟁 학습",
       "DCGAN"
     ],
-    "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "생성자=가짜 생성, 판별자=진위 판별 — 경쟁하며 동반 성장\n확장: DCGAN(Deep Convolutional GAN)"
   },
   "ai-51": {
     "detail": "Deep Convolutional GAN (DCGAN)\nGAN의 Fully Connected Layer를 제거하고 Convolution Layer와 배치정규화 구조를 사용하여 안정적인 학습이 가능한 알고리즘",
@@ -41682,12 +41794,15 @@
     "mnemonic": ""
   },
   "ai-58": {
-    "detail": "최적화 알고리즘 정의\nAI·머신러닝 모델이 “가장 좋은(최적) 파라미터 값을 찾기 위해” 사용하는 알고리즘\n- 경사하강법, SGD, 모멘텀(Momentum), RMSProp, Adam (가장 대중적), AdamW (대규모 모델 기본)",
-    "related": "",
+    "detail": "[정의] AI·머신러닝 모델이 최적 파라미터 값을 찾기 위해 사용하는 알고리즘.\n경사하강법, SGD, 모멘텀, RMSProp, Adam(가장 대중적), AdamW(대규모 모델 기본)",
+    "related": "딥러닝 / 활성화 함수 / 손실함수",
     "defKeywords": [
-      "Momentum",
-      "최적화 알고리즘 정의",
-      "AI",
+      "최적 파라미터 탐색",
+      "손실함수 최소화",
+      "학습률",
+      "수렴"
+    ],
+    "featureKeywords": [
       "경사하강법",
       "SGD",
       "모멘텀",
@@ -41695,10 +41810,11 @@
       "Adam",
       "AdamW"
     ],
-    "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "Adam = 가장 대중적 / AdamW = 대규모 모델 기본\n경사하강법→SGD→모멘텀→RMSProp→Adam 발전 흐름"
   },
   "ai-59": {
     "detail": "SGD(Stochastic Gradient Descent) \n모델의 가중치(weight)를 조금씩 조정하면서 Loss(오차)를 줄여가는 알고리즘",
@@ -41790,63 +41906,125 @@
     "mnemonic": ""
   },
   "ai-66": {
-    "detail": "인공지능(AI) 모델이 학습한 결과에 대해서 주어진 문제를 얼마나 정확하고 신뢰성 있게 해\n결하는지를 수치화하여 판단 하는 과정",
-    "related": "혼돈행렬 F1 Score, ROC AUC, MAE, MSE, RMSE, 정확도 정밀도 재현율 Silhouette Score, Davies Bouldin Index, 과적합 과소적합 판단 편향성 검증",
+    "detail": "AI 모델이 학습 결과로 문제를 얼마나 정확·신뢰성 있게 해결하는지 수치화해 판단하는 과정.",
+    "related": "혼동 행렬 / 교차검증 / 과적합",
     "defKeywords": [
-      "AI"
+      "정확·신뢰성 수치화",
+      "지표 기반 판단",
+      "과적합 판단",
+      "편향성 검증"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "정확도",
+      "정밀도",
+      "재현율",
+      "F1 Score",
+      "ROC-AUC",
+      "혼동행렬"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "[분류] 정확도·정밀도·재현율·F1·ROC-AUC·혼동행렬\n[회귀] MAE·MSE·RMSE\n[군집] Silhouette Score·Davies-Bouldin Index\n[검증] 과적합·과소적합 판단, 편향성 검증"
   },
   "ai-67": {
-    "detail": "모델 평가 방법 중 하나로 훈련 데이터와 검증 데이터를 분리하여 훈련 데이터에 대해 학습한 모델의 정확도를 검증 데이터로 평가하는 기법.",
-    "related": "",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "훈련 데이터와 검증 데이터를 분리해, 훈련 데이터로 학습한 모델의 정확도를 검증 데이터로 평가하는 기법.",
+    "related": "성능평가 / 과적합",
+    "defKeywords": [
+      "훈련/검증 분리",
+      "일반화 성능",
+      "과적합 방지"
+    ],
+    "featureKeywords": [
+      "K-Fold",
+      "Stratified K-Fold",
+      "LOOCV",
+      "Hold-out"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "K-Fold: 데이터를 K등분해 번갈아 검증 — 데이터 적을 때 유효"
   },
   "ai-68": {
-    "detail": "혼동 행렬 (Confusion matrix)\n confusion matrix, also known as an error matrix, is a specific table layout that allows visualization of the performance of an algorithm, typically a supervised learning one (in unsupervised learning it is usually called a matching matrix).",
-    "related": "Precision & Recall",
+    "detail": "혼동 행렬(Confusion Matrix) — 분류 알고리즘 성능을 예측/실제 조합(TP·FP·FN·TN) 표로 시각화(오류 행렬).",
+    "related": "Precision & Recall / F1 Score",
     "defKeywords": [
-      "Confusion matrix",
-      "혼동 행렬"
+      "예측/실제 매트릭스",
+      "분류 성능 시각화",
+      "오류 행렬"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "TP(진양성)",
+      "FP(위양성)",
+      "FN(위음성)",
+      "TN(진음성)"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "정밀도=TP/(TP+FP), 재현율=TP/(TP+FN), 정확도=(TP+TN)/전체\nF1 = 정밀도·재현율 조화평균"
   },
   "ai-69": {
-    "detail": "F1 Score에서 정밀도(Precision), 재현율(Recall)\n  정보 검색 분야에서 정밀도(precision)는 검색된 문서들 중 관련 있는 문서들의 비율.\n  내가 뽑은 것에서 것에서 맞출 확률\n  (90개에서 뽑았는데, 90개 정답이다 = 100%)\n  Positive라 예측한 사례 중 TruePositive 비율",
-    "related": "",
+    "detail": "정밀도(Precision) — Positive라 예측한 사례 중 TruePositive 비율. 검색된 문서 중 관련 문서 비율 = 내가 뽑은 것 중 맞출 확률.",
+    "related": "재현율 / F1 Score / 혼동행렬",
     "defKeywords": [
-      "Precision",
-      "Recall",
-      "F1 Score에서 정밀도",
-      "재현율"
+      "Positive 예측 중 TP",
+      "검색결과 중 관련 비율",
+      "FP 억제 지표"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "TP/(TP+FP)",
+      "예측 기준",
+      "오탐 관리"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "정예실"
+    "mnemonic": "정예실",
+    "sections": [
+      {
+        "label": "암기법",
+        "mnemonic": "정예실",
+        "keywords": [
+          "정밀도는",
+          "예측한 것 중",
+          "실제 맞춘 비율"
+        ]
+      }
+    ],
+    "memo": "정예실 — 정밀도 = 예측 중 실제 맞춘 비율\n예) 90개 뽑아 90개 정답 = 100%"
   },
   "ai-70": {
-    "detail": "정보 검색 분야에서 재현율(recall)은 관련 있는 문서들 중 실제로 검색된 문서들의 비율\n  - 실제 정답에서 내가 맞춘 확률\n  전체 100개 중에서 90개 맞춤(Hit) = 90%\n  - True라 예측한 사례 중 TruePositive 비율\n  - 암기법: 재정맞",
-    "related": "",
+    "detail": "재현율(Recall) — 실제 정답 중 내가 맞춘 확률. 관련 문서 중 실제 검색된 비율. True 예측 사례 중 TruePositive 비율.",
+    "related": "정밀도 / F1 Score / 혼동행렬",
     "defKeywords": [
-      "recall",
-      "Hit",
-      "재정맞"
+      "실제 정답 중 TP",
+      "관련 중 검색 비율",
+      "FN 억제 지표"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "TP/(TP+FN)",
+      "정답 기준",
+      "미탐 관리"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "재정맞"
+    "mnemonic": "재정맞",
+    "sections": [
+      {
+        "label": "암기법",
+        "mnemonic": "재정맞",
+        "keywords": [
+          "재현율은",
+          "정답 중에서",
+          "맞춘 비율"
+        ]
+      }
+    ],
+    "memo": "재정맞 — 재현율 = 정답 중 맞춘 비율\n예) 전체 100개 중 90개 Hit = 90%"
   },
   "ai-71": {
     "detail": "정밀도(Precision)와 재현율(Recall)를 합친 것",
@@ -41952,33 +42130,119 @@
     "mnemonic": ""
   },
   "ai-78": {
-    "detail": "인공지능이 내포한 위험과 기술적 한계를 해결하고, 활용･확산 과정에서의 \n위험･부작용을 방지하기 위한 가치 기준\n특성에 따른 구분 - 기활 편차휴악취 오침무혼사\n기술적 : 학습데이터 편향, 알고리즘 차별, 휴먼 에러, \n           제작자/개발자 악의적 의도, 인공지능 취약점\n활용적 : 기술 오남용, 사생활/개인정보 침해, \n           제3자의 무분별 정보 수집, 사회적 혼란, 안전사고 \n목표 - 책신사 (책임있는 인공지능 활용, 신뢰 있는 사회, 안전한 사이버 국가)\n추진전략 - 환기확 (환경 조성, 기반 마련, 의식 확산)\n신뢰 가능한 인공지능 구현 환경조성 - 체민원 \n    (인공지능 제품/서비스 신뢰 확보 체계 마련, \n     민간 신뢰성 확보 지원, \n     인공지능 신뢰성 원천기술 개발)\n안전한 인공지능 활용을 위한 기반 마련 - 학고영제 \n    (학습용 데이터 신뢰성 제고, 고위험 인공지능 신뢰 확보,\n      인공지능 영향평가 추진, 신뢰 강화 제도 개선)\n사회 전반 건전한 인공지능 의식 확산 - 교주플\n    (인공지능 윤리 교육 강화, 주체별 체크리스트 마련, 인공지능 윤리정책 플랫폼 운영)",
-    "related": "",
+    "detail": "AI가 내포한 위험·기술적 한계를 해결하고 활용·확산 과정의 위험·부작용을 방지하기 위한 가치 기준.",
+    "related": "AI 윤리 / AI 신뢰성 인증제도",
     "defKeywords": [
-      "활용･확산 과정에서의",
-      "알고리즘 차별",
-      "휴먼 에러",
-      "제작자",
-      "개발자 악의적 의도",
-      "인공지능 취약점",
-      "사생활",
-      "개인정보 침해",
-      "사회적 혼란",
-      "안전사고"
+      "위험·한계 해결",
+      "부작용 방지",
+      "가치 기준"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "기술적 신뢰성",
+      "활용적 신뢰성"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "기활 / 편차휴악취 / 오침무혼사 / 책신사 / 환기확 / 체민원 / 학고영제 / 교주플",
+    "sections": [
+      {
+        "label": "특성 구분",
+        "mnemonic": "기활",
+        "keywords": [
+          "기술적",
+          "활용적"
+        ]
+      },
+      {
+        "label": "기술적 위험",
+        "mnemonic": "편차휴악취",
+        "keywords": [
+          "편향(학습데이터)",
+          "차별(알고리즘)",
+          "휴먼 에러",
+          "악의적 의도",
+          "취약점"
+        ]
+      },
+      {
+        "label": "활용적 위험",
+        "mnemonic": "오침무혼사",
+        "keywords": [
+          "오남용(기술)",
+          "침해(사생활·개인정보)",
+          "무분별 정보수집",
+          "혼란(사회적)",
+          "사고(안전)"
+        ]
+      },
+      {
+        "label": "목표",
+        "mnemonic": "책신사",
+        "keywords": [
+          "책임있는 AI 활용",
+          "신뢰있는 사회",
+          "안전한 사이버국가"
+        ]
+      },
+      {
+        "label": "추진전략",
+        "mnemonic": "환기확",
+        "keywords": [
+          "환경 조성",
+          "기반 마련",
+          "의식 확산"
+        ]
+      },
+      {
+        "label": "환경조성",
+        "mnemonic": "체민원",
+        "keywords": [
+          "체계 마련(제품·서비스 신뢰)",
+          "민간 지원",
+          "원천기술 개발"
+        ]
+      },
+      {
+        "label": "기반마련",
+        "mnemonic": "학고영제",
+        "keywords": [
+          "학습데이터 신뢰성 제고",
+          "고위험 AI 신뢰 확보",
+          "영향평가 추진",
+          "제도 개선"
+        ]
+      },
+      {
+        "label": "의식확산",
+        "mnemonic": "교주플",
+        "keywords": [
+          "교육 강화(윤리)",
+          "주체별 체크리스트",
+          "플랫폼 운영(윤리정책)"
+        ]
+      }
+    ],
+    "memo": "기활 → 편차휴악취(기술) / 오침무혼사(활용)\n책신사(목표) → 환기확(전략) → 체민원·학고영제·교주플(과제)"
   },
   "ai-79": {
-    "detail": "AI 신뢰성 확보를 위한 사회기술적 요건을 중심으로 기업 내부의 AI 거버넌스 및 주요 신뢰성 특성에 대한 검증 , 확인 활동을 인증하는 제도",
-    "related": "32회 모의",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "AI 신뢰성 확보를 위한 사회기술적 요건 중심으로, 기업 내부 AI 거버넌스와 주요 신뢰성 특성에 대한 검증·확인 활동을 인증하는 제도.",
+    "related": "인공지능 신뢰성 / ISO/IEC 42001",
+    "defKeywords": [
+      "사회기술적 요건",
+      "AI 거버넌스 검증",
+      "신뢰성 특성 확인",
+      "인증 제도"
+    ],
+    "featureKeywords": [
+      "거버넌스 검증",
+      "신뢰성 특성 확인",
+      "검증·확인 활동"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "[기출] 32회 모의"
   },
   "ai-80": {
     "detail": "음성 인터페이스 기술(Natural User Interface), \n 형태소 분석, 문장분리, 지식베이스 참조 해결\n 시멘틱기술",
@@ -42093,20 +42357,25 @@
     "mnemonic": ""
   },
   "ai-89": {
-    "detail": "초거대 언어모델, GPT-3.5, GPT-4, 지도학습, 강화학습, RLHF(Reinforcement Learning from Human Feedback) 알고리즘, 대형 언어 모델(large language model, LLM) 챗봇",
-    "related": "",
+    "detail": "초거대 언어모델(Large Language Model) — GPT-3.5/4 등. 지도학습+강화학습, RLHF(인간 피드백 강화학습)로 정렬된 생성형 챗봇 기반 모델.",
+    "related": "sLLM / LLMOps / OWASP Top10 for LLM",
     "defKeywords": [
-      "large language model",
       "초거대 언어모델",
-      "GPT-4",
-      "지도학습",
-      "강화학습",
-      "RLHF  알고리즘"
+      "지도+강화학습",
+      "RLHF",
+      "생성형 챗봇"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "GPT-3.5/GPT-4",
+      "RLHF",
+      "지도학습",
+      "강화학습"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "RLHF = Reinforcement Learning from Human Feedback\n[기출] 138회 컴시응 2교시"
   },
   "ai-90": {
     "detail": "터보퀀트(TurboQuant)는 Google Research와 DeepMind가 공동 발표한 대규모 언어 모델(LLM)의 추론 가속 및 메모리 압축 기술. \n- AI가 이전 대화를 기억하기 위해 사용하는 'KV 캐시'의 용량을 데이터 손실 없이 기존 대비 최대 1/16 수준으로 압축하고, 처리 속도를 8배까지 향상시킵니다.\u000b- KV 캐시(Key-Value Cache)는 거대 언어 모델(LLM)이 대화를 나눌 때 이전 대화 내용을 기억하는 'AI의 단기 기억 장치'",
@@ -42620,36 +42889,69 @@
     "mnemonic": ""
   },
   "ai-129": {
-    "detail": "[개념] 저장 데이터를 직접 공유하지 않는 다수의 로컬 기기와 하나의 중앙 서버가 협력하여 AI 모델을 학습하는 분산형 머신 러닝(Machine Learning)\n[절차] ① 전역 모델 분배 ② 지역 모델 갱신 ③ 지역 모델 취합 ④ 전역 모델 갱신\n[구성기술] \n연합학습 알고리즘(FedSGD, FedAVG)\n프라이버시 보호 기술(차등정보보호, 동형암호, 다자간 계산)",
-    "related": "128회 3교시 기출문제",
+    "detail": "[개념] 데이터를 직접 공유하지 않는 다수 로컬 기기와 중앙 서버가 협력해 AI 모델을 학습하는 분산형 머신러닝.\n[절차] ①전역모델 분배 ②지역모델 갱신 ③지역모델 취합 ④전역모델 갱신",
+    "related": "분산학습 / 차등정보보호 / 동형암호",
     "defKeywords": [
-      "Machine Learning"
+      "로컬 데이터 비공유",
+      "중앙서버 협력",
+      "분산형 ML",
+      "프라이버시 보존"
     ],
     "featureKeywords": [
       "FedSGD",
-      "연합학습 알고리즘",
-      "프라이버시 보호 기술"
+      "FedAVG",
+      "차등정보보호",
+      "동형암호",
+      "다자간 계산"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "알SA"
+    "mnemonic": "알SA / 프자동다",
+    "sections": [
+      {
+        "label": "연합 알고리즘",
+        "mnemonic": "알SA",
+        "keywords": [
+          "알고리즘(연합학습)",
+          "FedSGD",
+          "FedAVG"
+        ]
+      },
+      {
+        "label": "프라이버시 보호기술",
+        "mnemonic": "프자동다",
+        "keywords": [
+          "프라이버시 보호",
+          "차등정보보호",
+          "동형암호",
+          "다자간 계산"
+        ]
+      }
+    ],
+    "memo": "알SA (연합 알고리즘: FedSGD·FedAVG)\n프자동다 (프라이버시: 차등정보보호·동형암호·다자간계산)\n[절차] 전역분배→지역갱신→지역취합→전역갱신\n[기출] 128회 3교시"
   },
   "ai-130": {
-    "detail": "[개념]두뇌에서 실제로 정보가 전달되고 가공되는 과정을 모사하여, 뇌를 구성하는 뉴런과 시냅스로 이루어진 신경망 구성 방식으로 인공지능을 구현하는 기술\n- 시간에 따라, 전기적 신호 강도를 계산해서, 뉴런 간 정보 전달 과정을 구현한 3세대 인공신경망.\nInput Spike, Synapse, Weight, Neuron, Output Spike, STDP모델",
-    "related": "",
+    "detail": "[개념] 두뇌의 실제 정보 전달·가공 과정을 모사, 뉴런·시냅스로 신경망을 구성하는 3세대 인공신경망.\n시간에 따른 전기신호(스파이크) 강도로 뉴런 간 정보 전달 구현.",
+    "related": "뉴로모픽 / 딥러닝",
     "defKeywords": [
-      "시간에 따라",
+      "뇌 전달과정 모사",
+      "뉴런·시냅스 구성",
+      "3세대 신경망",
+      "스파이크 신호"
+    ],
+    "featureKeywords": [
       "Input Spike",
       "Synapse",
       "Weight",
       "Neuron",
       "Output Spike",
-      "STDP모델"
+      "STDP 모델"
     ],
-    "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "시간 기반 스파이크 신호 → 저전력(뉴로모픽 칩과 결합)"
   },
   "ai-131": {
     "detail": "[개념] 계산이 가능한 기계적인 장치가 어떠한 대상을 인식하는 문제를 다루는 인공지능의 한 분야\n- 공학적 접근법을 이용하여 인공지능의 실제 구현 문제인 대상을 인식하는 문제\n[패턴인식 처리 프로세스]\n관측, 전처리, 분할, 정규화, 특징 추출, 식별\n[패턴인식 이론]\n- 결정이론적 방법 : 패턴을 구성하는 특징 값들의 통계적 분포를 이용하여 인식하는 확률 통계적 방법\n- 언어이론적 방법 : 패턴의 구조적인 유사성을 조사, 특성을 파악하여 인식하기 위한 구조적 패턴 방법",
@@ -42718,18 +43020,24 @@
     "mnemonic": ""
   },
   "ai-134": {
-    "detail": "정의) - 멀리 떨어진 클라우드 서버를 거치지 않고 스마트기기 자체적으로 정보를 수집(small data)하고, 빠른 서비스,강화된 정보보안, 에너지절감, 연산할 수 있는 AI 기술",
-    "related": "",
+    "detail": "[정의] 클라우드 서버를 거치지 않고 스마트기기 자체적으로 정보를 수집(small data)·연산하는 AI 기술.",
+    "related": "엣지 컴퓨팅 / NPU / sLLM",
     "defKeywords": [
-      "small data",
+      "클라우드 미경유",
+      "기기 자체 연산",
+      "Small Data"
+    ],
+    "featureKeywords": [
       "빠른 서비스",
       "강화된 정보보안",
-      "에너지절감"
+      "에너지 절감",
+      "자체 연산"
     ],
-    "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "네트워크 지연 제거 + 데이터 미전송(프라이버시) — NPU 탑재 기기"
   },
   "ai-135": {
     "detail": "On-Sensor AI의 개념\n- 센서 자체에 인공지능(AI) 기능을 통합하여 데이터를 실시간으로 처리하고 분석할 수 있는 기술 \n- 이미지 센서에 AI 칩을 탑재한 센서 (이미지 센서 + AI)",
@@ -42756,20 +43064,26 @@
     "mnemonic": ""
   },
   "ai-137": {
-    "detail": "[개념]데이터 관리 및 ML 시스템 개발과 서비스 운영(Operations)을 통합해 안정적으로 상품·서비스를 출시할 수 있도록 신속·유연한 개발을 추구하는 협업 방식\n- 개발, 통합, 테스트, 출시, 배포, 인프라 관리 등 ML 시스템 구성의 모든 단계에서 모델 재학습 자동화 및 모델 모니터링을 지원하며 ML 모델 라이프사이클을 관리\n[프로젝트 수명 주기] 프로젝트 계획 수립 및 착수, 데이터 준비 및 학습환경 구축, 모델 학습/튜닝, 모델 배포 및 생산 모니터링, Experiment, Develop, Operate",
-    "related": "",
+    "detail": "[개념] 데이터 관리·ML 개발과 서비스 운영(Ops)을 통합, 재학습 자동화·모니터링으로 ML 라이프사이클을 관리하는 협업 방식.\n[수명주기] 계획·착수 → 데이터 준비·학습환경 → 모델 학습/튜닝 → 배포·생산 모니터링",
+    "related": "DevOps / LLMOps / AI 파이프라인",
     "defKeywords": [
-      "Operations",
-      "개발",
-      "통합",
-      "테스트",
-      "출시",
-      "배포"
+      "ML 개발+운영 통합",
+      "재학습 자동화",
+      "모델 모니터링",
+      "라이프사이클 관리"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "개발·통합·테스트",
+      "출시·배포",
+      "인프라 관리",
+      "재학습 자동화",
+      "모니터링"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "Experiment → Develop → Operate\nDevOps의 ML 확장판 — 모델 드리프트 감시·재학습"
   },
   "ai-138": {
     "detail": "가. AIoT(Artificial Intelligence of Things) 개념\u000b인공지능이 접목된 지능화된 사물인터넷\u000b나. AIoT의 보안 취약점\u000b다. AIoT 디바이스 보안기술 3가지",
@@ -42853,28 +43167,67 @@
     "mnemonic": ""
   },
   "ai-144": {
-    "detail": "머신러닝과 인공지능에서 biased 결과 이유\n3가지 이유 설명\n1) 편향된 데이터 학습\n2) 디지털 가공 과정의 문제\n3) 알고리즘 모델 자체 문제",
-    "related": "139_관리_3_2",
+    "detail": "머신러닝·AI에서 biased(편향된) 결과가 나오는 3가지 이유:\n1) 편향된 데이터 학습 2) 디지털 가공 과정의 문제 3) 알고리즘 모델 자체 문제",
+    "related": "AI 신뢰성 / XAI / 데이터 편향",
     "defKeywords": [
-      "3가지 이유 설명"
+      "biased 결과 원인",
+      "공정성 저해"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "편향된 데이터 학습",
+      "가공 과정의 문제",
+      "알고리즘 모델 문제"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "[기출] 139회 관리 3교시 2번"
   },
   "ai-145": {
-    "detail": "자율주행차, 로드어드바이저, 로봇, 지능형 개인비서 기기 등을 연구 개발하는 \n이해관계자들이 준수해야 할 보편적 사회 규범 및 관련 기술\n\n[윤리기준]'사람 중심의인공지능'을위한 최고 가치 ' 인간성'\n3대 기본원칙(인사기) : 인간존업성, 사회의 공공선, 기술의 합목적성\n10대 핵심요건(인프다 침공연데 책안투) : 인권보장, 프라이버시 보호, 다양성 존중, \n침해 금지, 공공성, 연대성, 데이터관리, 책임성, 안전성, 투명성",
-    "related": "인공지능(AI) 윤리의 개념, 주요사례, 고려사항 및 추진방향",
+    "detail": "자율주행차·로봇·지능형 비서 등을 연구개발하는 이해관계자들이 준수해야 할 보편적 사회 규범·기술.\n[윤리기준] 사람 중심 AI를 위한 최고 가치 = 인간성(Humanity)",
+    "related": "인공지능 신뢰성 / AI 윤리기준(과기정통부)",
     "defKeywords": [
-      "자율주행차",
-      "로드어드바이저",
-      "로봇"
+      "사람 중심 AI",
+      "인간성(최고가치)",
+      "보편적 사회규범"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "인간 존엄성",
+      "사회의 공공선",
+      "기술의 합목적성"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "인사기"
+    "mnemonic": "인사기 / 인프다침공연데책안투",
+    "sections": [
+      {
+        "label": "3대 기본원칙",
+        "mnemonic": "인사기",
+        "keywords": [
+          "인간 존엄성",
+          "사회의 공공선",
+          "기술의 합목적성"
+        ]
+      },
+      {
+        "label": "10대 핵심요건",
+        "mnemonic": "인프다침공연데책안투",
+        "keywords": [
+          "인권 보장",
+          "프라이버시 보호",
+          "다양성 존중",
+          "침해 금지",
+          "공공성",
+          "연대성",
+          "데이터 관리",
+          "책임성",
+          "안전성",
+          "투명성"
+        ]
+      }
+    ],
+    "memo": "인사기 (인간존엄·사회공공선·기술합목적성)\n인프다 침공연데 책안투 (인권·프라이버시·다양성·침해금지·공공성·연대성·데이터·책임·안전·투명)"
   },
   "ai-146": {
     "detail": "인공지능(AI) 개인정보보호 자율점검표의 원칙과 총괄흐름도를 설명",
@@ -42897,13 +43250,34 @@
     "mnemonic": "식분평대"
   },
   "ai-148": {
-    "detail": "2. 머신러닝 보안 취약점에 대하여 설명하시오.\n가. 머신러닝 학습과정에서의 적대적 공격 4가지\n나. 각각 적대적 공격의 방어기법",
-    "related": "123 관리 2",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "머신러닝 학습·운영 과정의 보안 취약점을 노리는 적대적 공격 4가지와 방어기법.",
+    "related": "딥러닝 취약점 / Defense GAN",
+    "defKeywords": [
+      "학습과정 공격",
+      "ML 보안 취약점"
+    ],
+    "featureKeywords": [
+      "중독 공격(Poisoning)",
+      "회피 공격(Evasion)",
+      "추출 공격(Extraction)",
+      "전도 공격(Inversion)"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "중회추전",
+    "sections": [
+      {
+        "label": "적대적 공격 4",
+        "mnemonic": "중회추전",
+        "keywords": [
+          "중독(Poisoning) — 학습데이터 오염",
+          "회피(Evasion) — 입력 교란",
+          "추출(Extraction) — 모델 탈취",
+          "전도(Inversion) — 학습데이터 복원"
+        ]
+      }
+    ],
+    "memo": "방어: 적대적 훈련, 방어적 증류, 입력 정제, 앙상블\n[기출] 123회 관리 2교시"
   },
   "ai-149": {
     "detail": "[개념]오픈AI에서 발표한 GPT-3를 통해 다른 모델의 백본역할 및 응용서비스 플랫폼, 범용 AI의 특징을 가진 초대규모 AI 모델이 등장함\n[활성화 전략] 슈퍼컴퓨터 지원, 대규모 데이터셋 구축, 한국어 전용 모델 성능 평가 체계 구축",
