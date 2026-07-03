@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * 🎧 오디오 강의 — NotebookLM 오디오 오버뷰 스타일.
- * AI가 쓴 "진행자/전문가 팟캐스트 대본"을 받아, 두 화자를 서로 다른
- * 목소리(보이스/피치)로 번갈아 낭독한다. 대본은 화면에도 표시.
+ * 1) AI가 진행자/전문가 팟캐스트 대본을 생성(/api/audio-script)
+ * 2) Gemini 멀티스피커 신경망 TTS로 "두 명의 진짜 목소리" mp3 합성(/api/tts)
+ * 3) mp3 재생. 신경망 TTS 실패(한도 등) 시에만 브라우저 TTS로 폴백.
  */
 
 type Turn = { speaker: "진행자" | "전문가"; text: string };
@@ -19,7 +20,6 @@ function parseScript(raw: string): Turn[] {
   return turns;
 }
 
-/** 한국어 보이스 두 개 고르기(없으면 하나를 피치로 구분). */
 function pickVoices(): {
   host: SpeechSynthesisVoice | null;
   expert: SpeechSynthesisVoice | null;
@@ -43,64 +43,78 @@ export default function AudioLecture({
   topicId?: string;
 }) {
   const [turns, setTurns] = useState<Turn[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [scriptText, setScriptText] = useState("");
+  const [loadingMsg, setLoadingMsg] = useState("");
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(-1);
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const [showScript, setShowScript] = useState(false);
   const stopRef = useRef(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioUrlRef = useRef<string>("");
 
   useEffect(() => {
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
-      window.speechSynthesis.getVoices(); // 보이스 미리 로드
+      window.speechSynthesis.getVoices();
     }
     return () => {
       stopRef.current = true;
+      audioRef.current?.pause();
+      if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
       if (typeof window !== "undefined" && "speechSynthesis" in window) {
         window.speechSynthesis.cancel();
       }
     };
   }, []);
 
-  // 토픽이 바뀌면 이전 대본·재생 상태를 비운다.
+  // 토픽이 바뀌면 대본·오디오를 비운다.
   useEffect(() => {
     stop();
     setTurns([]);
+    setScriptText("");
     setError("");
+    setNotice("");
     setShowScript(false);
+    if (audioUrlRef.current) {
+      URL.revokeObjectURL(audioUrlRef.current);
+      audioUrlRef.current = "";
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [topic]);
 
   function stop() {
     stopRef.current = true;
-    window.speechSynthesis?.cancel();
+    audioRef.current?.pause();
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
     setPlaying(false);
     setCurrent(-1);
   }
 
-  function playFrom(list: Turn[], i: number) {
+  /** 폴백: 브라우저 TTS로 턴별 재생(신경망 TTS 실패 시에만). */
+  function playFallback(list: Turn[], i: number) {
     if (stopRef.current || i >= list.length) {
       setPlaying(false);
       setCurrent(-1);
       return;
     }
-    const t = list[i];
     setCurrent(i);
+    const t = list[i];
     const u = new SpeechSynthesisUtterance(t.text);
     u.lang = "ko-KR";
     const { host, expert } = pickVoices();
-    const sameVoice = !host || !expert || host === expert;
+    const same = !host || !expert || host === expert;
     if (t.speaker === "진행자") {
       if (host) u.voice = host;
-      u.pitch = sameVoice ? 1.15 : 1.05;
-      u.rate = 1.02;
+      u.pitch = same ? 1.15 : 1.05;
     } else {
       if (expert) u.voice = expert;
-      u.pitch = sameVoice ? 0.9 : 1.0;
-      u.rate = 0.98;
+      u.pitch = same ? 0.9 : 1.0;
     }
-    u.onend = () => playFrom(list, i + 1);
-    u.onerror = () => playFrom(list, i + 1);
+    u.onend = () => playFallback(list, i + 1);
+    u.onerror = () => playFallback(list, i + 1);
     window.speechSynthesis.speak(u);
   }
 
@@ -109,14 +123,14 @@ export default function AudioLecture({
       stop();
       return;
     }
-    if (!("speechSynthesis" in window)) {
-      setError("이 브라우저는 음성 재생을 지원하지 않아요.");
-      return;
-    }
     setError("");
+    setNotice("");
+
+    // 1) 대본 확보(없으면 생성)
     let list = turns;
+    let raw = scriptText;
     if (!list.length) {
-      setLoading(true);
+      setLoadingMsg("대본 만드는 중…");
       try {
         const res = await fetch("/api/audio-script", {
           method: "POST",
@@ -125,21 +139,66 @@ export default function AudioLecture({
         });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || "대본 생성 실패");
-        list = parseScript(data.script);
+        raw = data.script as string;
+        list = parseScript(raw);
         if (!list.length) throw new Error("대본 형식 오류 — 다시 시도해 주세요.");
         setTurns(list);
+        setScriptText(raw);
         setShowScript(true);
       } catch (e) {
         setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
-        setLoading(false);
+        setLoadingMsg("");
         return;
       }
-      setLoading(false);
     }
+
+    // 2) 신경망 TTS mp3 (재생 시 재사용)
     stopRef.current = false;
+    if (!audioUrlRef.current) {
+      setLoadingMsg("목소리 만드는 중… (첫 재생만 몇 초 걸려요)");
+      try {
+        const res = await fetch("/api/tts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ script: raw }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "음성 합성 실패");
+        const bin = atob(data.audio as string);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        const blob = new Blob([bytes], { type: data.mime || "audio/mpeg" });
+        audioUrlRef.current = URL.createObjectURL(blob);
+      } catch (e) {
+        // 신경망 TTS 실패 → 브라우저 TTS 폴백(무료 한도 등)
+        setLoadingMsg("");
+        if (!("speechSynthesis" in window)) {
+          setError(e instanceof Error ? e.message : "음성 재생 불가");
+          return;
+        }
+        setNotice(
+          (e instanceof Error ? e.message : "") +
+            " — 기본 음성으로 재생합니다.",
+        );
+        setPlaying(true);
+        playFallback(list, 0);
+        return;
+      }
+      setLoadingMsg("");
+    }
+
+    // 3) mp3 재생
+    if (!audioRef.current) audioRef.current = new Audio();
+    const audio = audioRef.current;
+    audio.src = audioUrlRef.current;
+    audio.onended = () => {
+      setPlaying(false);
+    };
     setPlaying(true);
-    window.speechSynthesis.cancel();
-    playFrom(list, 0);
+    audio.play().catch(() => {
+      setPlaying(false);
+      setError("재생을 시작하지 못했어요. 다시 눌러주세요.");
+    });
   }
 
   return (
@@ -147,14 +206,14 @@ export default function AudioLecture({
       <div className="flex items-center gap-2">
         <button
           onClick={start}
-          disabled={loading}
+          disabled={!!loadingMsg}
           className={`inline-flex items-center gap-1 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${
             playing
               ? "border-rose-300 bg-rose-500 text-white"
               : "border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
-          } ${loading ? "opacity-60" : ""}`}
+          } ${loadingMsg ? "opacity-60" : ""}`}
         >
-          {loading ? "대본 만드는 중…" : playing ? "⏹ 정지" : "🎧 오디오 강의"}
+          {loadingMsg || (playing ? "⏹ 정지" : "🎧 오디오 강의")}
         </button>
         {turns.length > 0 && (
           <button
@@ -166,6 +225,7 @@ export default function AudioLecture({
         )}
       </div>
       {error && <p className="mt-2 text-xs text-rose-600">{error}</p>}
+      {notice && <p className="mt-2 text-xs text-amber-600">{notice}</p>}
       {showScript && turns.length > 0 && (
         <div className="mt-3 max-h-72 space-y-2 overflow-y-auto rounded-xl border border-slate-200 bg-slate-50 p-3">
           {turns.map((t, i) => (
