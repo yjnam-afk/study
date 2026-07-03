@@ -111,6 +111,16 @@ export function groundingFrom(topicId?: string): string {
   if (mnem) {
     parts.push(`서브노트 원본 두음신공(이것을 그대로 사용): ${mnem}`);
   }
+  // 섹션별 두음(라벨·키워드 매핑까지) — 설명의 '시험 포인트'에 반드시 반영되도록 명시.
+  if (Array.isArray(d.sections) && d.sections.length) {
+    const lines = d.sections
+      .filter((s) => s.mnemonic && s.keywords?.length)
+      .map((s) => `- [${s.label}] ${s.mnemonic} = ${s.keywords.join("·")}`);
+    if (lines.length)
+      parts.push(
+        `교재 두음신공(★설명·시험포인트에서 이 두음을 그대로 소개하라. 새 두음을 만들지 말 것★):\n${lines.join("\n")}`,
+      );
+  }
   const cmap = (d.conceptMap || "").trim();
   if (cmap) {
     parts.push(
