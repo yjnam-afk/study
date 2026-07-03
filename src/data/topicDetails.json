@@ -23766,19 +23766,58 @@
     ]
   },
   "net-43": {
-    "detail": "송수신자 간 데이터 전송 위해 Logical Address 지정·포워딩·라우팅을 수행하는 OSI 3계층.",
-    "related": "주소들을 어떻게 할당할 것인지.\n 패킷에 대한 통신경로 선택(라우팅), packet이라는 용어 사용함",
+    "detail": "[정의] 송·수신자 간 데이터 전송을 위해 Logical Address(논리주소)를 지정하고 포워딩·라우팅을 수행하는 OSI 3계층(패킷 단위).\n[프로토콜] ARP, IP, ICMP, IPsec, IGMP\n[기능] 포워딩, 라우팅\n[장비] 라우터, L3 Switch\n[표준] ISO/IEC 8208",
+    "related": "IP 주소체계 / 라우팅 프로토콜 / Transport(4) / Data Link(2)",
     "defKeywords": [
-      "송신자"
+      "논리주소 지정",
+      "포워딩",
+      "라우팅",
+      "패킷 단위",
+      "OSI 3계층"
     ],
     "featureKeywords": [
-      "포워딩",
-      "라우팅"
+      "ARP",
+      "IP",
+      "ICMP",
+      "IPsec",
+      "IGMP"
     ],
-    "applicationKeywords": [],
+    "applicationKeywords": [
+      "라우터",
+      "L3 Switch"
+    ],
     "plusKeywords": [],
-    "mnemonic": "",
-    "memo": "[프로토콜] ARP·IP·ICMP·IPsec·IGMP\n[기능] 포워딩·라우팅 [장비] 라우터·L3 Switch [표준] ISO/IEC 8208"
+    "mnemonic": "AIIII / 포라 / 라L",
+    "memo": "프로토콜: ARP·IP·ICMP·IPsec·IGMP (A와 I 4형제)\n기능 포라 (포워딩=다음 홉 전달 · 라우팅=경로 결정)\n장비: 라우터·L3 Switch [표준] ISO/IEC 8208\n[답안팁] 주소 할당 방식 + 통신경로 선택(라우팅), 단위는 packet — Data Link(frame)와 구분",
+    "sections": [
+      {
+        "label": "프로토콜",
+        "mnemonic": "AIIII",
+        "keywords": [
+          "ARP",
+          "IP",
+          "ICMP",
+          "IPsec",
+          "IGMP"
+        ]
+      },
+      {
+        "label": "기능",
+        "mnemonic": "포라",
+        "keywords": [
+          "포워딩",
+          "라우팅"
+        ]
+      },
+      {
+        "label": "장비",
+        "mnemonic": "라L",
+        "keywords": [
+          "라우터",
+          "L3 Switch"
+        ]
+      }
+    ]
   },
   "net-44": {
     "detail": "두 시스템 사이에서 오류 없이 프레임을 전송하는 OSI 2계층.",
