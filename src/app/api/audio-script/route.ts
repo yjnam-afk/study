@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
 
     const script = await cached(
       `audioscript:v2:${topic}:${grounding ? hashKey(grounding) : "-"}`,
-      30 * 86400,
+      90 * 86400,
       async () => {
         let out = await gen();
         if (!isComplete(out)) {
