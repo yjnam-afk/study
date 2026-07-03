@@ -244,7 +244,7 @@ export async function POST(req: NextRequest) {
     }
 
     const mp3b64 = await cached(
-      `tts:v2:${hashKey(script)}`,
+      `tts:v3:${hashKey(script)}`,
       90 * 86400,
       async () => {
         // 폴백 체인(전부 무료): Google(키 있으면) → Gemini(새 TTS 키 지원)
@@ -257,7 +257,11 @@ export async function POST(req: NextRequest) {
                 () => Promise<Buffer>,
               ][])
             : []),
-          ...(process.env.ELEVENLABS_API_KEY
+          // ElevenLabs: 무료 API는 영어 원어민 보이스뿐이라 한국어가 어색(섬찟)함.
+          // 한국어 보이스 ID를 명시(env)했을 때만 체인에 포함한다.
+          ...(process.env.ELEVENLABS_API_KEY &&
+          (process.env.ELEVENLABS_VOICE_HOST ||
+            process.env.ELEVENLABS_VOICE_EXPERT)
             ? ([["elevenlabs", () => synthesizeElevenLabs(script)]] as [
                 string,
                 () => Promise<Buffer>,

@@ -35935,24 +35935,64 @@
     "mnemonic": ""
   },
   "db-16": {
-    "detail": "[NoSQL] RDBMS 한계를 벗어나, 고용량의 비정형 데이터를 효율적으로 처리할 수 있는 구조와 유연성을 가진 분산DBMS\n[CAP이론] 분산시스템이 갖출 수 있는 일관성,가용성, 부분결함허용 3가지 특성 중 2가지만 선택 가능하다는이론\nCAP(일관성(Consistency), 가용성(Availability), 단절내성(Partition Tolerance))\nBASE(Basically Available, Soft state, Eventually Consistency) 속성\n[모델구조] Key-Value 모델, 열 지향 모델, 문서 데이터베이스 모델, 그래프 모델\n[모델링패턴] 비정규화, Aggregation, Application Side Join, Atomic Aggregate, Index Table Composite Key Table\n\n설계(모델링) 절차 (파리모기선적하) - \n도메인 모델 파악 -> 쿼리 결과 디자인 -> 데이터 모델링 -> 기능 최적화 -> 후보 NOSQL 선정 및 테스트 -> 데이터 모델 최적화 -> 하드웨어 디자인\n모델 (키큰(컬)도그순) 및 사례(그네 카산할배 도코몽 키다리 순아메)",
-    "related": "Big Data, MongoDB",
+    "detail": "[정의] RDBMS 한계를 벗어나 고용량 비정형 데이터를 효율적으로 처리하는 구조와 유연성을 가진 분산 DBMS.\n[CAP이론] 분산시스템은 일관성·가용성·단절내성 3가지 중 2가지만 선택 가능하다는 이론\n[BASE] Basically Available, Soft state, Eventually Consistency\n[모델구조] Key-Value, 컬럼(열지향), 도큐먼트(문서), 그래프, 순차\n[모델링패턴] 비정규화, Aggregation, Application Side Join, Atomic Aggregate, Index Table, Composite Key Table\n[설계절차] 도메인모델 파악 > 쿼리결과 디자인 > 데이터 모델링 > 기능 최적화 > 후보 NoSQL 선정·테스트 > 데이터모델 최적화 > 하드웨어 디자인",
+    "related": "Big Data / MongoDB / PACELC",
     "defKeywords": [
-      "RDBMS 한계 극복",
-      "비정형·대용량 데이터",
+      "비정형 데이터",
       "분산 DBMS",
+      "수평 확장",
       "유연한 스키마"
     ],
     "featureKeywords": [
-      "Key-Value 모델",
-      "Column(열지향) 모델",
-      "Document(문서) 모델",
-      "Graph(그래프) 모델"
+      "일관성",
+      "가용성",
+      "단절내성"
     ],
-    "applicationKeywords": [],
+    "applicationKeywords": [
+      "Key-Value",
+      "컬럼형",
+      "도큐먼트",
+      "그래프",
+      "순차형"
+    ],
     "plusKeywords": [],
-    "mnemonic": "키컬도그",
-    "memo": "파리모기선적하\n키컬도그순\n그네 카산할배 도코몽 키다리 순아메"
+    "mnemonic": "CAP / 파리모기선적하 / 키컬도그순",
+    "memo": "파리모기선적하 (파악·쿼리·모델링·기능·선정·최적화·하드웨어 — 설계 절차 7단계)\n키컬도그순 (Key-Value·컬럼·도큐먼트·그래프·순차)\n사례: 키다리(키밸류 Redis·DynamoDB) · 카산할배(컬럼 Cassandra·HBase) · 도코몽(도큐먼트 CouchDB·MongoDB) · 그네(그래프 Neo4j) · 순아메\nBASE: Basically Available · Soft state · Eventually Consistency\n[패턴] 비정규화·Aggregation·App Side Join·Atomic Aggregate·Index Table·Composite Key",
+    "sections": [
+      {
+        "label": "CAP 이론",
+        "mnemonic": "CAP",
+        "keywords": [
+          "일관성(Consistency)",
+          "가용성(Availability)",
+          "단절내성(Partition Tolerance)"
+        ]
+      },
+      {
+        "label": "설계(모델링) 절차",
+        "mnemonic": "파리모기선적하",
+        "keywords": [
+          "도메인모델 파악",
+          "쿼리결과 디자인",
+          "데이터 모델링",
+          "기능 최적화",
+          "후보 NoSQL 선정",
+          "데이터모델 최적화",
+          "하드웨어 디자인"
+        ]
+      },
+      {
+        "label": "모델 유형",
+        "mnemonic": "키컬도그순",
+        "keywords": [
+          "Key-Value",
+          "컬럼형(열지향)",
+          "도큐먼트(문서)",
+          "그래프",
+          "순차형"
+        ]
+      }
+    ]
   },
   "db-17": {
     "detail": "장애상황(Parttion): P+A, P+C\n정상상황(Else): E+L, E+C",
