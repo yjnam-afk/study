@@ -21,11 +21,11 @@ export async function POST(req: NextRequest) {
 
     const grounding = buildGrounding({ topicId, topicTitle: topic });
 
-    // 대사 형식이 깨지면(마크다운 유입·너무 짧음) 캐시하지 않는다.
+    // 완성 검증: [끝] 마커가 없으면 "중간에 잘린" 대본 → 캐시 금지·재시도.
     const isComplete = (t: string): boolean => {
-      if (!t || t.length < 300) return false;
+      if (!t || t.length < 500) return false;
       const turns = (t.match(/^(진행자|전문가)\s*[:：]/gm) || []).length;
-      return turns >= 6;
+      return turns >= 8 && /\[끝\]\s*$/.test(t.trim());
     };
 
     const gen = () =>
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       });
 
     const script = await cached(
-      `audioscript:v1:${topic}:${grounding ? hashKey(grounding) : "-"}`,
+      `audioscript:v2:${topic}:${grounding ? hashKey(grounding) : "-"}`,
       30 * 86400,
       async () => {
         let out = await gen();
@@ -59,7 +59,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json({ script: sanitizeKo(script) });
+    // [끝] 마커는 검증용 — 화면·낭독에는 내보내지 않는다.
+    return NextResponse.json({
+      script: sanitizeKo(script).replace(/\[끝\]\s*$/, "").trim(),
+    });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;
     return NextResponse.json(
