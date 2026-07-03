@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
+import ShareButton from "@/components/ShareButton";
 import AudioLecture from "@/components/AudioLecture";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
@@ -165,11 +166,16 @@ function ExplainInner() {
         {error && <ErrorBox message={error} />}
         {result && (
           <>
-            {/* 오디오 강의 — 두음신공 페이지와 동일하게 결과 상단(카드 밖)에 배치 */}
-            <div className="mb-4">
+            {/* 오디오 강의·공유 — 두음신공 페이지와 동일하게 결과 상단(카드 밖) */}
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
               <AudioLecture
                 topic={topic.trim()}
                 topicId={topics.find((x) => x.title === topic.trim())?.id}
+              />
+              <ShareButton
+                title={`[스파르타 소설클럽] ${topic.trim()} 설명`}
+                text={`💡 ${topic.trim()} — 이해하기 쉬운 설명`}
+                url={`https://study-teal-eight.vercel.app/explain?topic=${encodeURIComponent(topic.trim())}&auto=1`}
               />
             </div>
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
