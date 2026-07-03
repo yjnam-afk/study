@@ -169,9 +169,11 @@ export default function AudioLecture({
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
         const blob = new Blob([bytes], { type: data.mime || "audio/mpeg" });
         audioUrlRef.current = URL.createObjectURL(blob);
-      } catch {
+      } catch (srvErr) {
         // 서버 신경망 TTS 실패(클라우드 IP 차단 등) →
         // 브라우저에서 Edge 신경망에 "직접" 연결(일반 IP는 차단 안 됨).
+        const srvDetail =
+          srvErr instanceof Error ? srvErr.message : "서버 TTS 실패";
         try {
           setLoadingMsg("목소리 만드는 중… (고품질 직결)");
           const blob = await edgeSynthesizeTurnsBrowser(list, (d, tot) =>
@@ -185,9 +187,8 @@ export default function AudioLecture({
             setError(e2 instanceof Error ? e2.message : "음성 재생 불가");
             return;
           }
-          setNotice(
-            "고품질 음성 미설정 — 기본 음성으로 재생합니다. (설정 > 무료 TTS 키 등록 시 사람 목소리로 나와요)",
-          );
+          // 실패 사유를 그대로 노출해 원인 파악이 가능하게 한다.
+          setNotice(`기본 음성으로 재생합니다 — 사유: ${srvDetail}`);
           setPlaying(true);
           playFallback(list, 0);
           return;

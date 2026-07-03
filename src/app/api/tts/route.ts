@@ -223,6 +223,18 @@ async function synthesizeGemini(script: string): Promise<Buffer> {
   return pcmToMp3(Buffer.from(part.inlineData.data, "base64"), rate);
 }
 
+/** 진단용: 어떤 TTS 키가 서버에 "실제로" 반영돼 있는지 확인(값은 노출 안 함). */
+export async function GET() {
+  return NextResponse.json({
+    providers: {
+      elevenlabs: !!process.env.ELEVENLABS_API_KEY,
+      google_tts: !!process.env.GOOGLE_TTS_API_KEY,
+      gemini_tts_key: !!process.env.GEMINI_TTS_API_KEY,
+      gemini: !!process.env.GEMINI_API_KEY,
+    },
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { script } = (await req.json()) as { script: string };
