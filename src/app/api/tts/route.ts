@@ -40,6 +40,46 @@ async function synthesizeEdge(script: string): Promise<Buffer> {
   return Buffer.concat(parts);
 }
 
+/**
+ * Google Cloud TTS(Neural2) — 월 100만 자 무료, 한국어 음질 최상급.
+ * GOOGLE_TTS_API_KEY 환경변수만 등록하면 1순위로 사용된다.
+ * 진행자 ko-KR-Neural2-A(여), 전문가 ko-KR-Neural2-C(남).
+ */
+async function synthesizeGoogle(script: string): Promise<Buffer> {
+  const apiKey = process.env.GOOGLE_TTS_API_KEY;
+  if (!apiKey) throw new Error("GOOGLE_TTS_API_KEY 미설정");
+  const turns = parseTurns(script);
+  if (!turns.length) throw new Error("대본에 대사가 없습니다.");
+  const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
+  const parts: Buffer[] = [];
+  for (const t of turns) {
+    const isHost = t.speaker === "진행자";
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        input: { text: t.text },
+        voice: {
+          languageCode: "ko-KR",
+          name: isHost ? "ko-KR-Neural2-A" : "ko-KR-Neural2-C",
+        },
+        audioConfig: {
+          audioEncoding: "MP3",
+          speakingRate: isHost ? 1.08 : 1.02,
+        },
+      }),
+    });
+    if (!res.ok) {
+      const detail = await res.text();
+      throw new Error(`Google TTS (${res.status}): ${detail.slice(0, 200)}`);
+    }
+    const data = await res.json();
+    if (!data.audioContent) throw new Error("Google TTS 응답에 오디오 없음");
+    parts.push(Buffer.from(data.audioContent as string, "base64"));
+  }
+  return Buffer.concat(parts);
+}
+
 const TTS_MODEL = process.env.GEMINI_TTS_MODEL || "gemini-2.5-flash-preview-tts";
 
 function pcmToMp3(pcm: Buffer, sampleRate: number): Buffer {
@@ -115,18 +155,26 @@ export async function POST(req: NextRequest) {
       `tts:v2:${hashKey(script)}`,
       30 * 86400,
       async () => {
-        // Edge(무료·고품질) 먼저, 안 되면 Gemini.
+        // 1) Google Cloud TTS(키 있으면 최우선·최고품질) → 2) Edge → 3) Gemini.
+        const errors: string[] = [];
+        if (process.env.GOOGLE_TTS_API_KEY) {
+          try {
+            return (await synthesizeGoogle(script)).toString("base64");
+          } catch (e) {
+            errors.push(e instanceof Error ? e.message : "google 실패");
+          }
+        }
         try {
           return (await synthesizeEdge(script)).toString("base64");
         } catch (e) {
-          const edgeErr = e instanceof Error ? e.message : "edge 실패";
-          try {
-            return (await synthesizeGemini(script)).toString("base64");
-          } catch (g) {
-            const gemErr = g instanceof Error ? g.message : "gemini 실패";
-            throw new Error(`${edgeErr} / ${gemErr}`);
-          }
+          errors.push(e instanceof Error ? e.message : "edge 실패");
         }
+        try {
+          return (await synthesizeGemini(script)).toString("base64");
+        } catch (e) {
+          errors.push(e instanceof Error ? e.message : "gemini 실패");
+        }
+        throw new Error(errors.join(" / "));
       },
       (v) => typeof v === "string" && v.length > 2000 && v.length < 1_250_000,
     );
