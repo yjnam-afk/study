@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
         system: TUTOR_SYSTEM,
         user: explainPrompt(topic, lv, grounding),
         temperature: 0.5,
+        valid: isComplete, // 잘린 출력이면 다음 제공자로 폴백
       });
 
     const text = await cached(

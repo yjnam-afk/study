@@ -23,6 +23,9 @@ type GenOpts = {
   model?: string;
   /** 이 호출의 응답 토큰 상한(모델별 분당 한도 TPM에 맞춰 조정). */
   maxTokens?: number;
+  /** 완성 검증. 통과 못 하면 "그 제공자 실패"로 보고 다음 제공자로 폴백한다.
+   *  (약한 모델이 잘린 출력을 내며 체인을 가로채는 문제 방지) */
+  valid?: (text: string) => boolean;
 };
 
 /**
@@ -126,8 +129,16 @@ function providerChain(): ChainEntry[] {
 
   // 2) (자동 폴백) 키가 설정된 모든 무료 제공자를 체인 뒤에 자동으로 덧붙인다.
   //    → AI_PROVIDERS를 일일이 맞추지 않아도, 키만 있으면 한도 소진 시 다음 제공자로 넘어간다.
-  if (groqKeys().length) addProvider("groq"); // 여러 모델 × 여러 키 = 한도 폭 ↑
-  if (process.env.CEREBRAS_API_KEY) addProvider("cerebras"); // 무료 한도가 큼(일 100만 토큰급)
+  if (groqKeys().length) {
+    const models = groqModels();
+    add("groq", models[0], groqBudget(models[0])); // 주력(70b) 먼저
+    // Cerebras(70b·일 100만 토큰급)를 Groq 꼬마 모델들보다 먼저 —
+    // 꼬마 모델이 잘린 출력으로 체인을 가로채는 것 방지.
+    if (process.env.CEREBRAS_API_KEY) addProvider("cerebras");
+    for (const m of models.slice(1)) add("groq", m, groqBudget(m));
+  } else if (process.env.CEREBRAS_API_KEY) {
+    addProvider("cerebras");
+  }
   if (process.env.GEMINI_API_KEY) {
     // Gemini 무료 등급은 일일 한도가 Groq보다 훨씬 커서 강력한 폴백.
     addProvider("gemini");
@@ -173,7 +184,13 @@ async function runChainOnce(opts: GenOpts): Promise<
       continue;
     }
     try {
-      return { ok: true, text: sanitizeOutput(await fn({ ...opts, model, maxTokens })) };
+      const text = sanitizeOutput(await fn({ ...opts, model, maxTokens }));
+      if (opts.valid && !opts.valid(text)) {
+        allConfigError = false;
+        errors.push(`${label}: 불완전 출력(잘림) → 다음 제공자로`);
+        continue;
+      }
+      return { ok: true, text };
     } catch (err) {
       if (!(err instanceof AIConfigError)) allConfigError = false;
       errors.push(`${label}: ${err instanceof Error ? err.message : String(err)}`);

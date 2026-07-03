@@ -33,6 +33,7 @@ export async function POST(req: NextRequest) {
         system: TUTOR_SYSTEM,
         user: audioScriptPrompt(topic, grounding),
         temperature: 0.7,
+        valid: isComplete, // 잘린 대본이면 다음 제공자로 폴백
       });
 
     const script = await cached(
