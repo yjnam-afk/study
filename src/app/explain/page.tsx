@@ -164,16 +164,18 @@ function ExplainInner() {
         {loading && <Spinner label="이해하기 쉽게 정리하고 있습니다…" />}
         {error && <ErrorBox message={error} />}
         {result && (
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+          <>
+            {/* 오디오 강의 — 두음신공 페이지와 동일하게 결과 상단(카드 밖)에 배치 */}
             <div className="mb-4">
-              {/* NotebookLM식 오디오 강의 — AI가 대사를 새로 써서 두 목소리로 설명 */}
               <AudioLecture
                 topic={topic.trim()}
                 topicId={topics.find((x) => x.title === topic.trim())?.id}
               />
             </div>
-            <Markdown>{result}</Markdown>
-          </article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+              <Markdown>{result}</Markdown>
+            </article>
+          </>
         )}
       </div>
     </div>
