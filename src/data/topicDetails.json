@@ -1215,32 +1215,66 @@
     "memo": "전설전운지\n쓰데이피씨알씨\n수재가용보연"
   },
   "gj-44": {
-    "detail": "[정의] 비즈니스 영속성을 위해 안정적인 서비스지원과 서비스 이행 및 제공, ICT 인프라 관리의 Best Pratice 모음집\n\n4차원 모델 - 정파조가\n정보 및 기술, 파트너-공급업체, 조직과 사람, 가치흐름과 프로세스\n\n[SVS(Service Value System)] 가거 S프컨 - 거실 S 지도 지속\nDemand >(Guiding principles,(Gervernance, SVC(Service Value Chain), practices, Continual improvement> Value\n\n[SVC] 플인디 오딜프임 - 개수계획약설\nPlan [engage > design/Trasition > obtain/build > delivery & Support > product/Service] improve\n4 Demensions, 3 Practice group and 34개의 practices\n\n[Practice group] 제아컨 서어비 테디인\n- General Management\n: Architecture Management, Continual Improvement\n- Service Management\n: Availability Management, Business Analysis\n- Technical Management\n: Deployment Management, infrastructure and Platform Management\n\n* Guiding Principle(Waste를 줄이는 원칙)",
-    "related": "SVS(Service Value System)\nSVC(Service Value Chain)",
+    "detail": "[정의] 비즈니스 영속성을 위해 안정적인 서비스 지원·이행·제공과 ICT 인프라 관리의 Best Practice 모음집.\n[4차원 모델] 정보 및 기술, 파트너-공급업체, 조직과 사람, 가치흐름과 프로세스\n[SVS] Demand > (지도원칙, 거버넌스, SVC, Practices, 지속적 개선) > Value\n[SVC] Plan > Engage > Design/Transition > Obtain/Build > Deliver&Support > Improve\n4 Dimensions, 3 Practice group, 34 practices\n[Practice group] General(아키텍처·지속개선) / Service(가용성·비즈니스분석) / Technical(배포·인프라플랫폼)",
+    "related": "SVS(Service Value System) / SVC(Service Value Chain) / ITIL v3 / ITSM",
     "defKeywords": [
-      "Service Value System",
-      "Service Value Chain",
-      "정보 및 기술",
-      "파트너-공급업체",
-      "조직과 사람",
-      "가치흐름과 프로세스",
-      "Demand >",
-      "practices"
+      "비즈니스 영속성",
+      "서비스 지원·이행",
+      "ICT 인프라 관리",
+      "Best Practice 모음"
     ],
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "정파조가",
-    "memo": "정파조가 (정보와 기술·파트너와 공급자·조직과 인력·가치흐름과 프로세스)",
+    "mnemonic": "정파조가 / 거실S지도지속 / 개수계획약설 / 제아컨서어비테디인",
+    "memo": "정파조가 (정보기술·파트너·조직인력·가치흐름)\n거실S지도지속 (거버넌스·실천·SVC·지도원칙·지속개선 — SVS: Demand→Value)\n개수계획약설 (개선·수요·계획·획득구축·약속참여·설계전환 + 전달·지원(Deliver&Support))\n제아컨 서어비 테디인 (General-아키텍처-지속개선 / Service-가용성-비즈분석 / Technical-배포-인프라)\n[구성] 4 Dimensions · 3 Practice Group · 34 Practices · Guiding Principle=Waste 줄이는 원칙",
     "sections": [
       {
-        "label": "ITIL4 4차원",
+        "label": "4차원 모델",
         "mnemonic": "정파조가",
         "keywords": [
           "정보와 기술",
           "파트너와 공급자",
           "조직과 인력",
           "가치흐름과 프로세스"
+        ]
+      },
+      {
+        "label": "SVS 구성 5",
+        "mnemonic": "거실S지도지속",
+        "keywords": [
+          "거버넌스",
+          "실천(Practices)",
+          "SVC(가치사슬)",
+          "지도원칙(Guiding Principles)",
+          "지속적 개선"
+        ]
+      },
+      {
+        "label": "SVC 활동 6",
+        "mnemonic": "개수계획약설",
+        "keywords": [
+          "개선(Improve)",
+          "수요(Demand→Value)",
+          "계획(Plan)",
+          "획득·구축(Obtain/Build)",
+          "약속·참여(Engage)",
+          "설계·전환(Design/Transition)"
+        ]
+      },
+      {
+        "label": "Practice 그룹",
+        "mnemonic": "제아컨서어비테디인",
+        "keywords": [
+          "General Mgmt(제너럴)",
+          "Architecture Mgmt",
+          "Continual Improvement",
+          "Service Mgmt",
+          "Availability Mgmt",
+          "Business Analysis",
+          "Technical Mgmt",
+          "Deployment Mgmt",
+          "Infra·Platform Mgmt"
         ]
       }
     ]
