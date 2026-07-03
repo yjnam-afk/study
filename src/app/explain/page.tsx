@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
-import SpeakButton, { explainScript } from "@/components/SpeakButton";
+import AudioLecture from "@/components/AudioLecture";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 
@@ -162,11 +162,11 @@ export default function ExplainPage() {
         {error && <ErrorBox message={error} />}
         {result && (
           <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-            <div className="mb-3 flex justify-end">
-              {/* 전체를 그대로 읽지 않고 한 줄 요약·쉬운 비유만 골라 읽는다. */}
-              <SpeakButton
-                getText={() => explainScript(result)}
-                label="요약 듣기"
+            <div className="mb-4">
+              {/* NotebookLM식 오디오 강의 — AI가 대사를 새로 써서 두 목소리로 설명 */}
+              <AudioLecture
+                topic={topic.trim()}
+                topicId={topics.find((x) => x.title === topic.trim())?.id}
               />
             </div>
             <Markdown>{result}</Markdown>

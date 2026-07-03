@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
-import SpeakButton, { mnemonicScript } from "@/components/SpeakButton";
+import AudioLecture from "@/components/AudioLecture";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
 import topics from "@/data/topics.json";
 import { loadReview, saveReview, markReviewed } from "@/lib/storage";
@@ -254,35 +254,14 @@ export default function MnemonicPage() {
               ) : (
                 <span />
               )}
-              <div className="flex items-center gap-2">
-                <SpeakButton
-                  label="듣기"
-                  getText={() =>
-                    // 원문 낭독이 아니라 "두음 → 글자별 풀이 → 복창" 학습 대본으로 읽는다.
-                    mnemonicScript({
-                      topic: set.topic,
-                      sections: subnote?.sections?.length
-                        ? subnote.sections
-                        : [
-                            {
-                              label: "서론 두음",
-                              mnemonic: set.intro.mnemonic,
-                              keywords: set.intro.items.map((i) => i.term),
-                            },
-                            {
-                              label: "본론 두음",
-                              mnemonic: set.body.mnemonic,
-                              keywords: set.body.items.map((i) => i.term),
-                            },
-                          ],
-                    })
-                  }
-                />
-                <ShareButton
-                  title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
-                  text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
-                />
-              </div>
+              <ShareButton
+                title={`[스파르타 소설클럽] ${set.topic} 두음신공`}
+                text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
+              />
+            </div>
+            {/* NotebookLM식 오디오 강의 — AI가 팟캐스트 대사를 만들어 두 목소리로 설명 */}
+            <div className="mb-4">
+              <AudioLecture topic={set.topic} topicId={topicId} />
             </div>
             {subnote?.related && subnote.related.length > 0 && (
               <div className="mb-4 rounded-2xl border border-sky-200 bg-sky-50 p-4">
