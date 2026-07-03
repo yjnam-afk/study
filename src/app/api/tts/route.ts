@@ -80,6 +80,48 @@ async function synthesizeGoogle(script: string): Promise<Buffer> {
   return Buffer.concat(parts);
 }
 
+/**
+ * Pollinations 무료 TTS — 무가입·무키. OpenAI 신경망 목소리(nova/onyx)로
+ * 한국어를 자연스럽게 읽는다. 커뮤니티 무료 프록시라 간헐 실패 가능 → 폴백 체인으로 흡수.
+ */
+async function synthesizePollinations(script: string): Promise<Buffer> {
+  const turns = parseTurns(script);
+  if (!turns.length) throw new Error("대본에 대사가 없습니다.");
+
+  const synthOne = async (t: Turn): Promise<Buffer> => {
+    const isHost = t.speaker === "진행자";
+    const voice = isHost ? "nova" : "onyx";
+    const prompt =
+      "다음 문장을 한 글자도 바꾸지 말고, 자연스러운 한국어 발음으로 그대로 읽어줘: " +
+      t.text;
+    const url = `https://text.pollinations.ai/${encodeURIComponent(prompt)}?model=openai-audio&voice=${voice}`;
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), 25_000);
+    try {
+      const res = await fetch(url, { signal: ctl.signal });
+      const type = res.headers.get("content-type") || "";
+      if (!res.ok || !type.includes("audio")) {
+        const detail = type.includes("audio") ? "" : (await res.text()).slice(0, 120);
+        throw new Error(`Pollinations (${res.status}) ${detail}`);
+      }
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length < 1000) throw new Error("Pollinations 빈 오디오");
+      return buf;
+    } finally {
+      clearTimeout(timer);
+    }
+  };
+
+  // 턴이 많으면 60초 안에 끝나도록 4개씩 병렬 합성(순서는 인덱스로 보존).
+  const parts: Buffer[] = new Array(turns.length);
+  for (let i = 0; i < turns.length; i += 4) {
+    const batch = turns.slice(i, i + 4);
+    const bufs = await Promise.all(batch.map(synthOne));
+    bufs.forEach((b, j) => (parts[i + j] = b));
+  }
+  return Buffer.concat(parts);
+}
+
 const TTS_MODEL = process.env.GEMINI_TTS_MODEL || "gemini-2.5-flash-preview-tts";
 
 function pcmToMp3(pcm: Buffer, sampleRate: number): Buffer {
@@ -98,7 +140,9 @@ function pcmToMp3(pcm: Buffer, sampleRate: number): Buffer {
 
 /** Gemini 멀티스피커(프로젝트에 TTS 권한이 있을 때만 성공). */
 async function synthesizeGemini(script: string): Promise<Buffer> {
-  const apiKey = process.env.GEMINI_API_KEY;
+  // 기존 프로젝트가 TTS 접근 거부(403)라, 새 무료 키를 GEMINI_TTS_API_KEY로
+  // 따로 등록하면 그 키를 우선 사용한다(본문 생성 키와 분리).
+  const apiKey = process.env.GEMINI_TTS_API_KEY || process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error("GEMINI_API_KEY 미설정");
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${apiKey}`;
   const res = await fetch(url, {
@@ -155,24 +199,26 @@ export async function POST(req: NextRequest) {
       `tts:v2:${hashKey(script)}`,
       30 * 86400,
       async () => {
-        // 1) Google Cloud TTS(키 있으면 최우선·최고품질) → 2) Edge → 3) Gemini.
+        // 폴백 체인(전부 무료): Google(키 있으면) → Gemini(새 TTS 키 지원)
+        // → Pollinations(무가입) → Edge. 되는 첫 번째 것을 사용.
         const errors: string[] = [];
-        if (process.env.GOOGLE_TTS_API_KEY) {
+        const providers: [string, () => Promise<Buffer>][] = [
+          ...(process.env.GOOGLE_TTS_API_KEY
+            ? ([["google", () => synthesizeGoogle(script)]] as [
+                string,
+                () => Promise<Buffer>,
+              ][])
+            : []),
+          ["gemini", () => synthesizeGemini(script)],
+          ["pollinations", () => synthesizePollinations(script)],
+          ["edge", () => synthesizeEdge(script)],
+        ];
+        for (const [name, fn] of providers) {
           try {
-            return (await synthesizeGoogle(script)).toString("base64");
+            return (await fn()).toString("base64");
           } catch (e) {
-            errors.push(e instanceof Error ? e.message : "google 실패");
+            errors.push(`${name}: ${e instanceof Error ? e.message : "실패"}`);
           }
-        }
-        try {
-          return (await synthesizeEdge(script)).toString("base64");
-        } catch (e) {
-          errors.push(e instanceof Error ? e.message : "edge 실패");
-        }
-        try {
-          return (await synthesizeGemini(script)).toString("base64");
-        } catch (e) {
-          errors.push(e instanceof Error ? e.message : "gemini 실패");
         }
         throw new Error(errors.join(" / "));
       },
