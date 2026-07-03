@@ -29,7 +29,8 @@ export async function POST(req: NextRequest) {
     const isComplete = (t: string): boolean => {
       if (!t) return false;
       const headers = (t.match(/^##\s/gm) || []).length;
-      return t.length >= 400 && headers >= 4;
+      // [끝] 마커가 없으면 밑이 잘린 출력 → 캐시 금지·재시도.
+      return t.length >= 400 && headers >= 4 && /\[끝\]\s*$/.test(t.trim());
     };
 
     const gen = () =>
@@ -40,7 +41,7 @@ export async function POST(req: NextRequest) {
       });
 
     const text = await cached(
-      `explain:v6:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
+      `explain:v7:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
       14 * 86400,
       async () => {
         // 1차 생성이 불완전(잘린 한 줄 요약 등)하면 한 번 더 시도.
@@ -65,7 +66,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json({ explanation: sanitizeKo(text) });
+    // [끝] 마커는 검증용 — 화면에는 내보내지 않는다.
+    return NextResponse.json({
+      explanation: sanitizeKo(text).replace(/\[끝\]\s*$/, "").trim(),
+    });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;
     return NextResponse.json(
