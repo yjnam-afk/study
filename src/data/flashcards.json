@@ -1196,23 +1196,23 @@
   "definition": "특정 SW 개발 사업에 대한 상세 분석과 제안요청서(RFP)를 마련하기 위해 기능점수 도출 가능수준까지 요건을 기술하여 구축전략 및 이행 전략 수립하는 활동",
   "sections": [
    {
-    "label": "ISMP 수행단계 5",
+    "label": "수행단계 5",
     "mnemonic": "착수요정이",
     "keywords": [
-     "프로젝트 착수",
-     "방향성 수립",
-     "요건 분석",
-     "구조·요건 정의",
+     "착수(프로젝트·참여자 결정)",
+     "수립(방향성)",
+     "요건 분석(업무·정보기술)",
+     "정의(구조·요건)",
      "이행방안 수립"
     ]
    }
   ],
   "mnemonic": "착수요정이",
   "keywords": [
-   "프로젝트 착수",
-   "방향성 수립",
-   "요건 분석",
-   "구조·요건 정의",
+   "착수(프로젝트·참여자 결정)",
+   "수립(방향성)",
+   "요건 분석(업무·정보기술)",
+   "정의(구조·요건)",
    "이행방안 수립"
   ]
  },
@@ -1640,6 +1640,17 @@
      "프로세스",
      "리더십"
     ]
+   },
+   {
+    "label": "5대 도메인",
+    "mnemonic": "전가위자성",
+    "keywords": [
+     "전략적 연계(ISP·EA)",
+     "가치 제공(ERP·CRM·SCM)",
+     "위험관리(DRS·BCP·ERM)",
+     "자원관리(ITAM·ITSM)",
+     "성과측정(IT BSC·ROI·PPM)"
+    ]
    }
   ],
   "mnemonic": "조프리",
@@ -1722,6 +1733,17 @@
      "정보관리",
      "정보보안"
     ]
+   },
+   {
+    "label": "주요 요구사항",
+    "mnemonic": "공보보내책",
+    "keywords": [
+     "공개(데이터)",
+     "보존",
+     "보호",
+     "내부통제",
+     "책임성"
+    ]
    }
   ],
   "mnemonic": "개정보",
@@ -1799,6 +1821,34 @@
    "CI",
    "CD",
    "린프로세스"
+  ]
+ },
+ {
+  "id": "gj-118",
+  "title": "AI + 금융",
+  "category": "경영전략",
+  "importance": "상",
+  "definition": "AI(Artificial Intelligence) 기술발전에 따른 금융생태계 변화를 설명하시오.(117회 기출)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "프개범지신",
+    "keywords": [
+     "프로세스 간소화",
+     "개인화 서비스",
+     "범위 확장",
+     "지능적 의사결정",
+     "신시장 진출"
+    ]
+   }
+  ],
+  "mnemonic": "프개범지신",
+  "keywords": [
+   "프로세스 간소화",
+   "개인화 서비스",
+   "범위 확장",
+   "지능적 의사결정",
+   "신시장 진출"
   ]
  },
  {
@@ -1956,6 +2006,32 @@
   ]
  },
  {
+  "id": "gj-133",
+  "title": "오픈 플랫폼",
+  "category": "경영전략",
+  "importance": "상",
+  "definition": "I. 오픈 플랫폼(Open Platform)의 개념",
+  "sections": [
+   {
+    "label": "특징 4",
+    "mnemonic": "오확수적",
+    "keywords": [
+     "오픈API",
+     "확장성(Extensibility)",
+     "수용성(Adoptability)",
+     "적응성(Adaptability)"
+    ]
+   }
+  ],
+  "mnemonic": "오확수적",
+  "keywords": [
+   "오픈API",
+   "확장성(Extensibility)",
+   "수용성(Adoptability)",
+   "적응성(Adaptability)"
+  ]
+ },
+ {
   "id": "gj-134",
   "title": "표준특허, FRAND 특허",
   "category": "경영전략",
@@ -2011,20 +2087,64 @@
   "definition": "환경 (Environment), 사회 (Social), 지배구조 ( 를 뜻하는 말로 기업경영에서 과거 에는 재무적 성과만을 평가하던 것을 벗어나 친환경 , 사회적 책임 , 지배구조",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "환사지",
+    "label": "E 친환경",
+    "mnemonic": "온에",
     "keywords": [
-     "환경(Environment)",
-     "사회(Social)",
-     "지배구조(Governance)"
+     "온실가스·폐기물 감소",
+     "에너지 사용 절감"
+    ]
+   },
+   {
+    "label": "S 사회적 책임",
+    "mnemonic": "근정공",
+    "keywords": [
+     "근로조건(안전·정당 대가)",
+     "정보보안(프라이버시)",
+     "공정(편향 제거·공공성)"
+    ]
+   },
+   {
+    "label": "G 지배구조",
+    "mnemonic": "경평이",
+    "keywords": [
+     "경영진의 역할",
+     "평가체계(ESG) 구축",
+     "이해관계자 참여"
     ]
    }
   ],
-  "mnemonic": "환사지",
+  "mnemonic": "온에",
   "keywords": [
-   "환경(Environment)",
-   "사회(Social)",
-   "지배구조(Governance)"
+   "온실가스·폐기물 감소",
+   "에너지 사용 절감"
+  ]
+ },
+ {
+  "id": "gj-144",
+  "title": "경제성 평가 기법",
+  "category": "경영전략",
+  "importance": "상",
+  "definition": "TCO, NPV, PP, 사전, 사후 평가 제도, Benefit Cost Ratio, IT-ROI",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "TNPBI",
+    "keywords": [
+     "TCO",
+     "NPV",
+     "PP(회수기간)",
+     "BCR",
+     "IT-ROI"
+    ]
+   }
+  ],
+  "mnemonic": "TNPBI",
+  "keywords": [
+   "TCO",
+   "NPV",
+   "PP(회수기간)",
+   "BCR",
+   "IT-ROI"
   ]
  },
  {
@@ -2239,6 +2359,30 @@
    "분석",
    "인공지능",
    "실무 교육 지원"
+  ]
+ },
+ {
+  "id": "gj-176",
+  "title": "디지털 전환(DX)",
+  "category": "경영전략",
+  "importance": "상",
+  "definition": "디지털트랜스포메이션(Digital Transformation) 의 정의",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "비고프",
+    "keywords": [
+     "비즈니스 모델 혁신",
+     "고객경험 융합",
+     "프로세스 디지털화"
+    ]
+   }
+  ],
+  "mnemonic": "비고프",
+  "keywords": [
+   "비즈니스 모델 혁신",
+   "고객경험 융합",
+   "프로세스 디지털화"
   ]
  },
  {
