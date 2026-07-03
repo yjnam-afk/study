@@ -19105,7 +19105,7 @@
       "Multi-Touch",
       "Multi-Model"
     ],
-    "mnemonic": "H추비 / SSH햅비웹Q / HMM",
+    "mnemonic": "H추비 / SSH햅비웹Q / HMM / 유사감",
     "sections": [
       {
         "label": "UX 관정 디자인 구성요소",
@@ -19137,9 +19137,18 @@
           "Multi-Touch",
           "Multi-Model"
         ]
+      },
+      {
+        "label": "UX 3요소",
+        "mnemonic": "유사감",
+        "keywords": [
+          "유용성",
+          "사용성",
+          "감성"
+        ]
       }
     ],
-    "memo": "H추비 (HCI·추구·비)\nSSH햅비웹Q (SW-RIA·Search2.0·HCI-멀티모달·햅틱·비즈니스-CEM·웹마이닝·QoE)\nHMM (Haptic·Multi-Touch·Multi-Model)"
+    "memo": "H추비 (HCI·추구·비)\nSSH햅비웹Q (SW-RIA·Search2.0·HCI-멀티모달·햅틱·비즈니스-CEM·웹마이닝·QoE)\nHMM (Haptic·Multi-Touch·Multi-Model)\n유사감 (유용성·사용성·감성)"
   },
   "ds-237": {
     "detail": "사람과 접하는 면",
@@ -20084,7 +20093,21 @@
       "모사 디지털 트윈"
     ],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "모관모연자",
+    "sections": [
+      {
+        "label": "디지털트윈 5단계",
+        "mnemonic": "모관모연자",
+        "keywords": [
+          "모사",
+          "관제",
+          "모의",
+          "연합",
+          "자율"
+        ]
+      }
+    ],
+    "memo": "모관모연자 (모사·관제·모의·연합·자율)"
   },
   "ds-288": {
     "detail": "[정의] 사용자가 PC 및 모바일 화면에서 수행하는 정형화되고 반복적인 업무를 사람의 작업을 모방하는 smart SW가 대신 수행하는 디지털 프로세스 혁신\n[특징] 비용절감, 업무생산성(24시간), 업무 품질(human error감소), 컴플라이언스(처리업무 규정 준수), 보안, 업무부담\n[기술수준] 1단계(basic automation-반복 거래/업무, rule based 자동화), 2단계(intelligent automation축적된 데이터와 ML 이용, NLP 통한 비정형 데이터 핸들링), 3단계(cognitive automation-빅데이터 분석, 예측분석 활용, 복잡합 의사결정 내리는 수준)\n[기반기술] 데이터처리(NLP, Pattern인식, OCR, Event), 프로세스 처리(스케줄링, 이벤트, rule엔진), delivery처리(문서생성, mailing, reporting), robotics 구현(script, interface), 분석처리(딥러닝)\n[동향] 주52시간 근무시간 해결위해 RPA 도입, 초자동화",
@@ -20484,7 +20507,7 @@
       "비즈니스 모델개발"
     ],
     "plusKeywords": [],
-    "mnemonic": "조프비전문커시",
+    "mnemonic": "조프비전문커시 / 뷔조거비혁",
     "sections": [
       {
         "label": "변화요소",
@@ -20498,9 +20521,20 @@
           "커뮤니케이션",
           "시스템"
         ]
+      },
+      {
+        "label": "DT 추진 5요소",
+        "mnemonic": "뷔조거비혁",
+        "keywords": [
+          "비전 수립",
+          "조직 정비·인재",
+          "거버넌스 체계",
+          "비즈니스 모델",
+          "혁신·R&D"
+        ]
       }
     ],
-    "memo": "조프비전문커시 (조직구조·프로세스·비전·전략·문화·커뮤니케이션·시스템)"
+    "memo": "조프비전문커시 (조직구조·프로세스·비전·전략·문화·커뮤니케이션·시스템)\n뷔조거비혁 (비전 수립·조직 정비·인재·거버넌스 체계·비즈니스 모델·혁신·R&D)"
   },
   "ds-312": {
     "detail": "제품과 서비스의 결합(Product Servitization), 서비스의 상품화(Service Productization), 그리고 기존 서비스와 신규 서비스의 결합 현상을 포괄하는 개념\n서비스 + 상품화(Productization)\n유형\n1) 제품 중심 모델: 유지보수나 수리 사업, \n2) 제품 사용 중심 모델: 로서 렌털이나 풀(Pool) 사업, \n3) 제품 활용 결과 보장 모델: 획득하거나 달성한 성과 단위당 지불(Pay)하도록 하는 사업",
@@ -24344,7 +24378,20 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "훼손중순확",
-    "memo": "훼손중순확"
+    "memo": "훼손중순확 (훼손·손실·중복·순서·확인응답)",
+    "sections": [
+      {
+        "label": "오류정정 대상",
+        "mnemonic": "훼손중순확",
+        "keywords": [
+          "훼손",
+          "손실",
+          "중복",
+          "순서",
+          "확인응답"
+        ]
+      }
+    ]
   },
   "net-51": {
     "detail": "[정의] 슬라이딩 윈도우 동작 시 송신 및 수신 응용프로그램의 낮은 데이터 생성, \n소비 속도로 인한 적은 Data 전송, 동작효율 감소 현상\nex) TCP 상 1byte Data 전송 시: 1) TCP 헤더 20bytes + 2) IP 헤더 20bytes + 3) Data 1byte \n= 41bytes의 데이터그램 전송 필요. 오버헤드 = 41/1\n\n[해결방안] Nagle's Algorithn(송신측, 일정크기까지 전송 보류 -> 송신 Data 크기의 적정 수준 유지)\nClark's Solution(수신측, 최소 절반이상 공간 확보 이전에는 rwnd: 0 으로 응답, 송신 방지 -> 요청 Data 크기 적정 수준 유지)",
@@ -25792,8 +25839,29 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "기성회보",
-    "memo": "기성회보\n대지패지\n베디구"
+    "mnemonic": "대지패지 / 베디구",
+    "memo": "대지패지 (대역폭·지연(Delay)·패킷손실·지터(Jitter))\n베디구 (Best Effort·DiffServ·IntServ(보장형))",
+    "sections": [
+      {
+        "label": "QoS 4대 지표",
+        "mnemonic": "대지패지",
+        "keywords": [
+          "대역폭",
+          "지연(Delay)",
+          "패킷손실",
+          "지터(Jitter)"
+        ]
+      },
+      {
+        "label": "서비스 모델",
+        "mnemonic": "베디구",
+        "keywords": [
+          "Best Effort",
+          "DiffServ",
+          "IntServ(보장형)"
+        ]
+      }
+    ]
   },
   "net-131": {
     "detail": "가중치를 통한 QoS 보장 스케줄링 기법\nQ2와 Q3가 3:2로 분할하여 트래픽 전송",
@@ -25841,7 +25909,18 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "CCE",
-    "memo": "CCE"
+    "memo": "CCE (CIR·CBS·EBS)",
+    "sections": [
+      {
+        "label": "Shaping 파라미터",
+        "mnemonic": "CCE",
+        "keywords": [
+          "CIR",
+          "CBS",
+          "EBS"
+        ]
+      }
+    ]
   },
   "net-134": {
     "detail": "1) RED(Random Early Detection)\n2) WRED(Weighted Random Early Detection)",
@@ -26975,8 +27054,18 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "링크는 오이",
-    "memo": "링크는 오이"
+    "mnemonic": "오이",
+    "memo": "오이 (OSPF·IS-IS)",
+    "sections": [
+      {
+        "label": "대표 프로토콜",
+        "mnemonic": "오이",
+        "keywords": [
+          "OSPF",
+          "IS-IS"
+        ]
+      }
+    ]
   },
   "net-211": {
     "detail": "Distance Vector Routing 기반 메트릭 (metric) 정보를 인접 라우터와 주기적 으로 교환하여 라우팅 테이블을 갱신하 고, Dijkstra의 SPF(Shortest Path First) 알고리즘을 사용 테이블을 구성/계산하는 내부 라우 팅 프로토콜.\n[배경] 1980년대 중반에 RIP 라우팅 프로토콜이 대규모 이질적인 망간 라우팅에 비효율이어서, IETF에서 SPF 알고리즘에 기초하여 공개(Open)적으로 개발되어 인터넷에 적용\n- Hop Count + 대역폭 + 이용도",
@@ -28249,7 +28338,19 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "인기무부",
-    "memo": "인기무부"
+    "memo": "인기무부 (인증·기밀성·무결성·부인방지)",
+    "sections": [
+      {
+        "label": "보안 4요소",
+        "mnemonic": "인기무부",
+        "keywords": [
+          "인증",
+          "기밀성",
+          "무결성",
+          "부인방지"
+        ]
+      }
+    ]
   },
   "sec-2": {
     "detail": "평문(Plain text)을 알고리즘과 암호화 키에 따라 재구성하여, 내용이 불명확한 암호문(Cipher text)으로 만드는 과정.\n무결성·기밀성 확보를 위해 정보를 쉽게 해독되지 않는 형태로 변환하는 기술.\n복호화(Decryption): 암호화의 역과정으로 불명확한 메시지로부터 본래 메시지로 환원하는 과정.",
@@ -29251,8 +29352,8 @@
       "시큐리티대응센터 분리 운영"
     ],
     "plusKeywords": [],
-    "mnemonic": "스P익내사 / 침공설",
-    "memo": "스P익내사 (스피어피싱·PLC·익스플로잇·내부자위협·사회공학적기법)\n침공설 (침탐수유 ''단계·공격기법·설명)",
+    "mnemonic": "스P익내사 / 침공설 / 침검수유",
+    "memo": "스P익내사 (스피어피싱·PLC·익스플로잇·내부자위협·사회공학적기법)\n침공설 (침탐수유 ''단계·공격기법·설명)\n침검수유 (침투·검색·수집·유출)",
     "sections": [
       {
         "label": "공격방식",
@@ -29272,6 +29373,16 @@
           "침탐수유 ''단계",
           "공격기법",
           "설명"
+        ]
+      },
+      {
+        "label": "APT 공격 4단계",
+        "mnemonic": "침검수유",
+        "keywords": [
+          "침투",
+          "검색",
+          "수집",
+          "유출"
         ]
       }
     ]
@@ -30603,7 +30714,22 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "입보시에코캡아",
-    "memo": "입보시에코캡아"
+    "memo": "입보시에코캡아 (입력데이터 검증·보안기능·시간·상태·에러처리·코드오류·캡슐화·API 오용)",
+    "sections": [
+      {
+        "label": "보안약점 7유형",
+        "mnemonic": "입보시에코캡아",
+        "keywords": [
+          "입력데이터 검증",
+          "보안기능",
+          "시간·상태",
+          "에러처리",
+          "코드오류",
+          "캡슐화",
+          "API 오용"
+        ]
+      }
+    ]
   },
   "sec-124": {
     "detail": "[개념] 멀티프로세스를 구현한 응용프로그램(병렬시스템)에서 자원(파일, 소켓 등)을 사용하기전 자원을 사용하는 시점과 사용하는 시점의 시간 및 상태를 부적절하게 관리해서 발생하는 보안 취약점\n[해결방법] 동기화(뮤텍스, 세마포어)",
@@ -30661,8 +30787,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "인기무부접키 / 인디등사",
-    "memo": "인기무부접키 (인증·기밀성·무결성·부인봉쇄·접근제어·키관리)\n인디등사 (인증기관·디렉토리·등록대행기관·사용자)",
+    "mnemonic": "인기무부접키 / 인디등사 / 인기무부",
+    "memo": "인기무부접키 (인증·기밀성·무결성·부인봉쇄·접근제어·키관리)\n인디등사 (인증기관·디렉토리·등록대행기관·사용자)\n인기무부 (인증·기밀성·무결성·부인방지)",
     "sections": [
       {
         "label": "특징",
@@ -30684,6 +30810,16 @@
           "디렉토리",
           "등록대행기관",
           "사용자"
+        ]
+      },
+      {
+        "label": "PKI 보안 서비스",
+        "mnemonic": "인기무부",
+        "keywords": [
+          "인증",
+          "기밀성",
+          "무결성",
+          "부인방지"
         ]
       }
     ]
@@ -30842,8 +30978,8 @@
       "보고서 작성"
     ],
     "plusKeywords": [],
-    "mnemonic": "준확보분보",
-    "memo": "준확보분보 (준비·증거물 획득·보관·분석·보고서 작성)",
+    "mnemonic": "준확보분보 / 정재신연무 / 준획보분보",
+    "memo": "준확보분보 (준비·증거물 획득·보관·분석·보고서 작성)\n정재신연무 (정당성·재현성·신속성·연계보관성·무결성)\n준획보분보 (준비·증거물 획득·보관·이송·분석·조사·보고서 작성)",
     "sections": [
       {
         "label": "절차",
@@ -30853,6 +30989,28 @@
           "증거물 획득",
           "보관",
           "분석",
+          "보고서 작성"
+        ]
+      },
+      {
+        "label": "포렌식 5원칙",
+        "mnemonic": "정재신연무",
+        "keywords": [
+          "정당성",
+          "재현성",
+          "신속성",
+          "연계보관성",
+          "무결성"
+        ]
+      },
+      {
+        "label": "수행 절차",
+        "mnemonic": "준획보분보",
+        "keywords": [
+          "준비",
+          "증거물 획득",
+          "보관·이송",
+          "분석·조사",
           "보고서 작성"
         ]
       }
@@ -33123,7 +33281,19 @@
     ],
     "plusKeywords": [],
     "mnemonic": "사비적사",
-    "memo": "사비적사"
+    "memo": "사비적사 (사전 검토·비식별 조치·적정성 평가·사후 관리)",
+    "sections": [
+      {
+        "label": "비식별 조치 절차",
+        "mnemonic": "사비적사",
+        "keywords": [
+          "사전 검토",
+          "비식별 조치",
+          "적정성 평가",
+          "사후 관리"
+        ]
+      }
+    ]
   },
   "sec-239": {
     "detail": "[정책 협상기술] P3P(W3C 제정 개인정보보호 정책 표준규격)\n[암호 기술] DES/RSA/ECC, SSL/VPN\n[필터링 기술] 방화벽/IDS/IPS/NAC, 안티바이러스/캡쳐방지, 피싱 모니터링\n[익명화 기술] Mix-net(클라이언스 서버 익명성 제공), ISO25237, ISO20889\n[인증 기술] PKI, i-PIN, SSO, Open ID",
@@ -33200,7 +33370,20 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "가총삭범마",
-    "memo": "가총삭범마\n휴암교\n총부라재\n삭부레식\n감랜범제\n임공"
+    "memo": "가총삭범마 (가명처리·총계처리·삭제·범주화·마스킹)",
+    "sections": [
+      {
+        "label": "비식별 기법 5",
+        "mnemonic": "가총삭범마",
+        "keywords": [
+          "가명처리",
+          "총계처리",
+          "삭제",
+          "범주화",
+          "마스킹"
+        ]
+      }
+    ]
   },
   "sec-241": {
     "detail": "[정의] 비식별화된 데이터로부터 개인을 재식별하는 공격이 성행하고 있으므로 이에 대한 대비가 필요\nK-익명성 [정의] \n주어진 데이터 집합에서 준식별자 속성값들이 동일한 레코드가 적어도 k개 존재하\n도록 하는 연결공격(Linkage Attack) 방어형 프라이버시 보호모델\n구현방법: 데이터 집합의 일부를 수정하여 모든 레코드가 자기 자신과 동일한(구별되지 않는)\nk-1개 이상의 레코드를 소유\n--------------------------\n L-다양성(diversity)  [정의] \n 주어진 데이터 집합에서 함께 익명화되는 레코드들(동질집합)은 적어도 l개의 서\n로 다른 민감정보를 가져야 한다는 프라이버시 보호모델\n구현방법: 데이터 집합의 일부를 수정하여 모든 레코드가 자기 자신과 동일한(구별되지 않는)\nl개 이상의 레코드를 소유\n--------------------\nT-근접성   [정의] \n동질집합에서 민감정보의 분포와 전체 데이터 집합에서 민감정보의 분포가 유사한 차이를\n보이게 하는 프라이버시 보호모델\n l-다양성이 쏠림공격 및 유사성 공격에 취약한 부분을 보완\n구현방법:전체 데이터 분포와 유사하도록 동집집합 데이터 분포를 구성",
@@ -35934,7 +36117,7 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "ACID / 갱현모연 / 스트로리",
+    "mnemonic": "ACID / 갱현모연 / 스트로리 / 활부실완철",
     "sections": [
       {
         "label": "특징(ACID)",
@@ -35965,9 +36148,20 @@
           "Log Manager(백업·복제)",
           "Recovery Manager(즉시갱신·지연갱신)"
         ]
+      },
+      {
+        "label": "트랜잭션 상태 5",
+        "mnemonic": "활부실완철",
+        "keywords": [
+          "활동(Active)",
+          "부분완료",
+          "실패(Failed)",
+          "완료(Committed)",
+          "철회(Aborted)"
+        ]
       }
     ],
-    "memo": "ACID (Atomicity(원자성)·Consistency(일관성)·Isolation(고립성)·Durability(영속성))\n갱현모연 (갱신손실(Lost Update)·현황오류(Dirty Read)·모순성(Inconsistency)·연쇄복귀(Cascading Rollback))\n스트로리 (Scheduler(병행제어·Locking·Timestamp)·Transaction Manager(Commit·Rollback)·Log Manager(백업·복제)·Recovery Manager(즉시갱신·지연갱신))"
+    "memo": "ACID (Atomicity(원자성)·Consistency(일관성)·Isolation(고립성)·Durability(영속성))\n갱현모연 (갱신손실(Lost Update)·현황오류(Dirty Read)·모순성(Inconsistency)·연쇄복귀(Cascading Rollback))\n스트로리 (Scheduler(병행제어·Locking·Timestamp)·Transaction Manager(Commit·Rollback)·Log Manager(백업·복제)·Recovery Manager(즉시갱신·지연갱신))\n활부실완철 (활동(Active)·부분완료·실패(Failed)·완료(Committed)·철회(Aborted))"
   },
   "db-3": {
     "detail": "3단계 데이터베이스 구조에서 하위 스키마를 변경하더라도 상위 스키마가 영향을 받지 않는 특성. 스키마(외부·개념·내부)와 데이터 사상(논리적·물리적)을 통해 논리적·물리적 데이터 독립성을 보장.",
@@ -36690,7 +36884,18 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "삽갱삭",
-    "memo": "삽갱삭"
+    "memo": "삽갱삭 (삽입 이상·갱신 이상·삭제 이상)",
+    "sections": [
+      {
+        "label": "이상현상 3",
+        "mnemonic": "삽갱삭",
+        "keywords": [
+          "삽입 이상",
+          "갱신 이상",
+          "삭제 이상"
+        ]
+      }
+    ]
   },
   "db-36": {
     "detail": "[정의] 개체-관계 모델로 구조화된 데이터 모델에 대한 표기법으로 엔티티, 카디널리티, 식별관계 표기방법\nER(Entity-Relationship) Diagram, 제임스마틴 까마귀발 표기법\n= ERM(모델, 피터 첸 방식)\n-> EERD(enhanced enitity relatioship diagram)",
@@ -36882,7 +37087,21 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "완부이결다조",
-    "memo": "완부이결다조"
+    "memo": "완부이결다조 (완전 함수종속·부분 함수종속·이행 함수종속·결정자 함수종속(BCNF)·다치 종속(4NF)·조인 종속(5NF))",
+    "sections": [
+      {
+        "label": "함수적 종속 유형",
+        "mnemonic": "완부이결다조",
+        "keywords": [
+          "완전 함수종속",
+          "부분 함수종속",
+          "이행 함수종속",
+          "결정자 함수종속(BCNF)",
+          "다치 종속(4NF)",
+          "조인 종속(5NF)"
+        ]
+      }
+    ]
   },
   "db-45": {
     "detail": "[정의]릴레이션에 속한 모든 속성의 도메인이 원자 값(atomic value)으로만 구성되어 있으면 제1정규형 \n원자값종속성:모든 엔티티 타입의 속성에는 하나의 속성 값 만을 가지고 있어야 하며 반복되는 속성의 집단은 별도의 엔티티 타입으로 분리",
@@ -36894,7 +37113,21 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "중부이결다조",
-    "memo": "중부이결다조"
+    "memo": "중부이결다조 (중복(반복그룹, 1NF)·부분종속(2NF)·이행종속(3NF)·결정자(BCNF)·다치종속(4NF)·조인종속(5NF))",
+    "sections": [
+      {
+        "label": "정규화 단계별 제거대상",
+        "mnemonic": "중부이결다조",
+        "keywords": [
+          "중복(반복그룹, 1NF)",
+          "부분종속(2NF)",
+          "이행종속(3NF)",
+          "결정자(BCNF)",
+          "다치종속(4NF)",
+          "조인종속(5NF)"
+        ]
+      }
+    ]
   },
   "db-46": {
     "detail": "[정의] 릴레이션이 제1정규형에 속하고, 기본키가 아닌 모든 속성이 기본키에 완전 함수 종속되면 제2정규형\n이상현상사례 기술 준비\n삽입이상: 특정 튜플을 삽입할 경우 원하지 않는 불필요한 정보까지도 삽입해야 하는 현상\n수정이상: 특정 속성 값 갱신시 중복 저장되어 있는 속성값 중 하나만 갱신되고 나머지는 누락되는 현상\n삭제이상: 특정 튜플을 삭제할 경우 원하지 않는 정보까지도 삭제되는 현상\n[데이터베이스 시스템] P185~188",
@@ -37005,7 +37238,21 @@
     ],
     "plusKeywords": [],
     "mnemonic": "개참속사키도",
-    "memo": "개참속사키도"
+    "memo": "개참속사키도 (개체 무결성·참조 무결성·속성 무결성·사용자정의 무결성·키 무결성·도메인 무결성)",
+    "sections": [
+      {
+        "label": "무결성 유형 6",
+        "mnemonic": "개참속사키도",
+        "keywords": [
+          "개체 무결성",
+          "참조 무결성",
+          "속성 무결성",
+          "사용자정의 무결성",
+          "키 무결성",
+          "도메인 무결성"
+        ]
+      }
+    ]
   },
   "db-53": {
     "detail": "[정의]정보모델링 시 릴레이션 간 관계를 참조하여 외래 키(Foreign Key) 값은 항상 참조하는 테이블의 기본 키(Primary Key) 값과 일치하거나 NULL이여야 한다는 규칙",
@@ -37100,7 +37347,17 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "지즉",
-    "memo": "지즉"
+    "memo": "지즉 (지연 갱신·즉시 갱신)",
+    "sections": [
+      {
+        "label": "로그기반 회복",
+        "mnemonic": "지즉",
+        "keywords": [
+          "지연 갱신",
+          "즉시 갱신"
+        ]
+      }
+    ]
   },
   "db-60": {
     "detail": "[정의] 체크포인트를 기록 후 장애 발생시 체크포인트 이후의 로그로만 복구하는 회복 기법\n- 키워드 : check point, redo, undo",
@@ -37182,7 +37439,19 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "갱현모연",
-    "memo": "갱현모연\nLDIC"
+    "memo": "갱현모연 (갱신손실·현황파악오류(Dirty Read)·모순성·연쇄복귀)",
+    "sections": [
+      {
+        "label": "동시성 미보장 문제",
+        "mnemonic": "갱현모연",
+        "keywords": [
+          "갱신손실",
+          "현황파악오류(Dirty Read)",
+          "모순성",
+          "연쇄복귀"
+        ]
+      }
+    ]
   },
   "db-65": {
     "detail": "Locking\n[정의] 동시성제어기법 중에서 트랜잭션이 사용하는 자원(데이터 항목)에 대하여 락을 이용하여 상호 배제 (Mutual Exclusive) 기능을 제공하는 기법\n[locking 종류] 공유 lock(읽기만 가능), 전용 lock(read/write안됨) [문제점] blocking(commit/rollback으로 해결), 교착상태(둘 중 한 세션 에러발생으로 해결), 성능저하(설 계,timeout option) [단위] DB-릴레이션(파일)-튜플(레코드)-속성(필드) -> 구현복잡/동시성 강/오버헤드 증가\n직렬성(Serializability) 교착상태(Deadlock) 발생\n[데이터베이스 시스템] P443~451\n2PL : 2PL(Two Phase Locking) 기법(Protocol), \n4단락 : [락킹 수준: Strict 2PL > Rigorous  2PL > Static 2PL] 스리타\n 변형으로, 정적(Static) 2PL, \n 엄격한(Strict) 2PL, 엄중한(Rigorous) 2PL 등이 있음\n[Strict] 모든 독점locking이 완료시까지 unlock하지 않음(연쇄복귀 문제X, 교착상태발생) \n[rigorous] 모든 locking이 완료시까지 unlock하지 않음(더 제한적, 연쇄복귀 문제X, 교착상태발생) \n[static] 트랜젝션 수행 전부터 읽기/쓰기 집합 미리 선언 모든 항목 lock (교착상태 미발생.비현실적)\n------------------------------------------------------------------------------\n엄격(엄밀)한 (Strict) 2PL : 로킹 2단계는 동일\n 모든 독점 로그(lock-X)는 그 트랜잭션이이 완료할 때까지 unlock 하지 않고, 그대로 유지 - 연쇄 복귀 문제가 발생하지 않음",
@@ -37574,8 +37843,8 @@
       "doCommit"
     ],
     "plusKeywords": [],
-    "mnemonic": "신상",
-    "memo": "신상 (신뢰성측면·상호호환성 측면)",
+    "mnemonic": "신상 / 조참지커클 / 요결전응명",
+    "memo": "신상 (신뢰성측면·상호호환성 측면)\n조참지커클 (조정자(Coordinator)·참여자(Participant)·지역노드·Commit Point Site·클라이언트)\n요결전응명 (Commit 요청·CPS 결정·Prepare 전송·응답·Commit/Rollback 명령)",
     "sections": [
       {
         "label": "한계점",
@@ -37583,6 +37852,28 @@
         "keywords": [
           "신뢰성측면",
           "상호호환성 측면"
+        ]
+      },
+      {
+        "label": "2PC 구성요소",
+        "mnemonic": "조참지커클",
+        "keywords": [
+          "조정자(Coordinator)",
+          "참여자(Participant)",
+          "지역노드",
+          "Commit Point Site",
+          "클라이언트"
+        ]
+      },
+      {
+        "label": "2PC 절차",
+        "mnemonic": "요결전응명",
+        "keywords": [
+          "Commit 요청",
+          "CPS 결정",
+          "Prepare 전송",
+          "응답",
+          "Commit/Rollback 명령"
         ]
       }
     ]
@@ -37595,7 +37886,20 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "위복병분장",
-    "memo": "위복병분장"
+    "memo": "위복병분장 (위치투명성·중복투명성·병행투명성·분할투명성·장애투명성)",
+    "sections": [
+      {
+        "label": "투명성 5종",
+        "mnemonic": "위복병분장",
+        "keywords": [
+          "위치투명성",
+          "중복투명성",
+          "병행투명성",
+          "분할투명성",
+          "장애투명성"
+        ]
+      }
+    ]
   },
   "db-89": {
     "detail": "[정의] 데이터베이스의 성능상의 문제점들을 파악한 후, 문제점의 튜닝을 통한 데이터베이스의 최적화\n[관점] Hit rate최대화, 대기시간 최소화, 응답시간 최대화\n[효과] 서비스 품질,비용,관리\n[튜닝절차]\n(1)설계:DB의 논리적 구조에 대한 성능 개선 작업(반정규화,분산파일배치)\n(2)DBMS:DB의 메모리 영역, 물리적 구조 등 개선하는 작업(Buffer,Cache크기)\n(3)SQL:SQL문 분석을 통해 성능을 발휘할 수 있도록 조율하는 작업(Hash/Join)\n[지표] Throughput(처리율), Throughput Time(처리시간), Response Time(응답시간), Load Time(로드시간)\n[평가방법] OLTP(TPC-C, TPC-E), DSS(TPC-H, BORD, setQuery), e-Commerce(TPC-W)",
@@ -37746,7 +38050,18 @@
     ],
     "plusKeywords": [],
     "mnemonic": "성투결",
-    "memo": "성투결"
+    "memo": "성투결 (성능 분석·튜닝 실시·결과 평가)",
+    "sections": [
+      {
+        "label": "튜닝 절차",
+        "mnemonic": "성투결",
+        "keywords": [
+          "성능 분석",
+          "튜닝 실시",
+          "결과 평가"
+        ]
+      }
+    ]
   },
   "db-96": {
     "detail": "[정의]옵티마이저가 항상 최적화된 실행계획을 수립하는 것이 아닌 개발자가 힌트를 사용하여 원하는 실행계획으로 유도하는 쿼리 조회 성능 향상기법\n힌트(Hint) 사용: 개발자 수준에서 옵티마이저의 실행계획을 변경하여, SQL 실행 순서를 지정 \n 예) /*+ CLUSTER */ 테이블에 대한 클러스터 스캔 수행",
@@ -37861,8 +38176,28 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "규다속",
-    "memo": "규다속\n진시가"
+    "mnemonic": "규다속 / 진시가",
+    "memo": "규다속 (규모(Volume)·다양성(Variety)·속도(Velocity))\n진시가 (진실성(Veracity)·시각화(Visualization)·가치(Value))",
+    "sections": [
+      {
+        "label": "3V",
+        "mnemonic": "규다속",
+        "keywords": [
+          "규모(Volume)",
+          "다양성(Variety)",
+          "속도(Velocity)"
+        ]
+      },
+      {
+        "label": "+3V(6V)",
+        "mnemonic": "진시가",
+        "keywords": [
+          "진실성(Veracity)",
+          "시각화(Visualization)",
+          "가치(Value)"
+        ]
+      }
+    ]
   },
   "db-104": {
     "detail": "[정의]빅데이터 분석처리 일련과정\n수집, 저장, 처리, 분석, 표현®, 관리\n\n수집(ETL, Sqoop, Log aggregation, Splunk, 크롤러, NoSQL)\n저장(RDB, HDFS, Key-Value, Graph)\n처리(Mhout, HIVE, PIG)\n분석(SAS, R, 매틀랫, Mahout,  앙상블, 배깅, 부스팅, NN, Random Forest)\n표현(R, D3.js, Tablea)\n관리(Yarn, Ganglia, Apache Ambari)",
@@ -37883,7 +38218,21 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "수저처분표관",
-    "memo": "수저처분표관"
+    "memo": "수저처분표관 (수집·저장·처리·분석·표현(시각화)·관리)",
+    "sections": [
+      {
+        "label": "빅데이터 처리 절차",
+        "mnemonic": "수저처분표관",
+        "keywords": [
+          "수집",
+          "저장",
+          "처리",
+          "분석",
+          "표현(시각화)",
+          "관리"
+        ]
+      }
+    ]
   },
   "db-105": {
     "detail": "[Bagging] 모델의 안정성을 높이기 위하여 분석데이터로 부터 여러 개의  단순 복원 임의 추출(BootStrap)하여  다수결을 통해 최종의 예측 모델을 도출하는 알고리즘(Bootstrap aggregating)\n[절차]\n1) Row data에서 bootstrap 데이터 추출\n2) 추출을 반복하여 n개의 데이터 생성\n3) 각 데이터를 각각 모델링 하여 모델 생성\n4) 단일 모델을 결합하여 배깅 모델 생성\n\n[Boosting] 모델의 정확성을 높이기 위하여 오분류된 개체들에 가중치를 부여함으로써 새로운 분류규칙을 만드는 단계를 반복하여  약한 분류모델을 강한 분류모델로 변형(Boosting)하는 알고리즘\n[절차]\n1) Row data에 동일가중치로 모델 생성\n2) 생성된 모델로 인한 오분류 데이터 수집\n3) 오분류 데이터에 높은 가중치 부여\n4) 과정 반복을 통하여 모델의 정확도 향상\n※ 배깅 : 부스팅+보팅\n\n회귀분석은 (통계 도메인에서 미리 숙제 할 것)",
