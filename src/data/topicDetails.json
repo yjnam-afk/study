@@ -10275,7 +10275,20 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "단통시인설",
-    "memo": "단통시인설"
+    "memo": "단통시인설 (단위 테스트·통합 테스트·시스템 테스트·인수 테스트·설치 테스트)",
+    "sections": [
+      {
+        "label": "테스트 단계",
+        "mnemonic": "단통시인설",
+        "keywords": [
+          "단위 테스트",
+          "통합 테스트",
+          "시스템 테스트",
+          "인수 테스트",
+          "설치 테스트"
+        ]
+      }
+    ]
   },
   "se-152": {
     "detail": "[정의] 모든 모듈들을 동시에 통합하고, 한번에 테스트하는 소프트웨어 통합테스트 기법",
@@ -13004,7 +13017,18 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "총상수",
-    "memo": "총상수"
+    "memo": "총상수 (총괄감리원·상주감리원·수석감리원)",
+    "sections": [
+      {
+        "label": "감리원 종류",
+        "mnemonic": "총상수",
+        "keywords": [
+          "총괄감리원",
+          "상주감리원",
+          "수석감리원"
+        ]
+      }
+    ]
   },
   "se-259": {
     "detail": "PMO와 감리 비교표, PMO 정리하면서, 감리 비교표 추가할 것",
@@ -13683,7 +13707,19 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "원형프자",
-    "memo": "원형프자"
+    "memo": "원형프자 (원격개발센터·형상관리·개발 프레임워크·자동화)",
+    "sections": [
+      {
+        "label": "생산성 향상방안",
+        "mnemonic": "원형프자",
+        "keywords": [
+          "원격개발센터",
+          "형상관리",
+          "개발 프레임워크",
+          "자동화"
+        ]
+      }
+    ]
   },
   "se-291": {
     "detail": "공생발전형 소프트웨어 생태계 구축전략",
@@ -17314,8 +17350,18 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "F열",
+    "mnemonic": "입분액고 / F열",
     "sections": [
+      {
+        "label": "방식 4분류",
+        "mnemonic": "입분액고",
+        "keywords": [
+          "압출(입출)",
+          "분사",
+          "액체 기반",
+          "고체 기반"
+        ]
+      },
       {
         "label": "압출",
         "mnemonic": "F열",
@@ -17325,7 +17371,7 @@
         ]
       }
     ],
-    "memo": "F열 (FDM-필라멘트·열가소성)"
+    "memo": "입분액고 (압출(입출)·분사·액체 기반·고체 기반)\nF열 (FDM-필라멘트·열가소성)"
   },
   "ds-149": {
     "detail": "액체기반-SLA, 파우더기반-SLS, 고체기반-FDM",
@@ -20178,7 +20224,19 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "투생가",
+    "sections": [
+      {
+        "label": "전략기술 3테마",
+        "mnemonic": "투생가",
+        "keywords": [
+          "투자 보호",
+          "생성자 부상",
+          "가치 전달"
+        ]
+      }
+    ],
+    "memo": "투생가 (투자 보호·생성자 부상·가치 전달)"
   },
   "ds-292": {
     "detail": "1. 에이전틱 인공지능(AI): I(Agentic AI)\n에이전틱 AI 시스템은 사용자가 정의한 목표를 달성하기 위해 자율적으로 계획하고 실행.\n(참고) AI 에이전트는 특정 목표 달성을 위해 스스로 행동하고 결정하는 AI. 해외에선 주로 ‘에이전틱 AI(Agentic AI)’라고 부름. \n2. AI 거버넌스 플랫폼 \n3 허위 정보 보안 \n4. 양자내성암호(Postquantum Cryptography, PQC)\n5. 앰비언트 인비저블 인텔리전스 \n6. 에너지 효율적 컴퓨팅 \n7. 하이브리드 컴퓨팅 \n8. 공간 컴퓨팅 \n9. 다기능 로봇 \n10. 신경학적 향상",
@@ -32975,9 +33033,18 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "암접수CD전워핑 / DICD",
-    "memo": "암접수CD전워핑 (암호화·접근제어·수신제한·CDR·DRM·전자지문·워터마크·핑거프린팅)\nDICD (DOI·INDECS·CCL·DPI)",
+    "mnemonic": "보관배 / 암접수CD전워핑 / DICD",
+    "memo": "보관배 (콘텐츠 보호기술·콘텐츠 관리기술·콘텐츠 배포보안)\n암접수CD전워핑 (암호화·접근제어·수신제한·CDR·DRM·전자지문·워터마크·핑거프린팅)\nDICD (DOI·INDECS·CCL·DPI)",
     "sections": [
+      {
+        "label": "콘텐츠 보안 3영역",
+        "mnemonic": "보관배",
+        "keywords": [
+          "콘텐츠 보호기술",
+          "콘텐츠 관리기술",
+          "콘텐츠 배포보안"
+        ]
+      },
       {
         "label": "콘텐츠보호기술",
         "mnemonic": "암접수CD전워핑",
@@ -33228,9 +33295,18 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "스스해바 / 스플피파",
-    "memo": "스스해바 (스니핑·스푸핑·해킹·바이러스)\n스플피파 (스패·플래밍·피싱·파밍)",
+    "mnemonic": "불공사 / 스스해바 / 스플피파",
+    "memo": "불공사 (불법 수집형·공격·파괴형·사회공학형)\n스스해바 (스니핑·스푸핑·해킹·바이러스)\n스플피파 (스패·플래밍·피싱·파밍)",
     "sections": [
+      {
+        "label": "PIT 유형",
+        "mnemonic": "불공사",
+        "keywords": [
+          "불법 수집형",
+          "공격·파괴형",
+          "사회공학형"
+        ]
+      },
       {
         "label": "공격/파괴형",
         "mnemonic": "스스해바",
