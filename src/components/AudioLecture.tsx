@@ -12,6 +12,11 @@ import { edgeSynthesizeTurnsBrowser } from "@/lib/edgeTtsClient";
 
 type Turn = { speaker: "진행자" | "전문가"; text: string };
 
+// 서버 신경망 TTS가 설정 문제(키 없음·차단)로 실패하면 세션 동안 재시도하지
+// 않는다(매 토픽 첫 재생마다 헛호출로 늦어지는 것 방지). 한도(429)는 예외.
+let serverTtsDead = false;
+let browserEdgeDead = false;
+
 function parseScript(raw: string): Turn[] {
   const turns: Turn[] = [];
   for (const line of raw.split("\n")) {
@@ -48,7 +53,6 @@ export default function AudioLecture({
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(-1);
   const [error, setError] = useState("");
-  const [notice, setNotice] = useState("");
   const [showScript, setShowScript] = useState(false);
   const stopRef = useRef(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -74,7 +78,6 @@ export default function AudioLecture({
     setTurns([]);
     setScriptText("");
     setError("");
-    setNotice("");
     setShowScript(false);
     if (audioUrlRef.current) {
       URL.revokeObjectURL(audioUrlRef.current);
@@ -124,7 +127,6 @@ export default function AudioLecture({
       return;
     }
     setError("");
-    setNotice("");
 
     // 1) 대본 확보(없으면 생성)
     let list = turns;
@@ -152,9 +154,10 @@ export default function AudioLecture({
       }
     }
 
-    // 2) 신경망 TTS mp3 (재생 시 재사용)
+    // 2) 신경망 TTS mp3 (재생 시 재사용). 실패해도 사용자에게 에러를 들이밀지
+    //    않고 조용히 기본 음성으로 폴백한다(설정 실패는 세션 동안 재시도 스킵).
     stopRef.current = false;
-    if (!audioUrlRef.current) {
+    if (!audioUrlRef.current && !serverTtsDead) {
       setLoadingMsg("목소리 만드는 중… (첫 재생만 몇 초 걸려요)");
       try {
         const res = await fetch("/api/tts", {
@@ -163,38 +166,41 @@ export default function AudioLecture({
           body: JSON.stringify({ script: raw }),
         });
         const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "음성 합성 실패");
+        if (!res.ok) {
+          if (res.status !== 429) serverTtsDead = true; // 키 없음·차단 → 세션 내 스킵
+          throw new Error(data.error || "음성 합성 실패");
+        }
         const bin = atob(data.audio as string);
         const bytes = new Uint8Array(bin.length);
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
         const blob = new Blob([bytes], { type: data.mime || "audio/mpeg" });
         audioUrlRef.current = URL.createObjectURL(blob);
-      } catch (srvErr) {
-        // 서버 신경망 TTS 실패(클라우드 IP 차단 등) →
-        // 브라우저에서 Edge 신경망에 "직접" 연결(일반 IP는 차단 안 됨).
-        const srvDetail =
-          srvErr instanceof Error ? srvErr.message : "서버 TTS 실패";
-        try {
-          setLoadingMsg("목소리 만드는 중… (고품질 직결)");
-          const blob = await edgeSynthesizeTurnsBrowser(list, (d, tot) =>
-            setLoadingMsg(`목소리 만드는 중… ${d}/${tot}`),
-          );
-          audioUrlRef.current = URL.createObjectURL(blob);
-        } catch (e2) {
-          // 그래도 실패하면 마지막으로 브라우저 기본 음성.
-          setLoadingMsg("");
-          if (!("speechSynthesis" in window)) {
-            setError(e2 instanceof Error ? e2.message : "음성 재생 불가");
-            return;
+      } catch {
+        // 서버 실패 → 브라우저 직결 Edge 시도(이것도 죽어있으면 스킵)
+        if (!browserEdgeDead) {
+          try {
+            setLoadingMsg("목소리 만드는 중…");
+            const blob = await edgeSynthesizeTurnsBrowser(list, (d, tot) =>
+              setLoadingMsg(`목소리 만드는 중… ${d}/${tot}`),
+            );
+            audioUrlRef.current = URL.createObjectURL(blob);
+          } catch {
+            browserEdgeDead = true;
           }
-          // 실패 사유를 그대로 노출해 원인 파악이 가능하게 한다.
-          setNotice(`기본 음성으로 재생합니다 — 사유: ${srvDetail}`);
-          setPlaying(true);
-          playFallback(list, 0);
-          return;
         }
       }
       setLoadingMsg("");
+    }
+
+    // 신경망 음성을 못 구했으면 조용히 브라우저 기본 음성으로.
+    if (!audioUrlRef.current) {
+      if (!("speechSynthesis" in window)) {
+        setError("이 브라우저는 음성 재생을 지원하지 않아요.");
+        return;
+      }
+      setPlaying(true);
+      playFallback(list, 0);
+      return;
     }
 
     // 3) mp3 재생
@@ -235,7 +241,6 @@ export default function AudioLecture({
         )}
       </div>
       {error && <p className="mt-2 text-xs text-rose-600">{error}</p>}
-      {notice && <p className="mt-2 text-xs text-amber-600">{notice}</p>}
       {showScript && turns.length > 0 && (
         <div className="mt-3 max-h-72 space-y-2 overflow-y-auto rounded-xl border border-slate-200 bg-slate-50 p-3">
           {turns.map((t, i) => (
