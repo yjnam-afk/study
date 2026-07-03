@@ -978,13 +978,51 @@
   "definition": "비즈니스 영속성을 위해 안정적인 서비스지원과 서비스 이행 및 제공, ICT 인프라 관리의 Best Pratice 모음집",
   "sections": [
    {
-    "label": "ITIL4 4차원",
+    "label": "4차원 모델",
     "mnemonic": "정파조가",
     "keywords": [
      "정보와 기술",
      "파트너와 공급자",
      "조직과 인력",
      "가치흐름과 프로세스"
+    ]
+   },
+   {
+    "label": "SVS 구성 5",
+    "mnemonic": "거실S지도지속",
+    "keywords": [
+     "거버넌스",
+     "실천(Practices)",
+     "SVC(가치사슬)",
+     "지도원칙(Guiding Principles)",
+     "지속적 개선"
+    ]
+   },
+   {
+    "label": "SVC 활동 6",
+    "mnemonic": "개수계획약설",
+    "keywords": [
+     "개선(Improve)",
+     "수요(Demand→Value)",
+     "계획(Plan)",
+     "획득·구축(Obtain/Build)",
+     "약속·참여(Engage)",
+     "설계·전환(Design/Transition)"
+    ]
+   },
+   {
+    "label": "Practice 그룹",
+    "mnemonic": "제아컨서어비테디인",
+    "keywords": [
+     "General Mgmt(제너럴)",
+     "Architecture Mgmt",
+     "Continual Improvement",
+     "Service Mgmt",
+     "Availability Mgmt",
+     "Business Analysis",
+     "Technical Mgmt",
+     "Deployment Mgmt",
+     "Infra·Platform Mgmt"
     ]
    }
   ],
