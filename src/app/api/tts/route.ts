@@ -232,7 +232,7 @@ export async function POST(req: NextRequest) {
 
     const mp3b64 = await cached(
       `tts:v2:${hashKey(script)}`,
-      30 * 86400,
+      90 * 86400,
       async () => {
         // 폴백 체인(전부 무료): Google(키 있으면) → Gemini(새 TTS 키 지원)
         // → Pollinations(무가입) → Edge. 되는 첫 번째 것을 사용.
