@@ -185,7 +185,9 @@ export default function AudioLecture({
             setError(e2 instanceof Error ? e2.message : "음성 재생 불가");
             return;
           }
-          setNotice("고품질 음성 연결 실패 — 기본 음성으로 재생합니다.");
+          setNotice(
+            "고품질 음성 미설정 — 기본 음성으로 재생합니다. (설정 > 무료 TTS 키 등록 시 사람 목소리로 나와요)",
+          );
           setPlaying(true);
           playFallback(list, 0);
           return;
