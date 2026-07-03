@@ -63,6 +63,7 @@ const PROVIDERS: Record<string, (opts: GenOpts) => Promise<string>> = {
   claude: generateWithAnthropic,
   gemini: generateWithGemini,
   groq: generateWithGroq,
+  cerebras: generateWithCerebras,
   openrouter: generateWithOpenRouter,
   ollama: generateWithOllama,
 };
@@ -126,6 +127,7 @@ function providerChain(): ChainEntry[] {
   // 2) (자동 폴백) 키가 설정된 모든 무료 제공자를 체인 뒤에 자동으로 덧붙인다.
   //    → AI_PROVIDERS를 일일이 맞추지 않아도, 키만 있으면 한도 소진 시 다음 제공자로 넘어간다.
   if (groqKeys().length) addProvider("groq"); // 여러 모델 × 여러 키 = 한도 폭 ↑
+  if (process.env.CEREBRAS_API_KEY) addProvider("cerebras"); // 무료 한도가 큼(일 100만 토큰급)
   if (process.env.GEMINI_API_KEY) {
     // Gemini 무료 등급은 일일 한도가 Groq보다 훨씬 커서 강력한 폴백.
     addProvider("gemini");
@@ -397,6 +399,51 @@ async function generateWithGroq({
     if (res.status !== 429 && res.status < 500) break;
   }
   throw new Error(lastErr || "Groq 호출 실패");
+}
+
+/**
+ * Cerebras — 무료 등급 한도가 큼(일 100만 토큰급, 카드 불필요).
+ * OpenAI 호환 API. https://cloud.cerebras.ai 에서 무료 키 발급.
+ */
+async function generateWithCerebras({
+  system,
+  user,
+  temperature = 0.4,
+  model: modelOverride,
+  maxTokens,
+}: GenOpts): Promise<string> {
+  const apiKey = process.env.CEREBRAS_API_KEY;
+  if (!apiKey) {
+    throw new AIConfigError(
+      "CEREBRAS_API_KEY 가 설정되지 않았습니다. https://cloud.cerebras.ai 에서 무료 키를 발급해 환경변수에 추가하세요.",
+    );
+  }
+  const model =
+    modelOverride || process.env.CEREBRAS_MODEL || "llama-3.3-70b";
+  const res = await fetch("https://api.cerebras.ai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model,
+      temperature,
+      max_tokens: maxTokens || MAX_TOKENS,
+      messages: [
+        { role: "system", content: system },
+        { role: "user", content: user },
+      ],
+    }),
+  });
+  if (!res.ok) {
+    const detail = await res.text();
+    throw new Error(`Cerebras API 오류 (${res.status}): ${detail}`);
+  }
+  const data = await res.json();
+  const text = data?.choices?.[0]?.message?.content;
+  if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
+  return text.trim();
 }
 
 async function generateWithOpenRouter({
