@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { edgeSynthesizeTurnsBrowser } from "@/lib/edgeTtsClient";
 
 /**
  * 🎧 오디오 강의 — NotebookLM 오디오 오버뷰 스타일.
@@ -168,20 +169,27 @@ export default function AudioLecture({
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
         const blob = new Blob([bytes], { type: data.mime || "audio/mpeg" });
         audioUrlRef.current = URL.createObjectURL(blob);
-      } catch (e) {
-        // 신경망 TTS 실패 → 브라우저 TTS 폴백(무료 한도 등)
-        setLoadingMsg("");
-        if (!("speechSynthesis" in window)) {
-          setError(e instanceof Error ? e.message : "음성 재생 불가");
+      } catch {
+        // 서버 신경망 TTS 실패(클라우드 IP 차단 등) →
+        // 브라우저에서 Edge 신경망에 "직접" 연결(일반 IP는 차단 안 됨).
+        try {
+          setLoadingMsg("목소리 만드는 중… (고품질 직결)");
+          const blob = await edgeSynthesizeTurnsBrowser(list, (d, tot) =>
+            setLoadingMsg(`목소리 만드는 중… ${d}/${tot}`),
+          );
+          audioUrlRef.current = URL.createObjectURL(blob);
+        } catch (e2) {
+          // 그래도 실패하면 마지막으로 브라우저 기본 음성.
+          setLoadingMsg("");
+          if (!("speechSynthesis" in window)) {
+            setError(e2 instanceof Error ? e2.message : "음성 재생 불가");
+            return;
+          }
+          setNotice("고품질 음성 연결 실패 — 기본 음성으로 재생합니다.");
+          setPlaying(true);
+          playFallback(list, 0);
           return;
         }
-        setNotice(
-          (e instanceof Error ? e.message : "") +
-            " — 기본 음성으로 재생합니다.",
-        );
-        setPlaying(true);
-        playFallback(list, 0);
-        return;
       }
       setLoadingMsg("");
     }
