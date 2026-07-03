@@ -16043,20 +16043,26 @@
   "mnemonic": ""
  },
  "ds-44": {
-  "detail": "IaaS, PasS, SaaS, BaaS, DaaS, SecaaS 특징 및 구축 방법",
+  "detail": "XaaS(Everything/Anything as a Service): 컴퓨팅 인프라·플랫폼·소프트웨어·보안 등 모든 IT 자원을 클라우드를 통해 필요한 만큼 서비스 형태로 제공·과금(pay-per-use)하는 클라우드 서비스 종합 모델. 온디맨드·자원 풀링·확장성·측정가능 서비스 등 클라우드 특성을 기반으로 함.",
   "related": "122회 기출",
   "defKeywords": [
-   "IaaS",
-   "PasS",
-   "SaaS",
-   "BaaS",
-   "DaaS"
+   "클라우드",
+   "On-Demand",
+   "서비스형 제공",
+   "종량제 과금"
   ],
-  "featureKeywords": [],
+  "featureKeywords": [
+   "IaaS(인프라)",
+   "PaaS(플랫폼)",
+   "SaaS(소프트웨어)",
+   "BaaS(백엔드)",
+   "DaaS(데스크톱)",
+   "SecaaS(보안)"
+  ],
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "",
-  "memo": "XaaS(Everything as a Service): IaaS·PaaS·SaaS·BaaS·DaaS·SecaaS. 특징 및 구축방법. 122회 기출."
+  "memo": "XaaS = 모든 IT 자원을 클라우드로 서비스화. IaaS·PaaS·SaaS·BaaS·DaaS·SecaaS. 122회 기출."
  },
  "ds-45": {
   "detail": "[정의] 고객의 Application을 개발,테스트, 구축할 수 있는 통합 플랫폼 제공\n[구성] 컴스콘 컨시시\nCompute, Storage, Controller, Connect, CDN, Security",

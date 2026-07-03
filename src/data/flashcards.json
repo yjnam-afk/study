@@ -11567,6 +11567,36 @@
   ]
  },
  {
+  "id": "ds-44",
+  "title": "XaaS(Everything as a Service)",
+  "category": "디지털서비스",
+  "importance": "상",
+  "definition": "모든 IT 자원을 클라우드로 서비스화(IaaS·PaaS·SaaS·BaaS·DaaS·SecaaS)",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "IPSBDS",
+    "keywords": [
+     "IaaS(인프라)",
+     "PaaS(플랫폼)",
+     "SaaS(소프트웨어)",
+     "BaaS(백엔드)",
+     "DaaS(데스크톱)",
+     "SecaaS(보안)"
+    ]
+   }
+  ],
+  "mnemonic": "IPSBDS",
+  "keywords": [
+   "IaaS(인프라)",
+   "PaaS(플랫폼)",
+   "SaaS(소프트웨어)",
+   "BaaS(백엔드)",
+   "DaaS(데스크톱)",
+   "SecaaS(보안)"
+  ]
+ },
+ {
   "id": "ds-45",
   "title": "PasS(서비스 분류 3가지)",
   "category": "디지털서비스",
