@@ -131,9 +131,10 @@ async function synthesizeElevenLabs(script: string): Promise<Buffer> {
   if (!apiKey) throw new Error("ELEVENLABS_API_KEY 미설정");
   const turns = parseTurns(script);
   if (!turns.length) throw new Error("대본에 대사가 없습니다.");
-  const hostVoice = process.env.ELEVENLABS_VOICE_HOST || "21m00Tcm4TlvDq8ikWAM"; // Rachel(여)
+  // 무료 API는 구형(라이브러리) 보이스 사용 불가(402) → 현행 기본 premade 보이스 사용.
+  const hostVoice = process.env.ELEVENLABS_VOICE_HOST || "EXAVITQu4vr4xnSDxMaL"; // Sarah(여)
   const expertVoice =
-    process.env.ELEVENLABS_VOICE_EXPERT || "pNInz6obpgDQGcFmaJgB"; // Adam(남)
+    process.env.ELEVENLABS_VOICE_EXPERT || "nPczCjzI2devNBz1zQrb"; // Brian(남)
   const parts: Buffer[] = [];
   for (const t of turns) {
     const voice = t.speaker === "진행자" ? hostVoice : expertVoice;
