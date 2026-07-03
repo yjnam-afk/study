@@ -1,0 +1,61 @@
+/**
+ * flashcards.json 생성기 — 지하철 모드 카드 데이터.
+ *
+ * topics.json + topicDetails.json(원본)에서 매 빌드 시 새로 추출한다.
+ * (과거처럼 수동 스냅샷을 커밋해두면 데이터 정비가 카드에 반영되지 않는
+ * 사고가 나므로, package.json prebuild로 항상 자동 재생성한다.)
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+const topics = JSON.parse(
+  fs.readFileSync(path.join(root, "src/data/topics.json"), "utf8"),
+);
+const details = JSON.parse(
+  fs.readFileSync(path.join(root, "src/data/topicDetails.json"), "utf8"),
+);
+
+const firstCh = (s) => (s || "").trim().charAt(0);
+
+const cards = [];
+for (const t of topics) {
+  const d = details[t.id] || {};
+  let sections = Array.isArray(d.sections)
+    ? d.sections.filter((s) => s?.mnemonic && s.keywords?.length)
+    : [];
+  // 섹션이 없어도 두음·키워드가 있으면 단일 섹션으로 구성(구버전 호환).
+  if (!sections.length) {
+    const kws = (d.featureKeywords || []).filter(Boolean);
+    const stored = (d.mnemonic || "").replace(/\s/g, "");
+    if (kws.length >= 2) {
+      const mnem =
+        stored && [...stored].length === kws.length
+          ? stored
+          : kws.map(firstCh).join("");
+      sections = [{ label: "핵심 키워드", mnemonic: mnem, keywords: kws }];
+    } else if (stored) {
+      sections = [{ label: "두음", mnemonic: stored, keywords: [] }];
+    }
+  }
+  if (!sections.length) continue; // 외울 두음이 없는 토픽은 카드 제외
+
+  cards.push({
+    id: t.id,
+    title: t.title,
+    category: t.category,
+    importance: t.importance,
+    definition: t.summary || "",
+    sections,
+    // 구버전 필드(다른 소비처 호환): 첫 섹션 기준.
+    mnemonic: sections[0].mnemonic,
+    keywords: sections[0].keywords,
+  });
+}
+
+const out = path.join(root, "src/data/flashcards.json");
+fs.writeFileSync(out, JSON.stringify(cards, null, 1), "utf8");
+console.log(
+  `flashcards.json: ${cards.length}장 (섹션 ${cards.reduce((n, c) => n + c.sections.length, 0)}개, ${(fs.statSync(out).size / 1024).toFixed(0)}KB)`,
+);

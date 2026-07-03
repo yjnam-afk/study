@@ -11,6 +11,8 @@ type Card = {
   category: string;
   importance: string;
   definition: string;
+  /** 교재 구획별 두음(빌드 시 topicDetails에서 자동 추출). */
+  sections: { label: string; mnemonic: string; keywords: string[] }[];
   mnemonic: string;
   keywords: string[];
 };
@@ -59,19 +61,6 @@ export default function CommutePage() {
   }
 
   const rounds = card ? getItem(loadReview(), card.id).rounds : 0;
-
-  // 두음을 항상 키워드와 일치시킨다: 저장 두음 글자수가 키워드 수와 같으면 그대로,
-  // 아니면 키워드 첫 글자로 두음을 생성(불일치 방지).
-  const shownMnemonic = (() => {
-    if (!card) return "";
-    const init = card.keywords.map((k) => k.trim().charAt(0)).join("");
-    const stored = (card.mnemonic || "").replace(/\s/g, "");
-    // 키워드가 없으면(매핑 불가) 저장 두음을 그대로, 있으면 글자수 일치 시 그대로.
-    if (card.keywords.length === 0) return card.mnemonic || "";
-    return stored && [...stored].length === card.keywords.length
-      ? card.mnemonic
-      : init;
-  })();
 
   return (
     <div>
@@ -155,29 +144,35 @@ export default function CommutePage() {
                     </p>
                   </div>
                 )}
-                {shownMnemonic && (
-                  <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
-                    <div className="text-xs font-medium text-brand-500">
-                      두음신공
+                {/* 교재 구획별 두음 — 두음신공 카드와 동일한 데이터 */}
+                {(card.sections || []).map((s, si) => {
+                  const letters = [...(s.mnemonic || "").replace(/\s/g, "")];
+                  const aligned = letters.length === s.keywords.length;
+                  return (
+                    <div key={si} className={si > 0 ? "mt-4" : ""}>
+                      <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
+                        <div className="text-xs font-medium text-brand-500">
+                          {s.label || "두음신공"}
+                        </div>
+                        <div className="mt-1 text-3xl font-extrabold tracking-wide text-brand-700">
+                          {s.mnemonic}
+                        </div>
+                      </div>
+                      {s.keywords.length > 0 && (
+                        <ul className="mt-3 space-y-1.5">
+                          {s.keywords.map((k, i) => (
+                            <li key={i} className="flex items-center gap-3">
+                              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-100 text-base font-extrabold text-brand-700">
+                                {aligned ? letters[i] : i + 1}
+                              </span>
+                              <span className="text-sm text-slate-800">{k}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                    <div className="mt-1 text-3xl font-extrabold tracking-wide text-brand-700">
-                      {shownMnemonic}
-                    </div>
-                  </div>
-                )}
-                {/* 두음 글자 ↔ 키워드 매핑 (두음만 보면 모르니 풀어서) */}
-                {card.keywords.length > 0 && (
-                  <ul className="mt-4 space-y-1.5">
-                    {card.keywords.map((k, i) => (
-                      <li key={i} className="flex items-center gap-3">
-                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-100 text-base font-extrabold text-brand-700">
-                          {k.trim().charAt(0)}
-                        </span>
-                        <span className="text-sm text-slate-800">{k}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  );
+                })}
               </div>
             )}
           </div>
