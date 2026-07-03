@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
 import AudioLecture from "@/components/AudioLecture";
@@ -39,7 +41,7 @@ type Step = "learn" | "inject" | "check" | "write";
 const CATS = Array.from(new Set(topics.map((t) => t.category)));
 const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
 
-export default function MnemonicPage() {
+function MnemonicInner() {
   const [topic, setTopic] = useState("");
   const [topicId, setTopicId] = useState("");
   const [recCat, setRecCat] = useState(CATS[0]);
@@ -60,8 +62,9 @@ export default function MnemonicPage() {
 
   // 학습 코치 등에서 ?topicId=&topic=&auto= 으로 들어오면 해당 토픽을
   // 미리 선택하고, auto=1이면 도착 즉시 자동 생성한다.
+  const searchParams = useSearchParams();
   useEffect(() => {
-    const sp = new URLSearchParams(window.location.search);
+    const sp = searchParams;
     const id = sp.get("topicId") || "";
     const title = sp.get("topic") || "";
     const auto = sp.get("auto") === "1";
@@ -79,7 +82,9 @@ export default function MnemonicPage() {
       setTopic(title);
       if (auto) setAutoPending(true);
     }
-  }, []);
+    // SPA 이동(연관 토픽 등)으로 쿼리만 바뀌어도 반응하도록 searchParams 의존.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   // 토픽이 채워진 뒤 한 번만 자동 생성.
   useEffect(() => {
@@ -214,12 +219,12 @@ export default function MnemonicPage() {
             {loading ? "생성 중…" : "두음신공 만들기"}
           </Button>
           {topic.trim() && (
-            <a
+            <Link
               href={`/explain?topic=${encodeURIComponent(topic)}&auto=1`}
               className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-700 hover:bg-amber-100"
             >
               💡 이 토픽 설명 보기 →
-            </a>
+            </Link>
           )}
         </div>
       </div>
@@ -270,13 +275,13 @@ export default function MnemonicPage() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {subnote.related.map((r, i) => (
-                    <a
+                    <Link
                       key={i}
                       href={`/mnemonic?topic=${encodeURIComponent(r)}&auto=1`}
                       className="rounded-full border border-sky-300 bg-white px-3 py-1 text-xs font-medium text-sky-700 hover:bg-sky-100"
                     >
                       {r} →
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -932,23 +937,32 @@ function Write({
               : "기록하려면 토픽을 검색·선택해서 학습해 주세요."}
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-2">
-            <a
+            <Link
               href="/plan"
               className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
             >
               🗓️ 데일리 계획으로
-            </a>
-            <a
+            </Link>
+            <Link
               href="/mnemonic"
               className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50"
             >
               다른 토픽 외우기
-            </a>
+            </Link>
           </div>
         </div>
       ) : (
         <Button onClick={submit}>✅ 외우기 완료 — 제출</Button>
       )}
     </div>
+  );
+}
+
+// useSearchParams는 Suspense 경계가 필요하다(Next App Router).
+export default function MnemonicPage() {
+  return (
+    <Suspense fallback={null}>
+      <MnemonicInner />
+    </Suspense>
   );
 }
