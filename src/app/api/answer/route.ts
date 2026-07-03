@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     // 같은 문제(같은 근거)면 캐시 반환 → 기출 등 반복 생성 시 AI 한도 절약.
     // 교재 데이터(grounding)를 키에 포함 → 토픽 데이터를 고치면 답안도 자동 재생성.
     const cacheKey = `answer:${examPeriod}:${hashKey(question + "|" + (reference || "") + "|" + grounding)}`;
-    const text = await cached(cacheKey, 14 * 86400, () =>
+    const text = await cached(cacheKey, 60 * 86400, () =>
       generateText({
         system: TUTOR_SYSTEM,
         user: answerPrompt(examPeriod, question, grounding),

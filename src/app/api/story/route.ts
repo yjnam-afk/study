@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     const text = await cached(
       // 교재 데이터 수정 시 자동 재생성되도록 grounding을 키에 포함.
       `story:${examPeriod}:${hashKey(question + "|" + grounding)}`,
-      14 * 86400,
+      60 * 86400,
       () =>
         generateText({
           system: TUTOR_SYSTEM,
