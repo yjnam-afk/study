@@ -41015,23 +41015,44 @@
     "mnemonic": "학은배"
   },
   "ai-24": {
-    "detail": "(정의) 인간의 시냅스(Synapse)에 전달된 활동전위 신호가 최소의 자극값을 초과할 때 활성화되어 다음 뉴런으로 전달되는 과정을 구현한 함수 \n활성화함수는 신경망 학습 모델의 input 값에서 output 값을 도출할 때, \n임계치(threshold, Critical Point) 내에서 output 이 도출되도록 transfer 하는 함수\n[종류] 항경계시탄루(레)소\n- 항등함수 : 양극성이며 선형 연속 함수임 f(NET) = NET \n- 경사함수 : 단극성 선형연속 함수\n- 계단함수 : 단극성 또는 양극성 이진 함수\n- sigmod : 단극성 또는 양극성, 0,1사이의 결과값 도출, 𝐟(𝐱) = 𝟏 / (𝟏 + 𝒆^−𝒙)\n- Tanh : -1~1 사이의 값 출력, 평균 0\n  - [장점] 시그모이드보다 성능 좋음 \n  - [단점] 경사 기울기 소실 문제\n- ReLU (Rectified Linear Unit) : f(x)=max(0,x), 시그모이드보다 학습수렴속도 6배 빠름, \n        기울기소실문제 발생\n- Leaky ReLU : f(x)=max(0.01x,x), x가 음수일때 Gradient가 0.01, 기울기소실문제 해결\n- Softmax : 마지막 출력층에서 결과값을 분리함(SVM 유사)",
-    "related": "인공신경망, 인공지능",
+    "detail": "[정의] 시냅스의 활동전위가 임계치(threshold)를 초과할 때 활성화되어 다음 뉴런으로 전달되는 과정을 구현한 함수.\n신경망의 input에서 output을 도출할 때 임계치 내에서 output이 나오도록 transfer하는 함수.\n[종류] 항경계시탄루(레)소\n- 항등함수: 양극성 선형 연속, f(NET)=NET\n- 경사함수: 단극성 선형 연속\n- 계단함수: 단극성/양극성 이진\n- Sigmoid: 0~1 출력, f(x)=1/(1+e^-x)\n- Tanh: -1~1 출력·평균 0, 시그모이드보다 성능↑, 기울기소실 존재\n- ReLU: f(x)=max(0,x), 수렴 6배 빠름, 죽은뉴런(기울기소실) 발생\n- Leaky ReLU: f(x)=max(0.01x,x), 음수 기울기 0.01로 소실 해결\n- Softmax: 출력층에서 확률 분리",
+    "related": "인공신경망 / 딥러닝 / 기울기 소실",
     "defKeywords": [
-      "Synapse",
-      "threshold"
+      "임계치(threshold)",
+      "활동전위",
+      "전달(transfer)",
+      "비선형성 부여"
     ],
     "featureKeywords": [
-      "NET",
-      "항경계시탄루 소",
-      "0",
-      "1사이의 결과값 도출",
-      "𝐟  = 𝟏",
-      "평균 0"
+      "항등함수",
+      "경사함수",
+      "계단함수",
+      "Sigmoid",
+      "Tanh",
+      "ReLU",
+      "Leaky ReLU",
+      "Softmax"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "항경계시탄루"
+    "mnemonic": "항경계시탄루레소",
+    "sections": [
+      {
+        "label": "종류 8",
+        "mnemonic": "항경계시탄루레소",
+        "keywords": [
+          "항등함수",
+          "경사함수",
+          "계단함수",
+          "Sigmoid(시그모이드)",
+          "Tanh(탄젠트)",
+          "ReLU",
+          "Leaky ReLU(레)",
+          "Softmax(소프트맥스)"
+        ]
+      }
+    ],
+    "memo": "항경계시탄루레소 (항등·경사·계단·시그모이드·탄젠트·ReLU·Leaky ReLU·소프트맥스) — 교재 표기: 항경계시탄루(레)소\n[핵심비교] Sigmoid 0~1 / Tanh -1~1·평균0 / ReLU 수렴6배·기울기소실 / Leaky ReLU 0.01x로 해결 / Softmax 출력층 확률\n[정의] 임계치 초과 시 활성화되어 다음 뉴런으로 전달 — 비선형성 부여"
   },
   "ai-25": {
     "detail": "피처 값의 유형에 따라 새로운 피처를 추가해 고유 값에 해당하는 칼럼에만 1을 표시하고 나머지 칼럼에는 0을 표시하는 방법(a single high bit and all the others low), \n 뉴런의 출력값에 대하여 class 분류를 위하여 마지막 단계에서 출력값에 대한 정규화를 해주는 함수",
