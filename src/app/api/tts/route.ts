@@ -122,6 +122,41 @@ async function synthesizePollinations(script: string): Promise<Buffer> {
   return Buffer.concat(parts);
 }
 
+/**
+ * ElevenLabs TTS — 무료 가입(카드 불필요) 월 1만 자. 음질 최상급(다국어 v2).
+ * ELEVENLABS_API_KEY 등록 시 사용. 진행자/전문가 보이스는 env로 교체 가능.
+ */
+async function synthesizeElevenLabs(script: string): Promise<Buffer> {
+  const apiKey = process.env.ELEVENLABS_API_KEY;
+  if (!apiKey) throw new Error("ELEVENLABS_API_KEY 미설정");
+  const turns = parseTurns(script);
+  if (!turns.length) throw new Error("대본에 대사가 없습니다.");
+  const hostVoice = process.env.ELEVENLABS_VOICE_HOST || "21m00Tcm4TlvDq8ikWAM"; // Rachel(여)
+  const expertVoice =
+    process.env.ELEVENLABS_VOICE_EXPERT || "pNInz6obpgDQGcFmaJgB"; // Adam(남)
+  const parts: Buffer[] = [];
+  for (const t of turns) {
+    const voice = t.speaker === "진행자" ? hostVoice : expertVoice;
+    const res = await fetch(
+      `https://api.elevenlabs.io/v1/text-to-speech/${voice}?output_format=mp3_22050_32`,
+      {
+        method: "POST",
+        headers: { "xi-api-key": apiKey, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: t.text,
+          model_id: "eleven_multilingual_v2",
+        }),
+      },
+    );
+    if (!res.ok) {
+      const detail = await res.text();
+      throw new Error(`ElevenLabs (${res.status}): ${detail.slice(0, 150)}`);
+    }
+    parts.push(Buffer.from(await res.arrayBuffer()));
+  }
+  return Buffer.concat(parts);
+}
+
 const TTS_MODEL = process.env.GEMINI_TTS_MODEL || "gemini-2.5-flash-preview-tts";
 
 function pcmToMp3(pcm: Buffer, sampleRate: number): Buffer {
@@ -205,6 +240,12 @@ export async function POST(req: NextRequest) {
         const providers: [string, () => Promise<Buffer>][] = [
           ...(process.env.GOOGLE_TTS_API_KEY
             ? ([["google", () => synthesizeGoogle(script)]] as [
+                string,
+                () => Promise<Buffer>,
+              ][])
+            : []),
+          ...(process.env.ELEVENLABS_API_KEY
+            ? ([["elevenlabs", () => synthesizeElevenLabs(script)]] as [
                 string,
                 () => Promise<Buffer>,
               ][])
