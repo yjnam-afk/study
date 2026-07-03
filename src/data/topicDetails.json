@@ -5296,7 +5296,7 @@
     ],
     "plusKeywords": [],
     "mnemonic": "계정순기개통",
-    "memo": "계정순기개통 (계획 수립·활동 정의·순서 배열·기간 산정·개발(일정표)·통제)",
+    "memo": "계정순기개통 — 산출물: 계획서·활동목록/마일스톤·네트워크다이어그램·기간산정치·일정기준선·예측/변경/성과측정치",
     "sections": [
       {
         "label": "일정관리 프로세스 6",
@@ -5398,10 +5398,12 @@
     "memo": "낙평비 (낙관치·평균치·비관치)"
   },
   "pm-36": {
-    "detail": "[정의] 개별활동들을 연결하여 순방향분석과 역방향 분석을 통해 각 활동의 시작일과 \n종료일, 여유시간 및 전체 프로젝트 수행기간을 산출하는 기법\n[유형] 1)순방향분석 - Start 시점으로부터 왼쪽->오른쪽으로 계산하는 방식\n2)역방향분석 - 순방향 반대. End시점부터 오른쪽->왼쪽으로 계산하는 방식\n[PDM] 선후행 도형법\n착수일: ES(Early start), 관리관점: 진척율/EVM\n\n일정 = 1일로 시작, 원가 = 0으로 시작\n[절차] 정수네전후여주산정 :  \n정의 -> 수행기간 추정 -> 네트워크 다이어그램 -> 전진계산 -> 후진계산 ->\n         Float (여유시간)계산 -> 주경로 분석 -> 수행시간 산정",
-    "related": "순방향,역방향\nCP(Critical Path)\nES(Early Start Date), EF(Early Finish Date)\nLF(Late Finish), LS(Late Start)",
+    "detail": "[정의] 개별 활동을 연결해 순방향·역방향 분석으로 시작/종료일·여유시간·전체 수행기간을 산출하는 기법.\n[유형] 순방향(Start→우측 계산) / 역방향(End→좌측 계산)\n[PDM] 선후행 도형법 — ES·EF·LS·LF, CP(주공정)",
+    "related": "PDM / EVM / 일정관리",
     "defKeywords": [
-      "종료일"
+      "순방향·역방향 분석",
+      "여유시간(Float)",
+      "주공정(CP)"
     ],
     "featureKeywords": [],
     "applicationKeywords": [
@@ -5409,7 +5411,23 @@
     ],
     "plusKeywords": [],
     "mnemonic": "정수네전후여주산정",
-    "memo": "정수네전후여주산정"
+    "memo": "일정=1일로 시작, 원가=0으로 시작 / 착수일 ES, 관리관점 진척율·EVM",
+    "sections": [
+      {
+        "label": "절차 8",
+        "mnemonic": "정수네전후여주산정",
+        "keywords": [
+          "정의(활동)",
+          "수행기간 추정",
+          "네트워크 다이어그램",
+          "전진계산(ES·EF)",
+          "후진계산(LS·LF)",
+          "여유시간(Float) 계산",
+          "주경로 분석",
+          "산정(수행시간)"
+        ]
+      }
+    ]
   },
   "pm-37": {
     "detail": "[정의] 자원제약사항을 고려하여 활동사이의 여유시간을 별도 관리하여 일정을 타이트하게 \n운영하는기법\n[유형] 1)프로젝트 버퍼 - 확보한 버퍼를 CC의 끝에 두어 관리(안전영역, 모니터링영역, 행동영역)\n2)피딩버퍼 - CC에 연결되는 NCC끝에 두어 관리. CC의 작업착수지연 방지\n3)자원버퍼 - 일종의 경보장치. CC상 작업착수 전에 해당자원에게 수행시기 노티\n[자원 최적화 기법] 자원 평준화(Resource Leveling), 자원 평탄화(Resource Smoothing)\n[일정단축기법] Crashing, Fast Tracking",
@@ -5597,8 +5615,8 @@
     "mnemonic": ""
   },
   "pm-46": {
-    "detail": "[정의] 프로젝트 비용, 일정, 수행목표의 기준을 설정하고 계획 대비 실제 진도 측정 및 분석을 통해 문제점 분석, 만회 대칙 수립, 향후 예측을 가능하는 성과 위지 관리 기법\n[계획요소] PMB,BAC\n[측정요소] PV, AC, EV\n[분석요소] CV(EV-AC), CPI, SV(EV-PV), CPI\n[예측요소] ETC(잔여분 산정치), \nEAC(지금 시점에 예측되는 완료시점 산정치, (Atypical)AC+ETC, (typical)AC+ETC), VAC(비용편차, BAC-EAC), \nTCPI(완료성과지수, (BAC-EV)/(BAC-AC) ) /* CPI, SPI 적용 */",
-    "related": "강정배 공식 노트\n(PMP바이블의 공식모음집) 필독!!!",
+    "detail": "[정의] 비용·일정·수행목표 기준(PMB) 설정 후 계획 대비 실제 진도 측정·분석으로 문제분석·만회대책·예측하는 성과관리 기법.\n[계획] PMB, BAC [측정] PV·AC·EV [분석] CV·SV·CPI·SPI [예측] ETC·EAC·VAC·TCPI",
+    "related": "PMB / 일정·원가 통제",
     "defKeywords": [
       "프로젝트 비용",
       "일정",
@@ -5623,42 +5641,16 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "PB / PAE / CCS / 측분예",
-    "memo": "PB (PMB·BAC)\nPAE (PV·AC·EV)\nCCS (CV·CPI·SV)\n측분예 (측정요소(PV·EV·AC)·분석요소(SV·CV·SPI·CPI)·예측요소(EAC·ETC·VAC))",
+    "mnemonic": "측분예",
+    "memo": "계획요소: PMB·BAC\nCV=EV-AC, SV=EV-PV, CPI=EV/AC, SPI=EV/PV\nEAC=AC+ETC(비전형)/AC+잔여÷CPI(전형), VAC=BAC-EAC, TCPI=(BAC-EV)/(BAC-AC)\n강정배 공식노트(PMP 바이블) 필독",
     "sections": [
-      {
-        "label": "계획요소",
-        "mnemonic": "PB",
-        "keywords": [
-          "PMB",
-          "BAC"
-        ]
-      },
-      {
-        "label": "측정요소",
-        "mnemonic": "PAE",
-        "keywords": [
-          "PV",
-          "AC",
-          "EV"
-        ]
-      },
-      {
-        "label": "분석요소",
-        "mnemonic": "CCS",
-        "keywords": [
-          "CV",
-          "CPI",
-          "SV"
-        ]
-      },
       {
         "label": "관리요소 3분류",
         "mnemonic": "측분예",
         "keywords": [
-          "측정요소(PV·EV·AC)",
-          "분석요소(SV·CV·SPI·CPI)",
-          "예측요소(EAC·ETC·VAC)"
+          "측정요소(PV·AC·EV)",
+          "분석요소(CV·SV·CPI·SPI)",
+          "예측요소(ETC·EAC·VAC·TCPI)"
         ]
       }
     ]
@@ -5677,7 +5669,7 @@
     ],
     "plusKeywords": [],
     "mnemonic": "계보통 / 적예평부내외",
-    "memo": "계보통 (계획(QP)·보증(QA)·통제(QC))\n적예평부내외 (적합 비용·예방 비용·평가 비용·부적합 비용·내부 실패·외부 실패)",
+    "memo": "계보통 (계획—계획서·지표 / 보증—변경요청 / 통제—측정치·검증된 인도물)\n적예평부내외 (적합=예방·평가 / 부적합=내부·외부실패)",
     "sections": [
       {
         "label": "품질관리 프로세스 3",
@@ -5801,7 +5793,7 @@
   },
   "pm-51": {
     "detail": "[정의] SDLC 및 유지보수 과정에서 만들어지는 각 단계의 산출물을 체계적으로 관리하여 \n품질 보증활동을 향상시키는 기법\n[구성] 형상식별, 형상통제, 형상감사, 형상기록\n[활동] problem, incident관리\n[SVN] commit/update, server-client, apache, checkout, branch, tagging\n[Git] push/pull, git hub, GUN, clone, local repository\n[기준선] 계획(기능기준선), 요구분석(분배적기준선), 설계(설계기준선), 구현(시험기준선)\n, 시험(제품기준선), 설치/운영(운영기준선)",
-    "related": "식통감기, Baseline, CCB, SW품질, CMDB\nSVN/Git(프로세스 디자인)\n무결성, 추적성 확보\nCAB, 표준 프로세스, 영향도 분석\n회귀테스트, 릴리즈, 기록",
+    "related": "CCB / CMDB / 릴리즈관리",
     "defKeywords": [],
     "featureKeywords": [
       "형상식별",
@@ -5811,8 +5803,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "식통감기 / pi / 계요설구시설 / 기분설시제운",
-    "memo": "식통감기 (형상식별·형상통제·형상감사·형상기록)\npi (problem·incident관리)\n계요설구시설 (계획·요구분석·설계·구현·시험·설치)\n기분설시제운 (기능 기준선·분배(할당) 기준선·설계 기준선·시험 기준선·제품 기준선·운영 기준선)",
+    "mnemonic": "식통감기 / 계요설구시설 / 기분설시제운",
+    "memo": "식통감기 (형상 식별·통제·감사·기록)\n계요설구시설 ↔ 기분설시제운 (단계별 기준선 짝: 계획→기능 / 요구분석→분배 / 설계→설계 / 구현→시험 / 시험→제품 / 설치운영→운영)\n[SVN] commit·update·checkout·branch·tagging / [Git] push·pull·clone·local repo\nBaseline·CCB·CAB·CMDB·회귀테스트·릴리즈",
     "sections": [
       {
         "label": "구성",
@@ -5822,14 +5814,6 @@
           "형상통제",
           "형상감사",
           "형상기록"
-        ]
-      },
-      {
-        "label": "활동",
-        "mnemonic": "pi",
-        "keywords": [
-          "problem",
-          "incident관리"
         ]
       },
       {
@@ -6011,8 +5995,8 @@
     "mnemonic": ""
   },
   "pm-59": {
-    "detail": "[정의] 프로젝트 위험요소를 체계적으로 식별, 평가하고 관리. 조기식별중요\n[프로세스] 위험관리계획-위험식별-정성적위험분석-정량적위험분석-위험대응계획수립-위험대응-위험감시\n[식별방법] 문서검토, 정보수집, 점검표분석, 가정분석, 도식화, 델파이(전문가합의도출),인터뷰, SWOT\n[분석방법]\n관리계획(위험 관리수준,형태,가시성), 위험식별(문서화,브레인스토밍,델파이)\n정성(위험영향도, 위험발생가능성, 데이터정확도 순위화, 가정의 안전성테스트)\n정량(민감도분석, 의사결정트리분석, EMV(위험의크기측량도구), 시뮬레이션)\n[대응방법-부정적] 엘회전완수, EATMA(에스컬레이션, 회피, 전가, 완화, 수용),\n[대응방법-긍정적] 엘활공증수, EESEA(에스컬레이션, 활용, 공유, 증대, 수용)\n[보헴의 10가지 위험목록] 인력부족, 비현실적 일정/예산, 잘못된 기능 구현, 잘못 된 UI 개발, 과대포장, \n지속적 요구사항변경, 외부 기능 부족, 외부 작업 부족, 실시간 성능 문제, 기술적 취약",
-    "related": "EMV\n정량적 위험 분석 기법\nATMA\n긍정적위험\n부정적위험\n\n계식성량계대감\n인비잘잘과지외외성취",
+    "detail": "[정의] 프로젝트 위험요소를 체계적으로 식별·평가·관리 — 조기 식별이 중요.\n[분석] 정성(영향도·발생가능성·데이터정확도 순위화) / 정량(민감도·의사결정트리·EMV·시뮬레이션)",
+    "related": "정성/정량 위험분석 / EMV",
     "defKeywords": [],
     "featureKeywords": [
       "문서검토",
@@ -6042,28 +6026,79 @@
       "EATMA"
     ],
     "plusKeywords": [],
-    "mnemonic": "문정점가도델인S",
-    "memo": "문정점가도델인S (문서검토·정보수집·점검표분석·가정분석·도식화·델파이·인터뷰·SWOT)",
+    "mnemonic": "계식성량계대감 / 문정점가도델인S / 에회전완수 / 에활공증수 / 인비잘잘과지외외성취",
+    "memo": "EATMA/EESEA 병기 · EMV=위험 크기 측량\n[기출] 138회 관리 1교시",
     "sections": [
+      {
+        "label": "프로세스 7",
+        "mnemonic": "계식성량계대감",
+        "keywords": [
+          "계획(위험관리)",
+          "식별",
+          "성(정성적 분석)",
+          "량(정량적 분석)",
+          "계(대응계획 수립)",
+          "대응 실행",
+          "감시"
+        ]
+      },
       {
         "label": "식별방법",
         "mnemonic": "문정점가도델인S",
         "keywords": [
           "문서검토",
           "정보수집",
-          "점검표분석",
-          "가정분석",
+          "점검표 분석",
+          "가정 분석",
           "도식화",
           "델파이",
           "인터뷰",
           "SWOT"
         ]
+      },
+      {
+        "label": "부정적 대응",
+        "mnemonic": "에회전완수",
+        "keywords": [
+          "에스컬레이션",
+          "회피",
+          "전가",
+          "완화",
+          "수용"
+        ]
+      },
+      {
+        "label": "긍정적 대응",
+        "mnemonic": "에활공증수",
+        "keywords": [
+          "에스컬레이션",
+          "활용",
+          "공유",
+          "증대",
+          "수용"
+        ]
+      },
+      {
+        "label": "보헴 10대 위험",
+        "mnemonic": "인비잘잘과지외외성취",
+        "keywords": [
+          "인력 부족",
+          "비현실적 일정·예산",
+          "잘못된 기능 구현",
+          "잘못된 UI 개발",
+          "과대포장",
+          "지속적 요구변경",
+          "외부 기능 부족",
+          "외부 작업 부족",
+          "성능 문제(실시간)",
+          "취약(기술적)"
+        ]
       }
     ]
   },
   "pm-60": {
-    "detail": "[정의] 프로젝트 위험 대응을 위해 위험의 우선순위를 결정하는 프로세스\n[기법] 수분표대기 - 인 영품기 영계촉 전유미\n데이터 수집 : 인터뷰\n데이터 분석 : 위험 확률 및 영향 평가, 위험 데이터 품질 평가, 기타 위험 모수 평가,  PI 분석\n데이터 표현 : 위험 확률 및 영향력 매트릭스, 계층적인 차트\n대인관계 및 팀 기술 : 촉진\n기타 기법 : 전문가 판단, 위험 유형 분류, 미팅\n(위험영향도, 위험발생가능성, 데이터정확도 순위화, 가정의 안전성테스트)",
-    "related": "PI, 위험 확률 및 영향 매트릭스",
+    "detail": "[정의] 위험 대응을 위해 위험의 우선순위를 결정하는 프로세스.",
+    "related": "정량적 위험분석 / P-I 매트릭스",
     "defKeywords": [],
     "featureKeywords": [],
     "applicationKeywords": [
@@ -6073,8 +6108,47 @@
       "미팅"
     ],
     "plusKeywords": [],
-    "mnemonic": "",
-    "memo": "수분표대기 - 인 영품기 영계 촉 전유미"
+    "mnemonic": "수분표대기 / 영품기 / 영계 / 전유미",
+    "memo": "PI 분석 포함 / 순위화: 영향도·발생가능성·데이터정확도, 가정의 안전성 테스트",
+    "sections": [
+      {
+        "label": "기법 분류 5",
+        "mnemonic": "수분표대기",
+        "keywords": [
+          "수집(인터뷰)",
+          "분석(데이터)",
+          "표현(데이터)",
+          "대인관계·팀(촉진)",
+          "기타"
+        ]
+      },
+      {
+        "label": "└ 데이터 분석",
+        "mnemonic": "영품기",
+        "keywords": [
+          "영향·확률 평가",
+          "품질 평가(위험 데이터)",
+          "기타 모수 평가"
+        ]
+      },
+      {
+        "label": "└ 데이터 표현",
+        "mnemonic": "영계",
+        "keywords": [
+          "영향력 매트릭스(P-I)",
+          "계층적 차트"
+        ]
+      },
+      {
+        "label": "└ 기타",
+        "mnemonic": "전유미",
+        "keywords": [
+          "전문가 판단",
+          "유형 분류",
+          "미팅"
+        ]
+      }
+    ]
   },
   "pm-61": {
     "detail": "프로잭트 위험을 찾는 프로세스, 산출문)위험관리대장",
@@ -6088,8 +6162,8 @@
     "mnemonic": ""
   },
   "pm-62": {
-    "detail": "[정의] 프로젝트 위험을 수치화 하여 프로젝트에 미치는 영향 분석하는 프로세스\n[기법] 수분대기 - 인 시민의영 촉 불전\n데이터 수집 : 인터뷰\n데이터 분석 : 모의실험(몬테카를로 시뮬레이션), 민감도 분석(토네이도 다이어그램, 일원분산분석, 시나리오 분석), 의사결정 분석(EMV), 영향관계도\n데이터 표현 : 위험 확률 및 영향력 매트릭스, 계층적인 차트\n대인관계 및 팀 기술 : 촉진\n기타 기법 : 불확실한 표현, 전문가 판단",
-    "related": "",
+    "detail": "[정의] 위험을 수치화하여 프로젝트에 미치는 영향을 분석하는 프로세스.",
+    "related": "정성적 위험분석 / EMV / 몬테카를로",
     "defKeywords": [],
     "featureKeywords": [],
     "applicationKeywords": [
@@ -6101,8 +6175,38 @@
       "전문가 판단"
     ],
     "plusKeywords": [],
-    "mnemonic": "수분대기 -",
-    "memo": "수분대기 - \n인 시민의영 촉 불전"
+    "mnemonic": "수분대기 / 시민의영 / 불전",
+    "memo": "민감도: 토네이도 다이어그램·일원분산·시나리오",
+    "sections": [
+      {
+        "label": "기법 분류 4",
+        "mnemonic": "수분대기",
+        "keywords": [
+          "수집(인터뷰)",
+          "분석(데이터)",
+          "대인관계·팀(촉진)",
+          "기타"
+        ]
+      },
+      {
+        "label": "└ 데이터 분석",
+        "mnemonic": "시민의영",
+        "keywords": [
+          "시뮬레이션(몬테카를로)",
+          "민감도 분석(토네이도)",
+          "의사결정 분석(EMV)",
+          "영향관계도"
+        ]
+      },
+      {
+        "label": "└ 기타",
+        "mnemonic": "불전",
+        "keywords": [
+          "불확실성 표현",
+          "전문가 판단"
+        ]
+      }
+    ]
   },
   "pm-63": {
     "detail": "[정의] 수리적인 방법 적용이 곤란하거나 불가능할 때 사용하는 방법으로 시스템 상태를 파악하는 묘사적 방법\n[절차] 문수모타실분\n문제 정립 -> 자료 수집/분석 -> 모형 개발 -> 타당성 평가 -> 실험 계획 수립 -> 시뮬레이션 결과 분석\n[기법] 디아몬\n- 디지털 시뮬레이션 (컴퓨터 수치적) : 디지털트윈, 메타버스 \n- 아날로그 시뮬레이션 (모형 제작) : 실제로만든다.\n- 몬테카를로 시뮬레이션 (확률): 난수생성,누적결과분석",
@@ -6123,7 +6227,7 @@
   },
   "pm-64": {
     "detail": "[긍정적 위험전략] 에스컬레이션(경영자 보고), 활용(추가인력 투입), 공유(컨소시엄 구축)\n증대(컨설팅 의뢰), 수용(위험을 그대로 두거나 받아들임)\n[부정적 위험전략] 에스컬레이션(경영자 보고), 회비(위험원인 제거, 계획변경, 벤더 교체)\n전가(위험 영향력 3자에게 이전, 보험, 보증, 외주계약)\n완화(위험발생가능성과 영향력 허용수준 이내로 낮춤, 암호화,백업)\n수용(예비비 편성, no action)\n[참고] 리스크관리대장, 위험도 = 발생가능성 X 영향도\n관리,설계,기술,환경측면 분류 , Divide & Conquer\n파생위험(Secondary Risks), 잔여위험(Residual Risk)",
-    "related": "위험관리시 4단락 쓰기 좋음",
+    "related": "위험관리 / 예비비",
     "defKeywords": [],
     "featureKeywords": [
       "에스컬레이션",
@@ -6133,24 +6237,29 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "에활공 / 에회",
-    "memo": "에활공 (에스컬레이션·활용·공유)\n에회 (에스컬레이션·회비)",
+    "mnemonic": "에활공증수 / 에회전완수",
+    "memo": "위험도=발생가능성×영향도 / 파생위험(Secondary)·잔여위험(Residual) / 관리·설계·기술·환경 분류, Divide&Conquer\n위험관리 4단락 쓰기 좋음",
     "sections": [
       {
         "label": "긍정적 위험전략",
-        "mnemonic": "에활공",
+        "mnemonic": "에활공증수",
         "keywords": [
-          "에스컬레이션",
-          "활용",
-          "공유"
+          "에스컬레이션(경영자 보고)",
+          "활용(추가인력)",
+          "공유(컨소시엄)",
+          "증대(컨설팅)",
+          "수용"
         ]
       },
       {
         "label": "부정적 위험전략",
-        "mnemonic": "에회",
+        "mnemonic": "에회전완수",
         "keywords": [
           "에스컬레이션",
-          "회비"
+          "회피(원인제거·계획변경)",
+          "전가(보험·외주)",
+          "완화(암호화·백업)",
+          "수용(예비비)"
         ]
       }
     ]
@@ -6368,15 +6477,25 @@
     "mnemonic": ""
   },
   "pm-73": {
-    "detail": "[정의] product backlog를 sprint단위로 분할하여 반복적으로 개발하며 daily\nmeeting, review통해 개선활동을 수행하는 Agile개발방법론\n[3역할자] product owner, scrum master, team\n[공정관리] burn down chart(계획과 실제번다운 표현)와 velocity측정\n[작업조정] sprint진행중 작업추가 불가능\n[절차] Product Backlog 미팅 -> Story Point 산정 -> Spring backlog 작성 -> sprint -> daily standup metting -> sprint review -> retrospective review",
-    "related": "daily meeting, sprint backlog, product\nbacklog, master, 그루밍(PO리딩)\n번다운차트(가로:스프린트,세로:남은업무)\ntime boxing, 피어리뷰\n회고(Restrospective)",
+    "detail": "[정의] Product Backlog를 Sprint 단위로 분할, 반복 개발하며 Daily Meeting·Review로 개선하는 Agile 방법론.\n[절차] 백로그 미팅→스토리포인트 산정→스프린트 백로그→스프린트→데일리 스탠드업→리뷰→회고",
+    "related": "Agile / Kanban / XP",
     "defKeywords": [
-      "meeting"
+      "Sprint 반복",
+      "백로그",
+      "자기조직화 팀"
     ],
-    "featureKeywords": [],
+    "featureKeywords": [
+      "Product Owner",
+      "Scrum Master",
+      "Team",
+      "번다운차트",
+      "Velocity"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "3역할자: PO·SM·Team / 스프린트 중 작업추가 불가 / Time-boxing·그루밍·피어리뷰·회고(Retrospective)\n번다운차트: 가로=스프린트, 세로=남은 업무"
   },
   "pm-74": {
     "detail": "[정의] 의사소통 개선, 즉각적인 피드백에 의해 단순하게 코딩하여 SW품질을 높이기 위한 방법론\n[5가치] 용기, 피드백, 의사소통, 단순함, 존중\n[12Practice] 개발 - 페어프로그래밍,공동소유/공동책임,CI\n관리 - Planning Process, Small Release, Metaphor\n구현 - Simple Design, TDD, 리팩토링\n환경 - 40-hour work, 고객의 상주 / 기타 - 코드표준준수\n[구성] User story -> 구조적Spike-배포 계획-추가(반복)-인수테스트-작은릴리즈 ->Spike",
@@ -6393,19 +6512,9 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "개공공C / 용단커피존",
-    "memo": "개공공C (개발·공동소유·공동책임·CI)\n용단커피존 (용기·단순함·커뮤니케이션·피드백·존중)",
+    "mnemonic": "용단커피존 / 유구배반인작",
+    "memo": "용단커피존 (용기·단순함·커뮤니케이션·피드백·존중)\n유구배반인작 (User Story→Spike→배포계획→반복→인수테스트→Small Release)\n[12 Practice] 개발: 페어프로그래밍·공동소유/책임·CI / 관리: Planning·Small Release·Metaphor / 구현: Simple Design·TDD·리팩토링 / 환경: 40시간·고객상주 / 코드표준",
     "sections": [
-      {
-        "label": "12Practice",
-        "mnemonic": "개공공C",
-        "keywords": [
-          "개발",
-          "공동소유",
-          "공동책임",
-          "CI"
-        ]
-      },
       {
         "label": "XP 5가치",
         "mnemonic": "용단커피존",
@@ -6416,12 +6525,24 @@
           "피드백",
           "존중"
         ]
+      },
+      {
+        "label": "구성 절차",
+        "mnemonic": "유구배반인작",
+        "keywords": [
+          "유저 스토리",
+          "구조적 스파이크",
+          "배포 계획",
+          "반복(추가)",
+          "인수 테스트",
+          "작은 릴리즈"
+        ]
       }
     ]
   },
   "pm-75": {
-    "detail": "[정의] workflow를 표현하는 칸반보드를 통해 공정을 시각화하고 WIP제한, 흐름관리를 통해 \n적시개발을 지원하는 Agile방법론\n[실천방법]1)가시화2)WIP제한3)흐름관리4)정책명시화5)피드백루프 6)개선/발전\n[원칙] 현재상태 그대로 시작, 변화 점진적 추구 합의, 기존역할/책임/직함존중, 리더쉽 행동장려\n[작업조정] workflow 최적화를 통해 조정가능",
-    "related": "적시개발, 공정시각화, 생산성향상 overload/overproduction관리 - task간균형",
+    "detail": "[정의] 칸반보드로 공정을 시각화하고 WIP 제한·흐름관리로 적시개발을 지원하는 Agile 방법론.\n[작업조정] workflow 최적화로 조정 가능",
+    "related": "SCRUM / Lean / 스크럼보드vs칸반보드",
     "defKeywords": [
       "흐름관리를 통해"
     ],
@@ -6430,7 +6551,32 @@
       "발전"
     ],
     "plusKeywords": [],
-    "mnemonic": "가워흐정프개현변기리"
+    "mnemonic": "가워흐정프개 / 현변기리",
+    "sections": [
+      {
+        "label": "실천방법 6",
+        "mnemonic": "가워흐정프개",
+        "keywords": [
+          "가시화",
+          "WIP 제한(워)",
+          "흐름 관리",
+          "정책 명시화",
+          "피드백 루프(프)",
+          "개선·발전"
+        ]
+      },
+      {
+        "label": "원칙 4",
+        "mnemonic": "현변기리",
+        "keywords": [
+          "현재 상태 그대로 시작",
+          "변화의 점진적 추구",
+          "기존 역할·책임 존중",
+          "리더십 행동 장려"
+        ]
+      }
+    ],
+    "memo": "적시개발·공정시각화·생산성 / overload·overproduction 관리(task 균형)"
   },
   "pm-76": {
     "detail": "[수행 원리] Sprint를 통한 반복적 개발 / Workflow를 통한 연속적 개발\n[Iteration] 사전 정의 필요 / 선택적 적용\n[공정 관리] Burn down chart, velocity 측정 / WIP(Work in progress) 제한\n[계획과 프로세스] Velocity 지표 측정/ Lead time 최소화로 프로세스 개선\n[작업 추가] 신규 작업 추가 불가 / 신규 작업 추가 가능\n[역할 정의] Product Owner, Scrum Master, Team / 정의된 역할을 요구하지 않음\n[업무 협의] Scrum Meeting, Sprint Review Meeting, Daily Scrum Meeting / 정의된 미팅을 요구하지 않음\n[업무 진행] 하나의 Sprint 팀에서 진행 / 공정마다 담당부서가 다를 수 있음",
@@ -6448,8 +6594,8 @@
     "mnemonic": ""
   },
   "pm-77": {
-    "detail": "[정의] TPS(Toyota Production System)을 재정립한 경영방법론인 린시스템의 품질기법을 \n소프트웨어 개발에 적용한 개발방법론\n[7대원칙]\n낭비제거, 배음증폭, 늦은결정, 팀에 권한위임, 빠른 배포, 통합성 구축, 전체를 볼것\n\n[7대낭비]\n미완성 작업, 가외기능, 재학습, 이관, 작업전환, 지연 결함",
-    "related": "낭배늦팀빠통전 미가재이작지결",
+    "detail": "[정의] TPS(도요타 생산방식)를 재정립한 린 시스템 품질기법을 SW 개발에 적용한 방법론.",
+    "related": "Kanban / 린스타트업 / TPS",
     "defKeywords": [
       "Toyota Production System"
     ],
@@ -6464,7 +6610,36 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "낭배늦팀빠통전 / 미가재이작지결",
+    "sections": [
+      {
+        "label": "7대 원칙",
+        "mnemonic": "낭배늦팀빠통전",
+        "keywords": [
+          "낭비 제거",
+          "배움 증폭",
+          "늦은 결정",
+          "팀에 권한위임",
+          "빠른 배포",
+          "통합성 구축",
+          "전체를 볼 것"
+        ]
+      },
+      {
+        "label": "7대 낭비",
+        "mnemonic": "미가재이작지결",
+        "keywords": [
+          "미완성 작업",
+          "가외 기능",
+          "재학습",
+          "이관",
+          "작업 전환",
+          "지연",
+          "결함"
+        ]
+      }
+    ],
+    "memo": "TPS → 린 SW 개발(Poppendieck)"
   },
   "pm-78": {
     "detail": "[정의] 핵심 가치를 정의 후 기반한 가설 만들고, 빨리 검증하여, 핵심지표를\n계속해서 조정해 나가면서 진행하는 방법론\n[절차] Proto-Persona->디자인협업->MVP(Minimum Viable Product)->Feedback",
@@ -6691,13 +6866,23 @@
     "mnemonic": ""
   },
   "pm-88": {
-    "detail": "[모노리식 아키텍처] 기존의 전통적인 웹 시스템 개발 스타일로, 하나의 애플리케이션 내에 모든 조직들이 들어 가 있는 구조\n[마이크로 서비스 아키텍처] 대규모 웹 분산 환경에서 응용소프트웨어를 독립적으로 배치 가능한 서비스 조합으로 설계하는 아키텍처 스타일",
-    "related": "조직구성 = 아키텍처",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "[모노리식] 하나의 애플리케이션에 모든 조직(기능)이 들어있는 전통 구조.\n[MSA] 독립 배치 가능한 서비스 조합으로 설계하는 아키텍처 스타일.",
+    "related": "MSA / SOA / DevOps",
+    "defKeywords": [
+      "단일 vs 분산",
+      "독립 배포",
+      "조직=아키텍처"
+    ],
+    "featureKeywords": [
+      "모노리식(단일 빌드)",
+      "MSA(서비스 조합)",
+      "콘웨이 법칙"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "조직구성=아키텍처(Conway's Law) — 비교표 최빈출"
   },
   "pm-89": {
     "detail": "[프로젝트관리] 프로젝트 관리 위한 일정, 조직, 인력, 지휘, 통제를 제공하는 기술, 지식 체계\n[프로그램관리] 관련된 여러 프로젝트 집합으로 중앙에서 통합적으로 관리\n[포트폴리오관리] 기업의 전략적 목표 달성을 위해 프로젝트나 프로그램 우선순위 결정 권한 부여 및 관리",
@@ -6709,7 +6894,7 @@
     "mnemonic": ""
   },
   "pm-90": {
-    "detail": "[관점] 제3자 관점 / 발주자 관점\n[대상사업] 전 부분 / 구축 프로젝트\n[투입시점] 발주 후 단계별 감리 / 발주 전과 프로젝트 중 단계별 지원\n[법적근거] 전자정부법 제 57조 1항 / 전자정부법 제 64조 2항\n[법적책임] 전자정부법 제62조 / 전자정부법 제64조 3항\n'[제도 측면 비교표] 목관대투근책기\n목적, 관점, 대상사업, 투입시기, 법적근거, 법적책무, 기대효과\n[수행 측면 비교표] 역조산사기\n수행역할, 수행조직, 수행 산출물, 사업관리, 기대효과",
+    "detail": "[비교] 관점: 제3자 / 발주자 · 대상: 전 부문 / 구축 프로젝트 · 투입: 발주 후 단계별 / 발주 전+수행 중\n법적근거: 전자정부법 57조1항 / 64조2항 · 법적책임: 62조 / 64조3항",
     "related": "목관대투근책기\n역조산사기",
     "defKeywords": [],
     "featureKeywords": [
@@ -6732,7 +6917,7 @@
     ],
     "plusKeywords": [],
     "mnemonic": "목관대투근책기 / 역조산사기",
-    "memo": "목관대투근책기 (목적·관점·대상사업·투입시기·법적근거·법적책무·기대효과)\n역조산사기 (수행역할·수행조직·수행 산출물·사업관리·기대효과)",
+    "memo": "목관대투근책기 (제도: 목적·관점·대상·투입시기·법적근거·법적책무·기대효과)\n역조산사기 (수행: 역할·조직·산출물·사업관리·기대효과)\n[기출] 131회 관리 1교시",
     "sections": [
       {
         "label": "제도 측면 비교표",
@@ -6761,8 +6946,8 @@
     ]
   },
   "pm-91": {
-    "detail": "[정의] - 다수의 IT 프로젝트를 기업 비즈니스전략과 정렬하고 프로젝트 별 기업 자원 투입, PMO 간 의견 조율 등을 수행하는 최상위 PMO\n도입절차] 도입계획수립-PMO가동준비-PMO운영-PMO지속적개선\n[PMO제도의 한계점] 예산부족, 예산편성기준 부재, 명확한 도입대상 기준부재,\nPMO 도입 부정적인식, PMO 권한과 책임 애매함, 감리업체와 충돌\n[PMO 선정기준] 수행인력, 업무계획, 수행실적, 품질 및 성과관리\n\n[PMO유형] 기상대, 코치, 컨트롤타워\n[PMO단계]\nPMO사업추진(도입검토,발주및계약,착수)\nPMO사업수행(본사업기획단계, 본사업집행단계, 본사업 사후관리단계)\nPMO사업종료(PMO사업검사,PMO사업 산출물인수, PMO사업 추진실적제출)",
-    "related": "도발착기집사검산제",
+    "detail": "[정의] 다수 IT 프로젝트를 기업 전략과 정렬, 자원 배분·PMO 간 조율을 수행하는 최상위 PMO.\n[도입절차] 계획수립→가동준비→운영→지속개선",
+    "related": "공공 PMO / 감리",
     "defKeywords": [],
     "featureKeywords": [
       "기상대",
@@ -6775,8 +6960,8 @@
       "PMO사업종료"
     ],
     "plusKeywords": [],
-    "mnemonic": "기코컨",
-    "memo": "기코컨 (기상대·코치·컨트롤타워)",
+    "mnemonic": "기코컨 / 도발착기집사검산제",
+    "memo": "기코컨 (기상대·코치·컨트롤타워)\n[한계] 예산부족·기준부재·부정적 인식·권한책임 애매·감리 충돌 / [선정] 인력·계획·실적·품질성과\n[기출] 132회 컴시응 1교시",
     "sections": [
       {
         "label": "PMO유형",
@@ -6786,12 +6971,27 @@
           "코치",
           "컨트롤타워"
         ]
+      },
+      {
+        "label": "사업 단계 9",
+        "mnemonic": "도발착기집사검산제",
+        "keywords": [
+          "도입 검토",
+          "발주·계약",
+          "착수",
+          "기획단계(본사업)",
+          "집행단계",
+          "사후관리단계",
+          "검사(PMO사업)",
+          "산출물 인수",
+          "제출(추진실적)"
+        ]
       }
     ]
   },
   "pm-92": {
     "detail": "[정의] 전자정부법 64조 2항, 발주자 관점에서 프로젝트의 성공을 위해 범위,일정, 비용,위험의 관리를 \n위탁받은 전문조직\n[등장배경] SW산업진흥법, 전자정부사업의 위험방지 및 품질제고를 위해 사업관리 위탁\n[도입절차] 도입계획수립-PMO가동준비-PMO운영-PMO지속적개선\n[PMO제도의 한계점] 예산부족, 예산편성기준 부재, 명확한 도입대상 기준부재,\nPMO 도입 부정적인식, PMO 권한과 책임 애매함, 감리업체와 충돌\n[PMO 선정기준] 수행인력, 업무계획, 수행실적, 품질 및 성과관리\n\n[PMO유형] 기상대, 코치, 컨트롤타워\n[PMO단계]\n기획단계 (통합, 성과)\n집행단계 (통합, 이해 관계자, 범위, 자원, 일정, 위험, 품질,성과, 조달, 의사소통, 변화, 보안)\n사후관리 단계 (통합, 변화, 성과)",
-    "related": "[관련법규] 전자정부법 제64조2(권고)\n제64조의 3(손해배상대상)\n전자정부법 제57조1항의거\nPMO발주시 감리생략 단서조항 명시\n비용현실화 - 현행3.8%~8.3% 기준변경 움직임->공청회\n진행\nNIA PMO도입운영가이드 배포\nPMO전문가양성교육",
+    "related": "(E)PMO / 전자정부법 / 감리",
     "defKeywords": [
       "전자정부법 64조 2항",
       "일정",
@@ -6810,8 +7010,8 @@
       "사후관리 단계"
     ],
     "plusKeywords": [],
-    "mnemonic": "기코컨 / 통이범자일위 / 품성조의변보",
-    "memo": "기코컨 (기상대·코치·컨트롤타워)\n통이범자일위 (통합관리·이해관계자관리·범위관리·자원관리·일정관리·위험관리)\n품성조의변보 (품질관리·성과관리·조달관리·의사소통관리·변화관리·보안관리)",
+    "mnemonic": "기코컨 / 통이범자일위 / 품성조의변보 / 기집사 / 통성 / 통변성",
+    "memo": "기집사 → 기획(통성) / 집행(통이범자일위+품성조의변보 12영역) / 사후(통변성)\n[법규] 전자정부법 64조2(권고)·64조3(손해배상)·57조1(감리생략 단서) / 비용 3.8~8.3% 현실화 논의 / NIA 가이드",
     "sections": [
       {
         "label": "PMO유형",
@@ -6844,6 +7044,32 @@
           "의사소통관리",
           "변화관리",
           "보안관리"
+        ]
+      },
+      {
+        "label": "사업수행 단계",
+        "mnemonic": "기집사",
+        "keywords": [
+          "기획 단계",
+          "집행 단계",
+          "사후관리 단계"
+        ]
+      },
+      {
+        "label": "└ 기획단계 영역",
+        "mnemonic": "통성",
+        "keywords": [
+          "통합",
+          "성과"
+        ]
+      },
+      {
+        "label": "└ 사후관리 영역",
+        "mnemonic": "통변성",
+        "keywords": [
+          "통합",
+          "변화",
+          "성과"
         ]
       }
     ]
@@ -8679,8 +8905,8 @@
     ]
   },
   "se-58": {
-    "detail": "[정의] 시스템, 소프트웨어 및 엔터프라이즈 아키텍처 설명에 대한 요구 사항/표준 용어 정의\n[구성요소] \n식별 : System of Interest(대상 시스템),  Stakeholder(이해관계자), Concern(관심사)\n표현 : model Kind(모델형), Architecture(아키텍처), Architecture Description(아키텍처 기술)\nAD의 파트 : Architecture Viewpoint(where-view 관점), Architecture View(what-뷰), Architecture model(모델), Architecture Rationale(결정근거), Correspondence Rule(대응 관계의 규제), Correspondence(대응관계)",
-    "related": "",
+    "detail": "[정의] 시스템·SW·엔터프라이즈 아키텍처 기술(Description)에 대한 요구사항·표준 용어 정의(구 IEEE 1471).",
+    "related": "SW Architecture / 4+1 View",
     "defKeywords": [
       "시스템",
       "표준 용어 정의"
@@ -8695,12 +8921,53 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "식표AD",
-    "memo": "식표AD\n대이관 모아기 관뷰모근규대"
+    "mnemonic": "식표AD / 대이관 / 모아기 / 관뷰모근규대",
+    "memo": "식표AD → 대이관 / 모아기 / 관뷰모근규대",
+    "sections": [
+      {
+        "label": "구성 3",
+        "mnemonic": "식표AD",
+        "keywords": [
+          "식별",
+          "표현",
+          "AD의 파트"
+        ]
+      },
+      {
+        "label": "└ 식별",
+        "mnemonic": "대이관",
+        "keywords": [
+          "대상 시스템(SoI)",
+          "이해관계자",
+          "관심사(Concern)"
+        ]
+      },
+      {
+        "label": "└ 표현",
+        "mnemonic": "모아기",
+        "keywords": [
+          "모델형(Model Kind)",
+          "아키텍처",
+          "기술(AD)"
+        ]
+      },
+      {
+        "label": "└ AD 파트",
+        "mnemonic": "관뷰모근규대",
+        "keywords": [
+          "관점(Viewpoint)",
+          "뷰(View)",
+          "모델",
+          "근거(Rationale)",
+          "규칙(대응)",
+          "대응관계"
+        ]
+      }
+    ]
   },
   "se-59": {
     "detail": "[정의] 아키텍처 접근법이 품질속성에 미치는 영향을 판단하고, 아키텍처 적합성을 평가하는 모델\n[유형] 시나리오기반, 시뮬레이션기반, 수학적기반, 경험기반\n[모델] \n시나리오기반(SAAM, ATAM, CBAM, EATAM)\n설계혼합기반(ADR, ARID)",
-    "related": "",
+    "related": "ATAM / CBAM / 품질속성",
     "defKeywords": [],
     "featureKeywords": [
       "시나리오기반",
@@ -8711,31 +8978,31 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "시몰수경 / 시설",
-    "memo": "시몰수경 (시나리오기반·시뮬레이션기반·수학적기반·경험기반)\n시설 (시나리오기반·설계혼합기반)",
+    "memo": "시몰수경 / 시설 — 시나리오기반이 주류(ATAM 계열)",
     "sections": [
       {
-        "label": "유형",
+        "label": "평가 유형",
         "mnemonic": "시몰수경",
         "keywords": [
-          "시나리오기반",
-          "시뮬레이션기반",
-          "수학적기반",
-          "경험기반"
+          "시나리오 기반",
+          "시뮬(몰)레이션 기반",
+          "수학적 기반",
+          "경험 기반"
         ]
       },
       {
-        "label": "모델",
+        "label": "모델 분류",
         "mnemonic": "시설",
         "keywords": [
-          "시나리오기반",
-          "설계혼합기반"
+          "시나리오기반(SAAM·ATAM·CBAM·EATAM)",
+          "설계혼합(ADR·ARID)"
         ]
       }
     ]
   },
   "se-60": {
-    "detail": "[정의] 품질 속성 요구사항과 비즈니스 목표 달성 위한 아키텍처 결정사항들에 대해 평가하는 방법\n[평가요소]\n시스템(오류허용성, 정밀성, 보안성, 상호운영성, 회복성)\n비즈니스(적합성, 습득성, 준거성, 이해성)\n아키텍처(대체성, 변경성, 적응성, 시험성, 일치성)\n[프로세스]  협력과 준비, 기본평가, 상세평가, 후속조치\n\n[평가단계] \n소개 ( ATAM 소개, 비즈니스 소개, 아키텍처 소개 )\n조사와 분석 ( 아키텍처 접근별 식별, 품질속성 유틸리티트리 작성, \n                 아키텍처 접근법 분석)\n테스트( 브레인스토밍 & 시나리오 우선순위 결정, \n          아키텍처 접근법 분석 반복 )\n보고( 결과발표 )\n[ATAM의 품질요소]\nPerformance(성능), Reliability, Availability, Security, Modifiability(수정성), Portability, Functionality, Variability, Subsetability, Conceptual Integrity",
-    "related": "품질속성 트리",
+    "detail": "[정의] 품질속성 요구사항과 비즈니스 목표 달성을 위한 아키텍처 결정을 평가하는 방법.\n[품질요소] 성능·신뢰성·가용성·보안·수정성·이식성 등",
+    "related": "CBAM / SAAM / 품질속성",
     "defKeywords": [],
     "featureKeywords": [
       "시스템",
@@ -8762,8 +9029,8 @@
       "보고"
     ],
     "plusKeywords": [],
-    "mnemonic": "협기상후",
-    "memo": "협기상후 (협력과 준비·기본평가·상세평가·후속조치)",
+    "mnemonic": "협기상후 / 시비아 / 소조테보",
+    "memo": "협기상후 (프로세스) / 시비아 (평가요소) / 소조테보 (평가단계)\n품질속성 유틸리티 트리 / [기출] 131회 컴시응 1교시",
     "sections": [
       {
         "label": "프로세스",
@@ -8774,12 +9041,31 @@
           "상세평가",
           "후속조치"
         ]
+      },
+      {
+        "label": "평가요소 3",
+        "mnemonic": "시비아",
+        "keywords": [
+          "시스템(오류허용·정밀·보안·상호운영·회복)",
+          "비즈니스(적합·습득·준거·이해)",
+          "아키텍처(대체·변경·적응·시험·일치)"
+        ]
+      },
+      {
+        "label": "평가단계 4",
+        "mnemonic": "소조테보",
+        "keywords": [
+          "소개(ATAM·비즈·아키)",
+          "조사와 분석(접근법·유틸리티트리)",
+          "테스트(브레인스토밍·우선순위)",
+          "보고(결과발표)"
+        ]
       }
     ]
   },
   "se-61": {
-    "detail": "[정의] 경제적 의사결정에 대한 요구를 충족시키기 위해 SEI에서 ATAM 바탕으로 소프트웨어 아키텍처 분석에 중점을 둔 경제적 모델링 기법\n[절차] 시효접선\n 1) 시나리오 수집/정제/결정 : ATAM 시나리오 수집, 최선, 최악, 기대 반응값에 따라 우선순위 결정\n 2) 효용-반응값 곡선 작성 : 최선, 최악, 현재, 기대 반응값으로 효용-반응값 곡선 추정\n 3) 아키텍처 접근법 전체이익 계산\n  - 아키텍처 접근법의 예상 반응값 결정\n  - 효용-반응값 곡선을 이용해서 예상 반응값에 대한 효용 계산\n  - 시나리오별 우선순위 가중치를 반영하여 모든 시나리오의 이익을 계산\n 4) 아키텍처 접근법 선정과 검증\n  - 아키텍처 접근법 ROI 계산, 순위 결정, 비용과 일정고려 아키텍처 접근법 선정 및 결과 검증\n\n**P(Performance), S(Security), M(Modifiability) 등의 이익을 정량화하여, 아키턱처 결정과 구현했을 때의 비용(Cost)와 이익을 ROI 측면으로 - 경제성 분석을 통해, 판단한다.(끌어낸다)",
-    "related": "131회 컴시응 1교시",
+    "detail": "[정의] 경제적 의사결정을 위해 SEI가 ATAM 기반으로 만든 아키텍처 경제성 모델링 기법 — 비용·이익을 ROI로 판단.",
+    "related": "ATAM / ROI",
     "defKeywords": [],
     "featureKeywords": [],
     "applicationKeywords": [
@@ -8799,7 +9085,19 @@
     ],
     "plusKeywords": [],
     "mnemonic": "시효접선",
-    "memo": "시효접선"
+    "memo": "P·S·M 등 이익 정량화 → ROI 경제성 분석 / [기출] 131회 컴시응 1교시",
+    "sections": [
+      {
+        "label": "절차 4",
+        "mnemonic": "시효접선",
+        "keywords": [
+          "시나리오 수집·정제·결정",
+          "효용-반응값 곡선 작성",
+          "접근법 전체이익 계산",
+          "선정과 검증(ROI)"
+        ]
+      }
+    ]
   },
   "se-62": {
     "detail": "[정의] SW 요구사항을 수행하는 기능적, 품질적, 성능에 영향을 주는 속성중 아키텍쳐 구성에 영향을 주는 요구사항\n[목록] 기능 요구사항(비기능 포함), 제약사항(사전에 고려되어야 할), 품질속성(성능, 안정성 등)",
@@ -8908,28 +9206,25 @@
     "mnemonic": ""
   },
   "se-69": {
-    "detail": "[정의] 대규모 분산 웹 환경에서 응용 소프트웨어를 독립적으로 배치 가능한 서비스 조합으로 \n설계하는 아키텍쳐\n[특징] 사상: 리액티브 시스템 [디자인패턴] observer패턴, circuit breaker 패턴\n[구조] 서비스 컴포넌트화(fine grained, loosely coupled), 분산거버넌스(polyglot),\n분산데이터(vertical slicing), End point 통합(API GW, Orchestraion), \n비즈니스 연계(Cross functional Team)",
-    "related": "SPOF 방지 구현을 위해 다수의 API GW 구성가능\nAPI GW, LB, Conway's Law, SOA, DevOps, Docker,\nDDD, EDA, Agile\n마이크로서비스/모노리틱",
+    "detail": "[정의] 대규모 분산 웹 환경에서 독립 배치 가능한 서비스 조합으로 설계하는 아키텍처.\n[구조] 서비스 컴포넌트화(fine-grained·loosely coupled), 분산 거버넌스(polyglot), 분산 데이터(vertical slicing), End-point 통합(API GW·오케스트레이션), 비즈니스 연계(Cross-functional Team)",
+    "related": "Monolithic / 서비스 매쉬 / SAGA / DDD",
     "defKeywords": [
-      "설계하는 아키텍쳐"
+      "독립 배포 서비스",
+      "분산 웹",
+      "느슨한 결합"
     ],
     "featureKeywords": [
-      "리액티브 시스템"
+      "서비스 컴포넌트화",
+      "분산 거버넌스",
+      "분산 데이터",
+      "End-point 통합",
+      "비즈니스 연계"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "서분",
-    "sections": [
-      {
-        "label": "구조",
-        "mnemonic": "서분",
-        "keywords": [
-          "서비스 컴포넌트화",
-          "분산거버넌스"
-        ]
-      }
-    ],
-    "memo": "서분 (서비스 컴포넌트화·분산거버넌스)"
+    "sections": [],
+    "memo": "사상: 리액티브 시스템 / 패턴: Observer·Circuit Breaker / SPOF 방지 다중 API GW\n키워드: Conway's Law·SOA·DevOps·Docker·DDD·EDA"
   },
   "se-70": {
     "detail": "[정의] API서버 앞단에서 모든 API 서버들의 엔드포인트를 단일화하여 묶어주고 API에 대한 인증과 인가 기능에서 부터 메세지에 따라서 여러 서버로 라우팅 하는 고급기능 까지 많은 기능을 담당하는 Gateway\n[역할]\n보안 ( 내부 데이터 보호, 접근 통제, 로깅 및 모니터링 )\n서비스 연결 ( 클라이언트 요청 변환, 백엔드 처리결과 반환 )\n[주요기능]\n보안 ( 인증 및 인가, 암호화 통신, 로그 기능 )\n라우팅 ( 서비스 매칭, 로드 밸런싱 )\nMediation ( HTTP/JSON 기반 프로토콜 변환 )\n기타 ( 서비스 오케스트레이션, 서비스 디스커버리, 서비스 통계 )",
@@ -8946,8 +9241,8 @@
     "mnemonic": ""
   },
   "se-71": {
-    "detail": "[정의] 마이크로 서비스 아키텍처(MSA) 구성환경에서 서비스 간의 데이터 공유하는 방식을 제어, 호출제어 및 오버헤드를 최소화하기 위한 네트워킹 기술\n[주요기술] \nControl Plane -\nDynamic Request Routing, Retry and Timeout, 암호화(SSL, TLS), Health Check\nData Plane - \nSidecar Proxy, Service Discovery, Circuit Breaking, Business Logic, Load Balancing\n[유형] PaaS형 SM, Library형 SM, Sidecar Prooxy SM",
-    "related": "MSA",
+    "detail": "[정의] MSA 환경에서 서비스 간 데이터 공유 방식 제어·호출제어·오버헤드 최소화 네트워킹 기술.\n[유형] PaaS형, Library형, Sidecar Proxy형",
+    "related": "MSA / Sidecar / Istio",
     "defKeywords": [
       "MSA"
     ],
@@ -8957,22 +9252,49 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "컨데 -",
-    "memo": "디로다서암헬타"
+    "mnemonic": "컨데 / 싸디서로레",
+    "memo": "Control Plane: Dynamic Routing·Retry/Timeout·암호화(SSL/TLS)·Health Check(DRS+헬스체크)",
+    "sections": [
+      {
+        "label": "평면 구조",
+        "mnemonic": "컨데",
+        "keywords": [
+          "컨트롤 플레인",
+          "데이터 플레인"
+        ]
+      },
+      {
+        "label": "└ Data Plane",
+        "mnemonic": "싸디서로레",
+        "keywords": [
+          "싸이드카 프록시",
+          "디스커버리(서비스)",
+          "서킷 브레이킹",
+          "로드 밸런싱",
+          "레직(비즈니스 로직)"
+        ]
+      }
+    ]
   },
   "se-72": {
-    "detail": "[정의] 데이터 일관성 유지를 위해 비동기 메시징을 이용해 편성한 로컬 트랜잭션\n[구성요소] 보상가능 트랜잭션, 피봇 트랜잭션, 재시도 가능 트랜잭션, 보상 트랜잭션\n[유형]\nChoreography based saga Choreography (연출 의미)\nOrchestration based saga",
-    "related": "",
-    "defKeywords": [],
+    "detail": "[정의] 데이터 일관성 유지를 위해 비동기 메시징으로 편성한 로컬 트랜잭션(SAGA).\n[유형] Choreography 기반 / Orchestration 기반",
+    "related": "MSA / 2PC / 이벤트소싱",
+    "defKeywords": [
+      "분산 트랜잭션",
+      "비동기 메시징",
+      "일관성 유지"
+    ],
     "featureKeywords": [
       "보상가능 트랜잭션",
       "피봇 트랜잭션",
-      "재시도 가능 트랜잭션",
+      "재시도가능 트랜잭션",
       "보상 트랜잭션"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "2PC 대안 — MSA 데이터 일관성 패턴"
   },
   "se-73": {
     "detail": "[정의] MSA 설계 시 도메인이 중심으로 설계를 하여 복잡한 구조를 쉽게 구성하여 서비스 간 느슨한 결합과 높은 응집도를 위한 가벼운 설계 기법\n[구성요소] 엔밸어도레서팩\nEntity, Value Object, Aggregate, Domain Event, Repository, \nService, Factory",
@@ -9165,13 +9487,27 @@
     "mnemonic": ""
   },
   "se-80": {
-    "detail": "전체 다이어그램 구분 정리\n[구조 기반] 클래스(Class) Diagram, 컴포넌트(Component) Diagram, 객체(Object) Diagram, 배치(Deployment) Diagram, Composite Structure  Diagram, Package \nDiagram, Profile Diagram\n[ 행위 기반 다이어 그램] 활동(Activity), 유즈케이스(Use Case), 상태(State) 상호작용 다이어그램(Interaction Diagram), 순차(Sequence)다이어그램, Communication \nDiagram, 상호작용 개요다이어그램(Interaction Overview Diagram), Timing Diagram",
-    "related": "itpe 특강 볼것",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "[구조 기반 7] Class, Component, Object, Deployment, Composite Structure, Package, Profile\n[행위 기반 7] Activity, Use Case, State, Sequence, Communication, Interaction Overview, Timing",
+    "related": "Class diagram / Usecase / Sequence",
+    "defKeywords": [
+      "UML 다이어그램 분류",
+      "구조 7",
+      "행위 7"
+    ],
+    "featureKeywords": [
+      "Class",
+      "Component",
+      "Deployment",
+      "Activity",
+      "Use Case",
+      "Sequence",
+      "State"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "구조=정적 / 행위=동적(상호작용 4종 포함)"
   },
   "se-81": {
     "detail": "의존관계, 연관관계, 일반화(Generalization), 실체화(Realization)",
@@ -9356,8 +9692,8 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "유행시연포확일그",
-    "memo": "유행시연포확일그 (Usecase·Actor·System·Association·include·extend·Generalization·Grouping)",
+    "mnemonic": "유행시연포확일그 / 액유릴유구",
+    "memo": "유행시 연포확일그 (구성 8) / 액유릴 유구 (절차 4)",
     "sections": [
       {
         "label": "구성요소",
@@ -9371,6 +9707,16 @@
           "extend",
           "Generalization",
           "Grouping"
+        ]
+      },
+      {
+        "label": "작성 절차",
+        "mnemonic": "액유릴유구",
+        "keywords": [
+          "액터 식별",
+          "유스케이스 식별",
+          "릴레이션십 식별",
+          "유스케이스 구조화"
         ]
       }
     ]
@@ -9571,24 +9917,29 @@
     "mnemonic": ""
   },
   "se-103": {
-    "detail": "재사용성, 유지보수성 극대화 목적\nGoF (Gang of Four)의 분류, 확장성, 재사용성, 유지보수성\n이름(Name), 3가지 분류\n1) 생성(Creational) : 객체들의 생성과 관련된 패턴\n2) 구조(Structure) : 클래스, 객체의 정적인 구조와 관련된 패턴\n3) 행위(Behavioral) : 클래스와 객체의 반응과 책임 할당\n범위-\n화이트박스 재사용: 상속에 의한 재사용/컴파일 시점에 기능 정의\n블백박스 재사용: 객체 합성에 의한 재사용/동적바인딩(전략패턴처럼)",
-    "related": "화이트박스는 \nGoF 패턴 책에 있는 \n내용임",
+    "detail": "[정의] GoF 23개 — 재사용성·유지보수성 극대화 목적의 설계 패턴 모음.",
+    "related": "SOLID / 전략패턴 / 리팩토링",
     "defKeywords": [
-      "Gang of Four",
-      "Name",
-      "Creational",
-      "Structure",
-      "Behavioral",
+      "GoF 23",
       "재사용성",
-      "유지보수성 극대화 목적",
-      "GoF  의 분류",
-      "확장성",
       "유지보수성"
     ],
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "생구행",
+    "sections": [
+      {
+        "label": "3대 분류",
+        "mnemonic": "생구행",
+        "keywords": [
+          "생성(Creational)",
+          "구조(Structural)",
+          "행위(Behavioral)"
+        ]
+      }
+    ],
+    "memo": "화이트박스 재사용=상속(컴파일 시점) / 블랙박스 재사용=객체 합성(동적 바인딩·전략패턴)"
   },
   "se-104": {
     "detail": "헐리우드 원칙\n- 먼저 연락하지 마세요, 저희가 연락드리겠습니다.\n- 의존성 부패를 방지할 수 있음.\n상위클래스가 하위클래스를 호출(결정함)\n구체클래스에서, 추상클래스를 호출할 수 없음",
@@ -9883,8 +10234,8 @@
     "mnemonic": ""
   },
   "se-128": {
-    "detail": "MVC 모델\n(정의)   사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션의 시각적 요소나 그 이면에서 실행  되는 비즈니스 로직을 서로 영향 없이 수정할 수 있도록 지원하는 소프트웨어 디자인 패턴 \nModel, View, Control",
-    "related": "Web/ WAS/DB",
+    "detail": "[정의] UI로부터 비즈니스 로직을 분리해 시각요소와 로직을 서로 영향 없이 수정 가능하게 하는 디자인 패턴.",
+    "related": "MVVM / 디자인패턴 / WAS",
     "defKeywords": [
       "MVC 모델",
       "Model",
@@ -9894,7 +10245,19 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "MVC",
+    "sections": [
+      {
+        "label": "구성 3",
+        "mnemonic": "MVC",
+        "keywords": [
+          "Model(데이터·로직)",
+          "View(표현)",
+          "Controller(제어)"
+        ]
+      }
+    ],
+    "memo": "Web/WAS/DB 3계층과 매핑해 답안 구성"
   },
   "se-129": {
     "detail": "[정의] 모델, 뷰, 뷰 모델로 기능을 분리하고 데이터 바인딩을 통하여 뷰와 뷰모델간의 통신을 자동화 하는 아키텍처 패턴",
@@ -9956,7 +10319,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "내공외제스자 / 우논시절통순기",
-    "memo": "내공외제스자 (내용·공통·외부·제어·스탬프·자료)\n우논시절통순기 (우연적·논리적·시간적·절차적·통신적·순차적·기능적)",
+    "memo": "우논시절통순기 (응집도 낮→높: 우연·논리·시간·절차·통신·순차·기능)\n내공외제스자 (결합도 높→낮: 내용·공통·외부·제어·스탬프·자료)\n응집도는 높을수록·결합도는 낮을수록 좋다 — \"커플은 적을수록 좋다\"",
     "sections": [
       {
         "label": "결합도",
@@ -9986,23 +10349,28 @@
     ]
   },
   "se-134": {
-    "detail": "[정의]소프트웨어 패키지 및 구성 요소 등 고유하게 식별 가능한 메타데이터, 저작권 및 라이선스 등 소프트웨어 콘텐츠에 대한 정보를 포함하는 공식 명세서\n(특징)컴포넌트, OSS, 라이선스, Zeroday attack, Scan Tool, OSS 거버넌스",
-    "related": "",
-    "defKeywords": [],
+    "detail": "[정의] SW 패키지·구성요소의 식별 가능한 메타데이터·저작권·라이선스 정보를 포함하는 공식 명세서.",
+    "related": "OSS 거버넌스 / 공급망 보안",
+    "defKeywords": [
+      "SW 구성 명세",
+      "메타데이터",
+      "라이선스 정보"
+    ],
     "featureKeywords": [
-      "컴포넌트",
-      "OSS",
+      "컴포넌트 식별",
+      "OSS 관리",
       "라이선스",
-      "Zeroday attack",
-      "Scan Tool",
-      "OSS 거버넌스"
+      "Zero-day 대응",
+      "Scan Tool"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "SW 공급망 보안 핵심 — OSS 거버넌스 연계"
   },
   "se-135": {
-    "detail": "[정의] simple code의 추구를 목적으로 테스트 케이스를 먼저 개발하고 테스트 케이스를 \n통과하는 실제코드를 나중에 개발하는 agile 개발방법\n[특징] Instant Feedback, BottomUp approach, Simple code 추구\n[구성도] Need->Test->Code->Badsmell?->Refactoring->Simple code\n[절차] 테스트 케이스 추가-코드작성-테스트수행-코드수정-리팩토링/중복제거\n[장애요소/제거방안] 사용자요구,테스트설계,코드작성,리팩토링 / 요구변경,테스트\n케이스,유닛테스트,리팩토링\n[패턴] 빨초테X디\n빨강막대 패턴, 초록막대 패턴, 테스트 패턴, xUnit패턴, 디자인 패턴",
+    "detail": "[정의] Simple Code 추구 — 테스트 케이스를 먼저 만들고 통과하는 코드를 나중에 개발하는 Agile 방법.\n[구성도] Need→Test→Code→Bad smell?→Refactoring→Simple code\n[특징] Instant Feedback, Bottom-Up, Simple Code",
     "related": "XP",
     "defKeywords": [],
     "featureKeywords": [
@@ -10022,7 +10390,7 @@
     ],
     "plusKeywords": [],
     "mnemonic": "빨초테X디 / 요테구리",
-    "memo": "빨초테X디 (빨강막대 패턴·초록막대 패턴·테스트 패턴·xUnit패턴·디자인 패턴)\n요테구리 (요구 분석·테스트 작성(Red)·구현(Green)·리팩토링)",
+    "memo": "요테구리 (요구→테스트작성→구현→리팩토링)\n빨초테X디 (빨강막대·초록막대·테스트·xUnit·디자인 패턴)\nDesign for Testability·테스트 커버리지 확보",
     "sections": [
       {
         "label": "패턴",
@@ -10127,7 +10495,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "소협통 / 정역지사자 / 플코빌테디오모",
-    "memo": "소협통 (소통·협업·통합)\n정역지사자 (정기적 릴리즈·역할 교차 공유·지표 공동 활용·사후 검증·자동화(테스트))\n플코빌테디오모 (Plan·Code·Build·Test·Deploy·Operate·Monitor)",
+    "memo": "소협통 (소통·협업·통합) / 정역지사자 (특징 5) / 플코빌테디오모 (툴체인 7)\n[구성요소] 품질(기준·테스트자동화)·프로세스(사이클타임·CD·릴리즈/배포 분리)·도구(CI·릴리즈 자동화·프로비저닝)\n[기출] 131회 컴시응 3교시",
     "sections": [
       {
         "label": "핵심가치",
@@ -10260,7 +10628,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "롤블카",
-    "memo": "롤블카 (롤링·블루-그린·카나리)",
+    "memo": "롤블카 — 롤링(순차, 롤백 용이/용량 고려)·블루그린(일괄 전환, 무영향/자원 2배)·카나리(일부 트래픽, 빠른 감지·A/B/트래픽 제어 부담)",
     "sections": [
       {
         "label": "무중단 배포 3기법",
@@ -10340,28 +10708,28 @@
     "mnemonic": ""
   },
   "se-146": {
-    "detail": "[정의] 소프트웨어의 숨겨진 결함을 발견, 오류 발견을 목적으로 프로그램을 실행하여 품질을 평가하고 개선하기 위한 일련의 행위와 절차\n[목적] 잠재적 오류와 결함발견, 요구사항 준수여부 확인, 요구만족도 향상\n[구성요소]\nTest Basis, Test Case, Test Suite, Test Script, Test Bad, Test Driver, Test Stub, Test Harness, Test log, Test Report, Incident Report",
-    "related": "",
-    "defKeywords": [],
+    "detail": "[정의] 숨겨진 결함·오류 발견을 목적으로 프로그램을 실행해 품질을 평가·개선하는 행위와 절차.\n[목적] 오류·결함 발견, 요구 준수 확인, 만족도 향상",
+    "related": "테스트베드 / 테스트 원리",
+    "defKeywords": [
+      "결함 발견",
+      "품질 평가",
+      "요구 준수 확인"
+    ],
     "featureKeywords": [
-      "잠재적 오류와 결함발견",
-      "요구사항 준수여부 확인",
-      "요구만족도 향상",
       "Test Basis",
       "Test Case",
       "Test Suite",
       "Test Script",
-      "Test Bad",
       "Test Driver",
       "Test Stub",
       "Test Harness",
-      "Test log",
-      "Test Report",
-      "Incident Report"
+      "Test Report"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "구성요소 11종: Basis·Case·Suite·Script·Bed·Driver·Stub·Harness·Log·Report·Incident Report"
   },
   "se-147": {
     "detail": "[정보획득대상] 화이트박스 테스트, 블랙박스 테스트\n[실행여부] 동적 테스트, 정적 테스트\n[테스트 관점] 검증, 확인\n[단계] 단위 테스트, 통합 테스트, 시스템 테스트, 인수 테스트, 설치 테스트\n[목적] 기능 테스트, 비기능 테스트, 구조 테스트, 회귀 테스트, 병행 테스트, 부하 테스트, 성능 테스트, 유지보수 테스트, 안전 테스트, 회복 테스트, 강도 테스트\n[기법] Recored & Replay, 테스트 오라클, 리스크기반 테스트, Pairwise Testing, 준거성 테스트, 실증성 테스트",
@@ -10465,7 +10833,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "결완초집살정오",
-    "memo": "결완초집살정오 (결함 존재를 밝힘·완벽한 테스트 불가·초기에 시작·집중(결함 클러스터링)·살충제 패러독스·정황(맥락) 의존·오류부재의 궤변)",
+    "memo": "결완초집살정오 (ISTQB 7원칙)\n결함존재 증명·완벽불가(자원한계)·초기 시작(품질비용↓)·집중(파레토 20/80)·살충제 패러독스(TC 개선)·정황 의존·오류부재 궤변",
     "sections": [
       {
         "label": "테스트 7원칙",
@@ -10547,8 +10915,8 @@
     "mnemonic": ""
   },
   "se-153": {
-    "detail": "[정의] 개발된 소프트웨어를 테스트하기 위해 필요한 하드웨어와 네트워크의 인프라, 계측기, 시뮬레이터, 소프트웨어 툴, 그 밖의 지원 요소를 포함하는 환경\n[구성요소] 테스트 하네스(환경), 테스트 스텁(하향식), 테스트 드라이버(상향식)",
-    "related": "테스트 하네스\n테스트 드라이버\n테스트 스텁",
+    "detail": "[정의] SW 테스트에 필요한 HW·네트워크 인프라, 계측기, 시뮬레이터, 툴 등 지원요소를 포함한 환경.",
+    "related": "통합테스트 / Test 일반",
     "defKeywords": [
       "계측기",
       "시뮬레이터",
@@ -10562,15 +10930,15 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "하스드",
-    "memo": "하스드 (테스트 하네스·테스트 스텁·테스트 드라이버)",
+    "memo": "스텁=하향식 통합(하위 대역) / 드라이버=상향식(상위 대역)",
     "sections": [
       {
         "label": "구성요소",
         "mnemonic": "하스드",
         "keywords": [
-          "테스트 하네스",
-          "테스트 스텁",
-          "테스트 드라이버"
+          "하네스(환경)",
+          "스텁(하향식)",
+          "드라이버(상향식)"
         ]
       }
     ]
@@ -10613,7 +10981,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "동경의상유분페원오",
-    "memo": "동경의상유분페원오 (동등분할·경계값 분석·의사결정 테이블·상태전이·유스케이스·분류트리·페어와이즈·원인-결과 그래프·오류 추정)",
+    "memo": "동경의상유분페원오 (동등분할·경계값·의사결정·상태전이·유스케이스·분류트리·페어와이즈·원인결과·오류추정)\n= 명세기반 테스트 / ISO 29119 / 매뉴얼·상세문서 기준",
     "sections": [
       {
         "label": "블랙박스 기법",
@@ -10633,17 +11001,27 @@
     ]
   },
   "se-157": {
-    "detail": "블랙박스 테스트 = 명세기반 테스트",
-    "related": "",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "명세기반 테스팅 = 블랙박스 테스트. 매뉴얼·상세문서(명세)를 기준으로 TC 도출.",
+    "related": "블랙박스 테스트 / 구조기반",
+    "defKeywords": [
+      "블랙박스와 동일",
+      "명세 기준 TC"
+    ],
+    "featureKeywords": [
+      "동등분할",
+      "경계값",
+      "의사결정 테이블",
+      "상태전이"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "유형 상세는 블랙박스 테스트(동경의상유분페원오) 참조"
   },
   "se-158": {
-    "detail": "[정의] 개발자가 S/W의 내부 Logic에 대한 Test를 수행위해 설계 단계에서 요구된 사항을 테스트하는 방법 소프트웨어의 내부 구조와 복잡도를 기반으로 테스트 케이스를 도출\n[특징] White Box Test, Logic Driven\n[기법] 제어구조 시험, 루프 시험\n[커버리지] 구문, 결정, 조건, 조건/결정, 변경 조건/결정, 다중 조건/결정",
-    "related": "구조기반테스트, \n제어구조시험\n루프시험\nCoverage, MC/DC",
+    "detail": "[정의] SW 내부 로직·구조·복잡도 기반으로 TC를 도출하는 테스트(Logic Driven).\n[커버리지] 구문 → 결정 → 조건 → 조건/결정 → 변경 조건/결정(MC/DC) → 다중 조건",
+    "related": "구조기반 / 커버리지 / MC/DC",
     "defKeywords": [
       "개발자가 S"
     ],
@@ -10656,38 +11034,37 @@
       "루프 시험"
     ],
     "plusKeywords": [],
-    "mnemonic": "제루 / 구결조변다",
-    "memo": "제루 (제어구조 시험·루프 시험)\n구결조변다 (구문·결정·조건·변경 조건·다중 조건)",
+    "mnemonic": "화제루",
+    "memo": "화제루 / 커버리지 강도: 구문<결정<조건<MC/DC<다중조건",
     "sections": [
       {
         "label": "기법",
-        "mnemonic": "제루",
+        "mnemonic": "화제루",
         "keywords": [
+          "화이트박스(Logic 기반)",
           "제어구조 시험",
           "루프 시험"
-        ]
-      },
-      {
-        "label": "커버리지",
-        "mnemonic": "구결조변다",
-        "keywords": [
-          "구문",
-          "결정",
-          "조건",
-          "변경 조건",
-          "다중 조건"
         ]
       }
     ]
   },
   "se-159": {
-    "detail": "화이트박스 테스트 = 구조기반 테스트\n\n(최빈출) 동적 테스트의 명세 기반 테스트와 구조 기반 테스트 비교표",
-    "related": "",
-    "defKeywords": [],
-    "featureKeywords": [],
+    "detail": "구조기반 테스트 = 화이트박스 테스트. (최빈출) 명세기반 vs 구조기반 비교표.",
+    "related": "화이트박스 / 명세기반",
+    "defKeywords": [
+      "화이트박스와 동일",
+      "구조 기준 TC"
+    ],
+    "featureKeywords": [
+      "제어흐름",
+      "커버리지",
+      "MC/DC"
+    ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "",
+    "sections": [],
+    "memo": "비교표: 기준(명세/구조)·관점(사용자/개발자)·기법(동등분할 등/커버리지)"
   },
   "se-160": {
     "detail": "[정의] 테스팅 관련 전문 지식과 경험이 많은 테스터에 의해 결함집중의 원리를 충실히 따르는 테스팅 접근법, 경험기 반의 발견론적 테스팅 접근법\n[구성요소] 테스트 차터, 타임 박싱, 테스트 노트, 세션 시트, 요약보고(Debrief)\n\n*요약보고 : PROOF(Past, Result, Obstacles, Outlook, Feelings)아젠다 활용",
@@ -10704,7 +11081,7 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "테타테세요 / 차박노세요",
-    "memo": "테타테세요 (테스트 차터·타임 박싱·테스트 노트·세션 시트·요약보고)\n차박노세요 (차터·박스타임(시간제한)·노트(기록)·세션 기반·요약 보고(디브리핑))",
+    "memo": "차박노세요 (차터·박스타임·노트·세션시트·요약보고)\n요약보고 PROOF: Past·Result·Obstacles·Outlook·Feelings",
     "sections": [
       {
         "label": "구성요소",
@@ -10774,8 +11151,8 @@
     ]
   },
   "se-162": {
-    "detail": "[정의] 오류를 제거하거나 수정한 시스템에서 오류제거와 수정에 의해 새로 유입된 \n오류가 없는지 확인하는 일종의 반복시험\n[종류]ReSelPri\n retest all(금융권), selective test(일반), priority test(저위험)\n[구성요소] RS\nRipple Effect - 수정으로 인한 오류, Side Effect - 엄한데 오류\n\n[절차] 1)테스트 수행전 확인사항 체크(스모크 진행가능), 변경된 각 모듈의 통합\n및 배포 수정까지 빌드 실시\n2)TC Lib같은 도구로 회귀테스트 수행. 반복 및 제약부하 환경에서 성능테스트\n3)결과기록 및 사후검증 진행 - 기존 단위테스트의 회귀테스트는 repository에 저장. \n변경된 기능 및 시나리오 감안한 테스트 절차 최신화",
-    "related": "기능변경시 또는 환경수정시 수행\nIEEE610.12-90(시스템은 컴포넌트의 모음\n으로 정의됨)",
+    "detail": "[정의] 오류 수정 후 새로 유입된 오류가 없는지 확인하는 반복시험.\n[절차] 사전확인(스모크)→빌드→TC도구 수행·성능→기록·사후검증(리포지토리 저장·절차 최신화)",
+    "related": "스모크 테스트 / 형상관리",
     "defKeywords": [],
     "featureKeywords": [
       "retest all",
@@ -10784,15 +11161,24 @@
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "RS",
-    "memo": "RS (Ripple Effect·Side Effect)",
+    "mnemonic": "ReSelPri / RS",
+    "memo": "기능·환경 변경 시 수행 / IEEE 610.12-90",
     "sections": [
       {
-        "label": "구성요소",
+        "label": "종류",
+        "mnemonic": "ReSelPri",
+        "keywords": [
+          "Retest all(금융권)",
+          "Selective(일반)",
+          "Priority(저위험)"
+        ]
+      },
+      {
+        "label": "오류 효과",
         "mnemonic": "RS",
         "keywords": [
-          "Ripple Effect",
-          "Side Effect"
+          "Ripple Effect(수정 유발 오류)",
+          "Side Effect(엉뚱한 곳 오류)"
         ]
       }
     ]
@@ -10898,8 +11284,8 @@
     "mnemonic": ""
   },
   "se-167": {
-    "detail": "[정의] 테스터의 지식이나 경험, 직관, 기술능력으로 테스트 케이스를 도출\n[기법] 탐색적 테스팅, 오류추정, 체크리스트, 분류트리\n* 리스크 기반 테스팅",
-    "related": "",
+    "detail": "[정의] 테스터의 지식·경험·직관·기술로 TC를 도출하는 기법.",
+    "related": "탐색적 테스팅 / 위험기반 테스트",
     "defKeywords": [
       "테스터의 지식이나 경험",
       "직관"
@@ -10918,24 +11304,25 @@
       "리스크 기반 테스팅"
     ],
     "plusKeywords": [],
-    "mnemonic": "탐오체분",
-    "memo": "탐오체분 (탐색적 테스팅·오류추정·체크리스트·분류트리)",
+    "mnemonic": "경탐오체분",
+    "memo": "+ 리스크 기반 테스팅",
     "sections": [
       {
         "label": "기법",
-        "mnemonic": "탐오체분",
+        "mnemonic": "경탐오체분",
         "keywords": [
+          "경험·직관 기반",
           "탐색적 테스팅",
-          "오류추정",
-          "체크리스트",
-          "분류트리"
+          "오류 추정",
+          "체크리스트 기반",
+          "분류 트리"
         ]
       }
     ]
   },
   "se-168": {
-    "detail": "[정의] 테스트 대상에 비해서 테스트 자원이 부족한 경우, 우선순위를 나눠서 테스트 자원을 효율적으로 분배하기 위한 테스트 전략\n[절차] 리스크 식별, 리스크 분석, 리스크 대응계획,  전략 수립, 리스크 추적\n[수행전략] 펀인스서\nFTA, ITA, STTA, STA\n[하위레벨 테스트] STA -> ITA -> STTA -> FTA\n[상위레벨 테스트] STA -> STTA -> ITA -> FTA",
-    "related": "",
+    "detail": "[정의] 테스트 자원이 부족할 때 우선순위로 자원을 효율 배분하는 전략.\n[절차] 리스크 식별→분석→대응계획→전략 수립→추적",
+    "related": "경험기반 / 리스크 관리",
     "defKeywords": [],
     "featureKeywords": [
       "리스크 식별",
@@ -10953,16 +11340,16 @@
     ],
     "plusKeywords": [],
     "mnemonic": "펀인스서",
-    "memo": "펀인스서 (FTA·ITA·STTA·STA)",
+    "memo": "식분대전추 (절차) / 하위레벨: STA→ITA→STTA→FTA / 상위레벨: STA→STTA→ITA→FTA",
     "sections": [
       {
         "label": "수행전략",
         "mnemonic": "펀인스서",
         "keywords": [
-          "FTA",
-          "ITA",
-          "STTA",
-          "STA"
+          "펀(FTA)",
+          "인(ITA)",
+          "스(STTA)",
+          "서(STA)"
         ]
       }
     ]
@@ -11123,8 +11510,8 @@
     "mnemonic": ""
   },
   "se-174": {
-    "detail": "[정의] 시스템에 요구되는 성능에 대해 시스템의 처리 능력을 검증하는 테스트 \n** 사용자가 시스템을 사용하기에 성능상 문제 여부를 검증하는 테스트\n[지표] 처리량(Throughput), 응답시간(Response Time) , 자원사용량(Utilization), 효율성(Efficiency)\n[종류] (단위, 복합, 임계) / (Loop Back, Spike, Tier, 확장성, 가용성 테스트)\n기출문제풀이 볼것(132회) 정보시스템의 성능 요구사항 작성 시 고려해야 하는 주요 성능지표 및 내용",
-    "related": "Named User, Concurrent User, Response Time, Think Time",
+    "detail": "[정의] 시스템 처리능력을 성능 요구사항 대비 검증하는 테스트.\n[종류] 단위·복합·임계 / Loop Back·Spike·Tier·확장성·가용성",
+    "related": "TPS / 부하테스트",
     "defKeywords": [],
     "featureKeywords": [
       "처리량",
@@ -11135,16 +11522,16 @@
     "applicationKeywords": [],
     "plusKeywords": [],
     "mnemonic": "처응자효",
-    "memo": "처응자효 (처리량·응답시간·자원사용량·효율성)",
+    "memo": "단복임 / 루스티확가 / TPS·Named/Concurrent/Active User·Think Time\n[기출] 132회(성능지표 작성)·131컴시응4·130관리4",
     "sections": [
       {
-        "label": "지표",
+        "label": "4대 지표",
         "mnemonic": "처응자효",
         "keywords": [
-          "처리량",
-          "응답시간",
-          "자원사용량",
-          "효율성"
+          "처리량(Throughput)",
+          "응답시간(Response Time)",
+          "자원사용량(Utilization)",
+          "효율성(Efficiency)"
         ]
       }
     ]
@@ -11862,7 +12249,7 @@
       "피드백 시스템"
     ],
     "plusKeywords": [],
-    "mnemonic": "계복대조친지감피",
+    "mnemonic": "계복대조친지감피 / SPE",
     "sections": [
       {
         "label": "리만 8법칙",
@@ -11877,9 +12264,18 @@
           "품질 감소(선언)",
           "피드백 시스템"
         ]
+      },
+      {
+        "label": "SW 분류",
+        "mnemonic": "SPE",
+        "keywords": [
+          "S-type(명세대로 정확)",
+          "P-type(절차·입력 따라)",
+          "E-type(환경 밀접)"
+        ]
       }
     ],
-    "memo": "계복대조친지감피 (계속적 변경·복잡도 증가·대규모 프로그램 진화·조직적 안정성·친숙성 유지·지속적 성장·품질 감소(선언)·피드백 시스템)"
+    "memo": "SPE 분류 + E-type 8원리 계복대조친지감피\n유지보수·변경관리·형상관리·품질통제의 중요 모델"
   },
   "se-205": {
     "detail": "[정의] SDLC의 마지막 단계로 SW 결함제거, 성능향상, 환경변화에 적응토록 수정보완하는 작업\n[목적] SW에 존재하는 결함 제거, 유지보수 비용과 인력 많이 발생, 효율필요\n[절차] 요청(사용자,변경 요청서 작성)-분석(분석가,변경요청서 검토, 영향도, 우선순위 검토)\n-승인(유지보수관리 위원회, 분석결과에 따른 승인)\n-실행(유지보수 담당, 유지보수 수행, 변경보고서 작성, 산출물 변경)\n[분류]\n시점에 의한 유지보수(계획, 예방, 응급, 지연)\n대상에 의한 유지보수(데이터, 프로그램, 문서, 시스템)\n원인에 의한 유지보수(수정, 완전, 예방, 적응)",
@@ -11924,8 +12320,8 @@
     "memo": "신규"
   },
   "se-208": {
-    "detail": "레포지토리(Repository)를 기반으로 역공학(Reverse Engineering), 재공학(Reengineering), 재사용(Reuse)을 통해 소프트웨어 생산성을 극대화하는 기법\nSW위기극복, 재사용성, 안정성",
-    "related": "",
+    "detail": "[정의] Repository 기반 역공학·재공학·재사용으로 SW 생산성을 극대화하는 기법.",
+    "related": "재사용 / 리팩토링",
     "defKeywords": [
       "Repository",
       "Reverse Engineering",
@@ -11939,20 +12335,33 @@
     "featureKeywords": [],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": ""
+    "mnemonic": "역재재",
+    "sections": [
+      {
+        "label": "3R",
+        "mnemonic": "역재재",
+        "keywords": [
+          "역공학(Reverse)",
+          "재공학(Reengineering)",
+          "재사용(Reuse)"
+        ]
+      }
+    ],
+    "memo": "SW 위기 극복·재사용성·안정성"
   },
   "se-209": {
-    "detail": "[정의] 소프트웨어 개발관련 지식(기능, 모듈, 구성 등)을 표준화하여 개발 생산성을 높이고 반복적 사용 적합하도록 구성하는 기술\n[원리] 모듈화, 응집도, 결합도, 추상화, 정형성, 정보은닉, 일반화, 분할정복\n[필요한 사항] 모듈화\n응집도와 결합도 - 우논시(시간)절(절차)통(통신)순기, 내공외제스자(자료)\n응집도는 높을수록 좋고, 결합도는 낮을수록 좋다",
-    "related": "[최근 재사용형태]\n컴포넌트 기반방식\nCOTS(Commercial Off-the-Shelf) 기반방식\n- 제3자가 미리 만들어놓은 SW를 활용하는 방식\n아키텍처 기반방식",
-    "defKeywords": [],
+    "detail": "[정의] 개발 지식(기능·모듈·구성)을 표준화해 생산성을 높이고 반복 사용에 적합하게 구성하는 기술.\n[원리] 모듈화·응집도·결합도·추상화·정형성·정보은닉·일반화·분할정복",
+    "related": "3R / 모듈화 / COTS",
+    "defKeywords": [
+      "표준화",
+      "반복 사용",
+      "생산성"
+    ],
     "featureKeywords": [
-      "응집도",
-      "결합도",
+      "모듈화",
+      "응집도·결합도",
       "추상화",
-      "정형성",
-      "정보은닉",
-      "일반화",
-      "분할정복"
+      "정보은닉"
     ],
     "applicationKeywords": [
       "응집도",
@@ -11969,23 +12378,8 @@
     ],
     "plusKeywords": [],
     "mnemonic": "모응결추정정일분",
-    "memo": "모응결추정정일분 (모듈화·응집도·결합도·추상화·정형성·정보은닉·일반화·분할정복)",
-    "sections": [
-      {
-        "label": "원리",
-        "mnemonic": "모응결추정정일분",
-        "keywords": [
-          "모듈화",
-          "응집도",
-          "결합도",
-          "추상화",
-          "정형성",
-          "정보은닉",
-          "일반화",
-          "분할정복"
-        ]
-      }
-    ]
+    "memo": "NIH 신드롬·I/F 표준화·컴포넌트 라이브러리 관리비용 — \"활용보다 만들 때가 더 중요\"\n[형태] 컴포넌트 기반·COTS·아키텍처 기반",
+    "sections": []
   },
   "se-210": {
     "detail": "[정의] SW에 대한 디버깅, 디컴파일 등의 분석을 통해 기존 제품에 구현된 구조, 원리, 기술, 알고리즘 등을 역으로 분석하여 재구성하는 과정\n[장점] 유지보수성향상, 분석용이, 기존제품 개선, 취약성 점검\n재사용성 향상, 보안성 강화, 컨텐츠 발전\n[주요기법] 논리 역공학(원시코드->정보추출->물리적 설계 정보 추출)\n자료 역공학(기존 DB수정, 새DB로 전이)",
@@ -12126,7 +12520,7 @@
     ],
     "plusKeywords": [],
     "mnemonic": "계보통 / 적예평부내외",
-    "memo": "계보통 (계획(QP)·보증(QA)·통제(QC))\n적예평부내외 (적합 비용·예방 비용·평가 비용·부적합 비용·내부 실패·외부 실패)",
+    "memo": "계보통 (계획—계획서·지표 / 보증—변경요청 / 통제—측정치·검증된 인도물)\n적예평부내외 (적합=예방·평가 / 부적합=내부·외부실패)",
     "sections": [
       {
         "label": "품질관리 프로세스 3",
