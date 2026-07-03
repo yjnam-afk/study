@@ -15174,44 +15174,35 @@
   },
   "ds-42": {
     "detail": "[플랫폼] 접근제어(MAC,DAC,RBAC), 인증(ID/PW, PKI, Multi-Factor, I-PIN,IAM)\n[데이터/스토리지] 검색가능암호화, PPDM, 기밀성(첵섬,해싱,PKI), 태깅(접근제어)\n[네트워크] 암호화 프로토콜(SSL, IPSec), 보안솔루션(Firewall, Anti-DDoS, IPS, 웹방화벽)\n[디바이스] 단말보안(TPM, SafeXcel IP)",
-    "related": "검색가능 암호화, PPMD, TPM",
-    "defKeywords": [],
-    "featureKeywords": [
+    "related": "검색가능 암호화 / PPDM / TPM / IAM",
+    "defKeywords": [
+      "클라우드 계층별 보안",
       "접근제어",
-      "인증"
+      "암호화",
+      "단말보안"
+    ],
+    "featureKeywords": [
+      "플랫폼",
+      "데이터/스토리지",
+      "네트워크",
+      "디바이스"
     ],
     "applicationKeywords": [],
     "plusKeywords": [],
-    "mnemonic": "접인 / 검P기태 / 암보",
+    "mnemonic": "프스네디",
     "sections": [
       {
-        "label": "플랫폼",
-        "mnemonic": "접인",
+        "label": "보안 계층 4",
+        "mnemonic": "프스네디",
         "keywords": [
-          "접근제어",
-          "인증"
-        ]
-      },
-      {
-        "label": "데이터/스토리지",
-        "mnemonic": "검P기태",
-        "keywords": [
-          "검색가능암호화",
-          "PPDM",
-          "기밀성",
-          "태깅"
-        ]
-      },
-      {
-        "label": "네트워크",
-        "mnemonic": "암보",
-        "keywords": [
-          "암호화 프로토콜",
-          "보안솔루션"
+          "플랫폼",
+          "데이터/스토리지",
+          "네트워크",
+          "디바이스"
         ]
       }
     ],
-    "memo": "접인 (접근제어·인증)\n검P기태 (검색가능암호화·PPDM·기밀성·태깅)\n암보 (암호화 프로토콜·보안솔루션)"
+    "memo": "프스네디 (플랫폼·스토리지·네트워크·디바이스 — 계층별 보안)\n[플랫폼] 접근제어(MAC·DAC·RBAC) · 인증(ID/PW·PKI·Multi-Factor·I-PIN·IAM)\n[데이터/스토리지] 검색가능암호화 · PPDM · 기밀성(첵섬·해싱·PKI) · 태깅\n[네트워크] 암호화 프로토콜(SSL·IPSec) · 보안솔루션(FW·Anti-DDoS·IPS·웹방화벽)\n[디바이스] 단말보안(TPM·SafeXcel IP)"
   },
   "ds-43": {
     "detail": "클라우드 서비스 보안 국제 표준\n정보보호정책, 정보보호조직, 인적보안, 자산관리, 접근통제, 암호와, 물리적보안, 운영보안, 통신보안, 시스템개발보안, 공급망관리, 정보보호사고관리, 연속성관리, 법적준거성",
