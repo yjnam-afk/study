@@ -24960,30 +24960,6 @@
   ]
  },
  {
-  "id": "db-107",
-  "title": "데이터 분석 거버넌스",
-  "category": "데이터베이스",
-  "importance": "중",
-  "definition": "조직의 데이터 활용을 위한 체계적 접근을 단계별로 표현하며, 거버넌스 체계와 품질 관리, 보안과 플랫폼 구축, 활용 문화와 협업 강화를 통해 혁신과 지속 가능한 경쟁력 프레임워크",
-  "sections": [
-   {
-    "label": "평가방법",
-    "mnemonic": "트크부",
-    "keywords": [
-     "Train-Validation(정확도)",
-     "Cross Validation(재샘플링)",
-     "Bootstrap(재샘플링)"
-    ]
-   }
-  ],
-  "mnemonic": "트크부",
-  "keywords": [
-   "Train-Validation(정확도)",
-   "Cross Validation(재샘플링)",
-   "Bootstrap(재샘플링)"
-  ]
- },
- {
   "id": "db-110",
   "title": "배깅(Bagging: Bootstrap Aggregating의 합성어)",
   "category": "데이터베이스",
@@ -25047,22 +25023,20 @@
   "definition": "데이터마이닝을 통해 생성된 모델의 에러율 예측을 통해 모델의 타당성을 평가하는 검증 방법",
   "sections": [
    {
-    "label": "핵심 키워드",
-    "mnemonic": "TC정재",
+    "label": "평가방법",
+    "mnemonic": "트크부",
     "keywords": [
-     "Train-Validation",
-     "Cross Validation",
-     "정확도 기법",
-     "재 샘플링 기법"
+     "Train-Validation(정확도)",
+     "Cross Validation(재샘플링)",
+     "Bootstrap(재샘플링)"
     ]
    }
   ],
-  "mnemonic": "TC정재",
+  "mnemonic": "트크부",
   "keywords": [
-   "Train-Validation",
-   "Cross Validation",
-   "정확도 기법",
-   "재 샘플링 기법"
+   "Train-Validation(정확도)",
+   "Cross Validation(재샘플링)",
+   "Bootstrap(재샘플링)"
   ]
  },
  {
@@ -25635,39 +25609,40 @@
   "definition": "데이터의 정책 및 지침, 표준화, 운영조직 및 책임을 수립하고 관리하기 위한 정책과 프로세스 체계",
   "sections": [
    {
+    "label": "구성요소",
+    "mnemonic": "원조프",
+    "keywords": [
+     "원칙(지침·가이드)",
+     "조직(데이터관리자·DBA·아키텍트)",
+     "프로세스(작업절차·모니터링·측정)"
+    ]
+   },
+   {
     "label": "관리대상",
     "mnemonic": "마메데",
     "keywords": [
-     "마스터 데이터",
-     "메타 데이터",
-     "데이터 사전"
+     "마스터데이터",
+     "메타데이터",
+     "데이터사전"
     ]
    },
    {
     "label": "효과",
-    "mnemonic": "데유통보안",
+    "mnemonic": "가유통보안",
     "keywords": [
-     "데이터 가용성",
+     "가용성",
      "유용성",
      "통합성",
      "보안성",
-     "안전성 확보"
-    ]
-   },
-   {
-    "label": "구성요소",
-    "mnemonic": "원조",
-    "keywords": [
-     "원칙",
-     "조직"
+     "안전성"
     ]
    }
   ],
-  "mnemonic": "마메데",
+  "mnemonic": "원조프",
   "keywords": [
-   "마스터 데이터",
-   "메타 데이터",
-   "데이터 사전"
+   "원칙(지침·가이드)",
+   "조직(데이터관리자·DBA·아키텍트)",
+   "프로세스(작업절차·모니터링·측정)"
   ]
  },
  {
