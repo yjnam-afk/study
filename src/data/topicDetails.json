@@ -8905,39 +8905,59 @@
   ]
  },
  "se-58": {
-  "detail": "[정의] 시스템·SW·엔터프라이즈 아키텍처 기술(Architecture Description)에 대한 요구사항·표준 용어 정의(구 IEEE 1471). 최신판 ISO/IEC/IEEE 42010:2022 — 제목이 \"Software, systems and enterprise — Architecture description\"로 확장.",
+  "detail": "[정의] 시스템·SW·엔터프라이즈 아키텍처 기술(Architecture Description)에 대한 요구사항·표준 용어 정의(구 IEEE 1471). (목적) 아키텍처를 표현·전달·검토하는 개념을 제시하고 AD·아키텍처 프레임워크·ADL에 대한 요구사항을 지정해 아키텍처 설명 실무를 표준화. 최신판 42010:2022는 제목이 \"Software, systems and enterprise — Architecture description\"로 확장.",
   "related": "SW Architecture / 4+1 View",
   "defKeywords": [
    "시스템",
    "표준 용어 정의"
   ],
   "featureKeywords": [
+   "System of Interest",
    "Stakeholder",
-   "Concern",
-   "Viewpoint",
-   "View",
+   "Concerns",
    "Model Kind",
+   "Architecture",
+   "Architecture description",
+   "Architectural Viewpoint",
+   "Architecture View",
    "Architecture Model",
-   "Correspondence",
-   "Rationale"
+   "Architecture Rationale",
+   "Correspondence Rule",
+   "Correspondence"
   ],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": "이관뷰뷰모모대근",
-  "memo": "[구성요소] 이관뷰뷰모모대근 = 이해관계자·관심사·뷰포인트·뷰·모델종류·모델·대응·근거.\n핵심 규칙: 뷰 1개는 뷰포인트 정확히 1개가 지배(governs), 뷰포인트는 관심사를 frame.\n[2022 개정] 개프측요 = 개체(EoI)·프레임워크(ADF)·측면(Aspect)·AD요소.",
+  "mnemonic": "식표AD / 대이관 / 모아기 / 관뷰모근규대",
+  "memo": "[구성요소 3분류] 식표AD = 식별/표현/AD의 파트\n  · 식별 대이관 = 대상시스템(SoI)·이해관계자·관심사\n  · 표현 모아기 = 모델형·아키텍처·기술(AD)\n  · AD의 파트 관뷰모근규대 = 관점·뷰·모델·근거·대응규칙·대응\n[중요성] 표준화·중립성(모델링언어/방법론 미제시)·유연성·의사소통\n[2022 개정] 개프측요 = 개체(EoI)·프레임워크(ADF)·측면(Aspect)·AD요소",
   "sections": [
    {
-    "label": "AD 구성요소(개념모델)",
-    "mnemonic": "이관뷰뷰모모대근",
+    "label": "① 식별",
+    "mnemonic": "대이관",
     "keywords": [
-     "이해관계자(Stakeholder)",
-     "관심사(Concern)",
-     "뷰포인트(Viewpoint)",
-     "뷰(View)",
-     "모델종류(Model Kind)",
-     "아키텍처모델(Model)",
-     "대응/대응규칙(Correspondence)",
-     "근거/결정(Rationale/Decision)"
+     "System of Interest(대상시스템)",
+     "Stakeholder(이해관계자)",
+     "Concerns(관심사)"
+    ]
+   },
+   {
+    "label": "② 표현",
+    "mnemonic": "모아기",
+    "keywords": [
+     "Model Kind(모델형)",
+     "Architecture(아키텍처)",
+     "Architecture description(아키텍처 기술)"
+    ]
+   },
+   {
+    "label": "③ AD의 파트",
+    "mnemonic": "관뷰모근규대",
+    "keywords": [
+     "Architectural Viewpoint(관점)",
+     "Architecture View(뷰)",
+     "Architecture Model(모델)",
+     "Architecture Rationale(결정 근거)",
+     "Correspondence Rule(대응 규칙)",
+     "Correspondence(대응)"
     ]
    },
    {
