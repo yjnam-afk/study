@@ -1,5 +1,6 @@
 "use client";
 
+import { readJsonSafe } from "@/lib/safeJson";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -110,12 +111,19 @@ function MnemonicInner() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, topicId, reference }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "생성 실패");
-      setSet(data.set);
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "생성 실패");
+      setSet(data.set as MnemonicSet);
       // related·sections는 mnemonic/keywords와 독립이므로 함께 살린다
       // (키워드가 비어도 연관 토픽·섹션 두음은 노출되도록).
-      const sn = data.subnote;
+      const sn = data.subnote as {
+        mnemonic: string;
+        keywords: string[];
+        sections?: { label: string; mnemonic: string; keywords: string[] }[];
+        related?: string[];
+        classification?: string;
+        memo?: string;
+      } | null;
       setSubnote(
         sn &&
           (sn.mnemonic ||
@@ -827,8 +835,8 @@ function Write({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, terms: items.map((it) => it.term) }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "생성 실패");
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "생성 실패");
       const arr = (data.descs || []) as { term?: string; desc?: string }[];
       const map: Record<string, string> = {};
       // 순서(인덱스)로 매칭 — 모델이 키워드 텍스트를 바꿔도 안전. term 매칭은 보조.

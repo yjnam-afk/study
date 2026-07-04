@@ -1,5 +1,6 @@
 "use client";
 
+import { readJsonSafe } from "@/lib/safeJson";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
@@ -62,9 +63,9 @@ export default function AnswerPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ period, question }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "힌트 생성 실패");
-      setHint(data.hint);
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "힌트 생성 실패");
+      setHint(data.hint as Hint);
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -86,9 +87,9 @@ export default function AnswerPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ period, question, reference, topicId, topicTitle }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "가이드 생성 실패");
-      setStory(data.guide);
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "가이드 생성 실패");
+      setStory(data.guide as string);
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -110,9 +111,9 @@ export default function AnswerPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ period, question, reference, topicId, topicTitle }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "생성 실패");
-      setAnswer(data.answer);
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "생성 실패");
+      setAnswer(data.answer as string);
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
