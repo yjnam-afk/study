@@ -6540,42 +6540,17 @@
   "definition": "시스템, 소프트웨어 및 엔터프라이즈 아키텍처 설명에 대한 요구 사항/표준 용어 정의",
   "sections": [
    {
-    "label": "구성 3",
-    "mnemonic": "식표AD",
+    "label": "AD 구성요소(개념모델)",
+    "mnemonic": "이관뷰뷰모모대근",
     "keywords": [
-     "식별",
-     "표현",
-     "AD의 파트"
-    ]
-   },
-   {
-    "label": "└ 식별",
-    "mnemonic": "대이관",
-    "keywords": [
-     "대상 시스템(SoI)",
-     "이해관계자",
-     "관심사(Concern)"
-    ]
-   },
-   {
-    "label": "└ 표현",
-    "mnemonic": "모아기",
-    "keywords": [
-     "모델형(Model Kind)",
-     "아키텍처",
-     "기술(AD)"
-    ]
-   },
-   {
-    "label": "└ AD 파트",
-    "mnemonic": "관뷰모근규대",
-    "keywords": [
-     "관점(Viewpoint)",
+     "이해관계자(Stakeholder)",
+     "관심사(Concern)",
+     "뷰포인트(Viewpoint)",
      "뷰(View)",
-     "모델",
-     "근거(Rationale)",
-     "규칙(대응)",
-     "대응관계"
+     "모델종류(Model Kind)",
+     "아키텍처모델(Model)",
+     "대응/대응규칙(Correspondence)",
+     "근거/결정(Rationale/Decision)"
     ]
    },
    {
@@ -6589,11 +6564,16 @@
     ]
    }
   ],
-  "mnemonic": "식표AD",
+  "mnemonic": "이관뷰뷰모모대근",
   "keywords": [
-   "식별",
-   "표현",
-   "AD의 파트"
+   "이해관계자(Stakeholder)",
+   "관심사(Concern)",
+   "뷰포인트(Viewpoint)",
+   "뷰(View)",
+   "모델종류(Model Kind)",
+   "아키텍처모델(Model)",
+   "대응/대응규칙(Correspondence)",
+   "근거/결정(Rationale/Decision)"
   ]
  },
  {
