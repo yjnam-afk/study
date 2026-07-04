@@ -302,7 +302,8 @@ export async function aiDiagnostics(ping = false): Promise<{
           user: "Reply with the single word: OK",
           temperature: 0,
           model,
-          maxTokens: 8,
+          // 추론(reasoning) 모델은 토큰이 적으면 본문이 비어 실패로 오판되므로 넉넉히.
+          maxTokens: 64,
         });
         return { provider: model ? `${name}(${model})` : name, ok: true, detail: "OK" };
       } catch (err) {
@@ -577,7 +578,13 @@ async function generateWithCerebras({
   // 후보가 전부 404(계정 미접근)면, 이 키가 실제 쓸 수 있는 모델을 조회해 한 번 더.
   if (had404 && !modelOverride) {
     const live = await fetchCerebrasModels(apiKey);
-    const pick = live.find((m) => /llama|qwen|gpt|instruct/i.test(m)) || live[0];
+    // 한국어 산문 품질·비추론(non-reasoning) 우선순위로 선택.
+    // gpt-oss 계열은 추론모델이라 본문이 비기 쉬워 맨 뒤로.
+    const prefer = [/glm/i, /qwen/i, /llama/i, /gemma/i, /mistral/i];
+    const pick =
+      prefer.map((re) => live.find((m) => re.test(m))).find(Boolean) ||
+      live.find((m) => !/gpt-oss|reason/i.test(m)) ||
+      live[0];
     if (pick) {
       const res = await call(pick);
       if (res.ok) {
