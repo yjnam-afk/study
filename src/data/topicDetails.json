@@ -8905,7 +8905,7 @@
   ]
  },
  "se-58": {
-  "detail": "[정의] 시스템·SW·엔터프라이즈 아키텍처 기술(Description)에 대한 요구사항·표준 용어 정의(구 IEEE 1471).",
+  "detail": "[정의] 시스템·SW·엔터프라이즈 아키텍처 기술(Architecture Description)에 대한 요구사항·표준 용어 정의(구 IEEE 1471). 최신판 ISO/IEC/IEEE 42010:2022 — 제목이 \"Software, systems and enterprise — Architecture description\"로 확장.",
   "related": "SW Architecture / 4+1 View",
   "defKeywords": [
    "시스템",
@@ -8922,7 +8922,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "식표AD / 대이관 / 모아기 / 관뷰모근규대",
-  "memo": "식표AD → 대이관 / 모아기 / 관뷰모근규대",
+  "memo": "식표AD → 대이관 / 모아기 / 관뷰모근규대\n[2022 개정] 개프측요 = 개체(EoI)·프레임워크(ADF)·측면(Aspect)·AD요소. system of interest→entity of interest, architecture framework→ADF, ISO 42020/42030과 정합.",
   "sections": [
    {
     "label": "구성 3",
@@ -8961,6 +8961,16 @@
      "근거(Rationale)",
      "규칙(대응)",
      "대응관계"
+    ]
+   },
+   {
+    "label": "2022 개정 핵심",
+    "mnemonic": "개프측요",
+    "keywords": [
+     "개체(Entity of Interest, EoI): \"system of interest\"→EoI, 비(非)시스템 아키텍처에도 적용",
+     "프레임워크(ADF): \"architecture framework\"→\"architecture description framework\"",
+     "측면·관점(Aspect·Stakeholder perspective) 개념 정식 정의",
+     "AD 요소(Architecture Description Element) Clause 3 정식 정의 + ADL/model kind 확장"
     ]
    }
   ]
