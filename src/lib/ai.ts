@@ -266,11 +266,11 @@ function geminiKeys(): string[] {
  * ping=true 면 각 제공자에 초경량 요청을 보내 실제 살아있는지(한도 소진 여부) 확인한다.
  */
 export async function aiDiagnostics(ping = false): Promise<{
-  configured: Record<string, number | boolean>;
+  configured: Record<string, number | boolean | string>;
   chain: string[];
   live?: { provider: string; ok: boolean; detail: string }[];
 }> {
-  const configured: Record<string, number | boolean> = {
+  const configured: Record<string, number | boolean | string> = {
     groqKeys: groqKeys().length,
     geminiKeys: geminiKeys().length,
     cerebras: !!process.env.CEREBRAS_API_KEY,
@@ -279,6 +279,11 @@ export async function aiDiagnostics(ping = false): Promise<{
     ollama: !!process.env.OLLAMA_BASE_URL,
   };
   const chain = providerChain().map((e) => (e.model ? `${e.name}(${e.model})` : e.name));
+  // Cerebras 키가 실제 접근 가능한 모델 목록을 조회해 진단에 포함(모델 미접근 404 원인 파악용).
+  if (process.env.CEREBRAS_API_KEY) {
+    const live = await fetchCerebrasModels(process.env.CEREBRAS_API_KEY);
+    configured.cerebrasModels = live.length ? live.join(", ") : "(조회 실패/없음)";
+  }
   if (!ping) return { configured, chain };
 
   // 제공자별 대표 1개만 초경량 핑(중복 모델은 생략).
@@ -487,11 +492,31 @@ async function generateWithGroq({
  *  큰 모델부터 시도하고, 접근 불가(404)면 널리 열려있는 작은 모델로 폴백한다. */
 function cerebrasModels(): string[] {
   const primary = process.env.CEREBRAS_MODEL || "llama-3.3-70b";
-  const fallbacks = (process.env.CEREBRAS_FALLBACK_MODELS || "llama3.1-8b")
+  const fallbacks = (
+    process.env.CEREBRAS_FALLBACK_MODELS || "llama3.1-8b,llama-3.3-70b"
+  )
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
   return Array.from(new Set([primary, ...fallbacks]));
+}
+
+/** 이 Cerebras 키가 실제로 접근 가능한 모델 id 목록을 조회한다(계정마다 다름).
+ *  404 폴백에도 실패할 때 "무엇을 쓸 수 있는지" 알아내는 최후 수단. */
+async function fetchCerebrasModels(apiKey: string): Promise<string[]> {
+  try {
+    const res = await fetch("https://api.cerebras.ai/v1/models", {
+      headers: { Authorization: `Bearer ${apiKey}` },
+    });
+    if (!res.ok) return [];
+    const data = await res.json();
+    const ids = (data?.data || [])
+      .map((m: { id?: string }) => m.id)
+      .filter((s: unknown): s is string => typeof s === "string");
+    return ids;
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -511,10 +536,7 @@ async function generateWithCerebras({
       "CEREBRAS_API_KEY 가 설정되지 않았습니다. https://cloud.cerebras.ai 에서 무료 키를 발급해 환경변수에 추가하세요.",
     );
   }
-  // 모델 지정 시 그 모델만, 아니면 후보들을 순서대로(404·미접근 시 다음 모델).
-  const models = modelOverride ? [modelOverride] : cerebrasModels();
-  let lastErr = "";
-  for (const model of models) {
+  const call = async (model: string) => {
     const res = await fetch("https://api.cerebras.ai/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -531,6 +553,15 @@ async function generateWithCerebras({
         ],
       }),
     });
+    return res;
+  };
+
+  // 모델 지정 시 그 모델만, 아니면 후보들을 순서대로(404·미접근 시 다음 모델).
+  const models = modelOverride ? [modelOverride] : cerebrasModels();
+  let lastErr = "";
+  let had404 = false;
+  for (const model of models) {
+    const res = await call(model);
     if (res.ok) {
       const data = await res.json();
       const text = data?.choices?.[0]?.message?.content;
@@ -539,8 +570,26 @@ async function generateWithCerebras({
     }
     const detail = await res.text();
     lastErr = `Cerebras API 오류 (${res.status}): ${detail}`;
+    if (res.status === 404) had404 = true;
     // 404(모델 미접근)만 다음 모델로 폴백. 429/5xx 등은 모델 바꿔도 동일 → 중단.
     if (res.status !== 404) break;
+  }
+  // 후보가 전부 404(계정 미접근)면, 이 키가 실제 쓸 수 있는 모델을 조회해 한 번 더.
+  if (had404 && !modelOverride) {
+    const live = await fetchCerebrasModels(apiKey);
+    const pick = live.find((m) => /llama|qwen|gpt|instruct/i.test(m)) || live[0];
+    if (pick) {
+      const res = await call(pick);
+      if (res.ok) {
+        const data = await res.json();
+        const text = data?.choices?.[0]?.message?.content;
+        if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
+        return text.trim();
+      }
+      lastErr = `Cerebras API 오류 (${res.status}, 자동선택 ${pick}): ${await res.text()}`;
+    } else {
+      lastErr += " | /v1/models 조회 결과 사용 가능한 모델 없음(키 권한 확인 필요)";
+    }
   }
   throw new Error(lastErr || "Cerebras 호출 실패");
 }
