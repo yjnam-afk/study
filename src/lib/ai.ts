@@ -139,7 +139,7 @@ function providerChain(): ChainEntry[] {
   } else if (process.env.CEREBRAS_API_KEY) {
     addProvider("cerebras");
   }
-  if (process.env.GEMINI_API_KEY) {
+  if (geminiKeys().length) {
     // Gemini 무료 등급은 일일 한도가 Groq보다 훨씬 커서 강력한 폴백.
     addProvider("gemini");
     addProvider("gemini", "gemini-2.0-flash-lite");
@@ -248,6 +248,67 @@ export async function generateText(opts: GenOpts): Promise<string> {
   throw new Error("AI 생성에 실패했어요. 잠시 후 다시 시도해 주세요.");
 }
 
+/** Gemini API 키 목록. 한도는 키(프로젝트)별로 따로라 여러 개면 그만큼 일일 한도가 늘어난다.
+ *  GEMINI_API_KEYS(콤마 구분) + GEMINI_API_KEY / GEMINI_API_KEY_2 / _3 ... 모두 모은다. */
+function geminiKeys(): string[] {
+  const raw: string[] = [];
+  if (process.env.GEMINI_API_KEYS) raw.push(...process.env.GEMINI_API_KEYS.split(","));
+  if (process.env.GEMINI_API_KEY) raw.push(...process.env.GEMINI_API_KEY.split(","));
+  for (let i = 2; i <= 6; i++) {
+    const k = process.env[`GEMINI_API_KEY_${i}`];
+    if (k) raw.push(...k.split(","));
+  }
+  return Array.from(new Set(raw.map((s) => s.replace(/\s/g, "")).filter(Boolean)));
+}
+
+/**
+ * AI 제공자 자가진단. 키 값은 절대 노출하지 않고, 설정 여부·개수·폴백 체인만 보고한다.
+ * ping=true 면 각 제공자에 초경량 요청을 보내 실제 살아있는지(한도 소진 여부) 확인한다.
+ */
+export async function aiDiagnostics(ping = false): Promise<{
+  configured: Record<string, number | boolean>;
+  chain: string[];
+  live?: { provider: string; ok: boolean; detail: string }[];
+}> {
+  const configured: Record<string, number | boolean> = {
+    groqKeys: groqKeys().length,
+    geminiKeys: geminiKeys().length,
+    cerebras: !!process.env.CEREBRAS_API_KEY,
+    openrouter: !!process.env.OPENROUTER_API_KEY,
+    anthropic: !!process.env.ANTHROPIC_API_KEY,
+    ollama: !!process.env.OLLAMA_BASE_URL,
+  };
+  const chain = providerChain().map((e) => (e.model ? `${e.name}(${e.model})` : e.name));
+  if (!ping) return { configured, chain };
+
+  // 제공자별 대표 1개만 초경량 핑(중복 모델은 생략).
+  const seen = new Set<string>();
+  const targets = providerChain().filter((e) => {
+    if (seen.has(e.name)) return false;
+    seen.add(e.name);
+    return true;
+  });
+  const live = await Promise.all(
+    targets.map(async ({ name, model }) => {
+      const fn = PROVIDERS[name];
+      try {
+        await fn({
+          system: "You are a test.",
+          user: "Reply with the single word: OK",
+          temperature: 0,
+          model,
+          maxTokens: 8,
+        });
+        return { provider: model ? `${name}(${model})` : name, ok: true, detail: "OK" };
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        return { provider: model ? `${name}(${model})` : name, ok: false, detail: msg.slice(0, 200) };
+      }
+    }),
+  );
+  return { configured, chain, live };
+}
+
 async function generateWithGemini({
   system,
   user,
@@ -255,51 +316,55 @@ async function generateWithGemini({
   model: modelOverride,
   maxTokens,
 }: GenOpts): Promise<string> {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
+  const keys = geminiKeys();
+  if (keys.length === 0) {
     throw new AIConfigError(
       "GEMINI_API_KEY 가 설정되지 않았습니다. .env.local 파일에 키를 추가하세요. (https://aistudio.google.com/apikey)",
     );
   }
   const max = maxTokens || MAX_TOKENS;
   const model = modelOverride || process.env.GEMINI_MODEL || "gemini-2.0-flash";
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
   // Gemma 계열 모델은 systemInstruction 필드를 지원하지 않으므로,
   // 시스템 프롬프트를 사용자 메시지 앞에 합쳐 전달한다.
   const isGemma = model.toLowerCase().includes("gemma");
-  const body = isGemma
-    ? {
-        contents: [
-          { role: "user", parts: [{ text: `${system}\n\n${user}` }] },
-        ],
-        generationConfig: { temperature, maxOutputTokens: max },
-      }
-    : {
-        systemInstruction: { parts: [{ text: system }] },
-        contents: [{ role: "user", parts: [{ text: user }] }],
-        generationConfig: { temperature, maxOutputTokens: max },
-      };
+  const body = JSON.stringify(
+    isGemma
+      ? {
+          contents: [
+            { role: "user", parts: [{ text: `${system}\n\n${user}` }] },
+          ],
+          generationConfig: { temperature, maxOutputTokens: max },
+        }
+      : {
+          systemInstruction: { parts: [{ text: system }] },
+          contents: [{ role: "user", parts: [{ text: user }] }],
+          generationConfig: { temperature, maxOutputTokens: max },
+        },
+  );
 
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-
-  if (!res.ok) {
+  let lastErr = "";
+  for (const apiKey of keys) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body,
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const text = data?.candidates?.[0]?.content?.parts
+        ?.map((p: { text?: string }) => p.text || "")
+        .join("");
+      if (!text) throw new Error("Gemini 응답이 비어 있습니다.");
+      return text.trim();
+    }
     const detail = await res.text();
-    throw new Error(`Gemini API 오류 (${res.status}): ${detail}`);
+    lastErr = `Gemini API 오류 (${res.status}): ${detail}`;
+    // 429(한도 초과)·5xx만 다음 키로 재시도. 400/403 등은 키 바꿔도 동일 → 즉시 중단.
+    if (res.status !== 429 && res.status < 500) break;
   }
-
-  const data = await res.json();
-  const text = data?.candidates?.[0]?.content?.parts
-    ?.map((p: { text?: string }) => p.text || "")
-    .join("");
-  if (!text) {
-    throw new Error("Gemini 응답이 비어 있습니다.");
-  }
-  return text.trim();
+  throw new Error(lastErr || "Gemini 호출 실패");
 }
 
 /**
