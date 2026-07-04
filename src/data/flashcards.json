@@ -6540,17 +6540,33 @@
   "definition": "시스템, 소프트웨어 및 엔터프라이즈 아키텍처 설명에 대한 요구 사항/표준 용어 정의",
   "sections": [
    {
-    "label": "AD 구성요소(개념모델)",
-    "mnemonic": "이관뷰뷰모모대근",
+    "label": "① 식별",
+    "mnemonic": "대이관",
     "keywords": [
-     "이해관계자(Stakeholder)",
-     "관심사(Concern)",
-     "뷰포인트(Viewpoint)",
-     "뷰(View)",
-     "모델종류(Model Kind)",
-     "아키텍처모델(Model)",
-     "대응/대응규칙(Correspondence)",
-     "근거/결정(Rationale/Decision)"
+     "System of Interest(대상시스템)",
+     "Stakeholder(이해관계자)",
+     "Concerns(관심사)"
+    ]
+   },
+   {
+    "label": "② 표현",
+    "mnemonic": "모아기",
+    "keywords": [
+     "Model Kind(모델형)",
+     "Architecture(아키텍처)",
+     "Architecture description(아키텍처 기술)"
+    ]
+   },
+   {
+    "label": "③ AD의 파트",
+    "mnemonic": "관뷰모근규대",
+    "keywords": [
+     "Architectural Viewpoint(관점)",
+     "Architecture View(뷰)",
+     "Architecture Model(모델)",
+     "Architecture Rationale(결정 근거)",
+     "Correspondence Rule(대응 규칙)",
+     "Correspondence(대응)"
     ]
    },
    {
@@ -6564,16 +6580,11 @@
     ]
    }
   ],
-  "mnemonic": "이관뷰뷰모모대근",
+  "mnemonic": "대이관",
   "keywords": [
-   "이해관계자(Stakeholder)",
-   "관심사(Concern)",
-   "뷰포인트(Viewpoint)",
-   "뷰(View)",
-   "모델종류(Model Kind)",
-   "아키텍처모델(Model)",
-   "대응/대응규칙(Correspondence)",
-   "근거/결정(Rationale/Decision)"
+   "System of Interest(대상시스템)",
+   "Stakeholder(이해관계자)",
+   "Concerns(관심사)"
   ]
  },
  {
