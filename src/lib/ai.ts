@@ -502,6 +502,19 @@ function cerebrasModels(): string[] {
   return Array.from(new Set([primary, ...fallbacks]));
 }
 
+/** 발견해 검증된 Cerebras 모델을 프로세스 수명 동안 캐시(계정별 404 탐색 반복 방지). */
+let cerebrasResolvedModel: string | null = null;
+
+/** 접근 가능한 모델 목록에서 한국어 산문 품질·비추론 우선으로 하나 고른다. */
+function pickCerebrasModel(live: string[]): string | undefined {
+  const prefer = [/glm/i, /qwen/i, /llama/i, /gemma/i, /mistral/i];
+  return (
+    prefer.map((re) => live.find((m) => re.test(m))).find(Boolean) ||
+    live.find((m) => !/gpt-oss|reason/i.test(m)) ||
+    live[0]
+  );
+}
+
 /** 이 Cerebras 키가 실제로 접근 가능한 모델 id 목록을 조회한다(계정마다 다름).
  *  404 폴백에도 실패할 때 "무엇을 쓸 수 있는지" 알아내는 최후 수단. */
 async function fetchCerebrasModels(apiKey: string): Promise<string[]> {
@@ -557,17 +570,30 @@ async function generateWithCerebras({
     return res;
   };
 
-  // 모델 지정 시 그 모델만, 아니면 후보들을 순서대로(404·미접근 시 다음 모델).
-  const models = modelOverride ? [modelOverride] : cerebrasModels();
+  const readText = async (res: Response) => {
+    const data = await res.json();
+    const text = data?.choices?.[0]?.message?.content;
+    if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
+    return text.trim();
+  };
+
+  // 모델 지정 시 그 모델만, 아니면 [이미 발견한 모델] + 후보들 순서대로.
+  // 한 번 발견한 모델을 앞세워, 계정별 404 탐색을 반복하지 않는다.
+  const models = modelOverride
+    ? [modelOverride]
+    : Array.from(
+        new Set([
+          ...(cerebrasResolvedModel ? [cerebrasResolvedModel] : []),
+          ...cerebrasModels(),
+        ]),
+      );
   let lastErr = "";
   let had404 = false;
   for (const model of models) {
     const res = await call(model);
     if (res.ok) {
-      const data = await res.json();
-      const text = data?.choices?.[0]?.message?.content;
-      if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
-      return text.trim();
+      if (!modelOverride) cerebrasResolvedModel = model; // 동작 확인된 모델 기억
+      return readText(res);
     }
     const detail = await res.text();
     lastErr = `Cerebras API 오류 (${res.status}): ${detail}`;
@@ -577,21 +603,12 @@ async function generateWithCerebras({
   }
   // 후보가 전부 404(계정 미접근)면, 이 키가 실제 쓸 수 있는 모델을 조회해 한 번 더.
   if (had404 && !modelOverride) {
-    const live = await fetchCerebrasModels(apiKey);
-    // 한국어 산문 품질·비추론(non-reasoning) 우선순위로 선택.
-    // gpt-oss 계열은 추론모델이라 본문이 비기 쉬워 맨 뒤로.
-    const prefer = [/glm/i, /qwen/i, /llama/i, /gemma/i, /mistral/i];
-    const pick =
-      prefer.map((re) => live.find((m) => re.test(m))).find(Boolean) ||
-      live.find((m) => !/gpt-oss|reason/i.test(m)) ||
-      live[0];
+    const pick = pickCerebrasModel(await fetchCerebrasModels(apiKey));
     if (pick) {
       const res = await call(pick);
       if (res.ok) {
-        const data = await res.json();
-        const text = data?.choices?.[0]?.message?.content;
-        if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
-        return text.trim();
+        cerebrasResolvedModel = pick; // 이후 호출부터는 바로 이 모델로.
+        return readText(res);
       }
       lastErr = `Cerebras API 오류 (${res.status}, 자동선택 ${pick}): ${await res.text()}`;
     } else {
