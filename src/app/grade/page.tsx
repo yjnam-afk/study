@@ -1,5 +1,6 @@
 "use client";
 
+import { readJsonSafe } from "@/lib/safeJson";
 import { useEffect, useState } from "react";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
@@ -45,9 +46,9 @@ export default function GradePage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ period, question, answer, reference }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "채점 실패");
-      setFeedback(data.feedback);
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "채점 실패");
+      setFeedback(data.feedback as typeof feedback);
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {

@@ -483,6 +483,17 @@ async function generateWithGroq({
   throw new Error(lastErr || "Groq 호출 실패");
 }
 
+/** Cerebras 모델 후보. 무료/제한 계정은 70b 접근 권한이 없어 404가 날 수 있으므로
+ *  큰 모델부터 시도하고, 접근 불가(404)면 널리 열려있는 작은 모델로 폴백한다. */
+function cerebrasModels(): string[] {
+  const primary = process.env.CEREBRAS_MODEL || "llama-3.3-70b";
+  const fallbacks = (process.env.CEREBRAS_FALLBACK_MODELS || "llama3.1-8b")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return Array.from(new Set([primary, ...fallbacks]));
+}
+
 /**
  * Cerebras — 무료 등급 한도가 큼(일 100만 토큰급, 카드 불필요).
  * OpenAI 호환 API. https://cloud.cerebras.ai 에서 무료 키 발급.
@@ -500,32 +511,38 @@ async function generateWithCerebras({
       "CEREBRAS_API_KEY 가 설정되지 않았습니다. https://cloud.cerebras.ai 에서 무료 키를 발급해 환경변수에 추가하세요.",
     );
   }
-  const model =
-    modelOverride || process.env.CEREBRAS_MODEL || "llama-3.3-70b";
-  const res = await fetch("https://api.cerebras.ai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      temperature,
-      max_tokens: maxTokens || MAX_TOKENS,
-      messages: [
-        { role: "system", content: system },
-        { role: "user", content: user },
-      ],
-    }),
-  });
-  if (!res.ok) {
+  // 모델 지정 시 그 모델만, 아니면 후보들을 순서대로(404·미접근 시 다음 모델).
+  const models = modelOverride ? [modelOverride] : cerebrasModels();
+  let lastErr = "";
+  for (const model of models) {
+    const res = await fetch("https://api.cerebras.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        temperature,
+        max_tokens: maxTokens || MAX_TOKENS,
+        messages: [
+          { role: "system", content: system },
+          { role: "user", content: user },
+        ],
+      }),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const text = data?.choices?.[0]?.message?.content;
+      if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
+      return text.trim();
+    }
     const detail = await res.text();
-    throw new Error(`Cerebras API 오류 (${res.status}): ${detail}`);
+    lastErr = `Cerebras API 오류 (${res.status}): ${detail}`;
+    // 404(모델 미접근)만 다음 모델로 폴백. 429/5xx 등은 모델 바꿔도 동일 → 중단.
+    if (res.status !== 404) break;
   }
-  const data = await res.json();
-  const text = data?.choices?.[0]?.message?.content;
-  if (!text) throw new Error("Cerebras 응답이 비어 있습니다.");
-  return text.trim();
+  throw new Error(lastErr || "Cerebras 호출 실패");
 }
 
 async function generateWithOpenRouter({

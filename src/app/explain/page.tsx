@@ -1,5 +1,6 @@
 "use client";
 
+import { readJsonSafe } from "@/lib/safeJson";
 import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -60,9 +61,9 @@ function ExplainInner() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, level, topicId: matched?.id }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "생성 실패");
-      setResult(data.explanation);
+      const { ok, data } = await readJsonSafe(res);
+      if (!ok) throw new Error((data.error as string) || "생성 실패");
+      setResult(data.explanation as string);
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
