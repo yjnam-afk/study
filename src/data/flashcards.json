@@ -6577,6 +6577,16 @@
      "규칙(대응)",
      "대응관계"
     ]
+   },
+   {
+    "label": "2022 개정 핵심",
+    "mnemonic": "개프측요",
+    "keywords": [
+     "개체(Entity of Interest, EoI): \"system of interest\"→EoI, 비(非)시스템 아키텍처에도 적용",
+     "프레임워크(ADF): \"architecture framework\"→\"architecture description framework\"",
+     "측면·관점(Aspect·Stakeholder perspective) 개념 정식 정의",
+     "AD 요소(Architecture Description Element) Clause 3 정식 정의 + ADL/model kind 확장"
+    ]
    }
   ],
   "mnemonic": "식표AD",
