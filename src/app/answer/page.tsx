@@ -339,7 +339,7 @@ export default function AnswerPage() {
           {hint && (
             <div className="rounded-2xl border border-brand-200 bg-white p-6 shadow-sm">
               <h3 className="text-sm font-bold text-brand-700">🔑 답안 힌트</h3>
-              <div className="mt-3 rounded-xl bg-gradient-to-br from-brand-50 to-indigo-50 p-4 text-center">
+              <div className="mt-3 rounded-xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
                 <div className="text-xs font-medium text-brand-500">두음신공</div>
                 <div className="mt-1 text-2xl font-extrabold tracking-wide text-brand-700">
                   {hint.mnemonic}
@@ -445,14 +445,14 @@ function MethodGuide({ period }: { period: Period }) {
   const rows = period === "1교시" ? struct1 : struct2;
 
   return (
-    <details className="mb-5 rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
-      <summary className="cursor-pointer text-sm font-bold text-indigo-800">
+    <details className="mb-5 rounded-2xl border border-violet-200 bg-violet-50 p-4">
+      <summary className="cursor-pointer text-sm font-bold text-brand-800">
         📐 답안 작성 방법론 ({period} · ITPE 강정배 작성론 원문 기준) — 펼쳐보기
       </summary>
       <div className="mt-3 space-y-2">
         {rows.map(([h, b]) => (
           <div key={h} className="rounded-lg bg-white p-3">
-            <div className="text-sm font-semibold text-indigo-700">{h}</div>
+            <div className="text-sm font-semibold text-brand-700">{h}</div>
             <div className="mt-0.5 text-xs leading-relaxed text-slate-600">
               {b}
             </div>

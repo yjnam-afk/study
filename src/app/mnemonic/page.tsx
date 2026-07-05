@@ -371,7 +371,7 @@ function GroupCard({
 }) {
   return (
     <div className="space-y-3">
-      <div className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-indigo-50 p-5 text-center shadow-sm">
+      <div className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-violet-50 p-5 text-center shadow-sm">
         {originBadge && (
           <span className="mb-1 inline-block rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-300">
             📒 교재 원본 반영

@@ -65,7 +65,7 @@ const menuGroups = [
         emoji: "📕",
         title: "오답노트",
         desc: "자주 틀린 키워드 집중 복습",
-        color: "from-cyan-500 to-sky-600",
+        color: "from-rose-400 to-pink-500",
       },
     ],
   },
@@ -77,7 +77,7 @@ const menuGroups = [
         emoji: "📝",
         title: "답안지 작성",
         desc: "키워드로 답안 '소설' 작성 + 키워드·두음 힌트 + 소설 쓰는 법",
-        color: "from-blue-500 to-indigo-600",
+        color: "from-fuchsia-500 to-pink-600",
       },
       {
         href: "/exam",
