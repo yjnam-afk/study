@@ -1227,7 +1227,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "정파조가 / 거실S지도지속 / 개수계획약설 / 제아컨서어비테디인",
-  "memo": "정파조가 (정보기술·파트너·조직인력·가치흐름)\n거실S지도지속 (거버넌스·실천·SVC·지도원칙·지속개선 — SVS: Demand→Value)\n개수계획약설 (개선·수요·계획·획득구축·약속참여·설계전환 + 전달·지원(Deliver&Support))\n제아컨 서어비 테디인 (General-아키텍처-지속개선 / Service-가용성-비즈분석 / Technical-배포-인프라)\n[구성] 4 Dimensions · 3 Practice Group · 34 Practices · Guiding Principle=Waste 줄이는 원칙",
+  "memo": "정파조가 (정보기술·파트너·조직인력·가치흐름)\n거실S지도지속 (거버넌스·실천·SVC·지도원칙·지속개선 — SVS: Demand→Value)\n개수계획약설 (개선·수요·계획·획득구축·약속참여·설계전환 + 전달·지원(Deliver&Support))\n제아컨 서어비 테디인 (General-아키텍처-지속개선 / Service-가용성-비즈분석 / Technical-배포-인프라)\n[구성] 4 Dimensions · 3 Practice Group · 34 Practices · Guiding Principle=Waste 줄이는 원칙 \n[정정] SVC 6활동=계개참설획전. 수요(Demand)·가치(Value)는 SVC 입력·출력이지 활동 아님.",
   "sections": [
    {
     "label": "4차원 모델",
@@ -1252,14 +1252,14 @@
    },
    {
     "label": "SVC 활동 6",
-    "mnemonic": "개수계획약설",
+    "mnemonic": "계개참설획전",
     "keywords": [
-     "개선(Improve)",
-     "수요(Demand→Value)",
      "계획(Plan)",
+     "개선(Improve)",
+     "참여(Engage)",
+     "설계·전환(Design&Transition)",
      "획득·구축(Obtain/Build)",
-     "약속·참여(Engage)",
-     "설계·전환(Design/Transition)"
+     "전달·지원(Deliver&Support)"
     ]
    },
    {
@@ -4630,7 +4630,7 @@
   ]
  },
  "pm-12": {
-  "detail": "프로젝트 관리를 위한 5개 프로세스 그룹(착수·계획·실행·통제·종료). 5개 지식영역과 매핑된 표로 서브프로세스까지 이해.",
+  "detail": "프로젝트 관리를 위한 5개 프로세스 그룹(착수·계획·실행·통제·종료). 10개 지식영역(KA)과 매핑된 표로 서브프로세스까지 이해.",
   "related": "예측적 개발",
   "defKeywords": [
    "착수",
@@ -4668,7 +4668,7 @@
     ]
    }
   ],
-  "memo": "착계실통종 (착수·계획(기획)·실행(이행)·통제·종료)"
+  "memo": "착계실통종 (착수·계획(기획)·실행(이행)·통제·종료) \n프로세스그룹 5개(착계실통종) × 지식영역 10개(통범일원품자의위조이) 매트릭스."
  },
  "pm-13": {
   "detail": "[정의] 프로젝트 관리 활동을 지식 기준으로 분류한 PMBOK의 10대 관리 영역(Knowledge Area).\n통합(Integration)·범위(Scope)·일정(Schedule)·원가(Cost)·품질(Quality)·자원(Resource)·의사소통(Communication)·위험(Risk)·조달(Procurement)·이해관계자(Stakeholder)",
@@ -8878,7 +8878,7 @@
    "COTS"
   ],
   "mnemonic": "요참모프배 / 분추단모정",
-  "memo": "요참모프배 (아키텍처 요구파악·참조 아키텍처 준비·아키텍처 모델링·아키텍처 프로토타이핑·아키텍처 배포)\n분추단모정 (분할과 정복·추상화·단순화·모듈화·정보은닉)",
+  "memo": "요참모프배 (아키텍처 요구파악·참조 아키텍처 준비·아키텍처 모델링·아키텍처 프로토타이핑·아키텍처 배포)\n분추단모정 (분할과 정복·추상화·단순화·모듈화·정보은닉) \n[정정] 설계원리=분할과정복·추상화·단계적분해(Stepwise Refinement)·모듈화·정보은닉.",
   "sections": [
    {
     "label": "아키텍처 설계절차",
@@ -8897,7 +8897,7 @@
     "keywords": [
      "분할과 정복",
      "추상화",
-     "단순화",
+     "단계적 분해",
      "모듈화",
      "정보은닉"
     ]
@@ -12863,7 +12863,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "두메인임",
-  "memo": "CMMI v2.0: 4 Category(두메인임)·12 Capability Area·20 Practice Area, Practice Group 구조, Agile 적용.",
+  "memo": "CMMI v2.0: 4 Category(두메인임)·12 Capability Area·20 Practice Area, Practice Group 구조, Agile 적용. \n[정정] 단계적 성숙도(5)=초관정예최(초기부터). 불완전·수행은 연속적 능력수준.",
   "sections": [
    {
     "label": "4개 Category",
@@ -12877,10 +12877,9 @@
    },
    {
     "label": "단계적 성숙도(Practice Level)",
-    "mnemonic": "불수관정예최",
+    "mnemonic": "초관정예최",
     "keywords": [
-     "불완전(Incomplete)",
-     "수행",
+     "초기(Initial)",
      "관리된(Managed)",
      "정의된(Defined)",
      "정량적관리(Quantitatively Managed)",
@@ -12891,10 +12890,10 @@
     "label": "연속적 표현",
     "mnemonic": "불수관정",
     "keywords": [
-     "불완전",
-     "수행",
-     "관리",
-     "정의"
+     "불완전(Incomplete)",
+     "수행(Performed)",
+     "관리(Managed)",
+     "정의(Defined)"
     ]
    },
    {
@@ -16693,7 +16692,7 @@
   "mnemonic": ""
  },
  "ds-73": {
-  "detail": "[정의] 인간과 컴퓨터가 상호간 작용함에 있어, 가장 최적의 방식과 편리성 극대화를 위한 상호작용 인터페이스\n[사용자분석] 인지모형(Cognitivity,시나리오Flow), 역할모형(Role,사용자-시스템관계), 페르소나(Persona,대표유형, 증권정보), 사회기술(조직특성)\n[페르소나 모형 분석단계] 사용자범주파악-주요단서분석-세부범주파악/기간구조잡기-기간구조평가/우선순위선정-페르소나 작성-페르소나 평가-설문조사통한 프로파일작성",
+  "detail": "HCI(Hyper Converged Infrastructure): 서버·스토리지·네트워크를 SDS·가상화로 소프트웨어 통합해 x86 표준 서버에 담고, 노드 추가만으로 Scale-Out 선형 확장하는 통합 IT 인프라(SDI 기반).",
   "related": "HCI1.0->HCI2.0, MMI(멀티모달)\n여러가지 인터페이스에 대한 반응을\n연구하는 학문",
   "defKeywords": [
    "SDI"
@@ -16706,20 +16705,29 @@
   ],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": "인역페사",
+  "mnemonic": "통선단",
   "sections": [
    {
-    "label": "사용자분석",
-    "mnemonic": "인역페사",
+    "label": "구성요소",
+    "mnemonic": "서스가관",
     "keywords": [
-     "인지모형",
-     "역할모형",
-     "페르소나",
-     "사회기술"
+     "x86 표준서버",
+     "SDS(소프트웨어정의스토리지)",
+     "가상화 하이퍼바이저",
+     "통합관리 SW"
+    ]
+   },
+   {
+    "label": "특징",
+    "mnemonic": "통선단",
+    "keywords": [
+     "통합관리",
+     "선형확장(Scale-Out)",
+     "단순화(구축·운영)"
     ]
    }
   ],
-  "memo": "HCI(Hyper Converged Infrastructure): SDI(Software-Defined Infrastructure)로 Scale-Out 확장 가능한 통합 IT프레임워크. 121회 기출."
+  "memo": "HCI = SDI 기반 통합 인프라. CI(Converged, HW통합)와 달리 SW 정의. 121회 기출. (Human-Computer Interaction과 혼동 주의)"
  },
  "ds-74": {
   "detail": "행정∙공공기관 업무처리를 위한 정보시스템이나 소프트웨어를 직접 구축하거나 구매하지\n않고 민간 클라우드 업체에 이용료를 내고 사용할 수 있는 서비스",
@@ -18785,7 +18793,7 @@
   "mnemonic": ""
  },
  "ds-172": {
-  "detail": "[정의] 하이퍼바이저 없이 리눅스 컨테이너(LXC) 기술 바탕으로 애플리케이션을 \n격리된 상태에서 실행하는 가상화 솔루션\n[특징] 호스트OS공유, 빠르고 가벼운 가상화, 자유로운 개발환경(개발언어, 툴 무관), 이식성, 개발/운영 호환성(copy>run과정만)\n[구성요소] LXC(별도 FS,프로세스,네트워크 공간) - cgroups(프로세스 그룹 리소스 제한,격리,모니터링),\nNamespace(운영 환경 고립), Livert(Lib+virtualization, container에게 API제공), container(독립공간,container가 내부 공유 안됨)\n컨테이너- 컨테이너(이미지 실행 상태) , 이미지(컨테이너 실행 상태)\n실행 - Client( container생성 관리, docker build, pull, run), Dock_Host( Deamon(Client 명령, 컨테이너 생성, 유지관리), Containter, Images) , Registry (이미지 저장)",
+  "detail": "[정의] 하이퍼바이저 없이 리눅스 컨테이너(LXC) 기술 바탕으로 애플리케이션을 \n격리된 상태에서 실행하는 가상화 솔루션\n[특징] 호스트OS공유, 빠르고 가벼운 가상화, 자유로운 개발환경(개발언어, 툴 무관), 이식성, 개발/운영 호환성(copy>run과정만)\n[구성요소] LXC(별도 FS,프로세스,네트워크 공간) - cgroups(프로세스 그룹 리소스 제한,격리,모니터링),\nNamespace(운영 환경 고립), Livert(Lib+virtualization, container에게 API제공), container(독립공간,container가 내부 공유 안됨)\n컨테이너- 컨테이너(이미지를 실행한 인스턴스) , 이미지(읽기전용 실행 템플릿)\n실행 - Client( container생성 관리, docker build, pull, run), Dock_Host( Deamon(Client 명령, 컨테이너 생성, 유지관리), Containter, Images) , Registry (이미지 저장)",
   "related": "공유, 격리\n경량화, Agile Trend, DevOps\n무중단 배포,\nLXC-실행",
   "defKeywords": [
    "LXC"
@@ -18810,7 +18818,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "씨네리컨-컨이-클호",
-  "memo": "도커(Docker): 하이퍼바이저 없이 LXC 기반 격리 실행 가상화. 구성: LXC·cgroups·Namespace·Libvirt·container. 실행: Client·Docker Host(Daemon·Container·Images)·Registry. 씨네리컨-컨이-클호(데컨이)레."
+  "memo": "도커(Docker): 하이퍼바이저 없이 LXC 기반 격리 실행 가상화. 구성: LXC·cgroups·Namespace·Libvirt·container. 실행: Client·Docker Host(Daemon·Container·Images)·Registry. 씨네리컨-컨이-클호(데컨이)레. \n[정정] 이미지=읽기전용 실행 템플릿(정적), 컨테이너=이미지 실행 인스턴스(동적)."
  },
  "ds-173": {
   "detail": "가상머신(Virtual Machine)과 컨테이너(Container)를 비교\n가상머신 : 하이퍼바이저\n컨테이너 : 도커, LXC\n컨테이너 키워드 : cgroup, libvert, namespace",
@@ -25194,7 +25202,7 @@
   ]
  },
  "net-44": {
-  "detail": "[정의] OSI 2계층 — 상위 계층의 비트열로 프레임을 구성해 두 시스템 간 오류 없이 전송하는 계층.\n[역할] 오류제어, 흐름제어, 접근제어, 주소지정, 정보전달\n[오류제어] FEC(해밍·R-S·콘볼루션·터보) / BEC 탐지(CRC·패리티·체크섬·블록섬) + 재전송(ARQ 5종)\n[흐름제어] Sliding Window  [회선제어] 경쟁·폴링·인터럽트·토큰, ENQ/ACK(1:1)·Polling(Select/Poll)\n[프로토콜] MAC, PPP, LLC  [표준] IEEE 802.11(토큰·링·버스), 802.3(Ethernet)  [장비] Bridge, L2 Switch",
+  "detail": "[정의] OSI 2계층 — 상위 계층의 비트열로 프레임을 구성해 두 시스템 간 오류 없이 전송하는 계층.\n[역할] 오류제어, 흐름제어, 접근제어, 주소지정, 정보전달\n[오류제어] FEC(해밍·R-S·콘볼루션·터보) / BEC 탐지(CRC·패리티·체크섬·블록섬) + 재전송(ARQ 5종)\n[흐름제어] Sliding Window  [회선제어] 경쟁·폴링·인터럽트·토큰, ENQ/ACK(1:1)·Polling(Select/Poll)\n[프로토콜] MAC, PPP, LLC  [표준] IEEE 802.x(토큰·링·버스), 802.3(Ethernet)  [장비] Bridge, L2 Switch",
   "related": "OSI 7 Layers / Network(3) / MAC / Sliding Window",
   "defKeywords": [
    "OSI 2계층",
@@ -25214,7 +25222,7 @@
   ],
   "plusKeywords": [],
   "mnemonic": "오름회 / 해리코터 / 스고셀아합 / 경폴인토",
-  "memo": "오름회 (오류·흐름·회선제어)\n해리코터 (해밍·리드솔로몬·콘볼루션·터보 — FEC / 교재 표기: 해리코텉, 블럭=해밍·R-S, 넌블럭=콘볼루션·터보)\n스고셀아합 (Stop&Wait·GoBackN·Selective·Adaptive·Hybrid ARQ — BEC 재전송)\n경폴인토 (경쟁·폴링·인터럽트·토큰) + ENQ/ACK(1:1 링크), Polling(Select=수신자 선택·Poll=수신 응답 확인)\nBEC 탐지: CRC·패리티·체크섬·블록섬 / 흐름제어: Sliding Window\n[기출] 138회 관리 4교시",
+  "memo": "오름회 (오류·흐름·회선제어)\n해리코터 (해밍·리드솔로몬·콘볼루션·터보 — FEC / 교재 표기: 해리코텉, 블럭=해밍·R-S, 넌블럭=콘볼루션·터보)\n스고셀아합 (Stop&Wait·GoBackN·Selective·Adaptive·Hybrid ARQ — BEC 재전송)\n경폴인토 (경쟁·폴링·인터럽트·토큰) + ENQ/ACK(1:1 링크), Polling(Select=수신자 선택·Poll=수신 응답 확인)\nBEC 탐지: CRC·패리티·체크섬·블록섬 / 흐름제어: Sliding Window\n[기출] 138회 관리 4교시 \n[IEEE 802] 802.3=Ethernet(CSMA/CD), 802.4=Token Bus, 802.5=Token Ring, 802.11=Wireless LAN.",
   "sections": [
    {
     "label": "핵심 기능 3",
@@ -26153,7 +26161,7 @@
   "plusKeywords": [],
   "mnemonic": "G변mM:",
   "sections": [],
-  "memo": "Dedicated Short Range Communication — 미국 표준 계열, 75MHz 할당"
+  "memo": "Dedicated Short Range Communication — 미국 표준 계열, 75MHz 할당 DSRC(Dedicated Short Range Communication) 정확 표기."
  },
  "net-84": {
   "detail": "[정의] IEEE 802.11p + IEEE 1609 기반 차량환경용 무선통신(WAVE).\n[구성] 802.11p(PHY·MAC) / 1609.1(리소스) / 1609.2(보안) / 1609.3(NW·전송) / 1609.4(멀티채널)\n[스펙] 대역 5.850~5.925GHz(75MHz), 채널 7개×10MHz, 27Mbps, 1km, 200km/h, OFDM",
@@ -26395,7 +26403,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "주변속대하표멀 / 에하빔쾀미 / 속대주표",
-  "memo": "[기출] 139회 관리 1교시 10번 — 비교표 출제",
+  "memo": "[기출] 139회 관리 1교시 10번 — 비교표 출제 Wi-Fi7=IEEE 802.11be(EHT), 핵심 MLO(Multi-Link Operation).",
   "sections": [
    {
     "label": "성능목표",
@@ -28328,7 +28336,7 @@
   "mnemonic": ""
  },
  "net-209": {
-  "detail": "[정의] 이웃 라우터와 거리·방향(벡터)을 주기 교환해 라우팅 테이블을 갱신하는 방식.\nRIP, IGRP — 벨만-포드 기반, 일정시간마다 이웃 경로 교환",
+  "detail": "Distance Vector: 각 라우터가 이웃과 거리(metric)·방향(vector)을 주기적으로 교환하여 벨만-포드(Bellman-Ford) 알고리즘으로 경로를 계산·갱신하는 라우팅 방식. RIP·IGRP. (cf. SPF/Dijkstra는 링크상태(OSPF·IS-IS) 알고리즘 — 혼동 주의)",
   "related": "라우팅 프로토콜 / Link State / RIP",
   "defKeywords": [
    "거리·방향 벡터",
@@ -28344,7 +28352,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "",
-  "memo": "🎵 거리(벡터)는 RIP·IGRP / 링(크)은 오이(OSPF·IS-IS)\n무한 카운팅 문제 → 스플릿 호라이즌",
+  "memo": "거리벡터=벨만포드(이웃과만 교환, 느린수렴·무한대문제) / 링크상태=Dijkstra SPF(전체 토폴로지). RIP=15홉 제한.",
   "sections": []
  },
  "net-210": {
@@ -31882,7 +31890,7 @@
   "memo": "개요실이측위인 11 14 33 799 통거네의"
  },
  "sec-106": {
-  "detail": "[정의] 기업이 각종 위협으로부터 주요 정보자산을 보호하기 위해 수립, 관리, 운영하는 종합적인 정보보호 관리체계의 적합성에 대해 인증을 부여하는 제도\n[항목] 관리과정(12), 보호대책(92)",
+  "detail": "ISO/IEC 27001: 정보보호관리체계(ISMS) 국제표준. 본문 요구사항(Clause 4~10, PDCA 관리체계)과 부속서 A(통제항목)로 구성. 2013판 14개 도메인·114개 통제 → 2022판 4개 테마·93개 통제.",
   "related": "ISMS\nISMS - P",
   "defKeywords": [
    "관리"
@@ -31893,18 +31901,33 @@
   ],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": "관보",
+  "mnemonic": "조리계지운성개",
   "sections": [
    {
-    "label": "항목",
-    "mnemonic": "관보",
+    "label": "관리체계 요구사항(Clause 4~10)",
+    "mnemonic": "조리계지운성개",
     "keywords": [
-     "관리과정",
-     "보호대책"
+     "조직상황",
+     "리더십",
+     "계획",
+     "지원",
+     "운영",
+     "성과평가",
+     "개선"
+    ]
+   },
+   {
+    "label": "부속서 A 통제(2022, 4테마)",
+    "mnemonic": "조인물기",
+    "keywords": [
+     "조직적",
+     "인적",
+     "물리적",
+     "기술적"
     ]
    }
   ],
-  "memo": "ISO 27001 = 정보보호관리체계(ISMS) 적합성 인증. 항목: 관리과정(12)·보호대책(92). ISMS / ISMS-P 계열."
+  "memo": "★\"관리과정12·보호대책92\"는 폐지된 국내 KISA ISMS 항목수(ISO 27001 아님). ISMS-P는 sec-110. 2022판=4테마 93통제."
  },
  "sec-107": {
   "detail": "ISO 17799",
@@ -38804,18 +38827,18 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "완부이결다조",
-  "memo": "함수적 종속성(FD): 함수적(~BCNF)·다중값(4NF)·결합(5NF).",
+  "memo": "정규형: 1NF=원자값(반복그룹 제거) → 2NF=부분함수종속 제거 → 3NF=이행종속 제거 → BCNF=결정자 → 4NF=다치 → 5NF=조인.",
   "sections": [
    {
-    "label": "정규형별 종속성",
+    "label": "함수 종속 유형",
     "mnemonic": "완부이결다조",
     "keywords": [
-     "완전함수(1NF)",
-     "부분함수(2NF)",
-     "이행함수(3NF)",
-     "결정자함수(BCNF)",
-     "다중값(4NF)",
-     "조인(5NF)"
+     "완전 함수종속(2NF)",
+     "부분 함수종속(2NF서 제거)",
+     "이행 함수종속(3NF서 제거)",
+     "결정자(BCNF)",
+     "다치종속(4NF)",
+     "조인종속(5NF)"
     ]
    }
   ]
@@ -39694,7 +39717,7 @@
   ]
  },
  "db-89": {
-  "detail": "[정의] 데이터베이스의 성능상의 문제점들을 파악한 후, 문제점의 튜닝을 통한 데이터베이스의 최적화\n[관점] Hit rate최대화, 대기시간 최소화, 응답시간 최대화\n[효과] 서비스 품질,비용,관리\n[튜닝절차]\n(1)설계:DB의 논리적 구조에 대한 성능 개선 작업(반정규화,분산파일배치)\n(2)DBMS:DB의 메모리 영역, 물리적 구조 등 개선하는 작업(Buffer,Cache크기)\n(3)SQL:SQL문 분석을 통해 성능을 발휘할 수 있도록 조율하는 작업(Hash/Join)\n[지표] Throughput(처리율), Throughput Time(처리시간), Response Time(응답시간), Load Time(로드시간)\n[평가방법] OLTP(TPC-C, TPC-E), DSS(TPC-H, BORD, setQuery), e-Commerce(TPC-W)",
+  "detail": "[정의] 데이터베이스의 성능상의 문제점들을 파악한 후, 문제점의 튜닝을 통한 데이터베이스의 최적화\n[관점] Hit rate최대화, 대기시간 최소화, 응답시간 최소화\n[효과] 서비스 품질,비용,관리\n[튜닝절차]\n(1)설계:DB의 논리적 구조에 대한 성능 개선 작업(반정규화,분산파일배치)\n(2)DBMS:DB의 메모리 영역, 물리적 구조 등 개선하는 작업(Buffer,Cache크기)\n(3)SQL:SQL문 분석을 통해 성능을 발휘할 수 있도록 조율하는 작업(Hash/Join)\n[지표] Throughput(처리율), Throughput Time(처리시간), Response Time(응답시간), Load Time(로드시간)\n[평가방법] OLTP(TPC-C, TPC-E), DSS(TPC-H, BORD, setQuery), e-Commerce(TPC-W)",
   "related": "",
   "defKeywords": [],
   "featureKeywords": [
@@ -39715,7 +39738,7 @@
   ],
   "plusKeywords": [],
   "mnemonic": "설DS",
-  "memo": "DB 튜닝 = 성능 문제점 파악 후 최적화. 지표: Throughput·응답시간. 평가: OLTP(TPC-C)·DSS(TPC-H)·e-Commerce(TPC-W).",
+  "memo": "DB 튜닝 = 성능 문제점 파악 후 최적화. 지표: Throughput·응답시간. 평가: OLTP(TPC-C)·DSS(TPC-H)·e-Commerce(TPC-W). \n[정정] 관점: Hit rate 최대화 / 대기·응답시간 최소화 / 처리율 최대화.",
   "sections": [
    {
     "label": "관점",
@@ -39723,7 +39746,7 @@
     "keywords": [
      "Hit rate최대화",
      "대기시간최소화",
-     "응답시간최대화"
+     "응답시간 최소화"
     ]
    },
    {
@@ -39980,7 +40003,7 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "규다속",
-  "memo": "빅데이터 3V/6V. Hadoop·HDFS.",
+  "memo": "빅데이터 3V/6V. Hadoop·HDFS. \n[정정] 6V 시각화=Visualization(Visibility 아님). Value·Veracity·Variability 계열.",
   "sections": [
    {
     "label": "3V",
@@ -39996,7 +40019,7 @@
     "mnemonic": "진시가",
     "keywords": [
      "진실성(Veracity)",
-     "시각화(Visibility)",
+     "시각화(Visualization)",
      "가치(Value)"
     ]
    }
@@ -40038,7 +40061,7 @@
   ]
  },
  "db-105": {
-  "detail": "빅데이터 분석기법: Bagging(단순복원추출·다수결로 안정성↑, Bootstrap aggregating), Boosting(오분류에 가중치 부여로 정확성↑). 배깅=부스팅+보팅.",
+  "detail": "빅데이터 분석기법: Bagging(단순복원추출·다수결로 안정성↑, Bootstrap aggregating), Boosting(오분류에 가중치 부여로 정확성↑). 배깅=부트스트랩+보팅.",
   "related": "",
   "defKeywords": [],
   "featureKeywords": [],
@@ -40046,7 +40069,8 @@
    "회귀분석은"
   ],
   "plusKeywords": [],
-  "mnemonic": ""
+  "mnemonic": "",
+  "memo": "[정정] 배깅=부트스트랩(복원추출)+Aggregating(보팅). 부스팅은 별개(오분류 가중치)."
  },
  "db-106": {
   "detail": "시각화 기법을 통해 데이터의 구조를 이해하고 인사이트를 도출하기 위한 데이터 분석 기법",
@@ -41583,7 +41607,7 @@
   ]
  },
  "db-189": {
-  "detail": "AC보안 도메인 연동",
+  "detail": "접근제어(Access Control): 주체가 객체에 접근하는 권한을 정책에 따라 통제해 비인가 접근을 차단하는 보안 기법.",
   "related": "",
   "defKeywords": [
    "AC보안 도메인 연동"
@@ -41591,7 +41615,28 @@
   "featureKeywords": [],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": ""
+  "mnemonic": "주객권 / 임강역",
+  "sections": [
+   {
+    "label": "구성요소",
+    "mnemonic": "주객권",
+    "keywords": [
+     "주체(Subject)",
+     "객체(Object)",
+     "접근권한(Access Right)"
+    ]
+   },
+   {
+    "label": "접근제어 모델",
+    "mnemonic": "임강역",
+    "keywords": [
+     "임의적(DAC)",
+     "강제적(MAC)",
+     "역할기반(RBAC)"
+    ]
+   }
+  ],
+  "memo": "고려사항: 최소권한·직무분리·알필요성. 메커니즘: ACL·CL·SL. 모델 상세는 sec-155(BLP·BIBA·Clark-Wilson) 참조."
  },
  "db-190": {
   "detail": "가. 데이터 사이언스의 영역, 요구역량(Soft Skill / Hard Skill)\n나. 데이터 사이언스 발전 방안",
@@ -48697,7 +48742,8 @@
   "featureKeywords": [],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": ""
+  "mnemonic": "",
+  "memo": "[정정] EDF(최단마감우선)는 선점형(동적우선순위) → 비선점 목록에서 제외."
  },
  "os-19": {
   "detail": "SJF(Shortest Job First) : 준비 큐에서 수행시간이 가장 짧은 작업을 먼저 수행. 평균 대기시간이  감소하고 짧은 작업에 유리하지만 긴 작업과 짧은 작업간의 불평등 심화(끝날 때까지 기다림)\n[키워드] 준비 상태 큐, 실행 시간(Burst Time)",
@@ -49165,13 +49211,26 @@
   "mnemonic": ""
  },
  "os-57": {
-  "detail": "[정의]UNIX에서 각 파일에 대한 정보를 기억하고 있는 자료 구조로 파일 소유자의 식별 번호, 파일크기, 파일의 최종 수정시간,파일 링크 수 등을 저장하는 블록의 포인터\n1~12번: Direct Block\n13, 14, 15번까지: Triple Indirect Block",
+  "detail": "I-node(inode): 파일 메타데이터(권한·소유자·크기·타임스탬프)와 데이터 블록 포인터를 담는 구조. 블록 포인터 15개 = 직접 12 + 단일간접 1 + 이중간접 1 + 삼중간접 1.",
   "related": "",
   "defKeywords": [],
   "featureKeywords": [],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": ""
+  "mnemonic": "직단이삼",
+  "sections": [
+   {
+    "label": "블록 포인터(15)",
+    "mnemonic": "직단이삼",
+    "keywords": [
+     "1~12: 직접(Direct)",
+     "13: 단일간접(Single Indirect)",
+     "14: 이중간접(Double Indirect)",
+     "15: 삼중간접(Triple Indirect)"
+    ]
+   }
+  ],
+  "memo": "inode 포인터: 12직접+단일간접(13)+이중간접(14)+삼중간접(15). 파일명은 inode가 아닌 디렉터리 엔트리에 저장."
  },
  "os-58": {
   "detail": "부슈아데(부트블록, 슈퍼블록, I-node, 데이터블록)",
@@ -49997,7 +50056,7 @@
   "mnemonic": ""
  },
  "alg-24": {
-  "detail": "[정의] 방향성 그래프에서 정점을 연결하는 간선의 가중치 합이 최소가 되는 신장트리\n[구현알고리즘] 크루스칼, 프림, SOLIN\n[특징] 그래프 내 원래 있던 edge들만 포함, cycle(순환)없음, vertex수가 n일때 n-1개 edge만 포함\n[비용인접리스트] 각 정점의 노드와 노드의 가중치 표기한 그래프 표현 방식",
+  "detail": "[정의] 무방향(연결) 가중치 그래프에서 정점을 연결하는 간선의 가중치 합이 최소가 되는 신장트리\n[구현알고리즘] 크루스칼, 프림, SOLIN\n[특징] 그래프 내 원래 있던 edge들만 포함, cycle(순환)없음, vertex수가 n일때 n-1개 edge만 포함\n[비용인접리스트] 각 정점의 노드와 노드의 가중치 표기한 그래프 표현 방식",
   "related": "신장트리 : 그래프에서 모든 정점을 포함하고, 정점간 서로 연결되면서 사이클이 존재하지 않는 그래프\n활용: 네트워크설계(라우터 경로 설정, 최적의 통신경로 선택)\n수송시스템(도시 계획시 고속도로 건설 계획)",
   "defKeywords": [],
   "featureKeywords": [
@@ -50019,7 +50078,7 @@
     ]
    }
   ],
-  "memo": "크프S (크루스칼·프림·SOLIN)"
+  "memo": "★MST는 무방향 가중치 그래프에서 정의(방향성 아님). 구현: 크루스칼·프림·솔린. 특성: 사이클 없음, 간선 n-1개."
  },
  "alg-25": {
   "detail": "Dijkstra 알고리즘, A* 알고리즘",

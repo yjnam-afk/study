@@ -1000,14 +1000,14 @@
    },
    {
     "label": "SVC 활동 6",
-    "mnemonic": "개수계획약설",
+    "mnemonic": "계개참설획전",
     "keywords": [
-     "개선(Improve)",
-     "수요(Demand→Value)",
      "계획(Plan)",
+     "개선(Improve)",
+     "참여(Engage)",
+     "설계·전환(Design&Transition)",
      "획득·구축(Obtain/Build)",
-     "약속·참여(Engage)",
-     "설계·전환(Design/Transition)"
+     "전달·지원(Deliver&Support)"
     ]
    },
    {
@@ -6517,7 +6517,7 @@
     "keywords": [
      "분할과 정복",
      "추상화",
-     "단순화",
+     "단계적 분해",
      "모듈화",
      "정보은닉"
     ]
@@ -9601,10 +9601,9 @@
    },
    {
     "label": "단계적 성숙도(Practice Level)",
-    "mnemonic": "불수관정예최",
+    "mnemonic": "초관정예최",
     "keywords": [
-     "불완전(Incomplete)",
-     "수행",
+     "초기(Initial)",
      "관리된(Managed)",
      "정의된(Defined)",
      "정량적관리(Quantitatively Managed)",
@@ -9615,10 +9614,10 @@
     "label": "연속적 표현",
     "mnemonic": "불수관정",
     "keywords": [
-     "불완전",
-     "수행",
-     "관리",
-     "정의"
+     "불완전(Incomplete)",
+     "수행(Performed)",
+     "관리(Managed)",
+     "정의(Defined)"
     ]
    },
    {
@@ -12144,22 +12143,31 @@
   "definition": "Software-Defined Infrastructure(SDI)로 적용하여 Scale-Out의 확장이 가능한 통합 IT프레임워크",
   "sections": [
    {
-    "label": "사용자분석",
-    "mnemonic": "인역페사",
+    "label": "구성요소",
+    "mnemonic": "서스가관",
     "keywords": [
-     "인지모형",
-     "역할모형",
-     "페르소나",
-     "사회기술"
+     "x86 표준서버",
+     "SDS(소프트웨어정의스토리지)",
+     "가상화 하이퍼바이저",
+     "통합관리 SW"
+    ]
+   },
+   {
+    "label": "특징",
+    "mnemonic": "통선단",
+    "keywords": [
+     "통합관리",
+     "선형확장(Scale-Out)",
+     "단순화(구축·운영)"
     ]
    }
   ],
-  "mnemonic": "인역페사",
+  "mnemonic": "서스가관",
   "keywords": [
-   "인지모형",
-   "역할모형",
-   "페르소나",
-   "사회기술"
+   "x86 표준서버",
+   "SDS(소프트웨어정의스토리지)",
+   "가상화 하이퍼바이저",
+   "통합관리 SW"
   ]
  },
  {
@@ -17466,7 +17474,7 @@
  },
  {
   "id": "net-83",
-  "title": "DRSC",
+  "title": "DSRC",
   "category": "네트워크",
   "importance": "상",
   "definition": "ITS전용 근거리 무선통신방식",
@@ -17594,7 +17602,7 @@
  },
  {
   "id": "net-97",
-  "title": "WI-FI 7 (IEEE 801.11be)",
+  "title": "WI-FI 7 (IEEE 802.11be)",
   "category": "네트워크",
   "importance": "상",
   "definition": "Wi-Fi 6 보다 3배 빠르고 초 실감 미디어 컨텐츠를 안정적으로 전송하는",
@@ -20354,18 +20362,38 @@
   "definition": "기업이 각종 위협으로부터 주요 정보자산을 보호하기 위해 수립, 관리, 운영하는 종합적인 정보보호 관리체계의 적합성에 대해 인증을 부여하는 제도",
   "sections": [
    {
-    "label": "항목",
-    "mnemonic": "관보",
+    "label": "관리체계 요구사항(Clause 4~10)",
+    "mnemonic": "조리계지운성개",
     "keywords": [
-     "관리과정",
-     "보호대책"
+     "조직상황",
+     "리더십",
+     "계획",
+     "지원",
+     "운영",
+     "성과평가",
+     "개선"
+    ]
+   },
+   {
+    "label": "부속서 A 통제(2022, 4테마)",
+    "mnemonic": "조인물기",
+    "keywords": [
+     "조직적",
+     "인적",
+     "물리적",
+     "기술적"
     ]
    }
   ],
-  "mnemonic": "관보",
+  "mnemonic": "조리계지운성개",
   "keywords": [
-   "관리과정",
-   "보호대책"
+   "조직상황",
+   "리더십",
+   "계획",
+   "지원",
+   "운영",
+   "성과평가",
+   "개선"
   ]
  },
  {
@@ -24287,26 +24315,26 @@
   "definition": "데이터들이 어떤 기준 값에 의해 항상 종속되는 현상",
   "sections": [
    {
-    "label": "정규형별 종속성",
+    "label": "함수 종속 유형",
     "mnemonic": "완부이결다조",
     "keywords": [
-     "완전함수(1NF)",
-     "부분함수(2NF)",
-     "이행함수(3NF)",
-     "결정자함수(BCNF)",
-     "다중값(4NF)",
-     "조인(5NF)"
+     "완전 함수종속(2NF)",
+     "부분 함수종속(2NF서 제거)",
+     "이행 함수종속(3NF서 제거)",
+     "결정자(BCNF)",
+     "다치종속(4NF)",
+     "조인종속(5NF)"
     ]
    }
   ],
   "mnemonic": "완부이결다조",
   "keywords": [
-   "완전함수(1NF)",
-   "부분함수(2NF)",
-   "이행함수(3NF)",
-   "결정자함수(BCNF)",
-   "다중값(4NF)",
-   "조인(5NF)"
+   "완전 함수종속(2NF)",
+   "부분 함수종속(2NF서 제거)",
+   "이행 함수종속(3NF서 제거)",
+   "결정자(BCNF)",
+   "다치종속(4NF)",
+   "조인종속(5NF)"
   ]
  },
  {
@@ -24869,7 +24897,7 @@
     "keywords": [
      "Hit rate최대화",
      "대기시간최소화",
-     "응답시간최대화"
+     "응답시간 최소화"
     ]
    },
    {
@@ -24895,7 +24923,7 @@
   "keywords": [
    "Hit rate최대화",
    "대기시간최소화",
-   "응답시간최대화"
+   "응답시간 최소화"
   ]
  },
  {
@@ -25025,7 +25053,7 @@
     "mnemonic": "진시가",
     "keywords": [
      "진실성(Veracity)",
-     "시각화(Visibility)",
+     "시각화(Visualization)",
      "가치(Value)"
     ]
    }
@@ -26040,6 +26068,39 @@
    "시스템 뷰",
    "인덱스된 뷰",
    "분할된 뷰"
+  ]
+ },
+ {
+  "id": "db-189",
+  "title": "접근제어",
+  "category": "데이터베이스",
+  "importance": "상",
+  "definition": "AC보안 도메인 연동",
+  "sections": [
+   {
+    "label": "구성요소",
+    "mnemonic": "주객권",
+    "keywords": [
+     "주체(Subject)",
+     "객체(Object)",
+     "접근권한(Access Right)"
+    ]
+   },
+   {
+    "label": "접근제어 모델",
+    "mnemonic": "임강역",
+    "keywords": [
+     "임의적(DAC)",
+     "강제적(MAC)",
+     "역할기반(RBAC)"
+    ]
+   }
+  ],
+  "mnemonic": "주객권",
+  "keywords": [
+   "주체(Subject)",
+   "객체(Object)",
+   "접근권한(Access Right)"
   ]
  },
  {
@@ -29839,6 +29900,32 @@
   ],
   "mnemonic": "인블동칩",
   "keywords": []
+ },
+ {
+  "id": "os-57",
+  "title": "I-node",
+  "category": "소프트웨어공학",
+  "importance": "상",
+  "definition": "UNIX에서 각 파일에 대한 정보를 기억하고 있는 자료 구조로 파일 소유자의 식별 번호, 파일크기, 파일의 최종 수정시간,파일 링크 수 등을 저장하는 블록의 포인터",
+  "sections": [
+   {
+    "label": "블록 포인터(15)",
+    "mnemonic": "직단이삼",
+    "keywords": [
+     "1~12: 직접(Direct)",
+     "13: 단일간접(Single Indirect)",
+     "14: 이중간접(Double Indirect)",
+     "15: 삼중간접(Triple Indirect)"
+    ]
+   }
+  ],
+  "mnemonic": "직단이삼",
+  "keywords": [
+   "1~12: 직접(Direct)",
+   "13: 단일간접(Single Indirect)",
+   "14: 이중간접(Double Indirect)",
+   "15: 삼중간접(Triple Indirect)"
+  ]
  },
  {
   "id": "os-75",
