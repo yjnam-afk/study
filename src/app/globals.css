@@ -14,39 +14,55 @@ body {
     "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
-/* 말랑말랑 커서 효과 — 마우스를 따라오는 파스텔 글로우(포인터 이벤트 없음) */
-.cursor-trail {
+/* 말랑말랑 귀여운 커서 — 🍡 경단 버디 + 반짝이 트레일(포인터 이벤트 없음) */
+.cursor-buddy {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
   z-index: 9999;
-  border-radius: 9999px;
+  pointer-events: none;
+  font-size: 26px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 3px rgba(236, 72, 153, 0.35));
   will-change: transform, opacity;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
+  animation: cursor-bob 1.6s ease-in-out infinite;
 }
-.cursor-trail--dot {
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(circle, #f472b6 0%, #ec4899 70%);
-  box-shadow: 0 0 10px 2px rgba(236, 72, 153, 0.5);
+@keyframes cursor-bob {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -3px;
+  }
 }
-.cursor-trail--ring {
-  width: 34px;
-  height: 34px;
-  background: radial-gradient(
-    circle,
-    rgba(249, 168, 212, 0.35) 0%,
-    rgba(196, 181, 253, 0.18) 60%,
-    transparent 72%
-  );
-  border: 1.5px solid rgba(244, 114, 182, 0.4);
-  transition: opacity 0.3s ease, width 0.15s ease, height 0.15s ease;
+.cursor-spark-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  overflow: hidden;
 }
-.cursor-trail--ring.cursor-trail--press {
-  width: 24px;
-  height: 24px;
-  border-color: rgba(236, 72, 153, 0.7);
+.cursor-spark {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+  animation: cursor-spark-float 0.75s ease-out forwards;
+}
+@keyframes cursor-spark-float {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy)))
+      scale(1) rotate(var(--rot));
+  }
 }
 
 /* react-markdown 결과물에 적용할 기본 타이포그래피 */
