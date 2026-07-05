@@ -19488,6 +19488,44 @@
   ]
  },
  {
+  "id": "sec-36",
+  "title": "ARP Redirect",
+  "category": "보안",
+  "importance": "상",
+  "definition": "네트워크상의 다른 모든 호스트들이 공격자 호스트를 라우터로 믿게끔 하여 네트워크상의 모든 트래픽을 공격자의 호스트를 경유하게 하여 훔쳐보는(Sniffing) 공격 기법.",
+  "sections": [
+   {
+    "label": "공격",
+    "mnemonic": "위캐",
+    "keywords": [
+     "위조 ARP Reply(게이트웨이 MAC 위장)",
+     "ARP 캐시 오염(호스트)"
+    ]
+   },
+   {
+    "label": "결과",
+    "mnemonic": "가릴",
+    "keywords": [
+     "트래픽 가로채기(호스트→공격자)",
+     "릴레이·스니핑(→게이트웨이)"
+    ]
+   },
+   {
+    "label": "대응",
+    "mnemonic": "정탐",
+    "keywords": [
+     "정적 ARP(arp -s로 MAC 고정)",
+     "ARP 변조 탐지(arpwatch)"
+    ]
+   }
+  ],
+  "mnemonic": "위캐",
+  "keywords": [
+   "위조 ARP Reply(게이트웨이 MAC 위장)",
+   "ARP 캐시 오염(호스트)"
+  ]
+ },
+ {
   "id": "sec-40",
   "title": "Smurfing(스머핑)",
   "category": "보안",

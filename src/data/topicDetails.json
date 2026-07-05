@@ -30482,7 +30482,7 @@
   "mnemonic": ""
  },
  "sec-36": {
-  "detail": "ARP Redirect: 네트워크상 모든 호스트가 공격자 호스트를 라우터로 믿게 하여 전체 트래픽을 공격자 경유시켜 스니핑하는 공격.",
+  "detail": "ARP Redirect: 공격자가 게이트웨이(라우터) MAC으로 위장한 위조 ARP Reply를 호스트에 보내 호스트의 ARP 캐시를 오염시키고, 호스트의 모든 트래픽이 공격자를 먼저 경유(호스트→공격자→라우터)하게 만들어 스니핑하는 공격. 공격자가 게이트웨이 행세를 하는 것이 본질.",
   "related": "",
   "defKeywords": [
    "Sniffing"
@@ -30490,7 +30490,35 @@
   "featureKeywords": [],
   "applicationKeywords": [],
   "plusKeywords": [],
-  "mnemonic": ""
+  "mnemonic": "",
+  "sections": [
+   {
+    "label": "공격",
+    "mnemonic": "위캐",
+    "keywords": [
+     "위조 ARP Reply(게이트웨이 MAC 위장)",
+     "ARP 캐시 오염(호스트)"
+    ]
+   },
+   {
+    "label": "결과",
+    "mnemonic": "가릴",
+    "keywords": [
+     "트래픽 가로채기(호스트→공격자)",
+     "릴레이·스니핑(→게이트웨이)"
+    ]
+   },
+   {
+    "label": "대응",
+    "mnemonic": "정탐",
+    "keywords": [
+     "정적 ARP(arp -s로 MAC 고정)",
+     "ARP 변조 탐지(arpwatch)"
+    ]
+   }
+  ],
+  "conceptMap": "graph LR\n  ATK[\"공격자(GW 위장)\"] -->|\"① 위조 ARP Reply\"| H[\"호스트\"]\n  H -->|\"② 캐시 오염\"| C[\"호스트 ARP캐시\"]\n  H -->|\"③ 트래픽 전송\"| ATK\n  ATK -->|\"④ 릴레이·스니핑\"| GW[\"게이트웨이\"]\n  GW --> EXT[\"외부망\"]",
+  "memo": "ARP Redirect 핵심: 호스트→공격자→라우터 순서(공격자가 GW보다 먼저 받음). 위조 ARP Reply→캐시 오염이 성립 조건. ARP Spoofing은 상위 개념(도식 노드 아님)."
  },
  "sec-37": {
   "detail": "취약한 DNS 서버에 조작된 Query를 전송하여 DNS 서버가 저장하고 있는 주소 Cache 정보를 임의로 변조하는 공격",
