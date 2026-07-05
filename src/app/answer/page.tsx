@@ -258,7 +258,7 @@ export default function AnswerPage() {
             </select>
           </div>
           {topicId && (
-            <p className="mt-2 flex items-center gap-1 text-xs font-medium text-emerald-600">
+            <p className="mt-2 flex items-center gap-1 text-xs font-medium text-amber-600">
               ✓ &ldquo;{topicTitle}&rdquo; 서브노트를 근거로 작성합니다.
             </p>
           )}
@@ -315,17 +315,17 @@ export default function AnswerPage() {
 
       {modelAnswer && (
         <div className="mt-6">
-          <details open className="rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-5 shadow-sm">
-            <summary className="cursor-pointer text-sm font-bold text-emerald-800">
+          <details open className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-5 shadow-sm">
+            <summary className="cursor-pointer text-sm font-bold text-amber-800">
               📘 이 문제의 클로드 모범답안 (무료·즉시)
             </summary>
-            <div className="mt-2 rounded-md bg-white px-2.5 py-1 text-[11px] text-emerald-700 ring-1 ring-emerald-200">
+            <div className="mt-2 rounded-md bg-white px-2.5 py-1 text-[11px] text-amber-700 ring-1 ring-amber-200">
               🧾 근거: {modelAnswer.source}
             </div>
             <article className="mt-3 rounded-xl bg-white p-5 md:p-6">
               <Markdown>{modelAnswer.answer}</Markdown>
             </article>
-            <p className="mt-2 text-xs text-emerald-600">
+            <p className="mt-2 text-xs text-amber-600">
               ↑ 미리 작성된 모범답안입니다. 아래 &ldquo;답안 생성&rdquo;은 실시간(무료 LLM)
               결과로, 비교용이에요.
             </p>

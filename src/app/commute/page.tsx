@@ -121,7 +121,7 @@ export default function CommutePage() {
               </span>
               <span className="text-xs text-slate-400">{card.category}</span>
               {rounds > 0 && (
-                <span className="text-xs text-emerald-600">· {rounds}회독</span>
+                <span className="text-xs text-amber-600">· {rounds}회독</span>
               )}
             </div>
             <h2 className="mt-3 text-2xl font-bold leading-snug text-slate-900">
@@ -135,8 +135,8 @@ export default function CommutePage() {
             ) : (
               <div className="mt-5">
                 {card.definition && (
-                  <div className="mb-4 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
-                    <div className="text-xs font-semibold text-emerald-700">
+                  <div className="mb-4 rounded-2xl border border-amber-100 bg-amber-50 p-4">
+                    <div className="text-xs font-semibold text-amber-700">
                       📖 정의
                     </div>
                     <p className="mt-1 text-sm leading-relaxed text-slate-800">
@@ -187,7 +187,7 @@ export default function CommutePage() {
             </button>
             <button
               onClick={() => next(true)}
-              className="rounded-2xl bg-emerald-600 py-4 text-base font-bold text-white active:bg-emerald-700"
+              className="rounded-2xl bg-amber-600 py-4 text-base font-bold text-white active:bg-amber-700"
             >
               ✓ 외웠어요
             </button>
