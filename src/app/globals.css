@@ -14,6 +14,41 @@ body {
     "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
+/* 말랑말랑 커서 효과 — 마우스를 따라오는 파스텔 글로우(포인터 이벤트 없음) */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 9999px;
+  will-change: transform, opacity;
+  transition: opacity 0.3s ease;
+}
+.cursor-trail--dot {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #f472b6 0%, #ec4899 70%);
+  box-shadow: 0 0 10px 2px rgba(236, 72, 153, 0.5);
+}
+.cursor-trail--ring {
+  width: 34px;
+  height: 34px;
+  background: radial-gradient(
+    circle,
+    rgba(249, 168, 212, 0.35) 0%,
+    rgba(196, 181, 253, 0.18) 60%,
+    transparent 72%
+  );
+  border: 1.5px solid rgba(244, 114, 182, 0.4);
+  transition: opacity 0.3s ease, width 0.15s ease, height 0.15s ease;
+}
+.cursor-trail--ring.cursor-trail--press {
+  width: 24px;
+  height: 24px;
+  border-color: rgba(236, 72, 153, 0.7);
+}
+
 /* react-markdown 결과물에 적용할 기본 타이포그래피 */
 .prose-answer h1 {
   @apply text-xl font-bold mt-6 mb-3 text-slate-900 border-b border-slate-200 pb-1;

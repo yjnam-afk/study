@@ -44,15 +44,10 @@ export async function POST(req: NextRequest) {
     const text = await cached(
       `explain:v9:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
       60 * 86400,
-      async () => {
-        // 1차 생성이 불완전(잘린 한 줄 요약 등)하면 한 번 더 시도.
-        let out = await gen();
-        if (!isComplete(out)) {
-          const retry = await gen();
-          if (isComplete(retry)) out = retry;
-        }
-        return out;
-      },
+      // generateText가 이미 내부에서 제공자 체인을 순회하며 valid(isComplete)
+      // 검증·폴백을 한다. 여기서 gen()을 또 감싸 재시도하면 최악의 경우 시간이
+      // 배로 늘어 60초(maxDuration)를 넘겨 504가 났다 → 단일 호출로 단축.
+      gen,
       isComplete, // 완성본만 캐시에 저장/사용 → 잘린 결과가 박히지 않게
     );
 
