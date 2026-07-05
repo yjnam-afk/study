@@ -241,11 +241,19 @@ export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
   // 데이터가 전혀 없으면(키워드·섹션 모두 비었으면) AI로 폴백.
   if (introKw.length === 0 && sections.length === 0) return null;
 
+  // 서론 정의는 "키워드 나열식 한 문장(약 2줄)"이어야 한다. 교재 요약(t.summary)은
+  // 수백 자짜리 원문이라 그대로 넣으면 2줄을 한참 넘겨 넘친다. → 정의 키워드를
+  // 중점(·)으로 이어 압축(방법론상 서론 정의 형태). 정의 키워드가 없을 때만
+  // 요약의 첫 문장을 잘라 폴백한다.
+  const defLine = defKw.length
+    ? defKw.slice(0, 6).join(" · ")
+    : (t.summary || "").split(/[.!?。\n]/)[0].trim().slice(0, 60);
+
   const intro: DGroup = {
     items: toItems(introKw),
     mnemonic: introKw.map(firstCh).join(""),
     mnemonicHow: "정의 키워드의 첫 글자를 모았어요.",
-    definition: t.summary || "",
+    definition: defLine,
     features: (featKw.length ? featKw : appKw).slice(0, 3),
   };
 

@@ -373,7 +373,7 @@ function GroupCard({
     <div className="space-y-3">
       <div className="rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 to-violet-50 p-5 text-center shadow-sm">
         {originBadge && (
-          <span className="mb-1 inline-block rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-300">
+          <span className="mb-1 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 ring-1 ring-amber-300">
             📒 교재 원본 반영
           </span>
         )}
@@ -417,8 +417,8 @@ function GroupCard({
         const feats = (group.features || []).filter(Boolean);
         if (!defText && feats.length === 0) return null;
         return (
-          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-            <div className="mb-2 text-xs font-semibold text-emerald-700">
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4">
+            <div className="mb-2 text-xs font-semibold text-amber-700">
               ✍️ 답안지 서론(정의) — 키워드 나열식 한 문장(약 2줄)
             </div>
             {defText && (
@@ -427,8 +427,8 @@ function GroupCard({
               </p>
             )}
             {feats.length > 0 && (
-              <div className="mt-3 border-t border-emerald-200 pt-3">
-                <div className="mb-1 text-xs font-semibold text-emerald-700">
+              <div className="mt-3 border-t border-amber-200 pt-3">
+                <div className="mb-1 text-xs font-semibold text-amber-700">
                   ⭐ 특징
                 </div>
                 <ul className="space-y-0.5 text-sm text-slate-700">
@@ -474,7 +474,7 @@ function Learn({
         // 교재에 섹션별 두음(특징·기술요소·분류 등)이 있으면 각각 별도 카드로.
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-300">
+            <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 ring-1 ring-amber-300">
               📒 교재 원본 두음
             </span>
             <span className="text-xs text-slate-500">
@@ -514,15 +514,15 @@ function MemoCard({
     .filter(Boolean);
   return (
     <div className="space-y-3">
-      <div className="rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 p-5 text-center shadow-sm">
-        <span className="mb-1 inline-block rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-300">
+      <div className="rounded-2xl border border-amber-300 bg-gradient-to-br from-amber-50 to-amber-50 p-5 text-center shadow-sm">
+        <span className="mb-1 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 ring-1 ring-amber-300">
           📒 교재 암기법 (원본 두음)
         </span>
         <div className="mt-1 space-y-0.5">
           {lines.map((l, i) => (
             <div
               key={i}
-              className="text-2xl font-extrabold tracking-wide text-emerald-700"
+              className="text-2xl font-extrabold tracking-wide text-amber-700"
             >
               {l}
             </div>
@@ -574,20 +574,20 @@ function SectionCard({
   }
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-emerald-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between gap-2 bg-emerald-50 px-4 py-2">
-        <span className="text-xs font-bold text-emerald-800">
+    <div className="overflow-hidden rounded-2xl border border-amber-200 bg-white shadow-sm">
+      <div className="flex items-center justify-between gap-2 bg-amber-50 px-4 py-2">
+        <span className="text-xs font-bold text-amber-800">
           📝 {section.label}
         </span>
         <div className="flex items-center gap-2">
-          <span className="text-lg font-extrabold tracking-wide text-emerald-700">
+          <span className="text-lg font-extrabold tracking-wide text-amber-700">
             {section.mnemonic}
           </span>
           <button
             onClick={toggleHide}
             className={`rounded-md border px-2 py-0.5 text-[10px] font-bold transition ${
               hide
-                ? "border-emerald-400 bg-emerald-500 text-white"
+                ? "border-amber-400 bg-amber-500 text-white"
                 : "border-slate-300 bg-white text-slate-500 hover:bg-slate-50"
             }`}
           >
@@ -606,7 +606,7 @@ function SectionCard({
                 masked ? "cursor-pointer" : ""
               }`}
             >
-              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-emerald-100 text-xs font-extrabold text-emerald-700">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-amber-100 text-xs font-extrabold text-amber-700">
                 {aligned ? letters[i] : i + 1}
               </span>
               {masked ? (
@@ -653,7 +653,7 @@ function Inject({ mc, onNext }: { mc: MC[]; onNext: () => void }) {
                 if (!answered)
                   cls += "border-slate-200 hover:border-brand-300 hover:bg-brand-50";
                 else if (isAnswer)
-                  cls += "border-emerald-400 bg-emerald-50 text-emerald-800";
+                  cls += "border-amber-400 bg-amber-50 text-amber-800";
                 else if (isPicked) cls += "border-red-300 bg-red-50 text-red-700";
                 else cls += "border-slate-200 text-slate-500";
                 return (
@@ -673,7 +673,7 @@ function Inject({ mc, onNext }: { mc: MC[]; onNext: () => void }) {
                 <span
                   className={
                     choice === q.answer
-                      ? "font-semibold text-emerald-600"
+                      ? "font-semibold text-amber-600"
                       : "font-semibold text-red-600"
                   }
                 >
@@ -754,7 +754,7 @@ function Check({
                 key={i}
                 className={`rounded-full px-3 py-1 text-sm ${
                   r.hit
-                    ? "bg-emerald-100 text-emerald-700"
+                    ? "bg-amber-100 text-amber-700"
                     : "bg-red-50 text-red-600 line-through"
                 }`}
               >
@@ -915,8 +915,8 @@ function Write({
             {revealed[i] ? "모범 설명 숨기기" : "모범 설명 보기 →"}
           </button>
           {revealed[i] && (
-            <div className="mt-2 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-slate-700">
-              <span className="text-xs font-semibold text-emerald-700">
+            <div className="mt-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-slate-700">
+              <span className="text-xs font-semibold text-amber-700">
                 모범 설명{" "}
               </span>
               {descOf(it) || (
@@ -935,11 +935,11 @@ function Write({
       </p>
 
       {submitted ? (
-        <div className="rounded-2xl border border-emerald-300 bg-emerald-50 p-5 text-center">
-          <p className="text-base font-bold text-emerald-700">
+        <div className="rounded-2xl border border-amber-300 bg-amber-50 p-5 text-center">
+          <p className="text-base font-bold text-amber-700">
             🎉 학습 완료! 제출됐어요
           </p>
-          <p className="mt-1 text-xs text-emerald-600">
+          <p className="mt-1 text-xs text-amber-600">
             {topicId
               ? "회독 1회가 기록되고 오늘의 데일리 계획에 완료 체크됐어요."
               : "기록하려면 토픽을 검색·선택해서 학습해 주세요."}
@@ -947,7 +947,7 @@ function Write({
           <div className="mt-3 flex flex-wrap justify-center gap-2">
             <Link
               href="/plan"
-              className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
+              className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-bold text-white hover:bg-amber-700"
             >
               🗓️ 데일리 계획으로
             </Link>

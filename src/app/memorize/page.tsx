@@ -221,7 +221,7 @@ function Quiz({ quiz, topic }: { quiz: QuizItem[]; topic: string }) {
                 if (!answered) {
                   cls += "border-slate-200 hover:border-brand-300 hover:bg-brand-50";
                 } else if (isAnswer) {
-                  cls += "border-emerald-400 bg-emerald-50 text-emerald-800";
+                  cls += "border-amber-400 bg-amber-50 text-amber-800";
                 } else if (isPicked) {
                   cls += "border-red-300 bg-red-50 text-red-700";
                 } else {
@@ -244,7 +244,7 @@ function Quiz({ quiz, topic }: { quiz: QuizItem[]; topic: string }) {
                 <span
                   className={
                     choice === q.answer
-                      ? "font-semibold text-emerald-600"
+                      ? "font-semibold text-amber-600"
                       : "font-semibold text-red-600"
                   }
                 >

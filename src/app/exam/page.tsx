@@ -138,7 +138,7 @@ export default function ExamPage() {
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2 pl-9">
                     {ma && (
-                      <span className="self-center rounded-md bg-emerald-100 px-2 py-1 text-[10px] font-bold text-emerald-700">
+                      <span className="self-center rounded-md bg-amber-100 px-2 py-1 text-[10px] font-bold text-amber-700">
                         📘 모범답안 제공
                       </span>
                     )}
@@ -158,11 +158,11 @@ export default function ExamPage() {
 
                   {ma && (
                     <details className="mt-3 pl-9">
-                      <summary className="cursor-pointer text-xs font-semibold text-emerald-700 hover:underline">
+                      <summary className="cursor-pointer text-xs font-semibold text-amber-700 hover:underline">
                         📘 클로드 모범답안 보기
                       </summary>
-                      <div className="mt-2 rounded-xl border border-emerald-200 bg-emerald-50/40 p-4">
-                        <div className="mb-2 rounded-md bg-white px-2.5 py-1 text-[10px] text-emerald-700 ring-1 ring-emerald-200">
+                      <div className="mt-2 rounded-xl border border-amber-200 bg-amber-50/40 p-4">
+                        <div className="mb-2 rounded-md bg-white px-2.5 py-1 text-[10px] text-amber-700 ring-1 ring-amber-200">
                           🧾 근거: {ma.source}
                         </div>
                         <article className="rounded-lg bg-white p-4">

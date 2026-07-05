@@ -66,12 +66,12 @@ export default function AudioLecture({
                   ? "bg-amber-100 text-slate-900"
                   : t.speaker === "진행자"
                     ? "bg-white text-slate-600"
-                    : "bg-emerald-50 text-slate-800"
+                    : "bg-amber-50 text-slate-800"
               }`}
             >
               <span
                 className={`mr-1.5 text-[11px] font-bold ${
-                  t.speaker === "진행자" ? "text-sky-600" : "text-emerald-700"
+                  t.speaker === "진행자" ? "text-sky-600" : "text-amber-700"
                 }`}
               >
                 {t.speaker}

@@ -144,7 +144,7 @@ export default function PlanPage() {
         <div
           className={`mt-2 rounded-xl border p-3 text-xs leading-relaxed ${
             forecast.withinPlan
-              ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+              ? "border-amber-200 bg-amber-50 text-amber-800"
               : "border-amber-200 bg-amber-50 text-amber-800"
           }`}
         >
@@ -255,7 +255,7 @@ export default function PlanPage() {
                           : selected === idx
                             ? "border-brand-500 bg-brand-50 ring-1 ring-brand-500"
                             : isDone
-                              ? "border-emerald-300 bg-emerald-50"
+                              ? "border-amber-300 bg-amber-50"
                               : "border-slate-200 hover:border-brand-300"
                       } ${isToday ? "font-bold" : ""}`}
                     >
@@ -393,7 +393,7 @@ function DayDetail({
               key={t.id}
               className={`flex items-center gap-2 rounded-lg border p-2 ${
                 checked
-                  ? "border-emerald-200 bg-emerald-50"
+                  ? "border-amber-200 bg-amber-50"
                   : "border-slate-100 bg-slate-50"
               }`}
             >
@@ -403,8 +403,8 @@ function DayDetail({
                   aria-label="완료"
                   className={`grid h-6 w-6 shrink-0 place-items-center rounded-md border text-xs font-bold transition ${
                     checked
-                      ? "border-emerald-400 bg-emerald-500 text-white"
-                      : "border-slate-300 bg-white text-transparent hover:border-emerald-400"
+                      ? "border-amber-400 bg-amber-500 text-white"
+                      : "border-slate-300 bg-white text-transparent hover:border-amber-400"
                   }`}
                 >
                   ✓

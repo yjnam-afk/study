@@ -163,7 +163,7 @@ export default function LoginPage() {
                 </div>
               )}
               {editMsg && (
-                <p className="mb-3 text-sm font-medium text-emerald-600">
+                <p className="mb-3 text-sm font-medium text-amber-600">
                   ✓ {editMsg}
                 </p>
               )}

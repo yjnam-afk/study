@@ -140,7 +140,7 @@ function ReviewSession({
         <h2 className="mt-2 text-lg font-bold text-slate-900">복습 완료!</h2>
         <p className="mt-1 text-sm text-slate-600">
           {queue.length}문제 중{" "}
-          <span className="font-semibold text-emerald-600">{correctCount}</span>
+          <span className="font-semibold text-amber-600">{correctCount}</span>
           문제 정답. 틀린 문제는 곧 다시 출제됩니다.
         </p>
         <div className="mt-5">
@@ -185,7 +185,7 @@ function ReviewSession({
             if (!answered)
               cls += "border-slate-200 hover:border-brand-300 hover:bg-brand-50";
             else if (isAnswer)
-              cls += "border-emerald-400 bg-emerald-50 text-emerald-800";
+              cls += "border-amber-400 bg-amber-50 text-amber-800";
             else if (isPicked) cls += "border-red-300 bg-red-50 text-red-700";
             else cls += "border-slate-200 text-slate-500";
             return (
@@ -205,7 +205,7 @@ function ReviewSession({
             <span
               className={
                 picked === note.answer
-                  ? "font-semibold text-emerald-600"
+                  ? "font-semibold text-amber-600"
                   : "font-semibold text-red-600"
               }
             >
@@ -237,7 +237,7 @@ function NoteCard({ note, onRemove }: { note: WrongNote; onRemove: () => void })
             {note.wrongCount}번 틀림
           </span>
           {note.mastered ? (
-            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs text-emerald-700">
+            <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700">
               암기 완료
             </span>
           ) : (
@@ -266,7 +266,7 @@ function NoteCard({ note, onRemove }: { note: WrongNote; onRemove: () => void })
           {note.options.map((opt, oi) => {
             const isAnswer = oi === note.answer;
             let cls = "rounded-lg border px-3 py-2 text-sm ";
-            if (isAnswer) cls += "border-emerald-400 bg-emerald-50 text-emerald-800";
+            if (isAnswer) cls += "border-amber-400 bg-amber-50 text-amber-800";
             else cls += "border-slate-200 text-slate-600";
             return (
               <div key={oi} className={cls}>

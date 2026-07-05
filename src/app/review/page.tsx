@@ -25,7 +25,7 @@ const STATUS_LABEL: Record<string, string> = {
 const STATUS_STYLE: Record<string, string> = {
   todo: "bg-slate-100 text-slate-500",
   learning: "bg-amber-100 text-amber-700",
-  done: "bg-emerald-100 text-emerald-700",
+  done: "bg-amber-100 text-amber-700",
 };
 
 const IMP_ORDER: Record<string, number> = { 상: 0, 중: 1, 하: 2, 출제예상: 3 };
