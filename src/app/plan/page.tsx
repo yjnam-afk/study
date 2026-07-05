@@ -226,7 +226,7 @@ export default function PlanPage() {
                       i === 0
                         ? "text-rose-400"
                         : i === 6
-                          ? "text-blue-400"
+                          ? "text-brand-400"
                           : "text-slate-400"
                     }`}
                   >

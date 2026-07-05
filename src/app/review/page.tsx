@@ -210,7 +210,7 @@ export default function ReviewPage() {
         className={`mb-6 flex flex-col gap-2 rounded-2xl border p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between ${
           syncState === "error"
             ? "border-red-200 bg-red-50"
-            : "border-indigo-200 bg-indigo-50"
+            : "border-violet-200 bg-violet-50"
         }`}
       >
         <div className="min-w-0 text-sm">
@@ -230,7 +230,7 @@ export default function ReviewPage() {
               로그인하면 이 계정에 저장된 회독 기록을 서버에서 불러올 수 있어요.{" "}
               <Link
                 href="/login"
-                className="font-semibold text-indigo-600 hover:underline"
+                className="font-semibold text-brand-600 hover:underline"
               >
                 로그인 →
               </Link>
@@ -242,7 +242,7 @@ export default function ReviewPage() {
             <button
               onClick={restoreFromServer}
               disabled={syncState === "syncing"}
-              className="rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white hover:bg-indigo-700 disabled:opacity-50"
+              className="rounded-lg bg-brand-600 px-4 py-2 text-xs font-semibold text-white hover:bg-brand-700 disabled:opacity-50"
             >
               {syncState === "syncing"
                 ? "불러오는 중…"
@@ -339,7 +339,7 @@ export default function ReviewPage() {
         </div>
         <div className="h-3 w-full overflow-hidden rounded-full bg-slate-100">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-brand-500 to-indigo-600 transition-all"
+            className="h-full rounded-full bg-gradient-to-r from-brand-400 to-violet-400 transition-all"
             style={{ width: `${progress}%` }}
           />
         </div>
