@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       });
 
     const text = await cached(
-      `explain:v8:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
+      `explain:v9:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
       60 * 86400,
       async () => {
         // 1차 생성이 불완전(잘린 한 줄 요약 등)하면 한 번 더 시도.
