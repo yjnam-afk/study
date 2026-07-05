@@ -235,6 +235,35 @@ export default function Home() {
           </span>
         </div>
 
+        {/* 말랑말랑이 어느 정도냐면… — 클럽 정체성 재치있게 */}
+        <details className="group mt-4 rounded-xl bg-white/60 px-4 py-3">
+          <summary className="cursor-pointer list-none text-sm font-semibold text-rose-600">
+            🍡 말랑말랑이 어느 정도냐면…{" "}
+            <span className="text-xs font-normal text-slate-500 group-open:hidden">
+              (눌러보세요)
+            </span>
+          </summary>
+          <p className="mt-2 text-sm font-medium text-slate-700">
+            시험은 빡세도, <b className="text-rose-600">공부는 부드럽게</b> 🍡
+          </p>
+          <div className="mt-2 grid gap-1.5 text-xs text-slate-600">
+            <div>
+              <span className="font-semibold text-slate-400">스파르타</span> 하루
+              100개 외워! 못 하면 다시! 😤
+            </div>
+            <div>
+              <span className="font-semibold text-rose-500">말랑말랑</span> 오늘은
+              이 3개만~ 틀려도 괜찮아, 내일 또 보면 돼 🍡
+            </div>
+          </div>
+          <ul className="mt-2 space-y-1 text-xs text-slate-600">
+            <li>💤 강제 배정 ❌ → 달력이 <b>오늘 분량만</b> 살포시 배정</li>
+            <li>🧠 억지 암기 ❌ → <b>두음신공</b>으로 연상 암기(머리 안 아픔)</li>
+            <li>🫧 틀리면 벌칙 ❌ → <b>오답노트</b>가 슬쩍 다시 챙겨줌</li>
+            <li>🎧 답안 막막함 ❌ → AI가 대신 써주고 <b>부드럽게 코칭</b></li>
+          </ul>
+        </details>
+
         {/* 개인화 코치 — 클럽 소개 아래에 자연스럽게 */}
         <div className="mt-5 rounded-xl bg-white/60 p-4">
           <p className="text-sm font-semibold text-slate-800">
