@@ -14,8 +14,8 @@ export function GET() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #6366f1 0%, #7c3aed 100%)",
-          color: "white",
+          background: "linear-gradient(135deg, #f9a8d4 0%, #c4b5fd 100%)",
+          color: "#831843",
         }}
       >
         <div
@@ -28,9 +28,9 @@ export function GET() {
           }}
         />
         <div style={{ fontSize: 80, fontWeight: 800, letterSpacing: -2 }}>
-          SPARTA NOVEL CLUB
+          MELLOW NOVEL CLUB
         </div>
-        <div style={{ fontSize: 36, marginTop: 16, opacity: 0.9 }}>
+        <div style={{ fontSize: 36, marginTop: 16, opacity: 0.85 }}>
           info-PE study : mnemonic + answer writing
         </div>
       </div>
