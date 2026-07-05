@@ -16859,24 +16859,49 @@
   "definition": "송수신 데이터의 노이즈, 지연, 변형 등의 통신장애로부터 오류 검출 및 세그먼트 재전송 통한 신뢰성을 확보하는 시퀀스 기반 통신 기법",
   "sections": [
    {
-    "label": "오류정정 대상",
-    "mnemonic": "훼손중순확",
+    "label": "오류 검출 기법",
+    "mnemonic": "패검C해",
     "keywords": [
-     "훼손",
-     "손실",
-     "중복",
-     "순서",
-     "확인응답"
+     "패리티검사(VRC/LRC)",
+     "블록합검사(Checksum)",
+     "CRC(순환중복검사)",
+     "해밍코드(검출+정정)"
+    ]
+   },
+   {
+    "label": "오류 정정 방식",
+    "mnemonic": "후전",
+    "keywords": [
+     "후진오류수정(BEC=ARQ, 재전송 요청)",
+     "전진오류수정(FEC, 수신측 자체 정정)"
+    ]
+   },
+   {
+    "label": "ARQ 종류(후진/BEC)",
+    "mnemonic": "정연선적",
+    "keywords": [
+     "정지-대기(Stop-and-Wait)",
+     "연속(Go-Back-N)",
+     "선택적 재전송(Selective Repeat)",
+     "적응적(Adaptive)"
+    ]
+   },
+   {
+    "label": "FEC 부호(전진)",
+    "mnemonic": "해길솔",
+    "keywords": [
+     "해밍코드",
+     "길쌈부호(Convolutional)",
+     "Reed-Solomon(RS)"
     ]
    }
   ],
-  "mnemonic": "훼손중순확",
+  "mnemonic": "패검C해",
   "keywords": [
-   "훼손",
-   "손실",
-   "중복",
-   "순서",
-   "확인응답"
+   "패리티검사(VRC/LRC)",
+   "블록합검사(Checksum)",
+   "CRC(순환중복검사)",
+   "해밍코드(검출+정정)"
   ]
  },
  {
