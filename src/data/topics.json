@@ -9409,7 +9409,7 @@
  },
  {
   "id": "net-83",
-  "title": "DRSC",
+  "title": "DSRC",
   "category": "네트워크",
   "group": "V2V",
   "importance": "상",
@@ -9521,7 +9521,7 @@
  },
  {
   "id": "net-97",
-  "title": "WI-FI 7 (IEEE 801.11be)",
+  "title": "WI-FI 7 (IEEE 802.11be)",
   "category": "네트워크",
   "group": "Wireless LAN",
   "importance": "상",
