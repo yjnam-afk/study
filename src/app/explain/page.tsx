@@ -174,7 +174,7 @@ function ExplainInner() {
                 topicId={topics.find((x) => x.title === topic.trim())?.id}
               />
               <ShareButton
-                title={`[스파르타 소설클럽] ${topic.trim()} 설명`}
+                title={`[말랑말랑 소설클럽] ${topic.trim()} 설명`}
                 text={`💡 ${topic.trim()} — 이해하기 쉬운 설명`}
                 url={`https://study-teal-eight.vercel.app/explain?topic=${encodeURIComponent(topic.trim())}&auto=1`}
               />

@@ -9,15 +9,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://study-teal-eight.vercel.app"),
-  title: "스파르타 소설클럽",
+  title: "말랑말랑 소설클럽",
   description:
-    "기술사 답안은 '소설'이다 — 키워드 암기(두음신공)와 키워드로 답안 쓰기를 스파르타식으로 훈련하는 정보관리기술사 학습 앱",
+    "기술사 답안은 '소설'이다 — 키워드 암기(두음신공)와 키워드로 답안 쓰기를 말랑말랑하게 훈련하는 정보관리기술사 학습 앱",
   openGraph: {
-    title: "스파르타 소설클럽",
+    title: "말랑말랑 소설클럽",
     description:
       "기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기. 같이 공부해요!",
     url: "https://study-teal-eight.vercel.app",
-    siteName: "스파르타 소설클럽",
+    siteName: "말랑말랑 소설클럽",
     images: [{ url: "/api/og", width: 1200, height: 630 }],
     type: "website",
   },
@@ -37,7 +37,7 @@ export default function RootLayout({
               <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand-600 to-violet-600 text-base text-white">
                 📖
               </span>
-              스파르타 소설클럽
+              말랑말랑 소설클럽
             </Link>
             <div className="flex items-center gap-4">
               <nav className="hidden gap-4 text-sm font-medium text-slate-600 lg:flex">
@@ -58,7 +58,7 @@ export default function RootLayout({
           <AuthGate>{children}</AuthGate>
         </main>
         <footer className="mx-auto max-w-5xl px-4 py-10 text-center text-xs text-slate-400">
-          스파르타 소설클럽 · 정보관리기술사 학습 · AI 응답은 참고용이며 실제 채점 기준과 다를 수 있습니다.
+          말랑말랑 소설클럽 · 정보관리기술사 학습 · AI 응답은 참고용이며 실제 채점 기준과 다를 수 있습니다.
         </footer>
         <GlobalAudioPlayer />
       </body>
