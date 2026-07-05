@@ -158,6 +158,28 @@ function providerChain(): ChainEntry[] {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+/** 제공자별 fetch에 타임아웃을 건다. 무료 제공자가 응답을 오래 끌면(행) 그 한 번의
+ *  호출이 함수 전체 시간예산(maxDuration 60s)을 먹어치워 504가 나므로, 개별 호출을
+ *  일정 시간에 끊고 다음 제공자로 넘어가게 한다. */
+const PROVIDER_TIMEOUT_MS = Number(process.env.AI_PROVIDER_TIMEOUT_MS) || 22000;
+export async function fetchT(
+  url: string,
+  opts: RequestInit,
+  ms = PROVIDER_TIMEOUT_MS,
+): Promise<Response> {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  try {
+    return await fetch(url, { ...opts, signal: ctrl.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** 전체 시간 예산(마감). maxDuration(60s)보다 여유를 둬, 이 시각을 넘기면 더 시도하지
+ *  않고 깔끔한 안내(503)로 끝낸다 → Vercel 강제 종료(504·비JSON)로 화면이 깨지는 것 방지. */
+const OVERALL_DEADLINE_MS = Number(process.env.AI_DEADLINE_MS) || 50000;
+
 /** 제공자별 일시적(순간적) 실패 신호 — 같은 키로 곧바로 재시도하면 풀리는 경우가 많다.
  *  무료 등급의 분당 한도(TPM)·동시요청 제한·5xx 는 잠깐 기다리면 회복된다. */
 function isTransient(detail: string): boolean {
@@ -166,8 +188,11 @@ function isTransient(detail: string): boolean {
   );
 }
 
-/** 폴백 체인을 한 번 끝까지 시도한다(각 제공자/모델 순서대로). */
-async function runChainOnce(opts: GenOpts): Promise<
+/** 폴백 체인을 한 번 끝까지 시도한다(각 제공자/모델 순서대로). deadline을 넘기면 중단. */
+async function runChainOnce(
+  opts: GenOpts,
+  deadline: number,
+): Promise<
   | { ok: true; text: string }
   | { ok: false; detail: string; allConfigError: boolean; transient: boolean }
 > {
@@ -176,6 +201,12 @@ async function runChainOnce(opts: GenOpts): Promise<
   let allConfigError = true;
 
   for (const { name, model, maxTokens } of chain) {
+    // 시간 예산을 넘겼으면 더 시도하지 않고 종료(504 방지).
+    if (Date.now() > deadline) {
+      allConfigError = false;
+      errors.push("시간 예산 초과 — 더 이상 제공자를 시도하지 않음");
+      break;
+    }
     const fn = PROVIDERS[name];
     const label = model ? `${name}(${model})` : name;
     if (!fn) {
@@ -210,16 +241,19 @@ async function runChainOnce(opts: GenOpts): Promise<
 export async function generateText(opts: GenOpts): Promise<string> {
   // 체인 전체 재시도 횟수(maxDuration 60s 안에 들어오도록 보수적으로). 0,0.8s,2s,3.5s 백오프.
   const backoffs = [0, 800, 2000, 3500];
+  const deadline = Date.now() + OVERALL_DEADLINE_MS;
   let last:
     | { ok: false; detail: string; allConfigError: boolean; transient: boolean }
     | undefined;
 
   for (let attempt = 0; attempt < backoffs.length; attempt++) {
+    // 시간 예산을 넘겼으면(다음 시도가 마감을 넘길 게 뻔하면) 중단 → 깔끔한 안내로.
+    if (Date.now() > deadline) break;
     if (backoffs[attempt]) {
       // 살짝의 지터로 같은 분당창에서 동시에 몰리지 않게.
       await sleep(backoffs[attempt] + Math.floor(Math.random() * 250));
     }
-    const r = await runChainOnce(opts);
+    const r = await runChainOnce(opts, deadline);
     if (r.ok) return r.text;
     last = r;
     // 키 자체가 없으면(설정 문제) 재시도해도 의미 없음 → 즉시 중단.
@@ -352,7 +386,7 @@ async function generateWithGemini({
   let lastErr = "";
   for (const apiKey of keys) {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-    const res = await fetch(url, {
+    const res = await fetchT(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body,
@@ -392,7 +426,7 @@ async function generateWithAnthropic({
   }
   const model = modelOverride || process.env.ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
 
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
+  const res = await fetchT("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -467,7 +501,7 @@ async function generateWithGroq({
 
   let lastErr = "";
   for (const apiKey of keys) {
-    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    const res = await fetchT("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -519,7 +553,7 @@ function pickCerebrasModel(live: string[]): string | undefined {
  *  404 폴백에도 실패할 때 "무엇을 쓸 수 있는지" 알아내는 최후 수단. */
 async function fetchCerebrasModels(apiKey: string): Promise<string[]> {
   try {
-    const res = await fetch("https://api.cerebras.ai/v1/models", {
+    const res = await fetchT("https://api.cerebras.ai/v1/models", {
       headers: { Authorization: `Bearer ${apiKey}` },
     });
     if (!res.ok) return [];
@@ -551,7 +585,7 @@ async function generateWithCerebras({
     );
   }
   const call = async (model: string) => {
-    const res = await fetch("https://api.cerebras.ai/v1/chat/completions", {
+    const res = await fetchT("https://api.cerebras.ai/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -635,7 +669,7 @@ async function generateWithOpenRouter({
   const model =
     modelOverride || process.env.OPENROUTER_MODEL || "google/gemma-2-9b-it:free";
 
-  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+  const res = await fetchT("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -682,7 +716,7 @@ async function generateWithOllama({
 
   let res: Response;
   try {
-    res = await fetch(`${base}/v1/chat/completions`, {
+    res = await fetchT(`${base}/v1/chat/completions`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
