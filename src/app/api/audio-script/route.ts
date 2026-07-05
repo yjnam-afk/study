@@ -39,14 +39,9 @@ export async function POST(req: NextRequest) {
     const script = await cached(
       `audioscript:v2:${topic}:${grounding ? hashKey(grounding) : "-"}`,
       90 * 86400,
-      async () => {
-        let out = await gen();
-        if (!isComplete(out)) {
-          const retry = await gen();
-          if (isComplete(retry)) out = retry;
-        }
-        return out;
-      },
+      // generateText 내부에서 이미 체인 순회·검증·폴백을 한다. 중복 재시도로
+      // maxDuration(60s)을 넘기지 않도록 단일 호출.
+      gen,
       isComplete,
     );
 
