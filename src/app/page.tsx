@@ -210,13 +210,13 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-indigo-700 to-violet-700 p-7 text-white shadow-lg sm:p-9">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
-          📖 말랑말랑 소설클럽
+      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-pink-400 via-fuchsia-500 to-violet-500 p-7 text-white shadow-lg sm:p-9">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">
+          🍡 말랑말랑 소설클럽
         </span>
         <h1 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">
           기술사 답안은{" "}
-          <span className="underline decoration-amber-300 decoration-4 underline-offset-4">
+          <span className="underline decoration-pink-200 decoration-4 underline-offset-4">
             소설
           </span>
           이다 ✍️
@@ -461,7 +461,7 @@ export default function Home() {
           </div>
           <div className="h-3 w-full overflow-hidden rounded-full bg-slate-100">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-brand-500 to-indigo-600 transition-all"
+              className="h-full rounded-full bg-gradient-to-r from-pink-400 to-violet-400 transition-all"
               style={{ width: `${progress}%` }}
             />
           </div>

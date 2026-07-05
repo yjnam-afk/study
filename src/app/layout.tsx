@@ -34,8 +34,8 @@ export default function RootLayout({
         <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur">
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
             <Link href="/" className="flex items-center gap-2 font-bold text-slate-900">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand-600 to-violet-600 text-base text-white">
-                📖
+              <span className="grid h-8 w-8 place-items-center rounded-2xl bg-gradient-to-br from-pink-300 to-violet-300 text-base shadow-sm">
+                🍡
               </span>
               말랑말랑 소설클럽
             </Link>
