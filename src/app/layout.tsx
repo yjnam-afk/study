@@ -48,6 +48,7 @@ export default function RootLayout({
                 <Link href="/answer" className="font-semibold text-brand-600 hover:text-brand-700">답안쓰기</Link>
                 <Link href="/exam" className="hover:text-brand-600">기출문제</Link>
                 <Link href="/grade" className="hover:text-brand-600">자가채점</Link>
+                <Link href="/guide" className="hover:text-brand-600">🧠 학습법</Link>
               </nav>
               <AuthNav />
             </div>
