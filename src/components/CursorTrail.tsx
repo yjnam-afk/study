@@ -3,123 +3,100 @@
 import { useEffect, useRef } from "react";
 
 /**
- * 말랑말랑 귀여운 커서 효과 — 🍡 경단이 마우스를 부드럽게 따라오고,
- * 움직일 때마다 하트·반짝이가 뿅뿅 흩날린다.
- * - 마우스 환경에서만(터치·모션최소화는 비활성), pointer-events:none.
- * - lerp 지연 추적 + 속도에 따라 살짝 기울고, 클릭하면 말랑 눌림(squish).
+ * 쿠로미풍(자정 보라/검정) 캐릭터가 마우스를 "멀찌감치" 쫓아온다.
+ * - 느린 lerp + 최소 간격 유지 → 커서에 딱 붙지 않고 뒤에서 살랑살랑 따라옴.
+ * - 이동 방향으로 살짝 바라보고(좌우 반전), 위아래로 둥실.
+ * - 터치·모션최소화 환경은 비활성, pointer-events 없음.
  */
-const SPARKLES = ["💕", "✨", "🩷", "🫧", "⭐", "🍬"];
-
 export default function CursorTrail() {
-  const buddyRef = useRef<HTMLDivElement>(null);
-  const layerRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const noHover = window.matchMedia("(hover: none)").matches;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (noHover || reduce) return;
 
-    const buddy = buddyRef.current;
-    const layer = layerRef.current;
-    if (!buddy || !layer) return;
+    const el = ref.current;
+    if (!el) return;
 
     let mx = window.innerWidth / 2;
     let my = window.innerHeight / 2;
     let x = mx,
-      y = my,
-      px = mx; // 이전 x — 속도(기울기)용
+      y = my;
     let raf = 0;
     let visible = false;
-    let sinceSpark = 0;
-    let squish = 0; // 클릭 시 1 → 서서히 0
+    const GAP = 70; // 커서와 유지할 최소 거리(멀찌감치)
 
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
       if (!visible) {
         visible = true;
-        buddy.style.opacity = "1";
+        el.style.opacity = "1";
       }
     };
     const onLeave = () => {
       visible = false;
-      buddy.style.opacity = "0";
-    };
-    const onDown = () => {
-      squish = 1;
-      burst(3);
-    };
-
-    // 반짝이 한 조각 생성(위로 둥실 떠오르며 사라짐).
-    const spawn = (cx: number, cy: number) => {
-      const s = document.createElement("span");
-      s.className = "cursor-spark";
-      s.textContent = SPARKLES[Math.floor(Math.random() * SPARKLES.length)];
-      const dx = (Math.random() - 0.5) * 44;
-      const dy = -22 - Math.random() * 30;
-      const rot = (Math.random() - 0.5) * 60;
-      s.style.setProperty("--dx", `${dx}px`);
-      s.style.setProperty("--dy", `${dy}px`);
-      s.style.setProperty("--rot", `${rot}deg`);
-      s.style.left = `${cx}px`;
-      s.style.top = `${cy}px`;
-      s.style.fontSize = `${11 + Math.random() * 8}px`;
-      layer.appendChild(s);
-      window.setTimeout(() => s.remove(), 750);
-    };
-    const burst = (n: number) => {
-      for (let i = 0; i < n; i++) spawn(mx, my);
+      el.style.opacity = "0";
     };
 
     const tick = () => {
-      // 말랑 지연 추적.
-      x += (mx - x) * 0.2;
-      y += (my - y) * 0.2;
-      const vx = x - px;
-      px = x;
-      const speed = Math.hypot(mx - x, my - y);
-
-      // 이동 중이면 일정 간격으로 반짝이 흩뿌리기.
-      sinceSpark++;
-      if (visible && speed > 6 && sinceSpark > 4) {
-        spawn(x + (Math.random() - 0.5) * 12, y + (Math.random() - 0.5) * 12);
-        sinceSpark = 0;
-      }
-
-      squish *= 0.85; // 눌림 서서히 복원
-      const tilt = Math.max(-22, Math.min(22, vx * 1.6));
-      const sy = 1 - squish * 0.35;
-      const sx = 1 + squish * 0.3;
-      buddy.style.transform =
-        `translate(${x}px, ${y}px) translate(-50%, -50%) ` +
-        `rotate(${tilt}deg) scale(${sx}, ${sy})`;
+      // 커서에서 GAP만큼 떨어진 지점을 목표로 → 딱 붙지 않고 뒤에서 따라옴.
+      const dx = mx - x;
+      const dy = my - y;
+      const dist = Math.hypot(dx, dy) || 1;
+      const targetX = dist > GAP ? mx - (dx / dist) * GAP : x;
+      const targetY = dist > GAP ? my - (dy / dist) * GAP : y;
+      const prevX = x;
+      x += (targetX - x) * 0.06; // 느긋하게 쫓아옴
+      y += (targetY - y) * 0.06;
+      const face = x < prevX ? -1 : 1; // 이동 방향 바라보기
+      const bob = Math.sin(x * 0.05) * 3; // 살랑살랑
+      el.style.transform =
+        `translate(${x}px, ${y + bob}px) translate(-50%, -50%) scaleX(${face})`;
       raf = requestAnimationFrame(tick);
     };
 
     window.addEventListener("mousemove", onMove, { passive: true });
     window.addEventListener("mouseout", onLeave);
-    window.addEventListener("mousedown", onDown);
     raf = requestAnimationFrame(tick);
-
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseout", onLeave);
-      window.removeEventListener("mousedown", onDown);
     };
   }, []);
 
   return (
-    <>
-      <div ref={layerRef} aria-hidden className="cursor-spark-layer" />
-      <div
-        ref={buddyRef}
-        aria-hidden
-        className="cursor-buddy"
-        style={{ opacity: 0 }}
-      >
-        🍡
-      </div>
-    </>
+    <div ref={ref} aria-hidden className="cursor-kuromi" style={{ opacity: 0 }}>
+      <svg width="46" height="46" viewBox="0 0 64 64" fill="none">
+        {/* 두건(뒤) */}
+        <path
+          d="M12 30 C10 12 24 6 32 6 C40 6 54 12 52 30 C54 40 46 50 32 50 C18 50 10 40 12 30 Z"
+          fill="#1c1420"
+        />
+        {/* 뾰족 귀(악마풍) */}
+        <path d="M18 16 C14 8 20 6 24 12 C22 15 20 16 18 16 Z" fill="#1c1420" />
+        <path d="M46 16 C50 8 44 6 40 12 C42 15 44 16 46 16 Z" fill="#1c1420" />
+        <circle cx="20" cy="10" r="2.4" fill="#f5a7d1" />
+        <circle cx="44" cy="10" r="2.4" fill="#f5a7d1" />
+        {/* 얼굴 */}
+        <ellipse cx="32" cy="35" rx="16" ry="14.5" fill="#fbf7fb" />
+        {/* 해골 문양(이마) */}
+        <ellipse cx="32" cy="21" rx="5" ry="4.4" fill="#fbf7fb" />
+        <circle cx="30" cy="20.5" r="1.1" fill="#2a2030" />
+        <circle cx="34" cy="20.5" r="1.1" fill="#2a2030" />
+        <path d="M30.5 24 L33.5 24 M31.2 24 L31.2 26 M32.8 24 L32.8 26" stroke="#2a2030" strokeWidth="0.8" />
+        {/* 눈 */}
+        <ellipse cx="25.5" cy="35" rx="2.2" ry="3.1" fill="#2a2030" />
+        <ellipse cx="38.5" cy="35" rx="2.2" ry="3.1" fill="#2a2030" />
+        {/* 볼터치 */}
+        <circle cx="21" cy="40" r="2.6" fill="#f7b8d8" opacity="0.8" />
+        <circle cx="43" cy="40" r="2.6" fill="#f7b8d8" opacity="0.8" />
+        {/* 씩 웃는 입 + 송곳니 */}
+        <path d="M28 42 Q32 46 36 42" stroke="#2a2030" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+        <path d="M31 43 L32.4 46 L33.6 43 Z" fill="#fbf7fb" />
+      </svg>
+    </div>
   );
 }
