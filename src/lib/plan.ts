@@ -52,16 +52,74 @@ export function ymd(d: Date): string {
   ).padStart(2, "0")}`;
 }
 
+/** 하루 분량 변경 이력(세그먼트). fromDay(포함)부터 그 perDay가 적용된다.
+ *  예: [{fromDay:0,perDay:10},{fromDay:7,perDay:20}] = 0~6일 10개, 7일부터 20개.
+ *  → 속도를 바꿔도 "과거 날짜"는 그때 속도로 고정되어 이미 한 진도가 밀리지 않는다. */
+export type PerDaySegment = { fromDay: number; perDay: number };
+const SCHEDULE_KEY = "info-pe-plan-perday-sched-v1";
+
+export function getSchedule(): PerDaySegment[] {
+  if (typeof window === "undefined") return [{ fromDay: 0, perDay: 10 }];
+  try {
+    const raw = localStorage.getItem(SCHEDULE_KEY);
+    if (raw) {
+      const s = JSON.parse(raw) as PerDaySegment[];
+      if (Array.isArray(s) && s.length)
+        return s
+          .filter((x) => x && x.perDay >= 3 && x.perDay <= 50)
+          .sort((a, b) => a.fromDay - b.fromDay);
+    }
+  } catch {
+    /* noop */
+  }
+  // 레거시 단일 perDay → 세그먼트 1개로 이관(기존 사용자 진도 보존).
+  const legacy = Number(localStorage.getItem(PERDAY_KEY));
+  const pd = legacy >= 3 && legacy <= 50 ? legacy : 10;
+  return [{ fromDay: 0, perDay: pd }];
+}
+export function saveSchedule(s: PerDaySegment[]) {
+  if (typeof window !== "undefined")
+    localStorage.setItem(SCHEDULE_KEY, JSON.stringify(s));
+}
+/** idx일에 적용되는 하루 분량. */
+export function perDayOn(idx: number, sched: PerDaySegment[] = getSchedule()): number {
+  let pd = sched[0]?.perDay ?? 10;
+  for (const seg of sched) {
+    if (seg.fromDay <= idx) pd = seg.perDay;
+    else break;
+  }
+  return pd;
+}
+/** idx일 이전(0..idx-1)까지 소진되는 토픽 수 = idx일의 시작 오프셋. */
+export function topicOffset(idx: number, sched: PerDaySegment[] = getSchedule()): number {
+  let off = 0;
+  for (let d = 0; d < idx; d++) off += perDayOn(d, sched);
+  return off;
+}
+/** fromDay(그날 포함)부터 새 분량 적용. 그 이전 날짜는 기존 속도로 그대로 유지. */
+export function setPerDayFrom(fromDay: number, perDay: number) {
+  if (typeof window === "undefined") return;
+  const f = Math.max(0, fromDay);
+  const kept = getSchedule().filter((seg) => seg.fromDay < f);
+  const sched = [...kept, { fromDay: f, perDay }].sort(
+    (a, b) => a.fromDay - b.fromDay,
+  );
+  saveSchedule(sched);
+  localStorage.setItem(PERDAY_KEY, String(perDay)); // 오늘 속도(레거시 호환)
+  localStorage.removeItem("info-pe-plan-anchor-v1");
+}
+
+/** 오늘 적용 중인 하루 분량(표시·예측용). */
 export function getPerDay(): number {
   if (typeof window === "undefined") return 10;
-  const v = Number(localStorage.getItem(PERDAY_KEY));
-  return v >= 3 && v <= 50 ? v : 10;
+  const ti = todayIndex();
+  return perDayOn(ti < 0 ? 0 : ti);
 }
+/** 하루 분량 변경 — "오늘부터" 적용(어제까지 진도는 보존). */
 export function setPerDay(n: number) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(PERDAY_KEY, String(n));
-  // 과거 '오늘 시작점 고정' 앵커가 남아있으면 제거(이제 단순 idx×perDay 방식).
-  localStorage.removeItem("info-pe-plan-anchor-v1");
+  const ti = todayIndex();
+  setPerDayFrom(ti < 0 ? 0 : ti, n);
 }
 
 export function loadDone(): Set<string> {
@@ -147,25 +205,26 @@ export function todayIndex(now: number = Date.now()): number {
 export function topicsForDay(
   ordered: PlanTopic[],
   idx: number,
-  perDay: number,
+  sched: PerDaySegment[] = getSchedule(),
 ): PlanTopic[] {
   if (idx < 0) return [];
-  // 단순·예측 가능: day N = ordered의 N번째 묶음(idx×perDay).
-  return ordered.slice(idx * perDay, idx * perDay + perDay);
+  // day N = 그날까지 누적 오프셋부터 그날 분량만큼. 과거 분량은 세그먼트로 고정.
+  const off = topicOffset(idx, sched);
+  return ordered.slice(off, off + perDayOn(idx, sched));
 }
 
 /** 편집(오버라이드) 반영된 그 날의 토픽. 오버라이드 있으면 그것을, 없으면 자동 배정. */
 export function effectiveTopicsForDay(
   ordered: PlanTopic[],
   idx: number,
-  perDay: number,
+  sched: PerDaySegment[],
   overrides: Overrides,
 ): PlanTopic[] {
   if (idx < 0) return [];
   const key = ymd(dateOfDay(idx));
   const ov = overrides[key];
   if (ov) return ov.map((id) => BY_ID[id]).filter(Boolean);
-  return topicsForDay(ordered, idx, perDay);
+  return topicsForDay(ordered, idx, sched);
 }
 
 /** 계획이 토픽을 모두 소진하는 마지막 날 수. */
