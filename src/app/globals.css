@@ -14,55 +14,16 @@ body {
     "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
-/* 말랑말랑 귀여운 커서 — 🍡 경단 버디 + 반짝이 트레일(포인터 이벤트 없음) */
-.cursor-buddy {
+/* 쿠로미풍 캐릭터가 마우스를 멀찌감치 쫓아옴(포인터 이벤트 없음) */
+.cursor-kuromi {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
   pointer-events: none;
-  font-size: 26px;
-  line-height: 1;
-  filter: drop-shadow(0 2px 3px rgba(236, 72, 153, 0.35));
   will-change: transform, opacity;
-  transition: opacity 0.25s ease;
-  animation: cursor-bob 1.6s ease-in-out infinite;
-}
-@keyframes cursor-bob {
-  0%,
-  100% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: -3px;
-  }
-}
-.cursor-spark-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  pointer-events: none;
-  overflow: hidden;
-}
-.cursor-spark {
-  position: fixed;
-  transform: translate(-50%, -50%);
-  will-change: transform, opacity;
-  animation: cursor-spark-float 0.75s ease-out forwards;
-}
-@keyframes cursor-spark-float {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy)))
-      scale(1) rotate(var(--rot));
-  }
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 3px 4px rgba(124, 58, 137, 0.35));
 }
 
 /* react-markdown 결과물에 적용할 기본 타이포그래피 */
