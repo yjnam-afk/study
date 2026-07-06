@@ -130,6 +130,14 @@ export function groundingFrom(topicId?: string): string {
   return parts.join("\n");
 }
 
+/** 토픽에 "검증된 개념도(conceptMap, mermaid)"가 있으면 반환. 설명 페이지가
+ *  AI 생성이 아닌 이 데이터를 그대로 그려 항상 정확한 도식을 보여준다. */
+export function conceptMapFor(topicId?: string): string {
+  if (!topicId) return "";
+  const d = DETAILS[topicId];
+  return (d?.conceptMap || "").trim();
+}
+
 /** 사용자 붙여넣기 자료 + 토픽 실데이터를 합쳐 최종 근거를 만든다. */
 export function buildGrounding(opts: {
   topicId?: string;

@@ -5156,7 +5156,8 @@
      "% Rule"
     ]
    }
-  ]
+  ],
+  "conceptMap": "graph TD\n  W[\"웹사이트 개발\"] --> A[\"설계\"]\n  W --> B[\"개발\"]\n  W --> C[\"테스트\"]\n  A --> A1[\"화면 설계\"]\n  A --> A2[\"DB 설계\"]\n  B --> B1[\"프론트엔드\"]\n  B --> B2[\"백엔드\"]\n  C --> C1[\"기능 검증\"]\n  C --> C2[\"성능 검증\"]"
  },
  "pm-28": {
   "detail": "[정의] 프로젝트 범위의 확장이나 축소, 정책, 프로세스, 계획 또는 절차의 수정, 원가 또는 예산의 수정, 일정 변경 등을 요청하는 공식적인 제안서, 조치 요청서\n[유형] 시정조치, 예방조치, 결함조치, 갱신",
@@ -6882,7 +6883,8 @@
   "plusKeywords": [],
   "mnemonic": "",
   "sections": [],
-  "memo": "조직구성=아키텍처(Conway's Law) — 비교표 최빈출"
+  "memo": "조직구성=아키텍처(Conway's Law) — 비교표 최빈출",
+  "conceptMap": "graph TD\n  CL[\"클라이언트\"] --> GW[\"API 게이트웨이 (단일진입·라우팅·인증)\"]\n  GW --> M[\"회원 서비스 (인증·프로필)\"]\n  GW --> O[\"주문 서비스 (주문·결제)\"]\n  GW --> P[\"상품 서비스 (카탈로그·재고)\"]\n  M --> MDB[(\"회원 DB\")]\n  O --> ODB[(\"주문 DB\")]\n  P --> PDB[(\"상품 DB\")]"
  },
  "pm-89": {
   "detail": "[프로젝트관리] 프로젝트 관리 위한 일정, 조직, 인력, 지휘, 통제를 제공하는 기술, 지식 체계\n[프로그램관리] 관련된 여러 프로젝트 집합으로 중앙에서 통합적으로 관리\n[포트폴리오관리] 기업의 전략적 목표 달성을 위해 프로젝트나 프로그램 우선순위 결정 권한 부여 및 관리",
@@ -9104,7 +9106,8 @@
      "선정과 검증(ROI)"
     ]
    }
-  ]
+  ],
+  "conceptMap": "graph TD\n  S1[\"① 아키텍처 전략 수집 (ATAM 결과 활용)\"] --> S2[\"② 효용 Utility 산정 (시나리오별 가치)\"]\n  S2 --> S3[\"③ 편익 Benefit 도출 (전략이 주는 가치)\"]\n  S3 --> S4[\"④ 비용 Cost 산정 (구현 비용)\"]\n  S4 --> S5[\"⑤ ROI = 편익/비용 (높은 순 우선순위)\"]"
  },
  "se-62": {
   "detail": "[정의] SW 요구사항을 수행하는 기능적, 품질적, 성능에 영향을 주는 속성중 아키텍쳐 구성에 영향을 주는 요구사항\n[목록] 기능 요구사항(비기능 포함), 제약사항(사전에 고려되어야 할), 품질속성(성능, 안정성 등)",
@@ -9231,7 +9234,8 @@
   "plusKeywords": [],
   "mnemonic": "서분",
   "sections": [],
-  "memo": "사상: 리액티브 시스템 / 패턴: Observer·Circuit Breaker / SPOF 방지 다중 API GW\n키워드: Conway's Law·SOA·DevOps·Docker·DDD·EDA"
+  "memo": "사상: 리액티브 시스템 / 패턴: Observer·Circuit Breaker / SPOF 방지 다중 API GW\n키워드: Conway's Law·SOA·DevOps·Docker·DDD·EDA",
+  "conceptMap": "graph TD\n  CL[\"클라이언트\"] --> GW[\"API 게이트웨이 (단일진입·라우팅·인증)\"]\n  GW --> M[\"회원 서비스 (인증·프로필)\"]\n  GW --> O[\"주문 서비스 (주문·결제)\"]\n  GW --> P[\"상품 서비스 (카탈로그·재고)\"]\n  M --> MDB[(\"회원 DB\")]\n  O --> ODB[(\"주문 DB\")]\n  P --> PDB[(\"상품 DB\")]"
  },
  "se-70": {
   "detail": "[정의] API서버 앞단에서 모든 API 서버들의 엔드포인트를 단일화하여 묶어주고 API에 대한 인증과 인가 기능에서 부터 메세지에 따라서 여러 서버로 라우팅 하는 고급기능 까지 많은 기능을 담당하는 Gateway\n[역할]\n보안 ( 내부 데이터 보호, 접근 통제, 로깅 및 모니터링 )\n서비스 연결 ( 클라이언트 요청 변환, 백엔드 처리결과 반환 )\n[주요기능]\n보안 ( 인증 및 인가, 암호화 통신, 로그 기능 )\n라우팅 ( 서비스 매칭, 로드 밸런싱 )\nMediation ( HTTP/JSON 기반 프로토콜 변환 )\n기타 ( 서비스 오케스트레이션, 서비스 디스커버리, 서비스 통계 )",
@@ -16727,7 +16731,8 @@
     ]
    }
   ],
-  "memo": "HCI = SDI 기반 통합 인프라. CI(Converged, HW통합)와 달리 SW 정의. 121회 기출. (Human-Computer Interaction과 혼동 주의)"
+  "memo": "HCI = SDI 기반 통합 인프라. CI(Converged, HW통합)와 달리 SW 정의. 121회 기출. (Human-Computer Interaction과 혼동 주의)",
+  "conceptMap": "graph TD\n  subgraph HCI[\"HCI 클러스터\"]\n    SDS[\"소프트웨어 정의 계층 (가상화·분산스토리지 SDS·통합관리)\"]\n    SDS --> N1[\"노드1 (컴퓨트 CPU·메모리 / 스토리지 로컬디스크)\"]\n    SDS --> N2[\"노드2 (컴퓨트 / 스토리지)\"]\n    SDS --> N3[\"노드3 (컴퓨트 / 스토리지)\"]\n  end"
  },
  "ds-74": {
   "detail": "행정∙공공기관 업무처리를 위한 정보시스템이나 소프트웨어를 직접 구축하거나 구매하지\n않고 민간 클라우드 업체에 이용료를 내고 사용할 수 있는 서비스",
@@ -17108,7 +17113,8 @@
     ]
    }
   ],
-  "memo": "특징: 비접촉·마이크로칩·무선통신. 구성요소: EPC·ONS·PML Server·Savant."
+  "memo": "특징: 비접촉·마이크로칩·무선통신. 구성요소: EPC·ONS·PML Server·Savant.",
+  "conceptMap": "graph LR\n  T[\"태그 Tag (칩+안테나·ID저장)\"] -->|\"ID 응답\"| RD[\"리더 Reader (전파 송수신)\"]\n  RD -->|\"질의 신호\"| T\n  RD --> S[\"미들웨어·서버 (데이터 처리·저장)\"]"
  },
  "ds-96": {
   "detail": "96비트 \nEPCIS(EPC Information Service)\n업체별 RFID 관련 정보를 저장하고 있는 EPC DB 저장장치\n정적정보 (상품명, 업체명 등), 동적정보 (입출고 event 정도 등)",
@@ -30680,7 +30686,8 @@
     ]
    }
   ],
-  "memo": "DoS = 자원 무리요청으로 서비스 불능. DDoS = 분산 Agent 동시 공격. 유형2: Flooding기반·커넥션기반·Application기반·Smurf. 사이버대피소."
+  "memo": "DoS = 자원 무리요청으로 서비스 불능. DDoS = 분산 Agent 동시 공격. 유형2: Flooding기반·커넥션기반·Application기반·Smurf. 사이버대피소.",
+  "conceptMap": "graph TD\n  subgraph DOS[\"DoS — 단일 출처\"]\n    A1[\"공격자\"] --> T1[\"대상 서버 (서비스 마비)\"]\n  end\n  subgraph DDOS[\"DDoS — 분산 출처\"]\n    A2[\"공격자\"] --> B1[\"봇 1\"]\n    A2 --> B2[\"봇 2\"]\n    A2 --> B3[\"봇 3\"]\n    B1 --> T2[\"대상 서버 (서비스 마비)\"]\n    B2 --> T2\n    B3 --> T2\n  end"
  },
  "sec-43": {
   "detail": "[정의] 사전에 기기의 펌웨어에 악성코드 삽입, 유통시킨후 공격을 가해 DoS 및 과부하 피해를 \n입힌후에 제품 자체를 파괴시키는 공격\n[절차] 펌웨어삽입 -> 기기파괴 -> 2차피해\nPDoS(Permanent DoS), 각종 전자기기들의 펌웨어(Firmware)에 악성코드를 삽입, 제품 파괴 및 공격\n- 펌웨어 정상 업그레이드. 무료다운로드 유도",
@@ -38652,7 +38659,8 @@
   "applicationKeywords": [],
   "plusKeywords": [],
   "mnemonic": "",
-  "memo": "122회 기출."
+  "memo": "122회 기출.",
+  "conceptMap": "erDiagram\n  STUDENT ||--o{ ENROLLMENT : \"수강\"\n  COURSE  ||--o{ ENROLLMENT : \"포함\"\n  STUDENT {\n    int student_id PK\n    string name\n    string major\n  }\n  COURSE {\n    int course_id PK\n    string title\n    int credits\n  }\n  ENROLLMENT {\n    int student_id FK\n    int course_id FK\n    string grade\n  }"
  },
  "db-37": {
   "detail": "[정의] 릴레이션 R에 존재하는 함수 종속에 대한 추론 규칙\n[기본규칙] 재귀성(Y ⊆ X이면, X → Y), 부가성(X → Y이면, XZ → YZ), 이행성(X → Y이고 Y → Z이면, X → Z), \n[부가규칙]분해(X → YZ이면, X → Y이고 X → Z), 합집합(X → Y이고 X → Z이면, X → YZ), 의사이행성(X → Y이고 WY → Z이면, WX → Z) \n[특징] 정당(Sound), 완전(Complete), 폐포(closure)",
@@ -38841,7 +38849,8 @@
      "조인종속(5NF)"
     ]
    }
-  ]
+  ],
+  "conceptMap": "graph LR\n  subgraph FULL[\"① 완전종속 Full FD\"]\n    K1[\"학번+과목\"] --> S1[\"성적\"]\n  end\n  subgraph PART[\"② 부분종속 Partial FD\"]\n    K2[\"학번\"] -->|\"일부만 결정\"| N2[\"이름\"]\n  end\n  subgraph TRANS[\"③ 이행종속 Transitive FD\"]\n    A3[\"학번\"] --> B3[\"학과\"] --> C3[\"학과사무실\"]\n  end"
  },
  "db-45": {
   "detail": "[정의]릴레이션에 속한 모든 속성의 도메인이 원자 값(atomic value)으로만 구성되어 있으면 제1정규형 \n원자값종속성:모든 엔티티 타입의 속성에는 하나의 속성 값 만을 가지고 있어야 하며 반복되는 속성의 집단은 별도의 엔티티 타입으로 분리",
@@ -43142,7 +43151,8 @@
   "plusKeywords": [],
   "mnemonic": "",
   "sections": [],
-  "memo": "마진 최대화하는 초평면 탐색 / 서포트벡터=경계 최근접 데이터\n벡터: 크기·방향 동시 표현 (물리)량"
+  "memo": "마진 최대화하는 초평면 탐색 / 서포트벡터=경계 최근접 데이터\n벡터: 크기·방향 동시 표현 (물리)량",
+  "conceptMap": "graph LR\n  D[\"데이터 (2 클래스)\"] --> H[\"결정경계(초평면) 탐색\"]\n  H --> MG[\"마진 최대화\"]\n  MG --> SV[\"서포트 벡터 (경계 지지점)\"]\n  SV --> C[\"분류\"]"
  },
  "ai-39": {
   "detail": "K-최근접 이웃(K-Nearest Neighbor) — 가장 간단한 기계학습 알고리즘. 새 데이터를 가장 가까운 K개 이웃의 다수결로 분류.",
@@ -43163,7 +43173,8 @@
   "plusKeywords": [],
   "mnemonic": "",
   "sections": [],
-  "memo": "게으른 학습(Lazy Learning) — 학습단계 없이 예측 시 거리 계산"
+  "memo": "게으른 학습(Lazy Learning) — 학습단계 없이 예측 시 거리 계산",
+  "conceptMap": "graph LR\n  X[\"새 데이터 (?)\"] --> M[\"모든 점과 거리 계산\"]\n  M --> K[\"가까운 K개 선택 (K=5)\"]\n  K --> V[\"다수결 투표 (파랑3 vs 빨강2)\"]\n  V --> R[\"최다 클래스로 분류 (파랑)\"]"
  },
  "ai-40": {
   "detail": "Decision Tree\n(정의)  엔트로피, 경사 하강법, 특정 조건을 기준으로 O/X로 나누어 분류/회귀를 진행하는\u000b  Tree구조의 분류(Classification)/회귀(Regression) 가능한 지도 학습 모델/데이터마이닝 기법\n예) 프로젝트 관리 정량적리스크 관리",
@@ -43377,7 +43388,8 @@
   "plusKeywords": [],
   "mnemonic": "",
   "sections": [],
-  "memo": "생성자=가짜 생성, 판별자=진위 판별 — 경쟁하며 동반 성장\n확장: DCGAN(Deep Convolutional GAN)"
+  "memo": "생성자=가짜 생성, 판별자=진위 판별 — 경쟁하며 동반 성장\n확장: DCGAN(Deep Convolutional GAN)",
+  "conceptMap": "graph LR\n  N[\"랜덤 노이즈\"] --> G[\"생성자 G (가짜 생성)\"]\n  G --> F[\"가짜 데이터\"]\n  R[\"진짜 데이터\"] --> D[\"판별자 D (진짜·가짜 구분)\"]\n  F --> D\n  D --> J[\"판정: 진짜/가짜\"]\n  J -.->|\"피드백(학습)\"| G"
  },
  "ai-51": {
   "detail": "Deep Convolutional GAN (DCGAN)\nGAN의 Fully Connected Layer를 제거하고 Convolution Layer와 배치정규화 구조를 사용하여 안정적인 학습이 가능한 알고리즘",

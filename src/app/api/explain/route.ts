@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateText, AIConfigError } from "@/lib/ai";
 import { explainPrompt, TUTOR_SYSTEM } from "@/lib/prompts";
-import { buildGrounding } from "@/lib/grounding";
+import { buildGrounding, conceptMapFor } from "@/lib/grounding";
 import { cached, hashKey } from "@/lib/cache";
 import { sanitizeKo } from "@/lib/sanitize";
 
@@ -63,8 +63,10 @@ export async function POST(req: NextRequest) {
     }
 
     // [끝] 마커는 검증용 — 화면에는 내보내지 않는다.
+    // 검증된 개념도(conceptMap)가 있으면 함께 반환 → 설명 상단에 항상 정확히 렌더.
     return NextResponse.json({
       explanation: sanitizeKo(text).replace(/\[끝\]\s*$/, "").trim(),
+      conceptMap: conceptMapFor(topicId),
     });
   } catch (err) {
     const status = err instanceof AIConfigError ? 503 : 500;
