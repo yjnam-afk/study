@@ -210,36 +210,36 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-pink-100 via-rose-100 to-violet-100 p-7 text-slate-800 shadow-sm ring-1 ring-rose-200 sm:p-9">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold text-rose-600">
+      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-rose-700 via-purple-800 to-indigo-900 p-7 text-white shadow-lg ring-1 ring-rose-900/40 sm:p-9">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-rose-100 ring-1 ring-white/20">
           🍡 말랑말랑 스파르타 ⚔️
         </span>
-        <p className="mt-3 text-sm font-extrabold tracking-tight text-rose-700">
-          겉은 말랑 🍡 <span className="text-slate-300">·</span> 속은 스파르타 ⚔️
+        <p className="mt-3 text-sm font-extrabold tracking-tight text-rose-200">
+          겉은 말랑 🍡 <span className="text-white/40">·</span> 속은 스파르타 ⚔️
         </p>
-        <h1 className="mt-1.5 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
+        <h1 className="mt-1.5 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
           기술사 답안은{" "}
           <span className="underline decoration-rose-400 decoration-4 underline-offset-4">
             소설
           </span>
           이다 ✍️
         </h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-          핵심은 <b className="text-rose-600">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-rose-100/90 sm:text-base">
+          핵심은 <b className="font-bold text-white">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
           <br />
           어려운 토픽도 키워드만 외우면 한 편의 소설처럼 답안을 완성할 수 있어요.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="rounded-lg bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-700">
+          <span className="rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium text-white ring-1 ring-white/15">
             🥷 1단계 · 키워드 암기(두음신공)
           </span>
-          <span className="rounded-lg bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-700">
+          <span className="rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium text-white ring-1 ring-white/15">
             ✍️ 2단계 · 키워드로 답안 쓰기
           </span>
         </div>
 
         {/* 개인화 코치 — 클럽 소개 아래에 자연스럽게 */}
-        <div className="mt-5 rounded-xl bg-white/60 p-4">
+        <div className="mt-5 rounded-xl bg-white/95 p-4 shadow-sm">
           <p className="text-sm font-semibold text-slate-800">
             {userName ? `${userName} 님 — ` : ""}
             {plan ? plan.headline : "오늘부터 시작해 볼까요? 🚀"}
