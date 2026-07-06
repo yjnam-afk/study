@@ -210,13 +210,16 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-pink-100 via-rose-100 to-violet-100 p-7 text-slate-800 shadow-sm ring-1 ring-rose-100 sm:p-9">
+      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-pink-100 via-rose-100 to-violet-100 p-7 text-slate-800 shadow-sm ring-1 ring-rose-200 sm:p-9">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold text-rose-600">
-          🍡 말랑말랑 스파르타
+          🍡 말랑말랑 스파르타 ⚔️
         </span>
-        <h1 className="mt-3 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
+        <p className="mt-3 text-sm font-extrabold tracking-tight text-rose-700">
+          겉은 말랑 🍡 <span className="text-slate-300">·</span> 속은 스파르타 ⚔️
+        </p>
+        <h1 className="mt-1.5 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
           기술사 답안은{" "}
-          <span className="underline decoration-rose-300 decoration-4 underline-offset-4">
+          <span className="underline decoration-rose-400 decoration-4 underline-offset-4">
             소설
           </span>
           이다 ✍️
