@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
+import Mermaid from "@/components/Mermaid";
 import ShareButton from "@/components/ShareButton";
 import AudioLecture from "@/components/AudioLecture";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
@@ -21,6 +22,7 @@ function ExplainInner() {
   const [recCat, setRecCat] = useState(CATS[0]);
   const [level, setLevel] = useState("수험생");
   const [result, setResult] = useState("");
+  const [conceptMap, setConceptMap] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [autoPending, setAutoPending] = useState(false);
@@ -54,6 +56,7 @@ function ExplainInner() {
     setLoading(true);
     setError("");
     setResult("");
+    setConceptMap("");
     try {
       const matched = topics.find((x) => x.title === topic.trim());
       const res = await fetch("/api/explain", {
@@ -64,6 +67,7 @@ function ExplainInner() {
       const { ok, data } = await readJsonSafe(res);
       if (!ok) throw new Error((data.error as string) || "생성 실패");
       setResult(data.explanation as string);
+      setConceptMap((data.conceptMap as string) || "");
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -179,6 +183,15 @@ function ExplainInner() {
                 url={`https://study-teal-eight.vercel.app/explain?topic=${encodeURIComponent(topic.trim())}&auto=1`}
               />
             </div>
+            {/* 검증된 개념도(교재 근거) — AI 생성이 아니라 데이터에 심어둔 정확한 도식 */}
+            {conceptMap && (
+              <div className="mb-4 rounded-2xl border border-violet-200 bg-violet-50/40 p-4 md:p-6">
+                <div className="mb-1 text-xs font-semibold text-violet-700">
+                  📊 개념도
+                </div>
+                <Mermaid chart={conceptMap} />
+              </div>
+            )}
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
               <Markdown>{result}</Markdown>
             </article>
