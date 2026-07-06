@@ -212,7 +212,7 @@ export default function Home() {
     <div>
       <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-pink-100 via-rose-100 to-violet-100 p-7 text-slate-800 shadow-sm ring-1 ring-rose-100 sm:p-9">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold text-rose-600">
-          🍡 말랑말랑 소설클럽
+          🍡 말랑말랑 스파르타
         </span>
         <h1 className="mt-3 text-3xl font-extrabold leading-tight text-slate-900 sm:text-4xl">
           기술사 답안은{" "}
@@ -363,13 +363,13 @@ export default function Home() {
                 🚇 지하철 모드로 카드 넘기기
               </Link>
               <ShareButton
-                title="오늘의 학습 토픽 — 말랑말랑 소설클럽"
+                title="오늘의 학습 토픽 — 말랑말랑 스파르타"
                 text={
                   `🗓️ 오늘의 토픽 · Day ${dayIdx + 1}\n` +
                   todayTopics
                     .map((t, i) => `${i + 1}. [${t.importance}] ${t.title}`)
                     .join("\n") +
-                  `\n\n말랑말랑 소설클럽 — 기술사 답안은 소설이다 ✍️ 같이 공부해요!`
+                  `\n\n말랑말랑 스파르타 — 기술사 답안은 소설이다 ✍️ 같이 공부해요!`
                 }
               />
             </div>
@@ -574,7 +574,7 @@ export default function Home() {
           🏆 친구를 초대해 <b>학습 랭킹</b>으로 같이 경쟁해요.
         </p>
         <ShareButton
-          title="말랑말랑 소설클럽 — 정보관리기술사 학습 같이해요!"
+          title="말랑말랑 스파르타 — 정보관리기술사 학습 같이해요!"
           text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기"
         />
       </div>

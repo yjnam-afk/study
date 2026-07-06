@@ -28,7 +28,7 @@ export function GET() {
           }}
         />
         <div style={{ fontSize: 80, fontWeight: 800, letterSpacing: -2 }}>
-          MELLOW NOVEL CLUB
+          MELLOW SPARTA
         </div>
         <div style={{ fontSize: 36, marginTop: 16, opacity: 0.85 }}>
           info-PE study : mnemonic + answer writing
