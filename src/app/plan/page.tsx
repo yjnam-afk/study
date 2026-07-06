@@ -12,6 +12,8 @@ import {
   PLAN_TOTAL_DAYS,
   ymd,
   getPerDay,
+  getSchedule,
+  PerDaySegment,
   setPerDay as persistPerDay,
   loadTopicDone,
   saveTopicDone,
@@ -35,6 +37,7 @@ const IMP_ORDER: Record<string, number> = { 상: 0, 출제예상: 1, 중: 2, 하
 
 export default function PlanPage() {
   const [perDay, setPerDay] = useState(10);
+  const [sched, setSched] = useState<PerDaySegment[]>([{ fromDay: 0, perDay: 10 }]);
   const [selected, setSelected] = useState<number>(-1);
   const [topicDone, setTopicDone] = useState<Set<string>>(new Set());
   const [overrides, setOverrides] = useState<Overrides>({});
@@ -42,6 +45,7 @@ export default function PlanPage() {
 
   useEffect(() => {
     setPerDay(getPerDay());
+    setSched(getSchedule());
     setTopicDone(loadTopicDone());
     setOverrides(loadOverrides());
     const ti = todayIndex();
@@ -61,13 +65,14 @@ export default function PlanPage() {
   // 모든 토픽을 체크한 '완료된 날' 수
   let completedDays = 0;
   for (let i = 0; i < covered; i++) {
-    if (isDayComplete(effectiveTopicsForDay(ordered, i, perDay, overrides), topicDone))
+    if (isDayComplete(effectiveTopicsForDay(ordered, i, sched, overrides), topicDone))
       completedDays++;
   }
 
   function changePerDay(n: number) {
+    persistPerDay(n); // 오늘부터 적용(과거 진도 보존)
     setPerDay(n);
-    persistPerDay(n);
+    setSched(getSchedule());
   }
   function toggleTopic(id: string) {
     const next = new Set(topicDone);
@@ -84,7 +89,7 @@ export default function PlanPage() {
     saveOverrides(next);
   }
   function dayList(idx: number): PlanTopic[] {
-    return effectiveTopicsForDay(ordered, idx, perDay, overrides);
+    return effectiveTopicsForDay(ordered, idx, sched, overrides);
   }
 
   const months = [

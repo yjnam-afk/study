@@ -13,7 +13,7 @@ import {
   orderedTopics,
   todayIndex,
   effectiveTopicsForDay,
-  getPerDay,
+  getSchedule,
   loadTopicDone,
   saveTopicDone,
   loadOverrides,
@@ -144,7 +144,7 @@ export default function Home() {
     setDayIdx(ti);
     if (ti >= 0 && ti < PLAN_TOTAL_DAYS) {
       setTodayTopics(
-        effectiveTopicsForDay(orderedTopics(), ti, getPerDay(), loadOverrides()),
+        effectiveTopicsForDay(orderedTopics(), ti, getSchedule(), loadOverrides()),
       );
     }
     setTopicDone(loadTopicDone());
@@ -172,7 +172,7 @@ export default function Home() {
       const ti = todayIndex();
       const planToday =
         ti >= 0 && ti < PLAN_TOTAL_DAYS
-          ? effectiveTopicsForDay(orderedTopics(), ti, getPerDay(), loadOverrides())
+          ? effectiveTopicsForDay(orderedTopics(), ti, getSchedule(), loadOverrides())
           : undefined;
       setPlan(buildPlan(rev, notes, st, Date.now(), planToday));
       setUserName(loadSession()?.name || "");
