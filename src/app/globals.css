@@ -90,3 +90,23 @@ details[open] > summary::after {
   transform: rotate(180deg);
   color: #f472b6;
 }
+
+/* 커서 버디(이미지) — 마우스를 멀찌감치 따라옴. 파일 없으면 렌더 안 됨 */
+.cursor-buddy-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.25));
+}
+.cursor-buddy-img img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  object-fit: cover;
+  user-select: none;
+}
