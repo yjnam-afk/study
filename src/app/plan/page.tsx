@@ -23,7 +23,8 @@ import {
   dateOfDay,
   todayIndex,
   effectiveTopicsForDay,
-  coveredDays,
+  isRestDay,
+  coveredDaysSched,
   finishForecast,
   Overrides,
   loadOverrides,
@@ -59,7 +60,7 @@ export default function PlanPage() {
   }, []);
 
   const ordered = useMemo(() => orderedTopics(), []);
-  const covered = coveredDays(ordered, perDay);
+  const covered = coveredDaysSched(ordered.length, sched);
   const forecast = finishForecast(perDay);
 
   // 모든 토픽을 체크한 '완료된 날' 수
@@ -246,6 +247,7 @@ export default function PlanPage() {
                   const inRange = idx >= 0 && idx < covered;
                   const key = ymd(d);
                   const isToday = key === todayKey;
+                  const rest = inRange && isRestDay(idx);
                   const list = inRange ? dayList(idx) : [];
                   const doneN = inRange ? dayDoneCount(list, topicDone) : 0;
                   const isDone = inRange && isDayComplete(list, topicDone);
@@ -259,9 +261,11 @@ export default function PlanPage() {
                           ? "border-transparent text-slate-300"
                           : selected === idx
                             ? "border-brand-500 bg-brand-50 ring-1 ring-brand-500"
-                            : isDone
-                              ? "border-amber-300 bg-amber-50"
-                              : "border-slate-200 hover:border-brand-300"
+                            : rest
+                              ? "border-indigo-100 bg-indigo-50/50"
+                              : isDone
+                                ? "border-amber-300 bg-amber-50"
+                                : "border-slate-200 hover:border-brand-300"
                       } ${isToday ? "font-bold" : ""}`}
                     >
                       <div className="flex items-center justify-between">
@@ -275,7 +279,14 @@ export default function PlanPage() {
                         )}
                       </div>
                       {inRange &&
-                        (isDone ? (
+                        (rest ? (
+                          <div className="mt-0.5 flex flex-col items-center leading-none">
+                            <span className="text-base">🌙</span>
+                            <span className="text-[8px] font-bold text-indigo-400">
+                              휴식
+                            </span>
+                          </div>
+                        ) : isDone ? (
                           <div className="mt-0.5 flex flex-col items-center leading-none">
                             <span className="text-base">🌟</span>
                             <span className="text-[8px] font-bold text-rose-500">
@@ -301,6 +312,7 @@ export default function PlanPage() {
           idx={selected}
           date={dateOfDay(selected)}
           list={dayList(selected)}
+          rest={isRestDay(selected)}
           topicDone={topicDone}
           onToggleTopic={toggleTopic}
           edited={Boolean(overrides[ymd(dateOfDay(selected))])}
@@ -327,6 +339,7 @@ function DayDetail({
   idx,
   date,
   list,
+  rest,
   topicDone,
   edited,
   onToggleTopic,
@@ -337,6 +350,7 @@ function DayDetail({
   idx: number;
   date: Date;
   list: PlanTopic[];
+  rest: boolean;
   topicDone: Set<string>;
   edited: boolean;
   onToggleTopic: (id: string) => void;
@@ -386,6 +400,17 @@ function DayDetail({
           <span className="text-2xl">🌟</span>
           <span className="text-sm font-bold text-rose-600">
             참 잘했어요! 오늘 토픽을 모두 끝냈어요.
+          </span>
+        </div>
+      )}
+
+      {rest && list.length === 0 && (
+        <div className="mb-1 flex items-center gap-3 rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+          <span className="text-2xl">🌙</span>
+          <span className="text-sm leading-relaxed text-indigo-700">
+            <b>일요일은 쉬어가는 날</b>이에요. 배정된 토픽이 없어요 — 푹 쉬고 다음
+            주에 다시 달려요. 그래도 하고 싶다면 아래 <b>✎ 검수·수정</b>으로 토픽을
+            추가할 수 있어요.
           </span>
         </div>
       )}

@@ -90,10 +90,22 @@ export function perDayOn(idx: number, sched: PerDaySegment[] = getSchedule()): n
   }
   return pd;
 }
+
+/** 이 날(포함)부터 일요일은 쉬는 날 — 토픽 미배정. 그 이전 일요일은 이미 한 진도 보존을 위해 그대로 둔다.
+ *  2026-07-12(일, day 13)에 "앞으로 일요일 휴식" 요청 → 그날부터 고정 앵커. */
+export const SUNDAY_REST_FROM = 13;
+/** idx일이 쉬는 날(앵커 이후의 일요일)인가. */
+export function isRestDay(idx: number): boolean {
+  return idx >= SUNDAY_REST_FROM && dateOfDay(idx).getDay() === 0;
+}
+/** 쉬는 날이면 0, 아니면 그날 분량 — 오프셋·배정 계산의 실효 분량. */
+export function effPerDay(idx: number, sched: PerDaySegment[] = getSchedule()): number {
+  return isRestDay(idx) ? 0 : perDayOn(idx, sched);
+}
 /** idx일 이전(0..idx-1)까지 소진되는 토픽 수 = idx일의 시작 오프셋. */
 export function topicOffset(idx: number, sched: PerDaySegment[] = getSchedule()): number {
   let off = 0;
-  for (let d = 0; d < idx; d++) off += perDayOn(d, sched);
+  for (let d = 0; d < idx; d++) off += effPerDay(d, sched);
   return off;
 }
 /** fromDay(그날 포함)부터 새 분량 적용. 그 이전 날짜는 기존 속도로 그대로 유지. */
@@ -208,6 +220,8 @@ export function topicsForDay(
   sched: PerDaySegment[] = getSchedule(),
 ): PlanTopic[] {
   if (idx < 0) return [];
+  // 쉬는 날(앵커 이후 일요일)은 배정 없음 → 그날 토픽은 다음 날로 자연히 밀린다.
+  if (isRestDay(idx)) return [];
   // day N = 그날까지 누적 오프셋부터 그날 분량만큼. 과거 분량은 세그먼트로 고정.
   const off = topicOffset(idx, sched);
   return ordered.slice(off, off + perDayOn(idx, sched));
@@ -230,6 +244,20 @@ export function effectiveTopicsForDay(
 /** 계획이 토픽을 모두 소진하는 마지막 날 수. */
 export function coveredDays(ordered: PlanTopic[], perDay: number): number {
   return Math.min(PLAN_TOTAL_DAYS, Math.ceil(ordered.length / perDay));
+}
+
+/** 쉬는 날(일요일 휴식)을 반영해 실제로 토픽을 모두 소진하는 마지막 날 수.
+ *  일요일이 빠지므로 단순 나눗셈보다 며칠 더 밀린다 — 달력에 마지막 토픽까지 보이게. */
+export function coveredDaysSched(
+  total: number,
+  sched: PerDaySegment[] = getSchedule(),
+): number {
+  let off = 0;
+  for (let d = 0; d < PLAN_TOTAL_DAYS; d++) {
+    off += effPerDay(d, sched);
+    if (off >= total) return d + 1;
+  }
+  return PLAN_TOTAL_DAYS;
 }
 
 /** 전체 토픽 수. */
