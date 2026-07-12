@@ -17,6 +17,7 @@ import {
   loadTopicDone,
   saveTopicDone,
   loadOverrides,
+  isRestDay,
   PLAN_TOTAL_DAYS,
 } from "@/lib/plan";
 
@@ -283,6 +284,16 @@ export default function Home() {
           <p className="rounded-lg bg-amber-50 p-4 text-sm text-amber-700">
             🎉 8월 말 계획을 모두 마쳤어요! 복습·기출로 마무리하세요.
           </p>
+        ) : isRestDay(dayIdx) ? (
+          <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-violet-50 p-5 text-center">
+            <p className="text-2xl">🌙</p>
+            <p className="mt-1 text-sm font-bold text-indigo-700">일요일은 쉬어가요</p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-500">
+              푹 쉬는 것도 공부의 일부예요. 지치지 않아야 오래 갑니다.
+              <br />
+              생각나면 <Link href="/commute" className="font-medium text-violet-600 hover:underline">지하철 모드</Link>로 가볍게 복습만 해도 충분해요.
+            </p>
+          </div>
         ) : todayTopics.length === 0 ? (
           <p className="text-sm text-slate-500">오늘 배정된 토픽이 없습니다.</p>
         ) : (
