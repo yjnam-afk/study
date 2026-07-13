@@ -8623,5 +8623,284 @@
     "category": "네트워크",
     "source": "셀테 9주차 2교시",
     "text": "데이터 통신에서 신뢰성 있는 전송을 보장하기 위한 오류 제어(Error Control) 기술에 대하여 다음 내용을 설명하시오. 가. 오류 검출(Error Detection)과 오류 정정(Error Correction)의 개념 나. '정지-대기(Stop-and-Wait) ARQ'와 'Go-Back-N ARQ'의 개념 및 수행절차 다. '정지-대기(Stop-and-Wait) ARQ'와 'Go-Back-N ARQ' 비교"
+  },
+  {
+    "id": "m43-1-01",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "43회 모의 1교시",
+    "text": "MDM(Master Data Management)의 구축절차를 설명하시오."
+  },
+  {
+    "id": "m43-1-02",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "43회 모의 1교시",
+    "text": "AI-DLC(AI-Driven Development Life Cycle)를 설명하시오."
+  },
+  {
+    "id": "m43-1-03",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "43회 모의 1교시",
+    "text": "뉴로심볼릭 AI(Neuro-Symbolic AI)를 설명하시오."
+  },
+  {
+    "id": "m43-1-04",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "43회 모의 1교시",
+    "text": "FDE(Forward Deployed Engineer)를 설명하시오."
+  },
+  {
+    "id": "m43-1-05",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "43회 모의 1교시",
+    "text": "깃옵스(GitOps)를 설명하시오."
+  },
+  {
+    "id": "m43-1-06",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "43회 모의 1교시",
+    "text": "운영체제에서의 코프만 조건(Coffman Conditions)을 설명하시오."
+  },
+  {
+    "id": "m43-1-07",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "43회 모의 1교시",
+    "text": "데메테르의 법칙(Law of Demeter)을 설명하시오."
+  },
+  {
+    "id": "m43-1-08",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "보안",
+    "source": "43회 모의 1교시",
+    "text": "가트너 전략 기술의 선제적 사이버 보안(Preemptive Cybersecurity)을 설명하시오."
+  },
+  {
+    "id": "m43-1-09",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "43회 모의 1교시",
+    "text": "Physical AI 관점에서 Sim2Real(Simulation-to-Reality)을 설명하시오."
+  },
+  {
+    "id": "m43-1-10",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "43회 모의 1교시",
+    "text": "메모리 센트릭 컴퓨팅(Memory-Centric Computing)을 설명하시오."
+  },
+  {
+    "id": "m43-1-11",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "43회 모의 1교시",
+    "text": "Graph RAG(Retrieval-Augmented Generation)를 설명하시오."
+  },
+  {
+    "id": "m43-1-12",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "43회 모의 1교시",
+    "text": "디지털 출처(Digital Provenance)와 디지털 리니지(Digital Lineage)를 설명하시오."
+  },
+  {
+    "id": "m43-1-13",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "1교시",
+    "category": "보안",
+    "source": "43회 모의 1교시",
+    "text": "AI에서의 잊힐 권리(Right to be Forgotten)를 설명하시오."
+  },
+  {
+    "id": "m43-2-01",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "43회 모의 2교시",
+    "text": "기업의 AX(AI Transformation)를 위한 Data Lakehouse 아키텍처에 대하여 설명하시오."
+  },
+  {
+    "id": "m43-2-02",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "43회 모의 2교시",
+    "text": "추천 시스템, 광고 최적화, 이상거래 탐지, 스마트팩토리 품질관리 등 다양한 분야에서 통계적 검증 기반의 데이터 의사결정이 중요해지고 있다. 다음을 설명하시오. 가. 귀무가설(H0)과 대립가설(H1)의 개념 나. 제1종·제2종 오류의 개념 및 유의수준(Significance Level), p-value 다. A/B 테스트 절차"
+  },
+  {
+    "id": "m43-2-03",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "2교시",
+    "category": "보안",
+    "source": "43회 모의 2교시",
+    "text": "EU는 디지털 제품과 소프트웨어의 보안 강화를 위해 사이버복원력법(CRA, Cyber Resilience Act)을 제정하였다. 다음을 설명하시오. 가. EU 사이버복원력법(CRA)의 개념 및 추진 배경 나. CRA의 주요 요구사항 및 핵심 내용 다. 국내 기업의 대응 전략 및 시사점"
+  },
+  {
+    "id": "m43-2-04",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "43회 모의 2교시",
+    "text": "AI 기반 디지털 전환이 확산되면서 데이터·모델·운영 자동화의 중요성이 증가하고 있다. 다음을 설명하시오. 가. MLOps, DataOps, AIOps의 개념 나. MLOps, DataOps, AIOps 비교"
+  },
+  {
+    "id": "m43-2-05",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "43회 모의 2교시",
+    "text": "정보시스템의 클라우드 네이티브 전환이 활발히 진행되면서 MSA 및 컨테이너 환경을 겨냥한 새로운 보안 위협이 증가하고 있다. 다음을 설명하시오. 가. 클라우드 네이티브(Cloud Native)의 4대 핵심 구성요소 나. 클라우드 네이티브 아키텍처 계층별 보안 고려사항 다. 컨테이너 환경의 주요 보안 위협(OWASP Docker Top 10) 및 단계별 대응방안"
+  },
+  {
+    "id": "m43-2-06",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "43회 모의 2교시",
+    "text": "최근 생성형 AI의 확산에 따라 AI 안전성(AI Safety) 및 정렬(Alignment)의 중요성이 증가하고 있다. 헌법적 AI(Constitutional AI)의 개념을 설명하고, 기존 RLHF(Reinforcement Learning from Human Feedback) 방식과 비교하여 특징 및 적용 기술을 설명하시오."
+  },
+  {
+    "id": "m43-3-01",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "3교시",
+    "category": "데이터베이스",
+    "source": "43회 모의 3교시",
+    "text": "최근 AI·빅데이터 기반 데이터 플랫폼 구축이 확대되면서 기존 Data Lake의 데이터 정합성 및 품질 문제를 해결하기 위한 기술로 델타 레이크(Delta Lake)가 주목받고 있다. 다음을 설명하시오. 가. Delta Lake의 개념 및 등장 배경 나. Delta Lake의 주요 기능 및 특징 다. 기존 Data Lake와 Delta Lake 비교"
+  },
+  {
+    "id": "m43-3-02",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "3교시",
+    "category": "보안",
+    "source": "43회 모의 3교시",
+    "text": "Zero Trust 보안 아키텍처 확산과 함께 패스워드리스(Passwordless) 인증이 차세대 사용자 인증기술로 주목받고 있다. 다음을 설명하시오. 가. Passwordless 인증의 개념 및 필요성 나. Passwordless 인증의 주요 기술 유형 다. Passwordless 인증의 인증 절차 및 동작 과정"
+  },
+  {
+    "id": "m43-3-03",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "3교시",
+    "category": "경영전략",
+    "source": "43회 모의 3교시",
+    "text": "공공부문 전반에 적용 가능한 「AI-Ready 공공데이터 관리체계 가이드라인」은 공공데이터의 AI 활용성과 관리 역량 제고를 목적으로 한다. AI-Ready 공공데이터에 대하여 다음을 설명하시오. 가. 개념과 핵심 특성 나. 구조 및 접근 체계 다. 속성정보와 품질지표"
+  },
+  {
+    "id": "m43-3-04",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "43회 모의 3교시",
+    "text": "대규모 언어모델(LLM)의 Text Generation 과정에서는 다음 토큰(Next Token)을 선택하기 위한 Decoding Strategy로 Beam Search 알고리즘이 널리 활용된다. Beam Search 알고리즘의 개념과 동작원리를 설명하고, Greedy Search 알고리즘과 비교하시오."
+  },
+  {
+    "id": "m43-3-05",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "3교시",
+    "category": "보안",
+    "source": "43회 모의 3교시",
+    "text": "소프트웨어 공급망 보안의 중요성이 커지면서 개발 생명주기 전반에 걸쳐 보안을 내재화하는 Secure SDLC가 필수로 요구되고 있다. 다음을 설명하시오. 가. Secure SDLC의 개념 및 주요 방법론 나. 개발 공정(요구사항-설계-구현-테스트-운영) 단계별 주요 보안 통제 활동 다. 설계 단계 보안 강화를 위한 STRIDE 모델 기반의 위협 모델링(Threat Modeling) 절차 및 대응"
+  },
+  {
+    "id": "m43-3-06",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "3교시",
+    "category": "인공지능",
+    "source": "43회 모의 3교시",
+    "text": "최근 생성형 AI, 디지털트윈, 지식그래프 기술이 확산되면서 기업들은 데이터 간 의미(Semantics)와 관계(Relationship)를 기반으로 지능형 의사결정 체계를 구축하고 있다. 다음을 설명하시오. 가. 온톨로지(Ontology)의 개념과 구성요소 나. RDF 기반 온톨로지와 Property Graph 기반 온톨로지 비교 다. 의미 추론(Semantic Reasoning) 및 Action 중심 지능형 서비스 구현 방안"
+  },
+  {
+    "id": "m43-4-01",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "4교시",
+    "category": "인공지능",
+    "source": "43회 모의 4교시",
+    "text": "최근 LLM·Agentic AI·Physical AI 확산으로 AI의 자율성이 응답 생성, 행동 실행, 안전 제어 영역까지 확대되면서, 이를 설명하기 위한 차세대 XAI 핵심 기술이 발전하고 있다. 다음을 설명하시오. 가. Explainable LLM 나. Agentic XAI(eXplainable AI) 다. Safety XAI(eXplainable AI)"
+  },
+  {
+    "id": "m43-4-02",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "4교시",
+    "category": "보안",
+    "source": "43회 모의 4교시",
+    "text": "「개인정보의 안전성 확보조치 기준」은 개인정보 보호조치를 규정한 개인정보보호위원회 고시로, 2025년 10월 일부 개정되었다. 다음을 설명하시오. 가. 법적 근거와 주요 개정 사항 나. 인터넷망의 차단조치 다. 클라우드 기반 업무환경에서의 인터넷망의 차단조치 방안"
+  },
+  {
+    "id": "m43-4-03",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "4교시",
+    "category": "소프트웨어공학",
+    "source": "43회 모의 4교시",
+    "text": "개발 생명주기 전반에 AI Agent를 적용하는 Agentic Software Development 방식이 주목받고 있다. 다음을 설명하시오. 가. Agentic Software Development의 개념 및 특징 나. AI 기반 요구사항 분석, 코드 생성, 테스트 및 운영 자동화 구조 다. Human-in-the-Loop 기반 AI 개발 거버넌스 및 품질관리 방안"
+  },
+  {
+    "id": "m43-4-04",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "4교시",
+    "category": "신기술",
+    "source": "43회 모의 4교시",
+    "text": "최근 제조 산업은 스마트팩토리 및 디지털 전환 확산에 따라 설비의 고도화·연결화가 급속히 진행되고 있으며, 이를 효율적으로 관리하기 위한 PHM(Prognostics and Health Management)이 중요해지고 있다. PHM의 개념과 PHM 기반 스마트팩토리를 실현하기 위한 데이터 아키텍처를 설명하고, 아키텍처를 구성하는 핵심 기술 요소를 제시하시오."
+  },
+  {
+    "id": "m43-4-05",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "4교시",
+    "category": "데이터베이스",
+    "source": "43회 모의 4교시",
+    "text": "데이터의 안전한 활용과 주권 보장을 위해 물리적 통합이 아닌 연합형 공유 체계인 데이터 스페이스(Data Space)와 이를 뒷받침할 국가 데이터 카탈로그(Data Catalogue)의 중요성이 대두되고 있다. 다음을 설명하시오. 가. 기존 빅데이터 플랫폼과 데이터 스페이스의 개념 및 차이점 비교 나. 국가 데이터 카탈로그의 개념 및 구성요소 다. 국가 데이터 카탈로그 표준(v1.0) 실효성 확보 및 연계(One-윈도우) 전략"
+  },
+  {
+    "id": "m43-4-06",
+    "kind": "모의고사",
+    "round": "43회",
+    "period": "4교시",
+    "category": "경영전략",
+    "source": "43회 모의 4교시",
+    "text": "정부는 AI 산업 경쟁력 강화를 위해 「인공지능 데이터센터 산업 진흥에 관한 특별법」 제정을 추진하고 있다. 다음을 설명하시오. 가. 인공지능 데이터센터(AI Data Center)의 개념 및 추진 배경 나. 특별법의 주요 내용 및 핵심 지원 정책 다. AI 데이터센터 구축 시 고려사항 및 발전 방향"
   }
 ]
