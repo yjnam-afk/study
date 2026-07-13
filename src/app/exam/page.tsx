@@ -74,6 +74,19 @@ export default function ExamPage() {
     [kind],
   );
 
+  // 선택 구분에 실제 존재하는 교시만 노출(셀테는 3·4교시가 없음).
+  const periods = useMemo(() => {
+    const have = new Set(
+      EXAMS.filter((q) => kindOf(q) === kind).map((q) => q.period),
+    );
+    return [
+      "전체",
+      ...(["1교시", "2교시", "3교시", "4교시"] as const).filter((p) =>
+        have.has(p),
+      ),
+    ] as (typeof PERIODS)[number][];
+  }, [kind]);
+
   const list = useMemo(
     () =>
       EXAMS.filter(
@@ -146,7 +159,7 @@ export default function ExamPage() {
           </select>
         </div>
         <div className="inline-flex rounded-lg border border-slate-200 p-1">
-          {PERIODS.map((p) => (
+          {periods.map((p) => (
             <button
               key={p}
               onClick={() => setPeriod(p)}
@@ -165,7 +178,7 @@ export default function ExamPage() {
 
       {groups.length === 0 && (
         <p className="rounded-xl border border-slate-200 bg-white p-6 text-center text-sm text-slate-500">
-          해당 조건의 기출문제가 없습니다.
+          해당 조건의 문제가 없습니다.
         </p>
       )}
 
