@@ -55,9 +55,9 @@ function answerLink(q: Q): string {
 }
 
 const KIND_LABEL: Record<string, string> = {
-  기출: "📜 기출문제",
-  셀테: "📝 셀테(셀프테스트)",
-  모의고사: "🏆 실전 모의고사",
+  기출: "📜 기출",
+  셀테: "📝 셀테",
+  모의고사: "🏆 모의고사",
 };
 
 export default function ExamPage() {
@@ -105,19 +105,20 @@ export default function ExamPage() {
       <PageHeader title="📜 문제 풀이" desc={KIND_DESC[kind]} />
 
       {KINDS.length > 1 && (
-        <div className="mb-4 inline-flex flex-wrap gap-1 rounded-xl border border-slate-200 bg-white p-1 shadow-sm">
+        <div className="mb-4 grid grid-cols-3 gap-1.5 rounded-xl border border-slate-200 bg-white p-1.5 shadow-sm sm:inline-grid sm:auto-cols-max sm:grid-flow-col">
           {KINDS.map((k) => (
             <button
               key={k}
+              type="button"
               onClick={() => {
                 setKind(k);
                 setRound("전체");
                 setPeriod("전체");
               }}
-              className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition ${
+              className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition sm:px-5 ${
                 kind === k
-                  ? "bg-brand-600 text-white"
-                  : "text-slate-600 hover:bg-slate-100"
+                  ? "bg-brand-600 text-white shadow-sm"
+                  : "text-slate-600 hover:bg-slate-100 active:bg-slate-200"
               }`}
             >
               {KIND_LABEL[k] || k}
