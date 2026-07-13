@@ -5284,5 +5284,3344 @@
     "category": "경영전략",
     "source": "116회 4교시",
     "text": "BPR/PI 컨설팅 사업에서 정량적 기대효과를 명확히 제시하기 위한 시뮬레이션 기법에 대하여 설명하시오."
+  },
+  {
+    "id": "s21-01",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "ISO 42001를 설명하시오."
+  },
+  {
+    "id": "s21-02",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "데이터마이닝의 연관 규칙 분석(Association Rule Analysis) 지표를 설명하시오."
+  },
+  {
+    "id": "s21-03",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "프로젝트와 비즈니스의 경제성 평가방법을 설명하시오. (출제 의도 파악할 것)"
+  },
+  {
+    "id": "s21-04",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "지식재산권(IP) 설명하시오."
+  },
+  {
+    "id": "s21-05",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ISP 9.0, ISMP 의 각 단계별 활동 내용 및 산출물의 종류 (설명하시오)"
+  },
+  {
+    "id": "s21-06",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "디지털 카르텔 설명하시오."
+  },
+  {
+    "id": "s21-07",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "엠비언트 커머스(Ambient Commerce) 설명하시오."
+  },
+  {
+    "id": "s21-08",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ISP 9.0 설명하시오."
+  },
+  {
+    "id": "s21-09",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "SCM(Supply Chain Management)을 설명하시오."
+  },
+  {
+    "id": "s21-10",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "셀테 2주차 1교시",
+    "text": "딥테크(Deep Tech)"
+  },
+  {
+    "id": "s21-11",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "에듀테크(EduTech), 섭테크(Suptech), 핀테크(FinTech)를 설명하시오."
+  },
+  {
+    "id": "s21-12",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ITIL V4를 설명하시오."
+  },
+  {
+    "id": "s21-13",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "프로세스 마이닝과 Data Mining 을 비교하시오."
+  },
+  {
+    "id": "s21-14",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "Data Mining 의 기술요소를 설명하시오."
+  },
+  {
+    "id": "s21-15",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ITSM 에 대해 설명하시오."
+  },
+  {
+    "id": "s21-16",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "SLA 에 대해 설명하시오."
+  },
+  {
+    "id": "s21-17",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 2주차 1교시",
+    "text": "ISO 22301을 설명하시오."
+  },
+  {
+    "id": "s21-18",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "핀테크(FinTech)의 기술요소를 설명하시오."
+  },
+  {
+    "id": "s21-19",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ISMP (Information System Master Plan)를 설명하시오."
+  },
+  {
+    "id": "s21-20",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "SVS(Service Value System)와 SVC 를 설명하시오."
+  },
+  {
+    "id": "s21-21",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "공유경제(Sharing economy)를 설명하시오."
+  },
+  {
+    "id": "s21-22",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "오피니언 마이닝 (Opinion Mining)을 설명하시오."
+  },
+  {
+    "id": "s21-23",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ESG 경영을 설명하시오."
+  },
+  {
+    "id": "s21-24",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "섭테크(Suptech)를 설명하시오."
+  },
+  {
+    "id": "s21-25",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 2주차 1교시",
+    "text": "BCP 와 DRP 를 비교 설명하시오."
+  },
+  {
+    "id": "s21-26",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "공급망관리(SCM)의 수요 예측의 7단계 및 수요 예측 기법을 설명하시오."
+  },
+  {
+    "id": "s21-27",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 2주차 1교시",
+    "text": "SCM Attack 을 설명하시오. (향후 보안 도메인 출제 예상 문제)"
+  },
+  {
+    "id": "s21-28",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 2주차 1교시",
+    "text": "BIA 와 DRP 의 관계를 설명하시오."
+  },
+  {
+    "id": "s21-29",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 2주차 1교시",
+    "text": "RTO 와 RPO 를 설명하시오."
+  },
+  {
+    "id": "s21-30",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "AI 를 위한 신경망(분석)을 설명하시오."
+  },
+  {
+    "id": "s21-31",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 2주차 1교시",
+    "text": "DRS 구축 유형에 대해 설명하시오."
+  },
+  {
+    "id": "s21-32",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "전자정부 성과관리 지침"
+  },
+  {
+    "id": "s21-33",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "AHP(Analytic Hierarchy Process)"
+  },
+  {
+    "id": "s21-34",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "MECE 설명하시오. (심화반까지 한다면 4C 를 설명하시오)"
+  },
+  {
+    "id": "s21-35",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "IT-BSC(Balance Score Card) 설명하시오."
+  },
+  {
+    "id": "s21-36",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "MECE 와 LISS 를 비교하시오."
+  },
+  {
+    "id": "s21-37",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "BSC(Balance Score Card) 설명하시오."
+  },
+  {
+    "id": "s21-38",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "MES(Manufacturing Execution System)"
+  },
+  {
+    "id": "s21-39",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "ISO/IEC 38500"
+  },
+  {
+    "id": "s21-40",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "IT-Governance 정의, 사례를 설명하시오."
+  },
+  {
+    "id": "s21-41",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "SoW, SLA, SLM 관계를 설명하시오."
+  },
+  {
+    "id": "s21-42",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "OKR(Objectives Key Results)와 BSC 를 설명 및 비교하시오."
+  },
+  {
+    "id": "s21-43",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "3C, 4C 를 설명하시오."
+  },
+  {
+    "id": "s21-44",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "SWOT 를 설명하시오."
+  },
+  {
+    "id": "s21-45",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 2주차 1교시",
+    "text": "DRaaS 를 설명하시오."
+  },
+  {
+    "id": "s21-46",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "프롭테크를 설명하시오."
+  },
+  {
+    "id": "s21-47",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "IT-Compliance 를 설명하시오."
+  },
+  {
+    "id": "s21-48",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "SLO(Service Level Objective)와 Error Budget 설명"
+  },
+  {
+    "id": "s21-49",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "VRIO Framework 을 설명하시오."
+  },
+  {
+    "id": "s21-50",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 1교시",
+    "text": "구독경제(Subscription Economy) 설명하시오."
+  },
+  {
+    "id": "s21-51",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "디지털 전환(DX)을 설명하시오."
+  },
+  {
+    "id": "s21-52",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 1교시",
+    "text": "AI 전환(AX, AI Transformation) 을 설명하시오."
+  },
+  {
+    "id": "s21-53",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "셀테 2주차 1교시",
+    "text": "(출제예상) 퀀텀 전환(Quantum Transformation, QX)을 설명하시오."
+  },
+  {
+    "id": "s21-54",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 2주차 1교시",
+    "text": "오픈 뱅킹(Open Banking)을 설명하시오."
+  },
+  {
+    "id": "s22-01",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 2주차 2교시",
+    "text": "최근 인공지능(AI)을 활용한 기업의 디지털 전환(AX, AI Transformation)이 다양한 산업 분야에서 빠르게 진행되고 있다. 이와 관련하여 다음을 설명하시오. 가. 기업에서 AX 가 중요한 이유 나. 기업에서 AX 를 성공적으로 추진하기 위한 전략적 추진 절차와 고려사항 다. 기업이 AX 를 추진할 때 발생 가능한 장애 요인 3가지 이상과 각 대응방안"
+  },
+  {
+    "id": "s22-02",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 2교시",
+    "text": "경영 전략 수립 과정에서 외부 및 내부 환경 분석은 필수적인 단계이다. 다음을 설명하시오. 가. 외부환경분석 나. 내부환경분석"
+  },
+  {
+    "id": "s22-03",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 2교시",
+    "text": "(A)기업은 전자상거래 정보시스템 개발 프로젝트를 완료하고 운영으로 전환하고자 한다. 각 항목을 설명하시오. 가. SLA(Service Level Agreement) 구성요소와 절차 나. (A)기업의 특성을 고려하여 하드웨어, 소프트웨어, 네트워크 영역별 SLA 평가지표와 측정방법에 대한 사례"
+  },
+  {
+    "id": "s22-04",
+    "kind": "셀테",
+    "round": "2주차",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "셀테 2주차 2교시",
+    "text": "정보기술 아키텍처의 도입과 운영에 필요한 사항을 정하기 위한 \"정보기술 아키텍처 (EA: Enterprise Architecture) 도입·운영 지침\"과 관련하여 다음을 설명하시오. 가. 범정부 정보기술 아키텍처 메타모델 나. 범정부 정보기술 아키텍처 참조모형의 종류 다. 범정부 정보기술 아키텍처 성숙도 모델"
+  },
+  {
+    "id": "s31-01",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 3주차 1교시",
+    "text": "SBOM 필요성, 구성도를 설명하시오."
+  },
+  {
+    "id": "s31-02",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "PMBOK 8판 설명과 ISO 21500을 비교하시오."
+  },
+  {
+    "id": "s31-03",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트 위험관리 프로세스와 '정량적 위험분석 기법'과 긍정적 리스크, 부정적 리스크 대응방안을 10개를 설명하시오."
+  },
+  {
+    "id": "s31-04",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "예측적개발 모델의 10개 지식영역(KA)과 49개의 프로세스를 표로 그리시오."
+  },
+  {
+    "id": "s31-05",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "상용 SW 직접구매(SW 분리발주)를 설명하시오."
+  },
+  {
+    "id": "s31-06",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "애자일에서 사용하는 MVP 를 설명하시오."
+  },
+  {
+    "id": "s31-07",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "아래 EVA(획득가치분석)를 측정, 분석, 예측 및 대응 하시오. BAC=1,000만원, EV=500만원, PV=600만원, AC(Actual Cost)=450만원"
+  },
+  {
+    "id": "s31-08",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "애질리티를 위한 SW 의 CI, CD 기술요소에 대해 설명하시오."
+  },
+  {
+    "id": "s31-09",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트 5개 프로세스 그룹과 지식영역 10개를 설명하고, 각 프로세스 그룹의 대표적인 산출물(Output)을 기술하시오. (PMBOK 6판 기준/예측적개발 모델)"
+  },
+  {
+    "id": "s31-10",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "CPM 을 설명하고, 사례를 들어 일정 네트워크 다이어그램의 전진계산과 후진계산을 설명하시오.(단, 활동은 5개 이상 나열할 것)"
+  },
+  {
+    "id": "s31-11",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "SCRUM 프로세스와 프로세스별 주요 산출물을 상세 설명하시오."
+  },
+  {
+    "id": "s31-12",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "반복적 개발 모델, 증분형(Incremental) 개발 모델, 진화형(Evolutional) 개발모델을 각각 설명하시오."
+  },
+  {
+    "id": "s31-13",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "Lean 프로세스와 '낭비'를 설명하시오."
+  },
+  {
+    "id": "s31-14",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "의존성 역전의 원칙(Dependency Inversion Principle)"
+  },
+  {
+    "id": "s31-15",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "범위관리 프로세스와 WBS 를 설명하시오."
+  },
+  {
+    "id": "s31-16",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "모노리식(Monolithic) 아키텍처와 마이크로 서비스 아키텍처(MSA)를 비교하시오."
+  },
+  {
+    "id": "s31-17",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "SDLC 유형을 설명하시오."
+  },
+  {
+    "id": "s31-18",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트/SW 개발 요구사항 수집 도구 및 기법(T&T)을 설명하시오."
+  },
+  {
+    "id": "s31-19",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "ISP 와 OCP 를 비교하시오."
+  },
+  {
+    "id": "s31-20",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "OOP 의 추상화에 대해 설명하시오."
+  },
+  {
+    "id": "s31-21",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "RAD 개발 모델을 설명하시오."
+  },
+  {
+    "id": "s31-22",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "CCM(Critical Chain Method)을 설명하시오."
+  },
+  {
+    "id": "s31-23",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "EVA 와 Burn-down Chart 를 비교 설명하시오."
+  },
+  {
+    "id": "s31-24",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "객체지향 프로그래밍 설계의 원리 5개를 설명하시오."
+  },
+  {
+    "id": "s31-25",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트 일정관리 프로세스를 설명하고, 일정 기간 산정 기법을 설명하시오."
+  },
+  {
+    "id": "s31-26",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트 자원 최적화 방법 2가지를 설명하고, 2가지를 비교하시오."
+  },
+  {
+    "id": "s31-27",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "XP(eXtreme Programming)의 특징 및 실천 방법(practice)들 설명하시오."
+  },
+  {
+    "id": "s31-28",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "Agile 의 선언문과 12개 원칙들을 설명하시오."
+  },
+  {
+    "id": "s31-29",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "공공소프트웨어사업 과업심의 가이드를 설명하시오."
+  },
+  {
+    "id": "s31-30",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "PMO 를 설명하고, IT Portfolio 관계를 설명하시오."
+  },
+  {
+    "id": "s31-31",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "객체지향 프로그래밍 특징을 설명하시오."
+  },
+  {
+    "id": "s31-32",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "가시화를 위한 SCRUM Board 와 Kanban Board 를 비교 설명하시오"
+  },
+  {
+    "id": "s31-33",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "객체지향 프로그래밍의 다형성에 대해 설명하시오."
+  },
+  {
+    "id": "s31-34",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "EVA 개념도를 그리고, 설명하시오."
+  },
+  {
+    "id": "s31-35",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "ISO 21500를 설명하시오."
+  },
+  {
+    "id": "s31-36",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "요구사항명세서(Software Requirement Specification) 설명하시오."
+  },
+  {
+    "id": "s31-37",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트 관리 특징과 연동기(계)획(Rolling Wave Planning) 기법을 설명하시오."
+  },
+  {
+    "id": "s31-38",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "MVP, PoC, Prototyping, Spike 를 비교하시오."
+  },
+  {
+    "id": "s31-39",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "Pair Programming 설명하시오."
+  },
+  {
+    "id": "s31-40",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "공공부문 PMO 와 기업 내부 운영 중은 PMO 를 비교하시오."
+  },
+  {
+    "id": "s31-41",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "DDD 를 설명하시오."
+  },
+  {
+    "id": "s31-42",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "요구사항 추적표(Requirement Traceability Matrix)"
+  },
+  {
+    "id": "s31-43",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "요구공학에 대해 설명하시오."
+  },
+  {
+    "id": "s31-44",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "SSPL 에 대해 설명하시오."
+  },
+  {
+    "id": "s31-45",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "OOP 와 AOP 를 설명하시오."
+  },
+  {
+    "id": "s31-46",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "기술 부채(Technical Debt)"
+  },
+  {
+    "id": "s31-47",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "형상관리의 개념과 형상관리 기준선(Baseline)"
+  },
+  {
+    "id": "s31-48",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "프로젝트관리 터크만 사다리 모델(Tuckman Ladder Model)의 팀 발달 단계별 특징"
+  },
+  {
+    "id": "s31-49",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 1교시",
+    "text": "PMBOK 7판의 개념도와 구성요소의 8개 성과도메인을 설명하시오."
+  },
+  {
+    "id": "s31-50",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 1교시",
+    "text": "소프트웨어 개발 프로젝트에서 선도개발을 위한 개발방법론 테일러링(Tailoring)"
+  },
+  {
+    "id": "s32-01",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 2교시",
+    "text": "프로젝트 관리 유형 3가지 - 프로젝트 관리에 대하여 다음을 설명하시오. 가. IT 프로젝트 관리의 개념 나. IT 프로젝트 관리 프로그램 다. IT 프로젝트 관리, 프로그램 관리, 포트폴리오 관리의 비교"
+  },
+  {
+    "id": "s32-02",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 2교시",
+    "text": "소프트웨어 영향평가에 대하여 다음 사항을 설명하시오. 가. 영향평가 대상 기관 나. 소프트웨어사업 영향평가 체계"
+  },
+  {
+    "id": "s32-03",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "셀테 3주차 2교시",
+    "text": "IT 프로젝트 수행 시 PM 은 프로젝트 내 외부의 다양한 갈등을 관리하고 해소하여야 한다. PM 의 입장에서 다음을 설명하시오. 가. 갈등과 프로젝트 성과의 관계 나. 갈등의 요인과 해결 전략 다. 터크만(Tuckman)의 팀 발달 5단계 모델"
+  },
+  {
+    "id": "s32-04",
+    "kind": "셀테",
+    "round": "3주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 3주차 2교시",
+    "text": "소프트웨어 개발방법론 중 하나인 제품계열(Product Line) 방법론에 대하여 다음을 설명하시오.(SSPL) 가. 개념과 특징 나. 활용 기술과 고려사항"
+  },
+  {
+    "id": "s41-01",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "Vibe Coding(바이브 코딩)에 대해 설명하시오."
+  },
+  {
+    "id": "s41-02",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "MVC 패턴, MVVM, MVI 을 설명하시오."
+  },
+  {
+    "id": "s41-03",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "지능정보기술 감리실무가이드에 대해 설명하시오."
+  },
+  {
+    "id": "s41-04",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "소프트웨어 프로세스(SP, Software Process) 품질인증 제도에 대하여 설명하시오."
+  },
+  {
+    "id": "s41-05",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "OSS License 유형을 설명하고, 폐쇄형(예: SSPL(Server Side Public License), BSL(Business Source License) 등) 라이선스에 대해 설명하시오."
+  },
+  {
+    "id": "s41-06",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "클라우드 전환 사업의 단계별 감리 방법과 검토 항목에 대하여 설명하시오."
+  },
+  {
+    "id": "s41-07",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 안정성 분석 기법 FTA, FMEA, HAZOP, STPA 을 설명하시오"
+  },
+  {
+    "id": "s41-08",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "다음의 상위 수준 요구사항으로, 간이법으로 FP 를 적용 6단계로 계산하시오. \"ITPE 기술사 게시판에 기술사 과정 질문 쓰기, 수정, 삭제하기\"와 파일 업로드의 기능요구사항으로 FP 와 원가 산정하시오 (ILF 5.4, EI 4.0 평균복잡도 가중치, EIF, EO, EQ 는 없다고 가정함.)"
+  },
+  {
+    "id": "s41-09",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "정보시스템 감리의 의무조건과 현장 감리 6단계 절차에 대해 설명하시오."
+  },
+  {
+    "id": "s41-10",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "셀테 4주차 1교시",
+    "text": "프로젝트 품질관리 3개 프로세스와 대표적인 도구 및 기법 5개 이상 설명하시오."
+  },
+  {
+    "id": "s41-11",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 아키텍처 ISO/IEC/IEEE 42010 개념도(2022년 기준)를 그리고, 설명하시오."
+  },
+  {
+    "id": "s41-12",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "구조기반 테스트(Structure-based Test)를 설명하시오."
+  },
+  {
+    "id": "s41-13",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "명세기반 테스팅(Specification-based Test) 설명하시오."
+  },
+  {
+    "id": "s41-14",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "FP 와 EVA 를 비교하시오."
+  },
+  {
+    "id": "s41-15",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "정보시스템 감리보고서 2개를 설명하시오."
+  },
+  {
+    "id": "s41-16",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "UML 의 관계(Relationship) 유형 4개를 설명하시오."
+  },
+  {
+    "id": "s41-17",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "아래 사례를 통해, UML 의 Usecase Diagram, Class Diagram 설명하시오. 가. 고객은 주문 시스템을 통해 가격을 조회하고 주문할 수 있다. 나. 고객은 주문 시스템을 통해 주문 상태를 확인하고 주문을 취소할 수 있다."
+  },
+  {
+    "id": "s41-18",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "활동 다이어그램(Activity Diagram), 상태 다이어그램(State Diagram)을 작성하고 설명하시오. (위 문제 17번 동일 상황 사례로 문제를 푸시오)"
+  },
+  {
+    "id": "s41-19",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "CMMI 3.0을 설명하시오."
+  },
+  {
+    "id": "s41-20",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 경험 기반 테스트를 설명하시오."
+  },
+  {
+    "id": "s41-21",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "ISO/IEC 29119를 설명하시오."
+  },
+  {
+    "id": "s41-22",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "소프트웨어 성능 테스트를 설명하시오."
+  },
+  {
+    "id": "s41-23",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "정보시스템 감리 점검 프레임워크에서, 구조적/정보공학적 개발 모델과 객체지향/컴포넌트기반 개발 모델의 감리시점과 감리영역을 설명하시오."
+  },
+  {
+    "id": "s41-24",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "국내 Function Point 의 대가 산정 6단계 절차와 정통법과 간이법 비교하시오."
+  },
+  {
+    "id": "s41-25",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "PMO 와 정보시스템감리를 비교하시오."
+  },
+  {
+    "id": "s41-26",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "ISO/IEC 25010를 설명하시오."
+  },
+  {
+    "id": "s41-27",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "키워드 기반 테스팅(KDT)에 대해 설명하시오."
+  },
+  {
+    "id": "s41-28",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "아키텍처 스타일과 디자인 패턴의 차이점"
+  },
+  {
+    "id": "s41-29",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 유지보수(관리) 원리와 유지관리를 분류하시오."
+  },
+  {
+    "id": "s41-30",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 테스트 원리, Test Harness, Test Driver, Test Stub 를 설명하시오."
+  },
+  {
+    "id": "s41-31",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 탐색적 테스팅을 설명하시오."
+  },
+  {
+    "id": "s41-32",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "오픈소스 소프트웨어와 라이선스 분류 설명하시오.(폐쇄형 라이선스 포함)"
+  },
+  {
+    "id": "s41-33",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "Lehman 소프트웨어 변화(리만의 법칙) 원리에 대하여 설명하시오."
+  },
+  {
+    "id": "s41-34",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW Test Coverage 유형들을 설명하시오"
+  },
+  {
+    "id": "s41-35",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "Regression Test 설명하시오."
+  },
+  {
+    "id": "s41-36",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 모듈화의 응집도에 대해 설명하시오."
+  },
+  {
+    "id": "s41-37",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "기술부채(Technical debt)와 리팩토링(Refactoring)에 대해 설명하시오."
+  },
+  {
+    "id": "s41-38",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "UML 다이어그램을 분류, 설명하시오."
+  },
+  {
+    "id": "s41-39",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW Architecture 평가 ATAM 과 CBAM 에 대해 설명하시오."
+  },
+  {
+    "id": "s41-40",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "MSA 와 서비스 매쉬(Service Mesh)를 설명하시오."
+  },
+  {
+    "id": "s41-41",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "GoF(Gang of Four) 디자인 패턴의 유형(분류)을 구분하시오."
+  },
+  {
+    "id": "s41-42",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 프로젝트 규모 산정기법을 전체 나열, 각각 설명하시오."
+  },
+  {
+    "id": "s41-43",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "정보시스템 감리의 프레임워크를 도식화하고, 3개 축을 설명하시오."
+  },
+  {
+    "id": "s41-44",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "SW 모듈화를 설명하시오."
+  },
+  {
+    "id": "s41-45",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "MVC 패턴, MVVM, MVI(Model View Intent) 패턴을 설명하시오."
+  },
+  {
+    "id": "s41-46",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "DevOps 장점과 단점"
+  },
+  {
+    "id": "s41-47",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "디자인패턴을 설명하고, 3개 분류 기반으로, 각각 3개 패턴 이름 설명하시오."
+  },
+  {
+    "id": "s41-48",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "A/B 테스팅을 설명하시오."
+  },
+  {
+    "id": "s41-49",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "명세 기반 테스트와 구조 기반 테스트 비교하고, 분류 트리 기법의 테스트 케이스 작성"
+  },
+  {
+    "id": "s41-50",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 1교시",
+    "text": "소프트웨어 역공학과 재공학을 설명하시오."
+  },
+  {
+    "id": "s41-51",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 4주차 1교시",
+    "text": "SBOM(Software Bill of Materials) 설명하시오."
+  },
+  {
+    "id": "s42-01",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "프로젝트 소프트웨어 품질보증과 관련하여 다음을 설명하시오. 가. 소프트웨어 품질의 의미 나. 소프트웨어 품질보증의 목적과 기능 다. 인스펙션(Inspection)과 인스펙션 프로세스(Inspection Process)"
+  },
+  {
+    "id": "s42-02",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 4주차 2교시",
+    "text": "소프트웨어 품질 속성 중 보안 품질에 대하여 다음을 설명하시오. 가. 소프트웨어 보안 품질의 정의와 중요성 나. 보안 품질 확보를 위한 자동화 기술과 도구 다. 소프트웨어 라이프사이클 관점에서 보안 품질 확보 자동화 구현방안 라. 보안 품질 확보 자동화의 기대 효과와 시사점"
+  },
+  {
+    "id": "s42-03",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "정보시스템 구축 사업의 성공적인 수행을 위해 정보시스템 감리와 PMO(전자정부사업관리 위탁)를 활용하여 사업관리를 수행하고 있다. 이와 관련하여 다음을 설명하시오. 가. 정보시스템 감리의 법적 근거 나. PMO 의 정의와 역할 다. PMO 대상 사업의 범위 라. PMO 와 상주감리의 비교"
+  },
+  {
+    "id": "s42-04",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "소프트웨어 사업 대가산정에 대하여 다음을 설명하시오. (단, \"소프트웨어 사업 대가산정 가이드 2025년 개정판\"을 기준으로 한다.) 가. 소프트웨어 대가산정 가이드 목적 나. 인공지능(AI) 서비스 도입 사업유형과 사업비 산정 절차"
+  },
+  {
+    "id": "s42-05",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "UML(Unified Modeling Language)에서 2개 분류, 활동 다이어그램(Activity Diagram), 상태 다이어그램(State Diagram), 그리고 유스케이스 다이어그램(Use-Case Diagram), Class Diagram 에 대하여 각각 설명하시오."
+  },
+  {
+    "id": "s42-06",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "정보시스템 감리의 시스템 운영 및 유지보수 감리에 대하여 다음을 설명하시오. 가. 시스템 운영, 유지보수 감리의 개념 나. 시스템 운영 감리의 점검분야 다. 유지보수 감리의 점검분야"
+  },
+  {
+    "id": "s42-07",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "소프트웨어 테스트 중 동적 테스트에 대하여 설명하시오. 가. ISO/IEC 29119를 설명하시오. 나. 동적 테스트의 명세 기반 테스트, 구조 기반 테스트 비교, 경험기반 테스트를 설명하시오."
+  },
+  {
+    "id": "s42-08",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "소프트웨어 개발방법론 중 하나인 제품계열(Product Line) 방법론에 대하여 다음을 설명하시오. 가. 개념과 특징 나. 개념도와 구성요소, 활용 기술과 고려사항"
+  },
+  {
+    "id": "s42-09",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "소프트웨어 기술 부채의 유형과 관리 방법을 설명하고, 3R 과 리팩토링(Refactoring)에 대해 설명하시오."
+  },
+  {
+    "id": "s42-10",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "SW 아키텍처에 대해 다음을 설명하시오. 가. SW 아키텍처 ISO/IEC/IEEE 42010 개념도(2022년 기준)를 그리고, 설명하시오. 나. SW 아키텍처 구축 모델(스타일)을 설명하시오. 다. SW Architecture 평가 ATAM 과 CBAM 에 대해 설명하시오."
+  },
+  {
+    "id": "s42-11",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "A 사는 신규 정보시스템 개발 프로젝트에 로우코드(Low Code) 플랫폼을 적용하고자 한다. 다음 내용을 설명하시오. 가. 로우코드(Low Code)의 주요 특징 나. 노코드(No Code)와 로우코드(Low Code), Vibe Coding(바이브 코딩) 비교 다. 로우코드(Low Code) 적용 시 한계점"
+  },
+  {
+    "id": "s42-12",
+    "kind": "셀테",
+    "round": "4주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 4주차 2교시",
+    "text": "기관은 기존에 운영 중이던 대국민 서비스 포털, 통합 업무 시스템, ERP 및 통합 인허가 관리 시스템을 클라우드 네이티브 환경으로 전환 및 신규 구축하는 프로젝트를 진행하려고 한다. TA(Technical Architect)와 AA(Application Architect)에 대하여 다음 내용을 설명하시오. 가. TA 와 AA 의 역할 비교 (범위, 책임/목표, 주요 산출물 측면) 나. TA 와 AA 협업의 중요성 및 협업 방안 다. EA, TA, AA, DA 를 비교하시오."
+  },
+  {
+    "id": "s52-01",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "가트너 전략기술(Gartner Top 10 Strategic Technology Trends, 2026)의 10개 기술들과 AI-Native Development Platforms(AI 네이티브 개발 플랫폼), Physical AI(피지컬 AI), Digital Provenance(디지털 출처)를 상세 설명하시오."
+  },
+  {
+    "id": "s52-02",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 5주차 2교시",
+    "text": "B2Bi를 위한, Open API와 REST API, SOAP, xAPI를 설명하시오.(EAI는 참조 요망)"
+  },
+  {
+    "id": "s52-03",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "클라우드 전환 사업의 단계별 감리 방법과 검토 항목에 대하여 상세 설명 및 SD 감리와 비교 하시오."
+  },
+  {
+    "id": "s52-04",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "인터미턴트 컴퓨팅(Intermittent Computing)의 개념, 인터미턴트 컴퓨팅과 모바일 엣지 컴퓨팅 비교, 인터미턴트 컴퓨팅 활용 분야에 대해 설명하시오."
+  },
+  {
+    "id": "s52-05",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 5주차 2교시",
+    "text": "각 산업 분야별 기능안전(Functional Safety)에 대해 다음을 설명하시오. 가. IEC 61508의 개념을 설명하시오. 나. 기능 안전 분석 기법들을 설명하시오. 다. 각 분야 자동차 분야, 의료기기, 항공기의 기능안전 표준들 비교하시오. 다. ISO 26262을 구조도와 ASIL(Automotive Software Integrity Levels)을 설명."
+  },
+  {
+    "id": "s52-06",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "UAM(Urban Air Mobility)에 대하여 다음을 설명하시오. 가. 개념 및 특성 나. eVTOL(electric Vertical Task-Off and Landing) 추진기술 다. K-UAM(Korea-UAM) 로드맵 라. UAM(Urban Air Mobility) 통신 네트워크 인프라 연계방안"
+  },
+  {
+    "id": "s52-07",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "클라우드 서비스와 XaaS의 플랫폼이 산업전반에 적용 중이다. 이와 관련된 아래 물음에 답하시오. 가. 사설(Private) 클라우드, 공용(Public) 클라우드, 하이브리드(Hybrid) 클라우드를 설명하시오 나. IaaS, PaaS, SaaS, SECaaS의 특징 및 구축방법을 설명하시오. 다. 클라우드 컴퓨팅의 Service Model과 Deployment Model 비교 설명 라. 클라우드 네이티브, Auto Scaling을 설명하시오"
+  },
+  {
+    "id": "s52-08",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "현재 블록체인 기술이 집중되고 있다. 다음 물음에 답하시오. 가. 블록체인(Block Chain) 마이닝(Mining)과정을 설명하시오. 나. 블록체인 합의 알고리즘(Consensus Algorithm)을 설명하시오. 다. 퍼블릭 블록체인(Public Blockchain), 프라이빗 블록체인(Private Block Chain), 하이브리드 블록체인(Hybrid Blockchain) 설명"
+  },
+  {
+    "id": "s52-09",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "클라우드를 위한 필수 기술, 가상화 기술에 대해 설명하시오. 가. 가상화 기술을 분류하시오. 나. 가상 머신(Virtual Machine), LXC(Container), 도커(Docker) 설명 다. 컨테이너 오케스트레이션(Container Orchestration) 기술들을 설명하시오."
+  },
+  {
+    "id": "s52-10",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "Smart Car(자율주행) 기술요소인 RADAR, 라이다(LIDAR), ADS(Automated Driving System), V2X 유형을 상세히 설명하고, C-ITS를 설명하시오."
+  },
+  {
+    "id": "s52-11",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "최근 메타버스 산업이 활성화되면서 NFT(Non Fungible Token)의 중요성이 대두되고 있다. NFT 개념, 구성요소, 민팅(Minting), (보안 취약점)을 상세 설명하시오"
+  },
+  {
+    "id": "s52-12",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "Extended reality(XR)과 관련 기술들을 설명하시오."
+  },
+  {
+    "id": "s52-13",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "ICT 4차 산업혁명에 대해 다음을 설명하시오. 가. 스마트 팩토리 요소기술인 Digital Twin, CPS 기술에 대하여 설명하시오. 나. 지능형 SCADA를 설명하시오."
+  },
+  {
+    "id": "s52-14",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "클라우드를 위한 오픈 스택 프로젝트를 상세 설명하시오."
+  },
+  {
+    "id": "s52-15",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "클라우드 관리 플랫폼의 정의 및 필요성, 필수 기능, 플랫폼 선정 기준, 기대효과를 설명하시오."
+  },
+  {
+    "id": "s52-16",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "스토리지 가상화(Storage Virtualization) 유형별 특징을 설명하시오."
+  },
+  {
+    "id": "s52-17",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "블록체인의 머클트리, CBDC, 블록체인 트릴레마를 설명하시오."
+  },
+  {
+    "id": "s52-18",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "공공부문에서 민간 클라우드 서비스를 활용하여 운영하고자 한다. 다음 사항들에 대하여 설명하시오. 가. 서비스 활용 절차에 따른 주요 태스크와 클라우드의 기본설계과정 나. 클라우드의 4가지 활용구조 및 클라우드 서비스 보안인증(CSAP) 절차 다. 클라우드 서비스유형(SaaS/PaaS/IaaS) 및 유형별 평가기준"
+  },
+  {
+    "id": "s52-19",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "MSP(Managed Service Provider)의 역할과 클라우드 보안인증제도(CSAP)를 설명하시오."
+  },
+  {
+    "id": "s52-20",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "셀테 5주차 2교시",
+    "text": "디지털 역기능에 대하여 다음을 설명하시오. 1) 디지털 역기능 개념과 사례 2) 디지털 역기능 3대 이슈 3) 대응방안"
+  },
+  {
+    "id": "s52-21",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "조직이 클라우드 컴퓨팅 서비스를 이용하고자 할 경우, 클라우드 서비스 제공자(CSP, Cloud Service Provider)에 대한 리스크를 관리하여야 한다. 다음을 설명하시오. 가. 클라우드 아웃소싱에 대한 요구사항 나. 리스크 관리 시 고려사항 다. 리스크 대응방안"
+  },
+  {
+    "id": "s52-22",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "차세대 플랫폼 기술로 등장하는 메타버스(초월주의)에 대하여 설명하시오. 개념과 3대 지향가치와 8대 실천원칙, 메타버스의 4가지 유형, 운영 사례, 메타버스의 발전전망 및 문제점 설명하시오."
+  },
+  {
+    "id": "s52-23",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 5주차 2교시",
+    "text": "실내외 위치 측위 기술에 대해 설명하시오."
+  },
+  {
+    "id": "s52-24",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "디지털 트윈 기술을 이용한 제조(정보통신단체표준, TTAK.KO-11.0284)에 대하여 설명하시오. 가. 제조를 위한 디지털 트윈 기술 개념 나. 제조 디지털 트윈 프레임워크 다. 액터(actor) 정보 테이블의 항목 및 항목 값"
+  },
+  {
+    "id": "s52-25",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "초저지연 서비스와 부하분산을 위한 모바일 엣지 컴퓨팅(Mobile Edge Computing) 기술이 확대되고 있다. 아래 사항을 설명하시오. 가. 모바일 엣지 컴퓨팅의 개념 나. 모바일 엣지 컴퓨팅의 플랫폼 구조 및 구성요소 다. 모바일 5G에서 엣지 컴퓨팅 적용 방안"
+  },
+  {
+    "id": "s52-26",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "국가기관, 지방자치단체 및 공공기관이 안전하고 효율적으로 SaaS(Software as a Service)를 이용하기 위해 공공부문 SaaS 이용 가이드라인을 발표하였다. 다음에 대하여 설명하시오. 가. 클라우드 서비스 위험 관리원칙 및 기준 나. 보안대책 수립 및 보안성 검토 다. 서비스 수준 협약"
+  },
+  {
+    "id": "s52-27",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "Auto Scale Up, Auto Scale Out, Auto Scale In 기술을 설명하시오."
+  },
+  {
+    "id": "s51-01",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 1교시",
+    "text": "쿠버네티스"
+  },
+  {
+    "id": "s51-02",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 1교시",
+    "text": "서버리스 컴퓨팅(Serverless Computing)"
+  },
+  {
+    "id": "s51-03",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 1교시",
+    "text": "멀티클라우드(MultiCloud)"
+  },
+  {
+    "id": "s51-04",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 5주차 1교시",
+    "text": "다크패턴(Dark Pattern)"
+  },
+  {
+    "id": "s51-05",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "셀테 5주차 1교시",
+    "text": "ADAS(Advanced Driver Assistance System)와 ADS(Automated Driving System)"
+  },
+  {
+    "id": "s51-06",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "셀테 5주차 1교시",
+    "text": "OPC UA(Open Platform Communications Unit Architecture)"
+  },
+  {
+    "id": "s51-07",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 5주차 1교시",
+    "text": "ISO 26262"
+  },
+  {
+    "id": "s51-08",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "셀테 5주차 1교시",
+    "text": "SOAP(Simple Object Access Protocol)와 REST(Representational State Transfer)를 비교"
+  },
+  {
+    "id": "s51-09",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "셀테 5주차 1교시",
+    "text": "안면인식 결제 서비스(138회 기출문제)"
+  },
+  {
+    "id": "s51-10",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 5주차 1교시",
+    "text": "멀티모달(Multimodal)의 기술요소"
+  },
+  {
+    "id": "s51-11",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "셀테 5주차 1교시",
+    "text": "Cyber Physical System"
+  },
+  {
+    "id": "s51-12",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 5주차 1교시",
+    "text": "ASN.1(Abstract Syntax Notation One)"
+  },
+  {
+    "id": "s51-13",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "셀테 5주차 1교시",
+    "text": "블록체인(Blockchain)"
+  },
+  {
+    "id": "s52-28",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "에너지 효율적 컴퓨팅 기술을 상세 설명하시오"
+  },
+  {
+    "id": "s52-29",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 5주차 2교시",
+    "text": "실물 신분증의 한계와 온라인상의 신분확인의 필요성이 늘어나고 있다. 다음을 설명하시오. 가. 모바일 신분증의 개념 및 특징 나. DID(Decentralized Identity)기반 모바일 신분증의 기술요소 및 메커니즘 다. 발급 절차"
+  },
+  {
+    "id": "s52-30",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 5주차 2교시",
+    "text": "AI가 발전함에 따라 상황을 자율적으로 인식하여 동작하는 AI Agent가 부각되고 있다. 다음을 설명하시오. 가. AI Agent 나. 기계고객"
+  },
+  {
+    "id": "s52-31",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "멀티클라우드(MultiCloud)에 대하여 다음을 설명하시오. 가. 개념 및 필요성 나. 시스템 요구사항 다. 주요 기술"
+  },
+  {
+    "id": "s52-32",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "셀테 5주차 2교시",
+    "text": "중앙은행 디지털 화폐(CBDC, Central Bank Digital Currency) 설계를 위한 고려사항에 대하여 설명하시오."
+  },
+  {
+    "id": "s52-33",
+    "kind": "셀테",
+    "round": "5주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 5주차 2교시",
+    "text": "쿠버네티스(Kubernetes)에 대하여 다음을 설명하시오. 가. 쿠버네티스의 개념 및 특징 나. 쿠버네티스의 주요 컴포넌트 다. HPA(Horizontal Pod Autoscaler)"
+  },
+  {
+    "id": "s62-01",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "대규모 언어 모델 최적화를 위한 RAG, RIG, MCP, MoE를 각각 설명하시오."
+  },
+  {
+    "id": "s62-02",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "sLLM(Smaller Large Language Model)에 대하여 다음 사항을 설명하시오 가. sLLM의 정의 및 필요성 나. sLLM의 주요 기술 및 활용분야 다. LLM과 sLLM 비교"
+  },
+  {
+    "id": "s62-03",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "AI 관련 다음을 설명하시오. 가. 환각 현상(Hallucination), 모라벡의 역설(Moravec's Paradox) 각각 설명하시오. 나. RAG(Retrieval Augmented Generation) 다. Diffusion Model, GLIGEN(Ground-Language-to-Image Generation)알고리즘 설명하시오."
+  },
+  {
+    "id": "s62-04",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "자연어 언어모델에 대해 다음을 설명하시오. 가. PLM(Pre-trained Language Model)의 특성을 설명 나. 프롬프트 엔지니어링(Prompt Engineering) 다. Multimodal LLM 라. PMM이 최종 LLM(Large Language Model)으로 만들어지는 과정에 대하여 훈련 특성을 중심으로 설명하시오. 마. LLM과 sLLM(smaller Large Language Model)을 비교하시오."
+  },
+  {
+    "id": "s62-05",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "AI/ML/DL에 관련 다음을 상세 설명하시오. 가. 편향(biased) 나. 과적합(Overfitting)의 발생이유와 해결방안을 설명하시오. 다. 머신러닝 최적화 알고리즘 (Optimization Algorithm) 유형 및 장단점 라. 데이터 차원 축소(Data Dimensionality Reduction)"
+  },
+  {
+    "id": "s62-06",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "인공신경망에 대하여 다음을 설명하시오. 가. 인공신경망의 개념, 구성요소, 역할 나. 피드포워드 뉴럴 네트워크(Feedforward Neural Network) 개념 및 절차 다. 역전파(Backpropagation) 개념 및 절차 라. 활성화 함수의 종류 및 역할"
+  },
+  {
+    "id": "s62-07",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "최근 인공지능 기술 활용이 증가하면서 다양한 보안 위협이 증가하고 있다. 이와 관련하여 아래 사항들에 대하여 설명하시오. 1) 머신러닝 학습과정에서의 적대적 공격 4가지와 방어기법 2) 생성형 언어모델 기반의 인공지능 기술 활용 시 발생할 수 있는 보안취약점"
+  },
+  {
+    "id": "s62-08",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "빅데이터와 AI 모델 평가 방법에 대해 5개 이상 설명하고, 인공지능 신뢰성의 개념과 핵심 속성, 성능지표에 대하여 설명하시오."
+  },
+  {
+    "id": "s62-09",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "딥러닝(Deep Learning) 가중치 학습을 위한 경사하강법(Gradient Descent)에 대하여 다음을 설명하시오. 1) 경사하강법의 개념 2) 경사하강법에서 오버슈팅(Overshooting)을 방지하는 방법 3) 경사하강법에서 지역 최소점(Local Minimum)에 빠지지 않고 본래의 최소점에 도달하기 위한 기법"
+  },
+  {
+    "id": "s62-10",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "기계학습(Machine Learning) 모델링(Modeling)과 모델옵스(ModelOps)에 대하여 설명하시오."
+  },
+  {
+    "id": "s62-11",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "인공지능(AI, Artificial Intelligence) 학습용 데이터 품질의 중요성이 대두됨에 따라, '인공지능 학습용 데이터 품질관리 가이드라인 v2.0(한국지능정보사회진흥원)'이 발표되었다. 인공지능 학습용 데이터 품질관리에 대한 아래 사항을 설명하시오. 가. 인공지능 학습용 데이터 품질관리 개념 및 필요성 나. 인공지능 학습용 데이터 품질관리 모델, 품질관리 단계별 수행방안 다. 인공지능 학습용 데이터 품질관리 지표"
+  },
+  {
+    "id": "s62-12",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "개인정보 보호를 위한 분산 인공지능(AI, Artifical Intelligence) 학습 모델에 대하여 아래 사항을 설명하시오. 가. 연합학습 나. 전이학습(Transfer Learning) 다. AutoML(Automated Machine Learning)"
+  },
+  {
+    "id": "s62-13",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "인공지능 학습에서 두 객체가 얼마나 유사한지를 나타내는 척도를 유사도(Similarity)라고 한다. 다음을 설명하시오. 가. 자카드 유사도(Jaccard Similarity) 나. 코사인 유사도(Cosine Similarity) 다. 실루엣 계수(Silhouette Coefficient)"
+  },
+  {
+    "id": "s62-14",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "AI 다음 기술을 설명하시오. 가. SNN (Spiking Neural Networks) 나. 메타휴리스틱스(Metaheuristics) 다. 튜링테스트 라. 데이터 라벨링(Data Labeling) 및 어노테이션(Annotation) 방식"
+  },
+  {
+    "id": "s62-15",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "인공지능 생태계에서 벤치마크 데이터셋의 개요와 주요 역할에 대하여 설명하시오."
+  },
+  {
+    "id": "s62-16",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "대규모 언어 모델(LLM)이 서버·클라우드·엣지 환경에 적용되면서 새로운 보안 및 운영 문제가 발생하고 있다. OWASP의 LLM 보안 위협을 중심으로 다음 사항을 설명하시오. 가. LLM이 컴퓨터시스템 자원에 미치는 영향 나. 주요 위협과 시스템 수준의 발생 원인 다. LLM 보안 위협에 대한 대응방안"
+  },
+  {
+    "id": "s62-17",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "머신러닝 파이프라인에 대해 설명하고, 지도학습, 비지도 학습 기법 각각 5개 이상 설명하시오."
+  },
+  {
+    "id": "s62-18",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "GAN (Generative Adversarial Network)과 DCGAN, Defense GAN(Generative Adversarial Networks) 방어기법을 각각 설명하시오."
+  },
+  {
+    "id": "s62-19",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "혼동 행렬, 정밀도(Precision), 재현율(Recall), F1-Score, PR(Precision Recall) 곡선과 ROC(Receiver Operating Characteristic) 곡선을 설명하시오."
+  },
+  {
+    "id": "s62-20",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "다음 LLM과 자연어 관련 기반 처리 기술을 설명하시오. 가. 오토인코더(Autoencoder), VAE(Variational AutoEncoder) 설명 나. NER과 Word Embedding 설명 다. 트랜스포머(Transformer) 라. TTFT(Time To First Token)와 TPOT(Time Per Output Token) 비교"
+  },
+  {
+    "id": "s62-21",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "강화학습(Reinforcement Learning)의 아래 설명하시오. 가. 가치기반 강화학습, 정책기반 강화학습, 엑터 크리틱(Actor-Critic) 강화학습 나. 정책경사(Policy Gradient) 방식 강화학습"
+  },
+  {
+    "id": "s62-22",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "데이터 마이닝 기법 중 아래 기법에 대하여 설명하시오. 1) K-means Clustering 2) DBSCAN 3) SVM(Support Vector Machine) 4) LSTM, GRU 설명"
+  },
+  {
+    "id": "s62-23",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "최근 데이터사이언스와 기계학습이 융합된 DSML(Data Science & Machine Learning) 프로젝트가 확산되고 있다. 성공적인 DSML 프로젝트를 수행하기 위해 아래 항목을 설명하시오. 가. DSML 프로젝트 수명주기 나. 기계학습 운영화(Machine Learning Operationalizations/Operations: MLOps) 다. 기술사로서, ITSM 연계 방안을 설명하시오."
+  },
+  {
+    "id": "s62-24",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "최근 초거대 인공지능(AI: Artificial Intelligence) 도입 및 활용에 필요한 사항을 담은 \"공공 부문 초거대 AI 도입•활용 가이드라인\"이 발표되었다. 다음 항목에 관하여 설명하시오. 가. 초거대 AI 개념 나. 초거대 AI 도입 원칙 다. 초거대 AI 도입 시 사전 고려사항"
+  },
+  {
+    "id": "s62-25",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "인공지능(AI)에서 윤리의 필요성 및 선진국의 정책 동향을 설명하고, 바람직한 AI 윤리정책 수립 시 고려사항에 대하여 설명하시오."
+  },
+  {
+    "id": "s61-01",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "AI 거버넌스(Artificial Intelligence Governance)를 설명하시오"
+  },
+  {
+    "id": "s61-02",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "트랜스포머(Transformer)와 MoE(Mixture of Experts)를 설명하시오."
+  },
+  {
+    "id": "s61-03",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "TEXT2SQL 설명하시오."
+  },
+  {
+    "id": "s61-04",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "클라우드 AI와 온디바이스 AI의 개념 비교"
+  },
+  {
+    "id": "s61-05",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "AI 신뢰성 검인증 제도(CAT)를 설명하시오."
+  },
+  {
+    "id": "s61-06",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "양자 머신러닝(QML, Quantum Machine Learning)의 주요 기술 및 알고리즘을 설명"
+  },
+  {
+    "id": "s61-07",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 1교시",
+    "text": "모델 전도 공격(Model Inversion Attack)"
+  },
+  {
+    "id": "s62-26",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "머신 러닝(Machine Learning)에서 활용되는 의사결정나무(Decision Tree)모델을 설명하시오."
+  },
+  {
+    "id": "s62-27",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "생성형 인공지능에 대해 다음을 설명하시오 가. 생성형 인공지능의 저작권 문제를 해결을 제시하시오. 나. 생성형 인공지능 서비스 이용자 보호 가이드라인에 대해 설명하시오"
+  },
+  {
+    "id": "s62-28",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "정부의 인공지능 윤리기준(과학기술정보통신부 2020.12.23)에서 제시한 인공지능의 3대 기본원칙 및 10대 핵심요건을 설명하시오."
+  },
+  {
+    "id": "s62-29",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법(이하 \"AI 기본법\")」이 국회 본회의를 통과하여 시행될 예정이다. 가. 인공지능기본법의 주요 목적, 기본 원칙 나. 인공지능 기본계획의 주요 내용 다. 국가인공지능전략위원회의 주요 기능 라. 인공지능 기술 개발 및 산업육성을 위한 시책 4가지"
+  },
+  {
+    "id": "s62-30",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "MCP(Model Context Protocol)를 이용한 인공지능 서비스 구축시 보안 취약점을 설명하고 대응방안을 제시하시오."
+  },
+  {
+    "id": "s62-31",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "\"공공부문 초거대 AI 도입, 활용 가이드라인 2.0\"에 대하여 다음을 설명하시오 가. 초거대 AI의 개념과 구성요소 나. 초거대 AI의 기술요소 다. 초거대 AI의 도입절차"
+  },
+  {
+    "id": "s62-32",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "유전 알고리즘(Genetic Algorithm)에 대해서 설명하시오. 가. 유전 알고리즘의 개념 및 절차 나. 유전 알고리즘의 최적화 방법"
+  },
+  {
+    "id": "s62-33",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "2025년 11월 행정안전부에서 발표한 '공공부문 인공지능 윤리원칙'에 대하여 설명하시오. 가. 인공지능 윤리 원칙 목표 나. 기본 체계 및 원칙 구성 다. 시사점"
+  },
+  {
+    "id": "s62-34",
+    "kind": "셀테",
+    "round": "6주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 6주차 2교시",
+    "text": "패션 의류용 이미지를 분류하는 다층 신경망을 만들려고 한다. 의류용 이미지는 바지, 치마, 티셔츠 등 10가지 유형의 흑백이미지(32*32 pixels)로 구성되어 있고, 학습에 투입할 이미지 데이터는 검증 및 테스트용 데이터를 제외하고 총 48,000장이다. 입력층, 은닉층, 출력층의 완전연결(fully connected) 3계층으로 구성되어 있고 은닉층의 뉴런 개수는 100개일 때, 다음에 대하여 설명하시오. 가. 신경망 구성도 나. 입력층의 입력개수, 출력층의 뉴런개수, 학습할 가중치와 절편의 총 개수 다. 원핫인코딩(One-Hot Encoding)과 소프트맥스(Softmax)함수"
+  },
+  {
+    "id": "s72-01",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "국가사이버안보센터는 생성형 AI의 보안위협과 안전한 활용을 위한 가이드라인(챗 GPT 등 생성형 AI 활용 보안 가이드라인, 2023.6)을 발간하였다. 이와 관련하여 다음을 설명하시오. 가. 생성형 AI의 개념 및 활용 서비스 사례 나. 생성형 AI의 보안 위협 종류별 주요 원인과 발생 가능한 보안위협 다. 생성형 AI 모델/서비스 개발 시 보안 고려사항과 보안위협 대응방안"
+  },
+  {
+    "id": "s72-02",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "OWASP Top 10(2025)관련해서 다음을 설명하시오. 가. OWASP Top 10(2025) 설명 및 각각 대응 방안에 대해 설명하시오. 나. SSRF와 CSRF를 설명하시오 다. SOAR(Security Orchestration, Automation and Response)와 SIEM에 대하여 설명하시오."
+  },
+  {
+    "id": "s72-03",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "개인정보 보호에 관한 아래 사항에 대하여 설명하시오. 가. 가명, 익명처리 기술에 대하여 설명 나. 가명정보 처리 절차와 프라이버시 보호모델 설명 다. 개인정보 침해기술(PIT)과 보호기술(PET) 설명하시오. 라. 개인정보비식별화조치 가이드라인에 대해 설명하시오."
+  },
+  {
+    "id": "s72-04",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "양자 컴퓨터(Quantum Computer)와 관련하여 다음을 설명하시오. (1) 양자 특징 (2) 시스템에서 사용하는 큐비트(Qubit) (3) 양자암호기술과 양자내성암호화(Post-Quantum Cryptography) 설명하시오."
+  },
+  {
+    "id": "s72-05",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "경계 기반 보안(Perimeter Security)과 제로 트러스트(Zero Trust) 성숙도모델 2.0에 대하여 비교 설명하고, 제로 트러스트 보안모델과 트러스트 보안 모델과 비교, 제로 트러스트 아키텍처 도입 시 고려사항에 대하여 설명하시오."
+  },
+  {
+    "id": "s72-06",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "디지털 포렌식(forensic)에 대해 다음을 설명하시오. 가. 디지털 포렌식의 유형과 절차 나. 네트워크 증거 수집 다. 시스템 증거 수집 라. 응용 프로그램 증거 수집 마. 아티팩트, 디스크 이미징(Disk Imaging) 설명과 이미징을 활용한 증거수집 방법"
+  },
+  {
+    "id": "s72-07",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "공격자의 공격행위를 식별하고 대응하기 위한 방법으로 다양한 보안방법론과 기술들이 활용되고 있다. 가. 사이버 킬 체인(Cyber Kill-Chain)과 ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)에 대해서 비교 설명하시오. 나. 위협헌팅(Threat Hunting)과 SOAR에 대해서 설명하시오."
+  },
+  {
+    "id": "s72-08",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "암호학적 해시함수에 대해 설명하시오. 가. 암호학적 해시함수 특징 나. 암호학적 해시함수 MDC와 MAC를 설명하시오. 다. 전자 서명(Digital signature)을 설명하시오."
+  },
+  {
+    "id": "s72-09",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "클라우드 환경에서 보안의 필요성에 대해 다음을 설명하시오. 가. 클라우드 컴퓨팅의 보안위협 설명 나. 하이퍼바이저(Hypervisor)기반의 가상화 침입 대응기술에 대하여 설명하시오. 다. ISO/IEC 27017, ISO/IEC 27018을 설명하시오."
+  },
+  {
+    "id": "s72-10",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "다음 개인정보, 경영시스템 및 데이터 관련하여 다음을 설명하시오. 가. ISMS 인증 의무대상자 기준(단, 정보통신망법 제47조 2항) 나. ISMP-P 인증기준과 주요 개정 사항 설명 다. 정보보호 관리체계(ISMS)의 관리과정 라. ISMP-P 간편 인증기준 설명 마. ISMS-P 제도의 강화 방안"
+  },
+  {
+    "id": "s72-11",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "셀테 7주차 2교시",
+    "text": "공공부문에서 민간 클라우드 서비스를 활용하여 운영하고자 한다. 다음 사항들에 대하여 설명하시오. 가. 서비스 활용 절차에 따른 주요 태스크와 클라우드의 기본설계과정 나. 클라우드의 4가지 활용구조 및 클라우드 서비스 보안인증(CSAP) 절차 다. 클라우드 서비스유형(SaaS/PaaS/IaaS) 및 유형별 평가기준"
+  },
+  {
+    "id": "s72-12",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "PbD(Privacy by Design)의 개념, 원칙, 적용방안을 설명하시오."
+  },
+  {
+    "id": "s72-13",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "블록체인 플랫폼 구축과정에서 성능 및 보안 측면의 고려사항을 설명하시오."
+  },
+  {
+    "id": "s72-14",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "인터넷 통신에서 보안성 강화를 위해 활용되는 TLS(Transport Layer Security) 1.2에 대한 취약점이 발견되어 TLS 1.3 사용을 권고하고 있다. 이와 관련하여 다음을 설명하시오 가. SSL/TLS 보안 기술, 작동 원리에 대해 설명하시오. 나. TLS 프로토콜 구조와 핸드셰이크(Handshake) 과정 다. TLS 1.2 보안 취약점과 TLS 1.3 개선 사항"
+  },
+  {
+    "id": "s72-15",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "블록 암호화 알고리즘과 운영 모드 종류에 대해 5개 이상 설명하시오."
+  },
+  {
+    "id": "s72-16",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "메타버스(Metaverse)에 대해 다음과 같은 측면으로 설명하시오. 1) 메타버스의 특징 2) 정보시스템 측면의 메타버스의 보안 위협 3) 메타버스에서 발생할 수 있는 사회적 문제점 4) 안전한 메타버스를 위한 방안"
+  },
+  {
+    "id": "s72-17",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "다음 보안의 취약점 및 대응방안을 설명하시오. 가. 생성형 AI의 보안 위협 종류별 주요 원인과 발생 가능한 보안위협, 보안위협 대응방안 나. 딥러닝 취약점 및 대응방안에 대해 설명하시오."
+  },
+  {
+    "id": "s72-18",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "디도스 공격(DDoS, Distributed Denial of Service Attack)에 대응하기 위한, 대응 방법을 상세 설명하시오."
+  },
+  {
+    "id": "s72-19",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "UAM 취약점 및 대응방안을 설명하시오."
+  },
+  {
+    "id": "s72-20",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "스마트카의 취약점 및 대응방안에 대해 설명하시오."
+  },
+  {
+    "id": "s72-21",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "다음 보안의 필수 기술 암호화 질문에 대해 설명하시오. 가. 암호화 키 Key 발전 순서와 암호화 원리 설명 나. 보안 암호화을 정보단위, 키(Key) 적용 방식, 암호화 기술에 따라 분류 설명 다. 디피-헬만 알고리즘(Diffie-Hellman Algorithm), RSA, 동형암호화 관계 설명"
+  },
+  {
+    "id": "s72-22",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "SW 개발보안(시큐어 코딩, Secure Coding)에 대해 설명하고, 사례를 들어, 2개 이상 설명하시오."
+  },
+  {
+    "id": "s72-23",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "패스워드 없는 인증기술인 FIDO(Fast Identity Online)에 대하여 다음을 설명하시오. 가. FIDO의 개념 나. 표준 프로토콜인 UAF와 U2F 다. FIDO 기반 인증 절차 설명 라. FIDO(Fast Identity Online) 1.0과 FIDO 2.0을 비교."
+  },
+  {
+    "id": "s72-24",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "최근(2023년 2월 27일) 국회에서 개인정보보호법 개정안이 의결되었다. 이와 관련하여 아래 사항들을 설명하시오. 1) 개인정보보호법 개정안 주요 내용 2) 개인정보 관련 개별 주체들과 개인 정보 처리 흐름 3) 개인정보 전송요구권과 AI 활용을 위한 자동화 의사결정 대응권"
+  },
+  {
+    "id": "s72-25",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "드론의 보안위협과 대응방안을 설명하시오."
+  },
+  {
+    "id": "s72-26",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "접근 통제 보안 타입/모델의 접근제어 타입들(AC)과 벨 라파듈라(BLP) 모델, 비바(BIBA) 모델, Clark and Wilson 모델을 설명하시오."
+  },
+  {
+    "id": "s72-27",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "최근 NFT(Non-Fungible Token) 시장의 활성화 및 생태계 형성의 견인차인 NFT 마켓 플레이스가 해커들의 주요 타겟이 되고 있다. 대형 거래소인 OpenSea의 보안 침해사례를 기반으로 NFT 특성과 NFT 마켓 플레이스에서의 보안 취약점을 설명하시오."
+  },
+  {
+    "id": "s71-01",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 7주차 1교시",
+    "text": "전자 서명(Digital signature)과 이중서명을 비교 하시오."
+  },
+  {
+    "id": "s71-02",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 7주차 1교시",
+    "text": "BPFdoor를 설명하시오."
+  },
+  {
+    "id": "s71-03",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 7주차 1교시",
+    "text": "암호문 공격(Ciphertext Attack)을 설명하시오."
+  },
+  {
+    "id": "s71-04",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 7주차 1교시",
+    "text": "샌드박스와 화이트박스의 목적, 적용 방법 및 예시를 설명 하시오."
+  },
+  {
+    "id": "s71-05",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "1교시",
+    "category": "보안",
+    "source": "셀테 7주차 1교시",
+    "text": "타원곡선 암호(ECC, Eliptic Curve Cryptography)"
+  },
+  {
+    "id": "s72-28",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "과학기술정보통신부는 2024년 12월 「철통 인증 지침(제로트러스트 가이드라인) 2.0」을 발표하였다. 이와 관련하여 아래 사항을 설명하시오. 가. 제로트러스트(Zero Trust) 정의 및 핵심 원칙 나. 제로트러스트(Zero Trust) 보안 모델 구성요소 다. 제로트러스트(Zero Trust) 성숙도 수준 4단계 특징 비교 라. 제로트러스트(Zero Trust) 도입 절차"
+  },
+  {
+    "id": "s72-29",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "스마트팩토리 취약점 및 대응방안에 대해 설명하시오."
+  },
+  {
+    "id": "s72-30",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "MEC의 세부 기술을 설명하고, 보안의 취약점 및 대응방안을 설명하시오."
+  },
+  {
+    "id": "s72-31",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "정보시스템의 접근통제 정책에는 강제적 접근통제(MAC, Mandatory Access Control), 임의적 접근통제(DAC, Discretionary Access Control), 역할 기반 접근통제(RBAC, Role-Based Access Control), 속성 기반 접근통제(ABAC, Attribute-Based Access Control)가 있다. 아래 사항을 설명하시오. 가. 접근통제 개념 나. 접근통제 정책 비교 다. MAC + ABAC 융합 정책의 필요성 라. MAC + ABAC 융합 정책의 동적 보안 정책 운영 방안"
+  },
+  {
+    "id": "s72-32",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "대형언어모델(LLM, Large Language Model)의 활용이 급격히 증가함에 따라 그와 관련된 보안 위협이 새롭게 대두되고 있다. OWASP에서는 2025년 버전의 LLM 애플리케이션을 위한 Top 10 보안 위협 목록(OWASP LLM, OWASP Top 10 for LLM Application 2025)을 발표하여 LLM 기반 시스템의 안전한 개발과 운영을 위한 기준을 제시하고 있다. 이와 관련하여 다음을 설명하시오. 가. OWASP LLM이 제시된 배경과 주요 특징 나. OWASP LLM에서 제시된 주요 보안 위협 다. 기업이 LLM 애플리케이션을 설계, 운영할 때 OWASP LLM을 활용한 보안 대응방안"
+  },
+  {
+    "id": "s72-33",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "공급망 보안(Supply Chain Security)을 설명하고, 제로트러스트(Zero Trust) 기반 공급망 보안 아키텍처를 설명하시오."
+  },
+  {
+    "id": "s72-34",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "MCP의 보안 취약점 설명과 대응 방안을 제시하시오."
+  },
+  {
+    "id": "s72-35",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "침입차단시스템(Firewall), 침입탐지시스템(IDS, Intrusion Detection System), 침입방지시스템(IPS, Intrusion Prevention System) 및 가상사설망(VPN, Virtual Private Network)에 대하여 설명하시오."
+  },
+  {
+    "id": "s72-36",
+    "kind": "셀테",
+    "round": "7주차",
+    "period": "2교시",
+    "category": "보안",
+    "source": "셀테 7주차 2교시",
+    "text": "IT 인프라 확장에 따른 사이버 위협에 대하여 다음 내용을 설명하시오. 가. 공격 표면(Attack Surface)과 공격 벡터(Attack Vector) 나. 측면 이동(Lateral Movement)의 단계별 메커니즘과 주요 기법 다. ASM(Attack Surface Management)의 개념 및 유형, 단계별 관리방안에 대해 설명하시오."
+  },
+  {
+    "id": "s82-01",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "최근 상용 DBMS 를 오픈소스 DBMS 로 전환하는 수요가 늘고 있다. 다음 내용을 설명하시오. 가. 오픈소스 DBMS 전환 배경 나. 오픈소스 DBMS 전환 시 검토해야 할 제약사항 다. 오픈소스 DBMS 전환 시 단계별 마이그레이션 절차 라. 신뢰성 확보를 위한 고가용성(HA) 아키텍처 구성 방안"
+  },
+  {
+    "id": "s82-02",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "현행 (HW 와) 데이터베이스 데이터량을 기준으로 용량 산정을 수행하고자 한다. 가. 데이터베이스 용량산정 방법별 개념, 장,단점 나. 데이터베이스 용량산정 기준 다. SW 기능점수 산정(FP)과 HW 용량 산정을 비교하시오."
+  },
+  {
+    "id": "s82-03",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "팬텀 충돌(Phantom Conflict)에 대해 설명하고, 트랜잭션 격리 수준(Transaction Isolation Level) 4가지를 사례 중심으로 설명하시오"
+  },
+  {
+    "id": "s82-04",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "NoSQL 의 CAP 이론, BASE 속성과 PACELC 이론을 상세 설명하시오."
+  },
+  {
+    "id": "s82-05",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 품질관리 및 데이터 거버넌스를 설명하시오. 가. 데이터 품질관리 총괄 책임자의 역할 나. 정보 생명주기(Information Life Cycle) 단계별 데이터 품질 관리 활동 다. 데이터 품질 진단 및 개선 절차 라. 데이터 거버넌스와 데이터 표준화 설명"
+  },
+  {
+    "id": "s82-06",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터베이스의 동시성제어/병행제어(Concurrency Control)에 대해 설명하시오. 가. 동시성제어(병행제어)의 정의 나. DB 병행제어를 안했을 때의 문제점, 해결을 위한 병행제어의 기법 종류"
+  },
+  {
+    "id": "s82-07",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "NoSQL 특징, NoSQL 기반의 4개 DB 유형, NoSQL 모델링 절차, New SQL 에 대해 설명하시오."
+  },
+  {
+    "id": "s82-08",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터베이스 이상현상 및 정규화에 대하여 다음을 설명하시오. 가. 1차, 2차, 3차 정규화를 하지 안했을 때의 사례를 들어, 이때 발생하는 이상현상에 대해 설명하고, 해결된 ERD 를 그리시오. 나. 3.5차 정규화(BCNF)를 하지 안했을 때의 사례를 들어, 이때 발생하는 이상현상에 대해 설명하고, 해결된 ERD 를 그리시오. 다. 반정규화에 대해 설명하시오."
+  },
+  {
+    "id": "s82-09",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "공공데이터에 대해 다음을 설명하시오. 가. 공공데이터의 정의 및 포맷별 유형 나. LOD 기술요소 설명 다. 공공데이터와 마이데이터를 비교하시오."
+  },
+  {
+    "id": "s82-10",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "분산 Database 의 개념도, 기술요소, 5가지 투명성 보장 등을 설명하시오."
+  },
+  {
+    "id": "s82-11",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "함수적 종속성(FD)를 설명하고, 4, 5차 정규화 및 DB 성능 개선 위한 DB Table partitioning, 샤딩, 쿼리 오프로딩을 각각 설명하시오."
+  },
+  {
+    "id": "s82-12",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 무결성 유지를 위한 데이터 회복 기법들을 상세 설명하시오."
+  },
+  {
+    "id": "s82-13",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 무결성 제약 조건 6가지를 상세 설명하시오."
+  },
+  {
+    "id": "s82-14",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 용량이 증가할수록 데이터베이스 튜닝(Tuning)의 필요성이 증가하고 있다. 데이터베이스 튜닝에 대한 아래의 사항을 설명하시오. 가. 데이터베이스 튜닝의 개념과 목적 나. 데이터베이스 튜닝 기법들 상세 설명"
+  },
+  {
+    "id": "s82-15",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 통합 및 마이그레이션 프로젝트에서 데이터 무결성 목표를 달성하기 위해서는 데이터들의 정합성을 확보하고 신뢰도를 높이는 일이 매우 중요하다. 가. 데이터 품질 관리 설명 나. 데이터 무결성(Integrity)과 정합성(Consistency)의 차이 다. 데이터 프로파일링과 데이터 클렌징(Cleansing) 비교하시오."
+  },
+  {
+    "id": "s82-16",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "코로나-19(Covid-19)로 인한 언택트 시대의 데이터 주권 이슈와 데이터 거버넌스 전략 방향에 대하여 설명하시오"
+  },
+  {
+    "id": "s82-17",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "셀테 8주차 2교시",
+    "text": "앙상블(Ensemble) 모형의 Bagging 과 Boosting 알고리즘을 설명하시오."
+  },
+  {
+    "id": "s82-18",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "Database 의 Transaction 특징, 개념도, 쿼리 오프로딩(Query Offloading)에 대해 설명하시오."
+  },
+  {
+    "id": "s82-19",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "빅데이터 모델링 방법과 모델링의 평가 방법, 데이터 시각화(Data Visualization)에 대해 상세 설명하시오."
+  },
+  {
+    "id": "s82-20",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "(O)RDBMS 를 적용하기 위한 데이터 모델링에 대하여 다음을 설명하시오. 가. 데이터 모델링의 개념 및 모델링 단계별 수행내용 나. 데이터 관계 모델링 시 식별(Identification)과 비식별(Non Icentification) 비교 다. 데이터 모델링 시 고려사항 라. ORDBMS 모델링과 NoSQL 모델링을 비교하시오."
+  },
+  {
+    "id": "s82-21",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 정확도 및 정밀도를 위한 다음 빅데이터 분석, 처리기술을 상세 설명하시오. 가. 빅데이터 분석도구를 선택하는 원칙 나. 빅데이터 분석, 처리를 위한, Hadoop V3.0, 카파 아키텍처(Kappa)를 설명하시오."
+  },
+  {
+    "id": "s82-22",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "SQL 의 개념, 분류, 정적 SQL(Static SQL)과 동적 SQL(Dynamic SQL) 비교하시오."
+  },
+  {
+    "id": "s82-23",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "빅데이터 관련 정보화 사업에 대한 감리 수행 점검항목을 제시하는 \"지능정보기술 감리 실무 가이드\"에 대해서 다음을 설명하시오. 가. 빅데이터 분석단계 점검항목 나. 클라우드 계획수립 점검항목"
+  },
+  {
+    "id": "s81-01",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "데이터베이스 트랜잭션을 설명하시오."
+  },
+  {
+    "id": "s81-02",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "팬텀 충돌(Phantom Conflict)"
+  },
+  {
+    "id": "s81-03",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "데이터 늪(Data Swamp)을 설명하시오."
+  },
+  {
+    "id": "s81-04",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "NoSQL 의 CAP(Consistency, Availability, Partition Tolerance), BASE, PACELC 를 설명"
+  },
+  {
+    "id": "s81-05",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "정보모델링의 참조 무결성"
+  },
+  {
+    "id": "s81-06",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "Database 의 ARIES 설명하시오."
+  },
+  {
+    "id": "s81-07",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 1교시",
+    "text": "데이터 관측가능성(Data Observability)"
+  },
+  {
+    "id": "s82-24",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "물리 데이터 모델링 중 반정규화에 대하여 다음을 설명하시오. 가. 반정규화 절차 나. 반정규화 유형 다. 반정규화 시 고려사항"
+  },
+  {
+    "id": "s82-25",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "빅데이터 플랫폼 아키텍처 설계를 위한 다음 주제에 대하여 설명하시오. 1) 빅데이터 플랫폼 인프라 구조 설계 2) 빅데이터 데이터 구조 분석 3) 빅데이터 입출력 구조 설계"
+  },
+  {
+    "id": "s82-26",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터 거래를 위한 데이터 가치평가에 대하여 다음을 설명하시오. 가. 데이터 재화와 데이터 가치의 특징 나. 데이터 가치평가의 모델 및 절차 다. 데이터 가치평가의 활용방안"
+  },
+  {
+    "id": "s82-27",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "릴레이션 무결성 제약의 유형과 사례를 제시하고, 구현 방법에 대하여 설명하시오."
+  },
+  {
+    "id": "s82-28",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "데이터베이스 인덱스(Index)를 정의, 목적, 구성도와 분류를 설명하고, 클러스터드 인덱스(Clustered Index)와 논클러스터드 인덱스(Non-Clustered Index)를 비교하여 설명하시오"
+  },
+  {
+    "id": "s82-29",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "함수적 종속성(FD)를 유형에 대해 설명하고, 잘못된 함수적 종속성으로, 이상현상이 발행하므로, 이를 해결하기 위한, 정규화에 대해 설명하시오."
+  },
+  {
+    "id": "s82-30",
+    "kind": "셀테",
+    "round": "8주차",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "셀테 8주차 2교시",
+    "text": "분산 데이터베이스 시스템 구축을 위한 데이터베이스 분할에 대하여 다음 내용을 설명하시오. 가. 데이터베이스 분할 단위 나. 수평분할과 수직분할"
+  },
+  {
+    "id": "s92-01",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "NW 라우팅 개념 및 다음을 설명하시오. 가. Distance Vector Routing Algorithm 와 Link State Routing Algorithm 설명하시오. 나. RIP(Routing Information Protocol), OSPF(Open Shortest Path First) 비교 다. IGP 와 EGP 설명하시오."
+  },
+  {
+    "id": "s92-02",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "2027년 적용할 차세대 6G 적용 기술요소, 주파수 동향, 저궤도위성과 O-RAN 을 각각 설명하시오."
+  },
+  {
+    "id": "s92-03",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "기존 스마트홈 생태계에서 발생하는 문제점을 해결하기 위해 스마트홈 연동 표준인 매터(Matter)가 등장했다. 다음을 설명하시오. 가. 개념 및 구성요소 나. 기존 스마트홈 표준과 비교 다. 통신 프로토콜"
+  },
+  {
+    "id": "s92-04",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "NW 오류 제어를 위한 아래 2개 분류를 설명하시오. 가. FEC(Forward Error Correction)와 BEC(Backward Error Correction)를 설명하시오. 나. 재전송(ARQ)방식을 상세 설명하시오. 다. 순환중복검사(Cyclic Redundancy Check) 설명하시오."
+  },
+  {
+    "id": "s92-05",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "NW QoS(Quality of Service)에 대해 다음을 설명하시오. 가. QoS 의 지표 설명 나. QoS 의 관리기술 4가지 분류, 상세 설명하시오."
+  },
+  {
+    "id": "s92-06",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "차세대 네트워크 기술로 부각되고 있는 SDx 에 대해 다음을 설명하시오. 가. SDx 기술들을 설명하시오. 나. SDN 아키텍처와 Openflow 에 대하여 설명하시오. 다. SD-WAN 과 NFV(Network Function Virtualization) 설명하시오."
+  },
+  {
+    "id": "s92-07",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "최근 Netflix 등 CP(Contents Provider)들의 망관리 비용을 요구하는 법제화 움직임이 일자 그들의 불만이 표시되고 있다. 4차 산업혁명시대의 망중립성 이슈에 대하여 설명하시오. 가. 쟁점 사항 및 정책 이슈 나. 시사점 및 대응 방안"
+  },
+  {
+    "id": "s92-08",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "이동통신기술에 대해 다음을 설명하시오. 가. 현재 적용중인 5G 이동통신 주요 기술들을 설명하시오. 나. 모바일 엣지컴퓨팅(Edge Computing)과 포그 컴퓨팅(Fog Computing)설명하시오. 다. Network Slicing 설명하시오."
+  },
+  {
+    "id": "s92-09",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "코드 전송 시 발생하는 오류를 검출(Detection)할 수 있을 뿐만 아니라 오류 코드의 정정(Correction)이 가능한 해밍코드(Hamming Code)에 대하여 다음을 설명하시오. (단, Data 는 4Bit 로 가정하고 짝수 패리티를 사용한다.) 가. 해밍코드의 구성 나. 해밍코드의 정정과정 및 정정방법 다. 해밍코드의 활용 사례"
+  },
+  {
+    "id": "s92-10",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "TCP(Transmission Control Protocol)에 대해 다음을 설명하시오. 가. Traffic Policing 와 Traffic Shaping 를 설명하시오. 나. TCP 혼잡제어 설명 다. TCP 와 UDP 를 비교하시오."
+  },
+  {
+    "id": "s92-11",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "OSI 7 layers(ISO/IEC 7498)에 대해 설명하고, Application Layer, Transport Layer, Network Layer, Data Link Layer, Physical Layer 에 대해 설명, HTTP V3.0에 대해 설명하시오."
+  },
+  {
+    "id": "s92-12",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "네트워크 스위치(Network Switch)와 관련하여 다음을 설명하시오. 가. 스위치 개념 나. OSI(Open System Interconnection) 참조모델의 레이어에 따른 스위치 유형 다. L4 스위치 이중화 방안 다. L4 스위치와 L7 스위치 비교"
+  },
+  {
+    "id": "s92-13",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "다음 네트워크 기술에 대해 설명하시오. 가. OFDM, 비직교 다중접속(NOMA) 나. MIMO, SDR 기술 설명"
+  },
+  {
+    "id": "s92-14",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "무선충전기술과 관련하여 무선충전기술 개요, 무선충전기술 유형, 무선충전기술의 표준화 동향을 설명하시오."
+  },
+  {
+    "id": "s92-15",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "CRC 에 대해 상세 설명하고, CRC-4 사례를 들어 설명하시오.(4의 의미는 차수가 4임)"
+  },
+  {
+    "id": "s92-16",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "IPv6 기술에 대해 설명하고, WI-FI7(IEEE 801.11be), IEEE 802.11bn 을 설명하시오."
+  },
+  {
+    "id": "s92-17",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "사물지능통신/IoT 의 통신 프로토콜에 대해 설명하시오."
+  },
+  {
+    "id": "s92-18",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "SCTP(Stream Control Transmission Protocol)와 관련하여 다음을 설명하시오. 가. SCTP 개요와 특징 나. SCTP 프로토콜(Protocol) 구조 및 동작 방식"
+  },
+  {
+    "id": "s92-19",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "네트워크 자원을 보다 효율적으로 관리하고 최적화하기 위해, 네트워크 인프라에 머신러닝 기법을 적용하고 있다. 가. 네트워크 인프라에 SDN 을 이용하여 머신러닝 기법을 적용하는 이유와 나. SDN 에서 강화학습 적용방안을 설명하시오."
+  },
+  {
+    "id": "s92-20",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "5G 특화망은 개인을 위한 통신뿐만 아니라 산업환경 전체를 혁신하고 ICT 서비스의 차원을 높일 수 있는 핵심적인 경제인프라이다. 이와 관련하여 다음을 설명하시오. 가. 5G 이동통신과 5G 특화망 각각에 대한 서비스 시장측면, 네트워크 구축측면, 통신망이용측면에서의 특징 비교 나. 특화망의 코어망 적용 기술 중 네트워크 슬라이싱 기술 다. 5G 특화망 활용분야"
+  },
+  {
+    "id": "s92-21",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "TCP/IP 에 대해 설명하시오. 가. TCP/IP 의 개념 설명 나. TCP 헤더(header)와 헤더에 포함된 제어 플래그(Control Flag)의 종류 나열 다. 전송 제어 프로토콜(TCP, Transmission Control Protocol)의 4-way handshake 설명 라. 인터넷 제어 메시지 프로토콜(ICMP, Internet Control Message Protocol)과 인터넷 그룹관리 프로토콜(IGMP, Internet Group Management Protocol)을 비교하여 설명"
+  },
+  {
+    "id": "s91-01",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "IBN(Intent-Based Networking)을 설명하시오."
+  },
+  {
+    "id": "s91-02",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "Wi-Fi 7, Wi-Fi 8을 설명 비교하시오."
+  },
+  {
+    "id": "s91-03",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "서버 이중화 구성 방안에 대하여 아래 사항을 설명하시오. 가. L4스위치 기반 이중화 방안 나. 소프트웨어 기반 이중화 방안 다. L4 스위치 기반 이중화 방안과 소프트웨어 기반 이중화 방안 비교"
+  },
+  {
+    "id": "s91-04",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "샤논 제 1정리. 2정리, 3정리를 각각 설명하시오."
+  },
+  {
+    "id": "s91-05",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "IGP 와 EGP 설명"
+  },
+  {
+    "id": "s91-06",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "MODBUS 프로토콜(137회 기출문제)"
+  },
+  {
+    "id": "s91-07",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 1교시",
+    "text": "FTP 를 설명하시오."
+  },
+  {
+    "id": "s92-22",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "통신 프로토콜에 대하여 각 항목을 설명하시오. 가. 오류 제어, 혼잡 제어 나. 슬라이딩 윈도우(Sliding WIndow) 기법 다. 프로토콜 설계 시 고려 사항"
+  },
+  {
+    "id": "s92-23",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "6G 이동통신기술 핵심 개념인 AI-Native Network 에 대하여 다음 내용을 설명하시오. 가. 자율 최적화 나. AI-RAN 다. 디지털트윈 기반 네트워크 관리"
+  },
+  {
+    "id": "s92-24",
+    "kind": "셀테",
+    "round": "9주차",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "셀테 9주차 2교시",
+    "text": "데이터 통신에서 신뢰성 있는 전송을 보장하기 위한 오류 제어(Error Control) 기술에 대하여 다음 내용을 설명하시오. 가. 오류 검출(Error Detection)과 오류 정정(Error Correction)의 개념 나. '정지-대기(Stop-and-Wait) ARQ'와 'Go-Back-N ARQ'의 개념 및 수행절차 다. '정지-대기(Stop-and-Wait) ARQ'와 'Go-Back-N ARQ' 비교"
   }
 ]
