@@ -206,7 +206,9 @@ export default function ExamPage() {
                       {i + 1}
                     </span>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm text-slate-800">{q.text}</p>
+                      <p className="whitespace-pre-line text-sm leading-relaxed text-slate-800">
+                        {q.text}
+                      </p>
                       <span className="mt-1 inline-block rounded bg-slate-50 px-1.5 py-0.5 text-[10px] text-slate-400">
                         {q.category}
                       </span>
