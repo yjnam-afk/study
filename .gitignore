@@ -26,3 +26,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 빌드 시 생성되는 빌드 ID(커밋 안 함)
+/.build-id

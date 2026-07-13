@@ -56,6 +56,11 @@ for (const t of topics) {
 
 const out = path.join(root, "src/data/flashcards.json");
 fs.writeFileSync(out, JSON.stringify(cards, null, 1), "utf8");
+
+// 빌드 ID 고정: 한 번만 생성해 파일에 기록 → next.config가 클라이언트·서버 컴파일에서
+// 동일 값을 읽는다(배포 감지 오탐/자동 새로고침 오작동 방지). Vercel은 커밋 SHA 우선.
+const buildId = process.env.VERCEL_GIT_COMMIT_SHA || String(Date.now());
+fs.writeFileSync(path.join(root, ".build-id"), buildId, "utf8");
 console.log(
   `flashcards.json: ${cards.length}장 (섹션 ${cards.reduce((n, c) => n + c.sections.length, 0)}개, ${(fs.statSync(out).size / 1024).toFixed(0)}KB)`,
 );
