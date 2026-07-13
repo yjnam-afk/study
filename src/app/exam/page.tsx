@@ -13,19 +13,39 @@ type Q = {
   category: string;
   text: string;
   source?: string;
+  /** 구분 — 없으면 실제 기출. */
+  kind?: "기출" | "셀테" | "모의고사";
+  /** 회차/주차 라벨(명시적). 없으면 source 앞토큰. */
+  round?: string;
 };
 
-// source(회차)가 있는 실제 기출만 모은다.
-const EXAMS = (questions as Q[]).filter((q) => q.source);
+// source(회차) 또는 kind가 있는 문제(기출·셀테·모의고사)를 모은다.
+const EXAMS = (questions as Q[]).filter((q) => q.source || q.kind);
 
-// "139회 1교시" → 회차 "139회"
-function roundOf(source?: string): string {
-  return (source || "").split(" ")[0] || "기타";
+function kindOf(q: Q): "기출" | "셀테" | "모의고사" {
+  return q.kind || "기출";
+}
+// "139회 1교시" → 회차 "139회". round가 있으면 그대로.
+function roundOf(q: Q): string {
+  return q.round || (q.source || "").split(" ")[0] || "기타";
 }
 
-const ROUNDS = Array.from(new Set(EXAMS.map((q) => roundOf(q.source)))).sort(
-  (a, b) => (parseInt(b) || 0) - (parseInt(a) || 0),
+// 데이터에 실제 존재하는 구분만 탭으로. 기출 → 셀테 → 모의고사 순.
+const KIND_ORDER: Record<string, number> = { 기출: 0, 셀테: 1, 모의고사: 2 };
+const KINDS = Array.from(new Set(EXAMS.map(kindOf))).sort(
+  (a, b) => (KIND_ORDER[a] ?? 9) - (KIND_ORDER[b] ?? 9),
 );
+const KIND_DESC: Record<string, string> = {
+  기출: "실제 정보관리기술사 기출문제입니다. 문제를 골라 바로 답안 '소설'을 연습해 보세요.",
+  셀테: "주차별 실전 셀프테스트(셀테)입니다. 시험처럼 골라 답안을 연습해 보세요.",
+  모의고사: "실전 명품 모의고사입니다. 교시별로 실제 시험처럼 풀어 보세요.",
+};
+
+// 회차 정렬: 숫자(회/주차) 큰 순.
+function roundNum(r: string): number {
+  const m = r.match(/\d+/);
+  return m ? parseInt(m[0]) : 0;
+}
 const PERIODS = ["전체", "1교시", "2교시", "3교시", "4교시"] as const;
 
 function answerLink(q: Q): string {
@@ -34,48 +54,90 @@ function answerLink(q: Q): string {
   return `/answer?period=${encodeURIComponent(period)}&question=${encodeURIComponent(q.text)}`;
 }
 
+const KIND_LABEL: Record<string, string> = {
+  기출: "📜 기출문제",
+  셀테: "📝 셀테(셀프테스트)",
+  모의고사: "🏆 실전 모의고사",
+};
+
 export default function ExamPage() {
-  const [round, setRound] = useState(ROUNDS[0] || "전체");
+  const [kind, setKind] = useState<string>(KINDS[0] || "기출");
+  const [round, setRound] = useState("전체");
   const [period, setPeriod] = useState<(typeof PERIODS)[number]>("전체");
+
+  // 선택 구분에 존재하는 회차/주차만.
+  const rounds = useMemo(
+    () =>
+      Array.from(
+        new Set(EXAMS.filter((q) => kindOf(q) === kind).map(roundOf)),
+      ).sort((a, b) => roundNum(b) - roundNum(a)),
+    [kind],
+  );
 
   const list = useMemo(
     () =>
       EXAMS.filter(
         (q) =>
-          (round === "전체" || roundOf(q.source) === round) &&
+          kindOf(q) === kind &&
+          (round === "전체" || roundOf(q) === round) &&
           (period === "전체" || q.period === period),
       ),
-    [round, period],
+    [kind, round, period],
   );
 
   // 교시별 그룹
   const groups = useMemo(() => {
     const map = new Map<string, Q[]>();
     for (const q of list) {
-      const key = `${roundOf(q.source)} · ${q.period}`;
+      const key = `${roundOf(q)} · ${q.period}`;
       if (!map.has(key)) map.set(key, []);
       map.get(key)!.push(q);
     }
-    return Array.from(map.entries());
+    return Array.from(map.entries()).sort((a, b) => {
+      const [ra, pa] = a[0].split(" · ");
+      const [rb, pb] = b[0].split(" · ");
+      return roundNum(rb) - roundNum(ra) || pa.localeCompare(pb);
+    });
   }, [list]);
 
   return (
     <div>
-      <PageHeader
-        title="📜 기출문제"
-        desc="실제 정보관리기술사 기출문제입니다. 문제를 골라 바로 답안 '소설'을 연습해 보세요."
-      />
+      <PageHeader title="📜 문제 풀이" desc={KIND_DESC[kind]} />
+
+      {KINDS.length > 1 && (
+        <div className="mb-4 inline-flex flex-wrap gap-1 rounded-xl border border-slate-200 bg-white p-1 shadow-sm">
+          {KINDS.map((k) => (
+            <button
+              key={k}
+              onClick={() => {
+                setKind(k);
+                setRound("전체");
+                setPeriod("전체");
+              }}
+              className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition ${
+                kind === k
+                  ? "bg-brand-600 text-white"
+                  : "text-slate-600 hover:bg-slate-100"
+              }`}
+            >
+              {KIND_LABEL[k] || k}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="mb-5 flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400">회차</span>
+          <span className="text-xs text-slate-400">
+            {kind === "셀테" ? "주차" : "회차"}
+          </span>
           <select
             value={round}
             onChange={(e) => setRound(e.target.value)}
             className="rounded border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700"
           >
             <option value="전체">전체</option>
-            {ROUNDS.map((r) => (
+            {rounds.map((r) => (
               <option key={r} value={r}>
                 {r}
               </option>
