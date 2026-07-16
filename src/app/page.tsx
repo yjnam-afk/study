@@ -213,10 +213,10 @@ export default function Home() {
     <div>
       <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 p-7 text-white shadow-lg ring-1 ring-slate-900/40 sm:p-9">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-slate-100 ring-1 ring-white/20">
-          🍡 말랑말랑 스파르타 ⚔️
+          📘 말랑말랑 스파르타 ⚔️
         </span>
         <p className="mt-3 text-sm font-extrabold tracking-tight text-slate-200">
-          겉은 말랑 🍡 <span className="text-white/40">·</span> 속은 스파르타 ⚔️
+          겉은 말랑 📘 <span className="text-white/40">·</span> 속은 스파르타 ⚔️
         </p>
         <h1 className="mt-1.5 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
           기술사 답안은{" "}

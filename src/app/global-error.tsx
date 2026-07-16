@@ -35,7 +35,7 @@ export default function GlobalError({
       <body style={{ fontFamily: "sans-serif", textAlign: "center", padding: "64px 16px" }}>
         {!isChunk && (
           <>
-            <div style={{ fontSize: 40 }}>🍡</div>
+            <div style={{ fontSize: 40 }}>📘</div>
             <h2 style={{ marginTop: 12, fontSize: 18, fontWeight: 700 }}>
               앗, 잠깐 문제가 생겼어요
             </h2>
