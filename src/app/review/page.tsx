@@ -33,7 +33,7 @@ const IMP_STYLE: Record<string, string> = {
   상: "bg-red-100 text-red-700",
   중: "bg-amber-100 text-amber-700",
   하: "bg-slate-100 text-slate-500",
-  출제예상: "bg-violet-100 text-violet-700",
+  출제예상: "bg-slate-100 text-brand-700",
 };
 const IMP_FILTERS = ["전체", "상", "중", "하", "출제예상"];
 const PAGE_SIZE = 50;
@@ -210,7 +210,7 @@ export default function ReviewPage() {
         className={`mb-6 flex flex-col gap-2 rounded-2xl border p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between ${
           syncState === "error"
             ? "border-red-200 bg-red-50"
-            : "border-violet-200 bg-violet-50"
+            : "border-slate-200 bg-slate-50"
         }`}
       >
         <div className="min-w-0 text-sm">
@@ -339,7 +339,7 @@ export default function ReviewPage() {
         </div>
         <div className="h-3 w-full overflow-hidden rounded-full bg-slate-100">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-brand-400 to-violet-400 transition-all"
+            className="h-full rounded-full bg-gradient-to-r from-brand-400 to-slate-400 transition-all"
             style={{ width: `${progress}%` }}
           />
         </div>

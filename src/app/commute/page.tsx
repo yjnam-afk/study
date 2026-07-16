@@ -116,7 +116,7 @@ export default function CommutePage() {
             className="block w-full cursor-pointer select-text rounded-3xl border border-slate-200 bg-white p-8 text-left shadow-sm transition active:scale-[0.99] min-h-[19rem]"
           >
             <div className="flex items-center gap-2">
-              <span className="rounded bg-violet-100 px-2 py-0.5 text-[11px] font-bold text-violet-700">
+              <span className="rounded bg-slate-100 px-2 py-0.5 text-[11px] font-bold text-brand-700">
                 {card.importance}
               </span>
               <span className="text-xs text-slate-400">{card.category}</span>
@@ -150,7 +150,7 @@ export default function CommutePage() {
                   const aligned = letters.length === s.keywords.length;
                   return (
                     <div key={si} className={si > 0 ? "mt-4" : ""}>
-                      <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
+                      <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-slate-50 p-4 text-center">
                         <div className="text-xs font-medium text-brand-500">
                           {s.label || "두음신공"}
                         </div>
