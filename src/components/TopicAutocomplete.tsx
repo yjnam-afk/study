@@ -94,7 +94,7 @@ export default function TopicAutocomplete({
                   idx === active ? "bg-brand-50" : "hover:bg-brand-50"
                 }`}
               >
-                <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+                <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-bold text-brand-700">
                   {t.importance}
                 </span>
                 <span className="min-w-0 flex-1 truncate text-slate-800">

@@ -339,7 +339,7 @@ export default function AnswerPage() {
           {hint && (
             <div className="rounded-2xl border border-brand-200 bg-white p-6 shadow-sm">
               <h3 className="text-sm font-bold text-brand-700">🔑 답안 힌트</h3>
-              <div className="mt-3 rounded-xl bg-gradient-to-br from-brand-50 to-violet-50 p-4 text-center">
+              <div className="mt-3 rounded-xl bg-gradient-to-br from-brand-50 to-slate-50 p-4 text-center">
                 <div className="text-xs font-medium text-brand-500">두음신공</div>
                 <div className="mt-1 text-2xl font-extrabold tracking-wide text-brand-700">
                   {hint.mnemonic}
@@ -445,7 +445,7 @@ function MethodGuide({ period }: { period: Period }) {
   const rows = period === "1교시" ? struct1 : struct2;
 
   return (
-    <details className="mb-5 rounded-2xl border border-violet-200 bg-violet-50 p-4">
+    <details className="mb-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
       <summary className="cursor-pointer text-sm font-bold text-brand-800">
         📐 답안 작성 방법론 ({period} · ITPE 강정배 작성론 원문 기준) — 펼쳐보기
       </summary>
@@ -486,7 +486,7 @@ function MethodGuide({ period }: { period: Period }) {
             <b>찐소설은 표의 3열(설명)</b> — 키워드는 1·2열, 설명에서 점수가 갈림
           </li>
           {period === "1교시" && (
-            <li className="font-medium text-rose-600">
+            <li className="font-medium text-brand-600">
               1교시는 <b>사실 중심</b> — 추상적 기대효과·고려사항·답 없는 간글 지양
             </li>
           )}

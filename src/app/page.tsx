@@ -22,9 +22,9 @@ import {
 } from "@/lib/plan";
 
 const toneClass: Record<string, string> = {
-  rose: "border-rose-200 bg-rose-50 hover:border-rose-300",
+  rose: "border-slate-200 bg-slate-50 hover:border-slate-300",
   amber: "border-amber-200 bg-amber-50 hover:border-amber-300",
-  violet: "border-violet-200 bg-violet-50 hover:border-violet-300",
+  violet: "border-slate-200 bg-slate-50 hover:border-slate-300",
   emerald: "border-amber-200 bg-amber-50 hover:border-amber-300",
   sky: "border-sky-200 bg-sky-50 hover:border-sky-300",
 };
@@ -38,14 +38,14 @@ const menuGroups = [
         emoji: "🥷",
         title: "두음신공",
         desc: "핵심 키워드를 두음으로 암기 → 객관식·주관식 확인",
-        color: "from-violet-500 to-purple-600",
+        color: "from-brand-600 to-brand-800",
       },
       {
         href: "/plan",
         emoji: "🗓️",
         title: "데일리 계획 (달력)",
         desc: "내일~8월 말, 매일 배정되는 토픽을 달력으로",
-        color: "from-rose-500 to-pink-600",
+        color: "from-brand-500 to-brand-600",
       },
       {
         href: "/commute",
@@ -66,7 +66,7 @@ const menuGroups = [
         emoji: "📕",
         title: "오답노트",
         desc: "자주 틀린 키워드 집중 복습",
-        color: "from-rose-400 to-pink-500",
+        color: "from-slate-400 to-brand-500",
       },
     ],
   },
@@ -78,7 +78,7 @@ const menuGroups = [
         emoji: "📝",
         title: "답안지 작성",
         desc: "키워드로 답안 '소설' 작성 + 키워드·두음 힌트 + 소설 쓰는 법",
-        color: "from-fuchsia-500 to-pink-600",
+        color: "from-brand-500 to-brand-600",
       },
       {
         href: "/exam",
@@ -92,7 +92,7 @@ const menuGroups = [
         emoji: "✅",
         title: "AI 자가채점",
         desc: "내가 쓴 소설을 방법론 기준으로 코칭·채점",
-        color: "from-rose-500 to-red-600",
+        color: "from-brand-600 to-brand-800",
       },
     ],
   },
@@ -111,7 +111,7 @@ const menuGroups = [
         emoji: "🔁",
         title: "회독 관리",
         desc: "망각곡선 간격으로 오늘 복습 추천",
-        color: "from-fuchsia-500 to-pink-600",
+        color: "from-brand-500 to-brand-600",
       },
       {
         href: "/leaderboard",
@@ -211,21 +211,21 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-rose-700 via-purple-800 to-indigo-900 p-7 text-white shadow-lg ring-1 ring-rose-900/40 sm:p-9">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-rose-100 ring-1 ring-white/20">
+      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 p-7 text-white shadow-lg ring-1 ring-slate-900/40 sm:p-9">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-slate-100 ring-1 ring-white/20">
           🍡 말랑말랑 스파르타 ⚔️
         </span>
-        <p className="mt-3 text-sm font-extrabold tracking-tight text-rose-200">
+        <p className="mt-3 text-sm font-extrabold tracking-tight text-slate-200">
           겉은 말랑 🍡 <span className="text-white/40">·</span> 속은 스파르타 ⚔️
         </p>
         <h1 className="mt-1.5 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
           기술사 답안은{" "}
-          <span className="underline decoration-rose-400 decoration-4 underline-offset-4">
+          <span className="underline decoration-brand-400 decoration-4 underline-offset-4">
             소설
           </span>
           이다 ✍️
         </h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-rose-100/90 sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-100/90 sm:text-base">
           핵심은 <b className="font-bold text-white">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
           <br />
           어려운 토픽도 키워드만 외우면 한 편의 소설처럼 답안을 완성할 수 있어요.
@@ -262,21 +262,21 @@ export default function Home() {
       </section>
 
       {/* 메인 — 오늘의 데일리 계획 토픽 */}
-      <div className="mb-6 rounded-2xl border-2 border-rose-200 bg-white p-5 shadow-sm">
+      <div className="mb-6 rounded-2xl border-2 border-slate-200 bg-white p-5 shadow-sm">
         <div className="mb-3 flex items-center justify-between">
           <h2 className="text-sm font-bold text-slate-800">
             🗓️ 오늘의 토픽{" "}
             {dayIdx >= 0 && dayIdx < PLAN_TOTAL_DAYS && (
-              <span className="text-rose-500">· Day {dayIdx + 1}</span>
+              <span className="text-brand-500">· Day {dayIdx + 1}</span>
             )}
           </h2>
-          <Link href="/plan" className="text-xs font-medium text-rose-600 hover:underline">
+          <Link href="/plan" className="text-xs font-medium text-brand-600 hover:underline">
             전체 달력 →
           </Link>
         </div>
 
         {dayIdx < 0 ? (
-          <p className="rounded-lg bg-rose-50 p-4 text-sm text-slate-600">
+          <p className="rounded-lg bg-slate-50 p-4 text-sm text-slate-600">
             데일리 계획은 <b>6/29부터</b> 시작돼요. 그 전엔 두음신공·지하철 모드로
             예열하세요!
           </p>
@@ -285,13 +285,13 @@ export default function Home() {
             🎉 8월 말 계획을 모두 마쳤어요! 복습·기출로 마무리하세요.
           </p>
         ) : isRestDay(dayIdx) ? (
-          <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-violet-50 p-5 text-center">
+          <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-slate-50 p-5 text-center">
             <p className="text-2xl">🌙</p>
             <p className="mt-1 text-sm font-bold text-indigo-700">일요일은 쉬어가요</p>
             <p className="mt-1 text-xs leading-relaxed text-slate-500">
               푹 쉬는 것도 공부의 일부예요. 지치지 않아야 오래 갑니다.
               <br />
-              생각나면 <Link href="/commute" className="font-medium text-violet-600 hover:underline">지하철 모드</Link>로 가볍게 복습만 해도 충분해요.
+              생각나면 <Link href="/commute" className="font-medium text-brand-600 hover:underline">지하철 모드</Link>로 가볍게 복습만 해도 충분해요.
             </p>
           </div>
         ) : todayTopics.length === 0 ? (
@@ -303,7 +303,7 @@ export default function Home() {
                 학습한 토픽을 체크하세요 · {todayDoneN}/{todayTopics.length} 완료
               </span>
               {todayAllDone && (
-                <span className="inline-flex items-center gap-1 rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600">
+                <span className="inline-flex items-center gap-1 rounded-full bg-slate-50 px-2.5 py-1 text-xs font-bold text-brand-600">
                   🌟 참 잘했어요!
                 </span>
               )}
@@ -340,7 +340,7 @@ export default function Home() {
                     >
                       ✓
                     </button>
-                    <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+                    <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-bold text-brand-700">
                       {t.importance}
                     </span>
                     <span
@@ -355,7 +355,7 @@ export default function Home() {
                     </span>
                     <Link
                       href={mnemonicLink(t, true)}
-                      className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                      className="shrink-0 rounded-md bg-brand-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-brand-700"
                     >
                       🥷 학습
                     </Link>
@@ -475,7 +475,7 @@ export default function Home() {
           </div>
           <div className="h-3 w-full overflow-hidden rounded-full bg-slate-100">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-pink-400 to-violet-400 transition-all"
+              className="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-600 transition-all"
               style={{ width: `${progress}%` }}
             />
           </div>

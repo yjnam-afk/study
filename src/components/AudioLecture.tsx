@@ -54,7 +54,7 @@ export default function AudioLecture({
         )}
       </div>
       {mine && s.error && (
-        <p className="mt-2 text-xs text-rose-600">{s.error}</p>
+        <p className="mt-2 text-xs text-brand-600">{s.error}</p>
       )}
       {mine && showScript && s.turns.length > 0 && (
         <div className="mt-3 max-h-72 space-y-2 overflow-y-auto rounded-xl border border-slate-200 bg-slate-50 p-3">

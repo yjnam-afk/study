@@ -158,7 +158,7 @@ function ExplainInner() {
                   ? `&topicId=${topics.find((x) => x.title === topic.trim())!.id}`
                   : ""
               }&auto=1`}
-              className="rounded-lg border border-violet-200 bg-violet-50 px-3 py-2 text-sm font-medium text-violet-700 hover:bg-violet-100"
+              className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-brand-700 hover:bg-slate-100"
             >
               🥷 이 토픽 두음신공 학습 →
             </Link>
@@ -185,8 +185,8 @@ function ExplainInner() {
             </div>
             {/* 검증된 개념도(교재 근거) — AI 생성이 아니라 데이터에 심어둔 정확한 도식 */}
             {conceptMap && (
-              <div className="mb-4 rounded-2xl border border-violet-200 bg-violet-50/40 p-4 md:p-6">
-                <div className="mb-1 text-xs font-semibold text-violet-700">
+              <div className="mb-4 rounded-2xl border border-slate-200 bg-slate-50/40 p-4 md:p-6">
+                <div className="mb-1 text-xs font-semibold text-brand-700">
                   📊 개념도
                 </div>
                 <Mermaid chart={conceptMap} />
