@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
             <Link href="/" className="flex items-center gap-2 font-bold text-slate-900">
               <span className="grid h-8 w-8 place-items-center rounded-2xl bg-gradient-to-br from-brand-400 to-brand-500 text-base shadow-sm">
-                🍡
+                📘
               </span>
               말랑말랑 스파르타
             </Link>

@@ -180,7 +180,7 @@ export default function GuidePage() {
       {/* 앱 기능 매핑 */}
       <section className="mb-8">
         <h2 className="mb-1 text-lg font-bold text-slate-800">
-          🍡 이 앱은 이미 이 시스템입니다
+          📘 이 앱은 이미 이 시스템입니다
         </h2>
         <p className="mb-3 text-xs text-slate-500">
           엔진은 다 있어요. 벼락치기로 새지 말고 이렇게 쓰세요.
