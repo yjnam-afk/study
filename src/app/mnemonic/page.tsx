@@ -419,7 +419,7 @@ function GroupCard({
         return (
           <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4">
             <div className="mb-2 text-xs font-semibold text-amber-700">
-              ✍️ 답안지 서론(정의) — 키워드 나열식 한 문장(약 2줄)
+              📖 정의 (교재 근거) — 위 키워드로 서론 2줄을 완성하세요
             </div>
             {defText && (
               <p className="font-medium leading-relaxed text-slate-800">

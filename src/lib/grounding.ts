@@ -203,6 +203,57 @@ function distractorPool(
  *  - 섹션이 없어도 정의/특징 키워드가 있으면 그 키워드로 합성(품질은 낮아도 토큰 0·즉시).
  * 키워드가 전혀 없으면 null(→ 호출부가 AI 생성으로 폴백).
  */
+
+/**
+ * 교재 원문(detail)·요약(summary)에서 "정의다운 정의" 한 문장을 뽑아 정제한다.
+ * (defKeywords를 ·로 잇던 방식은 '관리·SDI'처럼 키워드 나열이라 정의로 안 읽혔음.)
+ * - [정의]/[XXX 정의] 마커가 있으면 그 뒤부터
+ * - "용어(Eng):" 접두는 제거(제목이 따로 보이므로)
+ * - 다음 섹션 마커·구분선에서 자르고, 미완성 꼬리 괄호/접속 제거
+ * - 너무 길면(≤150자) 마지막 문장부호에서 마무리
+ */
+function cleanOne(src?: string): string {
+  let s = String(src || "")
+    .replace(/\r?\n/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!s) return "";
+  const marker = s.match(/\[[^\]]*정의\s*\]\s*(.+)/);
+  if (marker) s = marker[1].trim();
+  // 다음 섹션(대괄호 라벨)·구분선·유형/종류 목록 시작점에서 절단.
+  s = s
+    .split(
+      /\s*(?:\[[^\]]{1,24}\]|\(목적\)|\(특징\)|-{3,}|▶|- ?유형|- ?종류|- ?구성|·\s?유형)/,
+    )[0]
+    .trim();
+  // 선두 "용어:" / "용어(Eng):" 접두 제거(콜론이 앞 45자 이내일 때만).
+  s = s.replace(/^[^:：]{1,45}[:：]\s+/, "").trim();
+  // 미완성 꼬리(닫히지 않은 괄호, cf./참고 주석) 제거.
+  s = s.replace(/\s*\((?:cf|참고)[^)]*\)?\s*$/i, "").trim();
+  s = s.replace(/\s*\([^)]*$/, "").trim();
+  s = s.replace(/[\s\-–;,·]+$/, "").trim();
+  if (s.length > 150) {
+    const cut = s.slice(0, 150);
+    const dot = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("다. "));
+    s = (dot > 60 ? cut.slice(0, dot + 1) : cut).replace(/[\s\-–;,·]+$/, "").trim();
+  }
+  return s;
+}
+// 조사로 끝나면(문장이 잘렸을 가능성) 불완전으로 본다.
+const looksIncomplete = (s: string) =>
+  !s || s.length < 16 || /[을를이가은는와과의로도만]$/.test(s);
+/**
+ * 교재 원문(detail)·요약(summary)에서 "정의다운 정의" 한 문장을 뽑는다.
+ * detail 우선, 그 결과가 불완전(짧거나 조사로 끝남)하고 summary가 더 나으면 summary.
+ */
+export function cleanDefinition(detail?: string, summary?: string): string {
+  const fromDetail = cleanOne(detail);
+  if (!looksIncomplete(fromDetail)) return fromDetail;
+  const fromSummary = cleanOne(summary);
+  if (!looksIncomplete(fromSummary)) return fromSummary;
+  return fromDetail || fromSummary;
+}
+
 export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
   if (!topicId) return null;
   const d = DETAILS[topicId];
@@ -249,13 +300,16 @@ export function mnemonicFromData(topicId?: string): DataMnemonicSet | null {
   // 데이터가 전혀 없으면(키워드·섹션 모두 비었으면) AI로 폴백.
   if (introKw.length === 0 && sections.length === 0) return null;
 
-  // 서론 정의는 "키워드 나열식 한 문장(약 2줄)"이어야 한다. 교재 요약(t.summary)은
-  // 수백 자짜리 원문이라 그대로 넣으면 2줄을 한참 넘겨 넘친다. → 정의 키워드를
-  // 중점(·)으로 이어 압축(방법론상 서론 정의 형태). 정의 키워드가 없을 때만
-  // 요약의 첫 문장을 잘라 폴백한다.
-  const defLine = defKw.length
-    ? defKw.slice(0, 6).join(" · ")
-    : (t.summary || "").split(/[.!?。\n]/)[0].trim().slice(0, 60);
+  // 서론 정의: 교재 원문(detail)·요약(summary)에서 "정의다운 정의" 한 문장을 뽑는다.
+  // (예전엔 defKeywords를 ·로 이어 '관리·SDI'처럼 나와 정의로 안 읽혔다.)
+  // detail/summary가 모두 없거나 너무 짧으면 정의 키워드 나열로 폴백.
+  const defSentence = cleanDefinition(d.detail, t.summary);
+  const defLine =
+    defSentence && defSentence.length >= 12
+      ? defSentence
+      : defKw.length
+        ? defKw.slice(0, 6).join(" · ")
+        : (t.summary || "").split(/[.!?。\n]/)[0].trim().slice(0, 60);
 
   const intro: DGroup = {
     items: toItems(introKw),
