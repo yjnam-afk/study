@@ -19,6 +19,39 @@ const details = JSON.parse(
 
 const firstCh = (s) => (s || "").trim().charAt(0);
 
+// 교재 원문(detail)·요약(summary)에서 "정의다운 정의" 한 문장 추출.
+// (grounding.ts의 cleanDefinition과 동일 규칙 — 지하철 모드/두음신공 정의 일치.)
+function cleanOne(src) {
+  let s = String(src || "").replace(/\r?\n/g, " ").replace(/\s+/g, " ").trim();
+  if (!s) return "";
+  const marker = s.match(/\[[^\]]*정의\s*\]\s*(.+)/);
+  if (marker) s = marker[1].trim();
+  s = s
+    .split(
+      /\s*(?:\[[^\]]{1,24}\]|\(목적\)|\(특징\)|-{3,}|▶|- ?유형|- ?종류|- ?구성|·\s?유형)/,
+    )[0]
+    .trim();
+  s = s.replace(/^[^:：]{1,45}[:：]\s+/, "").trim();
+  s = s.replace(/\s*\((?:cf|참고)[^)]*\)?\s*$/i, "").trim();
+  s = s.replace(/\s*\([^)]*$/, "").trim();
+  s = s.replace(/[\s\-–;,·]+$/, "").trim();
+  if (s.length > 150) {
+    const cut = s.slice(0, 150);
+    const dot = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("다. "));
+    s = (dot > 60 ? cut.slice(0, dot + 1) : cut).replace(/[\s\-–;,·]+$/, "").trim();
+  }
+  return s;
+}
+const looksIncomplete = (s) =>
+  !s || s.length < 16 || /[을를이가은는와과의로도만]$/.test(s);
+function cleanDefinition(detail, summary) {
+  const fromDetail = cleanOne(detail);
+  if (!looksIncomplete(fromDetail)) return fromDetail;
+  const fromSummary = cleanOne(summary);
+  if (!looksIncomplete(fromSummary)) return fromSummary;
+  return fromDetail || fromSummary;
+}
+
 const cards = [];
 for (const t of topics) {
   const d = details[t.id] || {};
@@ -46,7 +79,7 @@ for (const t of topics) {
     title: t.title,
     category: t.category,
     importance: t.importance,
-    definition: t.summary || "",
+    definition: cleanDefinition(d.detail, t.summary) || t.summary || "",
     sections,
     // 구버전 필드(다른 소비처 호환): 첫 섹션 기준.
     mnemonic: sections[0].mnemonic,
