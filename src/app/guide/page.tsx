@@ -17,11 +17,11 @@ export default function GuidePage() {
       />
 
       {/* 핵심 한 줄 */}
-      <section className="mb-6 rounded-2xl bg-gradient-to-br from-pink-100 via-rose-100 to-violet-100 p-6 ring-1 ring-rose-100">
+      <section className="mb-6 rounded-2xl bg-gradient-to-br from-slate-100 via-slate-100 to-slate-100 p-6 ring-1 ring-slate-100">
         <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
-          단기 암기는 아무리 해도 증발해서 늘 <b className="text-rose-600">0에서 다시 시작</b> →
-          그래서 지칩니다. 핵심은 <b className="text-rose-600">고강도·단기 → 저강도·장기</b>로
-          바꿔 <b className="text-rose-600">쌓이게</b> 만드는 것. 그 엔진이 아래 4가지예요.
+          단기 암기는 아무리 해도 증발해서 늘 <b className="text-brand-600">0에서 다시 시작</b> →
+          그래서 지칩니다. 핵심은 <b className="text-brand-600">고강도·단기 → 저강도·장기</b>로
+          바꿔 <b className="text-brand-600">쌓이게</b> 만드는 것. 그 엔진이 아래 4가지예요.
         </p>
       </section>
 
@@ -29,7 +29,7 @@ export default function GuidePage() {
       <section className="mb-8">
         <h2 className="mb-1 text-lg font-bold text-slate-800">
           4대 엔진 —{" "}
-          <span className="text-rose-600">인·분·교·정</span>
+          <span className="text-brand-600">인·분·교·정</span>
         </h2>
         <p className="mb-3 text-xs text-slate-500">
           학습과학이 검증한, 오래 남는 공부의 4원리.
@@ -59,9 +59,9 @@ export default function GuidePage() {
           ].map((x) => (
             <div
               key={x.k}
-              className="flex gap-3 rounded-2xl border border-rose-100 bg-white p-4 shadow-sm"
+              className="flex gap-3 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm"
             >
-              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-pink-300 to-violet-300 text-lg font-extrabold text-white">
+              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-slate-300 to-slate-300 text-lg font-extrabold text-white">
                 {x.k}
               </div>
               <div>
@@ -102,7 +102,7 @@ export default function GuidePage() {
               key={i}
               className="flex gap-3 rounded-xl border border-slate-100 bg-white p-4 shadow-sm"
             >
-              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-rose-100 text-xs font-bold text-rose-600">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-slate-100 text-xs font-bold text-brand-600">
                 {i + 1}
               </span>
               <div>
@@ -120,8 +120,8 @@ export default function GuidePage() {
           👥 스터디 모임은 이렇게
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-2xl border border-violet-100 bg-violet-50/50 p-4">
-            <div className="text-sm font-bold text-violet-700">
+          <div className="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
+            <div className="text-sm font-bold text-brand-700">
               돌아가며 30초 설명
             </div>
             <p className="mt-1 text-xs leading-relaxed text-slate-600">
@@ -129,8 +129,8 @@ export default function GuidePage() {
               지적당한 게 제일 오래 남습니다(정교화).
             </p>
           </div>
-          <div className="rounded-2xl border border-rose-100 bg-rose-50/50 p-4">
-            <div className="text-sm font-bold text-rose-700">
+          <div className="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
+            <div className="text-sm font-bold text-brand-700">
               답안은 “가리고 인출해서” 쓰기
             </div>
             <p className="mt-1 text-xs leading-relaxed text-slate-600">
@@ -180,7 +180,7 @@ export default function GuidePage() {
       {/* 앱 기능 매핑 */}
       <section className="mb-8">
         <h2 className="mb-1 text-lg font-bold text-slate-800">
-          🍡 이 앱은 이미 이 시스템입니다
+          📘 이 앱은 이미 이 시스템입니다
         </h2>
         <p className="mb-3 text-xs text-slate-500">
           엔진은 다 있어요. 벼락치기로 새지 말고 이렇게 쓰세요.
@@ -195,9 +195,9 @@ export default function GuidePage() {
             <Link
               key={href}
               href={href}
-              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition hover:border-rose-300 hover:bg-rose-50/40"
+              className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 shadow-sm transition hover:border-slate-300 hover:bg-slate-50/40"
             >
-              <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-600">
+              <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-brand-600">
                 {tag}
               </span>
               <div className="min-w-0">
@@ -215,7 +215,7 @@ export default function GuidePage() {
         “빨리 외워서 써보자”는 <b className="text-slate-700">시험 직전엔 맞지만</b>,
         지금부터 그러면 3개월 내내 밑빠진 독에 물 붓기.
         <br />
-        <b className="text-rose-600">쌓이는 공부</b>가 결국 지치지 않고, 결국 이깁니다.
+        <b className="text-brand-600">쌓이는 공부</b>가 결국 지치지 않고, 결국 이깁니다.
       </p>
     </div>
   );

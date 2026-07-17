@@ -135,7 +135,7 @@ export default function PlanPage() {
           </span>
         </div>
 
-        <div className="mt-3 rounded-xl border border-rose-200 bg-rose-50 p-3 text-xs leading-relaxed text-rose-800">
+        <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs leading-relaxed text-slate-800">
           🎯 <b>상·출제예상 위주</b>로 배정합니다 (앞 토픽일수록 시험 적중↑).
           핵심 <b>상+출제예상 {forecast.coreCount}토픽</b>만 보면{" "}
           <b>하루 {forecast.coreRequiredPerDay}개</b>로 8/31까지 완주 →{" "}
@@ -230,7 +230,7 @@ export default function PlanPage() {
                     key={w}
                     className={`pb-1 text-[11px] font-medium ${
                       i === 0
-                        ? "text-rose-400"
+                        ? "text-slate-400"
                         : i === 6
                           ? "text-brand-400"
                           : "text-slate-400"
@@ -289,7 +289,7 @@ export default function PlanPage() {
                         ) : isDone ? (
                           <div className="mt-0.5 flex flex-col items-center leading-none">
                             <span className="text-base">🌟</span>
-                            <span className="text-[8px] font-bold text-rose-500">
+                            <span className="text-[8px] font-bold text-brand-500">
                               참잘했어요
                             </span>
                           </div>
@@ -396,9 +396,9 @@ function DayDetail({
       </div>
 
       {allDone && (
-        <div className="mb-3 flex items-center gap-2 rounded-xl border border-rose-200 bg-rose-50 p-3">
+        <div className="mb-3 flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 p-3">
           <span className="text-2xl">🌟</span>
-          <span className="text-sm font-bold text-rose-600">
+          <span className="text-sm font-bold text-brand-600">
             참 잘했어요! 오늘 토픽을 모두 끝냈어요.
           </span>
         </div>
@@ -443,7 +443,7 @@ function DayDetail({
               <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white text-[11px] font-bold text-slate-500">
                 {i + 1}
               </span>
-              <span className="rounded bg-violet-100 px-1.5 py-0.5 text-[10px] font-bold text-violet-700">
+              <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-bold text-brand-700">
                 {t.importance}
               </span>
               <span
@@ -459,7 +459,7 @@ function DayDetail({
               {editing ? (
                 <button
                   onClick={() => onRemove(t.id)}
-                  className="shrink-0 rounded-md border border-rose-200 bg-white px-2 py-1 text-xs font-bold text-rose-500 hover:bg-rose-50"
+                  className="shrink-0 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs font-bold text-brand-500 hover:bg-slate-50"
                   aria-label="제거"
                 >
                   ✕
@@ -468,7 +468,7 @@ function DayDetail({
                 <>
                   <Link
                     href={mnemonicLink(t, true)}
-                    className="shrink-0 rounded-md bg-violet-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-violet-700"
+                    className="shrink-0 rounded-md bg-brand-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-brand-700"
                   >
                     🥷 학습
                   </Link>

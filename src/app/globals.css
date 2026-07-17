@@ -9,7 +9,7 @@
 }
 
 body {
-  @apply bg-rose-50/60 text-slate-700 antialiased;
+  @apply bg-slate-50/60 text-slate-700 antialiased;
   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
@@ -88,7 +88,7 @@ details > summary::after {
 }
 details[open] > summary::after {
   transform: rotate(180deg);
-  color: #f472b6;
+  color: #2563eb;
 }
 
 /* 커서 버디(이미지) — 마우스를 멀찌감치 따라옴. 파일 없으면 렌더 안 됨 */

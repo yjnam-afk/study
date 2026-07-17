@@ -39,7 +39,7 @@ export default function Error({
 
   return (
     <div className="mx-auto max-w-md py-16 text-center">
-      <div className="text-4xl">🍡</div>
+      <div className="text-4xl">📘</div>
       <h2 className="mt-3 text-lg font-bold text-slate-800">
         앗, 잠깐 문제가 생겼어요
       </h2>
