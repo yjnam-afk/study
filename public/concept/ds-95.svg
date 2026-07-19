@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto"><path d="M8,0 L0,3 L8,6 Z" fill="#64748b"/></marker>
+  </defs>
+  <style>
+    .tag{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.rdr{fill:#dbeafe;stroke:#2563eb;stroke-width:2}
+    .mw{fill:#f8fafc;stroke:#94a3b8;stroke-width:2}.db{fill:#ecfdf5;stroke:#10b981;stroke-width:2}
+    .t{fill:#1e3a8a;font-size:14px;font-weight:600;text-anchor:middle}.s{fill:#64748b;font-size:11px;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:2;fill:none}.rf{fill:#2563eb;font-size:12px;font-weight:600;text-anchor:middle}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <rect class="tag" x="30" y="100" width="150" height="76" rx="10"/>
+  <text class="t" x="105" y="130">RFID 태그</text><text class="s" x="105" y="150">마이크로칩 + 안테나</text><text class="s" x="105" y="166">고유 ID 저장</text>
+
+  <rect class="rdr" x="300" y="100" width="150" height="76" rx="10"/>
+  <text class="t" x="375" y="130">리더 (Reader)</text><text class="s" x="375" y="150">RF 송수신</text><text class="s" x="375" y="166">근·원거리 R/W</text>
+
+  <rect class="mw" x="500" y="102" width="120" height="72" rx="10"/>
+  <text class="t" x="560" y="133" font-size="13">미들웨어</text><text class="s" x="560" y="152">필터·중복제거</text>
+
+  <rect class="db" x="650" y="102" width="110" height="72" rx="10"/>
+  <text class="t" x="705" y="133" fill="#065f46">호스트 / DB</text><text class="s" x="705" y="152">사물·상황 정보</text>
+
+  <!-- RF wireless -->
+  <line class="edge" x1="180" y1="128" x2="298" y2="128" marker-end="url(#a)"/>
+  <line class="edge" x1="298" y1="150" x2="180" y2="150" marker-end="url(#a2)"/>
+  <text class="rf" x="240" y="118">RF 무선</text><text class="s" x="240" y="170">전파로 비접촉 인식</text>
+
+  <line class="edge" x1="450" y1="138" x2="498" y2="138" marker-end="url(#a)"/>
+  <line class="edge" x1="620" y1="138" x2="648" y2="138" marker-end="url(#a)"/>
+  <text class="cap" x="390" y="230">비접촉 자동 인식 · 다중 태그 동시 인식 · 물류·재고·출입·이력관리 활용</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/></marker></defs>
+  <style>
+    .det{fill:#dbeafe;stroke:#2563eb;stroke-width:2}.dep{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}
+    .step{fill:#ecfdf5;stroke:#10b981;stroke-width:2}
+    .t{fill:#1e3a8a;font-size:14px;font-weight:600;text-anchor:middle}.s{fill:#64748b;font-size:11px;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:2;fill:none}.lbl{fill:#2563eb;font-size:13px;font-weight:700;text-anchor:middle}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <!-- X -> Y -->
+  <rect class="det" x="90"  y="40" width="150" height="52" rx="10"/><text class="t" x="165" y="66">결정자 X</text><text class="s" x="165" y="83">예) 학번</text>
+  <rect class="dep" x="440" y="40" width="180" height="52" rx="10"/><text class="t" x="530" y="66">종속 Y</text><text class="s" x="530" y="83">예) 이름·학과</text>
+  <line class="edge" x1="240" y1="66" x2="438" y2="66" marker-end="url(#a)"/>
+  <text class="lbl" x="340" y="56">X → Y</text><text class="s" x="340" y="86">X가 정해지면 Y가 유일하게 결정</text>
+
+  <!-- normalization steps -->
+  <rect class="step" x="30"  y="150" width="150" height="48" rx="10"/><text class="t" x="105" y="172" fill="#065f46">1NF</text><text class="s" x="105" y="189">원자값</text>
+  <rect class="step" x="215" y="150" width="150" height="48" rx="10"/><text class="t" x="290" y="172" fill="#065f46">2NF</text><text class="s" x="290" y="189">부분함수 종속 제거</text>
+  <rect class="step" x="400" y="150" width="150" height="48" rx="10"/><text class="t" x="475" y="172" fill="#065f46">3NF</text><text class="s" x="475" y="189">이행함수 종속 제거</text>
+  <rect class="step" x="585" y="150" width="165" height="48" rx="10"/><text class="t" x="667" y="172" fill="#065f46">BCNF</text><text class="s" x="667" y="189">결정자=후보키</text>
+  <line class="edge" x1="180" y1="174" x2="213" y2="174" marker-end="url(#a)"/>
+  <line class="edge" x1="365" y1="174" x2="398" y2="174" marker-end="url(#a)"/>
+  <line class="edge" x1="550" y1="174" x2="583" y2="174" marker-end="url(#a)"/>
+
+  <text class="cap" x="390" y="250">잘못된 함수 종속 → 이상현상(삽입·삭제·갱신) 발생 → 정규화로 분해·제거</text>
+</svg>

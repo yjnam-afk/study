@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/></marker></defs>
+  <style>
+    .hub{fill:#dbeafe;stroke:#2563eb;stroke-width:2.5}.box{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.out{fill:#fef3c7;stroke:#f59e0b;stroke-width:2}
+    .t{fill:#1e3a8a;font-size:14px;font-weight:700;text-anchor:middle}.s{fill:#334155;font-size:11px;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:1.8;fill:none}.el{fill:#475569;font-size:11px;text-anchor:middle}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <!-- hub -->
+  <rect class="hub" x="300" y="140" width="180" height="60" rx="12"/><text class="t" x="390" y="166">ITSM</text><text class="s" x="390" y="184">IT 서비스 관리 체계</text>
+
+  <!-- surrounding -->
+  <rect class="box" x="40"  y="40" width="150" height="48" rx="10"/><text class="s" x="115" y="60" font-weight="600">ITIL</text><text class="s" x="115" y="76">Best Practice</text>
+  <rect class="box" x="40"  y="250" width="150" height="48" rx="10"/><text class="s" x="115" y="270" font-weight="600">eSCM · ISO 20000</text><text class="s" x="115" y="286">인증·능력평가</text>
+  <rect class="box" x="590" y="40" width="150" height="48" rx="10"/><text class="s" x="665" y="60" font-weight="600">CMMI · SPICE · PMO</text><text class="s" x="665" y="76">프로세스·품질</text>
+  <rect class="out" x="560" y="250" width="190" height="52" rx="10"/><text class="s" x="655" y="270" font-weight="600" fill="#92400e">SLM · SLA · SoW</text><text class="s" x="655" y="288" fill="#92400e">MTTF · MTBF · MTTR</text>
+
+  <path class="edge" d="M190,66 C260,90 280,120 305,150" marker-end="url(#a)"/><text class="el" x="240" y="112">모범사례 제공</text>
+  <path class="edge" d="M190,270 C260,240 285,215 305,192" marker-end="url(#a)"/><text class="el" x="245" y="235">인증·평가</text>
+  <path class="edge" d="M590,66 C520,90 500,120 475,150" marker-end="url(#a)"/><text class="el" x="545" y="112">프로세스 성숙</text>
+  <path class="edge" d="M470,196 C520,224 545,244 560,262" marker-end="url(#a)"/><text class="el" x="540" y="228">수준·가용성 측정</text>
+
+  <text class="cap" x="390" y="326">중심 ITSM ↔ ITIL·ISO20000·CMMI 연계 · 산출물로 서비스수준(SLA)·가용성 지표 관리</text>
+</svg>

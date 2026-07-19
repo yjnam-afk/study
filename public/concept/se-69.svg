@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/></marker></defs>
+  <style>
+    .box{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.gw{fill:#dbeafe;stroke:#2563eb;stroke-width:2}
+    .db{fill:#ecfdf5;stroke:#10b981;stroke-width:2}
+    .t{fill:#1e3a8a;font-size:14px;font-weight:600;text-anchor:middle}.s{fill:#64748b;font-size:11px;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:2;fill:none}.cap{fill:#64748b;font-size:11px;text-anchor:start}
+  </style>
+  <rect class="box" x="24" y="158" width="110" height="48" rx="10"/><text class="t" x="79" y="187">클라이언트</text>
+  <rect class="gw" x="176" y="150" width="132" height="64" rx="10"/><text class="t" x="242" y="178">API Gateway</text><text class="s" x="242" y="196">라우팅·인증</text>
+
+  <rect class="box" x="372" y="30" width="156" height="52" rx="10"/><text class="t" x="450" y="61">주문 서비스</text>
+  <rect class="box" x="372" y="154" width="156" height="52" rx="10"/><text class="t" x="450" y="185">결제 서비스</text>
+  <rect class="box" x="372" y="278" width="156" height="52" rx="10"/><text class="t" x="450" y="309">회원 서비스</text>
+
+  <rect class="db" x="580" y="34" width="92" height="44" rx="10"/><text class="t" x="626" y="61" fill="#065f46">DB</text>
+  <rect class="db" x="580" y="158" width="92" height="44" rx="10"/><text class="t" x="626" y="185" fill="#065f46">DB</text>
+  <rect class="db" x="580" y="282" width="92" height="44" rx="10"/><text class="t" x="626" y="309" fill="#065f46">DB</text>
+
+  <line class="edge" x1="134" y1="182" x2="174" y2="182" marker-end="url(#a)"/>
+  <path class="edge" d="M308,175 C340,120 350,80 370,66" marker-end="url(#a)"/>
+  <line class="edge" x1="308" y1="182" x2="370" y2="182" marker-end="url(#a)"/>
+  <path class="edge" d="M308,189 C340,244 350,290 370,304" marker-end="url(#a)"/>
+  <line class="edge" x1="528" y1="56"  x2="578" y2="56"  marker-end="url(#a)"/>
+  <line class="edge" x1="528" y1="180" x2="578" y2="180" marker-end="url(#a)"/>
+  <line class="edge" x1="528" y1="304" x2="578" y2="304" marker-end="url(#a)"/>
+
+  <text class="cap" x="24" y="350">· 서비스별 독립 배포·확장 · 서비스마다 전용 DB(Polyglot) · REST/gRPC · 서비스 메시로 통신·관측</text>
+</svg>

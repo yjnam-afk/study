@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <style>
+    .ca{fill:#3b82f6}.cb{fill:#ef4444}.q{fill:#111827}
+    .k{fill:none;stroke:#f59e0b;stroke-width:2.5;stroke-dasharray:7 5}
+    .t{fill:#0f172a;font-size:12px;font-weight:600;text-anchor:middle}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <!-- k circle around query -->
+  <circle class="k" cx="390" cy="170" r="105"/>
+  <!-- query point -->
+  <polygon class="q" points="390,156 402,178 378,178"/><text class="t" x="390" y="150" fill="#111827">? (질의점)</text>
+
+  <!-- class A blue -->
+  <g class="ca"><circle cx="360" cy="150" r="8"/><circle cx="420" cy="130" r="8"/><circle cx="350" cy="210" r="8"/><circle cx="250" cy="120" r="8"/><circle cx="230" cy="240" r="8"/></g>
+  <!-- class B red -->
+  <g class="cb"><circle cx="450" cy="200" r="8"/><circle cx="470" cy="120" r="8"/><circle cx="560" cy="180" r="8"/><circle cx="540" cy="250" r="8"/></g>
+
+  <text class="t" x="640" y="120" fill="#3b82f6">● 클래스 A</text>
+  <text class="t" x="640" y="145" fill="#ef4444">● 클래스 B</text>
+  <text class="t" x="390" y="300" fill="#92400e">k = 5 이웃: A 3개 · B 2개 → 다수결로 A 분류</text>
+  <text class="cap" x="390" y="326">거리 기준 가장 가까운 k개 이웃의 다수 클래스로 분류(게으른 학습, k·거리척도가 관건)</text>
+</svg>

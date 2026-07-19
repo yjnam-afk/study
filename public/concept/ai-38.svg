@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <style>
+    .ca{fill:#3b82f6}.cb{fill:#ef4444}.sv{fill:none;stroke:#0f172a;stroke-width:2.5}
+    .hp{stroke:#0f172a;stroke-width:2.5}.mg{stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:6 4}
+    .t{fill:#0f172a;font-size:12px;font-weight:600}.cap{fill:#64748b;font-size:11px;text-anchor:middle}.ax{stroke:#cbd5e1;stroke-width:1.5}
+  </style>
+  <line class="ax" x1="60" y1="290" x2="620" y2="290"/><line class="ax" x1="60" y1="30" x2="60" y2="290"/>
+  <!-- class A (blue, lower-left) -->
+  <g class="ca"><circle cx="120" cy="250" r="7"/><circle cx="160" cy="220" r="7"/><circle cx="110" cy="200" r="7"/><circle cx="190" cy="255" r="7"/><circle cx="150" cy="270" r="7"/></g>
+  <!-- class B (red, upper-right) -->
+  <g class="cb"><circle cx="430" cy="90" r="7"/><circle cx="470" cy="120" r="7"/><circle cx="500" cy="70" r="7"/><circle cx="440" cy="140" r="7"/><circle cx="520" cy="110" r="7"/></g>
+  <!-- support vectors (highlighted) -->
+  <circle class="ca sv" cx="230" cy="205" r="10"/><circle class="cb sv" cx="360" cy="150" r="10"/>
+  <!-- hyperplane -->
+  <line class="hp" x1="140" y1="300" x2="560" y2="40"/>
+  <!-- margins -->
+  <line class="mg" x1="90"  y1="300" x2="510" y2="40"/>
+  <line class="mg" x1="190" y1="300" x2="610" y2="40"/>
+  <text class="t" x="470" y="270">결정 초평면</text>
+  <text class="t" x="240" y="180">서포트 벡터</text>
+  <text class="t" x="330" y="235" fill="#64748b">← 마진(최대화) →</text>
+  <text class="cap" x="390" y="322">두 클래스를 나누는 초평면을 마진(여백)이 최대가 되게 결정 · 경계에 걸린 점 = 서포트 벡터</text>
+</svg>
