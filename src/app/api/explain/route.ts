@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       });
 
     const text = await cached(
-      `explain:v10:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
+      `explain:v11:${topic}:${lv}:${grounding ? hashKey(grounding) : "-"}`,
       60 * 86400,
       // generateText가 이미 내부에서 제공자 체인을 순회하며 valid(isComplete)
       // 검증·폴백을 한다. 여기서 gen()을 또 감싸 재시도하면 최악의 경우 시간이

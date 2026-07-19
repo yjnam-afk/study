@@ -60,9 +60,18 @@ const KIND_LABEL: Record<string, string> = {
   모의고사: "🏆 모의고사",
 };
 
+// 구분의 가장 최신(숫자 큰) 회차/주차. 기본으로 이것만 렌더 → '전체'로 수백 문제를
+// 한 번에 그려 느려지던 문제 해소(원하면 회차에서 '전체' 선택 가능).
+function newestRound(k: string): string {
+  const rs = Array.from(
+    new Set(EXAMS.filter((q) => kindOf(q) === k).map(roundOf)),
+  ).sort((a, b) => roundNum(b) - roundNum(a));
+  return rs[0] || "전체";
+}
+
 export default function ExamPage() {
   const [kind, setKind] = useState<string>(KINDS[0] || "기출");
-  const [round, setRound] = useState("전체");
+  const [round, setRound] = useState<string>(() => newestRound(KINDS[0] || "기출"));
   const [period, setPeriod] = useState<(typeof PERIODS)[number]>("전체");
 
   // 선택 구분에 존재하는 회차/주차만.
@@ -125,7 +134,7 @@ export default function ExamPage() {
               type="button"
               onClick={() => {
                 setKind(k);
-                setRound("전체");
+                setRound(newestRound(k));
                 setPeriod("전체");
               }}
               className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition sm:px-5 ${
