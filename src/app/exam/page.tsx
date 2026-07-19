@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
 import Markdown from "@/components/Markdown";
@@ -107,10 +107,16 @@ export default function ExamPage() {
     [kind, round, period],
   );
 
-  // 교시별 그룹
+  // 페이지네이션 — 처음엔 일부만 렌더(수백 문제를 한 번에 그리지 않게). 필터가 바뀌면 리셋.
+  const PAGE = 20;
+  const [visible, setVisible] = useState(PAGE);
+  useEffect(() => setVisible(PAGE), [kind, round, period]);
+  const capped = useMemo(() => list.slice(0, visible), [list, visible]);
+
+  // 교시별 그룹(현재 렌더 대상 capped 기준)
   const groups = useMemo(() => {
     const map = new Map<string, Q[]>();
-    for (const q of list) {
+    for (const q of capped) {
       const key = `${roundOf(q)} · ${q.period}`;
       if (!map.has(key)) map.set(key, []);
       map.get(key)!.push(q);
@@ -120,7 +126,7 @@ export default function ExamPage() {
       const [rb, pb] = b[0].split(" · ");
       return roundNum(rb) - roundNum(ra) || pa.localeCompare(pb);
     });
-  }, [list]);
+  }, [capped]);
 
   return (
     <div>
@@ -182,7 +188,9 @@ export default function ExamPage() {
             </button>
           ))}
         </div>
-        <span className="ml-auto text-xs text-slate-400">총 {list.length}문제</span>
+        <span className="ml-auto text-xs text-slate-400">
+          {Math.min(visible, list.length)}/{list.length}문제
+        </span>
       </div>
 
       {groups.length === 0 && (
@@ -265,6 +273,17 @@ export default function ExamPage() {
           </section>
         ))}
       </div>
+
+      {list.length > visible && (
+        <div className="mt-5 text-center">
+          <button
+            onClick={() => setVisible((v) => v + PAGE)}
+            className="rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
+          >
+            더 보기 (+{Math.min(PAGE, list.length - visible)}) · 남은 {list.length - visible}문제
+          </button>
+        </div>
+      )}
 
       <p className="mt-8 rounded-xl border border-slate-100 bg-slate-50 p-4 text-xs text-slate-400">
         기출문제는 계속 추가됩니다. 답안 작성 시 토픽을 연결하면 서브노트 내용을
