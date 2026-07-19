@@ -2,7 +2,6 @@
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Mermaid from "./Mermaid";
 
 /**
  * AI가 내는 마크다운 표는 자주 깨진다(표 앞 빈 줄 누락, |---| 구분행 누락).
@@ -35,7 +34,7 @@ function repairTables(md: string): string {
   return out.join("\n");
 }
 
-/** AI 답안/설명을 표·목록·개념도(mermaid) 포함 마크다운으로 렌더링합니다. */
+/** AI 답안/설명을 표·목록 포함 마크다운으로 렌더링합니다(mermaid 도식은 렌더하지 않음). */
 export default function Markdown({ children }: { children: string }) {
   return (
     <div className="prose-answer max-w-none">
@@ -44,10 +43,8 @@ export default function Markdown({ children }: { children: string }) {
         components={{
           code(props) {
             const { className, children } = props;
-            const text = String(children ?? "");
-            if (/language-mermaid/.test(className || "")) {
-              return <Mermaid chart={text.replace(/\n$/, "")} />;
-            }
+            // mermaid 등 다이어그램 코드블록은 화면에 그리지 않는다(사용자 요청).
+            if (/language-mermaid/.test(className || "")) return null;
             return <code className={className}>{children}</code>;
           },
         }}

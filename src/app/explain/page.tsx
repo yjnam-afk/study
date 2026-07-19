@@ -22,7 +22,6 @@ function ExplainInner() {
   const [recCat, setRecCat] = useState(CATS[0]);
   const [level, setLevel] = useState("수험생");
   const [result, setResult] = useState("");
-  const [conceptMap, setConceptMap] = useState("");
   const [conceptTopicId, setConceptTopicId] = useState<string | undefined>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -57,7 +56,6 @@ function ExplainInner() {
     setLoading(true);
     setError("");
     setResult("");
-    setConceptMap("");
     setConceptTopicId(undefined);
     try {
       const matched = topics.find((x) => x.title === topic.trim());
@@ -70,7 +68,6 @@ function ExplainInner() {
       const { ok, data } = await readJsonSafe(res);
       if (!ok) throw new Error((data.error as string) || "생성 실패");
       setResult(data.explanation as string);
-      setConceptMap((data.conceptMap as string) || "");
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -186,8 +183,8 @@ function ExplainInner() {
                 url={`https://study-teal-eight.vercel.app/explain?topic=${encodeURIComponent(topic.trim())}&auto=1`}
               />
             </div>
-            {/* 개념도 — 실제 교재 이미지(public/concept/<id>.svg|png) 우선, 없으면 mermaid 폴백 */}
-            <ConceptDiagram topicId={conceptTopicId} chart={conceptMap} />
+            {/* 개념도 — 실제 교재 이미지(public/concept/<id>.svg|png)만 표시 */}
+            <ConceptDiagram topicId={conceptTopicId} />
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
               <Markdown>{result}</Markdown>
             </article>
