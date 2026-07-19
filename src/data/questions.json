@@ -8904,7 +8904,7 @@
     "text": "정부는 AI 산업 경쟁력 강화를 위해 「인공지능 데이터센터 산업 진흥에 관한 특별법」 제정을 추진하고 있다. 다음을 설명하시오.\n가. 인공지능 데이터센터(AI Data Center)의 개념 및 추진 배경\n나. 특별법의 주요 내용 및 핵심 지원 정책\n다. AI 데이터센터 구축 시 고려사항 및 발전 방향"
   },
   {
-    "id": "yc1-01",
+    "id": "yc1-001",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -8913,79 +8913,7 @@
     "text": "LLM 파인튜닝(Fine-tuning), RAG(Retrieval-Augmented Generation), 프롬프트 엔지니어링을 비교하여 설명하시오."
   },
   {
-    "id": "yc1-02",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "MoE(Mixture of Experts) 아키텍처를 설명하시오."
-  },
-  {
-    "id": "yc1-03",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "벡터 데이터베이스(Vector DB)와 임베딩(Embedding)을 설명하시오."
-  },
-  {
-    "id": "yc1-04",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "AI 에이전트(Agentic AI)와 에이전트 오케스트레이션을 설명하시오."
-  },
-  {
-    "id": "yc1-05",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "sLLM(경량 대형언어모델)의 개념과 필요성을 설명하시오."
-  },
-  {
-    "id": "yc1-06",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "온디바이스 AI(On-device AI)를 설명하시오."
-  },
-  {
-    "id": "yc1-07",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "LLM의 환각(Hallucination) 현상과 그라운딩(Grounding) 완화 기법을 설명하시오."
-  },
-  {
-    "id": "yc1-08",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "지식 증류(Knowledge Distillation)를 설명하시오."
-  },
-  {
-    "id": "yc1-09",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "인공지능",
-    "source": "예상 1교시",
-    "text": "모델 컨텍스트 프로토콜(MCP, Model Context Protocol)을 설명하시오."
-  },
-  {
-    "id": "yc1-10",
+    "id": "yc1-002",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -8994,52 +8922,7 @@
     "text": "프롬프트 인젝션(Prompt Injection) 공격과 대응방안을 설명하시오."
   },
   {
-    "id": "yc1-11",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "보안",
-    "source": "예상 1교시",
-    "text": "제로 트러스트 성숙도 모델(Zero Trust Maturity Model)을 설명하시오."
-  },
-  {
-    "id": "yc1-12",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "보안",
-    "source": "예상 1교시",
-    "text": "SBOM(Software Bill of Materials)과 소프트웨어 공급망 보안을 설명하시오."
-  },
-  {
-    "id": "yc1-13",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "보안",
-    "source": "예상 1교시",
-    "text": "양자내성암호(PQC, Post-Quantum Cryptography)를 설명하시오."
-  },
-  {
-    "id": "yc1-14",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "보안",
-    "source": "예상 1교시",
-    "text": "SASE(Secure Access Service Edge)를 설명하시오."
-  },
-  {
-    "id": "yc1-15",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "보안",
-    "source": "예상 1교시",
-    "text": "패스키(Passkey)와 FIDO2를 설명하시오."
-  },
-  {
-    "id": "yc1-16",
+    "id": "yc1-003",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9048,43 +8931,7 @@
     "text": "쿠버네티스 오토스케일링(HPA, VPA, KEDA)을 설명하시오."
   },
   {
-    "id": "yc1-17",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "클라우드/인프라",
-    "source": "예상 1교시",
-    "text": "서비스 메시(Service Mesh)와 사이드카(Sidecar) 패턴을 설명하시오."
-  },
-  {
-    "id": "yc1-18",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "클라우드/인프라",
-    "source": "예상 1교시",
-    "text": "eBPF(extended Berkeley Packet Filter)를 설명하시오."
-  },
-  {
-    "id": "yc1-19",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "클라우드/인프라",
-    "source": "예상 1교시",
-    "text": "플랫폼 엔지니어링과 내부 개발자 플랫폼(IDP)을 설명하시오."
-  },
-  {
-    "id": "yc1-20",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "클라우드/인프라",
-    "source": "예상 1교시",
-    "text": "FinOps(클라우드 재무운영)를 설명하시오."
-  },
-  {
-    "id": "yc1-21",
+    "id": "yc1-004",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9093,34 +8940,7 @@
     "text": "데이터 메시(Data Mesh)를 설명하시오."
   },
   {
-    "id": "yc1-22",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "데이터베이스",
-    "source": "예상 1교시",
-    "text": "데이터 레이크하우스(Data Lakehouse)를 설명하시오."
-  },
-  {
-    "id": "yc1-23",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "데이터베이스",
-    "source": "예상 1교시",
-    "text": "데이터 계약(Data Contract)을 설명하시오."
-  },
-  {
-    "id": "yc1-24",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "데이터베이스",
-    "source": "예상 1교시",
-    "text": "데이터 관측가능성(Data Observability)을 설명하시오."
-  },
-  {
-    "id": "yc1-25",
+    "id": "yc1-005",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9129,34 +8949,7 @@
     "text": "바이브 코딩(Vibe Coding)과 AI 페어 프로그래밍을 설명하시오."
   },
   {
-    "id": "yc1-26",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "소프트웨어공학",
-    "source": "예상 1교시",
-    "text": "헥사고날 아키텍처(포트 앤 어댑터)를 설명하시오."
-  },
-  {
-    "id": "yc1-27",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "소프트웨어공학",
-    "source": "예상 1교시",
-    "text": "관측성(Observability)의 3요소(로그·메트릭·트레이스)를 설명하시오."
-  },
-  {
-    "id": "yc1-28",
-    "kind": "예상",
-    "round": "예상",
-    "period": "1교시",
-    "category": "소프트웨어공학",
-    "source": "예상 1교시",
-    "text": "카오스 엔지니어링(Chaos Engineering)을 설명하시오."
-  },
-  {
-    "id": "yc1-29",
+    "id": "yc1-006",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9165,7 +8958,7 @@
     "text": "SRE(Site Reliability Engineering)와 에러 버짓(Error Budget)을 설명하시오."
   },
   {
-    "id": "yc1-30",
+    "id": "yc1-007",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9174,7 +8967,7 @@
     "text": "AI 전환(AX, AI Transformation)을 설명하시오."
   },
   {
-    "id": "yc1-31",
+    "id": "yc1-008",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9183,7 +8976,592 @@
     "text": "CXL(Compute Express Link)을 설명하시오."
   },
   {
-    "id": "yc1-32",
+    "id": "yc1-009",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "디지털 트윈(Digital Twin)의 성숙도 단계와 실시간 동기화를 위한 IoT 데이터 파이프라인을 설명하시오."
+  },
+  {
+    "id": "yc1-010",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "간편결제(Simple Payment) 서비스의 동작 구조와 특징을 설명하시오."
+  },
+  {
+    "id": "yc1-011",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "OSI 7계층 참조모델과 TCP/IP 4계층 모델의 계층 대응 관계를 비교하시오."
+  },
+  {
+    "id": "yc1-012",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "프로세스(Process)와 스레드(Thread)의 차이를 비교하시오."
+  },
+  {
+    "id": "yc1-013",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "MoE(Mixture of Experts) 아키텍처를 설명하시오."
+  },
+  {
+    "id": "yc1-014",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "제로 트러스트 성숙도 모델(Zero Trust Maturity Model)을 설명하시오."
+  },
+  {
+    "id": "yc1-015",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "서비스 메시(Service Mesh)와 사이드카(Sidecar) 패턴을 설명하시오."
+  },
+  {
+    "id": "yc1-016",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 레이크하우스(Data Lakehouse)를 설명하시오."
+  },
+  {
+    "id": "yc1-017",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "헥사고날 아키텍처(포트 앤 어댑터)를 설명하시오."
+  },
+  {
+    "id": "yc1-018",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "PMBOK 7판의 12가지 프로젝트관리 원칙(Principles) 중 임의의 5가지를 선정하여 설명하시오."
+  },
+  {
+    "id": "yc1-019",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "IT 거버넌스 프레임워크 COBIT 2019의 거버넌스 목표와 관리 목표를 설명하시오."
+  },
+  {
+    "id": "yc1-020",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "명령어 파이프라이닝(Instruction Pipelining)과 파이프라인 해저드(Hazard)의 유형을 설명하시오."
+  },
+  {
+    "id": "yc1-021",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "공간 컴퓨팅(Spatial Computing)과 메타버스(Metaverse)를 비교하시오."
+  },
+  {
+    "id": "yc1-022",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "오픈뱅킹(Open Banking)의 개념과 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-023",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "링크 상태(Link-State) 라우팅 프로토콜인 OSPF(Open Shortest Path First)의 Area 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-024",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "CPU 스케줄링 기법 중 선점형(Preemptive)과 비선점형(Non-preemptive)을 비교하시오."
+  },
+  {
+    "id": "yc1-025",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "벡터 데이터베이스(Vector DB)와 임베딩(Embedding)을 설명하시오."
+  },
+  {
+    "id": "yc1-026",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "SBOM(Software Bill of Materials)과 소프트웨어 공급망 보안을 설명하시오."
+  },
+  {
+    "id": "yc1-027",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "eBPF(extended Berkeley Packet Filter)를 설명하시오."
+  },
+  {
+    "id": "yc1-028",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 계약(Data Contract)을 설명하시오."
+  },
+  {
+    "id": "yc1-029",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "관측성(Observability)의 3요소(로그·메트릭·트레이스)를 설명하시오."
+  },
+  {
+    "id": "yc1-030",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "PMBOK 7판의 8개 프로젝트 성과영역(Performance Domains)을 설명하시오."
+  },
+  {
+    "id": "yc1-031",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "COBIT 2019의 설계요소(Design Factors)와 거버넌스 시스템 맞춤화를 설명하시오."
+  },
+  {
+    "id": "yc1-032",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "캐시 메모리(Cache Memory)와 참조 지역성(Locality of Reference)을 설명하시오."
+  },
+  {
+    "id": "yc1-033",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "확장현실(XR, eXtended Reality)에서 MR(Mixed Reality)과 AR(Augmented Reality)의 차이를 설명하시오."
+  },
+  {
+    "id": "yc1-034",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "마이데이터(MyData) 서비스의 개념과 데이터 전송 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-035",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "경로 벡터(Path-Vector) 방식인 BGP(Border Gateway Protocol)의 경로 선택 속성(Attribute)을 설명하시오."
+  },
+  {
+    "id": "yc1-036",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "교착상태(Deadlock) 발생의 4가지 필요조건인 코프만 조건(Coffman Conditions)을 설명하시오."
+  },
+  {
+    "id": "yc1-037",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "AI 에이전트(Agentic AI)와 에이전트 오케스트레이션을 설명하시오."
+  },
+  {
+    "id": "yc1-038",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "양자내성암호(PQC, Post-Quantum Cryptography)를 설명하시오."
+  },
+  {
+    "id": "yc1-039",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "플랫폼 엔지니어링과 내부 개발자 플랫폼(IDP)을 설명하시오."
+  },
+  {
+    "id": "yc1-040",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 관측가능성(Data Observability)을 설명하시오."
+  },
+  {
+    "id": "yc1-041",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "카오스 엔지니어링(Chaos Engineering)을 설명하시오."
+  },
+  {
+    "id": "yc1-042",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "예측형(Predictive) 개발방식과 적응형(Adaptive) 개발방식을 비교하시오."
+  },
+  {
+    "id": "yc1-043",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "ISO/IEC 38500 IT 거버넌스 표준의 6대 원칙을 설명하시오."
+  },
+  {
+    "id": "yc1-044",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "가상 메모리(Virtual Memory)와 페이징(Paging) 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-045",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "중앙은행 디지털화폐(CBDC, Central Bank Digital Currency)의 도매형과 소매형을 비교하시오."
+  },
+  {
+    "id": "yc1-046",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "디지털 플랫폼의 양면시장(Two-Sided Market)과 네트워크 효과를 설명하시오."
+  },
+  {
+    "id": "yc1-047",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "거리 벡터 방식인 RIP(Routing Information Protocol)과 링크 상태 방식인 OSPF를 비교하시오."
+  },
+  {
+    "id": "yc1-048",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "교착상태 회피 기법인 은행원 알고리즘(Banker's Algorithm)의 안전 상태 판별 과정을 설명하시오."
+  },
+  {
+    "id": "yc1-049",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "sLLM(경량 대형언어모델)의 개념과 필요성을 설명하시오."
+  },
+  {
+    "id": "yc1-050",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "SASE(Secure Access Service Edge)를 설명하시오."
+  },
+  {
+    "id": "yc1-051",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "FinOps(클라우드 재무운영)를 설명하시오."
+  },
+  {
+    "id": "yc1-052",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "정규화(Normalization)와 반정규화(Denormalization)를 비교하시오."
+  },
+  {
+    "id": "yc1-053",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "CQRS(Command Query Responsibility Segregation)를 설명하시오."
+  },
+  {
+    "id": "yc1-054",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "하이브리드(Hybrid) 프로젝트 관리 방식의 개념과 적용 시 고려사항을 설명하시오."
+  },
+  {
+    "id": "yc1-055",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "ITIL 4의 서비스가치시스템(SVS, Service Value System)과 서비스가치사슬(SVC)을 설명하시오."
+  },
+  {
+    "id": "yc1-056",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "RAID(Redundant Array of Independent Disks) 레벨 0/1/5/6을 비교하시오."
+  },
+  {
+    "id": "yc1-057",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "대체불가토큰(NFT, Non-Fungible Token)과 이를 뒷받침하는 ERC-721 표준을 설명하시오."
+  },
+  {
+    "id": "yc1-058",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "구독경제(Subscription Economy)와 공유경제(Sharing Economy)를 비교하시오."
+  },
+  {
+    "id": "yc1-059",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "VLAN(Virtual LAN) 간 통신을 위한 트렁킹 프로토콜 IEEE 802.1Q의 태깅 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-060",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "프로세스 동기화 기법인 세마포어(Semaphore)와 모니터(Monitor)를 비교하시오."
+  },
+  {
+    "id": "yc1-061",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "온디바이스 AI(On-device AI)를 설명하시오."
+  },
+  {
+    "id": "yc1-062",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "패스키(Passkey)와 FIDO2를 설명하시오."
+  },
+  {
+    "id": "yc1-063",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "전가상화(Full Virtualization)와 반가상화(Para-Virtualization)를 비교하시오."
+  },
+  {
+    "id": "yc1-064",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "함수적 종속(Functional Dependency)과 이상현상(Anomaly)의 관계를 설명하시오."
+  },
+  {
+    "id": "yc1-065",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "이벤트 소싱(Event Sourcing)을 설명하시오."
+  },
+  {
+    "id": "yc1-066",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "주공정법(CPM, Critical Path Method)과 주공정연쇄법(CCM, Critical Chain Method)을 비교하시오."
+  },
+  {
+    "id": "yc1-067",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "ITIL 4의 4가지 차원(Four Dimensions)과 7대 지도원칙(Guiding Principles)을 설명하시오."
+  },
+  {
+    "id": "yc1-068",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "병렬처리 분류인 SIMD와 MIMD를 비교하시오."
+  },
+  {
+    "id": "yc1-069",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "양자컴퓨팅의 큐비트(Qubit) 결맞음(Coherence)과 양자 오류정정(QEC, Quantum Error Correction)을 설명하시오."
+  },
+  {
+    "id": "yc1-070",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "O2O(Online to Offline) 서비스의 개념과 유형을 설명하시오."
+  },
+  {
+    "id": "yc1-071",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "L2 스위칭 환경에서 루프를 방지하는 STP(Spanning Tree Protocol)의 동작 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-072",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "메모리 관리 기법인 페이징(Paging)과 세그멘테이션(Segmentation)을 비교하시오."
+  },
+  {
+    "id": "yc1-073",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "LLM의 환각(Hallucination) 현상과 그라운딩(Grounding) 완화 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-074",
     "kind": "예상",
     "round": "예상",
     "period": "1교시",
@@ -9192,7 +9570,2041 @@
     "text": "신뢰실행환경(TEE)과 컨피덴셜 컴퓨팅(Confidential Computing)을 설명하시오."
   },
   {
-    "id": "yc2-01",
+    "id": "yc1-075",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "하이퍼바이저(Hypervisor)의 Type 1과 Type 2를 비교하시오."
+  },
+  {
+    "id": "yc1-076",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "BCNF(Boyce-Codd Normal Form)와 제3정규형(3NF)의 차이를 설명하시오."
+  },
+  {
+    "id": "yc1-077",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "클린 아키텍처(Clean Architecture)의 의존성 규칙을 설명하시오."
+  },
+  {
+    "id": "yc1-078",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "PERT(Program Evaluation and Review Technique)의 3점 추정과 기대공기 산정방법을 설명하시오."
+  },
+  {
+    "id": "yc1-079",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "정보화전략계획(ISP)과 정보시스템마스터플랜(ISMP)을 비교하시오."
+  },
+  {
+    "id": "yc1-080",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "AI 연산 가속기인 GPU, TPU, NPU를 비교하시오."
+  },
+  {
+    "id": "yc1-081",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "도심항공교통(UAM, Urban Air Mobility)의 버티포트(Vertiport)와 운항관리체계(UATM)를 설명하시오."
+  },
+  {
+    "id": "yc1-082",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "슈퍼앱(Super App)의 개념과 특징을 설명하시오."
+  },
+  {
+    "id": "yc1-083",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "TCP(Transmission Control Protocol)의 혼잡 제어 알고리즘 중 느린 시작(Slow Start)과 혼잡 회피(Congestion Avoidance)를 설명하시오."
+  },
+  {
+    "id": "yc1-084",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "파일 시스템에서 파일의 메타데이터를 관리하는 i-node(index node) 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-085",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "지식 증류(Knowledge Distillation)를 설명하시오."
+  },
+  {
+    "id": "yc1-086",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "타원곡선 암호(ECC, Elliptic Curve Cryptography)의 원리와 RSA 대비 장점을 설명하시오."
+  },
+  {
+    "id": "yc1-087",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "컨테이너(Container)와 가상머신(VM)의 격리 방식 차이를 설명하시오."
+  },
+  {
+    "id": "yc1-088",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "트랜잭션의 ACID 특성을 설명하시오."
+  },
+  {
+    "id": "yc1-089",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "레이어드 아키텍처(Layered Architecture)와 이벤트 드리븐 아키텍처(Event-Driven Architecture)를 비교하시오."
+  },
+  {
+    "id": "yc1-090",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "획득가치관리(EVM, Earned Value Management)의 SPI(Schedule Performance Index)와 CPI(Cost Performance Index)를 설명하시오."
+  },
+  {
+    "id": "yc1-091",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "엔터프라이즈아키텍처(EA)의 4대 아키텍처(비즈니스·데이터·응용·기술)를 설명하시오."
+  },
+  {
+    "id": "yc1-092",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "메모리 계층구조(Memory Hierarchy)와 HBM(High Bandwidth Memory)을 설명하시오."
+  },
+  {
+    "id": "yc1-093",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "협동로봇(Cobot, Collaborative Robot)의 안전정격 감시정지(SMS) 기능을 설명하시오."
+  },
+  {
+    "id": "yc1-094",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "임베디드 금융(Embedded Finance)과 BaaS(Banking as a Service)를 설명하시오."
+  },
+  {
+    "id": "yc1-095",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "TCP의 흐름 제어(Flow Control)에 사용되는 슬라이딩 윈도우(Sliding Window) 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-096",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "디스크 스케줄링 기법인 SCAN과 C-SCAN을 비교하시오."
+  },
+  {
+    "id": "yc1-097",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "모델 컨텍스트 프로토콜(MCP, Model Context Protocol)을 설명하시오."
+  },
+  {
+    "id": "yc1-098",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "인증암호(AEAD, Authenticated Encryption with Associated Data) 방식인 AES-GCM을 설명하시오."
+  },
+  {
+    "id": "yc1-099",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "도커(Docker)의 이미지 레이어(Image Layer)와 유니온 파일시스템(Union File System)을 설명하시오."
+  },
+  {
+    "id": "yc1-100",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "트랜잭션 격리수준(Isolation Level) 4단계를 설명하시오."
+  },
+  {
+    "id": "yc1-101",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "도메인 주도 설계(DDD, Domain-Driven Design)의 바운디드 컨텍스트(Bounded Context)를 설명하시오."
+  },
+  {
+    "id": "yc1-102",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "완료시점 예상원가(EAC, Estimate At Completion) 산정의 4가지 시나리오를 설명하시오."
+  },
+  {
+    "id": "yc1-103",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "균형성과표(BSC, Balanced Scorecard)의 4가지 관점과 전략지도(Strategy Map)를 설명하시오."
+  },
+  {
+    "id": "yc1-104",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "RISC(Reduced Instruction Set Computer)와 CISC(Complex Instruction Set Computer)를 비교하시오."
+  },
+  {
+    "id": "yc1-105",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "사이버물리시스템(CPS, Cyber-Physical System)과 스마트팩토리의 관계를 설명하시오."
+  },
+  {
+    "id": "yc1-106",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "OTT(Over The Top) 서비스와 콘텐츠 추천 시스템을 설명하시오."
+  },
+  {
+    "id": "yc1-107",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "네트워크 QoS(Quality of Service) 보장을 위한 DiffServ(Differentiated Services)와 IntServ(Integrated Services)를 비교하시오."
+  },
+  {
+    "id": "yc1-108",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "컨테이너 격리 기술인 리눅스 네임스페이스(Namespace)와 cgroup의 역할을 설명하시오."
+  },
+  {
+    "id": "yc1-109",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "트랜스포머(Transformer)의 셀프 어텐션(Self-Attention) 메커니즘을 설명하시오."
+  },
+  {
+    "id": "yc1-110",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "키 유도 함수(KDF, Key Derivation Function)와 대표 알고리즘 PBKDF2, Argon2를 설명하시오."
+  },
+  {
+    "id": "yc1-111",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "리눅스 네임스페이스(Namespace)와 컨트롤 그룹(cgroup)을 설명하시오."
+  },
+  {
+    "id": "yc1-112",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "2단계 로킹(2PL, Two-Phase Locking)과 다중버전 동시성제어(MVCC, Multi-Version Concurrency Control)를 비교하시오."
+  },
+  {
+    "id": "yc1-113",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "애그리거트(Aggregate)와 애그리거트 루트(Aggregate Root)를 설명하시오."
+  },
+  {
+    "id": "yc1-114",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "작업분류체계(WBS, Work Breakdown Structure)와 100% 규칙(100% Rule)을 설명하시오."
+  },
+  {
+    "id": "yc1-115",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "IT-BSC(IT Balanced Scorecard)의 4가지 관점을 설명하시오."
+  },
+  {
+    "id": "yc1-116",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "IEEE 754 부동소수점(Floating Point) 표현 방식을 설명하시오."
+  },
+  {
+    "id": "yc1-117",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "6G 이동통신의 초공간(Non-Terrestrial Network) 커버리지와 테라헤르츠(THz) 대역 활용을 설명하시오."
+  },
+  {
+    "id": "yc1-118",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "디지털서비스",
+    "source": "예상 1교시",
+    "text": "디지털 광고의 실시간 입찰(RTB, Real-Time Bidding) 방식을 설명하시오."
+  },
+  {
+    "id": "yc1-119",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "IPv6의 주소 체계와 IPv4 대비 개선된 헤더 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-120",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "실시간 운영체제(RTOS)에서 경성(Hard) 실시간과 연성(Soft) 실시간을 비교하시오."
+  },
+  {
+    "id": "yc1-121",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "배치 정규화(Batch Normalization)와 레이어 정규화(Layer Normalization)를 비교하시오."
+  },
+  {
+    "id": "yc1-122",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "디피-헬만 키 교환(Diffie-Hellman Key Exchange)의 동작 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-123",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "컨테이너 런타임 표준인 OCI(Open Container Initiative)와 CRI(Container Runtime Interface)를 설명하시오."
+  },
+  {
+    "id": "yc1-124",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "교착상태(Deadlock)의 발생조건과 해결기법을 설명하시오."
+  },
+  {
+    "id": "yc1-125",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "사가 패턴(Saga Pattern)의 코레오그래피(Choreography)와 오케스트레이션(Orchestration)을 비교하시오."
+  },
+  {
+    "id": "yc1-126",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "프로젝트 범위기술서(Scope Statement)와 범위 크리프(Scope Creep)의 관리방안을 설명하시오."
+  },
+  {
+    "id": "yc1-127",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "업무재설계(BPR)와 업무프로세스관리(BPM)를 비교하시오."
+  },
+  {
+    "id": "yc1-128",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "뉴로모픽 컴퓨팅(Neuromorphic Computing)의 개념과 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-129",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "저궤도 위성통신(LEO, Low Earth Orbit)과 정지궤도 위성통신(GEO)을 비교하시오."
+  },
+  {
+    "id": "yc1-130",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "IPv4에서 IPv6로의 전환 기술인 듀얼 스택(Dual Stack), 터널링(Tunneling), 변환(Translation)을 비교하시오."
+  },
+  {
+    "id": "yc1-131",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "운영체제",
+    "source": "예상 1교시",
+    "text": "마이크로커널(Microkernel)과 모놀리식 커널(Monolithic Kernel)을 비교하시오."
+  },
+  {
+    "id": "yc1-132",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "드롭아웃(Dropout)의 원리와 효과를 설명하시오."
+  },
+  {
+    "id": "yc1-133",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "전방향 안전성(PFS, Perfect Forward Secrecy)의 개념과 필요성을 설명하시오."
+  },
+  {
+    "id": "yc1-134",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스(Kubernetes) 컨트롤 플레인(Control Plane) 구성요소를 설명하시오."
+  },
+  {
+    "id": "yc1-135",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "선행기록로그(WAL, Write-Ahead Logging) 기반 회복기법을 설명하시오."
+  },
+  {
+    "id": "yc1-136",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "GoF(Gang of Four) 디자인 패턴 중 전략 패턴(Strategy Pattern)을 설명하시오."
+  },
+  {
+    "id": "yc1-137",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "정량적 위험분석에서 사용하는 EMV(Expected Monetary Value)와 의사결정나무(Decision Tree)를 설명하시오."
+  },
+  {
+    "id": "yc1-138",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "IT 아웃소싱의 유형과 SLA(Service Level Agreement) 기반 SLM(Service Level Management)을 설명하시오."
+  },
+  {
+    "id": "yc1-139",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "자율주행 레벨 3(조건부 자동화)와 레벨 4(고도 자동화)를 비교하시오."
+  },
+  {
+    "id": "yc1-140",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "오류 검출 및 정정을 위한 해밍 코드(Hamming Code)의 패리티 비트 배치 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-141",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "심층신경망의 경사 소실(Vanishing Gradient) 및 경사 폭주(Exploding Gradient) 문제를 설명하시오."
+  },
+  {
+    "id": "yc1-142",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "해시 함수의 충돌 저항성(Collision Resistance)과 SHA-2, SHA-3의 차이를 비교하시오."
+  },
+  {
+    "id": "yc1-143",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 Pod와 컨트롤러(Deployment, StatefulSet, DaemonSet)를 비교하시오."
+  },
+  {
+    "id": "yc1-144",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "ARIES 회복 알고리즘을 설명하시오."
+  },
+  {
+    "id": "yc1-145",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "옵서버 패턴(Observer Pattern)과 발행-구독(Pub-Sub) 패턴을 비교하시오."
+  },
+  {
+    "id": "yc1-146",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "프로젝트 위험대응 전략 중 위협(Threat) 대응 4가지와 기회(Opportunity) 대응 4가지를 비교하시오."
+  },
+  {
+    "id": "yc1-147",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "마이클 포터의 산업구조분석 모델(5 Forces)을 설명하시오."
+  },
+  {
+    "id": "yc1-148",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "자율주행의 라이다(LiDAR)와 카메라 기반 비전 방식을 비교하시오."
+  },
+  {
+    "id": "yc1-149",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "데이터 전송 오류 검출 기법인 CRC(Cyclic Redundancy Check)의 생성 다항식 연산 과정을 설명하시오."
+  },
+  {
+    "id": "yc1-150",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "확률적 경사하강법(SGD)과 Adam 옵티마이저를 비교하시오."
+  },
+  {
+    "id": "yc1-151",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "메시지 인증 코드(HMAC, Hash-based Message Authentication Code)의 구조와 용도를 설명하시오."
+  },
+  {
+    "id": "yc1-152",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 서비스(Service) 타입인 ClusterIP, NodePort, LoadBalancer를 비교하시오."
+  },
+  {
+    "id": "yc1-153",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터베이스 체크포인트(Checkpoint) 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-154",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "의존성 주입(DI, Dependency Injection)과 제어의 역전(IoC, Inversion of Control)을 설명하시오."
+  },
+  {
+    "id": "yc1-155",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "이해관계자 참여평가 매트릭스(Stakeholder Engagement Assessment Matrix)를 설명하시오."
+  },
+  {
+    "id": "yc1-156",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "SWOT 분석과 이를 확장한 TOWS 매트릭스를 비교하시오."
+  },
+  {
+    "id": "yc1-157",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "디지털 트랜스포메이션(DX, Digital Transformation)의 성숙도 모델과 데이터 기반 의사결정 체계를 설명하시오."
+  },
+  {
+    "id": "yc1-158",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "SDN(Software Defined Networking)의 제어 평면과 데이터 평면 분리 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-159",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "편향-분산 트레이드오프(Bias-Variance Tradeoff)를 설명하시오."
+  },
+  {
+    "id": "yc1-160",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "공개키 기반구조(PKI, Public Key Infrastructure)의 인증서 폐기 방식인 CRL과 OCSP를 비교하시오."
+  },
+  {
+    "id": "yc1-161",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 인그레스(Ingress)와 게이트웨이 API(Gateway API)를 비교하시오."
+  },
+  {
+    "id": "yc1-162",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "B-tree 인덱스와 B+tree 인덱스를 비교하시오."
+  },
+  {
+    "id": "yc1-163",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "서킷 브레이커 패턴(Circuit Breaker Pattern)을 설명하시오."
+  },
+  {
+    "id": "yc1-164",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "권력-관심 격자(Power-Interest Grid)를 활용한 이해관계자 분류방법을 설명하시오."
+  },
+  {
+    "id": "yc1-165",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "3C(Company·Customer·Competitor) 분석 프레임워크를 설명하시오."
+  },
+  {
+    "id": "yc1-166",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "금속 적층제조(3D Printing)의 SLM(Selective Laser Melting) 공정을 설명하시오."
+  },
+  {
+    "id": "yc1-167",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "NFV(Network Function Virtualization)의 개념과 MANO(Management and Orchestration) 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-168",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "기계학습의 과적합(Overfitting)과 규제화(Regularization) 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-169",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "디지털 서명(Digital Signature)에서 부인방지(Non-repudiation)가 보장되는 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-170",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 CNI(Container Network Interface)의 동작 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-171",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "비트맵 인덱스(Bitmap Index)와 클러스터드 인덱스(Clustered Index)를 비교하시오."
+  },
+  {
+    "id": "yc1-172",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "스크럼(Scrum)의 스프린트(Sprint)와 번다운 차트(Burndown Chart)를 설명하시오."
+  },
+  {
+    "id": "yc1-173",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "애자일 방법론에서 번다운차트(Burn-down Chart)와 번업차트(Burn-up Chart)를 비교하시오."
+  },
+  {
+    "id": "yc1-174",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "VRIO(Value·Rarity·Imitability·Organization) 분석을 통한 자원기반관점(RBV)을 설명하시오."
+  },
+  {
+    "id": "yc1-175",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "웨어러블(Wearable) 헬스케어 기기의 PPG(Photoplethysmography) 생체신호 측정 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-176",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "기업 WAN 비용 절감을 위한 SD-WAN(Software Defined WAN)의 특징을 설명하시오."
+  },
+  {
+    "id": "yc1-177",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "ROC 곡선과 AUC(Area Under Curve)를 설명하시오."
+  },
+  {
+    "id": "yc1-178",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "인증서 투명성(CT, Certificate Transparency) 로그의 목적과 동작을 설명하시오."
+  },
+  {
+    "id": "yc1-179",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 CSI(Container Storage Interface)와 퍼시스턴트볼륨(PV)/퍼시스턴트볼륨클레임(PVC)을 설명하시오."
+  },
+  {
+    "id": "yc1-180",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "커버링 인덱스(Covering Index)를 설명하시오."
+  },
+  {
+    "id": "yc1-181",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "칸반(Kanban)의 WIP(Work In Progress) 제한을 설명하시오."
+  },
+  {
+    "id": "yc1-182",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "소프트웨어 사업대가산정 시 기능점수(FP, Function Point) 방식의 산정절차를 설명하시오."
+  },
+  {
+    "id": "yc1-183",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "플랫폼 비즈니스 모델의 네트워크 효과(Network Effect)와 교차보조(Cross-subsidy)를 설명하시오."
+  },
+  {
+    "id": "yc1-184",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "신기술",
+    "source": "예상 1교시",
+    "text": "드론 군집비행(Swarm Flight)의 자율 편대제어와 충돌회피 알고리즘을 설명하시오."
+  },
+  {
+    "id": "yc1-185",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "5G 네트워크의 핵심 서비스 유형인 eMBB, URLLC, mMTC를 비교하시오."
+  },
+  {
+    "id": "yc1-186",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "정밀도(Precision), 재현율(Recall), F1 점수(F1 Score)를 설명하시오."
+  },
+  {
+    "id": "yc1-187",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "차세대 방화벽(NGFW, Next-Generation Firewall)의 주요 기능을 설명하시오."
+  },
+  {
+    "id": "yc1-188",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 스토리지클래스(StorageClass)와 동적 프로비저닝(Dynamic Provisioning)을 설명하시오."
+  },
+  {
+    "id": "yc1-189",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "쿼리 실행계획(Execution Plan)과 옵티마이저(Optimizer)의 역할을 설명하시오."
+  },
+  {
+    "id": "yc1-190",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "익스트림 프로그래밍(XP, eXtreme Programming)의 페어 프로그래밍(Pair Programming)을 설명하시오."
+  },
+  {
+    "id": "yc1-191",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "기능점수 산정의 정규법(상세법)과 간이법(Simple Function Point)을 비교하시오."
+  },
+  {
+    "id": "yc1-192",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "업무연속성계획(BCP)과 재해복구계획(DRP)을 비교하시오."
+  },
+  {
+    "id": "yc1-193",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "5G/6G에서 물리적 인프라를 논리적으로 분할하는 네트워크 슬라이싱(Network Slicing)을 설명하시오."
+  },
+  {
+    "id": "yc1-194",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "혼동행렬(Confusion Matrix)을 설명하시오."
+  },
+  {
+    "id": "yc1-195",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "침입탐지시스템(IDS)과 침입방지시스템(IPS)을 비교하시오."
+  },
+  {
+    "id": "yc1-196",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "서버리스(Serverless)와 FaaS(Function as a Service)를 설명하시오."
+  },
+  {
+    "id": "yc1-197",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "비용기반 최적화(CBO, Cost-Based Optimization)와 규칙기반 최적화(RBO, Rule-Based Optimization)를 비교하시오."
+  },
+  {
+    "id": "yc1-198",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "린 소프트웨어 개발(Lean Software Development)의 낭비(Waste) 제거 원칙을 설명하시오."
+  },
+  {
+    "id": "yc1-199",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "소프트웨어 분리발주(Unbundling)의 개념과 기대효과를 설명하시오."
+  },
+  {
+    "id": "yc1-200",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "재해복구 목표지표인 RTO(Recovery Time Objective)와 RPO(Recovery Point Objective)를 설명하시오."
+  },
+  {
+    "id": "yc1-201",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "차세대 무선랜 표준인 Wi-Fi 7(IEEE 802.11be)의 MLO(Multi-Link Operation) 기술을 설명하시오."
+  },
+  {
+    "id": "yc1-202",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "교차검증(Cross Validation)과 K-폴드(K-Fold) 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-203",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "웹 애플리케이션 방화벽(WAF, Web Application Firewall)의 탐지 방식을 설명하시오."
+  },
+  {
+    "id": "yc1-204",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "FaaS의 콜드 스타트(Cold Start) 문제와 완화 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-205",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "분산 데이터베이스의 샤딩(Sharding)과 파티셔닝(Partitioning)을 비교하시오."
+  },
+  {
+    "id": "yc1-206",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "TDD(Test-Driven Development)와 BDD(Behavior-Driven Development)를 비교하시오."
+  },
+  {
+    "id": "yc1-207",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "정보시스템 감리(Audit)의 3단계 절차와 감리시점을 설명하시오."
+  },
+  {
+    "id": "yc1-208",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "ESG 경영과 그린IT(Green IT) 추진전략을 설명하시오."
+  },
+  {
+    "id": "yc1-209",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "스마트홈 상호운용 표준인 매터(Matter)와 스레드(Thread) 프로토콜의 관계를 설명하시오."
+  },
+  {
+    "id": "yc1-210",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "불균형 데이터 처리 기법인 SMOTE(Synthetic Minority Over-sampling Technique)를 설명하시오."
+  },
+  {
+    "id": "yc1-211",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "분산 서비스 거부 공격(DDoS)의 유형과 대응 기술을 설명하시오."
+  },
+  {
+    "id": "yc1-212",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "IaaS, PaaS, SaaS의 책임 공유 모델(Shared Responsibility Model)을 비교하시오."
+  },
+  {
+    "id": "yc1-213",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 복제(Replication)의 동기·비동기 방식을 설명하시오."
+  },
+  {
+    "id": "yc1-214",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "테스트 더블(Test Double)의 목(Mock)과 스텁(Stub)을 비교하시오."
+  },
+  {
+    "id": "yc1-215",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "프로젝트 방법론 테일러링(Tailoring)의 개념과 수행절차를 설명하시오."
+  },
+  {
+    "id": "yc1-216",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "IT 투자성과 평가를 위한 TCO(Total Cost of Ownership)와 ROI(Return On Investment)를 비교하시오."
+  },
+  {
+    "id": "yc1-217",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "경량 IoT 메시징 프로토콜인 MQTT(Message Queuing Telemetry Transport)와 CoAP(Constrained Application Protocol)를 비교하시오."
+  },
+  {
+    "id": "yc1-218",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "앙상블 학습의 배깅(Bagging)과 부스팅(Boosting)을 비교하시오."
+  },
+  {
+    "id": "yc1-219",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "지능형 지속 위협(APT, Advanced Persistent Threat) 공격의 특징을 설명하시오."
+  },
+  {
+    "id": "yc1-220",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "XaaS(Anything as a Service)와 서비스형 모델의 확장 개념을 설명하시오."
+  },
+  {
+    "id": "yc1-221",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "CAP 정리(CAP Theorem)를 설명하시오."
+  },
+  {
+    "id": "yc1-222",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "테스트 커버리지(Test Coverage) 중 구문 커버리지와 분기 커버리지를 비교하시오."
+  },
+  {
+    "id": "yc1-223",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "형상관리(Configuration Management)의 4대 활동(식별·통제·상태보고·감사)을 설명하시오."
+  },
+  {
+    "id": "yc1-224",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "지식경영시스템(KMS)에서 형식지(Explicit)와 암묵지(Tacit)의 SECI 모델을 설명하시오."
+  },
+  {
+    "id": "yc1-225",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "트래픽 분산을 위한 L4 로드밸런싱과 L7 로드밸런싱을 비교하시오."
+  },
+  {
+    "id": "yc1-226",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "랜덤 포레스트(Random Forest)와 XGBoost를 비교하시오."
+  },
+  {
+    "id": "yc1-227",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "사이버 킬체인(Cyber Kill Chain) 7단계를 설명하시오."
+  },
+  {
+    "id": "yc1-228",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "멀티 클라우드(Multi-Cloud)와 하이브리드 클라우드(Hybrid Cloud)를 비교하시오."
+  },
+  {
+    "id": "yc1-229",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "BASE 모델과 ACID 모델을 비교하시오."
+  },
+  {
+    "id": "yc1-230",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "테스트 피라미드(Test Pyramid)를 설명하시오."
+  },
+  {
+    "id": "yc1-231",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "PMO(Project Management Office)의 3가지 유형(지원형·통제형·지시형)을 비교하시오."
+  },
+  {
+    "id": "yc1-232",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "콘텐츠 지연 최소화를 위한 CDN(Content Delivery Network)의 캐싱 및 라우팅 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-233",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "서포트 벡터 머신(SVM)의 커널 트릭(Kernel Trick)을 설명하시오."
+  },
+  {
+    "id": "yc1-234",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "MITRE ATT&CK 프레임워크의 구성 요소인 전술(Tactics)과 기술(Techniques)을 설명하시오."
+  },
+  {
+    "id": "yc1-235",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "클라우드 마이그레이션의 6R 전략을 설명하시오."
+  },
+  {
+    "id": "yc1-236",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "PACELC 정리를 설명하시오."
+  },
+  {
+    "id": "yc1-237",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "E2E(End-to-End) 테스트와 통합 테스트(Integration Test)를 비교하시오."
+  },
+  {
+    "id": "yc1-238",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "프로젝트 거버넌스(Project Governance)의 구성요소와 운영위원회(Steering Committee) 역할을 설명하시오."
+  },
+  {
+    "id": "yc1-239",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "운영자의 의도를 정책으로 자동 반영하는 IBN(Intent-Based Networking)의 구성 요소를 설명하시오."
+  },
+  {
+    "id": "yc1-240",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "차원 축소 기법인 주성분분석(PCA)과 t-SNE를 비교하시오."
+  },
+  {
+    "id": "yc1-241",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "침해지표(IoC, Indicator of Compromise)와 공격지표(IoA, Indicator of Attack)를 비교하시오."
+  },
+  {
+    "id": "yc1-242",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "클라우드 보안인증제(CSAP, Cloud Security Assurance Program)를 설명하시오."
+  },
+  {
+    "id": "yc1-243",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "NoSQL의 4가지 유형(문서·컬럼·키밸류·그래프)을 설명하시오."
+  },
+  {
+    "id": "yc1-244",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "CI/CD(Continuous Integration/Continuous Delivery) 파이프라인을 설명하시오."
+  },
+  {
+    "id": "yc1-245",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "반복형(Iterative) 개발과 증분형(Incremental) 개발을 비교하시오."
+  },
+  {
+    "id": "yc1-246",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "네트워크",
+    "source": "예상 1교시",
+    "text": "저궤도 위성통신(LEO Satellite)의 특징과 지상 이동통신망과의 연동(NTN) 방안을 설명하시오."
+  },
+  {
+    "id": "yc1-247",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "군집화 알고리즘 K-평균(K-means)과 DBSCAN을 비교하시오."
+  },
+  {
+    "id": "yc1-248",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "위협 인텔리전스(CTI, Cyber Threat Intelligence)의 공유 표준인 STIX와 TAXII를 설명하시오."
+  },
+  {
+    "id": "yc1-249",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "소프트웨어 정의 스토리지(SDS, Software-Defined Storage)를 설명하시오."
+  },
+  {
+    "id": "yc1-250",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "NewSQL의 개념과 등장 배경을 설명하시오."
+  },
+  {
+    "id": "yc1-251",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "GitOps를 설명하시오."
+  },
+  {
+    "id": "yc1-252",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "OKR(Objectives and Key Results) 기반 프로젝트 실행관리의 개념과 KPI와의 차이를 설명하시오."
+  },
+  {
+    "id": "yc1-253",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "강화학습의 Q-러닝(Q-Learning)을 설명하시오."
+  },
+  {
+    "id": "yc1-254",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "디셉션 기술(Deception Technology)과 허니팟(Honeypot)의 개념을 설명하시오."
+  },
+  {
+    "id": "yc1-255",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "오브젝트 스토리지(Object Storage)와 블록 스토리지(Block Storage)를 비교하시오."
+  },
+  {
+    "id": "yc1-256",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "개념·논리·물리 데이터 모델을 비교하시오."
+  },
+  {
+    "id": "yc1-257",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "IaC(Infrastructure as Code)의 선언형(Declarative)과 명령형(Imperative) 방식을 비교하시오."
+  },
+  {
+    "id": "yc1-258",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "근접 정책 최적화(PPO, Proximal Policy Optimization)를 설명하시오."
+  },
+  {
+    "id": "yc1-259",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "다중 인증(MFA, Multi-Factor Authentication)의 인증 요소 세 가지를 설명하시오."
+  },
+  {
+    "id": "yc1-260",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "콘텐츠 전송 네트워크(CDN, Content Delivery Network)의 캐싱 및 엣지 배포 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-261",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터웨어하우스(DW)의 스타 스키마(Star Schema)와 스노우플레이크 스키마(Snowflake Schema)를 비교하시오."
+  },
+  {
+    "id": "yc1-262",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "블루-그린 배포(Blue-Green Deployment)와 카나리 배포(Canary Deployment)를 비교하시오."
+  },
+  {
+    "id": "yc1-263",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "강화학습의 액터-크리틱(Actor-Critic) 구조를 설명하시오."
+  },
+  {
+    "id": "yc1-264",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "통합 인증(SSO, Single Sign-On)의 구현 방식인 SAML과 OIDC를 비교하시오."
+  },
+  {
+    "id": "yc1-265",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "L4 로드밸런싱과 L7 로드밸런싱을 비교하시오."
+  },
+  {
+    "id": "yc1-266",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "OLAP(Online Analytical Processing)와 OLTP(Online Transaction Processing)를 비교하시오."
+  },
+  {
+    "id": "yc1-267",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "ISO/IEC 25010 소프트웨어 품질 특성을 설명하시오."
+  },
+  {
+    "id": "yc1-268",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "생성적 적대 신경망(GAN)의 구조와 학습 원리를 설명하시오."
+  },
+  {
+    "id": "yc1-269",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "역할 기반 접근제어(RBAC)와 속성 기반 접근제어(ABAC)를 비교하시오."
+  },
+  {
+    "id": "yc1-270",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "오토스케일링(Auto Scaling)의 수평 확장(Scale-out)과 수직 확장(Scale-up)을 비교하시오."
+  },
+  {
+    "id": "yc1-271",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "람다 아키텍처(Lambda Architecture)와 카파 아키텍처(Kappa Architecture)를 비교하시오."
+  },
+  {
+    "id": "yc1-272",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "기술 부채(Technical Debt)를 설명하시오."
+  },
+  {
+    "id": "yc1-273",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "확산 모델(Diffusion Model)의 순전파 및 역전파 과정을 설명하시오."
+  },
+  {
+    "id": "yc1-274",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "분산 신원증명(DID, Decentralized Identifier)과 검증가능한 자격증명(VC, Verifiable Credential)을 설명하시오."
+  },
+  {
+    "id": "yc1-275",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "코드형 인프라(IaC, Infrastructure as Code)와 테라폼(Terraform)의 선언적 상태 관리를 설명하시오."
+  },
+  {
+    "id": "yc1-276",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 품질(Data Quality)의 측정 지표를 설명하시오."
+  },
+  {
+    "id": "yc1-277",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "코드 스멜(Code Smell)과 리팩토링(Refactoring)을 설명하시오."
+  },
+  {
+    "id": "yc1-278",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "변분 오토인코더(VAE, Variational Autoencoder)를 설명하시오."
+  },
+  {
+    "id": "yc1-279",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "OAuth 2.0의 인가 코드 그랜트(Authorization Code Grant) 흐름을 설명하시오."
+  },
+  {
+    "id": "yc1-280",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "깃옵스(GitOps)의 원칙과 동작 방식을 설명하시오."
+  },
+  {
+    "id": "yc1-281",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "시계열 데이터베이스(TSDB, Time-Series Database)의 특성을 설명하시오."
+  },
+  {
+    "id": "yc1-282",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "정적 분석(Static Analysis)과 동적 분석(Dynamic Analysis)을 비교하시오."
+  },
+  {
+    "id": "yc1-283",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "합성곱 신경망(CNN)의 합성곱(Convolution)과 풀링(Pooling) 연산을 설명하시오."
+  },
+  {
+    "id": "yc1-284",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "특권 접근 관리(PAM, Privileged Access Management)의 필요성과 기능을 설명하시오."
+  },
+  {
+    "id": "yc1-285",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "재해복구서비스(DRaaS, Disaster Recovery as a Service)와 RTO/RPO를 설명하시오."
+  },
+  {
+    "id": "yc1-286",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터베이스 암호화 방식인 투명데이터암호화(TDE, Transparent Data Encryption)와 컬럼 암호화를 비교하시오."
+  },
+  {
+    "id": "yc1-287",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "순환 복잡도(Cyclomatic Complexity)를 설명하시오."
+  },
+  {
+    "id": "yc1-288",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "순환신경망(RNN)과 장단기 기억(LSTM)을 비교하시오."
+  },
+  {
+    "id": "yc1-289",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "개인정보보호법상 가명정보(Pseudonymized Data)와 익명정보(Anonymized Data)를 비교하시오."
+  },
+  {
+    "id": "yc1-290",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "요구공학(Requirements Engineering)의 기능 요구사항과 비기능 요구사항을 비교하시오."
+  },
+  {
+    "id": "yc1-291",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "실시간 객체탐지 모델 YOLO(You Only Look Once)를 설명하시오."
+  },
+  {
+    "id": "yc1-292",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "설계 기반 프라이버시(PbD, Privacy by Design)의 7대 원칙을 설명하시오."
+  },
+  {
+    "id": "yc1-293",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "형상관리(SCM, Software Configuration Management)의 베이스라인(Baseline)을 설명하시오."
+  },
+  {
+    "id": "yc1-294",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "시맨틱 분할(Semantic Segmentation)과 인스턴스 분할(Instance Segmentation)을 비교하시오."
+  },
+  {
+    "id": "yc1-295",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "개인정보 영향평가(PIA, Privacy Impact Assessment)의 대상과 절차를 설명하시오."
+  },
+  {
+    "id": "yc1-296",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "마이크로 프론트엔드(Micro Frontend)를 설명하시오."
+  },
+  {
+    "id": "yc1-297",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "개체명 인식(NER, Named Entity Recognition)을 설명하시오."
+  },
+  {
+    "id": "yc1-298",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "정보보호 및 개인정보보호 관리체계(ISMS-P) 인증의 구성을 설명하시오."
+  },
+  {
+    "id": "yc1-299",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "로우코드(Low-Code)와 노코드(No-Code) 플랫폼을 비교하시오."
+  },
+  {
+    "id": "yc1-300",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "자기지도학습(Self-Supervised Learning)을 설명하시오."
+  },
+  {
+    "id": "yc2-001",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
@@ -9201,16 +11613,7 @@
     "text": "기업의 AI 전환(AX)을 위한 생성형 AI 도입 거버넌스 체계에 대하여 설명하시오.\n가. 생성형 AI 도입의 기대효과와 리스크\n나. AI 거버넌스 프레임워크(조직·정책·기술)\n다. 안전한 도입을 위한 단계별 추진 방안"
   },
   {
-    "id": "yc2-02",
-    "kind": "예상",
-    "round": "예상",
-    "period": "2교시",
-    "category": "인공지능",
-    "source": "예상 2교시",
-    "text": "RAG(Retrieval-Augmented Generation) 기반 지식 서비스 아키텍처에 대하여 설명하시오.\n가. RAG의 개념 및 파이프라인(색인·검색·생성)\n나. 검색 품질 개선 기법(청킹·리랭킹·하이브리드 검색)\n다. 환각 완화 및 응답 신뢰성 확보 방안"
-  },
-  {
-    "id": "yc2-03",
+    "id": "yc2-002",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
@@ -9219,16 +11622,7 @@
     "text": "제로 트러스트 아키텍처(Zero Trust Architecture) 도입에 대하여 설명하시오.\n가. 제로 트러스트의 정의 및 핵심 원칙\n나. 구성요소와 성숙도 단계\n다. 조직 도입 시 고려사항 및 단계별 전환 방안"
   },
   {
-    "id": "yc2-04",
-    "kind": "예상",
-    "round": "예상",
-    "period": "2교시",
-    "category": "보안",
-    "source": "예상 2교시",
-    "text": "LLM 애플리케이션 보안에 대하여 설명하시오.\n가. OWASP LLM Top 10 주요 위협\n나. 프롬프트 인젝션·데이터 유출 대응방안\n다. LLM 서비스 설계·운영 단계별 보안 통제"
-  },
-  {
-    "id": "yc2-05",
+    "id": "yc2-003",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
@@ -9237,16 +11631,7 @@
     "text": "클라우드 네이티브(Cloud Native) 전환 전략에 대하여 설명하시오.\n가. 클라우드 네이티브 4대 핵심 요소\n나. 마이크로서비스·컨테이너·오케스트레이션·CI/CD\n다. 전환 시 조직·기술 고려사항 및 단계별 로드맵"
   },
   {
-    "id": "yc2-06",
-    "kind": "예상",
-    "round": "예상",
-    "period": "2교시",
-    "category": "인공지능",
-    "source": "예상 2교시",
-    "text": "MLOps 기반 머신러닝 운영 체계에 대하여 설명하시오.\n가. MLOps의 개념 및 필요성\n나. ML 파이프라인(데이터·학습·배포·모니터링)\n다. 모델 드리프트 대응 및 재학습 자동화 방안"
-  },
-  {
-    "id": "yc2-07",
+    "id": "yc2-004",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
@@ -9255,7 +11640,7 @@
     "text": "데이터 거버넌스와 데이터 품질관리에 대하여 설명하시오.\n가. 데이터 거버넌스의 개념 및 구성요소\n나. 데이터 품질 진단·개선 절차\n다. 데이터 표준화 및 메타데이터 관리 방안"
   },
   {
-    "id": "yc2-08",
+    "id": "yc2-005",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
@@ -9264,25 +11649,7 @@
     "text": "모놀리식에서 마이크로서비스로의 점진적 전환에 대하여 설명하시오.\n가. 전환의 배경 및 기대효과\n나. 스트랭글러 무화과(Strangler Fig) 패턴\n다. 데이터 분리·서비스 경계 설정 시 고려사항"
   },
   {
-    "id": "yc2-09",
-    "kind": "예상",
-    "round": "예상",
-    "period": "2교시",
-    "category": "보안",
-    "source": "예상 2교시",
-    "text": "개인정보보호 강화기술(PET, Privacy Enhancing Technology)에 대하여 설명하시오.\n가. 가명처리·익명처리의 개념 및 차이\n나. 차분 프라이버시·동형암호·연합학습\n다. 데이터 활용과 보호의 균형 확보 방안"
-  },
-  {
-    "id": "yc2-10",
-    "kind": "예상",
-    "round": "예상",
-    "period": "2교시",
-    "category": "소프트웨어공학",
-    "source": "예상 2교시",
-    "text": "관측성(Observability) 기반 시스템 운영에 대하여 설명하시오.\n가. 관측성의 3요소(로그·메트릭·트레이스)\n나. 분산 추적(Distributed Tracing)과 상관관계 분석\n다. SLO·에러 버짓 기반 신뢰성 운영 방안"
-  },
-  {
-    "id": "yc2-11",
+    "id": "yc2-006",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
@@ -9291,12 +11658,2649 @@
     "text": "소프트웨어 공급망 보안 관리에 대하여 설명하시오.\n가. 공급망 공격 유형 및 사례\n나. SBOM의 개념 및 구성\n다. 개발-빌드-배포 단계별 공급망 보안 통제"
   },
   {
-    "id": "yc2-12",
+    "id": "yc2-007",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "국내 간편결제 시장이 급속히 성장하며 다양한 사업자가 경쟁하고 있다.\n가. 간편결제의 결제 처리 흐름을 설명하시오.\n나. 토큰화(Tokenization) 등 간편결제 보안 기술을 설명하시오.\n다. PG(Payment Gateway)·VAN·간편결제 사업자의 역할을 설명하시오."
+  },
+  {
+    "id": "yc2-008",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "프로세서 성능 향상을 위한 파이프라이닝(Pipelining)을 검토하고자 한다.\n가. 명령어 파이프라인의 단계(IF, ID, EX, MEM, WB)를 설명하시오.\n나. 데이터/제어/구조적 해저드(Hazard)의 발생 원인을 설명하시오.\n다. 해저드 해소 기법(포워딩, 분기 예측)을 제시하시오."
+  },
+  {
+    "id": "yc2-009",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "기업의 데이터센터 네트워크를 SDN(Software Defined Networking) 기반으로 전환하려 한다.\n가. SDN의 3계층(Application, Control, Infrastructure) 아키텍처를 설명하시오.\n나. 컨트롤러와 스위치 간 통신에 사용되는 OpenFlow 프로토콜의 동작을 설명하시오.\n다. 기존 전통적 네트워크 대비 SDN 도입 시 기대효과와 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-010",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "다중 프로그래밍 환경에서 CPU 스케줄링을 설계하고자 한다.\n가. FCFS, SJF, RR, 우선순위 스케줄링의 동작을 설명하시오.\n나. 각 알고리즘의 평균 대기시간과 응답시간을 비교하시오.\n다. 기아(Starvation) 문제와 에이징(Aging) 해결 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-011",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "PMBOK 7판은 지식영역 중심에서 원칙(Principle)과 성과영역(Performance Domain) 중심으로 전환되었다.\n가. PMBOK 6판(프로세스 기반)과 7판(원칙 기반)의 구조적 차이를 설명하시오.\n나. 8개 성과영역과 12개 원칙의 상호 연계관계를 설명하시오.\n다. 조직에 7판을 도입할 때의 적용전략과 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-012",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "조직의 IT 거버넌스 체계를 COBIT 2019 기반으로 구축하고자 한다.\n가. 거버넌스와 관리(Governance vs Management)의 구분을 설명하시오.\n나. 40개 관리목표(Governance/Management Objectives)의 5개 도메인을 설명하시오.\n다. 설계요소를 활용한 조직 맞춤형 거버넌스 시스템 설계 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-013",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "RAG(Retrieval-Augmented Generation) 기반 지식 서비스 아키텍처에 대하여 설명하시오.\n가. RAG의 개념 및 파이프라인(색인·검색·생성)\n나. 검색 품질 개선 기법(청킹·리랭킹·하이브리드 검색)\n다. 환각 완화 및 응답 신뢰성 확보 방안"
+  },
+  {
+    "id": "yc2-014",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "LLM 애플리케이션 보안에 대하여 설명하시오.\n가. OWASP LLM Top 10 주요 위협\n나. 프롬프트 인젝션·데이터 유출 대응방안\n다. LLM 서비스 설계·운영 단계별 보안 통제"
+  },
+  {
+    "id": "yc2-015",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "엔터프라이즈 환경의 컨테이너 도입을 위해 도커(Docker) 기반 컨테이너 기술을 검토하고자 한다.\n가. 컨테이너와 가상머신(VM)의 구조적 차이를 설명하시오.\n나. 도커 이미지 레이어(Image Layer)와 컨테이너 격리 메커니즘(Namespace, cgroup)을 설명하시오.\n다. 컨테이너 도입 시 보안 위협과 대응 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-016",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "온라인 쇼핑몰 주문 데이터베이스에서 데이터 중복과 갱신 이상(Update Anomaly)이 빈번하게 발생하고 있다.\n가. 제1정규형(1NF)부터 제3정규형(3NF)까지의 정규화 과정을 예시와 함께 설명하시오.\n나. BCNF와 3NF의 차이를 함수적 종속 관점에서 설명하시오.\n다. 반정규화(Denormalization)가 필요한 상황과 대표 기법을 설명하시오."
+  },
+  {
+    "id": "yc2-017",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "관측성(Observability) 기반 시스템 운영에 대하여 설명하시오.\n가. 관측성의 3요소(로그·메트릭·트레이스)\n나. 분산 추적(Distributed Tracing)과 상관관계 분석\n다. SLO·에러 버짓 기반 신뢰성 운영 방안"
+  },
+  {
+    "id": "yc2-018",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "제조 분야 디지털 트윈(Digital Twin) 구축에 대하여 설명하시오.\n가. 디지털 트윈의 개념 및 도입 필요성\n나. 데이터 수집·모델링·시뮬레이션의 핵심 기술요소\n다. 구축 시 고려사항 및 기대효과"
+  },
+  {
+    "id": "yc2-019",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "금융 혁신을 위해 오픈뱅킹이 전면 시행되어 다양한 서비스가 등장하고 있다.\n가. 오픈뱅킹 공동 API의 구조를 설명하시오.\n나. 오픈뱅킹과 마이데이터의 연계 방안을 설명하시오.\n다. OAuth 2.0 기반 인증과 오픈뱅킹의 보안 리스크를 설명하시오."
+  },
+  {
+    "id": "yc2-020",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "메모리 접근 성능 개선을 위해 캐시 메모리(Cache)를 설계하고자 한다.\n가. 캐시의 사상 방식(Direct, Set-Associative, Fully-Associative)을 비교하시오.\n나. 캐시 교체 정책과 쓰기 정책(Write-through, Write-back)을 설명하시오.\n다. 캐시 적중률(Hit Ratio) 향상 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-021",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "대규모 자율 시스템(AS) 간 라우팅을 위해 BGP(Border Gateway Protocol)를 운용하고 있다.\n가. eBGP와 iBGP의 차이를 설명하시오.\n나. BGP 경로 선택 시 적용되는 주요 속성(Weight, Local Preference, AS-Path 등)의 우선순위를 설명하시오.\n다. BGP 경로 하이재킹(Route Hijacking) 위협과 RPKI 기반 대응 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-022",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "운영체제의 교착상태(Deadlock) 문제를 다루고자 한다.\n가. 교착상태 발생의 4가지 필요조건을 설명하시오.\n나. 교착상태 예방(Prevention)과 회피(Avoidance) 기법을 비교하시오.\n다. 은행원 알고리즘을 이용한 안전 상태 판별 과정을 예시로 설명하시오."
+  },
+  {
+    "id": "yc2-023",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "대규모 SI 프로젝트에서 획득가치관리(EVM)를 적용하고자 한다.\n가. PV, EV, AC와 SV(Schedule Variance), CV(Cost Variance)의 산출식을 설명하시오.\n나. SPI, CPI를 이용한 완료성과지수(TCPI, To-Complete Performance Index) 산정방법을 설명하시오.\n다. EVM 지표를 활용한 프로젝트 조기경보 및 시정조치 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-024",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "IT 서비스관리 체계를 ITIL 4로 전환하고자 한다.\n가. 서비스가치시스템(SVS)과 서비스가치사슬(SVC)의 6개 활동을 설명하시오.\n나. 34개 관리 프랙티스(Practices)의 3가지 분류를 설명하시오.\n다. ITIL v3에서 ITIL 4로의 전환 시 고려사항과 적용전략을 제시하시오."
+  },
+  {
+    "id": "yc2-025",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "MLOps 기반 머신러닝 운영 체계에 대하여 설명하시오.\n가. MLOps의 개념 및 필요성\n나. ML 파이프라인(데이터·학습·배포·모니터링)\n다. 모델 드리프트 대응 및 재학습 자동화 방안"
+  },
+  {
+    "id": "yc2-026",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "개인정보보호 강화기술(PET, Privacy Enhancing Technology)에 대하여 설명하시오.\n가. 가명처리·익명처리의 개념 및 차이\n나. 차분 프라이버시·동형암호·연합학습\n다. 데이터 활용과 보호의 균형 확보 방안"
+  },
+  {
+    "id": "yc2-027",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "쿠버네티스(Kubernetes) 클러스터를 신규 구축하려고 한다.\n가. 쿠버네티스 아키텍처(Control Plane, Worker Node)를 도식하고 설명하시오.\n나. 스케줄러(Scheduler)의 Pod 배치 절차(Filtering, Scoring)를 설명하시오.\n다. 클러스터 고가용성(HA) 구성 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-028",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "다수 사용자가 동시에 접근하는 은행 계좌 시스템에서 동시성 관련 데이터 정합성 문제가 발생한다.\n가. Dirty Read, Non-Repeatable Read, Phantom Read 현상을 설명하시오.\n나. 4가지 격리수준별로 방지 가능한 이상현상을 설명하시오.\n다. 스냅샷 격리(Snapshot Isolation)의 동작 원리를 설명하시오."
+  },
+  {
+    "id": "yc2-029",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "금융 거래 시스템에서 조회 부하와 쓰기 부하를 분리하기 위해 CQRS(Command Query Responsibility Segregation)와 이벤트 소싱(Event Sourcing)을 도입하려 한다.\n가. CQRS의 명령(Command) 모델과 조회(Query) 모델 분리 구조를 설명하시오.\n나. 이벤트 소싱의 이벤트 저장소(Event Store)와 스냅샷(Snapshot) 기법을 설명하시오.\n다. 최종 일관성(Eventual Consistency)으로 인한 조회 지연 문제와 해결 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-030",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "메타버스(Metaverse) 플랫폼 구축에 대하여 설명하시오.\n가. 메타버스의 개념 및 구성요소\n나. 아바타·가상경제·상호운용성 실현 기술\n다. 산업 활용 시 고려사항"
+  },
+  {
+    "id": "yc2-031",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "개인의 데이터 주권 강화를 위해 마이데이터 서비스가 확산되고 있다.\n가. 마이데이터의 데이터 수집·전송 표준 API 구조를 설명하시오.\n나. 정보주체 동의와 개인정보 보호 방안을 설명하시오.\n다. 마이데이터 기반 초개인화 서비스 사례를 설명하시오."
+  },
+  {
+    "id": "yc2-032",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "대규모 프로그램 실행을 위한 가상 메모리(Virtual Memory)를 설계하고자 한다.\n가. 페이징(Paging)과 세그멘테이션(Segmentation)을 비교하시오.\n나. 페이지 테이블과 TLB(Translation Lookaside Buffer)의 주소 변환 과정을 설명하시오.\n다. 페이지 부재(Page Fault)와 페이지 교체 알고리즘을 제시하시오."
+  },
+  {
+    "id": "yc2-033",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "IoT 서비스 확산에 따라 대용량 저지연 통신 인프라가 요구되고 있다.\n가. 5G의 URLLC(초저지연) 실현을 위한 무선 구간 기술을 설명하시오.\n나. 네트워크 슬라이싱을 활용한 IoT 전용 슬라이스 구성 방안을 설명하시오.\n다. 엣지 컴퓨팅(MEC)과 결합한 서비스 아키텍처를 제시하시오."
+  },
+  {
+    "id": "yc2-034",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "임계 구역(Critical Section) 문제를 해결하는 동기화 기법을 설계한다.\n가. 임계 구역 문제의 3가지 요건(상호배제, 진행, 한정대기)을 설명하시오.\n나. 세마포어, 뮤텍스, 모니터의 특징을 비교하시오.\n다. 생산자-소비자 문제의 세마포어 기반 해결 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-035",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 일정관리를 위해 주공정연쇄법(CCM)을 도입하려 한다.\n가. CPM과 CCM의 차이점과 학생증후군(Student Syndrome)·파킨슨 법칙을 설명하시오.\n나. 프로젝트 버퍼(Project Buffer)와 피딩 버퍼(Feeding Buffer)의 설정방법을 설명하시오.\n다. 자원제약을 고려한 CCM 일정수립 및 버퍼 모니터링 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-036",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "공공기관의 정보화전략계획(ISP)을 수립하고자 한다.\n가. ISP의 수립 절차(환경분석·현황분석·목표모델·이행계획)를 설명하시오.\n나. ISP와 ISMP, EA의 관계 및 차이를 설명하시오.\n다. ISP 산출물의 실행력 확보를 위한 성과관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-037",
     "kind": "예상",
     "round": "예상",
     "period": "2교시",
     "category": "인공지능",
     "source": "예상 2교시",
     "text": "생성형 AI의 신뢰성과 윤리적 대응에 대하여 설명하시오.\n가. 생성형 AI의 저작권·편향·프라이버시 문제\n나. AI 신뢰성 핵심 속성 및 평가 지표\n다. 책임 있는 AI(Responsible AI) 확보 방안"
+  },
+  {
+    "id": "yc2-038",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "대칭키 암호와 공개키 암호는 서로 다른 특성으로 상호 보완적으로 활용된다. 다음을 논하시오.\n가. 대칭키 암호와 공개키 암호의 동작 원리 및 특성 비교\n나. 하이브리드 암호 시스템의 구성과 키 분배 과정\n다. 각 암호 방식의 적용 사례 및 선택 기준"
+  },
+  {
+    "id": "yc2-039",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "마이크로서비스 환경에서 쿠버네티스 네트워킹을 설계하고자 한다.\n가. CNI(Container Network Interface) 플러그인의 동작 원리를 설명하시오.\n나. 서비스(Service) 디스커버리와 kube-proxy의 트래픽 처리 방식을 설명하시오.\n다. 네트워크 정책(Network Policy)을 활용한 트래픽 통제 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-040",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "고성능 데이터베이스에서 동시성 제어 기법 선택이 성능에 큰 영향을 미친다.\n가. 2단계 로킹(2PL)의 확장 단계와 수축 단계를 설명하시오.\n나. MVCC의 동작 원리와 버전 관리 방식을 설명하시오.\n다. 낙관적(Optimistic)·비관적(Pessimistic) 동시성 제어를 비교하시오."
+  },
+  {
+    "id": "yc2-041",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "복잡한 도메인을 가진 엔터프라이즈 시스템 설계를 위해 도메인 주도 설계(DDD, Domain-Driven Design)를 적용하고자 한다.\n가. 유비쿼터스 언어(Ubiquitous Language)와 바운디드 컨텍스트(Bounded Context)의 개념을 설명하시오.\n나. 엔티티(Entity), 값 객체(Value Object), 애그리거트(Aggregate)의 차이를 설명하시오.\n다. 컨텍스트 맵(Context Map)을 활용한 바운디드 컨텍스트 간 통합 전략을 제시하시오."
+  },
+  {
+    "id": "yc2-042",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "공간 컴퓨팅(Spatial Computing) 기반 XR 서비스에 대하여 설명하시오.\n가. 공간 컴퓨팅의 개념 및 필요성\n나. SLAM·핸드트래킹·공간 앵커 등 핵심 기술요소\n다. 서비스 도입 시 고려사항"
+  },
+  {
+    "id": "yc2-043",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "디지털 플랫폼 기업이 시장을 빠르게 장악하며 규제 논의가 확대되고 있다.\n가. 양면시장의 특성과 교차 네트워크 효과를 설명하시오.\n나. 플랫폼의 가격전략과 보조금(Subsidy) 구조를 설명하시오.\n다. 플랫폼 독점 이슈와 규제 방향을 설명하시오."
+  },
+  {
+    "id": "yc2-044",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "스토리지 신뢰성 향상을 위해 RAID를 도입하고자 한다.\n가. RAID 레벨 0/1/5/6의 데이터 배치와 특성을 비교하시오.\n나. 패리티(Parity)와 스트라이핑(Striping), 미러링(Mirroring)을 설명하시오.\n다. 성능과 가용성을 고려한 RAID 선정 기준을 제시하시오."
+  },
+  {
+    "id": "yc2-045",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "TCP(Transmission Control Protocol)의 신뢰성 있는 전송을 위한 제어 기법을 다루고자 한다.\n가. 3-way handshake와 4-way handshake 과정을 설명하시오.\n나. 혼잡 제어의 4단계(Slow Start, Congestion Avoidance, Fast Retransmit, Fast Recovery)를 설명하시오.\n다. 고대역폭 환경에서 TCP 성능 한계와 BBR 등 개선 알고리즘을 제시하시오."
+  },
+  {
+    "id": "yc2-046",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "가상 메모리(Virtual Memory) 시스템의 성능을 최적화하고자 한다.\n가. 요구 페이징(Demand Paging)과 페이지 폴트 처리 과정을 설명하시오.\n나. 페이지 교체 알고리즘(FIFO, LRU, LFU, Optimal)을 비교하시오.\n다. 스래싱(Thrashing) 발생 원인과 워킹셋(Working Set) 기반 대응 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-047",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "애자일(Agile)과 예측형을 혼합한 하이브리드 방식으로 프로젝트를 수행하고자 한다.\n가. 하이브리드 방식의 적용 대상 프로젝트 특성을 설명하시오.\n나. 요구사항 계층별(안정/변동)로 개발방식을 배분하는 기준을 제시하시오.\n다. 하이브리드 프로젝트의 거버넌스 및 진척관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-048",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "전사적 관점의 엔터프라이즈아키텍처(EA)를 도입하고자 한다.\n가. EA 참조모델(BRM·DRM·ARM·TRM·PRM)을 설명하시오.\n나. EA 성숙도 모델과 운영 거버넌스를 설명하시오.\n다. EA 정보 활용을 통한 정보자원관리 및 중복투자 방지 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-049",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "설명가능 인공지능(XAI, eXplainable AI)에 대하여 설명하시오.\n가. XAI의 개념 및 필요성\n나. 주요 기법(LIME, SHAP, Grad-CAM 등) 및 접근 방식\n다. 산업 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-050",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "블록 암호는 운영 모드에 따라 보안성과 성능이 달라진다. 다음을 설명하시오.\n가. ECB, CBC, CTR, GCM 운영 모드의 동작 원리\n나. 각 운영 모드의 보안 취약점과 적용 시 고려사항\n다. 초기화 벡터(IV)와 논스(Nonce) 관리 방안"
+  },
+  {
+    "id": "yc2-051",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "상태 기반(Stateful) 애플리케이션을 위한 쿠버네티스 스토리지를 설계하고자 한다.\n가. CSI(Container Storage Interface)와 PV/PVC 바인딩 과정을 설명하시오.\n나. 스토리지클래스(StorageClass)와 동적 프로비저닝(Dynamic Provisioning) 방식을 설명하시오.\n다. 데이터 지속성과 백업을 고려한 스토리지 운영 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-052",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "장애 발생 시 데이터베이스의 무결성을 보장하기 위한 회복기법이 요구된다.\n가. 로그 기반 회복의 REDO와 UNDO 연산을 설명하시오.\n나. ARIES 회복의 3단계(분석·재실행·실행취소)를 설명하시오.\n다. 체크포인트 기법이 회복 성능에 미치는 영향을 설명하시오."
+  },
+  {
+    "id": "yc2-053",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "유지보수성이 높은 시스템 구축을 위해 클린 아키텍처(Clean Architecture)를 적용하려 한다.\n가. 엔티티, 유스케이스, 인터페이스 어댑터, 프레임워크 계층의 동심원 구조를 설명하시오.\n나. 의존성 규칙(Dependency Rule)과 의존성 역전 원칙(DIP, Dependency Inversion Principle)의 관계를 설명하시오.\n다. 데이터베이스와 UI 기술 변경에 대한 아키텍처의 유연성을 논하시오."
+  },
+  {
+    "id": "yc2-054",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "블록체인 기반 분산신원증명(DID, Decentralized Identifier)에 대하여 설명하시오.\n가. DID의 개념 및 등장 배경\n나. 검증가능자격증명(VC)과 신뢰 삼각구도 등 기술요소\n다. 공공·금융 도입 시 고려사항"
+  },
+  {
+    "id": "yc2-055",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "구독 기반 비즈니스 모델이 이커머스 전반으로 확산되고 있다.\n가. 구독경제 비즈니스 모델의 유형을 설명하시오.\n나. 이탈률(Churn)과 고객생애가치(LTV)의 개념을 설명하시오.\n다. 개인화 추천과 락인(Lock-in) 전략을 설명하시오."
+  },
+  {
+    "id": "yc2-056",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "고성능 컴퓨팅을 위한 병렬처리 구조를 검토하고자 한다.\n가. 플린(Flynn) 분류(SISD, SIMD, MISD, MIMD)를 설명하시오.\n나. 공유 메모리(Shared Memory)와 분산 메모리(Distributed Memory) 구조를 비교하시오.\n다. 병렬화 성능 한계(암달의 법칙, Amdahl's Law)와 극복 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-057",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "멀티미디어 트래픽 증가로 네트워크 QoS(Quality of Service) 보장이 중요해지고 있다.\n가. QoS의 4대 지표(대역폭, 지연, 지터, 손실률)를 설명하시오.\n나. DiffServ 기반 트래픽 분류 및 마킹(DSCP) 방식을 설명하시오.\n다. 큐잉 스케줄링 기법(PQ, WFQ, CBWFQ)을 비교하시오."
+  },
+  {
+    "id": "yc2-058",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "메모리 관리 기법을 종합적으로 설계하고자 한다.\n가. 페이징과 세그멘테이션의 주소 변환 과정을 비교하시오.\n나. TLB(Translation Lookaside Buffer)를 활용한 주소 변환 가속을 설명하시오.\n다. 내부 단편화와 외부 단편화의 발생 원인과 해결 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-059",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 위험관리 프로세스를 체계적으로 수행하고자 한다.\n가. 위험 식별(Identification)과 정성적·정량적 분석 방법을 설명하시오.\n나. 위험대응계획 수립 시 위협·기회 대응전략을 설명하시오.\n다. 이차위험(Secondary Risk)과 잔존위험(Residual Risk)의 관리방안을 제시하시오."
+  },
+  {
+    "id": "yc2-060",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "IT 성과를 전략과 연계하기 위해 IT-BSC를 도입하고자 한다.\n가. IT-BSC의 4가지 관점(기업기여·사용자·운영우수성·미래지향)을 설명하시오.\n나. 전략지도(Strategy Map)를 통한 인과관계 설정을 설명하시오.\n다. KPI 설정 및 IT-BSC 운영 정착 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-061",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "프라이버시 보존 분산학습 기법인 연합학습(Federated Learning)에 대하여 설명하시오.\n가. 연합학습의 개념 및 등장 배경\n나. 아키텍처 및 동작 절차(로컬 학습, 모델 집계)\n다. 보안 위협 및 대응 방안"
+  },
+  {
+    "id": "yc2-062",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "공개키 기반구조(PKI)는 전자서명과 인증서 신뢰의 기반이다. 다음을 논하시오.\n가. PKI의 구성 요소(CA, RA, 인증서, 저장소)와 신뢰 체계\n나. 인증서 발급, 검증, 폐기의 생명주기\n다. 인증서 폐기 확인 방식(CRL, OCSP, OCSP Stapling) 비교"
+  },
+  {
+    "id": "yc2-063",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "이벤트 기반 서비스를 서버리스(Serverless)로 구축하려고 한다.\n가. FaaS(Function as a Service)의 실행 모델과 이벤트 트리거를 설명하시오.\n나. 콜드 스타트(Cold Start) 발생 원인과 완화 기법을 설명하시오.\n다. 서버리스 아키텍처의 적용 시 장단점과 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-064",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "대용량 테이블의 조회 성능 개선을 위해 인덱스 설계가 중요하다.\n가. B+tree 인덱스의 구조와 탐색 과정을 설명하시오.\n나. 비트맵·해시·함수기반 인덱스의 특성을 설명하시오.\n다. 인덱스 설계 시 고려사항과 성능 트레이드오프를 설명하시오."
+  },
+  {
+    "id": "yc2-065",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "대규모 이벤트 트래픽을 처리하기 위해 이벤트 드리븐 아키텍처(EDA, Event-Driven Architecture)를 도입하려 한다.\n가. 이벤트 프로듀서(Producer), 브로커(Broker), 컨슈머(Consumer)의 구성 요소를 설명하시오.\n나. 이벤트 처리 방식 중 이벤트 알림(Notification)과 이벤트 전달 상태 전이(Event-Carried State Transfer)를 비교하시오.\n다. 메시지 중복 처리를 위한 멱등성(Idempotency) 보장 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-066",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "중앙은행 디지털화폐(CBDC, Central Bank Digital Currency) 도입에 대하여 설명하시오.\n가. CBDC의 개념 및 필요성\n나. 원장구조·프라이버시·오프라인 결제 기술요소\n다. 도입 시 통화정책·금융안정 고려사항"
+  },
+  {
+    "id": "yc2-067",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "유휴 자원을 거래하는 공유경제 플랫폼이 다양한 산업으로 확대되고 있다.\n가. 공유경제 플랫폼의 구조와 거래 방식을 설명하시오.\n나. 신뢰·평판(Reputation) 시스템의 역할을 설명하시오.\n다. 공유경제의 규제·안전 이슈를 설명하시오."
+  },
+  {
+    "id": "yc2-068",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "AI 연산 가속을 위한 하드웨어 아키텍처를 검토하고자 한다.\n가. GPU, TPU, NPU의 구조적 특성과 연산 방식을 비교하시오.\n나. 행렬 연산 가속을 위한 시스톨릭 어레이(Systolic Array)를 설명하시오.\n다. AI 워크로드에 적합한 가속기 선정 기준을 제시하시오."
+  },
+  {
+    "id": "yc2-069",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "기업 캠퍼스 네트워크에서 VLAN(Virtual LAN)을 설계하려 한다.\n가. VLAN의 개념과 브로드캐스트 도메인 분할 효과를 설명하시오.\n나. IEEE 802.1Q 트렁킹과 네이티브 VLAN을 설명하시오.\n다. VLAN 간 라우팅(Inter-VLAN Routing) 구현 방식을 비교하시오."
+  },
+  {
+    "id": "yc2-070",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "파일 시스템의 구조와 관리 방식을 설계한다.\n가. 파일 할당 방식(연속, 연결, 인덱스)을 비교하시오.\n나. 유닉스 i-node의 직접/간접 블록 포인터 구조를 설명하시오.\n다. 저널링 파일 시스템(Journaling File System)의 복구 메커니즘을 제시하시오."
+  },
+  {
+    "id": "yc2-071",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "공공 정보화사업의 대가를 산정하기 위해 기능점수(FP)를 적용한다.\n가. 데이터 기능(ILF, EIF)과 트랜잭션 기능(EI, EO, EQ)을 설명하시오.\n나. 기능점수 산정 및 보정계수 적용을 통한 개발비 산출절차를 설명하시오.\n다. FP 방식과 투입공수(M/M) 방식의 장단점을 비교하고 적용방안을 제시하시오."
+  },
+  {
+    "id": "yc2-072",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 디지털 전환(DX, Digital Transformation) 전략을 수립하고자 한다.\n가. 디지털 전환의 3단계(디지털화·디지털전환·비즈니스전환)를 설명하시오.\n나. 디지털 성숙도 진단 및 핵심역량 확보 방안을 설명하시오.\n다. 디지털 전환 추진 시 조직·문화 변화관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-073",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "데이터 중심 인공지능(Data-Centric AI)에 대하여 설명하시오.\n가. 모델 중심 접근과의 차이 및 필요성\n나. 핵심 활동(데이터 품질 관리, 레이블 일관성, 데이터 슬라이싱)\n다. 도입을 위한 프로세스 및 고려사항"
+  },
+  {
+    "id": "yc2-074",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "전자서명은 무결성, 인증, 부인방지를 제공한다. 다음을 설명하시오.\n가. 전자서명의 생성 및 검증 과정\n나. RSA 서명과 ECDSA 서명의 비교\n다. 장기 전자서명(LTV)과 타임스탬프의 필요성"
+  },
+  {
+    "id": "yc2-075",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "온프레미스 시스템을 클라우드로 이전하는 프로젝트를 수행하고자 한다.\n가. 클라우드 마이그레이션 6R 전략을 설명하시오.\n나. 마이그레이션 평가(Assessment) 및 계획 수립 절차를 설명하시오.\n다. 마이그레이션 리스크와 이를 최소화하는 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-076",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "복잡한 다중 조인 쿼리의 응답 시간이 지연되고 있다.\n가. 옵티마이저의 쿼리 처리 과정을 설명하시오.\n나. Nested Loop, Sort-Merge, Hash Join 조인 알고리즘을 비교하시오.\n다. 실행계획 분석을 통한 튜닝 방안을 설명하시오."
+  },
+  {
+    "id": "yc2-077",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "소프트웨어 설계 품질 향상을 위해 GoF(Gang of Four) 디자인 패턴을 활용하고자 한다.\n가. 생성(Creational), 구조(Structural), 행위(Behavioral) 패턴의 분류와 대표 패턴을 설명하시오.\n나. 팩토리 메서드(Factory Method)와 추상 팩토리(Abstract Factory) 패턴을 비교하시오.\n다. 디자인 패턴 남용 시 발생하는 과잉 설계(Over-Engineering) 문제와 적용 기준을 제시하시오."
+  },
+  {
+    "id": "yc2-078",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "양자컴퓨팅(Quantum Computing) 상용화에 대하여 설명하시오.\n가. 양자컴퓨팅의 원리 및 우위(Quantum Advantage)\n나. 큐비트 구현방식과 양자 오류정정 기술요소\n다. 산업 활용 시 고려사항 및 한계"
+  },
+  {
+    "id": "yc2-079",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "온라인과 오프라인을 연결하는 O2O 서비스가 생활 전반에 확산되고 있다.\n가. O2O 서비스의 유형과 구조를 설명하시오.\n나. 위치기반서비스(LBS)와 결제 연동 방식을 설명하시오.\n다. 오프라인 데이터 연계의 과제와 해결 방안을 설명하시오."
+  },
+  {
+    "id": "yc2-080",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "고대역폭 메모리 시스템을 설계하고자 한다.\n가. 메모리 계층구조(Register-Cache-Main-Storage)를 설명하시오.\n나. DDR과 HBM(High Bandwidth Memory)의 구조 및 특성을 비교하시오.\n다. 메모리 대역폭 병목 해소 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-081",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "차세대 무선랜 도입을 검토하는 기업 환경을 가정한다.\n가. Wi-Fi 7(IEEE 802.11be)의 주요 기술(320MHz, 4K-QAM, MLO)을 설명하시오.\n나. Wi-Fi 6E 대비 Wi-Fi 7의 개선점을 비교하시오.\n다. 고밀도 환경에서의 무선랜 설계 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-082",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "디스크 입출력 성능을 향상하는 방안을 검토한다.\n가. 디스크 스케줄링 기법(FCFS, SSTF, SCAN, C-SCAN, LOOK)을 비교하시오.\n나. 각 기법의 탐색 시간(Seek Time) 관점 장단점을 설명하시오.\n다. SSD 환경에서 디스크 스케줄링의 변화 요인을 제시하시오."
+  },
+  {
+    "id": "yc2-083",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 이해관계자 관리를 강화하고자 한다.\n가. 이해관계자 식별 및 분류(권력-관심 격자 등) 방법을 설명하시오.\n나. 이해관계자 참여평가 매트릭스(현재-목표 참여수준)를 설명하시오.\n다. 이해관계자 갈등 발생 시 소통 및 참여 제고 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-084",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "데이터 기반 경영(Data-driven Management)을 정착시키고자 한다.\n가. 데이터 거버넌스와 데이터 품질관리 체계를 설명하시오.\n나. 데이터 분석 성숙도(기술·진단·예측·처방)를 설명하시오.\n다. 데이터 기반 의사결정 문화 정착 및 CDO 역할을 제시하시오."
+  },
+  {
+    "id": "yc2-085",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "딥러닝 모델 경량화(Model Compression)에 대하여 설명하시오.\n가. 경량화의 필요성 및 목표\n나. 핵심 기법(양자화, 가지치기, 저랭크 분해) 비교\n다. 정확도와 효율성 간 트레이드오프 및 적용 전략"
+  },
+  {
+    "id": "yc2-086",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "차세대 방화벽(NGFW)과 통합 위협 관리(UTM)는 경계 보안의 핵심이다. 다음을 논하시오.\n가. NGFW와 UTM의 기능 및 구조 비교\n나. 애플리케이션 인식 및 사용자 기반 정책 적용 방식\n다. 도입 시 성능과 보안 정책 설계 고려사항"
+  },
+  {
+    "id": "yc2-087",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "기업이 멀티 클라우드(Multi-Cloud) 전략을 도입하려고 한다.\n가. 멀티 클라우드와 하이브리드 클라우드(Hybrid Cloud)의 차이를 설명하시오.\n나. 멀티 클라우드 환경의 벤더 종속(Lock-in) 회피 방안을 설명하시오.\n다. 통합 관리 및 거버넌스 체계를 제시하시오."
+  },
+  {
+    "id": "yc2-088",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "글로벌 서비스를 위해 데이터를 여러 지역에 분산 저장하는 분산 데이터베이스를 구축한다.\n가. 수평·수직 파티셔닝 등 데이터 분할 방식을 설명하시오.\n나. 분산 투명성(Transparency)의 유형을 설명하시오.\n다. 분산 질의 처리 과정과 최적화 방안을 설명하시오."
+  },
+  {
+    "id": "yc2-089",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "애자일(Agile) 전환을 추진하는 조직에서 스크럼(Scrum)을 도입하려 한다.\n가. 스크럼의 역할(Product Owner, Scrum Master, 개발팀)과 산출물(Artifacts)을 설명하시오.\n나. 스프린트 계획, 데일리 스크럼, 스프린트 리뷰, 회고의 이벤트를 설명하시오.\n다. 대규모 조직 확장을 위한 SAFe(Scaled Agile Framework)의 필요성을 논하시오."
+  },
+  {
+    "id": "yc2-090",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "양자내성암호(PQC, Post-Quantum Cryptography) 전환에 대하여 설명하시오.\n가. 양자컴퓨팅에 따른 암호 위협과 전환 필요성\n나. 격자기반 등 PQC 알고리즘 유형과 하이브리드 방식\n다. 조직의 암호 전환(Crypto-Agility) 고려사항"
+  },
+  {
+    "id": "yc2-091",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "하나의 앱에서 다양한 서비스를 제공하는 슈퍼앱 경쟁이 심화되고 있다.\n가. 미니앱(Mini App) 기반 슈퍼앱 아키텍처를 설명하시오.\n나. 슈퍼앱 생태계와 락인 효과를 설명하시오.\n다. 데이터 통합에 따른 프라이버시 이슈를 설명하시오."
+  },
+  {
+    "id": "yc2-092",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "가속기 간 고속 데이터 전송을 위한 인터커넥트를 설계하고자 한다.\n가. PCIe와 NVLink의 구조와 대역폭 특성을 비교하시오.\n나. GPU 다중 연결(Multi-GPU) 시 데이터 통신 방식을 설명하시오.\n다. 인터커넥트 병목을 고려한 시스템 구성 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-093",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "데이터 전송 중 발생하는 오류를 제어하는 기법을 설계하고자 한다.\n가. 오류 검출 방식인 패리티, 체크섬, CRC를 비교하시오.\n나. 해밍 코드(Hamming Code)를 이용한 단일 비트 오류 정정 과정을 예시로 설명하시오.\n다. 전진 오류 정정(FEC)과 후진 오류 정정(ARQ)을 비교하시오."
+  },
+  {
+    "id": "yc2-094",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "클라우드 환경에서 컨테이너 기반 격리 기술을 도입한다.\n가. 리눅스 namespace의 종류와 격리 대상을 설명하시오.\n나. cgroup을 이용한 자원 제한 및 할당 방식을 설명하시오.\n다. 컨테이너와 가상머신(VM)의 격리 수준과 성능을 비교하시오."
+  },
+  {
+    "id": "yc2-095",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "소프트웨어 형상관리(SCM)를 프로젝트 전반에 적용하려 한다.\n가. 형상식별, 형상통제, 형상상태보고, 형상감사의 4대 활동을 설명하시오.\n나. 형상통제위원회(CCB, Configuration Control Board)의 변경통제 절차를 설명하시오.\n다. 버전관리 도구와 연계한 형상관리 자동화 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-096",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "IT 아웃소싱을 SLA 기반으로 운영하고자 한다.\n가. 아웃소싱 유형(토탈·부분·멀티소싱)과 선정기준을 설명하시오.\n나. SLA 지표 설정과 SLM(서비스수준관리) 절차를 설명하시오.\n다. 아웃소싱 리스크와 벤더 종속(Lock-in) 대응 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-097",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "적대적 기계학습(Adversarial Machine Learning)과 AI 보안에 대하여 설명하시오.\n가. 적대적 공격의 개념 및 유형(회피, 오염, 모델 추출)\n나. 공격 메커니즘 및 사례\n다. 방어 기법 및 보안 강화 방안"
+  },
+  {
+    "id": "yc2-098",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "침입탐지 및 방지 시스템은 네트워크 위협 대응의 기본이다. 다음을 설명하시오.\n가. 시그니처 기반 탐지와 이상행위 기반 탐지의 원리 비교\n나. IDS와 IPS의 배치 방식(인라인, 미러링)과 차이\n다. 오탐(False Positive)과 미탐(False Negative) 최소화 방안"
+  },
+  {
+    "id": "yc2-099",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "공공기관이 클라우드 서비스를 도입하기 위해 보안 인증을 검토하고 있다.\n가. 클라우드 보안인증제(CSAP)의 인증 체계와 등급(하/중/상)을 설명하시오.\n나. 클라우드 책임 공유 모델(Shared Responsibility Model)을 설명하시오.\n다. 공공 클라우드 도입 시 보안 통제 항목과 이행 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-100",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "마이크로서비스 환경에서 여러 데이터베이스에 걸친 트랜잭션 처리가 필요하다.\n가. 2단계 커밋(2PC, Two-Phase Commit) 프로토콜을 설명하시오.\n나. 2PC의 한계와 3단계 커밋(3PC)을 설명하시오.\n다. Saga 패턴과 보상 트랜잭션(Compensating Transaction)을 설명하시오."
+  },
+  {
+    "id": "yc2-101",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "개발 흐름의 병목을 개선하기 위해 칸반(Kanban)을 도입하려 한다.\n가. 칸반 보드의 시각화와 WIP(Work In Progress) 제한 원칙을 설명하시오.\n나. 리드 타임(Lead Time)과 사이클 타임(Cycle Time)을 측정하는 방법을 설명하시오.\n다. 누적 흐름도(CFD, Cumulative Flow Diagram)를 활용한 프로세스 개선 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-102",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "도심항공교통(UAM, Urban Air Mobility) 실현에 대하여 설명하시오.\n가. UAM의 개념 및 필요성\n나. eVTOL 기체·버티포트·교통관리(UATM) 기술요소\n다. 상용화 시 안전·인프라 고려사항"
+  },
+  {
+    "id": "yc2-103",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "비금융 기업이 자사 서비스에 금융 기능을 결합하는 임베디드 금융이 확산되고 있다.\n가. 임베디드 금융의 개념과 유형(결제·대출·보험)을 설명하시오.\n나. BaaS(Banking as a Service)의 구조를 설명하시오.\n다. 비금융 기업의 금융 서비스 확장 사례를 설명하시오."
+  },
+  {
+    "id": "yc2-104",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "명령어 수준 병렬성(ILP)을 활용한 프로세서를 설계하고자 한다.\n가. 슈퍼스칼라(Superscalar)와 VLIW(Very Long Instruction Word)를 비교하시오.\n나. 비순차 실행(Out-of-Order Execution)과 명령어 스케줄링을 설명하시오.\n다. ILP 확대의 한계와 극복 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-105",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "클라우드 서비스의 안정적 운영을 위해 로드밸런싱을 구성한다.\n가. L4 로드밸런싱과 L7 로드밸런싱의 동작 원리를 비교하시오.\n나. 로드밸런싱 알고리즘(Round Robin, Least Connection, Hash 등)을 설명하시오.\n다. 헬스 체크와 세션 지속성(Session Persistence) 구현 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-106",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "프로세스와 스레드의 관리 메커니즘을 다루고자 한다.\n가. 프로세스 제어 블록(PCB)의 구성 요소를 설명하시오.\n나. 문맥 교환(Context Switching)의 처리 과정과 오버헤드를 설명하시오.\n다. 사용자 수준 스레드와 커널 수준 스레드를 비교하시오."
+  },
+  {
+    "id": "yc2-107",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "조직의 프로젝트 성숙도 향상을 위해 PMO를 설립하고자 한다.\n가. PMO의 유형(지원형·통제형·지시형)과 기능을 설명하시오.\n나. PMO 도입 로드맵과 성숙도 단계별 역할을 제시하시오.\n다. PMO 운영의 성공요인과 저항관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-108",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 재해복구 및 업무연속성 체계를 수립하고자 한다.\n가. BIA(Business Impact Analysis)를 통한 핵심업무 식별방법을 설명하시오.\n나. RTO·RPO에 따른 재해복구 등급(Mirror·Hot·Warm·Cold Site)을 비교하시오.\n다. BCP 모의훈련 및 지속적 개선 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-109",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "컴퓨터 비전 기반 객체탐지(Object Detection) 시스템에 대하여 설명하시오.\n가. 객체탐지의 개념 및 활용 분야\n나. 1-스테이지와 2-스테이지 탐지기 비교(YOLO, Faster R-CNN)\n다. 성능 평가지표(mAP, IoU) 및 실무 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-110",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "DDoS 공격은 가용성을 위협하는 대표적 공격이다. 다음을 논하시오.\n가. 볼륨 기반, 프로토콜 기반, 애플리케이션 기반 DDoS 공격 유형\n나. DDoS 방어 아키텍처(스크러빙 센터, CDN, Anycast)\n다. 탐지 및 대응 절차와 대응 조직 운영 방안"
+  },
+  {
+    "id": "yc2-111",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "대용량 데이터를 위한 소프트웨어 정의 스토리지(SDS)를 구축하고자 한다.\n가. SDS(Software-Defined Storage)의 개념과 구성요소를 설명하시오.\n나. 오브젝트/블록/파일 스토리지의 특성과 적용 사례를 비교하시오.\n다. 데이터 이중화(Replication)와 소거 코딩(Erasure Coding)을 비교하시오."
+  },
+  {
+    "id": "yc2-112",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "가용성과 확장성을 위해 데이터 복제를 도입하면서 일관성 문제가 대두된다.\n가. 동기·비동기 복제 방식을 비교하시오.\n나. 리더-팔로워(Leader-Follower)와 다중리더 복제를 설명하시오.\n다. 최종 일관성(Eventual Consistency)과 충돌 해결 방안을 설명하시오."
+  },
+  {
+    "id": "yc2-113",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "코드 품질과 설계를 개선하기 위해 테스트 주도 개발(TDD, Test-Driven Development)을 도입하려 한다.\n가. Red-Green-Refactor 사이클을 설명하시오.\n나. TDD와 행위 주도 개발(BDD, Behavior-Driven Development)의 차이를 설명하시오.\n다. TDD 도입 시 테스트 유지보수 비용과 조직 문화 측면의 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-114",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "스마트팩토리의 사이버물리시스템(CPS, Cyber-Physical System)에 대하여 설명하시오.\n가. CPS의 개념 및 스마트팩토리에서의 역할\n나. 센서·엣지·제어 연동의 핵심 기술요소\n다. 구축 시 보안 및 안정성 고려사항"
+  },
+  {
+    "id": "yc2-115",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "디지털서비스",
+    "source": "예상 2교시",
+    "text": "OTT 시장 경쟁 심화로 콘텐츠 차별화와 수익모델 다변화가 요구된다.\n가. CDN·스트리밍 기반 OTT 서비스 아키텍처를 설명하시오.\n나. 콘텐츠 추천 알고리즘과 개인화 방식을 설명하시오.\n다. 광고형(AVOD)·구독형(SVOD) 등 콘텐츠 수익모델을 설명하시오."
+  },
+  {
+    "id": "yc2-116",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "컴퓨터구조",
+    "source": "예상 2교시",
+    "text": "데이터 처리 지연을 줄이기 위해 인메모리 컴퓨팅(In-Memory Computing)을 검토하고자 한다.\n가. 인메모리 컴퓨팅의 개념과 기존 디스크 기반 처리와의 차이를 설명하시오.\n나. 프로세싱 인 메모리(PIM, Processing-In-Memory) 구조를 설명하시오.\n다. 인메모리 컴퓨팅 적용 시 데이터 지속성 및 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-117",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "IPv4 주소 고갈에 대응하여 IPv6 전환을 추진하고 있다.\n가. IPv6 주소 표기법과 주소 유형(Unicast, Multicast, Anycast)을 설명하시오.\n나. IPv4/IPv6 전환 기술(Dual Stack, Tunneling, NAT64/DNS64)을 비교하시오.\n다. IPv6 도입 시 보안 및 운영상 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-118",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "실시간 시스템의 스케줄링을 설계하고자 한다.\n가. 경성 실시간과 연성 실시간 시스템을 비교하시오.\n나. RM(Rate Monotonic)과 EDF(Earliest Deadline First) 스케줄링을 비교하시오.\n다. 우선순위 역전(Priority Inversion) 문제와 우선순위 상속 해결 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-119",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 품질관리를 계획·보증·통제 관점에서 수행하고자 한다.\n가. 품질계획(QP), 품질보증(QA), 품질통제(QC)의 차이를 설명하시오.\n나. 품질통제 도구인 관리도(Control Chart)와 파레토도(Pareto Chart)를 설명하시오.\n다. 품질비용(COQ, Cost of Quality)의 구성과 최적화 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-120",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 경영전략 수립을 위해 전략분석을 수행하고자 한다.\n가. 외부환경 분석(5 Forces)과 내부역량 분석(가치사슬)을 설명하시오.\n나. SWOT/TOWS 매트릭스를 통한 전략도출 방법을 설명하시오.\n다. 도출된 전략의 우선순위 선정 및 실행 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-121",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "인공지능 모델의 평가지표와 벤치마크 체계에 대하여 설명하시오.\n가. 평가의 중요성 및 태스크별 지표(분류, 회귀, 생성)\n나. 대표적 벤치마크 및 리더보드의 한계\n다. 신뢰성 있는 모델 평가를 위한 고려사항"
+  },
+  {
+    "id": "yc2-122",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "지능형 지속 위협(APT)은 표적형 장기 침투 공격이다. 다음을 설명하시오.\n가. APT 공격의 단계별 진행 과정\n나. 사이버 킬체인과 MITRE ATT&CK 기반 위협 분석\n다. APT 탐지 및 대응을 위한 보안 체계 구축 방안"
+  },
+  {
+    "id": "yc2-123",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "글로벌 서비스를 위한 콘텐츠 전송 및 트래픽 분산 인프라를 설계하고자 한다.\n가. CDN(Content Delivery Network)의 캐싱 및 엣지 배포 원리를 설명하시오.\n나. L4/L7 로드밸런싱 방식을 비교하고 적용 기준을 설명하시오.\n다. 대규모 트래픽 급증에 대비한 확장 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-124",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "분산 시스템 설계 시 일관성·가용성·지연시간 간 트레이드오프를 고려해야 한다.\n가. CAP 정리와 CP·AP 시스템을 설명하시오.\n나. PACELC 정리가 CAP를 어떻게 확장하는지 설명하시오.\n다. 실무 데이터베이스 사례를 CAP·PACELC 관점에서 분류하시오."
+  },
+  {
+    "id": "yc2-125",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "신뢰성 있는 테스트 자동화 체계를 구축하기 위해 테스트 전략을 수립하려 한다.\n가. 테스트 피라미드(Test Pyramid)의 계층과 각 계층의 비중을 설명하시오.\n나. 테스트 더블(Test Double)인 목(Mock), 스텁(Stub), 페이크(Fake), 스파이(Spy)를 비교하시오.\n다. 테스트 커버리지(Test Coverage) 지표의 한계와 보완 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-126",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "6G 이동통신에 대하여 설명하시오.\n가. 6G의 비전 및 5G 대비 진화방향\n나. 테라헤르츠·지상비지상 통합망(NTN)·AI 네이티브 기술요소\n다. 상용화 시 고려사항"
+  },
+  {
+    "id": "yc2-127",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "전국 규모의 IoT 센서망을 구축하는 사업을 가정한다.\n가. MQTT와 CoAP 프로토콜의 통신 모델을 비교하시오.\n나. 저전력 광역 통신(LPWAN)인 LoRaWAN과 NB-IoT를 비교하시오.\n다. 대규모 디바이스 관리 및 보안 프로비저닝 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-128",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "운영체제 커널 구조를 비교 분석하고자 한다.\n가. 모놀리식 커널과 마이크로커널의 구조적 차이를 설명하시오.\n나. 하이브리드 커널의 특징을 설명하시오.\n다. 각 커널 구조의 성능, 안정성, 확장성 관점 장단점을 제시하시오."
+  },
+  {
+    "id": "yc2-129",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 조달관리에서 SW 분리발주를 검토하고 있다.\n가. 분리발주의 개념과 대상 소프트웨어 선정기준을 설명하시오.\n나. 통합발주 대비 분리발주의 장단점을 비교하시오.\n다. 분리발주 시 통합책임(Integration) 및 하자관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-130",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "클라우드 도입 전략을 수립하고자 한다.\n가. 클라우드 서비스 모델(IaaS·PaaS·SaaS)과 배포모델을 설명하시오.\n나. 클라우드 마이그레이션 전략(6R)을 설명하시오.\n다. 멀티·하이브리드 클라우드 도입 시 거버넌스 및 비용최적화(FinOps) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-131",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "자동화된 기계학습(AutoML)에 대하여 설명하시오.\n가. AutoML의 개념 및 필요성\n나. 핵심 기술요소(하이퍼파라미터 최적화, 신경망 구조 탐색(NAS), 특징 공학 자동화)\n다. 도입 효과 및 한계"
+  },
+  {
+    "id": "yc2-132",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "MITRE ATT&CK 프레임워크는 위협 대응 체계 고도화에 활용된다. 다음을 논하시오.\n가. ATT&CK의 매트릭스 구조(전술, 기술, 절차)\n나. 위협 헌팅 및 보안 관제에의 적용 방안\n다. 탐지 커버리지 평가와 보안 역량 개선 활용"
+  },
+  {
+    "id": "yc2-133",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "트래픽 변동이 큰 서비스를 위한 오토스케일링(Auto Scaling)을 설계하고자 한다.\n가. 수평 확장(Scale-out)과 수직 확장(Scale-up)을 비교하시오.\n나. 오토스케일링 정책(지표 기반, 예측 기반, 스케줄 기반)을 설명하시오.\n다. 스케일링 시 발생 가능한 문제와 안정화 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-134",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "업무 특성에 맞는 NoSQL 데이터베이스 선정이 필요하다.\n가. 문서·컬럼·키밸류·그래프 저장소의 특성을 설명하시오.\n나. 데이터 모델별 적합한 유스케이스를 설명하시오.\n다. 관계형 데이터베이스(RDBMS) 대비 장단점을 설명하시오."
+  },
+  {
+    "id": "yc2-135",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "배포 주기를 단축하기 위해 CI/CD(Continuous Integration/Continuous Delivery) 파이프라인을 구축하려 한다.\n가. 소스, 빌드, 테스트, 릴리스, 배포 단계로 구성되는 파이프라인을 설명하시오.\n나. 지속적 배포(Continuous Deployment)와 지속적 전달(Continuous Delivery)을 비교하시오.\n다. 파이프라인에 보안 검증을 통합하는 DevSecOps 적용 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-136",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "저궤도 위성통신(LEO, Low Earth Orbit) 서비스에 대하여 설명하시오.\n가. 저궤도 위성통신의 개념 및 필요성\n나. 위성군집·핸드오버·지상 게이트웨이 기술요소\n다. 서비스 도입 시 고려사항"
+  },
+  {
+    "id": "yc2-137",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "인공지능을 결합한 차세대 무선 접속망(AI-RAN)이 주목받고 있다.\n가. O-RAN(Open RAN)의 개방형 아키텍처와 인터페이스를 설명하시오.\n나. RIC(RAN Intelligent Controller)에서의 AI/ML 적용 방안을 설명하시오.\n다. AI-RAN 도입에 따른 기대효과와 표준화 이슈를 제시하시오."
+  },
+  {
+    "id": "yc2-138",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "예상 2교시",
+    "text": "멀티코어 환경에서 병행성(Concurrency) 문제를 다루고자 한다.\n가. 경쟁 상태(Race Condition)의 발생 원인을 설명하시오.\n나. 원자적 연산(Atomic Operation)과 스핀락(Spinlock)을 설명하시오.\n다. 멀티프로세서 스케줄링의 부하 분산(Load Balancing) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-139",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트에 애자일 스크럼(Scrum)을 도입하려 한다.\n가. 스크럼의 3가지 역할, 5가지 이벤트, 3가지 산출물을 설명하시오.\n나. 제품 백로그(Product Backlog)와 스프린트 백로그의 관리방법을 설명하시오.\n다. 스크럼 도입 시 조직 변화관리 및 성과측정 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-140",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "IT 투자에 대한 성과를 평가·관리하고자 한다.\n가. TCO 구성요소와 산정방법을 설명하시오.\n나. ROI, NPV, IRR 등 재무적 평가기법을 비교하시오.\n다. 정보화 투자의 정성적 효과 측정 및 성과관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-141",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "신뢰할 수 있는 인공지능(Trustworthy AI)에 대하여 설명하시오.\n가. Trustworthy AI의 개념 및 구성 원칙(공정성, 투명성, 견고성, 책임성)\n나. 원칙 구현을 위한 기술요소\n다. 조직 차원의 실현 방안"
+  },
+  {
+    "id": "yc2-142",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "보안 관제 자동화를 위해 SIEM과 SOAR가 활용된다. 다음을 설명하시오.\n가. SIEM의 로그 수집, 상관분석, 탐지 기능\n나. SOAR의 플레이북 기반 대응 자동화 구조\n다. SIEM과 SOAR의 연계를 통한 관제 고도화 방안"
+  },
+  {
+    "id": "yc2-143",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "인프라 자동화를 위해 코드형 인프라(IaC)를 도입하려고 한다.\n가. 테라폼(Terraform)의 선언적 상태(State) 관리 방식을 설명하시오.\n나. IaC 적용 시 상태 파일 관리 및 협업 방안을 설명하시오.\n다. IaC 파이프라인의 보안 및 드리프트(Drift) 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-144",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "신규 정보시스템 구축을 위해 단계별 데이터 모델링을 수행한다.\n가. 개념 모델링과 개체관계도(ERD) 작성을 설명하시오.\n나. 논리 모델링에서의 정규화와 키 설계를 설명하시오.\n다. 물리 모델링에서의 스토리지·인덱스 설계를 설명하시오."
+  },
+  {
+    "id": "yc2-145",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "쿠버네티스(Kubernetes) 기반 인프라 운영을 위해 GitOps를 도입하려 한다.\n가. GitOps의 선언형 구성과 Git 저장소를 단일 진실 공급원(SSOT, Single Source of Truth)으로 사용하는 원리를 설명하시오.\n나. 풀(Pull) 기반과 푸시(Push) 기반 배포 방식을 비교하시오.\n다. 드리프트(Drift) 탐지와 자동 조정(Reconciliation) 메커니즘을 설명하시오."
+  },
+  {
+    "id": "yc2-146",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "자율주행 자동차에 대하여 설명하시오.\n가. 자율주행의 단계(Level) 및 핵심 개념\n나. 인지·판단·제어와 센서퓨전(Sensor Fusion) 기술요소\n다. 상용화 시 안전·윤리·법제도 고려사항"
+  },
+  {
+    "id": "yc2-147",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "기업 지사를 연결하는 광역망을 SD-WAN으로 전환하고자 한다.\n가. SD-WAN의 아키텍처와 오버레이 네트워크 구성을 설명하시오.\n나. 애플리케이션 인지 라우팅(Application-Aware Routing) 동작을 설명하시오.\n다. 기존 MPLS 대비 SD-WAN의 장단점을 비교하시오."
+  },
+  {
+    "id": "yc2-148",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 방법론을 조직 특성에 맞게 테일러링하고자 한다.\n가. 테일러링의 개념과 필요성을 설명하시오.\n나. 프로젝트 규모·복잡도·중요도에 따른 테일러링 기준을 제시하시오.\n다. 테일러링 수행절차와 산출물 조정 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-149",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 업무프로세스 혁신을 위해 BPR/BPM을 추진하고자 한다.\n가. BPR과 BPM의 개념과 접근방식 차이를 설명하시오.\n나. 프로세스 발굴·모델링·개선(As-Is/To-Be) 절차를 설명하시오.\n다. 프로세스 마이닝(Process Mining)을 활용한 지속적 개선 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-150",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "인공지능 추론(Inference) 인프라 최적화에 대하여 설명하시오.\n가. 학습과 구분되는 추론 워크로드의 특성\n나. 최적화 기법(배치 처리, KV 캐시, 연산자 융합, 모델 병렬화)\n다. 서빙 시스템 설계 시 고려사항"
+  },
+  {
+    "id": "yc2-151",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "엔드포인트 위협 탐지를 위해 EDR과 XDR이 도입되고 있다. 다음을 논하시오.\n가. EDR의 행위 기반 탐지 및 대응 기능\n나. EDR, NDR, XDR의 개념 및 통합 관점 비교\n다. XDR 도입 시 데이터 통합과 대응 프로세스 설계 방안"
+  },
+  {
+    "id": "yc2-152",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "운영 환경 배포 자동화를 위해 깃옵스(GitOps)를 도입하고자 한다.\n가. 깃옵스의 핵심 원칙과 동작 흐름(Reconciliation)을 설명하시오.\n나. Push 방식과 Pull 방식 배포 모델을 비교하시오.\n다. 깃옵스 도입 시 보안 및 롤백 전략을 제시하시오."
+  },
+  {
+    "id": "yc2-153",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "전사 분석을 위한 데이터웨어하우스를 설계한다.\n가. 스타 스키마와 스노우플레이크 스키마를 비교하시오.\n나. 팩트 테이블·차원 테이블과 그레인(Grain)의 개념을 설명하시오.\n다. ETL과 ELT 방식을 비교하시오."
+  },
+  {
+    "id": "yc2-154",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "인프라 관리의 일관성과 재현성을 확보하기 위해 IaC(Infrastructure as Code)를 도입하려 한다.\n가. 선언형(Declarative)과 명령형(Imperative) IaC 접근 방식을 비교하시오.\n나. 상태(State) 관리와 멱등성(Idempotency)의 중요성을 설명하시오.\n다. 모듈화와 정책 코드화(Policy as Code)를 통한 거버넌스 강화 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-155",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "디지털 트랜스포메이션(DX, Digital Transformation) 추진에 대하여 설명하시오.\n가. DX의 개념 및 추진 필요성\n나. 데이터·플랫폼·문화 전환의 핵심 요소\n다. 추진 시 성공요인 및 고려사항"
+  },
+  {
+    "id": "yc2-156",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "운영자 의도 기반의 자동화 네트워크(IBN)를 도입하려 한다.\n가. IBN(Intent-Based Networking)의 4대 핵심 기능(Translation, Activation, Assurance, Learning)을 설명하시오.\n나. 기존 자동화(Automation)와 IBN의 차이를 비교하시오.\n다. IBN 실현을 위한 AI 및 텔레메트리 기술을 제시하시오."
+  },
+  {
+    "id": "yc2-157",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "정보시스템 감리를 통해 사업 품질을 확보하고자 한다.\n가. 감리 시점(요구정의·설계·종료 등)과 점검영역을 설명하시오.\n나. 감리 절차(계획·수행·보고)와 시정조치 확인 방법을 설명하시오.\n다. 감리 지적사항 관리 및 사업자·발주자 역할을 제시하시오."
+  },
+  {
+    "id": "yc2-158",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "조직의 지식경영(KM) 체계를 구축하고자 한다.\n가. 노나카의 SECI 모델과 지식변환 과정을 설명하시오.\n나. 지식경영시스템(KMS)의 구성요소와 지식지도를 설명하시오.\n다. 지식공유 문화 정착 및 지식경영 성과측정 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-159",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "멀티모달 인공지능(Multimodal AI)에 대하여 설명하시오.\n가. 멀티모달 AI의 개념 및 필요성\n나. 핵심 기술요소(모달리티 인코딩, 정렬(Alignment), 융합(Fusion))\n다. 활용 사례 및 구축 시 고려사항"
+  },
+  {
+    "id": "yc2-160",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "다중 인증(MFA)은 계정 탈취를 방지하는 핵심 통제다. 다음을 설명하시오.\n가. 지식, 소유, 존재 기반 인증 요소의 특성\n나. OTP, 푸시 인증, 생체 인증 방식의 보안성 비교\n다. MFA 우회 공격(피싱, SIM 스와핑)과 대응 방안"
+  },
+  {
+    "id": "yc2-161",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "저지연 서비스를 위한 엣지 컴퓨팅(Edge Computing) 인프라를 설계하고자 한다.\n가. 엣지 컴퓨팅과 중앙 클라우드의 역할 분담을 설명하시오.\n나. 엣지 노드의 데이터 처리 및 동기화 방식을 설명하시오.\n다. 엣지 환경의 관리 및 보안 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-162",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "경영진의 다차원 분석 요구에 대응하기 위해 OLAP 시스템을 도입한다.\n가. ROLAP·MOLAP·HOLAP를 비교하시오.\n나. Roll-up, Drill-down, Slice, Dice 등 OLAP 연산을 설명하시오.\n다. OLAP 큐브 설계 시 고려사항을 설명하시오."
+  },
+  {
+    "id": "yc2-163",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "소프트웨어 품질을 정량적으로 관리하기 위해 ISO/IEC 25010 품질 모델을 적용하려 한다.\n가. 제품 품질(Product Quality) 8개 특성을 설명하시오.\n나. 사용 품질(Quality in Use)과 제품 품질의 관계를 설명하시오.\n다. 비기능 요구사항을 품질 특성과 매핑하여 검증하는 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-164",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "금속 적층제조(Metal 3D Printing)에 대하여 설명하시오.\n가. 적층제조의 개념 및 기존 절삭가공 대비 장점\n나. SLM·DED 등 공정방식과 후처리 기술요소\n다. 산업 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-165",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "NFV(Network Function Virtualization) 기반으로 네트워크 기능을 가상화하려 한다.\n가. ETSI NFV 참조 아키텍처의 구성 요소(VNF, NFVI, MANO)를 설명하시오.\n나. 서비스 기능 체이닝(SFC)의 개념을 설명하시오.\n다. NFV 성능 최적화 기술(SR-IOV, DPDK)을 제시하시오."
+  },
+  {
+    "id": "yc2-166",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 원가관리를 체계적으로 수행하고자 한다.\n가. 원가산정 기법(유사·모수·상향식·3점 추정)을 비교하시오.\n나. 원가기준선(Cost Baseline)과 예비비(Contingency·Management Reserve)를 설명하시오.\n다. 원가 성과측정 및 예산초과 대응 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-167",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "ESG 경영과 그린IT를 전략적으로 추진하고자 한다.\n가. ESG의 구성요소와 IT의 역할을 설명하시오.\n나. 그린IT(친환경 데이터센터·저전력·가상화) 추진방안을 설명하시오.\n다. 탄소중립 대응을 위한 IT 전략 및 성과지표를 제시하시오."
+  },
+  {
+    "id": "yc2-168",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "강화학습(Reinforcement Learning)에 대하여 설명하시오.\n가. 강화학습의 개념 및 구성요소(상태, 행동, 보상, 정책)\n나. 가치 기반과 정책 기반 학습 방법 비교\n다. 실세계 적용 시 문제점 및 해결 방안"
+  },
+  {
+    "id": "yc2-169",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "접근제어 모델은 자원 보호의 기본 원칙이다. 다음을 논하시오.\n가. DAC, MAC, RBAC, ABAC 접근제어 모델 비교\n나. 최소 권한 원칙과 직무 분리 적용 방안\n다. 클라우드 환경에서의 정책 기반 접근제어 구현 방안"
+  },
+  {
+    "id": "yc2-170",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "클라우드 네이티브 애플리케이션의 상태 관리를 위한 스토리지를 검토하고자 한다.\n가. 클라우드 네이티브 스토리지의 요구사항을 설명하시오.\n나. 컨테이너 어태치드 스토리지(CAS)와 분산 스토리지 방식을 비교하시오.\n다. 데이터 가용성과 성능을 고려한 스토리지 설계 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-171",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "대규모 로그 데이터를 저장·처리하기 위해 하둡(Hadoop) 기반 플랫폼을 구축한다.\n가. HDFS(Hadoop Distributed File System)의 구조를 설명하시오.\n나. MapReduce의 동작 과정을 설명하시오.\n다. YARN(Yet Another Resource Negotiator)의 자원 관리 방식을 설명하시오."
+  },
+  {
+    "id": "yc2-172",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "레거시 시스템의 유지보수 비용 증가에 대응하기 위해 기술 부채(Technical Debt)를 관리하려 한다.\n가. 기술 부채의 유형(의도적/비의도적, 신중한/무모한)을 설명하시오.\n나. 기술 부채를 측정하고 가시화하는 방법을 설명하시오.\n다. 리팩토링과 신규 개발 사이의 우선순위 결정 전략을 제시하시오."
+  },
+  {
+    "id": "yc2-173",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "웨어러블(Wearable) 디지털 헬스케어에 대하여 설명하시오.\n가. 웨어러블 헬스케어의 개념 및 필요성\n나. 생체신호 센싱·데이터 분석·연동 기술요소\n다. 의료 활용 시 개인정보·규제 고려사항"
+  },
+  {
+    "id": "yc2-174",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "저지연 실시간 서비스를 위해 엣지 네트워크를 구축한다.\n가. 엣지 컴퓨팅(Edge Computing)과 MEC(Multi-access Edge Computing)의 개념을 설명하시오.\n나. 클라우드 대비 엣지에서의 데이터 처리 이점을 설명하시오.\n다. 엣지-클라우드 연계 구조와 오케스트레이션 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-175",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 거버넌스 체계를 수립하고자 한다.\n가. 프로젝트 거버넌스의 구성요소와 의사결정 구조를 설명하시오.\n나. 운영위원회(Steering Committee)와 스폰서(Sponsor)의 역할을 설명하시오.\n다. 거버넌스 실효성 확보를 위한 보고체계 및 에스컬레이션 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-176",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "플랫폼 기반 비즈니스 모델로 전환하고자 한다.\n가. 파이프라인(Pipeline)과 플랫폼(Platform) 모델의 차이를 설명하시오.\n나. 네트워크 효과와 임계량(Critical Mass) 확보 전략을 설명하시오.\n다. 플랫폼 생태계 구축 및 수익화(Monetization) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-177",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "차등 프라이버시(Differential Privacy) 기반 프라이버시 보존 AI에 대하여 설명하시오.\n가. 차등 프라이버시의 개념 및 프라이버시 예산(ε)\n나. 구현 메커니즘(라플라스, 가우시안 노이즈, DP-SGD)\n다. 유용성과 프라이버시 간 균형 및 적용 방안"
+  },
+  {
+    "id": "yc2-178",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "분산 신원증명(DID)은 자기주권 신원(SSI)을 실현한다. 다음을 설명하시오.\n가. DID와 검증가능한 자격증명(VC)의 구조와 발급 흐름\n나. 발급자, 소유자, 검증자 간 신뢰 삼각형 모델\n다. 기존 중앙집중식 신원관리 대비 장점과 도입 과제"
+  },
+  {
+    "id": "yc2-179",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "대규모 분산 시스템의 안정 운영을 위해 관측성(Observability) 스택을 구축하고자 한다.\n가. 관측성의 3요소(Metric, Log, Trace)를 설명하시오.\n나. 분산 추적(Distributed Tracing)의 원리와 표준(OpenTelemetry)을 설명하시오.\n다. 장애 조기 탐지를 위한 모니터링/알림 체계를 제시하시오."
+  },
+  {
+    "id": "yc2-180",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "대용량 데이터의 고속 분석을 위해 아파치 스파크(Spark)를 활용한다.\n가. RDD(Resilient Distributed Dataset)와 DAG 실행 모델을 설명하시오.\n나. Spark SQL과 Catalyst 옵티마이저를 설명하시오.\n다. Structured Streaming을 통한 배치·스트리밍 통합을 설명하시오."
+  },
+  {
+    "id": "yc2-181",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "코드 품질 저하를 예방하기 위해 코드 스멜(Code Smell) 탐지와 리팩토링(Refactoring)을 수행하려 한다.\n가. 대표적인 코드 스멜(중복 코드, 긴 메서드, 큰 클래스 등)을 설명하시오.\n나. 리팩토링 기법(메서드 추출, 클래스 추출 등)과 안전한 리팩토링을 위한 전제 조건을 설명하시오.\n다. 정적 분석(Static Analysis) 도구를 활용한 지속적 품질 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-182",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "물류·산업용 자율주행 로봇(AMR, Autonomous Mobile Robot)에 대하여 설명하시오.\n가. AMR의 개념 및 AGV 대비 특징\n나. 자율주행·경로계획·군집제어 기술요소\n다. 현장 도입 시 고려사항"
+  },
+  {
+    "id": "yc2-183",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "대규모 트래픽을 처리하는 글로벌 콘텐츠 서비스를 설계한다.\n가. CDN(Content Delivery Network)의 캐싱 계층 구조를 설명하시오.\n나. 사용자를 최적 엣지로 유도하는 GSLB 및 Anycast 방식을 비교하시오.\n다. 동적 콘텐츠 가속 및 CDN 보안(WAF 연계) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-184",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 범위관리에서 WBS를 기반으로 관리하고자 한다.\n가. WBS 작성원칙과 작업패키지(Work Package)의 개념을 설명하시오.\n나. WBS 사전(WBS Dictionary)과 범위기준선(Scope Baseline)을 설명하시오.\n다. 범위변경 발생 시 통합변경통제 절차를 제시하시오."
+  },
+  {
+    "id": "yc2-185",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 IT 조직 성과관리 체계를 고도화하고자 한다.\n가. 목표설정(MBO·OKR)과 성과평가 방식을 설명하시오.\n나. IT 성과지표(효율성·효과성·서비스품질)의 설정방법을 설명하시오.\n다. 성과-보상 연계 및 성과관리 정착 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-186",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "확산 모델(Diffusion Model) 기반 생성 인공지능에 대하여 설명하시오.\n가. 확산 모델의 개념 및 GAN 대비 특징\n나. 핵심 원리(정방향 노이즈 추가, 역방향 노이즈 제거, 조건부 생성)\n다. 활용 분야 및 한계"
+  },
+  {
+    "id": "yc2-187",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "통합 인증(SSO)은 사용자 편의성과 보안성을 동시에 요구한다. 다음을 논하시오.\n가. SAML, OAuth 2.0, OIDC 프로토콜의 특성 비교\n나. 페더레이션 인증(Federated Identity)의 구성과 신뢰 관계\n다. SSO 도입 시 세션 관리 및 단일 장애점 대응 방안"
+  },
+  {
+    "id": "yc2-188",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "업무 연속성 확보를 위해 재해복구(DR) 체계를 구축하고자 한다.\n가. RTO(Recovery Time Objective)와 RPO(Recovery Point Objective)를 설명하시오.\n나. DR 구성 방식(Backup&Restore, Pilot Light, Warm Standby, Multi-Site)을 비교하시오.\n다. DRaaS(Disaster Recovery as a Service) 도입 시 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-189",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "실시간 이벤트 데이터를 안정적으로 수집·전달하기 위해 카프카(Kafka)를 도입한다.\n가. Topic, Partition, Broker 등 Kafka 아키텍처를 설명하시오.\n나. 프로듀서·컨슈머와 컨슈머 그룹의 동작을 설명하시오.\n다. at-least-once와 exactly-once 등 메시지 전달 보장 방식을 설명하시오."
+  },
+  {
+    "id": "yc2-190",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "요구사항 결함으로 인한 프로젝트 실패를 예방하기 위해 요구공학(Requirements Engineering)을 체계화하려 한다.\n가. 요구사항 도출(Elicitation), 분석(Analysis), 명세(Specification), 검증(Validation) 활동을 설명하시오.\n나. 기능 요구사항과 비기능 요구사항의 명세 방법을 비교하시오.\n다. 요구사항 추적성(Traceability)을 확보하기 위한 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-191",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "드론(Drone) 기반 산업 서비스에 대하여 설명하시오.\n가. 산업용 드론의 개념 및 활용 분야\n나. 자율비행·군집제어·데이터 처리 기술요소\n다. 운용 시 안전·규제 고려사항"
+  },
+  {
+    "id": "yc2-192",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "6G 시대를 대비한 초광대역 통신 인프라를 검토한다.\n가. 6G의 비전과 핵심 후보 기술(테라헤르츠, 지능형 표면 RIS)을 설명하시오.\n나. 지상-비지상 통합망(NTN) 구조를 설명하시오.\n다. 6G 실현을 위한 기술적 과제를 제시하시오."
+  },
+  {
+    "id": "yc2-193",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "대규모 애자일 확장을 위해 SAFe(Scaled Agile Framework)를 검토한다.\n가. SAFe의 4단계 구성과 ART(Agile Release Train)를 설명하시오.\n나. PI(Program Increment) 계획수립 절차를 설명하시오.\n다. 대규모 애자일 도입 시 조직·문화 측면의 성공요인을 제시하시오."
+  },
+  {
+    "id": "yc2-194",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "IT 서비스 연속성과 가용성을 강화하고자 한다.\n가. 가용성(Availability) 지표와 SLA 목표수준 설정을 설명하시오.\n나. 서비스 연속성관리(ITSCM)와 백업·복구 전략을 설명하시오.\n다. 장애관리·문제관리 프로세스와 연계한 서비스 안정화 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-195",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "인공지능 규제 대응을 위한 AI 영향평가(AI Impact Assessment)에 대하여 설명하시오.\n가. AI 영향평가의 개념 및 필요성\n나. 평가 절차 및 주요 항목(위험 식별, 기본권 영향, 완화 조치)\n다. 국내외 규제 동향 및 조직의 대응 방안"
+  },
+  {
+    "id": "yc2-196",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "개인정보보호법은 가명정보 활용의 법적 근거를 제공한다. 다음을 설명하시오.\n가. 가명정보와 익명정보의 개념 및 법적 지위 비교\n나. 가명처리 절차와 안전성 확보 조치\n다. 가명정보 결합 및 활용 시 유의사항"
+  },
+  {
+    "id": "yc2-197",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "가상화 기반 데이터센터를 클라우드로 현대화하고자 한다.\n가. 전가상화와 반가상화, 하드웨어 지원 가상화(HVM)를 비교하시오.\n나. 하이퍼바이저(Hypervisor) Type 1/Type 2의 특성을 설명하시오.\n다. 가상화 자원의 오버커밋(Overcommit)과 성능 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-198",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "낮은 지연시간의 실시간 스트림 처리를 위해 아파치 플링크(Flink)를 사용한다.\n가. Flink의 스트림 처리 모델을 설명하시오.\n나. 이벤트 시간(Event Time)과 워터마크(Watermark)를 설명하시오.\n다. 상태 관리(State)와 체크포인트 기반 정확성 보장을 설명하시오."
+  },
+  {
+    "id": "yc2-199",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "분산 협업 개발 환경에서 형상관리(SCM, Software Configuration Management)를 강화하려 한다.\n가. 형상 식별, 형상 통제, 형상 상태 기록, 형상 감사의 활동을 설명하시오.\n나. 브랜치 전략인 Git Flow와 트렁크 기반 개발(Trunk-Based Development)을 비교하시오.\n다. 베이스라인(Baseline) 설정과 릴리스 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-200",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "블록체인 기반 실물자산 토큰화(RWA, Real World Asset)에 대하여 설명하시오.\n가. 실물자산 토큰화의 개념 및 필요성\n나. 토큰 발행·오라클·스마트컨트랙트 기술요소\n다. 제도화 및 도입 시 고려사항"
+  },
+  {
+    "id": "yc2-201",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "저궤도 위성통신을 활용한 통신 음영지역 해소 방안을 검토한다.\n가. LEO/MEO/GEO 위성궤도의 특성을 비교하시오.\n나. 위성 간 링크(ISL)와 핸드오버 처리 방식을 설명하시오.\n다. 5G 이동통신망과 위성망의 연동(5G NTN) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-202",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "OKR을 프로젝트 실행관리 체계로 도입하고자 한다.\n가. OKR의 목표(Objective)와 핵심결과(Key Results) 설정원칙을 설명하시오.\n나. OKR과 KPI, MBO의 차이점을 비교하시오.\n다. 프로젝트 성과와 OKR을 연계한 운영 및 리뷰(CFR) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-203",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "IT 거버넌스 관점에서 정보보호 거버넌스를 통합하고자 한다.\n가. ISO/IEC 38500 원칙과 정보보호 거버넌스의 연계를 설명하시오.\n나. 정보보호 최고책임자(CISO)의 역할과 의사결정 구조를 설명하시오.\n다. 전사 리스크관리(ERM)와 정보보호 거버넌스 통합 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-204",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "머신러닝 모델의 과적합(Overfitting) 문제와 대응에 대하여 설명하시오.\n가. 과적합의 개념 및 발생 원인\n나. 정규화·교차검증·조기종료 등 대응 기법\n다. 모델 일반화 성능 확보를 위한 고려사항"
+  },
+  {
+    "id": "yc2-205",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "개인정보 영향평가(PIA)는 프라이버시 리스크를 사전에 관리한다. 다음을 논하시오.\n가. PIA의 대상 사업과 수행 시기\n나. PIA 수행 절차(위험 식별, 분석, 개선)\n다. 설계 기반 프라이버시(PbD)와의 연계 방안"
+  },
+  {
+    "id": "yc2-206",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "기업 표준 컨테이너 이미지 관리 체계를 수립하고자 한다.\n가. 컨테이너 이미지 레지스트리(Registry)의 역할과 구조를 설명하시오.\n나. 이미지 취약점 스캐닝과 서명(Signing) 방식을 설명하시오.\n다. 안전한 이미지 공급망(Supply Chain) 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-207",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "실시간성과 정확성을 동시에 만족하는 빅데이터 처리 아키텍처를 설계한다.\n가. 람다 아키텍처의 배치·스피드·서빙 계층을 설명하시오.\n나. 카파 아키텍처의 구조와 특징을 설명하시오.\n다. 두 아키텍처를 비교하고 선택 기준을 제시하시오."
+  },
+  {
+    "id": "yc2-208",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "대규모 웹 애플리케이션의 프론트엔드 확장성을 확보하기 위해 마이크로 프론트엔드(Micro Frontend)를 도입하려 한다.\n가. 마이크로 프론트엔드의 개념과 모놀리식 프론트엔드 대비 장점을 설명하시오.\n나. 통합 방식(빌드 타임 통합, 런타임 통합, 모듈 페더레이션)을 비교하시오.\n다. 팀 간 독립 배포 시 발생하는 스타일/의존성 충돌 문제와 해결 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-209",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "L2/L3 네트워크의 안정성과 확장성을 확보하고자 한다.\n가. STP, RSTP, MSTP의 차이를 비교하시오.\n나. 링크 이중화를 위한 링크 애그리게이션(LACP)을 설명하시오.\n다. 게이트웨이 이중화(VRRP/HSRP) 구성 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-210",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 통합관리를 수행하며 통합변경통제를 강화하고자 한다.\n가. 프로젝트 헌장(Project Charter)의 구성과 역할을 설명하시오.\n나. 통합변경통제(Integrated Change Control) 프로세스를 설명하시오.\n다. 변경요청의 영향분석 및 승인·이행 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-211",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 신사업을 위해 비즈니스 모델을 설계하고자 한다.\n가. 비즈니스 모델 캔버스(BMC)의 9개 블록을 설명하시오.\n나. 가치제안(Value Proposition)과 고객 세분화 방법을 설명하시오.\n다. 린 스타트업(Lean Startup) 관점의 검증 및 확장 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-212",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "앙상블 학습(Ensemble Learning)에 대하여 설명하시오.\n가. 앙상블 학습의 개념 및 필요성\n나. 배깅(Bagging)·부스팅(Boosting)·스태킹 비교\n다. 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-213",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "정보보호 및 개인정보보호 관리체계(ISMS-P)는 조직 보안 수준을 검증한다. 다음을 설명하시오.\n가. ISMS-P 인증 체계와 인증 기준 구성\n나. 관리체계 수립·운영 및 보호대책 요구사항\n다. ISO/IEC 27001과의 차이점 및 통합 운영 방안"
+  },
+  {
+    "id": "yc2-214",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "쿠버네티스 클러스터의 애플리케이션 트래픽 진입을 설계하고자 한다.\n가. 인그레스(Ingress)의 동작 방식과 인그레스 컨트롤러를 설명하시오.\n나. 게이트웨이 API(Gateway API)와 인그레스를 비교하시오.\n다. TLS 종료 및 트래픽 라우팅 정책 설계 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-215",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "데이터 기반 의사결정을 위해 데이터 품질 관리 체계가 필요하다.\n가. 정확성·완전성·일관성·적시성 등 데이터 품질 지표를 설명하시오.\n나. 데이터 프로파일링(Profiling)의 목적과 방법을 설명하시오.\n다. 데이터 정제(Cleansing) 절차를 설명하시오."
+  },
+  {
+    "id": "yc2-216",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "현업 부서의 자체 개발 수요를 지원하기 위해 로우코드/노코드(Low-Code/No-Code) 플랫폼 도입을 검토하려 한다.\n가. 로우코드와 노코드의 개념과 시티즌 개발자(Citizen Developer)의 역할을 설명하시오.\n나. 전통적 코딩 방식 대비 장단점을 비교하시오.\n다. 섀도 IT(Shadow IT)와 거버넌스 리스크를 관리하는 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-217",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "동적 라우팅 프로토콜의 선택을 위한 비교 검토를 수행한다.\n가. 거리 벡터와 링크 상태 라우팅의 동작 원리를 비교하시오.\n나. OSPF의 LSA 유형과 DR/BDR 선출 과정을 설명하시오.\n다. 라우팅 수렴 시간과 확장성 관점의 프로토콜 선정 기준을 제시하시오."
+  },
+  {
+    "id": "yc2-218",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 자원관리에서 인적자원 확보와 육성을 강화하고자 한다.\n가. 자원달력(Resource Calendar)과 자원평준화(Leveling)·평활화(Smoothing)를 설명하시오.\n나. 프로젝트 팀 개발 5단계(Tuckman 모델)를 설명하시오.\n다. 가상팀(Virtual Team) 운영 시 협업 및 동기부여 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-219",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "공공부문 정보시스템 마스터플랜(ISMP)을 수립하고자 한다.\n가. ISMP의 개념과 ISP 대비 상세화 수준을 설명하시오.\n나. 요구사항 상세화 및 기능점수 기반 사업규모 산정을 설명하시오.\n다. ISMP 산출물을 활용한 제안요청서(RFP) 품질 제고 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-220",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "합성곱 신경망(CNN, Convolutional Neural Network)에 대하여 설명하시오.\n가. CNN의 개념 및 구조\n나. 합성곱·풀링·활성함수 등 핵심 구성요소\n다. 컴퓨터비전 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-221",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "클라우드 환경의 보안 형상 관리가 중요해지고 있다. 다음을 논하시오.\n가. CSPM의 자산 식별, 형상 점검, 컴플라이언스 기능\n나. CWPP와 CNAPP의 보호 범위 비교\n다. 멀티클라우드 환경에서의 통합 보안 관리 방안"
+  },
+  {
+    "id": "yc2-222",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "클라우드 데이터베이스 서비스 도입을 검토하고자 한다.\n가. DBaaS(Database as a Service)의 특성과 관리형 서비스 이점을 설명하시오.\n나. 관계형 DB와 NoSQL의 클라우드 확장 방식(수직/수평)을 비교하시오.\n다. 고가용성과 백업/복구를 고려한 운영 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-223",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "생성형 AI 검색·추천을 위해 벡터 기반 유사도 검색을 구축한다.\n가. 임베딩(Embedding)과 벡터 인덱스(HNSW, IVF)를 설명하시오.\n나. ANN(근사최근접이웃) 검색 알고리즘을 설명하시오.\n다. 검색증강생성(RAG)에서 벡터 데이터베이스의 활용을 설명하시오."
+  },
+  {
+    "id": "yc2-224",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "이기종 클라이언트를 지원하는 API 설계를 위해 REST와 GraphQL, gRPC를 비교 검토하려 한다.\n가. REST(Representational State Transfer)의 성숙도 모델(Richardson Maturity Model)을 설명하시오.\n나. GraphQL의 오버페칭/언더페칭 해결 방식과 gRPC의 특징을 비교하시오.\n다. API 게이트웨이(API Gateway)를 활용한 통합 API 관리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-225",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "멀티캐스트 기반의 실시간 스트리밍 서비스를 구축한다.\n가. IP 멀티캐스트의 주소 체계와 IGMP 동작을 설명하시오.\n나. 멀티캐스트 라우팅 프로토콜(PIM-SM, PIM-DM)을 비교하시오.\n다. 유니캐스트 대비 멀티캐스트의 대역폭 효율과 한계를 제시하시오."
+  },
+  {
+    "id": "yc2-226",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 종료 및 교훈관리를 체계화하고자 한다.\n가. 행정적 종료와 계약적 종료 절차를 설명하시오.\n나. 교훈사항(Lessons Learned)과 지식자산화 방법을 설명하시오.\n다. 프로젝트 성과평가 및 조직프로세스자산(OPA) 갱신 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-227",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "경영전략",
+    "source": "예상 2교시",
+    "text": "기업의 정보화 투자 우선순위를 합리적으로 결정하고자 한다.\n가. IT 포트폴리오 관리(ITPM)의 개념과 분류기준을 설명하시오.\n나. 투자 우선순위 결정을 위한 정량·정성 평가모델을 설명하시오.\n다. 투자 후 성과추적 및 포트폴리오 재조정 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-228",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "인간 피드백 기반 강화학습(RLHF, Reinforcement Learning from Human Feedback)에 대하여 설명하시오.\n가. RLHF의 개념 및 도입 배경\n나. 보상모델 학습·정책 최적화 절차\n다. 적용 시 한계 및 고려사항"
+  },
+  {
+    "id": "yc2-229",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "컨테이너 및 쿠버네티스 환경은 새로운 보안 위협에 노출된다. 다음을 설명하시오.\n가. 컨테이너 이미지, 런타임, 오케스트레이션 계층별 위협\n나. 이미지 스캐닝, 어드미션 컨트롤, 런타임 보호 기법\n다. 쿠버네티스 RBAC 및 네트워크 정책 적용 방안"
+  },
+  {
+    "id": "yc2-230",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "클라우드 자원에 대한 접근통제 체계를 설계하고자 한다.\n가. IAM(Identity and Access Management)의 구성요소(사용자, 역할, 정책)를 설명하시오.\n나. 최소 권한 원칙(Least Privilege)과 역할 기반 접근제어(RBAC)를 설명하시오.\n다. 권한 오남용 방지를 위한 통제 및 감사 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-231",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "IoT 센서에서 발생하는 대량의 시계열 데이터를 저장·분석한다.\n가. 시계열 데이터의 특성을 설명하시오.\n나. 시계열 데이터의 저장·압축 기법을 설명하시오.\n다. 다운샘플링과 보존정책(Retention Policy)을 설명하시오."
+  },
+  {
+    "id": "yc2-232",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "시스템 분석 및 설계 단계에서 UML(Unified Modeling Language)을 활용하려 한다.\n가. 구조 다이어그램과 행위 다이어그램의 분류와 대표 다이어그램을 설명하시오.\n나. 유스케이스 다이어그램과 시퀀스 다이어그램의 활용을 비교하시오.\n다. 모델 기반 개발(MDD, Model-Driven Development)에서 모델의 역할과 한계를 논하시오."
+  },
+  {
+    "id": "yc2-233",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "무선 전력 전송 기술을 IoT 및 모바일 환경에 적용하고자 한다.\n가. 무선충전 방식(자기유도, 자기공진, 전자기파)을 비교하시오.\n나. Qi 표준의 동작 원리와 특징을 설명하시오.\n다. 원거리 무선전력전송(WPT)의 활용 분야와 안전성 이슈를 제시하시오."
+  },
+  {
+    "id": "yc2-234",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 일정단축이 필요한 상황에서 대응방안을 수립하고자 한다.\n가. 공정압축(Crashing)과 공정중첩(Fast Tracking)을 비교하시오.\n나. 일정단축에 따른 원가·위험 증가 영향을 설명하시오.\n다. 자원제약 하에서의 최적 일정단축 전략을 제시하시오."
+  },
+  {
+    "id": "yc2-235",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "컴퓨터비전의 객체탐지(Object Detection)에 대하여 설명하시오.\n가. 객체탐지의 개념 및 분류·분할과의 차이\n나. 1단계·2단계 탐지기와 앵커박스 기술요소\n다. 실시간 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-236",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "DevSecOps는 개발 파이프라인에 보안을 내재화한다. 다음을 논하시오.\n가. DevSecOps의 개념과 시프트 레프트(Shift Left) 원칙\n나. SAST, DAST, IAST, SCA 도구의 파이프라인 적용\n다. 자동화된 보안 게이트 구축 및 운영 방안"
+  },
+  {
+    "id": "yc2-237",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "컨테이너 오케스트레이션 환경의 리소스 효율화를 추진하고자 한다.\n가. 쿠버네티스 리소스 요청(Request)과 제한(Limit)을 설명하시오.\n나. QoS 클래스(Guaranteed, Burstable, BestEffort)와 스케줄링 영향을 설명하시오.\n다. 노드 자원 최적화 및 비용 절감 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-238",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "개인정보를 다루는 데이터베이스의 보안 강화가 요구된다.\n가. 접근제어와 권한관리(RBAC) 방안을 설명하시오.\n나. TDE, 컬럼 암호화, 애플리케이션 암호화를 비교하시오.\n다. 감사(Audit)와 데이터 마스킹(Masking) 기법을 설명하시오."
+  },
+  {
+    "id": "yc2-239",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "소프트웨어 재사용성을 높여 생산성을 향상시키기 위해 프레임워크와 컴포넌트 기반 개발을 검토하려 한다.\n가. 라이브러리, 프레임워크, 플랫폼의 차이와 제어의 역전(IoC)을 설명하시오.\n나. 화이트박스 재사용과 블랙박스 재사용을 비교하시오.\n다. 소프트웨어 제품 라인(SPL, Software Product Line) 공학을 통한 재사용 전략을 제시하시오."
+  },
+  {
+    "id": "yc2-240",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "네트워크 자동화와 지능화를 위해 AI를 접목하려 한다.\n가. 스트리밍 텔레메트리(Streaming Telemetry) 기반 네트워크 관측성을 설명하시오.\n나. AIOps를 활용한 이상 탐지 및 장애 예측 방안을 설명하시오.\n다. 자율 네트워크(Autonomous Network) 실현을 위한 단계별 성숙도를 제시하시오."
+  },
+  {
+    "id": "yc2-241",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "애자일 성숙도를 높이기 위해 지속적 개선을 추진하고자 한다.\n가. 회고(Retrospective)의 목적과 진행방법을 설명하시오.\n나. 속도(Velocity)와 사이클타임(Cycle Time) 등 애자일 메트릭을 설명하시오.\n다. 데이터 기반 애자일 프로세스 개선 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-242",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "이미지 생성모델의 확산모델(Diffusion Model)에 대하여 설명하시오.\n가. 확산모델의 개념 및 원리\n나. 순방향·역방향 과정과 노이즈 제거 기술요소\n다. GAN 대비 특징 및 활용 고려사항"
+  },
+  {
+    "id": "yc2-243",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "안전한 소프트웨어 개발을 위해 시큐어 코딩이 요구된다. 다음을 설명하시오.\n가. 시큐어 코딩의 개념과 주요 취약점 유형\n나. 입력 검증, 출력 인코딩, 인증·세션 관리 통제 방안\n다. 정적 분석 도구 활용 및 개발 프로세스 통합 방안"
+  },
+  {
+    "id": "yc2-244",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "글로벌 다중 리전(Multi-Region) 서비스 아키텍처를 설계하고자 한다.\n가. 리전(Region)과 가용영역(Availability Zone)의 개념을 설명하시오.\n나. 다중 리전 데이터 복제 및 일관성(Consistency) 고려사항을 설명하시오.\n다. 지역 장애 대응을 위한 트래픽 페일오버 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-245",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "운영 데이터베이스의 성능 저하를 개선하기 위한 튜닝이 필요하다.\n가. SQL 튜닝의 주요 원칙과 기법을 설명하시오.\n나. 인덱스와 통계정보(Statistics) 관리 방안을 설명하시오.\n다. 커넥션 풀(Connection Pool)과 캐시 활용 방안을 설명하시오."
+  },
+  {
+    "id": "yc2-246",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "분산 트랜잭션 처리의 데이터 일관성을 확보하기 위해 사가 패턴(Saga Pattern)을 적용하려 한다.\n가. 코레오그래피(Choreography)와 오케스트레이션(Orchestration) 방식을 비교하시오.\n나. 보상 트랜잭션(Compensating Transaction)의 설계 원칙을 설명하시오.\n다. 사가 실행 중 부분 실패 발생 시 복구 전략과 모니터링 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-247",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "네트워크",
+    "source": "예상 2교시",
+    "text": "웹 서비스의 전송 지연을 줄이기 위해 차세대 전송 프로토콜을 검토한다.\n가. QUIC 프로토콜의 특징과 TCP 대비 개선점을 설명하시오.\n나. HTTP/3의 동작 원리와 HOL(Head-of-Line) 블로킹 해소 방안을 설명하시오.\n다. QUIC 도입 시 네트워크 운영 및 보안 관점의 고려사항을 제시하시오."
+  },
+  {
+    "id": "yc2-248",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "프로젝트관리",
+    "source": "예상 2교시",
+    "text": "프로젝트 커뮤니케이션 관리를 효과적으로 수행하고자 한다.\n가. 커뮤니케이션 채널 수 산정과 정보배포 방법을 설명하시오.\n나. 커뮤니케이션 관리계획과 이해관계자별 보고체계를 설명하시오.\n다. 분산·글로벌 환경에서의 커뮤니케이션 개선 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-249",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "자연어처리(NLP)의 트랜스포머(Transformer) 구조에 대하여 설명하시오.\n가. 트랜스포머의 등장 배경 및 개념\n나. 셀프어텐션·멀티헤드·위치인코딩 구성요소\n다. 활용 시 고려사항"
+  },
+  {
+    "id": "yc2-250",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "웹 애플리케이션은 다양한 공격의 표적이 된다. 다음을 논하시오.\n가. SQL 인젝션, XSS, CSRF 공격의 원리와 영향\n나. 각 공격에 대한 서버 및 클라이언트 측 방어 기법\n다. WAF와 시큐어 코딩을 결합한 다계층 방어 방안"
+  },
+  {
+    "id": "yc2-251",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "클라우드 네트워크를 안전하게 설계하고자 한다.\n가. 가상 사설 클라우드(VPC)의 서브넷, 라우팅, 게이트웨이 구성을 설명하시오.\n나. 보안 그룹(Security Group)과 네트워크 ACL을 비교하시오.\n다. 온프레미스와 클라우드 연동(VPN, Direct Connect) 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-252",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "운영계 데이터를 실시간으로 분석계에 반영하기 위해 CDC를 도입한다.\n가. CDC(Change Data Capture)의 개념과 로그기반·트리거기반 방식을 설명하시오.\n나. Debezium 등 CDC 구현 방식을 설명하시오.\n다. CDC를 활용한 실시간 데이터 동기화 사례를 설명하시오."
+  },
+  {
+    "id": "yc2-253",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "객체지향 설계 품질을 향상시키기 위해 SOLID 원칙을 적용하려 한다.\n가. SOLID 5개 원칙(SRP, OCP, LSP, ISP, DIP)을 각각 설명하시오.\n나. 개방-폐쇄 원칙(OCP)과 의존성 역전 원칙(DIP)이 확장성에 기여하는 방식을 설명하시오.\n다. 원칙 적용과 과잉 추상화 사이의 균형점을 제시하시오."
+  },
+  {
+    "id": "yc2-254",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "단어 및 문장 임베딩(Embedding)에 대하여 설명하시오.\n가. 임베딩의 개념 및 필요성\n나. 정적 임베딩과 문맥적 임베딩 비교\n다. 검색·유사도 활용 시 고려사항"
+  },
+  {
+    "id": "yc2-255",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "디지털 포렌식은 침해사고 증거 확보의 핵심이다. 다음을 설명하시오.\n가. 디지털 포렌식의 절차(수집, 보존, 분석, 보고)\n나. 휘발성 데이터와 비휘발성 데이터의 수집 우선순위\n다. 증거 무결성 확보를 위한 연계보관성 관리 방안"
+  },
+  {
+    "id": "yc2-256",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "메시지 기반 비동기 아키텍처를 클라우드에 구축하고자 한다.\n가. 메시지 큐(Message Queue)와 이벤트 스트리밍의 차이를 설명하시오.\n나. 메시지 전달 보장(At-least-once, Exactly-once) 방식을 설명하시오.\n다. 대규모 이벤트 처리를 위한 확장 및 내결함성 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-257",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "관계가 복잡한 데이터를 효율적으로 다루기 위해 그래프 데이터베이스를 검토한다.\n가. 속성 그래프(Property Graph) 모델을 설명하시오.\n나. Cypher 등 그래프 질의와 순회(Traversal) 방식을 설명하시오.\n다. 추천·사기탐지 등 그래프 데이터베이스 활용 사례를 설명하시오."
+  },
+  {
+    "id": "yc2-258",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "서비스 장애 전파를 차단하기 위해 회복탄력성(Resilience) 패턴을 적용하려 한다.\n가. 서킷 브레이커(Circuit Breaker), 재시도(Retry), 타임아웃(Timeout), 벌크헤드(Bulkhead) 패턴을 설명하시오.\n나. 서킷 브레이커의 Closed, Open, Half-Open 상태 전이를 설명하시오.\n다. 폴백(Fallback)과 우아한 성능 저하(Graceful Degradation) 전략을 제시하시오."
+  },
+  {
+    "id": "yc2-259",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "인공지능의 신뢰성(Trustworthy AI) 확보에 대하여 설명하시오.\n가. 신뢰성 AI의 개념 및 요구 배경\n나. 공정성·견고성·투명성 등 핵심 속성\n다. 신뢰성 확보를 위한 고려사항"
+  },
+  {
+    "id": "yc2-260",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "랜섬웨어 공격이 고도화되며 대응 체계가 요구된다. 다음을 논하시오.\n가. 랜섬웨어의 감염 경로와 이중·삼중 갈취 기법\n나. 예방, 탐지, 백업, 복구 관점의 대응 전략\n다. 사고 발생 시 대응 및 복구 프로세스 수립 방안"
+  },
+  {
+    "id": "yc2-261",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "컨테이너 기반 CI/CD 파이프라인을 구축하고자 한다.\n가. CI/CD 파이프라인의 단계와 컨테이너 활용 방식을 설명하시오.\n나. 이미지 빌드 자동화 및 배포 전략(Blue-Green, Canary)을 비교하시오.\n다. 파이프라인 보안(DevSecOps) 적용 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-262",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "초대용량 테이블의 관리와 성능을 위해 파티셔닝을 적용한다.\n가. 범위·해시·리스트 파티셔닝을 설명하시오.\n나. 파티션 프루닝(Partition Pruning)의 원리를 설명하시오.\n다. 파티셔닝과 샤딩을 비교하시오."
+  },
+  {
+    "id": "yc2-263",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "제품의 시장 출시 속도를 높이기 위해 린 스타트업(Lean Startup) 방식을 개발 프로세스에 접목하려 한다.\n가. 만들기-측정-학습(Build-Measure-Learn) 피드백 루프를 설명하시오.\n나. 최소 기능 제품(MVP, Minimum Viable Product)과 피벗(Pivot)의 개념을 설명하시오.\n다. A/B 테스트를 통한 데이터 기반 의사결정 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-264",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "AI 추론 최적화(Inference Optimization)에 대하여 설명하시오.\n가. 추론 최적화의 개념 및 필요성\n나. 양자화(Quantization)·가지치기(Pruning)·지식증류 기술요소\n다. 서비스 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-265",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "멀웨어 분석은 위협 대응의 기반 활동이다. 다음을 설명하시오.\n가. 정적 분석과 동적 분석 기법의 원리 비교\n나. 샌드박스 기반 행위 분석과 안티 분석 회피 기법\n다. 분석 결과의 침해지표(IoC) 도출 및 활용 방안"
+  },
+  {
+    "id": "yc2-266",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "클라우드 데이터 보호를 위한 암호화 체계를 설계하고자 한다.\n가. 저장 데이터(At-rest)와 전송 데이터(In-transit) 암호화를 설명하시오.\n나. 키 관리 서비스(KMS)와 키 수명주기 관리를 설명하시오.\n다. 규제 준수를 고려한 데이터 보호 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-267",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "서비스 연속성 확보를 위한 백업·복구 전략이 필요하다.\n가. 전체·증분·차등 백업 방식을 비교하시오.\n나. 복구 목표시간(RTO)과 복구 목표시점(RPO)을 설명하시오.\n다. 특정시점복구(PITR, Point-In-Time Recovery)를 설명하시오."
+  },
+  {
+    "id": "yc2-268",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "레거시 모놀리식 시스템의 유지보수성을 개선하기 위해 리팩토링 전략을 수립하려 한다.\n가. 리팩토링과 리엔지니어링(Reengineering)의 차이를 설명하시오.\n나. 특성화 테스트(Characterization Test)를 활용한 안전망 구축 방안을 설명하시오.\n다. 코드 커버리지 부족 상황에서의 점진적 개선 로드맵을 제시하시오."
+  },
+  {
+    "id": "yc2-269",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "AI 인프라의 GPU 클러스터 및 가속기에 대하여 설명하시오.\n가. AI 연산 인프라의 개념 및 요구사항\n나. GPU·NPU·분산학습(데이터·모델 병렬) 기술요소\n다. 구축·운영 시 고려사항"
+  },
+  {
+    "id": "yc2-270",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "인공지능 시스템은 새로운 보안 위협에 노출된다. 다음을 논하시오.\n가. 적대적 예제, 데이터 오염, 모델 탈취 공격 유형\n나. 각 공격에 대한 방어 기법(적대적 학습, 입력 검증)\n다. AI 모델 개발·운영 생명주기 관점의 보안 강화 방안"
+  },
+  {
+    "id": "yc2-271",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "초저지연 처리를 위해 인메모리 데이터베이스를 도입한다.\n가. 인메모리 데이터베이스의 구조와 특성을 설명하시오.\n나. 인메모리 환경에서의 지속성(Persistence) 보장 기법을 설명하시오.\n다. Redis를 활용한 캐시·세션 관리 패턴을 설명하시오."
+  },
+  {
+    "id": "yc2-272",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "품질 검증 자동화를 위해 정적 분석(Static Analysis)과 동적 분석(Dynamic Analysis)을 병행하려 한다.\n가. 정적 분석과 동적 분석의 원리와 탐지 가능한 결함 유형을 비교하시오.\n나. 오탐(False Positive)과 미탐(False Negative)이 개발 생산성에 미치는 영향을 설명하시오.\n다. SAST/DAST를 CI/CD 파이프라인에 통합하는 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-273",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "연합학습(Federated Learning)에 대하여 설명하시오.\n가. 연합학습의 개념 및 도입 필요성\n나. 로컬 학습·모델 집계(FedAvg)·통신 최적화 기술요소\n다. 프라이버시 보호 관점의 고려사항"
+  },
+  {
+    "id": "yc2-274",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "산업제어시스템(ICS)과 운영기술(OT) 보안이 중요해지고 있다. 다음을 설명하시오.\n가. IT 보안과 OT 보안의 요구사항 차이\n나. 퍼듀 모델 기반의 네트워크 분리 및 계층 방어\n다. OT 환경의 자산 가시성 확보 및 취약점 관리 방안"
+  },
+  {
+    "id": "yc2-275",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "레거시 데이터베이스를 신규 플랫폼으로 이전하는 마이그레이션을 수행한다.\n가. 데이터 마이그레이션의 유형과 절차를 설명하시오.\n나. 무중단(Zero-downtime) 마이그레이션 전략을 설명하시오.\n다. 마이그레이션 검증과 롤백 방안을 설명하시오."
+  },
+  {
+    "id": "yc2-276",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "애자일 팀의 견적과 계획 수립을 위해 상대적 추정 기법을 도입하려 한다.\n가. 스토리 포인트(Story Point)와 플래닝 포커(Planning Poker)를 설명하시오.\n나. 속도(Velocity)를 활용한 릴리스 계획 수립 방법을 설명하시오.\n다. 추정의 불확실성을 관리하기 위한 불확실성의 원뿔(Cone of Uncertainty) 활용 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-277",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "프라이버시 보호 AI의 차분 프라이버시(Differential Privacy)에 대하여 설명하시오.\n가. 차분 프라이버시의 개념 및 필요성\n나. 노이즈 추가·프라이버시 예산(ε) 등 기술요소\n다. AI 학습 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-278",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "사물인터넷(IoT) 환경은 다수의 취약 단말로 위협에 노출된다. 다음을 논하시오.\n가. IoT 디바이스, 네트워크, 플랫폼 계층별 보안 위협\n나. 경량 암호 및 디바이스 인증 적용 방안\n다. IoT 보안 인증제도 및 생명주기 관리 방안"
+  },
+  {
+    "id": "yc2-279",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "엔터프라이즈 애플리케이션 데이터 계층 설계를 위해 엔터프라이즈 아키텍처 패턴을 적용하려 한다.\n가. 리포지토리(Repository) 패턴과 데이터 매퍼(Data Mapper) 패턴을 설명하시오.\n나. 작업 단위(Unit of Work) 패턴과 낙관적/비관적 잠금을 비교하시오.\n다. 도메인 모델(Domain Model)과 트랜잭션 스크립트(Transaction Script)의 선택 기준을 제시하시오."
+  },
+  {
+    "id": "yc2-280",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "동형암호(Homomorphic Encryption) 기반 프라이버시 보존 AI에 대하여 설명하시오.\n가. 동형암호의 개념 및 AI 활용 필요성\n나. 암호화 연산·성능 최적화 기술요소\n다. 적용 시 한계 및 고려사항"
+  },
+  {
+    "id": "yc2-281",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "보안운영센터(SOC)는 위협 대응의 중심 조직이다. 다음을 설명하시오.\n가. SOC의 구성 요소와 운영 프로세스\n나. 위협 헌팅(Threat Hunting)의 개념과 수행 방법\n다. SOC 성숙도 평가 및 역량 고도화 방안"
+  },
+  {
+    "id": "yc2-282",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "릴리스 안정성을 높이기 위해 무중단 배포(Zero-Downtime Deployment) 전략을 수립하려 한다.\n가. 블루-그린(Blue-Green) 배포와 카나리(Canary) 배포를 비교하시오.\n나. 기능 플래그(Feature Flag)를 활용한 배포와 릴리스 분리 방안을 설명하시오.\n다. 배포 실패 시 자동 롤백(Rollback) 및 데이터 마이그레이션 호환성 확보 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-283",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "인공지능 기본법(AI 기본법) 대응에 대하여 설명하시오.\n가. AI 기본법의 제정 배경 및 주요 내용\n나. 고영향 AI 분류 및 사업자 의무사항\n다. 기업의 대응방안 및 고려사항"
+  },
+  {
+    "id": "yc2-284",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "침해사고 대응(Incident Response)은 체계적 절차가 필요하다. 다음을 논하시오.\n가. 침해사고 대응 단계(준비, 탐지, 억제, 근절, 복구, 교훈)\n나. CSIRT의 구성과 역할\n다. 사고 대응 훈련 및 대응 계획 개선 방안"
+  },
+  {
+    "id": "yc2-285",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "소프트웨어 아키텍처 의사결정의 근거를 체계적으로 관리하기 위해 아키텍처 평가와 문서화를 수행하려 한다.\n가. ATAM(Architecture Tradeoff Analysis Method)을 활용한 품질 속성 트레이드오프 분석을 설명하시오.\n나. 아키텍처 의사결정 기록(ADR, Architecture Decision Record)의 작성 방법을 설명하시오.\n다. 4+1 뷰 모델을 활용한 이해관계자별 아키텍처 문서화 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-286",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "AI 이상탐지(Anomaly Detection)에 대하여 설명하시오.\n가. 이상탐지의 개념 및 적용 분야\n나. 통계·거리·오토인코더 기반 탐지 기법\n다. 실무 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-287",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "데이터 유출 방지(DLP)는 정보 자산 보호의 핵심이다. 다음을 설명하시오.\n가. DLP의 데이터 상태별(사용중, 이동중, 저장중) 통제\n나. 콘텐츠 인식 및 정책 기반 차단 방식\n다. DLP 도입 시 오탐 관리 및 사용자 영향 최소화 방안"
+  },
+  {
+    "id": "yc2-288",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "익스트림 프로그래밍(XP, eXtreme Programming)의 실천법을 팀에 정착시키려 한다.\n가. 페어 프로그래밍(Pair Programming)과 지속적 통합(Continuous Integration)의 효과를 설명하시오.\n나. 테스트 우선(Test First)과 단순 설계(Simple Design) 원칙을 설명하시오.\n다. 리팩토링과 집단 코드 소유(Collective Code Ownership)의 상호작용을 논하시오."
+  },
+  {
+    "id": "yc2-289",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "추천시스템(Recommendation System)에 대하여 설명하시오.\n가. 추천시스템의 개념 및 필요성\n나. 협업필터링·콘텐츠기반·하이브리드 방식 비교\n다. 콜드스타트 등 도입 시 고려사항"
+  },
+  {
+    "id": "yc2-290",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "암호키 관리는 암호 시스템 신뢰의 근간이다. 다음을 논하시오.\n가. 암호키 생명주기(생성, 배포, 저장, 폐기) 관리\n나. HSM과 KMS의 역할 및 활용 방안\n다. 키 회전(Key Rotation)과 키 손상 대응 방안"
+  },
+  {
+    "id": "yc2-291",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "이벤트 기반 마이크로서비스에서 메시지 전달 신뢰성을 확보하려 한다.\n가. 아웃박스 패턴(Outbox Pattern)을 통한 원자적 메시지 발행 방법을 설명하시오.\n나. 최소 1회(At-Least-Once) 전달과 정확히 1회(Exactly-Once) 처리의 차이를 비교하시오.\n다. 데드 레터 큐(DLQ, Dead Letter Queue)를 활용한 실패 메시지 처리 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-292",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "데이터 중심 AI(Data-Centric AI)에 대하여 설명하시오.\n가. 데이터 중심 AI의 개념 및 모델 중심과의 차이\n나. 데이터 품질·라벨링·증강의 핵심 활동\n다. 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-293",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "네트워크 접근제어(NAC)는 단말 보안 통제를 강화한다. 다음을 설명하시오.\n가. NAC의 인증, 정책 적용, 격리 기능\n나. 에이전트 방식과 에이전트리스 방식 비교\n다. BYOD 및 원격근무 환경에서의 NAC 적용 방안"
+  },
+  {
+    "id": "yc2-294",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "클라우드 네이티브 애플리케이션의 이식성과 확장성을 확보하기 위해 12-팩터 앱(Twelve-Factor App) 방법론을 적용하려 한다.\n가. 설정(Config)의 환경 변수 분리와 무상태 프로세스(Stateless Process) 원칙을 설명하시오.\n나. 백엔드 서비스(Backing Service)의 연결 리소스화와 빌드-릴리스-실행 분리를 설명하시오.\n다. 컨테이너 및 쿠버네티스(Kubernetes) 환경에서의 12-팩터 원칙 적용 방안을 제시하시오."
+  },
+  {
+    "id": "yc2-295",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "AI 학습데이터의 라벨링 및 데이터 증강(Augmentation)에 대하여 설명하시오.\n가. 라벨링·증강의 개념 및 필요성\n나. 자동 라벨링·능동학습·합성데이터 기술요소\n다. 데이터 구축 시 고려사항"
+  },
+  {
+    "id": "yc2-296",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "공급망 공격에 대응하기 위한 소프트웨어 무결성 검증이 요구된다. 다음을 논하시오.\n가. 소프트웨어 공급망 공격의 유형과 사례\n나. 코드 서명과 아티팩트 무결성 검증 기법\n다. SLSA 프레임워크 기반 빌드 무결성 확보 방안"
+  },
+  {
+    "id": "yc2-297",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "시계열 예측(Time Series Forecasting) AI에 대하여 설명하시오.\n가. 시계열 예측의 개념 및 특성\n나. 통계모형과 딥러닝(RNN·Transformer) 기법 비교\n다. 예측 모델 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-298",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "위협 모델링은 설계 단계의 보안 리스크 도출 활동이다. 다음을 설명하시오.\n가. 위협 모델링의 수행 절차와 데이터 흐름도 활용\n나. STRIDE와 DREAD 방법론의 특성 비교\n다. 도출된 위협의 우선순위 결정 및 완화 대책 수립 방안"
+  },
+  {
+    "id": "yc2-299",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "그래프 신경망(GNN, Graph Neural Network)에 대하여 설명하시오.\n가. GNN의 개념 및 필요성\n나. 메시지 패싱·그래프 임베딩 등 기술요소\n다. 활용 분야 및 적용 시 고려사항"
+  },
+  {
+    "id": "yc2-300",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "백업 및 재해복구는 사이버 회복탄력성의 기반이다. 다음을 논하시오.\n가. RTO와 RPO의 개념과 백업 전략 수립\n나. 3-2-1 백업 원칙과 불변 백업(Immutable Backup)\n다. 랜섬웨어 대비 격리 백업 및 복구 검증 방안"
   }
 ]
