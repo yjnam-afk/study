@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
 import Markdown from "@/components/Markdown";
+import CopyButton from "@/components/CopyButton";
 import questions from "@/data/questions.json";
 import { getModelAnswer } from "@/lib/modelAnswers";
 
@@ -243,12 +244,10 @@ export default function ExamPage() {
                     >
                       ✍️ 이 문제로 답안 연습 →
                     </Link>
-                    <Link
-                      href={`/grade?question=${encodeURIComponent(q.text)}&period=${encodeURIComponent(q.period)}`}
+                    <CopyButton
+                      text={q.text}
                       className="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-100"
-                    >
-                      ✅ 내 답안 채점
-                    </Link>
+                    />
                   </div>
 
                   {ma && (
