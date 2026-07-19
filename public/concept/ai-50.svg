@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <style>
+    .box{fill:#eff6ff;stroke:#3b82f6;stroke-width:2;rx:10}
+    .real{fill:#ecfdf5;stroke:#10b981;stroke-width:2}
+    .out{fill:#fef3c7;stroke:#f59e0b;stroke-width:2}
+    .t{fill:#1e3a8a;font-size:15px;font-weight:600;text-anchor:middle}
+    .s{fill:#475569;font-size:12px;text-anchor:middle}
+    .lbl{fill:#dc2626;font-size:12px;font-weight:600;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:2;fill:none}
+  </style>
+
+  <!-- 노이즈 z -->
+  <rect class="box" x="18" y="128" width="92" height="46" rx="10"/>
+  <text class="t" x="64" y="150">노이즈</text><text class="s" x="64" y="166">z (latent)</text>
+
+  <!-- 생성자 G -->
+  <rect class="box" x="152" y="120" width="128" height="62" rx="10"/>
+  <text class="t" x="216" y="146">생성자 (G)</text><text class="s" x="216" y="164">Generator</text>
+
+  <!-- 가짜 데이터 -->
+  <rect class="box" x="320" y="128" width="116" height="46" rx="10"/>
+  <text class="t" x="378" y="150">가짜 데이터</text><text class="s" x="378" y="166">fake</text>
+
+  <!-- 실제 데이터 -->
+  <rect class="real" x="320" y="30" width="116" height="46" rx="10"/>
+  <text class="t" x="378" y="52" fill="#065f46">실제 데이터</text><text class="s" x="378" y="68">real</text>
+
+  <!-- 판별자 D -->
+  <rect class="box" x="480" y="86" width="128" height="62" rx="10"/>
+  <text class="t" x="544" y="112">판별자 (D)</text><text class="s" x="544" y="130">Discriminator</text>
+
+  <!-- 판별 결과 -->
+  <rect class="out" x="646" y="94" width="116" height="46" rx="10"/>
+  <text class="t" x="704" y="116" fill="#92400e">진짜 / 가짜</text><text class="s" x="704" y="132">확률</text>
+
+  <!-- edges -->
+  <line class="edge" x1="110" y1="151" x2="150" y2="151" marker-end="url(#arw)"/>
+  <line class="edge" x1="280" y1="151" x2="318" y2="151" marker-end="url(#arw)"/>
+  <line class="edge" x1="436" y1="149" x2="478" y2="126" marker-end="url(#arw)"/>
+  <line class="edge" x1="436" y1="55"  x2="478" y2="104" marker-end="url(#arw)"/>
+  <line class="edge" x1="608" y1="117" x2="644" y2="117" marker-end="url(#arw)"/>
+
+  <!-- 적대적 피드백(오차 역전파) -->
+  <path class="edge" d="M544,148 C544,250 216,250 216,184" stroke="#dc2626" stroke-dasharray="5 4" marker-end="url(#arwR)"/>
+  <text class="lbl" x="380" y="243">적대적 경쟁 · 오차 역전파 (G는 D를 속이고, D는 진짜를 가려냄)</text>
+</svg>

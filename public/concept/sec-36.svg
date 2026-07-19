@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+  <style>
+    .host{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}
+    .atk{fill:#fef2f2;stroke:#dc2626;stroke-width:2}
+    .gw{fill:#ecfdf5;stroke:#10b981;stroke-width:2}
+    .t{font-size:15px;font-weight:600;text-anchor:middle}
+    .s{font-size:11px;text-anchor:middle;fill:#64748b}
+    .flow{stroke:#334155;stroke-width:2.5;fill:none}
+    .spoof{stroke:#dc2626;stroke-width:2;fill:none;stroke-dasharray:6 4}
+    .fl{font-size:12px;font-weight:600;text-anchor:middle;fill:#334155}
+    .rl{font-size:12px;font-weight:600;text-anchor:middle;fill:#dc2626}
+  </style>
+
+  <!-- nodes -->
+  <rect class="host" x="40"  y="150" width="150" height="60" rx="10"/>
+  <text class="t" x="115" y="178" fill="#1e3a8a">호스트</text><text class="s" x="115" y="196">Victim · ARP 캐시</text>
+
+  <rect class="atk" x="315" y="150" width="150" height="60" rx="10"/>
+  <text class="t" x="390" y="178" fill="#b91c1c">공격자</text><text class="s" x="390" y="196">Attacker (스니핑)</text>
+
+  <rect class="gw" x="590" y="150" width="150" height="60" rx="10"/>
+  <text class="t" x="665" y="178" fill="#065f46">게이트웨이</text><text class="s" x="665" y="196">Router / GW</text>
+
+  <!-- 1) 위조 ARP Reply -->
+  <path class="spoof" d="M340,150 C300,80 210,80 150,148" marker-end="url(#ar)"/>
+  <text class="rl" x="245" y="70">① 위조 ARP Reply — "GW의 MAC = 공격자 MAC"</text>
+  <text class="rl" x="115" y="132">→ 캐시 오염</text>
+
+  <!-- 2) 트래픽 경유(스니핑) -->
+  <path class="flow" d="M190,188 H313" marker-end="url(#a)"/>
+  <path class="flow" d="M465,188 H588" marker-end="url(#a)"/>
+  <text class="fl" x="390" y="248">② 호스트의 모든 트래픽이 공격자를 먼저 경유 (호스트 → 공격자 → 라우터)</text>
+  <text class="s" x="390" y="268">MITM · 스니핑 · 세션 가로채기 위험</text>
+</svg>
