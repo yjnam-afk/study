@@ -8902,5 +8902,401 @@
     "category": "경영전략",
     "source": "43회 모의 4교시",
     "text": "정부는 AI 산업 경쟁력 강화를 위해 「인공지능 데이터센터 산업 진흥에 관한 특별법」 제정을 추진하고 있다. 다음을 설명하시오.\n가. 인공지능 데이터센터(AI Data Center)의 개념 및 추진 배경\n나. 특별법의 주요 내용 및 핵심 지원 정책\n다. AI 데이터센터 구축 시 고려사항 및 발전 방향"
+  },
+  {
+    "id": "yc1-01",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "LLM 파인튜닝(Fine-tuning), RAG(Retrieval-Augmented Generation), 프롬프트 엔지니어링을 비교하여 설명하시오."
+  },
+  {
+    "id": "yc1-02",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "MoE(Mixture of Experts) 아키텍처를 설명하시오."
+  },
+  {
+    "id": "yc1-03",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "벡터 데이터베이스(Vector DB)와 임베딩(Embedding)을 설명하시오."
+  },
+  {
+    "id": "yc1-04",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "AI 에이전트(Agentic AI)와 에이전트 오케스트레이션을 설명하시오."
+  },
+  {
+    "id": "yc1-05",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "sLLM(경량 대형언어모델)의 개념과 필요성을 설명하시오."
+  },
+  {
+    "id": "yc1-06",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "온디바이스 AI(On-device AI)를 설명하시오."
+  },
+  {
+    "id": "yc1-07",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "LLM의 환각(Hallucination) 현상과 그라운딩(Grounding) 완화 기법을 설명하시오."
+  },
+  {
+    "id": "yc1-08",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "지식 증류(Knowledge Distillation)를 설명하시오."
+  },
+  {
+    "id": "yc1-09",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "인공지능",
+    "source": "예상 1교시",
+    "text": "모델 컨텍스트 프로토콜(MCP, Model Context Protocol)을 설명하시오."
+  },
+  {
+    "id": "yc1-10",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "프롬프트 인젝션(Prompt Injection) 공격과 대응방안을 설명하시오."
+  },
+  {
+    "id": "yc1-11",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "제로 트러스트 성숙도 모델(Zero Trust Maturity Model)을 설명하시오."
+  },
+  {
+    "id": "yc1-12",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "SBOM(Software Bill of Materials)과 소프트웨어 공급망 보안을 설명하시오."
+  },
+  {
+    "id": "yc1-13",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "양자내성암호(PQC, Post-Quantum Cryptography)를 설명하시오."
+  },
+  {
+    "id": "yc1-14",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "SASE(Secure Access Service Edge)를 설명하시오."
+  },
+  {
+    "id": "yc1-15",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "패스키(Passkey)와 FIDO2를 설명하시오."
+  },
+  {
+    "id": "yc1-16",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "쿠버네티스 오토스케일링(HPA, VPA, KEDA)을 설명하시오."
+  },
+  {
+    "id": "yc1-17",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "서비스 메시(Service Mesh)와 사이드카(Sidecar) 패턴을 설명하시오."
+  },
+  {
+    "id": "yc1-18",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "eBPF(extended Berkeley Packet Filter)를 설명하시오."
+  },
+  {
+    "id": "yc1-19",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "플랫폼 엔지니어링과 내부 개발자 플랫폼(IDP)을 설명하시오."
+  },
+  {
+    "id": "yc1-20",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "클라우드/인프라",
+    "source": "예상 1교시",
+    "text": "FinOps(클라우드 재무운영)를 설명하시오."
+  },
+  {
+    "id": "yc1-21",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 메시(Data Mesh)를 설명하시오."
+  },
+  {
+    "id": "yc1-22",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 레이크하우스(Data Lakehouse)를 설명하시오."
+  },
+  {
+    "id": "yc1-23",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 계약(Data Contract)을 설명하시오."
+  },
+  {
+    "id": "yc1-24",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "데이터베이스",
+    "source": "예상 1교시",
+    "text": "데이터 관측가능성(Data Observability)을 설명하시오."
+  },
+  {
+    "id": "yc1-25",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "바이브 코딩(Vibe Coding)과 AI 페어 프로그래밍을 설명하시오."
+  },
+  {
+    "id": "yc1-26",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "헥사고날 아키텍처(포트 앤 어댑터)를 설명하시오."
+  },
+  {
+    "id": "yc1-27",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "관측성(Observability)의 3요소(로그·메트릭·트레이스)를 설명하시오."
+  },
+  {
+    "id": "yc1-28",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "소프트웨어공학",
+    "source": "예상 1교시",
+    "text": "카오스 엔지니어링(Chaos Engineering)을 설명하시오."
+  },
+  {
+    "id": "yc1-29",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "프로젝트관리",
+    "source": "예상 1교시",
+    "text": "SRE(Site Reliability Engineering)와 에러 버짓(Error Budget)을 설명하시오."
+  },
+  {
+    "id": "yc1-30",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "경영전략",
+    "source": "예상 1교시",
+    "text": "AI 전환(AX, AI Transformation)을 설명하시오."
+  },
+  {
+    "id": "yc1-31",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "예상 1교시",
+    "text": "CXL(Compute Express Link)을 설명하시오."
+  },
+  {
+    "id": "yc1-32",
+    "kind": "예상",
+    "round": "예상",
+    "period": "1교시",
+    "category": "보안",
+    "source": "예상 1교시",
+    "text": "신뢰실행환경(TEE)과 컨피덴셜 컴퓨팅(Confidential Computing)을 설명하시오."
+  },
+  {
+    "id": "yc2-01",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "기업의 AI 전환(AX)을 위한 생성형 AI 도입 거버넌스 체계에 대하여 설명하시오.\n가. 생성형 AI 도입의 기대효과와 리스크\n나. AI 거버넌스 프레임워크(조직·정책·기술)\n다. 안전한 도입을 위한 단계별 추진 방안"
+  },
+  {
+    "id": "yc2-02",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "RAG(Retrieval-Augmented Generation) 기반 지식 서비스 아키텍처에 대하여 설명하시오.\n가. RAG의 개념 및 파이프라인(색인·검색·생성)\n나. 검색 품질 개선 기법(청킹·리랭킹·하이브리드 검색)\n다. 환각 완화 및 응답 신뢰성 확보 방안"
+  },
+  {
+    "id": "yc2-03",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "제로 트러스트 아키텍처(Zero Trust Architecture) 도입에 대하여 설명하시오.\n가. 제로 트러스트의 정의 및 핵심 원칙\n나. 구성요소와 성숙도 단계\n다. 조직 도입 시 고려사항 및 단계별 전환 방안"
+  },
+  {
+    "id": "yc2-04",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "LLM 애플리케이션 보안에 대하여 설명하시오.\n가. OWASP LLM Top 10 주요 위협\n나. 프롬프트 인젝션·데이터 유출 대응방안\n다. LLM 서비스 설계·운영 단계별 보안 통제"
+  },
+  {
+    "id": "yc2-05",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "클라우드/인프라",
+    "source": "예상 2교시",
+    "text": "클라우드 네이티브(Cloud Native) 전환 전략에 대하여 설명하시오.\n가. 클라우드 네이티브 4대 핵심 요소\n나. 마이크로서비스·컨테이너·오케스트레이션·CI/CD\n다. 전환 시 조직·기술 고려사항 및 단계별 로드맵"
+  },
+  {
+    "id": "yc2-06",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "MLOps 기반 머신러닝 운영 체계에 대하여 설명하시오.\n가. MLOps의 개념 및 필요성\n나. ML 파이프라인(데이터·학습·배포·모니터링)\n다. 모델 드리프트 대응 및 재학습 자동화 방안"
+  },
+  {
+    "id": "yc2-07",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "데이터베이스",
+    "source": "예상 2교시",
+    "text": "데이터 거버넌스와 데이터 품질관리에 대하여 설명하시오.\n가. 데이터 거버넌스의 개념 및 구성요소\n나. 데이터 품질 진단·개선 절차\n다. 데이터 표준화 및 메타데이터 관리 방안"
+  },
+  {
+    "id": "yc2-08",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "모놀리식에서 마이크로서비스로의 점진적 전환에 대하여 설명하시오.\n가. 전환의 배경 및 기대효과\n나. 스트랭글러 무화과(Strangler Fig) 패턴\n다. 데이터 분리·서비스 경계 설정 시 고려사항"
+  },
+  {
+    "id": "yc2-09",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "보안",
+    "source": "예상 2교시",
+    "text": "개인정보보호 강화기술(PET, Privacy Enhancing Technology)에 대하여 설명하시오.\n가. 가명처리·익명처리의 개념 및 차이\n나. 차분 프라이버시·동형암호·연합학습\n다. 데이터 활용과 보호의 균형 확보 방안"
+  },
+  {
+    "id": "yc2-10",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "소프트웨어공학",
+    "source": "예상 2교시",
+    "text": "관측성(Observability) 기반 시스템 운영에 대하여 설명하시오.\n가. 관측성의 3요소(로그·메트릭·트레이스)\n나. 분산 추적(Distributed Tracing)과 상관관계 분석\n다. SLO·에러 버짓 기반 신뢰성 운영 방안"
+  },
+  {
+    "id": "yc2-11",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "신기술",
+    "source": "예상 2교시",
+    "text": "소프트웨어 공급망 보안 관리에 대하여 설명하시오.\n가. 공급망 공격 유형 및 사례\n나. SBOM의 개념 및 구성\n다. 개발-빌드-배포 단계별 공급망 보안 통제"
+  },
+  {
+    "id": "yc2-12",
+    "kind": "예상",
+    "round": "예상",
+    "period": "2교시",
+    "category": "인공지능",
+    "source": "예상 2교시",
+    "text": "생성형 AI의 신뢰성과 윤리적 대응에 대하여 설명하시오.\n가. 생성형 AI의 저작권·편향·프라이버시 문제\n나. AI 신뢰성 핵심 속성 및 평가 지표\n다. 책임 있는 AI(Responsible AI) 확보 방안"
   }
 ]

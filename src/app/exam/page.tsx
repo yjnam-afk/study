@@ -15,15 +15,15 @@ type Q = {
   text: string;
   source?: string;
   /** 구분 — 없으면 실제 기출. */
-  kind?: "기출" | "셀테" | "모의고사";
+  kind?: "기출" | "셀테" | "모의고사" | "예상";
   /** 회차/주차 라벨(명시적). 없으면 source 앞토큰. */
   round?: string;
 };
 
-// source(회차) 또는 kind가 있는 문제(기출·셀테·모의고사)를 모은다.
+// source(회차) 또는 kind가 있는 문제(기출·셀테·모의고사·예상)를 모은다.
 const EXAMS = (questions as Q[]).filter((q) => q.source || q.kind);
 
-function kindOf(q: Q): "기출" | "셀테" | "모의고사" {
+function kindOf(q: Q): "기출" | "셀테" | "모의고사" | "예상" {
   return q.kind || "기출";
 }
 // "139회 1교시" → 회차 "139회". round가 있으면 그대로.
@@ -31,8 +31,8 @@ function roundOf(q: Q): string {
   return q.round || (q.source || "").split(" ")[0] || "기타";
 }
 
-// 데이터에 실제 존재하는 구분만 탭으로. 기출 → 셀테 → 모의고사 순.
-const KIND_ORDER: Record<string, number> = { 기출: 0, 셀테: 1, 모의고사: 2 };
+// 데이터에 실제 존재하는 구분만 탭으로. 기출 → 셀테 → 모의고사 → 예상 순.
+const KIND_ORDER: Record<string, number> = { 기출: 0, 셀테: 1, 모의고사: 2, 예상: 3 };
 const KINDS = Array.from(new Set(EXAMS.map(kindOf))).sort(
   (a, b) => (KIND_ORDER[a] ?? 9) - (KIND_ORDER[b] ?? 9),
 );
@@ -40,6 +40,7 @@ const KIND_DESC: Record<string, string> = {
   기출: "실제 정보관리기술사 기출문제입니다. 문제를 골라 바로 답안 '소설'을 연습해 보세요.",
   셀테: "주차별 실전 셀프테스트(셀테)입니다. 시험처럼 골라 답안을 연습해 보세요.",
   모의고사: "실전 명품 모의고사입니다. 교시별로 실제 시험처럼 풀어 보세요.",
+  예상: "출제 흐름(AI·클라우드·보안·데이터)을 반영해 만든 예상문제입니다. 참고용으로 연습하세요.",
 };
 
 // 회차 정렬: 숫자(회/주차) 큰 순.
@@ -59,6 +60,7 @@ const KIND_LABEL: Record<string, string> = {
   기출: "📜 기출",
   셀테: "📝 셀테",
   모의고사: "🏆 모의고사",
+  예상: "🔮 예상",
 };
 
 // 구분의 가장 최신(숫자 큰) 회차/주차. 기본으로 이것만 렌더 → '전체'로 수백 문제를
@@ -134,7 +136,7 @@ export default function ExamPage() {
       <PageHeader title="📜 문제 풀이" desc={KIND_DESC[kind]} />
 
       {KINDS.length > 1 && (
-        <div className="mb-4 grid grid-cols-3 gap-1.5 rounded-xl border border-slate-200 bg-white p-1.5 shadow-sm sm:inline-grid sm:auto-cols-max sm:grid-flow-col">
+        <div className="mb-4 flex flex-wrap gap-1.5 rounded-xl border border-slate-200 bg-white p-1.5 shadow-sm">
           {KINDS.map((k) => (
             <button
               key={k}
@@ -144,7 +146,7 @@ export default function ExamPage() {
                 setRound(newestRound(k));
                 setPeriod("전체");
               }}
-              className={`rounded-lg px-4 py-2.5 text-sm font-semibold transition sm:px-5 ${
+              className={`flex-1 whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-semibold transition sm:flex-none sm:px-5 ${
                 kind === k
                   ? "bg-brand-600 text-white shadow-sm"
                   : "text-slate-600 hover:bg-slate-100 active:bg-slate-200"
