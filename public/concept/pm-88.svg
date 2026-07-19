@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/></marker></defs>
+  <style>
+    .box{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.gw{fill:#dbeafe;stroke:#2563eb;stroke-width:2}
+    .db{fill:#ecfdf5;stroke:#10b981;stroke-width:2}.frame{fill:none;stroke:#cbd5e1;stroke-width:1.5;stroke-dasharray:5 4}
+    .t{fill:#1e3a8a;font-size:13px;font-weight:600;text-anchor:middle}.h{fill:#0f172a;font-size:15px;font-weight:700;text-anchor:middle}
+    .s{fill:#64748b;font-size:10px;text-anchor:middle}.edge{stroke:#64748b;stroke-width:2;fill:none}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <!-- Monolithic -->
+  <text class="h" x="195" y="30">Monolithic</text>
+  <rect class="frame" x="60" y="46" width="270" height="150" rx="12"/>
+  <rect class="box" x="90" y="66" width="210" height="34" rx="7"/><text class="t" x="195" y="89">UI (표현)</text>
+  <rect class="box" x="90" y="106" width="210" height="34" rx="7"/><text class="t" x="195" y="129">비즈니스 로직</text>
+  <rect class="box" x="90" y="146" width="210" height="34" rx="7"/><text class="t" x="195" y="169">데이터 접근</text>
+  <rect class="db" x="130" y="210" width="130" height="40" rx="10"/><text class="t" x="195" y="235" fill="#065f46">단일 DB</text>
+  <line class="edge" x1="195" y1="180" x2="195" y2="208" marker-end="url(#a)"/>
+  <text class="cap" x="195" y="278">한 덩어리 배포 · 단순하나 확장·장애 격리 약함</text>
+
+  <!-- MSA -->
+  <text class="h" x="575" y="30">MSA</text>
+  <rect class="frame" x="440" y="46" width="290" height="204" rx="12"/>
+  <rect class="gw" x="540" y="60" width="120" height="34" rx="7"/><text class="t" x="600" y="83">API Gateway</text>
+  <rect class="box" x="455" y="120" width="86" height="40" rx="8"/><text class="t" x="498" y="145" font-size="12">주문</text>
+  <rect class="box" x="557" y="120" width="86" height="40" rx="8"/><text class="t" x="600" y="145" font-size="12">결제</text>
+  <rect class="box" x="659" y="120" width="60" height="40" rx="8"/><text class="t" x="689" y="145" font-size="12">회원</text>
+  <rect class="db" x="455" y="188" width="86" height="34" rx="8"/><text class="t" x="498" y="211" fill="#065f46" font-size="11">DB</text>
+  <rect class="db" x="557" y="188" width="86" height="34" rx="8"/><text class="t" x="600" y="211" fill="#065f46" font-size="11">DB</text>
+  <rect class="db" x="659" y="188" width="60" height="34" rx="8"/><text class="t" x="689" y="211" fill="#065f46" font-size="11">DB</text>
+  <line class="edge" x1="600" y1="94" x2="498" y2="118" marker-end="url(#a)"/>
+  <line class="edge" x1="600" y1="94" x2="600" y2="118" marker-end="url(#a)"/>
+  <line class="edge" x1="600" y1="94" x2="689" y2="118" marker-end="url(#a)"/>
+  <line class="edge" x1="498" y1="160" x2="498" y2="186" marker-end="url(#a)"/>
+  <line class="edge" x1="600" y1="160" x2="600" y2="186" marker-end="url(#a)"/>
+  <line class="edge" x1="689" y1="160" x2="689" y2="186" marker-end="url(#a)"/>
+  <text class="cap" x="575" y="278">서비스별 독립 배포·확장·DB · 복잡하나 유연·장애 격리</text>
+</svg>

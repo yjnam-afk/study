@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/></marker></defs>
+  <style>
+    .box{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.cost{fill:#fef2f2;stroke:#dc2626;stroke-width:2}.ben{fill:#ecfdf5;stroke:#10b981;stroke-width:2}
+    .out{fill:#fef3c7;stroke:#f59e0b;stroke-width:2}
+    .t{fill:#1e3a8a;font-size:13px;font-weight:600;text-anchor:middle}.s{fill:#64748b;font-size:10px;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:2;fill:none}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <rect class="box" x="24"  y="60" width="150" height="56" rx="10"/><text class="t" x="99" y="84">아키텍처 전략</text><text class="s" x="99" y="102">(설계 결정 대안)</text>
+  <rect class="box" x="210" y="60" width="150" height="56" rx="10"/><text class="t" x="285" y="84">시나리오 도출</text><text class="s" x="285" y="102">품질속성 정제·정량화</text>
+  <rect class="box" x="396" y="60" width="150" height="56" rx="10"/><text class="t" x="471" y="84">효용 산정</text><text class="s" x="471" y="102">Utility (응답레벨)</text>
+
+  <rect class="ben"  x="396" y="160" width="150" height="48" rx="10"/><text class="t" x="471" y="184" fill="#065f46">편익 (Benefit)</text><text class="s" x="471" y="200">기대 효용 가치</text>
+  <rect class="cost" x="210" y="160" width="150" height="48" rx="10"/><text class="t" x="285" y="184" fill="#b91c1c">비용 (Cost)</text><text class="s" x="285" y="200">구현·변경 비용</text>
+  <rect class="out"  x="582" y="108" width="170" height="60" rx="10"/><text class="t" x="667" y="134" fill="#92400e">ROI = 편익 / 비용</text><text class="s" x="667" y="152">우선순위 결정</text>
+
+  <line class="edge" x1="174" y1="88" x2="208" y2="88" marker-end="url(#a)"/>
+  <line class="edge" x1="360" y1="88" x2="394" y2="88" marker-end="url(#a)"/>
+  <path class="edge" d="M471,116 V184 H548" marker-end="url(#a)"/>
+  <path class="edge" d="M396,184 H362" marker-end="url(#a)"/>
+  <path class="edge" d="M546,184 H570 C640,184 660,180 667,168" marker-end="url(#a)"/>
+  <path class="edge" d="M285,160 V140 C285,124 400,124 471,124" stroke-dasharray="4 3"/>
+
+  <text class="cap" x="390" y="258">ATAM 확장 — 각 아키텍처 결정의 편익과 비용을 함께 정량화해 ROI로 우선순위 결정</text>
+</svg>

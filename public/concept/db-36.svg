@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <style>
+    .ent{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.rel{fill:#fef3c7;stroke:#f59e0b;stroke-width:2}
+    .attr{fill:#ecfdf5;stroke:#10b981;stroke-width:1.5}
+    .t{fill:#1e3a8a;font-size:14px;font-weight:600;text-anchor:middle}.ta{fill:#065f46;font-size:11px;text-anchor:middle}
+    .tr{fill:#92400e;font-size:13px;font-weight:600;text-anchor:middle}
+    .edge{stroke:#64748b;stroke-width:1.8;fill:none}.card{fill:#334155;font-size:12px;font-weight:600;text-anchor:middle}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <!-- entities -->
+  <rect class="ent" x="60" y="120" width="130" height="56" rx="4"/><text class="t" x="125" y="153">학생</text>
+  <rect class="ent" x="590" y="120" width="130" height="56" rx="4"/><text class="t" x="655" y="153">과목</text>
+  <!-- relationship diamond -->
+  <polygon class="rel" points="390,110 460,148 390,186 320,148"/><text class="tr" x="390" y="153">수강</text>
+  <!-- attributes (ellipses) -->
+  <ellipse class="attr" cx="90"  cy="50" rx="52" ry="24"/><text class="ta" x="90"  y="54">학번(PK)</text>
+  <ellipse class="attr" cx="200" cy="44" rx="46" ry="24"/><text class="ta" x="200" y="48">이름</text>
+  <ellipse class="attr" cx="690" cy="50" rx="52" ry="24"/><text class="ta" x="690" y="54">과목코드(PK)</text>
+  <ellipse class="attr" cx="390" cy="238" rx="52" ry="24"/><text class="ta" x="390" y="242">성적</text>
+
+  <line class="edge" x1="90"  y1="74"  x2="110" y2="120"/>
+  <line class="edge" x1="200" y1="68"  x2="150" y2="120"/>
+  <line class="edge" x1="690" y1="74"  x2="670" y2="120"/>
+  <line class="edge" x1="390" y1="186" x2="390" y2="214"/>
+  <line class="edge" x1="190" y1="148" x2="320" y2="148"/>
+  <line class="edge" x1="460" y1="148" x2="590" y2="148"/>
+  <text class="card" x="250" y="138">1</text><text class="card" x="540" y="138">N</text>
+
+  <text class="cap" x="390" y="288">개체(□) · 관계(◇) · 속성(○) · PK/카디널리티(1:N) 표기 — 개념적 데이터 모델</text>
+</svg>

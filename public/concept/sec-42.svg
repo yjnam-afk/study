@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker></defs>
+  <style>
+    .atk{fill:#fef2f2;stroke:#dc2626;stroke-width:2}.cc{fill:#fee2e2;stroke:#b91c1c;stroke-width:2}
+    .bot{fill:#fff7ed;stroke:#ea580c;stroke-width:1.5}.tgt{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}
+    .t{font-size:14px;font-weight:600;text-anchor:middle}.s{fill:#64748b;font-size:11px;text-anchor:middle}
+    .edge{stroke:#dc2626;stroke-width:2;fill:none}.cap{fill:#64748b;font-size:11px;text-anchor:middle}
+  </style>
+  <rect class="atk" x="24" y="146" width="120" height="52" rx="10"/><text class="t" x="84" y="177" fill="#b91c1c">공격자</text>
+  <rect class="cc"  x="188" y="146" width="120" height="52" rx="10"/><text class="t" x="248" y="170" fill="#991b1b">C&amp;C 서버</text><text class="s" x="248" y="188">명령·제어</text>
+
+  <!-- botnet -->
+  <rect class="bot" x="360" y="40"  width="150" height="40" rx="8"/><text class="t" x="435" y="65" fill="#9a3412" font-size="13">좀비 PC</text>
+  <rect class="bot" x="360" y="152" width="150" height="40" rx="8"/><text class="t" x="435" y="177" fill="#9a3412" font-size="13">좀비 PC (봇넷)</text>
+  <rect class="bot" x="360" y="264" width="150" height="40" rx="8"/><text class="t" x="435" y="289" fill="#9a3412" font-size="13">좀비 PC</text>
+
+  <rect class="tgt" x="600" y="140" width="156" height="64" rx="10"/><text class="t" x="678" y="167" fill="#1e3a8a">대상 서버</text><text class="s" x="678" y="186">자원 고갈 · 서비스 거부</text>
+
+  <line class="edge" x1="144" y1="172" x2="186" y2="172" marker-end="url(#a)"/>
+  <path class="edge" d="M308,164 C330,110 340,80 358,66" marker-end="url(#a)"/>
+  <line class="edge" x1="308" y1="172" x2="358" y2="172" marker-end="url(#a)"/>
+  <path class="edge" d="M308,180 C330,236 340,270 358,284" marker-end="url(#a)"/>
+
+  <path class="edge" d="M510,60  C560,90 570,120 600,150" stroke-width="3" marker-end="url(#a)"/>
+  <line class="edge" x1="510" y1="172" x2="598" y2="172" stroke-width="3" marker-end="url(#a)"/>
+  <path class="edge" d="M510,284 C560,254 570,224 600,194" stroke-width="3" marker-end="url(#a)"/>
+  <text class="t" x="555" y="120" fill="#dc2626" font-size="12">대량 트래픽</text>
+
+  <text class="cap" x="390" y="330">DoS=단일 출처 / DDoS=분산 다수(봇넷) 동시 공격 · 대역폭·연결·자원 고갈로 정상 서비스 마비</text>
+</svg>
