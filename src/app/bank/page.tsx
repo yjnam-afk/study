@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { PageHeader, Button } from "@/components/ui";
 import ShareButton from "@/components/ShareButton";
+import CopyButton from "@/components/CopyButton";
 import questions from "@/data/questions.json";
 
 type Q = {
@@ -199,13 +200,22 @@ export default function BankPage() {
                   : "각 문제를 서술형(2~3페이지)으로 — 실제 시험은 4문제 중 택하여 작성"}
               </p>
             </div>
-            <ShareButton
-              title="[말랑말랑 스파르타] 문제은행 랜덤 출제"
-              text={
-                `📝 ${mode.label} 랜덤 ${drawn.length}문제\n\n` +
-                drawn.map((q, i) => `${i + 1}. ${q.text.split("\n")[0]}`).join("\n")
-              }
-            />
+            <div className="flex items-center gap-2">
+              <CopyButton
+                label="전체 복사"
+                text={
+                  `[${mode.label}] 랜덤 ${drawn.length}문제\n\n` +
+                  drawn.map((q, i) => `${i + 1}. ${q.text}`).join("\n\n")
+                }
+              />
+              <ShareButton
+                title="[말랑말랑 스파르타] 문제은행 랜덤 출제"
+                text={
+                  `📝 ${mode.label} 랜덤 ${drawn.length}문제\n\n` +
+                  drawn.map((q, i) => `${i + 1}. ${q.text.split("\n")[0]}`).join("\n")
+                }
+              />
+            </div>
           </div>
 
           <ol className="space-y-4">
@@ -231,9 +241,13 @@ export default function BankPage() {
                       <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[10px] text-slate-500">
                         {q.category}
                       </span>
+                      <CopyButton
+                        text={q.text}
+                        className="ml-auto rounded-md border border-slate-200 bg-white px-2 py-1 text-[11px] font-medium text-slate-500 hover:bg-slate-100"
+                      />
                       <Link
                         href={`/answer?period=${encodeURIComponent(answerPeriod)}&question=${encodeURIComponent(q.text)}`}
-                        className="ml-auto rounded-md bg-brand-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-brand-700"
+                        className="rounded-md bg-brand-600 px-2.5 py-1 text-xs font-medium text-white hover:bg-brand-700"
                       >
                         ✍️ 답안 연습 →
                       </Link>
