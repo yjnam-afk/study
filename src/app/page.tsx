@@ -223,16 +223,14 @@ export default function Home() {
           📘 말랑말랑 스파르타 ⚔️
         </span>
         <p className="mt-3 text-lg font-black leading-snug tracking-tight text-brand-200 sm:text-xl">
-          나만 소설이 안 써진다고? 🥲
-          <br />
-          <span className="text-white/90">괜찮아, 그러라고 만든 앱이야.</span>
+          나 빼고 너네만 소설 쓰면 다냐!! 😤
         </p>
         <h1 className="mt-2 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-          기술사 답안도{" "}
+          난{" "}
           <span className="underline decoration-brand-400 decoration-4 underline-offset-4">
-            소설
-          </span>
-          이다 ✍️
+            아직 못 써
+          </span>{" "}
+          🥲
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-100/90 sm:text-base">
           핵심은 <b className="font-bold text-white">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
