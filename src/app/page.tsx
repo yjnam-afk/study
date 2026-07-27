@@ -218,6 +218,28 @@ export default function Home() {
 
   return (
     <div>
+      {/* 구라핑 처단 특공대 — 최상단 선언 배너 */}
+      <section className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-zinc-900 to-red-950 p-6 text-white shadow-lg ring-1 ring-red-900/50 sm:p-7">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/20 px-3 py-1 text-xs font-bold tracking-wide text-red-200 ring-1 ring-red-400/30">
+          🚨 구라핑 처단 특공대
+        </span>
+        <p className="mt-3 text-xl font-black leading-snug tracking-tight text-white sm:text-2xl">
+          구라핑들이 난무하는 세상 😤
+        </p>
+        <p className="mt-1 text-base font-semibold text-slate-300 sm:text-lg">
+          구라핑들을 처단하겠다.
+        </p>
+        <p className="mt-2 text-lg font-extrabold text-red-300 sm:text-xl">
+          우리는{" "}
+          <span className="underline decoration-red-400 decoration-4 underline-offset-4">
+            구라핑 처단 특공대!
+          </span>
+        </p>
+        <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-red-400/40 bg-red-500/15 px-3 py-1.5 text-xs font-bold text-red-200">
+          🎯 지명수배 1호 구라핑 <span className="text-white">정의섭</span>
+        </div>
+      </section>
+
       <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-600 via-green-700 to-emerald-900 p-7 text-white shadow-lg ring-1 ring-emerald-900/40 sm:p-9">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-slate-100 ring-1 ring-white/20">
           🤝 연대책임제 실시 ⚔️
@@ -267,28 +289,6 @@ export default function Home() {
               지금 시작하기 →
             </Link>
           )}
-        </div>
-      </section>
-
-      {/* 구라핑 처단 특공대 — 히어로 이어지는 선언 배너 */}
-      <section className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-zinc-900 to-red-950 p-6 text-white shadow-lg ring-1 ring-red-900/50 sm:p-7">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/20 px-3 py-1 text-xs font-bold tracking-wide text-red-200 ring-1 ring-red-400/30">
-          🚨 구라핑 처단 특공대
-        </span>
-        <p className="mt-3 text-xl font-black leading-snug tracking-tight text-white sm:text-2xl">
-          구라핑들이 난무하는 세상 😤
-        </p>
-        <p className="mt-1 text-base font-semibold text-slate-300 sm:text-lg">
-          구라핑들을 처단하겠다.
-        </p>
-        <p className="mt-2 text-lg font-extrabold text-red-300 sm:text-xl">
-          우리는{" "}
-          <span className="underline decoration-red-400 decoration-4 underline-offset-4">
-            구라핑 처단 특공대!
-          </span>
-        </p>
-        <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-red-400/40 bg-red-500/15 px-3 py-1.5 text-xs font-bold text-red-200">
-          🎯 지명수배 1호 구라핑 <span className="text-white">정*섭</span>
         </div>
       </section>
 
