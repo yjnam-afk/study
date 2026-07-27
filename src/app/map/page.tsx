@@ -51,7 +51,7 @@ function groupsOf(items: Topic[]): { name: string; items: Topic[] }[] {
 export default function MapPage() {
   const [cat, setCat] = useState(CATS[0]);
   const [q, setQ] = useState("");
-  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
   const query = q.trim().toLowerCase();
   const searching = query.length > 0;
@@ -70,7 +70,7 @@ export default function MapPage() {
   const groups = useMemo(() => groupsOf(scope), [scope]);
 
   function toggle(key: string) {
-    setCollapsed((prev) => {
+    setExpanded((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
@@ -118,11 +118,27 @@ export default function MapPage() {
         </div>
       )}
 
-      {/* 요약 줄 */}
-      <div className="mb-3 text-xs text-slate-400">
-        {searching
-          ? `"${q}" 검색 결과 · 토픽 ${scope.length}개 · 묶음 ${groups.length}개`
-          : `${cat} · 토픽 ${scope.length}개 · 연관 묶음 ${groups.length}개`}
+      {/* 요약 줄 + 전체 펼치기/접기 */}
+      <div className="mb-3 flex items-center justify-between gap-2">
+        <span className="text-xs text-slate-400">
+          {searching
+            ? `"${q}" 검색 결과 · 토픽 ${scope.length}개 · 묶음 ${groups.length}개`
+            : `${cat} · 토픽 ${scope.length}개 · 연관 묶음 ${groups.length}개`}
+        </span>
+        {!searching && groups.length > 0 && (
+          <button
+            onClick={() =>
+              setExpanded((prev) =>
+                prev.size >= groups.length
+                  ? new Set()
+                  : new Set(groups.map((g) => `${cat}::${g.name}`)),
+              )
+            }
+            className="shrink-0 rounded-md border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-500 transition hover:border-brand-300 hover:text-brand-600"
+          >
+            {expanded.size >= groups.length ? "모두 접기" : "모두 펼치기"}
+          </button>
+        )}
       </div>
 
       {/* 묶음 목록 */}
@@ -134,8 +150,8 @@ export default function MapPage() {
         <div className="space-y-4">
           {groups.map((g) => {
             const key = `${cat}::${g.name}`;
-            // 검색 중엔 항상 펼침, 평소엔 collapsed 집합으로 제어
-            const open = searching || !collapsed.has(key);
+            // 검색 중엔 항상 펼침, 평소엔 기본 접힘 → 클릭 시 펼침
+            const open = searching || expanded.has(key);
             return (
               <section
                 key={key}
