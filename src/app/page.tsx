@@ -237,7 +237,7 @@ export default function Home() {
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-100/90 sm:text-base">
           그래도 <b className="font-bold text-white">가만두지 않겠다..! 😤</b>
           <br />
-          키워드만 외우면 나도 소설 한 편, 반드시 쓴다.
+          <b className="font-bold text-white">못 쓴다고!! 😭</b>
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <span className="rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium text-white ring-1 ring-white/15">
