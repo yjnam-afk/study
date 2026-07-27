@@ -222,11 +222,13 @@ export default function Home() {
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-slate-100 ring-1 ring-white/20">
           📘 말랑말랑 스파르타 ⚔️
         </span>
-        <p className="mt-3 text-sm font-extrabold tracking-tight text-slate-200">
-          겉은 말랑 📘 <span className="text-white/40">·</span> 속은 스파르타 ⚔️
+        <p className="mt-3 text-lg font-black leading-snug tracking-tight text-brand-200 sm:text-xl">
+          나만 소설이 안 써진다고? 🥲
+          <br />
+          <span className="text-white/90">괜찮아, 그러라고 만든 앱이야.</span>
         </p>
-        <h1 className="mt-1.5 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-          기술사 답안은{" "}
+        <h1 className="mt-2 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
+          기술사 답안도{" "}
           <span className="underline decoration-brand-400 decoration-4 underline-offset-4">
             소설
           </span>
