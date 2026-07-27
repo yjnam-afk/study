@@ -6,6 +6,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/ui";
 import topics from "@/data/topics.json";
 import { compareSets } from "@/data/compareSets";
+import { memoryTables } from "@/data/memoryTables";
 
 type Topic = {
   id: string;
@@ -51,11 +52,12 @@ function groupsOf(items: Topic[]): { name: string; items: Topic[] }[] {
 }
 
 const CMP_CATS = Array.from(new Set(compareSets.map((s) => s.category)));
+const TBL_CATS = Array.from(new Set(memoryTables.map((t) => t.category)));
 const explainHref = (name: string) =>
   `/explain?topic=${encodeURIComponent(name)}&auto=1`;
 
 export default function MapPage() {
-  const [view, setView] = useState<"compare" | "groups">("compare");
+  const [view, setView] = useState<"compare" | "tables" | "groups">("compare");
   const [cat, setCat] = useState(CATS[0]);
   const [q, setQ] = useState("");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
@@ -71,6 +73,17 @@ export default function MapPage() {
         s.title.toLowerCase().includes(query) ||
         s.axis.toLowerCase().includes(query) ||
         s.items.some((it) => it.name.toLowerCase().includes(query)),
+    );
+  }, [query, searching]);
+
+  // 암기표: 제목·설명·표 내용에서 매칭
+  const tblResults = useMemo(() => {
+    if (!searching) return memoryTables;
+    return memoryTables.filter(
+      (t) =>
+        t.title.toLowerCase().includes(query) ||
+        t.intro.toLowerCase().includes(query) ||
+        t.rows.some((r) => r.join(" ").toLowerCase().includes(query)),
     );
   }, [query, searching]);
 
@@ -107,6 +120,7 @@ export default function MapPage() {
       <div className="mb-4 inline-flex rounded-xl border border-slate-200 bg-slate-50 p-1">
         {[
           { k: "compare" as const, label: "⚖️ 비교하며 외우기" },
+          { k: "tables" as const, label: "📋 암기표" },
           { k: "groups" as const, label: "🗺️ 주제 묶음" },
         ].map((v) => (
           <button
@@ -131,7 +145,9 @@ export default function MapPage() {
           placeholder={
             view === "compare"
               ? "비교 세트 검색… (예: 정규화, 대칭키, OSI, 학습)"
-              : "토픽·요약·묶음 검색… (예: 정규화, 감리, TCP)"
+              : view === "tables"
+                ? "암기표 검색… (예: 정렬, OSI, 정규형, RAID)"
+                : "토픽·요약·묶음 검색… (예: 정규화, 감리, TCP)"
           }
           className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
@@ -139,6 +155,8 @@ export default function MapPage() {
 
       {view === "compare" ? (
         <CompareView cmpResults={cmpResults} q={q} searching={searching} />
+      ) : view === "tables" ? (
+        <TablesView tblResults={tblResults} q={q} searching={searching} />
       ) : (
         <GroupsView
           cat={cat}
@@ -254,6 +272,129 @@ function CompareView({
                   ))}
               </div>
             </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─────────────── 암기표 뷰 ─────────────── */
+function TablesView({
+  tblResults,
+  q,
+  searching,
+}: {
+  tblResults: typeof memoryTables;
+  q: string;
+  searching: boolean;
+}) {
+  const [pick, setPick] = useState<string>("전체");
+  const shown =
+    searching || pick === "전체"
+      ? tblResults
+      : tblResults.filter((t) => t.category === pick);
+
+  return (
+    <div>
+      {!searching && (
+        <div className="mb-4 flex flex-wrap gap-2">
+          {["전체", ...TBL_CATS].map((c) => {
+            const n =
+              c === "전체"
+                ? memoryTables.length
+                : memoryTables.filter((t) => t.category === c).length;
+            const active = c === pick;
+            return (
+              <button
+                key={c}
+                onClick={() => setPick(c)}
+                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
+                  active
+                    ? "border-brand-600 bg-brand-600 text-white"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-brand-300"
+                }`}
+              >
+                {c}{" "}
+                <span className={active ? "text-brand-100" : "text-slate-400"}>
+                  {n}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      <p className="mb-3 text-xs text-slate-400">
+        {searching
+          ? `"${q}" 검색 결과 · 암기표 ${tblResults.length}개`
+          : `묶음을 한 장에 통째로 외우는 암기표 ${memoryTables.length}개 · 답안에 그대로 옮겨 적기 좋아요`}
+      </p>
+
+      {shown.length === 0 ? (
+        <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-400">
+          결과가 없습니다.
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {shown.map((t) => (
+            <section
+              key={`${t.category}::${t.title}`}
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+            >
+              <div className="border-b border-slate-100 p-4">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-sm font-bold text-slate-900">{t.title}</h3>
+                  <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] text-slate-500">
+                    {t.category}
+                  </span>
+                </div>
+                <p className="mt-1.5 text-xs leading-relaxed text-slate-500">
+                  {t.intro}
+                </p>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-left text-xs">
+                  <thead>
+                    <tr className="bg-slate-50 text-slate-500">
+                      {t.columns.map((col, i) => (
+                        <th
+                          key={i}
+                          className="whitespace-nowrap border-b border-slate-200 px-3 py-2 font-semibold"
+                        >
+                          {col}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {t.rows.map((row, ri) => (
+                      <tr key={ri} className="even:bg-slate-50/40">
+                        {row.map((cell, ci) => (
+                          <td
+                            key={ci}
+                            className={`border-b border-slate-100 px-3 py-2 align-top ${
+                              ci === 0
+                                ? "whitespace-nowrap font-semibold text-slate-800"
+                                : "text-slate-600"
+                            }`}
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {t.examTip && (
+                <p className="border-t border-amber-100 bg-amber-50/50 px-4 py-2.5 text-xs leading-relaxed text-amber-800">
+                  ✍️ <b className="font-semibold">답안 활용</b> · {t.examTip}
+                </p>
+              )}
+            </section>
           ))}
         </div>
       )}
