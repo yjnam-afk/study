@@ -268,7 +268,7 @@ function MnemonicInner() {
                 <span />
               )}
               <ShareButton
-                title={`[한놈도 못 도망가 스파르타] ${set.topic} 두음신공`}
+                title={`[다 같이 스파르타] ${set.topic} 두음신공`}
                 text={`🥷 ${set.topic} 두음신공\n\n서론: ${set.intro.mnemonic}\n본론: ${set.body.mnemonic}\n\n핵심 키워드: ${set.body.items.map((i) => i.term).join(", ")}`}
               />
             </div>
