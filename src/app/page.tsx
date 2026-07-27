@@ -100,6 +100,13 @@ const menuGroups = [
     group: "📚 보조 · 개념 이해 · 복습",
     items: [
       {
+        href: "/map",
+        emoji: "🗺️",
+        title: "토픽 지도",
+        desc: "서로 연관된 토픽을 묶음으로 모아 한눈에",
+        color: "from-brand-600 to-brand-800",
+      },
+      {
         href: "/explain",
         emoji: "💡",
         title: "토픽 설명",
