@@ -166,16 +166,52 @@ function CompareView({
   q: string;
   searching: boolean;
 }) {
-  const cats = CMP_CATS.filter((c) => cmpResults.some((s) => s.category === c));
+  const [pick, setPick] = useState<string>("전체");
+  // 검색 중엔 분류 필터 무시, 아니면 선택 분류로 좁힘
+  const shown =
+    searching || pick === "전체"
+      ? cmpResults
+      : cmpResults.filter((s) => s.category === pick);
+  const cats = CMP_CATS.filter((c) => shown.some((s) => s.category === c));
+
   return (
     <div>
+      {/* 분류 바로가기 (검색 중엔 숨김) */}
+      {!searching && (
+        <div className="mb-4 flex flex-wrap gap-2">
+          {["전체", ...CMP_CATS].map((c) => {
+            const n =
+              c === "전체"
+                ? compareSets.length
+                : compareSets.filter((s) => s.category === c).length;
+            const active = c === pick;
+            return (
+              <button
+                key={c}
+                onClick={() => setPick(c)}
+                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
+                  active
+                    ? "border-brand-600 bg-brand-600 text-white"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-brand-300"
+                }`}
+              >
+                {c}{" "}
+                <span className={active ? "text-brand-100" : "text-slate-400"}>
+                  {n}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       <p className="mb-3 text-xs text-slate-400">
         {searching
           ? `"${q}" 검색 결과 · 비교 세트 ${cmpResults.length}개`
           : `견주며 외우는 핵심 비교 ${compareSets.length}세트 · 항목을 누르면 AI 설명으로 이동`}
       </p>
 
-      {cmpResults.length === 0 ? (
+      {shown.length === 0 ? (
         <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-400">
           결과가 없습니다.
         </div>
@@ -187,7 +223,7 @@ function CompareView({
                 {c}
               </h2>
               <div className="grid gap-3 sm:grid-cols-2">
-                {cmpResults
+                {shown
                   .filter((s) => s.category === c)
                   .map((s) => (
                     <section
