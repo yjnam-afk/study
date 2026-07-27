@@ -270,6 +270,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 구라핑 처단 특공대 — 히어로 이어지는 선언 배너 */}
+      <section className="mb-6 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-zinc-900 to-red-950 p-6 text-white shadow-lg ring-1 ring-red-900/50 sm:p-7">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/20 px-3 py-1 text-xs font-bold tracking-wide text-red-200 ring-1 ring-red-400/30">
+          🚨 구라핑 처단 특공대
+        </span>
+        <p className="mt-3 text-xl font-black leading-snug tracking-tight text-white sm:text-2xl">
+          구라핑들이 난무하는 세상 😤
+        </p>
+        <p className="mt-1 text-base font-semibold text-slate-300 sm:text-lg">
+          구라핑들을 처단하겠다.
+        </p>
+        <p className="mt-2 text-lg font-extrabold text-red-300 sm:text-xl">
+          우리는{" "}
+          <span className="underline decoration-red-400 decoration-4 underline-offset-4">
+            구라핑 처단 특공대!
+          </span>
+        </p>
+      </section>
+
       {/* 메인 — 오늘의 데일리 계획 토픽 */}
       <div className="mb-6 rounded-2xl border-2 border-slate-200 bg-white p-5 shadow-sm">
         <div className="mb-3 flex items-center justify-between">
