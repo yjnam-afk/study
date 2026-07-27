@@ -14581,5 +14581,41 @@
     "category": "보안",
     "source": "44회 모의 4교시",
     "text": "Anthropic의 Claude Mythos Preview 공개와 Project Glasswing 추진은 Agentic AI가 방어와 공격 양 측면에서 사이버보안에 미치는 영향력으로 인해 보안업계의 화두로 떠올랐다. 다음에 대해 설명하시오.\n가. Agentic AI와 AI Agent의 차이점\n나. Agentic AI 발전에 따른 새로운 사이버보안 위협과 주요 대응방안\n다. Project Glasswing의 개념\n라. Claude Mythos Preview가 보안업계에 던지는 패러다임의 변화"
+  },
+  {
+    "id": "m44-1-14",
+    "kind": "모의고사",
+    "round": "44회",
+    "period": "1교시",
+    "category": "컴퓨터구조",
+    "source": "44회 모의 1교시",
+    "text": "[컴퓨터시스템응용기술사 선택문제] UCIe(Universal Chiplet Interconnect Express)에 대해 설명하시오."
+  },
+  {
+    "id": "m44-2-07",
+    "kind": "모의고사",
+    "round": "44회",
+    "period": "2교시",
+    "category": "운영체제",
+    "source": "44회 모의 2교시",
+    "text": "[컴퓨터시스템응용기술사 선택문제] 드론 비행 제어기, 자동차 ECU 및 산업용 로봇과 같은 임베디드 제어 시스템에서는 정해진 시간 내에 작업을 처리하는 실시간성이 중요하다. 다음을 설명하시오.\n가. RTOS(Real-Time Operating System)의 구성요소와 유형\n나. RTOS와 GPOS(General-Purpose Operating System) 비교\n다. 실시간 스케줄링 알고리즘 RM(Rate Monotonic)과 EDF(Earliest Deadline First)"
+  },
+  {
+    "id": "m44-3-07",
+    "kind": "모의고사",
+    "round": "44회",
+    "period": "3교시",
+    "category": "컴퓨터구조",
+    "source": "44회 모의 3교시",
+    "text": "[컴퓨터시스템응용기술사 선택문제] 컴퓨터 아키텍처에서는 연산 처리량을 향상하기 위해 명령어의 단계별 중첩 수행과 다수 처리요소 기반의 공간적 병렬처리를 활용하고 있다. 다음을 설명하시오.\n가. 명령어 파이프라인(Instruction Pipeline)의 개념 및 중첩 수행 메커니즘\n나. 파이프라인 해저드(Hazard)의 유형별 원인과 해결방안\n다. 명령어 파이프라인과 시스톨릭 어레이(Systolic Array)의 병렬처리 방식 비교"
+  },
+  {
+    "id": "m44-4-07",
+    "kind": "모의고사",
+    "round": "44회",
+    "period": "4교시",
+    "category": "컴퓨터구조",
+    "source": "44회 모의 4교시",
+    "text": "[컴퓨터시스템응용기술사 선택문제] AI의 대용량 데이터를 CPU 개입 없이 GPU/NPU와 메모리 간에 초고속으로 직접 전송하여 데이터 병목을 해결하기 위해 DMA(Direct Memory Access) 기술이 활용된다. 아래에 대해서 설명하시오.\n가. DMA 구조\n나. DMA 동작과정\n다. DMA 전송모드"
   }
 ]
