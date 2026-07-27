@@ -1,9 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui";
 import topics from "@/data/topics.json";
+import { compareSets } from "@/data/compareSets";
 
 type Topic = {
   id: string;
@@ -48,13 +50,29 @@ function groupsOf(items: Topic[]): { name: string; items: Topic[] }[] {
     .sort((a, b) => b.items.length - a.items.length || a.name.localeCompare(b.name, "ko"));
 }
 
+const CMP_CATS = Array.from(new Set(compareSets.map((s) => s.category)));
+const explainHref = (name: string) =>
+  `/explain?topic=${encodeURIComponent(name)}&auto=1`;
+
 export default function MapPage() {
+  const [view, setView] = useState<"compare" | "groups">("compare");
   const [cat, setCat] = useState(CATS[0]);
   const [q, setQ] = useState("");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
   const query = q.trim().toLowerCase();
   const searching = query.length > 0;
+
+  // 비교 세트: 검색 중이면 전 분류에서 매칭, 아니면 전체(카드에 분류 배지 표시)
+  const cmpResults = useMemo(() => {
+    if (!searching) return compareSets;
+    return compareSets.filter(
+      (s) =>
+        s.title.toLowerCase().includes(query) ||
+        s.axis.toLowerCase().includes(query) ||
+        s.items.some((it) => it.name.toLowerCase().includes(query)),
+    );
+  }, [query, searching]);
 
   // 검색 중이면 전 분류에서 제목/요약 매칭, 아니면 선택 분류 전체
   const scope = useMemo(() => {
@@ -82,19 +100,155 @@ export default function MapPage() {
     <div>
       <PageHeader
         title="🗺️ 토픽 지도"
-        desc="서로 연관된 토픽을 묶음(group)으로 모아 봅니다. 묶음 제목을 눌러 접고, 토픽을 눌러 설명으로 이동하세요."
+        desc="서로 견주며 외우면 좋은 개념을 나란히 비교하거나(⚖️), 연관 토픽을 묶음으로 모아 봅니다."
       />
+
+      {/* 뷰 전환 */}
+      <div className="mb-4 inline-flex rounded-xl border border-slate-200 bg-slate-50 p-1">
+        {[
+          { k: "compare" as const, label: "⚖️ 비교하며 외우기" },
+          { k: "groups" as const, label: "🗺️ 주제 묶음" },
+        ].map((v) => (
+          <button
+            key={v.k}
+            onClick={() => setView(v.k)}
+            className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition ${
+              view === v.k
+                ? "bg-white text-brand-600 shadow-sm"
+                : "text-slate-500 hover:text-slate-700"
+            }`}
+          >
+            {v.label}
+          </button>
+        ))}
+      </div>
 
       {/* 검색 */}
       <div className="mb-4">
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="토픽·요약·묶음 검색… (예: 정규화, 감리, TCP)"
+          placeholder={
+            view === "compare"
+              ? "비교 세트 검색… (예: 정규화, 대칭키, OSI, 학습)"
+              : "토픽·요약·묶음 검색… (예: 정규화, 감리, TCP)"
+          }
           className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
       </div>
 
+      {view === "compare" ? (
+        <CompareView cmpResults={cmpResults} q={q} searching={searching} />
+      ) : (
+        <GroupsView
+          cat={cat}
+          setCat={setCat}
+          q={q}
+          searching={searching}
+          scope={scope}
+          groups={groups}
+          expanded={expanded}
+          setExpanded={setExpanded}
+          toggle={toggle}
+        />
+      )}
+    </div>
+  );
+}
+
+/* ─────────────── 비교 뷰 ─────────────── */
+function CompareView({
+  cmpResults,
+  q,
+  searching,
+}: {
+  cmpResults: typeof compareSets;
+  q: string;
+  searching: boolean;
+}) {
+  const cats = CMP_CATS.filter((c) => cmpResults.some((s) => s.category === c));
+  return (
+    <div>
+      <p className="mb-3 text-xs text-slate-400">
+        {searching
+          ? `"${q}" 검색 결과 · 비교 세트 ${cmpResults.length}개`
+          : `견주며 외우는 핵심 비교 ${compareSets.length}세트 · 항목을 누르면 AI 설명으로 이동`}
+      </p>
+
+      {cmpResults.length === 0 ? (
+        <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-400">
+          결과가 없습니다.
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {cats.map((c) => (
+            <div key={c}>
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">
+                {c}
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {cmpResults
+                  .filter((s) => s.category === c)
+                  .map((s) => (
+                    <section
+                      key={`${s.category}::${s.title}`}
+                      className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
+                    >
+                      <h3 className="text-sm font-bold text-slate-900">
+                        {s.title}
+                      </h3>
+                      <p className="mt-0.5 text-xs text-brand-600">⚖️ {s.axis}</p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {s.items.map((it) => (
+                          <Link
+                            key={it.name}
+                            href={explainHref(it.name)}
+                            className="group min-w-[130px] flex-1 rounded-xl border border-slate-200 bg-slate-50 p-2.5 transition hover:border-brand-300 hover:bg-brand-50"
+                          >
+                            <div className="text-[13px] font-semibold leading-snug text-slate-800 group-hover:text-brand-600">
+                              {it.name}
+                            </div>
+                            <div className="mt-0.5 text-[11px] leading-snug text-slate-500">
+                              {it.hint}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─────────────── 묶음 뷰 (기존) ─────────────── */
+function GroupsView({
+  cat,
+  setCat,
+  q,
+  searching,
+  scope,
+  groups,
+  expanded,
+  setExpanded,
+  toggle,
+}: {
+  cat: string;
+  setCat: (c: string) => void;
+  q: string;
+  searching: boolean;
+  scope: Topic[];
+  groups: { name: string; items: Topic[] }[];
+  expanded: Set<string>;
+  setExpanded: Dispatch<SetStateAction<Set<string>>>;
+  toggle: (key: string) => void;
+}) {
+  return (
+    <div>
       {/* 분류 탭 (검색 중엔 숨김) */}
       {!searching && (
         <div className="mb-5 flex flex-wrap gap-2">
