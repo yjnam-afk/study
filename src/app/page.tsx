@@ -262,7 +262,7 @@ export default function Home() {
           {plan?.primary && (
             <Link
               href={plan.primary.href}
-              className="mt-3 inline-flex items-center gap-1.5 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-brand-700"
+              className="mt-3 inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700"
             >
               지금 시작하기 →
             </Link>
