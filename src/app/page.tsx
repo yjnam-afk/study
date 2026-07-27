@@ -235,9 +235,9 @@ export default function Home() {
           🥲
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-100/90 sm:text-base">
-          핵심은 <b className="font-bold text-white">키워드로 분량을 채워 그럴듯하게 쓰는 글쓰기</b>.
+          그래도 <b className="font-bold text-white">가만두지 않겠다..! 😤</b>
           <br />
-          어려운 토픽도 키워드만 외우면 한 편의 소설처럼 답안을 완성할 수 있어요.
+          키워드만 외우면 나도 소설 한 편, 반드시 쓴다.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <span className="rounded-lg bg-white/15 px-3 py-1.5 text-xs font-medium text-white ring-1 ring-white/15">
