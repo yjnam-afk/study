@@ -287,6 +287,9 @@ export default function Home() {
             구라핑 처단 특공대!
           </span>
         </p>
+        <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-red-400/40 bg-red-500/15 px-3 py-1.5 text-xs font-bold text-red-200">
+          🎯 지명수배 1호 구라핑 <span className="text-white">정*섭</span>
+        </div>
       </section>
 
       {/* 메인 — 오늘의 데일리 계획 토픽 */}
