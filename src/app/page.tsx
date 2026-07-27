@@ -218,16 +218,18 @@ export default function Home() {
 
   return (
     <div>
-      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 p-7 text-white shadow-lg ring-1 ring-slate-900/40 sm:p-9">
+      <section className="mb-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-600 via-green-700 to-emerald-900 p-7 text-white shadow-lg ring-1 ring-emerald-900/40 sm:p-9">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-slate-100 ring-1 ring-white/20">
-          📘 말랑말랑 스파르타 ⚔️
+          🤝 연대책임제 실시 ⚔️
         </span>
-        <p className="mt-3 text-lg font-black leading-snug tracking-tight text-brand-200 sm:text-xl">
+        <p className="mt-3 text-lg font-black leading-snug tracking-tight text-amber-100 sm:text-xl">
           나 빼고 너네만 소설 쓰면 다냐!! 😤
+          <br />
+          <span className="text-white/90">혼자 잘하면 배신이야!</span>
         </p>
         <h1 className="mt-2 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
           난{" "}
-          <span className="underline decoration-brand-400 decoration-4 underline-offset-4">
+          <span className="underline decoration-amber-200 decoration-4 underline-offset-4">
             아직 못 써
           </span>{" "}
           🥲
