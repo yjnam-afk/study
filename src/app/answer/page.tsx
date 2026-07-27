@@ -402,7 +402,7 @@ export default function AnswerPage() {
                 ⚡ 실시간 생성(무료 LLM){topicId ? " · 서브노트 근거" : " · 일반지식"}
               </span>
               <ShareButton
-                title={`[말랑말랑 스파르타] ${question.slice(0, 40)}`}
+                title={`[한놈도 못 도망가 스파르타] ${question.slice(0, 40)}`}
                 text={`📝 ${question}\n\n${answer}`}
               />
             </div>

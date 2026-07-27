@@ -386,13 +386,13 @@ export default function Home() {
                 🚇 지하철 모드로 카드 넘기기
               </Link>
               <ShareButton
-                title="오늘의 학습 토픽 — 말랑말랑 스파르타"
+                title="오늘의 학습 토픽 — 한놈도 못 도망가 스파르타"
                 text={
                   `🗓️ 오늘의 토픽 · Day ${dayIdx + 1}\n` +
                   todayTopics
                     .map((t, i) => `${i + 1}. [${t.importance}] ${t.title}`)
                     .join("\n") +
-                  `\n\n말랑말랑 스파르타 — 기술사 답안은 소설이다 ✍️ 같이 공부해요!`
+                  `\n\n한놈도 못 도망가 스파르타 — 기술사 답안은 소설이다 ✍️ 같이 공부해요!`
                 }
               />
             </div>
@@ -597,7 +597,7 @@ export default function Home() {
           🏆 친구를 초대해 <b>학습 랭킹</b>으로 같이 경쟁해요.
         </p>
         <ShareButton
-          title="말랑말랑 스파르타 — 정보관리기술사 학습 같이해요!"
+          title="한놈도 못 도망가 스파르타 — 정보관리기술사 학습 같이해요!"
           text="기술사 답안은 소설이다 ✍️ 두음신공 암기 + 키워드 답안쓰기"
         />
       </div>

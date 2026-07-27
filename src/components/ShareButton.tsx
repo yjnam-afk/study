@@ -86,7 +86,7 @@ export default function ShareButton({
         K.Share.sendDefault({
           objectType: "feed",
           content: {
-            title: title || "말랑말랑 스파르타",
+            title: title || "한놈도 못 도망가 스파르타",
             description:
               (text && text.slice(0, 80)) ||
               "정보관리기술사 학습 — 두음신공 + 답안쓰기",
@@ -102,7 +102,7 @@ export default function ShareButton({
       try {
         K.Share.sendDefault({
           objectType: "text",
-          text: (title ? title + "\n" : "") + "말랑말랑 스파르타 — 같이 공부해요!",
+          text: (title ? title + "\n" : "") + "한놈도 못 도망가 스파르타 — 같이 공부해요!",
           link: links,
           buttonTitle: "앱 열기",
         });

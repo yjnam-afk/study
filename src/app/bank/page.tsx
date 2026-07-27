@@ -210,7 +210,7 @@ export default function BankPage() {
                 }
               />
               <ShareButton
-                title="[말랑말랑 스파르타] 문제은행 랜덤 출제"
+                title="[한놈도 못 도망가 스파르타] 문제은행 랜덤 출제"
                 text={
                   `📝 ${mode.label} 랜덤 ${drawn.length}문제\n\n` +
                   drawn.map((q, i) => `${i + 1}. ${q.text.split("\n")[0]}`).join("\n")

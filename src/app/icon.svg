@@ -16,6 +16,6 @@
   <!-- 페이지 라인 -->
   <path d="M17 25 Q24 22 30 24 M17 31 Q24 28 30 30 M34 24 Q40 22 47 25 M34 30 Q40 28 47 31"
     stroke="#bfdbfe" stroke-width="1.4" fill="none" stroke-linecap="round" />
-  <!-- 말랑말랑 북마크(책·응원) -->
+  <!-- 북마크(책·응원) -->
   <path d="M39 14 L39 28 L43 24 L47 28 L47 14 Z" fill="#f59e0b" />
 </svg>
