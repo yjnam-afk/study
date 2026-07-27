@@ -235,7 +235,7 @@ export default function Home() {
           🥲
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-100/90 sm:text-base">
-          그래도 <b className="font-bold text-white">가만두지 않겠다..! 😤</b>
+          <b className="font-bold text-white">가만두지 않겠다..! 😤</b>
           <br />
           <b className="font-bold text-white">못 쓴다고!! 😭</b>
         </p>
