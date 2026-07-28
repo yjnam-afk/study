@@ -1701,4 +1701,45 @@ export const memoryTables: MemoryTable[] = [
     ],
     examTip: "'RTO↓=Mirror(고비용) ↔ RTO↑=Cold(저비용)' 트레이드오프.",
   },
+
+  // ── IPSec (SSL/TLS 짝) ──
+  {
+    category: "보안",
+    title: "IPSec 프로토콜(AH vs ESP)",
+    intro:
+      "IP 계층에서 트래픽을 보호하는 IPSec의 두 핵심 프로토콜. 암호화(기밀성) 제공 여부가 결정적 차이다.",
+    columns: ["프로토콜", "제공 기능", "암호화"],
+    rows: [
+      ["AH(인증 헤더)", "무결성+인증", "안 함(내용 노출)"],
+      ["ESP(보안 페이로드)", "무결성+인증+기밀성", "암호화함"],
+    ],
+    examTip: "'기밀성 필요=ESP'라 실무 대부분 ESP. AH는 인증만.",
+  },
+  {
+    category: "보안",
+    title: "IPSec 동작 모드",
+    intro:
+      "무엇을 보호하느냐에 따른 두 모드. 터널 모드는 원본 IP 헤더까지 감싸 VPN의 기반이 된다.",
+    columns: ["모드", "보호 범위", "용도"],
+    rows: [
+      ["전송(Transport)", "페이로드만 암호화·IP헤더 유지", "호스트↔호스트"],
+      ["터널(Tunnel)", "IP 패킷 전체+새 헤더", "게이트웨이 간(VPN)"],
+    ],
+    examTip: "'터널 모드=VPN'. 원본 출발지·목적지까지 은닉.",
+  },
+  {
+    category: "보안",
+    title: "IPSec vs SSL/TLS",
+    intro:
+      "인터넷 보안 통신의 양대 축. 동작 계층이 달라 보호 범위와 용도가 갈린다.",
+    columns: ["구분", "IPSec", "SSL/TLS"],
+    rows: [
+      ["동작 계층", "네트워크(IP)", "응용~전송"],
+      ["보호 범위", "모든 IP 트래픽", "특정 응용(웹)"],
+      ["응용 수정", "불필요(투명)", "TLS 지원 필요"],
+      ["대표 용도", "VPN", "HTTPS"],
+      ["설정", "복잡(장비)", "상대적 간단"],
+    ],
+    examTip: "'IPSec=네트워크 통째(VPN), TLS=특정 응용(HTTPS)'. 키교환은 IKE.",
+  },
 ];
