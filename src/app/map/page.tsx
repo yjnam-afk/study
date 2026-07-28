@@ -53,6 +53,8 @@ function groupsOf(items: Topic[]): { name: string; items: Topic[] }[] {
 
 const CMP_CATS = Array.from(new Set(compareSets.map((s) => s.category)));
 const TBL_CATS = Array.from(new Set(memoryTables.map((t) => t.category)));
+// 묶음 이름의 개행·중복공백 정규화(표시용) — 데이터엔 "병행 제어\n(...)" 같은 값이 섞여 있다.
+const cleanGroup = (name: string) => name.replace(/\s+/g, " ").trim();
 const explainHref = (name: string) =>
   `/explain?topic=${encodeURIComponent(name)}&auto=1`;
 
@@ -113,7 +115,7 @@ export default function MapPage() {
     <div>
       <PageHeader
         title="🗺️ 토픽 지도"
-        desc="서로 견주며 외우면 좋은 개념을 나란히 비교하거나(⚖️), 연관 토픽을 묶음으로 모아 봅니다."
+        desc="개념을 나란히 비교하거나(⚖️), 묶음을 한 장의 표로 통째 암기하거나(📋), 연관 토픽을 묶음으로 모아 봅니다(🗺️)."
       />
 
       {/* 뷰 전환 */}
@@ -495,7 +497,7 @@ function GroupsView({
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-slate-400">{open ? "▾" : "▸"}</span>
-                    <h3 className="font-semibold text-slate-900">{g.name}</h3>
+                    <h3 className="font-semibold text-slate-900">{cleanGroup(g.name)}</h3>
                     <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
                       {g.items.length}
                     </span>
