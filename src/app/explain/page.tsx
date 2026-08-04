@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { PageHeader, Spinner, ErrorBox, Button } from "@/components/ui";
 import Markdown from "@/components/Markdown";
 import ConceptDiagram from "@/components/ConceptDiagram";
+import Mermaid from "@/components/Mermaid";
 import ShareButton from "@/components/ShareButton";
 import AudioLecture from "@/components/AudioLecture";
 import TopicAutocomplete from "@/components/TopicAutocomplete";
@@ -23,6 +24,8 @@ function ExplainInner() {
   const [level, setLevel] = useState("수험생");
   const [result, setResult] = useState("");
   const [conceptTopicId, setConceptTopicId] = useState<string | undefined>();
+  const [conceptMap, setConceptMap] = useState("");
+  const [showMap, setShowMap] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [autoPending, setAutoPending] = useState(false);
@@ -57,6 +60,7 @@ function ExplainInner() {
     setError("");
     setResult("");
     setConceptTopicId(undefined);
+    setConceptMap("");
     try {
       const matched = topics.find((x) => x.title === topic.trim());
       setConceptTopicId(matched?.id);
@@ -68,6 +72,8 @@ function ExplainInner() {
       const { ok, data } = await readJsonSafe(res);
       if (!ok) throw new Error((data.error as string) || "생성 실패");
       setResult(data.explanation as string);
+      setConceptMap(((data.conceptMap as string) || "").trim());
+      setShowMap(true);
     } catch (e) {
       setError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -185,6 +191,18 @@ function ExplainInner() {
             </div>
             {/* 개념도 — 실제 교재 이미지(public/concept/<id>.svg|png)만 표시 */}
             <ConceptDiagram topicId={conceptTopicId} />
+            {/* 검증된 개념도(conceptMap, mermaid 도식) — 있으면 버튼으로 열고 닫는다 */}
+            {conceptMap && (
+              <div className="mb-4 rounded-2xl border border-slate-200 bg-slate-50/40 p-4 md:p-6">
+                <button
+                  onClick={() => setShowMap((v) => !v)}
+                  className="mb-1 flex items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
+                >
+                  📊 개념도 도식 {showMap ? "▲ 접기" : "▼ 펼치기"}
+                </button>
+                {showMap && <Mermaid chart={conceptMap} />}
+              </div>
+            )}
             <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
               <Markdown>{result}</Markdown>
             </article>

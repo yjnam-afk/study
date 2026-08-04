@@ -20822,5 +20822,13 @@
   "group": "기타",
   "importance": "하",
   "summary": "인간에게 쉬운 것은 컴퓨터에게 어렵고 반대로 인간에게 어려운 것은 컴퓨터에게 쉽다는 역설"
+ },
+ {
+  "id": "os-88",
+  "title": "프로세스 상태 전이(Process State Transition)",
+  "category": "소프트웨어공학",
+  "group": "프로세스\n(Process/Task)",
+  "importance": "상",
+  "summary": "프로세스가 생성·준비·실행·대기·종료 상태를 오가는 전이 과정과 계기(Dispatch·Timeout·I/O). 운영체제 스케줄러의 핵심 동작"
  }
 ]

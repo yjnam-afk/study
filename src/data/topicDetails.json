@@ -1,4 +1,16 @@
 {
+ "os-88": {
+  "detail": "[정의] 프로세스가 실행되는 동안 자원 상황·이벤트에 따라 여러 상태를 오가는 과정\n[상태]\n- 생성(New): 프로세스 생성, 준비 큐 진입 전\n- 준비(Ready): CPU 할당 대기\n- 실행(Running): CPU 점유·명령 수행\n- 대기(Waiting/Blocked): I/O·이벤트 완료 대기\n- 종료(Terminated): 실행 완료·자원 회수\n[주요 전이]\n- Dispatch: 준비→실행 (스케줄러가 CPU 배정)\n- Timeout/선점: 실행→준비 (할당시간 소진·선점)\n- Block: 실행→대기 (I/O·이벤트 요청)\n- Wake-up: 대기→준비 (I/O·이벤트 완료)",
+  "related": "PCB(Process Control Block) / 문맥교환(Context Switching) / CPU 스케줄링",
+  "defKeywords": ["생성·준비·실행·대기·종료 5상태", "상태 전이", "Dispatch·Timeout·Block·Wakeup"],
+  "featureKeywords": ["준비↔실행 전이=스케줄러 Dispatch", "실행→대기=I/O 블록", "선점 시 실행→준비"],
+  "applicationKeywords": ["운영체제 스케줄러", "멀티태스킹", "PCB에 현재 상태 저장"],
+  "plusKeywords": ["보류(Suspend) 상태 확장(스와핑 시)"],
+  "mnemonic": "생·준·실·대·종 (생성-준비-실행-대기-종료)",
+  "conceptMap": "stateDiagram-v2\n  [*] --> New: 생성\n  New --> Ready: Admit\n  Ready --> Running: Dispatch(스케줄러)\n  Running --> Ready: Timeout·선점\n  Running --> Waiting: I/O·이벤트 요청\n  Waiting --> Ready: I/O·이벤트 완료\n  Running --> Terminated: Exit(완료)\n  Terminated --> [*]",
+  "sections": [],
+  "memo": ""
+ },
  "gj-1": {
   "detail": "[정의] 고객과의 SLA(Service Level Agreement) 수준에 맞는 품질 유지 위한 프로세스·조직·자원·기술의 종합적 관리 위한 IT 서비스 관리 기법\n[목적]\n- ITIL 기반 IT 서비스 관리체계와 운영방식 도입\n- 궁극적으로 IT 역량·성숙도 향상 통한 비즈니스 가치 재창출\n[프레임워크 구성요소] IEC SSSS\n- ITIL V4, eSCM, CMMI, SPICE, SLA, SLM, SoW, MTTF, MTBF, MTTR\n  · eSCM: 아웃소싱 절차 업무개선 지침, ISO 20000(아웃소싱 국제표준), 제공업자 능력수준 평가 모델\n[구성요소] 인조기프\n- 인력(People), 조직(Organization), 기술(Technology), 프로세스(Process)",
   "related": "ITIL / ITIL 3.0",
