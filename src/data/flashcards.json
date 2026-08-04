@@ -30361,5 +30361,29 @@
    "중도이탈",
    "줄바꿈"
   ]
+ },
+ {
+  "id": "os-88",
+  "title": "프로세스 상태 전이(Process State Transition)",
+  "category": "소프트웨어공학",
+  "importance": "상",
+  "definition": "프로세스가 실행되는 동안 자원 상황·이벤트에 따라 여러 상태를 오가는 과정",
+  "sections": [
+   {
+    "label": "핵심 키워드",
+    "mnemonic": "준실선",
+    "keywords": [
+     "준비↔실행 전이=스케줄러 Dispatch",
+     "실행→대기=I/O 블록",
+     "선점 시 실행→준비"
+    ]
+   }
+  ],
+  "mnemonic": "준실선",
+  "keywords": [
+   "준비↔실행 전이=스케줄러 Dispatch",
+   "실행→대기=I/O 블록",
+   "선점 시 실행→준비"
+  ]
  }
 ]
